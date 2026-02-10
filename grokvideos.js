@@ -1,0 +1,147 @@
+const puppeteer = require('puppeteer-extra');
+const StealthPlugin = require('puppeteer-extra-plugin-stealth');
+const fs = require('fs');
+const path = require('path');
+
+puppeteer.use(StealthPlugin());
+
+// 📁 Folder where Chrome will save files
+const downloadDir = path.resolve(__dirname, 'downloads');
+if (!fs.existsSync(downloadDir)) {
+    fs.mkdirSync(downloadDir);
+}
+console.log("📂 Download folder:", downloadDir);
+
+(async () => {
+    const browser = await puppeteer.launch({
+        headless: false,
+        userDataDir: "browser",
+        args: [
+            '--no-sandbox',
+            `--disable-web-security`,
+            `--disable-features=IsolateOrigins,site-per-process`,
+            `--allow-running-insecure-content`
+        ]
+    });
+
+    const videos = require('./videos.js');
+    const page = await browser.newPage();
+
+    let realVideoUrl = null;
+    let capturedHeaders = null;
+
+    // Capture real MP4 request + headers
+    page.on('request', req => {
+        const url = req.url();
+
+        if (req.resourceType() === 'media' && url.includes('hd.mp4')) {
+            console.log(url);
+            realVideoUrl = url;
+            capturedHeaders = req.headers();
+            console.log('🎥 Captured real video URL + headers');
+        }
+    });
+
+    for (let i = 0; i < videos.length; i++) {
+
+        realVideoUrl = null;
+        capturedHeaders = null;
+
+        await page.goto('https://grok.com/imagine', { waitUntil: 'load' });
+        await page.setViewport({ width: 727, height: 920 });
+
+        //const textareaSelector = 'textarea[aria-label="Ask Grok anything"]';
+        const textareaSelector = 'p[data-placeholder="Type to imagine"]';
+
+        await page.waitForSelector(textareaSelector, { visible: true });
+        const contentTextarea = await page.$(textareaSelector);
+
+        await page.evaluate(text => navigator.clipboard.writeText(text), videos[i]);
+        await contentTextarea.click();
+
+        await page.keyboard.down('Control');
+        await page.keyboard.press('KeyV');
+        await page.keyboard.up('Control');
+
+        const submitBtn = await page.waitForSelector('button[aria-label="Submit"]');
+        await submitBtn.click();
+        console.log('🚀 Prompt submitted');
+
+        await page.waitForSelector('video#sd-video', { timeout: 120000 });
+        console.log('🎬 SD video ready');
+
+        const moreBtn = await page.waitForSelector('button[aria-label="More options"]');
+        await moreBtn.click();
+
+        const elements = await page.$$('div[role="menuitem"]');
+        await elements[4].click(); // HD option
+        console.log('💎 Switched to HD');
+
+        await new Promise(resolve => setTimeout(resolve, 5000));
+        console.log('waited 5 seconds');
+
+        await page.waitForSelector('video#hd-video', { timeout: 120000 });
+
+
+        // Wait for MP4 URL
+        let tries = 0;
+        while (!realVideoUrl && tries < 60) {
+            await new Promise(r => setTimeout(r, 1000));
+            tries++;
+        }
+
+        if (!realVideoUrl) {
+            console.log('❌ Failed to capture video URL');
+            continue;
+        }
+
+        console.log('🎥 Real video URL:', realVideoUrl);
+
+        // Get cookies
+        const cookies = await page.cookies();
+        const cookieHeader = cookies.map(c => `${c.name}=${c.value}`).join('; ');
+
+        // Merge cookies into headers
+        capturedHeaders = {
+            ...capturedHeaders,
+            'Cookie': cookieHeader
+        };
+
+        // Download inside browser using fetch + Blob
+        console.log("⬇️ Downloading inside browser using fetch()...");
+
+        await page.evaluate(async ({ url, headers, filename }) => {
+
+            const res = await fetch(url, { headers });
+
+            if (!res.ok) {
+                console.error("❌ Fetch failed", res.status);
+                return;
+            }
+
+            const blob = await res.blob();
+            const blobUrl = URL.createObjectURL(blob);
+
+            const a = document.createElement('a');
+            a.href = blobUrl;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+
+            setTimeout(() => {
+                URL.revokeObjectURL(blobUrl);
+                a.remove();
+            }, 5000);
+
+        }, {
+            url: realVideoUrl,
+            headers: capturedHeaders,
+            filename: `video_${i}.mp4`
+        });
+
+        console.log("✅ Browser download triggered");
+
+        await new Promise(resolve => setTimeout(resolve, 5000));
+        console.log('waited 5 seconds');
+    }
+})();
