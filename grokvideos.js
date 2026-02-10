@@ -6,7 +6,7 @@ const path = require('path');
 puppeteer.use(StealthPlugin());
 
 // 📁 Folder where Chrome will save files
-const downloadDir = path.resolve(__dirname, 'downloads');
+const downloadDir = path.resolve(__dirname, 'grok');
 if (!fs.existsSync(downloadDir)) {
     fs.mkdirSync(downloadDir);
 }
@@ -56,7 +56,7 @@ console.log("📂 Download folder:", downloadDir);
         await page.waitForSelector(textareaSelector, { visible: true });
         const contentTextarea = await page.$(textareaSelector);
 
-        await page.evaluate(text => navigator.clipboard.writeText(text), videos[i]);
+        await page.evaluate(text => navigator.clipboard.writeText(text), videos[i] + " the animals should be doing cute things with their young.");
         await contentTextarea.click();
 
         await page.keyboard.down('Control');
@@ -136,7 +136,7 @@ console.log("📂 Download folder:", downloadDir);
         }, {
             url: realVideoUrl,
             headers: capturedHeaders,
-            filename: `video_${i}.mp4`
+            filename: `${videos[i]}_${i}.mp4`
         });
 
         console.log("✅ Browser download triggered");

@@ -14,7 +14,4 @@ puppeteer.use(StealthPlugin());
     await b.click();
 
     await new Promise(resolve => setTimeout(resolve, 555000));
-
-
-    //await browser.close();
 })();

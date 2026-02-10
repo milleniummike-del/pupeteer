@@ -8,7 +8,7 @@ const videos = require('./videos.js');
 (async () => {
   let browser;
 
-  const downloadDir = path.join(__dirname, "downloads");
+  const downloadDir = path.join(__dirname, "../Downloads/meta");
   if (!fs.existsSync(downloadDir)) fs.mkdirSync(downloadDir);
 
   function downloadFile(url, filepath) {

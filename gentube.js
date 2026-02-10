@@ -8,7 +8,6 @@ puppeteer.use(StealthPlugin());
     const videos = require('./videos.js');
     const page = await browser.newPage();
 
-    //await page.goto('https://www.gentube.app/feed/spotlight?creating=1', { waitUntil: 'load' });
     await page.goto('https://www.gentube.app/feed/spotlight?creating=1', {});
     await new Promise(resolve => setTimeout(resolve, 5000));
 
@@ -19,7 +18,7 @@ puppeteer.use(StealthPlugin());
         const contentTextarea = await page.$(textareaSelector);
 
         await page.evaluate((text) => {
-            navigator.clipboard.writeText(text + " on a series of polaroid photos falling in space.");
+            navigator.clipboard.writeText(text);
         }, videos[i]);
 
         await contentTextarea.focus();
@@ -28,7 +27,9 @@ puppeteer.use(StealthPlugin());
         await page.keyboard.down('Control');
         await page.keyboard.press('KeyV');
         await page.keyboard.up('Control');
-        await new Promise(resolve => setTimeout(resolve, 5000));
+        await new Promise(resolve => setTimeout(resolve, 500000));
+
+        // ** todo download image?
 
         const modelselect = await page.waitForSelector('button[aria-label="Clear"]');
         await modelselect.click();
