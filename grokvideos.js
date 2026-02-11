@@ -56,7 +56,7 @@ console.log("📂 Download folder:", downloadDir);
         await page.waitForSelector(textareaSelector, { visible: true });
         const contentTextarea = await page.$(textareaSelector);
 
-        await page.evaluate(text => navigator.clipboard.writeText(text), videos[i] + " the animals should be doing cute things with their young.");
+        await page.evaluate(text => navigator.clipboard.writeText(text), videos[i]);
         await contentTextarea.click();
 
         await page.keyboard.down('Control');
