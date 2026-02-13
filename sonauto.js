@@ -29,8 +29,6 @@ puppeteer.use(StealthPlugin());
             // Only capture .ogg files
             if (!url.endsWith('.ogg')) return;
 
-            
-
             console.log('Detected OGG:', url);
 
             const buffer = await res.buffer();
@@ -52,7 +50,7 @@ puppeteer.use(StealthPlugin());
     // -----------------------------
     // YOUR ORIGINAL SCRIPT
     // -----------------------------
-    const musicprompt = 'synthwave song about sharks';
+    const musicprompt = 'Cinematic ambient world music inspired by wildlife at dawn in a vast, untouched rainforest. Gentle layers of atmospheric pads and soft wooden flutes mimic morning mist rising through the trees. Light percussion made from natural textures (wood taps, seed shakers, distant tribal drums) creates an organic heartbeat. Subtle bird calls echo in the distance, blending musically with high, airy synth tones. A warm, earthy bass hums underneath like the slow movement of large animals through foliage. Midway, the track swells with orchestral strings to evoke herds migrating across open plains, then softens into delicate piano notes like sunlight breaking through leaves. Peaceful, immersive, reverent toward nature. Tempo slow to moderate. Emotion: wonder, serenity, quiet majesty.';
 
     await page.goto('https://sonauto.ai/create', {});
     const textareaSelector = 'textarea';

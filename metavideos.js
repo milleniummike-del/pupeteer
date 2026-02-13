@@ -45,11 +45,11 @@ const videos = require('./videos.js');
     });
 
     const page = await browser.newPage();
-
+    
     // ----------------------------------------------------
     // 1. SSE HANDLER (requestfinished)
     // ----------------------------------------------------
-    page.on('requestfinished', async (request) => {
+    page.on('requestfinishedx', async (request) => {
       try {
         const response = await request.response();
         if (!response) return;
@@ -94,7 +94,7 @@ const videos = require('./videos.js');
     // ----------------------------------------------------
     // 2. NORMAL JSON RESPONSES
     // ----------------------------------------------------
-    page.on('response', async (response) => {
+    page.on('responsex', async (response) => {
       try {
         const headers = response.headers();
         const contentType = headers['content-type'] || '';
