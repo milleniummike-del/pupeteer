@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { exec } = require('child_process');
+const { spawn } = require('child_process');
 
 const combineVideos = async (targetDirectory) => {
   if (!fs.existsSync(targetDirectory)) {
@@ -27,64 +27,53 @@ const combineVideos = async (targetDirectory) => {
     return;
   }
 
-  // Sort video files by name to ensure consistent order
+  console.log('Video files found to combine:' + videoFiles.length);
+
   videoFiles.sort();
 
   const outputVideoPath = path.join(targetDirectory, 'combined_video.mp4');
   const fileListPath = path.join(targetDirectory, 'file_list.txt');
-
-  // Create a file list for ffmpeg concat demuxer
-  const fileListContent = videoFiles.map(file => `file '${file}'`).join('\n');
+  const fileListContent = videoFiles.map(file => `file '${file.replace(/'/g, "'\\''")}'`).join('\n');
   fs.writeFileSync(fileListPath, fileListContent);
 
-  let ffmpegCommand = `ffmpeg -f concat -safe 0 -i "${fileListPath}" -c copy "${outputVideoPath}"`;
+  const runFfmpeg = (args) => {
+    return new Promise((resolve, reject) => {
+      const ffmpeg = spawn('ffmpeg', args);
 
-  if (audioFile) {
-    const videoWithAudioPath = path.join(targetDirectory, 'combined_video_with_audio.mp4');
-    // First, combine videos without audio
-    await new Promise((resolve, reject) => {
-      console.log('Combining videos...');
-      exec(ffmpegCommand, (error, stdout, stderr) => {
-        if (error) {
-          console.error(`Error combining videos: ${error.message}`);
-          console.error(stderr);
-          reject(error);
-          return;
-        }
-        console.log('Videos combined successfully.');
-        // Then, add audio to the combined video
-        ffmpegCommand = `ffmpeg -i "${outputVideoPath}" -i "${audioFile}" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 "${videoWithAudioPath}"`;
-        console.log('Adding audio to combined video...');
-        exec(ffmpegCommand, (audioError, audioStdout, audioStderr) => {
-          if (audioError) {
-            console.error(`Error adding audio: ${audioError.message}`);
-            console.error(audioStderr);
-            reject(audioError);
-            return;
-          }
-          console.log('Audio added successfully. Final video:', videoWithAudioPath);
-          fs.unlinkSync(outputVideoPath); // Clean up intermediate video
-          fs.unlinkSync(fileListPath); // Clean up file list
+      ffmpeg.stdout.on('data', (data) => {
+        console.log(data.toString());
+      });
+
+      ffmpeg.stderr.on('data', (data) => {
+        console.error(data.toString());
+      });
+
+      ffmpeg.on('close', (code) => {
+        if (code === 0) {
           resolve();
-        });
-      });
-    });
-  } else {
-    // If no audio file, just combine videos
-    console.log('Combining videos...');
-    await new Promise((resolve, reject) => {
-      exec(ffmpegCommand, (error, stdout, stderr) => {
-        if (error) {
-          console.error(`Error combining videos: ${error.message}`);
-          console.error(stderr);
-          reject(error);
-          return;
+        } else {
+          reject(new Error(`ffmpeg process exited with code ${code}`));
         }
-        console.log('Videos combined successfully. Final video:', outputVideoPath);
-        fs.unlinkSync(fileListPath); // Clean up file list
-        resolve();
       });
     });
+  };
+
+  try {
+    const ffmpegArgs = ['-f', 'concat', '-safe', '0', '-i', fileListPath, '-c', 'copy', outputVideoPath];
+    await runFfmpeg(ffmpegArgs);
+    console.log('Videos combined successfully.');
+
+    if (audioFile) {
+      const videoWithAudioPath = path.join(targetDirectory, 'combined_video_with_audio.mp4');
+      const audioArgs = ['-i', outputVideoPath, '-i', audioFile, '-c:v', 'copy', '-c:a', 'aac', '-map', '0:v:0', '-map', '1:a:0', videoWithAudioPath];
+      await runFfmpeg(audioArgs);
+      console.log('Audio added successfully. Final video:', videoWithAudioPath);
+      fs.unlinkSync(outputVideoPath);
+    } else {
+      console.log('Final video:', outputVideoPath);
+    }
+  } finally {
+    fs.unlinkSync(fileListPath);
   }
 };
 
