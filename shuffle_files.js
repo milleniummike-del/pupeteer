@@ -25,5 +25,12 @@ const shuffleFiles = (directoryPath) => {
   });
 };
 
-const targetDirectory = 'F:\\AI\\Videos\\20260212'; // User-specified directory
+
+const targetDirectory = process.argv[2];
+
+if (!targetDirectory) {
+  console.error('Usage: node shuffle_files.js <targetDirectory>');
+  process.exit(1);
+}
+
 shuffleFiles(targetDirectory);
