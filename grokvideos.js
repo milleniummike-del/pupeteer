@@ -11,9 +11,9 @@ const downloadDir = path.resolve(__dirname, 'downloads');
 if (!fs.existsSync(downloadDir)) {
     fs.mkdirSync(downloadDir);
 }
-console.log("📂 Download folder:", downloadDir);
 
-const destinationDir = "F:\\AI\\Videos\\20260217";
+const destinationDir = "F:\\AI\\Videos\\20260217c";
+console.log("📂 Download folder:", destinationDir);
 
 async function moveLatestDownload(destination) {
     const downloadsPath = path.join(os.homedir(), 'Downloads');
