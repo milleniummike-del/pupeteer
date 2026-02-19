@@ -35,7 +35,7 @@ puppeteer.use(StealthPlugin());
 
             const filename = elementsname[0] + ".ogg";
 
-            const saveDir = '../Downloads/sonauto';
+            const saveDir = 'F:\\AI\\Videos\\20260219';
             const filepath = path.join(saveDir, filename);
 
             fs.mkdirSync(saveDir, { recursive: true });

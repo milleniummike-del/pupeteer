@@ -66,10 +66,21 @@ function getTodayDateFormatted() {
           for (const latestFile of latestFiles) {
               if (latestFile) {
                   const oldPath = path.join(downloadsPath, latestFile.file);
-                  const newPath = path.join(destination, latestFile.file);
+                  let fileName = latestFile.file;
+                  let newPath = path.join(destination, fileName);
+
+                  let counter = 1;
+                  const ext = path.extname(fileName);
+                  const base = path.basename(fileName, ext);
+
+                  while (fs.existsSync(newPath)) {
+                      newPath = path.join(destination, `${base}_${counter}${ext}`);
+                      counter++;
+                  }
+
                   fs.copyFileSync(oldPath, newPath);
                   fs.unlinkSync(oldPath);
-                  console.log(`Moved ${latestFile.file} to ${destination}`);
+                  console.log(`Moved ${latestFile.file} to ${newPath}`);
               }
           }
       } catch (error) {
