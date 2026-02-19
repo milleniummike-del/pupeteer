@@ -34,6 +34,15 @@ function getTodayDateFormatted() {
     return `${year}${month}${day}`;
 }
 
+const environment=1;
+
+if(environment==1) {
+destinationDir = `C:\\Users\\Mike\\pupeteer\\videos\\${getTodayDateFormatted()}`;
+} else {
+destinationDir = `F:\\AI\\Videos\\${getTodayDateFormatted()}`;
+}
+console.log("📂 Download folder:", destinationDir);
+
 (async () => {
   let browser;
 
@@ -41,9 +50,6 @@ function getTodayDateFormatted() {
   if (!fs.existsSync(downloadDir)) {
       fs.mkdirSync(downloadDir);
   }
-  
-  const destinationDir = `F:\\AI\\Videos\\${getTodayDateFormatted()}`;
-  console.log("📂 Download folder:", destinationDir);
   
   async function moveLatestDownloads(destination) {
       const downloadsPath = path.join(os.homedir(), 'Downloads');
@@ -142,8 +148,8 @@ function getTodayDateFormatted() {
         console.log("click @" + i);
         await elements[i].click();
       }
-      await new Promise(resolve => setTimeout(resolve, 10000));
-      console.log('waited 10 seconds');
+      await new Promise(resolve => setTimeout(resolve, 20000));
+      console.log('waited 20 seconds');
       await moveLatestDownloads(destinationDir);
     }
 

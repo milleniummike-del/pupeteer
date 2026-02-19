@@ -3,6 +3,22 @@ const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 const fs = require('fs');
 const path = require('path');
 
+function getTodayDateFormatted() {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+    const day = String(today.getDate()).padStart(2, '0');
+    return `${year}${month}${day}`;
+}
+
+const environment=1;
+
+if(environment==1) {
+destinationDir = `C:\\Users\\Mike\\pupeteer\\videos\\${getTodayDateFormatted()}`;
+} else {
+destinationDir = `F:\\AI\\Videos\\${getTodayDateFormatted()}`;
+}
+console.log("📂 Download folder:", destinationDir);
 puppeteer.use(StealthPlugin());
 
 (async () => {
@@ -35,7 +51,7 @@ puppeteer.use(StealthPlugin());
 
             const filename = elementsname[0] + ".ogg";
 
-            const saveDir = 'F:\\AI\\Videos\\20260219';
+            const saveDir = destinationDir;
             const filepath = path.join(saveDir, filename);
 
             fs.mkdirSync(saveDir, { recursive: true });

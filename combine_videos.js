@@ -2,6 +2,23 @@ const fs = require('fs');
 const path = require('path');
 const { spawn } = require('child_process');
 
+function getTodayDateFormatted() {
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+  const day = String(today.getDate()).padStart(2, '0');
+  return `${year}${month}${day}`;
+}
+
+const environment=1;
+
+if(environment==1) {
+destinationDir = `C:\\Users\\Mike\\pupeteer\\videos\\${getTodayDateFormatted()}`;
+} else {
+destinationDir = `F:\\AI\\Videos\\${getTodayDateFormatted()}`;
+}
+console.log("📂 Download folder:", destinationDir);
+
 const runCommand = (command, args) => {
     return new Promise((resolve, reject) => {
       const child = spawn(command, args);
@@ -182,7 +199,7 @@ const combineVideos = async (targetDirectory) => {
   }
 };
 
-const targetDirectory = process.argv[2];
+const targetDirectory = destinationDir;
 
 if (!targetDirectory) {
   console.error('Usage: node combine_videos.js <targetDirectory>');

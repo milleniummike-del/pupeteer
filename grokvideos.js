@@ -24,14 +24,6 @@ Common themes include self-portraits, bedrooms, cafés, fields, olive trees, cyp
 High contrast and bold lighting
 Light is dramatic and directional, often glowing unnaturally, enhancing the sense of intensity and focus.`
 
-puppeteer.use(StealthPlugin());
-
-// 📁 Folder where Chrome will save files
-const downloadDir = path.resolve(__dirname, 'downloads');
-if (!fs.existsSync(downloadDir)) {
-    fs.mkdirSync(downloadDir);
-}
-
 function getTodayDateFormatted() {
     const today = new Date();
     const year = today.getFullYear();
@@ -40,8 +32,24 @@ function getTodayDateFormatted() {
     return `${year}${month}${day}`;
 }
 
-const destinationDir = `F:\\AI\\Videos\\${getTodayDateFormatted()}`;
+const environment=1;
+
+if(environment==1) {
+destinationDir = `C:\\Users\\Mike\\pupeteer\\videos\\${getTodayDateFormatted()}`;
+} else {
+destinationDir = `F:\\AI\\Videos\\${getTodayDateFormatted()}`;
+}
 console.log("📂 Download folder:", destinationDir);
+
+puppeteer.use(StealthPlugin());
+
+// 📁 Folder where Chrome will save files
+const downloadDir = path.resolve(__dirname, 'downloads');
+if (!fs.existsSync(downloadDir)) {
+    fs.mkdirSync(downloadDir);
+}
+
+
 
 async function moveLatestDownload(destination) {
     const downloadsPath = path.join(os.homedir(), 'Downloads');
