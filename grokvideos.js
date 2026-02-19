@@ -3,6 +3,26 @@ const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
+const style = `Thick impasto brushstrokes
+Paint is applied heavily, often straight from the tube, creating visible texture and sculptural surfaces. Brushstrokes remain clearly visible and directional, conveying movement and emotion.
+
+Expressive, exaggerated color
+Colors are symbolic rather than realistic—intense yellows, deep blues, vibrant greens, and fiery oranges used to express mood, energy, and inner emotion.
+
+Dynamic motion and rhythm
+Skies swirl, fields ripple, trees twist. Lines and strokes often follow curved, repetitive patterns that give scenes a sense of constant motion and life.
+
+Emotional realism over visual realism
+Perspective, proportions, and anatomy are often distorted intentionally to heighten psychological or emotional impact.
+
+Strong outlines and simplified forms
+Objects are frequently outlined or clearly separated, inspired partly by Japanese woodblock prints, giving scenes clarity despite the expressive chaos.
+
+Intimate, personal subject matter
+Common themes include self-portraits, bedrooms, cafés, fields, olive trees, cypress trees, night skies, and everyday rural life—ordinary scenes infused with profound feeling.
+
+High contrast and bold lighting
+Light is dramatic and directional, often glowing unnaturally, enhancing the sense of intensity and focus.`
 
 puppeteer.use(StealthPlugin());
 
@@ -12,7 +32,15 @@ if (!fs.existsSync(downloadDir)) {
     fs.mkdirSync(downloadDir);
 }
 
-const destinationDir = "F:\\AI\\Videos\\20260217c";
+function getTodayDateFormatted() {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+    const day = String(today.getDate()).padStart(2, '0');
+    return `${year}${month}${day}`;
+}
+
+const destinationDir = `F:\\AI\\Videos\\${getTodayDateFormatted()}`;
 console.log("📂 Download folder:", destinationDir);
 
 async function moveLatestDownload(destination) {
@@ -68,7 +96,7 @@ async function moveLatestDownload(destination) {
     page.on('request', req => {
         const url = req.url();
 
-        if (req.resourceType() === 'media' && url.includes('hd.mp4')) {
+        if (req.resourceType() === 'media' && url.includes('mp4')) {
             console.log(url);
             realVideoUrl = url;
             capturedHeaders = req.headers();
@@ -84,14 +112,14 @@ async function moveLatestDownload(destination) {
         await page.goto('https://grok.com/imagine', { waitUntil: 'load' });
         await page.setViewport({ width: 727, height: 920 });
 
-        const textareaSelector = 'textarea[aria-label="Ask Grok anything"]';
-        //const textareaSelector = 'p[data-placeholder="Type to imagine"]';
+        //const textareaSelector = 'textarea[aria-label="Ask Grok anything"]';
+        const textareaSelector = 'p[data-placeholder="Type to imagine"]';
 
         await page.waitForSelector(textareaSelector, { visible: true });
         const contentTextarea = await page.$(textareaSelector);
 
         await contentTextarea.click();
-        await page.keyboard.type(videos[i]);
+        await page.keyboard.type(videos[i]+" "+style);
 
         const submitBtn = await page.waitForSelector('button[aria-label="Submit"]');
         await submitBtn.click();
@@ -99,6 +127,8 @@ async function moveLatestDownload(destination) {
 
         await page.waitForSelector('video#sd-video', { timeout: 120000 });
         console.log('🎬 SD video ready');
+        
+        /*
 
         const moreBtn = await page.waitForSelector('button[aria-label="More options"]');
         await moreBtn.click();
@@ -112,6 +142,7 @@ async function moveLatestDownload(destination) {
 
         await page.waitForSelector('video#hd-video', { timeout: 120000 });
 
+        */
 
         // Wait for MP4 URL
         let tries = 0;

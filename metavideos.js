@@ -3,39 +3,78 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
+const os = require('os');
 const videos = require('./videos.js');
+const style = `Thick impasto brushstrokes
+Paint is applied heavily, often straight from the tube, creating visible texture and sculptural surfaces. Brushstrokes remain clearly visible and directional, conveying movement and emotion.
+
+Expressive, exaggerated color
+Colors are symbolic rather than realistic—intense yellows, deep blues, vibrant greens, and fiery oranges used to express mood, energy, and inner emotion.
+
+Dynamic motion and rhythm
+Skies swirl, fields ripple, trees twist. Lines and strokes often follow curved, repetitive patterns that give scenes a sense of constant motion and life.
+
+Emotional realism over visual realism
+Perspective, proportions, and anatomy are often distorted intentionally to heighten psychological or emotional impact.
+
+Strong outlines and simplified forms
+Objects are frequently outlined or clearly separated, inspired partly by Japanese woodblock prints, giving scenes clarity despite the expressive chaos.
+
+Intimate, personal subject matter
+Common themes include self-portraits, bedrooms, cafés, fields, olive trees, cypress trees, night skies, and everyday rural life—ordinary scenes infused with profound feeling.
+
+High contrast and bold lighting
+Light is dramatic and directional, often glowing unnaturally, enhancing the sense of intensity and focus.`
+
+function getTodayDateFormatted() {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+    const day = String(today.getDate()).padStart(2, '0');
+    return `${year}${month}${day}`;
+}
 
 (async () => {
   let browser;
 
-  const downloadDir = path.join(__dirname, "../Downloads/meta");
-  if (!fs.existsSync(downloadDir)) fs.mkdirSync(downloadDir);
-
-  function downloadFile(url, filepath) {
-    return new Promise((resolve, reject) => {
-      const file = fs.createWriteStream(filepath);
-      https.get(url, (response) => {
-        response.pipe(file);
-        file.on("finish", () => file.close(resolve));
-      }).on("error", (err) => {
-        fs.unlink(filepath, () => reject(err));
-      });
-    });
+  const downloadDir = path.join(__dirname, 'downloads');
+  if (!fs.existsSync(downloadDir)) {
+      fs.mkdirSync(downloadDir);
   }
-
-  async function handleDownload(url) {
-    const filename = path.basename(url.split("?")[0]);
-    const filepath = path.join(downloadDir, filename);
-
-    if (fs.existsSync(filepath)) return;
-
-    console.log(`⬇ Downloading: ${filename}`);
-    try {
-      await downloadFile(url, filepath);
-      console.log(`✅ Saved: ${filename}`);
-    } catch (err) {
-      console.log(`❌ Failed to download ${filename}:`, err.message);
-    }
+  
+  const destinationDir = `F:\\AI\\Videos\\${getTodayDateFormatted()}`;
+  console.log("📂 Download folder:", destinationDir);
+  
+  async function moveLatestDownloads(destination) {
+      const downloadsPath = path.join(os.homedir(), 'Downloads');
+      try {
+          if (!fs.existsSync(destination)) {
+              fs.mkdirSync(destination, { recursive: true });
+          }
+  
+          const files = fs.readdirSync(downloadsPath);
+          if (files.length === 0) {
+              console.log('No files found in downloads directory');
+              return;
+          }
+  
+          const latestFiles = files.map(file => ({
+              file,
+              mtime: fs.statSync(path.join(downloadsPath, file)).mtime
+          })).sort((a, b) => b.mtime - a.mtime).slice(0, 4);
+  
+          for (const latestFile of latestFiles) {
+              if (latestFile) {
+                  const oldPath = path.join(downloadsPath, latestFile.file);
+                  const newPath = path.join(destination, latestFile.file);
+                  fs.copyFileSync(oldPath, newPath);
+                  fs.unlinkSync(oldPath);
+                  console.log(`Moved ${latestFile.file} to ${destination}`);
+              }
+          }
+      } catch (error) {
+          console.error('Error moving file:', error);
+      }
   }
 
   try {
@@ -46,106 +85,6 @@ const videos = require('./videos.js');
 
     const page = await browser.newPage();
     
-    // ----------------------------------------------------
-    // 1. SSE HANDLER (requestfinished)
-    // ----------------------------------------------------
-    page.on('requestfinishedx', async (request) => {
-      try {
-        const response = await request.response();
-        if (!response) return;
-
-        const headers = response.headers();
-        const contentType = headers['content-type'] || '';
-
-        if (!contentType.includes('text/event-stream')) return;
-
-        const buffer = await response.buffer();
-        const text = buffer.toString();
-
-        const matches = text.match(/data:\s*(\{[\s\S]*?\})(?=\n|$)/g);
-        if (!matches) return;
-
-        for (const match of matches) {
-          const jsonStr = match.replace(/^data:\s*/, '');
-
-          try {
-            const evt = JSON.parse(jsonStr);
-            const stream = evt?.data?.batchedGenerationStatusStream;
-
-            if (
-              stream &&
-              stream.status === "COMPLETE" &&
-              stream.generatedVideo &&
-              stream.generatedVideo.url
-            ) {
-              const url = stream.generatedVideo.url;
-              console.log("🎥 SSE Video URL:", url);
-              await handleDownload(url);
-            }
-
-          } catch (err) { }
-        }
-
-      } catch (err) {
-        console.log("SSE error:", err.message);
-      }
-    });
-
-    // ----------------------------------------------------
-    // 2. NORMAL JSON RESPONSES
-    // ----------------------------------------------------
-    page.on('responsex', async (response) => {
-      try {
-        const headers = response.headers();
-        const contentType = headers['content-type'] || '';
-
-        if (!contentType.includes('application/json')) return;
-
-        const jsonData = await response.json();
-
-        function findGeneratedVideos(obj, results = []) {
-          if (obj && typeof obj === 'object') {
-            if (
-              obj.__isGeneratedMediaInterface === "GeneratedVideo" &&
-              obj.url
-            ) {
-              results.push(obj.url);
-            }
-            for (const key in obj) {
-              findGeneratedVideos(obj[key], results);
-            }
-          }
-          return results;
-        }
-
-        function findMetaAIGeneratedVideos(obj, results = []) {
-          if (obj && typeof obj === 'object') {
-            if (
-              obj.status === "COMPLETE" &&
-              obj.generatedVideo &&
-              obj.generatedVideo.url
-            ) {
-              results.push(obj.generatedVideo.url);
-            }
-            for (const key in obj) {
-              findMetaAIGeneratedVideos(obj[key], results);
-            }
-          }
-          return results;
-        }
-
-        const urls = [
-          ...findGeneratedVideos(jsonData),
-          ...findMetaAIGeneratedVideos(jsonData)
-        ];
-
-        for (const url of urls) {
-          await handleDownload(url);
-        }
-
-      } catch (err) { }
-    });
-
     // ----------------------------------------------------
     // MAIN AUTOMATION LOOP
     // ----------------------------------------------------
@@ -169,7 +108,7 @@ const videos = require('./videos.js');
       await page.evaluate((text, v) => {
 
         navigator.clipboard.writeText(text);
-      }, videos[v], v);
+      }, videos[v]+" "+style, v);
 
       await contentTextarea.focus();
 
@@ -192,8 +131,9 @@ const videos = require('./videos.js');
         console.log("click @" + i);
         await elements[i].click();
       }
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      console.log('waited 2 seconds');
+      await new Promise(resolve => setTimeout(resolve, 10000));
+      console.log('waited 10 seconds');
+      await moveLatestDownloads(destinationDir);
     }
 
   } catch (err) {
