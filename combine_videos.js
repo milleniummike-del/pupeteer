@@ -69,7 +69,7 @@ const combineVideos = async (targetDirectory) => {
     const ext = path.extname(file).toLowerCase();
     if (videoExtensions.includes(ext)) {
       videoFiles.push(path.join(targetDirectory, file));
-    } else if (ext === '.wav' || ext === '.mpe' ) {
+    } else if (ext === '.wav' || ext === '.mp3' ) {
       audioFile = path.join(targetDirectory, file);
     }
   });
