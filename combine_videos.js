@@ -13,7 +13,7 @@ function getTodayDateFormatted() {
 const environment=1;
 
 if(environment==1) {
-destinationDir = `C:\\Users\\Mike\\pupeteer\\videos\\${getTodayDateFormatted()}`;
+destinationDir = `C:\\Users\\Mike_\\pupeteer\\videos\\${getTodayDateFormatted()}`;
 } else {
 destinationDir = `F:\\AI\\Videos\\${getTodayDateFormatted()}`;
 }
@@ -69,7 +69,7 @@ const combineVideos = async (targetDirectory) => {
     const ext = path.extname(file).toLowerCase();
     if (videoExtensions.includes(ext)) {
       videoFiles.push(path.join(targetDirectory, file));
-    } else if (ext === '.wav') {
+    } else if (ext === '.wav' || ext === '.mpe' ) {
       audioFile = path.join(targetDirectory, file);
     }
   });

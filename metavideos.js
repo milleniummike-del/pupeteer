@@ -5,26 +5,7 @@ const path = require('path');
 const https = require('https');
 const os = require('os');
 const videos = require('./videos.js');
-const style = `Thick impasto brushstrokes
-Paint is applied heavily, often straight from the tube, creating visible texture and sculptural surfaces. Brushstrokes remain clearly visible and directional, conveying movement and emotion.
-
-Expressive, exaggerated color
-Colors are symbolic rather than realistic—intense yellows, deep blues, vibrant greens, and fiery oranges used to express mood, energy, and inner emotion.
-
-Dynamic motion and rhythm
-Skies swirl, fields ripple, trees twist. Lines and strokes often follow curved, repetitive patterns that give scenes a sense of constant motion and life.
-
-Emotional realism over visual realism
-Perspective, proportions, and anatomy are often distorted intentionally to heighten psychological or emotional impact.
-
-Strong outlines and simplified forms
-Objects are frequently outlined or clearly separated, inspired partly by Japanese woodblock prints, giving scenes clarity despite the expressive chaos.
-
-Intimate, personal subject matter
-Common themes include self-portraits, bedrooms, cafés, fields, olive trees, cypress trees, night skies, and everyday rural life—ordinary scenes infused with profound feeling.
-
-High contrast and bold lighting
-Light is dramatic and directional, often glowing unnaturally, enhancing the sense of intensity and focus.`
+const style = ``;
 
 function getTodayDateFormatted() {
     const today = new Date();
@@ -37,7 +18,7 @@ function getTodayDateFormatted() {
 const environment=1;
 
 if(environment==1) {
-destinationDir = `C:\\Users\\Mike\\pupeteer\\videos\\${getTodayDateFormatted()}`;
+destinationDir = `C:\\Users\\mike_\\pupeteer\\videos\\${getTodayDateFormatted()}`;
 } else {
 destinationDir = `F:\\AI\\Videos\\${getTodayDateFormatted()}`;
 }
