@@ -13,7 +13,7 @@ function getTodayDateFormatted() {
     return `${year}${month}${day}`;
 }
 
-const environment=1;
+const environment=2;
 
 if(environment==1) {
 destinationDir = `C:\\Users\\mike_\\pupeteer\\videos\\${getTodayDateFormatted()}`;
@@ -186,7 +186,7 @@ a.click();
         }, {
             url: realVideoUrl,
             headers: capturedHeaders,
-            filename: `${videos[i]}_${i}.mp4`
+            filename: `${videos[i].substring(0, 50).replace(/[^a-z0-9]/gi, '_').toLowerCase()}_${Date.now()}.mp4`
         });
 
         console.log("✅ Browser download triggered");

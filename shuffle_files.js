@@ -1,6 +1,22 @@
 const fs = require('fs');
 const path = require('path');
 
+function getTodayDateFormatted() {
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+  const day = String(today.getDate()).padStart(2, '0');
+  return `${year}${month}${day}`;
+}
+
+const environment=2;
+
+if(environment==1) {
+destinationDir = `C:\\Users\\Mike_\\pupeteer\\videos\\${getTodayDateFormatted()}`;
+} else {
+destinationDir = `F:\\AI\\Videos\\${getTodayDateFormatted()}`;
+}
+
 const shuffleFiles = (directoryPath) => {
   fs.readdir(directoryPath, (err, files) => {
     if (err) {
@@ -25,12 +41,4 @@ const shuffleFiles = (directoryPath) => {
   });
 };
 
-
-const targetDirectory = process.argv[2];
-
-if (!targetDirectory) {
-  console.error('Usage: node shuffle_files.js <targetDirectory>');
-  process.exit(1);
-}
-
-shuffleFiles(targetDirectory);
+shuffleFiles(destinationDir);

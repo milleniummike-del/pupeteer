@@ -10,7 +10,7 @@ function getTodayDateFormatted() {
   return `${year}${month}${day}`;
 }
 
-const environment=1;
+const environment=2;
 
 if(environment==1) {
 destinationDir = `C:\\Users\\Mike_\\pupeteer\\videos\\${getTodayDateFormatted()}`;
@@ -161,17 +161,43 @@ const combineVideos = async (targetDirectory) => {
     }
 
     if (audioFile) {
-      // Get video duration (of potentially trimmed combined video)
-      const ffprobeArgs = ['-v', 'error', '-show_entries', 'format=duration', '-of', 'default=noprint_wrappers=1:nokey=1', currentCombinedVideoPath];
-      const durationStr = await runCommand('ffprobe', ffprobeArgs);
-      const duration = parseFloat(durationStr);
+      const audioDuration = await getVideoDuration(audioFile);
+      let duration = await getVideoDuration(currentCombinedVideoPath);
 
-      console.log(`Combined video duration for audio mixing: ${duration} seconds`);
+      console.log(`Audio duration: ${audioDuration.toFixed(2)}s, Video duration: ${duration.toFixed(2)}s`);
+
+      if (duration > audioDuration) {
+          console.log(`Trimming video to match audio length (${audioDuration.toFixed(2)}s).`);
+          const videoToAudioTrimPath = path.join(targetDirectory, 'video_trimmed_to_audio.mp4');
+          const fadeDuration = Math.min(3, audioDuration / 2);
+          const fadeStartTime = audioDuration - fadeDuration;
+          
+          const trimArgs = [
+              '-y',
+              '-i', currentCombinedVideoPath,
+              '-t', audioDuration.toString(),
+              '-vf', `fade=t=out:st=${audioDuration - 0.5}:d=0.5`,
+              '-af', `afade=t=out:st=${fadeStartTime}:d=${fadeDuration}`,
+              '-c:v', 'libx264', '-preset', 'fast', '-crf', '23',
+              '-c:a', 'aac',
+              videoToAudioTrimPath
+          ];
+          await runCommand('ffmpeg', trimArgs);
+          
+          if (currentCombinedVideoPath !== outputVideoPath && fs.existsSync(currentCombinedVideoPath)) {
+              fs.unlinkSync(currentCombinedVideoPath);
+          }
+          currentCombinedVideoPath = videoToAudioTrimPath;
+          duration = audioDuration;
+          tempFiles.push(videoToAudioTrimPath);
+      }
+
+      console.log(`Final video duration for audio mixing: ${duration.toFixed(2)} seconds`);
 
       // Trim audio
       const trimmedAudioPath = path.join(targetDirectory, 'trimmed_audio.aac');
-      const fadeOutStartTime = duration - 3;
-      const audioArgs = ['-y', '-i', audioFile, '-ss', '0', '-t', duration, '-af', `afade=t=out:st=${fadeOutStartTime}:d=3`, trimmedAudioPath];
+      const fadeOutStartTime = Math.max(0, duration - 3);
+      const audioArgs = ['-y', '-i', audioFile, '-ss', '0', '-t', duration.toString(), '-af', `afade=t=out:st=${fadeOutStartTime}:d=3`, trimmedAudioPath];
       await runCommand('ffmpeg', audioArgs);
       console.log('Audio trimmed and faded successfully.');
 
