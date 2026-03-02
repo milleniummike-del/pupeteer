@@ -107,15 +107,31 @@ console.log("📂 Download folder:", destinationDir);
     try {
         browser = await puppeteer.launch({
             userDataDir: "browser",
-            headless: false
+            headless: false,
+            defaultViewport: null
         });
 
-        const page = await browser.newPage();
+        const pages = await browser.pages();
+        const page = pages[0];
+        await page.bringToFront();
+        
         const client = await page.target().createCDPSession();
-        await client.send('Page.setDownloadBehavior', {
-            behavior: 'allow',
-            downloadPath: downloadDir,
-        });
+        
+        // Use Browser.setDownloadBehavior for more reliable across-page behavior
+        try {
+            await client.send('Browser.setDownloadBehavior', {
+                behavior: 'allow',
+                downloadPath: downloadDir,
+                eventsEnabled: true,
+            });
+            console.log("✅ Browser download behavior set to:", downloadDir);
+        } catch (e) {
+            console.warn("⚠️ Browser.setDownloadBehavior failed, falling back to Page.setDownloadBehavior:", e.message);
+            await client.send('Page.setDownloadBehavior', {
+                behavior: 'allow',
+                downloadPath: downloadDir,
+            });
+        }
 
         const tracker = loadTracker();
 
