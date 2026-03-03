@@ -17,6 +17,16 @@ function getTodayDateFormatted() {
     return `${year}${month}${day}`;
 }
 
+function getPreciseTimestamp() {
+    const now = new Date();
+    const datePart = getTodayDateFormatted();
+    const timePart = String(now.getHours()).padStart(2, '0') +
+                     String(now.getMinutes()).padStart(2, '0') +
+                     String(now.getSeconds()).padStart(2, '0');
+    const msPart = String(now.getMilliseconds()).padStart(3, '0');
+    return `${datePart}_${timePart}_${msPart}`;
+}
+
 function loadTracker() {
     if (fs.existsSync(TRACKER_FILE)) {
         try {
@@ -56,52 +66,18 @@ console.log("📂 Download folder:", destinationDir);
         fs.unlinkSync(path.join(downloadDir, file));
     }
 
-    async function waitForDownloads(dir, initialCount, expectedCount, timeout = 60000) {
+    async function waitForOneNewFile(dir, initialFiles, timeout = 60000) {
         const start = Date.now();
         while (Date.now() - start < timeout) {
             const files = fs.readdirSync(dir);
-            const currentFiles = files.filter(f => !f.endsWith('.crdownload') && !f.endsWith('.tmp'));
-            if (currentFiles.length >= initialCount + expectedCount) {
-                return currentFiles;
+            const currentFiles = files.filter(f => !f.endsWith('.crdownload') && !f.endsWith('.tmp') && !f.endsWith('.com.google.Chrome.tmp'));
+            const newFile = currentFiles.find(f => !initialFiles.includes(f));
+            if (newFile) {
+                return newFile;
             }
-            await new Promise(r => setTimeout(r, 2000));
+            await new Promise(r => setTimeout(r, 1000));
         }
-        return fs.readdirSync(dir).filter(f => !f.endsWith('.crdownload') && !f.endsWith('.tmp'));
-    }
-
-    async function moveNewDownloads(source, destination, knownFiles) {
-        try {
-            if (!fs.existsSync(destination)) {
-                fs.mkdirSync(destination, { recursive: true });
-            }
-
-            const currentFiles = fs.readdirSync(source);
-            const newFiles = currentFiles.filter(f => !knownFiles.includes(f) && !f.endsWith('.crdownload') && !f.endsWith('.tmp'));
-
-            const movedFiles = [];
-            for (const fileName of newFiles) {
-                const oldPath = path.join(source, fileName);
-                let newPath = path.join(destination, fileName);
-
-                let counter = 1;
-                const ext = path.extname(fileName);
-                const base = path.basename(fileName, ext);
-
-                while (fs.existsSync(newPath)) {
-                    newPath = path.join(destination, `${base}_${counter}${ext}`);
-                    counter++;
-                }
-
-                fs.copyFileSync(oldPath, newPath);
-                fs.unlinkSync(oldPath);
-                console.log(`Moved ${fileName} to ${newPath}`);
-                movedFiles.push(newPath);
-            }
-            return movedFiles;
-        } catch (error) {
-            console.error('Error moving file:', error);
-            return [];
-        }
+        return null;
     }
 
     try {
@@ -115,21 +91,38 @@ console.log("📂 Download folder:", destinationDir);
         const page = pages[0];
         await page.bringToFront();
         
-        const client = await page.target().createCDPSession();
+        // Resolve absolute path for downloads
+        const absoluteDownloadDir = path.resolve(downloadDir);
+        if (!fs.existsSync(absoluteDownloadDir)) {
+            fs.mkdirSync(absoluteDownloadDir, { recursive: true });
+        }
+
+        // Use Browser target for global download behavior
+        const client = await browser.target().createCDPSession();
         
-        // Use Browser.setDownloadBehavior for more reliable across-page behavior
+        client.on('Browser.downloadWillBegin', (event) => {
+            console.log(`🔔 Download will begin: ${event.suggestedFilename} (guid: ${event.guid})`);
+        });
+
+        client.on('Browser.downloadProgress', (event) => {
+            if (event.state === 'completed') {
+                console.log(`✅ Download completed: ${event.guid}`);
+            }
+        });
+
         try {
             await client.send('Browser.setDownloadBehavior', {
                 behavior: 'allow',
-                downloadPath: downloadDir,
+                downloadPath: absoluteDownloadDir,
                 eventsEnabled: true,
             });
-            console.log("✅ Browser download behavior set to:", downloadDir);
+            console.log("✅ Browser download behavior set to:", absoluteDownloadDir);
         } catch (e) {
             console.warn("⚠️ Browser.setDownloadBehavior failed, falling back to Page.setDownloadBehavior:", e.message);
-            await client.send('Page.setDownloadBehavior', {
+            const pageClient = await page.target().createCDPSession();
+            await pageClient.send('Page.setDownloadBehavior', {
                 behavior: 'allow',
-                downloadPath: downloadDir,
+                downloadPath: absoluteDownloadDir,
             });
         }
 
@@ -150,7 +143,6 @@ console.log("📂 Download folder:", destinationDir);
         for (let v = 0; v < videos.length; v++) {
             const currentPrompt = videos[v];
             
-            // Skip if already successfully processed (optional, but good for "keep track")
             if (tracker.find(t => t.prompt === currentPrompt && t.status === 'success')) {
                 console.log(`Skipping already completed prompt: ${currentPrompt}`);
                 continue;
@@ -174,7 +166,6 @@ console.log("📂 Download folder:", destinationDir);
             await submit.click();
             console.log('submitted prompt');
 
-            // Log requested prompt
             let requestEntry = {
                 prompt: currentPrompt,
                 timestamp: new Date().toISOString(),
@@ -184,32 +175,55 @@ console.log("📂 Download folder:", destinationDir);
             saveTracker(tracker);
 
             try {
-                const media = await page.waitForSelector('button[aria-label="Download"]', { timeout: 120000 });
-                console.log('waited for Download media');
+                // Wait for the FIRST download button to appear
+                await page.waitForSelector('button[aria-label="Download"]', { timeout: 180000, visible: true });
+                console.log('Download buttons appeared. Waiting for media to settle...');
                 
-                // Wait for generation to settle
-                await new Promise(resolve => setTimeout(resolve, 30000));
+                // Extended wait to ensure multiple videos are ready
+                await new Promise(resolve => setTimeout(resolve, 45000));
 
                 const elements = await page.$$('button[aria-label="Download"]');
-                console.log(`Found ${elements.length} download buttons`);
-
-                const initialFiles = fs.readdirSync(downloadDir).filter(f => !f.endsWith('.crdownload') && !f.endsWith('.tmp'));
-                
-                // Click last 4 (or fewer if not available)
                 const toClick = Math.min(elements.length, 4);
-                for (let i = elements.length - 1; i >= elements.length - toClick; i--) {
-                    console.log("clicking download button @" + i);
-                    await elements[i].click();
-                }
+                console.log(`Found ${elements.length} download buttons total. Clicking ${toClick} one-by-one.`);
 
-                console.log('Waiting for downloads to complete...');
-                const currentFiles = await waitForDownloads(downloadDir, initialFiles.length, toClick, 60000);
+                const movedFiles = [];
+                for (let i = elements.length - 1; i >= elements.length - toClick; i--) {
+                    const currentDownloadDirFiles = fs.readdirSync(downloadDir);
+                    console.log(`Clicking download button @${i}`);
+                    await elements[i].click();
+                    
+                    const newFile = await waitForOneNewFile(downloadDir, currentDownloadDirFiles, 60000);
+                    if (newFile) {
+                        const oldPath = path.join(downloadDir, newFile);
+                        const timestamp = getPreciseTimestamp();
+                        const ext = path.extname(newFile);
+                        const base = path.basename(newFile, ext);
+                        
+                        let newFileName = `p${v}_f${elements.length - 1 - i}_${base}_${timestamp}${ext}`;
+                        let newPath = path.join(destinationDir, newFileName);
+
+                        // Final check for collisions just in case
+                        let c = 1;
+                        while (fs.existsSync(newPath)) {
+                            newPath = path.join(destinationDir, `p${v}_f${elements.length - 1 - i}_${base}_${timestamp}_c${c}${ext}`);
+                            c++;
+                        }
+
+                        fs.copyFileSync(oldPath, newPath);
+                        fs.unlinkSync(oldPath);
+                        console.log(`Successfully moved: ${newFileName}`);
+                        movedFiles.push(newPath);
+                    } else {
+                        console.warn(`Timeout waiting for file from button @${i}`);
+                    }
+                    
+                    // Small delay between downloads
+                    await new Promise(r => setTimeout(r, 2000));
+                }
                 
-                const moved = await moveNewDownloads(downloadDir, destinationDir, initialFiles);
-                
-                if (moved.length > 0) {
+                if (movedFiles.length > 0) {
                     requestEntry.status = 'success';
-                    requestEntry.files = moved;
+                    requestEntry.files = movedFiles;
                 } else {
                     requestEntry.status = 'failed';
                     requestEntry.error = 'No files moved';

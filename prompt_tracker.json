@@ -1,164 +1,91 @@
 [
   {
-    "prompt": "- SUBJECT: Tribal elders - ACTIVITY: Resting together after a long day of foraging - ENVIRONMENT: Cozy interior of a winter lodge - LIGHTING: Warm golden hour sunlight filtering through the prehistoric forest - STYLE: Handheld camera movement for realism, Extreme close-up on weathered faces, Slow motion action shot, Sepia-toned historical aesthetic - QUALITY: volumetric smoke and mist, 8K resolution, highly detailed character models",
-    "timestamp": "2026-02-26T08:49:24.914Z",
-    "status": "failed",
-    "error": "No files moved"
-  },
-  {
-    "prompt": "- SUBJECT: A group of friends - ACTIVITY: Watching the sunset from a high ridge - ENVIRONMENT: High alpine meadow in full bloom - LIGHTING: Electric lightning flash during a fierce storm - STYLE: Sepia-toned historical aesthetic, Extreme close-up on weathered faces, Dramatic low-angle perspective, Handheld camera movement for realism - QUALITY: 8K resolution, professional color grading, highly detailed character models",
-    "timestamp": "2026-02-26T08:51:08.491Z",
-    "status": "failed",
-    "error": "No files moved"
-  },
-  {
-    "prompt": "- SPECIES: Arctic Hare (Lepus arcticus) - BEHAVIOR: Fishing in a sub-zero lead in the ice pack - HABITAT: Floating ice floes in the North Atlantic - LIGHTING: Glowing bioluminescent accents - MODIFIERS: Underwater housing clarity, Telephoto lens compression, Extreme wide-angle environmental shot, Aerial drone cinematography - ENHANCERS: volumetric scattering, intricate fur and feather detail, perfect composition",
-    "timestamp": "2026-03-02T08:15:31.977Z",
-    "status": "failed",
-    "error": "No files moved"
-  },
-  {
-    "prompt": "- SPECIES: Blue whale (Balaenoptera musculus) - BEHAVIOR: Investigating with a \"spy-hop\" head rise above the waterline - HABITAT: Pacific coral reef with prismatic sun rays - LIGHTING: Dappled sunlight through swaying leaves - MODIFIERS: Underwater housing clarity, Motion blur for speed, National Geographic aesthetic, Macro extreme detail - ENHANCERS: 8K resolution, professional color grading, BBC Earth quality",
-    "timestamp": "2026-03-02T08:17:15.405Z",
-    "status": "failed",
-    "error": "No files moved"
-  },
-  {
-    "prompt": "- SPECIES: Andean Condor (Vultur gryphus) - BEHAVIOR: Perched on a gnarled, mossy branch - HABITAT: Arid desert mesa - LIGHTING: Glowing bioluminescent accents - MODIFIERS: National Geographic aesthetic, Macro extreme detail, Sharp eye-focus, Motion blur for speed - ENHANCERS: professional color grading, perfect composition, award-winning wildlife shot",
-    "timestamp": "2026-03-02T08:18:55.847Z",
-    "status": "failed",
-    "error": "No files moved"
-  },
-  {
-    "prompt": "- SPECIES: Lion's Mane Jellyfish (Cyanea capillata) - BEHAVIOR: Hunting schools of silver fish - HABITAT: Abyssal ocean zone - LIGHTING: Moonlit silhouettes against a starry sky - MODIFIERS: National Geographic aesthetic, Macro extreme detail, Motion blur for speed, Shallow depth of field with creamy bokeh - ENHANCERS: award-winning wildlife shot, perfect composition, 8K resolution",
-    "timestamp": "2026-03-02T08:20:36.280Z",
-    "status": "failed",
-    "error": "No files moved"
-  },
-  {
-    "prompt": "- SPECIES: Margay (Leopardus wiedii) - BEHAVIOR: Stealthy descent down a near-vertical rocky incline while tracking prey - HABITAT: High-altitude jagged crags of the Himalayan mountains - LIGHTING: Volumetric morning mist with god rays - MODIFIERS: Low-angle hero perspective, Telephoto lens compression, High-speed shutter freeze, Motion blur for speed - ENHANCERS: 8K resolution, perfect composition, intricate fur and feather detail",
-    "timestamp": "2026-03-02T08:22:16.703Z",
-    "status": "success",
-    "files": [
-      "F:\\AI\\Videos\\20260302\\species-lions-mane-jellyfish-cyanea-capillata---be.mp4"
-    ]
-  },
-  {
-    "prompt": "- SPECIES: Blue Whale (Balaenoptera musculus) - BEHAVIOR: Fishing in a sub-zero lead in the ice pack - HABITAT: Underneath a massive ice shelf - LIGHTING: Volumetric morning mist with god rays - MODIFIERS: Telephoto lens compression, High-speed shutter freeze, Shallow depth of field with creamy bokeh, Sharp eye-focus - ENHANCERS: hyper-realistic renders, volumetric scattering, BBC Earth quality",
-    "timestamp": "2026-03-02T08:23:57.250Z",
-    "status": "failed",
-    "error": "No files moved"
-  },
-  {
-    "prompt": "- SPECIES: Ghost Bat (Macroderma gigas) - BEHAVIOR: Roaring in a territorial display at dusk - HABITAT: African savanna at sunset - LIGHTING: Dappled sunlight through swaying leaves - MODIFIERS: Extreme wide-angle environmental shot, Aerial drone cinematography, Low-angle hero perspective, Telephoto lens compression - ENHANCERS: intricate fur and feather detail, 8K resolution, award-winning wildlife shot",
-    "timestamp": "2026-03-02T08:25:37.664Z",
-    "status": "success",
-    "files": [
-      "F:\\AI\\Videos\\20260302\\animate---species-lions-mane-jellyfish-cyanea-capi.mp4"
-    ]
-  },
-  {
-    "prompt": "- SPECIES: Red Fox (Vulpes vulpes) - BEHAVIOR: Pouncing on hidden prey in tall grass - HABITAT: African savanna at sunset - LIGHTING: Glowing bioluminescent accents - MODIFIERS: Shallow depth of field with creamy bokeh, Motion blur for speed, Low-angle hero perspective, Underwater housing clarity - ENHANCERS: perfect composition, award-winning wildlife shot, hyper-realistic renders",
-    "timestamp": "2026-03-02T08:27:18.226Z",
-    "status": "success",
-    "files": [
-      "F:\\AI\\Videos\\20260302\\animate---species-lions-mane-jellyfish-cyanea-capi_1.mp4"
-    ]
-  },
-  {
-    "prompt": "- SPECIES: Red Fox (Vulpes vulpes) - BEHAVIOR: Camouflaged in dead leaves before a strike - HABITAT: High-altitude jagged crags of the Himalayan mountains - LIGHTING: Moonlit silhouettes against a starry sky - MODIFIERS: Low-angle hero perspective, High-speed shutter freeze, Underwater housing clarity, Motion blur for speed - ENHANCERS: professional color grading, 8K resolution, BBC Earth quality",
-    "timestamp": "2026-03-02T08:28:58.792Z",
-    "status": "success",
-    "files": [
-      "F:\\AI\\Videos\\20260302\\animate---species-lions-mane-jellyfish-cyanea-capi_2.mp4"
-    ]
-  },
-  {
-    "prompt": "- SPECIES: Box Jellyfish (Chironex fleckeri) - BEHAVIOR: Hunting schools of silver fish - HABITAT: Bioluminescent lagoon under a full moon - LIGHTING: Twilight indigo haze - MODIFIERS: Extreme wide-angle environmental shot, Shallow depth of field with creamy bokeh, Telephoto lens compression, High-speed shutter freeze - ENHANCERS: volumetric scattering, 8K resolution, professional color grading",
-    "timestamp": "2026-03-02T08:30:39.505Z",
-    "status": "failed",
-    "error": "No files moved"
-  },
-  {
-    "prompt": "- SPECIES: Steller's Sea Eagle (Haliaeetus pelagicus) - BEHAVIOR: Mid-air high-speed strike with talons outstretched - HABITAT: Arid desert mesa - LIGHTING: Harsh high-contrast noon sun casting sharp shadows - MODIFIERS: Macro extreme detail, Sharp eye-focus, Telephoto lens compression, National Geographic aesthetic - ENHANCERS: BBC Earth quality, award-winning wildlife shot, hyper-realistic renders",
-    "timestamp": "2026-03-02T08:32:20.066Z",
+    "prompt": "- SPECIES: Reef Triggerfish (Rhinecanthus rectangulus) - BEHAVIOR: Emerging from the abyssal zone into the light - HABITAT: Abyssal ocean zone - LIGHTING: Twilight indigo haze - MODIFIERS: National Geographic aesthetic, Extreme wide-angle environmental shot, Macro extreme detail, Shallow depth of field with creamy bokeh - ENHANCERS: professional color grading, perfect composition, BBC Earth quality",
+    "timestamp": "2026-03-02T12:00:20.125Z",
     "status": "pending"
   },
   {
-    "prompt": "- SPECIES: Arctic Hare (Lepus arcticus) - BEHAVIOR: Fishing in a sub-zero lead in the ice pack - HABITAT: Floating ice floes in the North Atlantic - LIGHTING: Glowing bioluminescent accents - MODIFIERS: Underwater housing clarity, Telephoto lens compression, Extreme wide-angle environmental shot, Aerial drone cinematography - ENHANCERS: volumetric scattering, intricate fur and feather detail, perfect composition",
-    "timestamp": "2026-03-02T09:24:33.179Z",
-    "status": "failed",
-    "error": "No files moved"
-  },
-  {
-    "prompt": "- SPECIES: Blue whale (Balaenoptera musculus) - BEHAVIOR: Investigating with a \"spy-hop\" head rise above the waterline - HABITAT: Pacific coral reef with prismatic sun rays - LIGHTING: Dappled sunlight through swaying leaves - MODIFIERS: Underwater housing clarity, Motion blur for speed, National Geographic aesthetic, Macro extreme detail - ENHANCERS: 8K resolution, professional color grading, BBC Earth quality",
-    "timestamp": "2026-03-02T09:26:17.369Z",
-    "status": "failed",
-    "error": "No files moved"
-  },
-  {
-    "prompt": "- SPECIES: Andean Condor (Vultur gryphus) - BEHAVIOR: Perched on a gnarled, mossy branch - HABITAT: Arid desert mesa - LIGHTING: Glowing bioluminescent accents - MODIFIERS: National Geographic aesthetic, Macro extreme detail, Sharp eye-focus, Motion blur for speed - ENHANCERS: professional color grading, perfect composition, award-winning wildlife shot",
-    "timestamp": "2026-03-02T09:27:57.823Z",
-    "status": "pending"
-  },
-  {
-    "prompt": "- SPECIES: Arctic Hare (Lepus arcticus) - BEHAVIOR: Fishing in a sub-zero lead in the ice pack - HABITAT: Floating ice floes in the North Atlantic - LIGHTING: Glowing bioluminescent accents - MODIFIERS: Underwater housing clarity, Telephoto lens compression, Extreme wide-angle environmental shot, Aerial drone cinematography - ENHANCERS: volumetric scattering, intricate fur and feather detail, perfect composition",
-    "timestamp": "2026-03-02T09:28:08.412Z",
-    "status": "failed",
-    "error": "No files moved"
-  },
-  {
-    "prompt": "- SPECIES: Blue whale (Balaenoptera musculus) - BEHAVIOR: Investigating with a \"spy-hop\" head rise above the waterline - HABITAT: Pacific coral reef with prismatic sun rays - LIGHTING: Dappled sunlight through swaying leaves - MODIFIERS: Underwater housing clarity, Motion blur for speed, National Geographic aesthetic, Macro extreme detail - ENHANCERS: 8K resolution, professional color grading, BBC Earth quality",
-    "timestamp": "2026-03-02T09:29:53.011Z",
-    "status": "failed",
-    "error": "No files moved"
-  },
-  {
-    "prompt": "- SPECIES: Andean Condor (Vultur gryphus) - BEHAVIOR: Perched on a gnarled, mossy branch - HABITAT: Arid desert mesa - LIGHTING: Glowing bioluminescent accents - MODIFIERS: National Geographic aesthetic, Macro extreme detail, Sharp eye-focus, Motion blur for speed - ENHANCERS: professional color grading, perfect composition, award-winning wildlife shot",
-    "timestamp": "2026-03-02T09:31:33.421Z",
-    "status": "failed",
-    "error": "No files moved"
-  },
-  {
-    "prompt": "- SPECIES: Lion's Mane Jellyfish (Cyanea capillata) - BEHAVIOR: Hunting schools of silver fish - HABITAT: Abyssal ocean zone - LIGHTING: Moonlit silhouettes against a starry sky - MODIFIERS: National Geographic aesthetic, Macro extreme detail, Motion blur for speed, Shallow depth of field with creamy bokeh - ENHANCERS: award-winning wildlife shot, perfect composition, 8K resolution",
-    "timestamp": "2026-03-02T09:33:13.891Z",
-    "status": "error",
-    "error": "Protocol error (Runtime.callFunctionOn): Target closed"
-  },
-  {
-    "prompt": "- SPECIES: Arctic Hare (Lepus arcticus) - BEHAVIOR: Fishing in a sub-zero lead in the ice pack - HABITAT: Floating ice floes in the North Atlantic - LIGHTING: Glowing bioluminescent accents - MODIFIERS: Underwater housing clarity, Telephoto lens compression, Extreme wide-angle environmental shot, Aerial drone cinematography - ENHANCERS: volumetric scattering, intricate fur and feather detail, perfect composition",
-    "timestamp": "2026-03-02T09:35:58.668Z",
-    "status": "failed",
-    "error": "No files moved"
-  },
-  {
-    "prompt": "- SPECIES: Blue whale (Balaenoptera musculus) - BEHAVIOR: Investigating with a \"spy-hop\" head rise above the waterline - HABITAT: Pacific coral reef with prismatic sun rays - LIGHTING: Dappled sunlight through swaying leaves - MODIFIERS: Underwater housing clarity, Motion blur for speed, National Geographic aesthetic, Macro extreme detail - ENHANCERS: 8K resolution, professional color grading, BBC Earth quality",
-    "timestamp": "2026-03-02T09:37:42.266Z",
+    "prompt": "- SPECIES: Sailfish (Istiophorus) - BEHAVIOR: Breaching high above the waves in a massive splash - HABITAT: Abyssal ocean zone - LIGHTING: Glowing bioluminescent accents - MODIFIERS: Underwater housing clarity, High-speed shutter freeze, Aerial drone cinematography, Low-angle hero perspective - ENHANCERS: hyper-realistic renders, award-winning wildlife shot, volumetric scattering",
+    "timestamp": "2026-03-02T12:02:38.600Z",
     "status": "success",
     "files": [
-      "F:\\AI\\Videos\\20260302\\arctic-hare-lepus-arcticus-fishing-in-a-sub-zero-l.mp4"
+      "F:\\AI\\Videos\\20260302\\beluga-whale-delphinapterus-leucas-emerging-from-t.mp4"
     ]
   },
   {
-    "prompt": "- SPECIES: Andean Condor (Vultur gryphus) - BEHAVIOR: Perched on a gnarled, mossy branch - HABITAT: Arid desert mesa - LIGHTING: Glowing bioluminescent accents - MODIFIERS: National Geographic aesthetic, Macro extreme detail, Sharp eye-focus, Motion blur for speed - ENHANCERS: professional color grading, perfect composition, award-winning wildlife shot",
-    "timestamp": "2026-03-02T09:39:22.691Z",
+    "prompt": "- SPECIES: Flat-headed Cat (Prionailurus planiceps) - BEHAVIOR: Sprinting at high velocity across open savanna - HABITAT: Misty swamp edge - LIGHTING: Golden hour rim lighting highlighting fur texture - MODIFIERS: Low-angle hero perspective, Extreme wide-angle environmental shot, Macro extreme detail, Underwater housing clarity - ENHANCERS: professional color grading, volumetric scattering, 8K resolution",
+    "timestamp": "2026-03-02T12:04:23.796Z",
+    "status": "success",
+    "files": [
+      "F:\\AI\\Videos\\20260302\\beluga-whale-delphinapterus-leucas-emerging-from-t_1.mp4"
+    ]
+  },
+  {
+    "prompt": "- SPECIES: Basking Shark (Cetorhinus maximus) - BEHAVIOR: Swimming in a bioluminescent sea at night - HABITAT: Flooded mangrove swamps - LIGHTING: Moonlit silhouettes against a starry sky - MODIFIERS: Motion blur for speed, Aerial drone cinematography, National Geographic aesthetic, Sharp eye-focus - ENHANCERS: 8K resolution, BBC Earth quality, award-winning wildlife shot",
+    "timestamp": "2026-03-02T12:06:04.186Z",
     "status": "pending"
   },
   {
-    "prompt": "- SPECIES: Arctic Hare (Lepus arcticus) - BEHAVIOR: Fishing in a sub-zero lead in the ice pack - HABITAT: Floating ice floes in the North Atlantic - LIGHTING: Glowing bioluminescent accents - MODIFIERS: Underwater housing clarity, Telephoto lens compression, Extreme wide-angle environmental shot, Aerial drone cinematography - ENHANCERS: volumetric scattering, intricate fur and feather detail, perfect composition",
-    "timestamp": "2026-03-02T09:43:03.274Z",
-    "status": "error",
-    "error": "Attempted to use detached Frame '250A54547EA387B35033ADC79B792929'."
+    "prompt": "- SPECIES: Giant Isopod (Bathynomus giganteus) - BEHAVIOR: Swimming in a bioluminescent sea at night - HABITAT: Deep blue waters at the edge of a kelp forest - LIGHTING: Harsh high-contrast noon sun casting sharp shadows - MODIFIERS: High-speed shutter freeze, Aerial drone cinematography, Shallow depth of field with creamy bokeh, Extreme wide-angle environmental shot - ENHANCERS: volumetric scattering, perfect composition, award-winning wildlife shot",
+    "timestamp": "2026-03-02T12:06:39.246Z",
+    "status": "pending"
   },
   {
-    "prompt": "- SPECIES: Arctic Hare (Lepus arcticus) - BEHAVIOR: Fishing in a sub-zero lead in the ice pack - HABITAT: Floating ice floes in the North Atlantic - LIGHTING: Glowing bioluminescent accents - MODIFIERS: Underwater housing clarity, Telephoto lens compression, Extreme wide-angle environmental shot, Aerial drone cinematography - ENHANCERS: volumetric scattering, intricate fur and feather detail, perfect composition",
-    "timestamp": "2026-03-02T10:12:04.540Z",
-    "status": "failed",
-    "error": "No files moved"
+    "prompt": "- SPECIES: Goshawk (Accipiter gentilis) - BEHAVIOR: Diving like a bullet into a crystalline stream - HABITAT: Crystalline mountain stream in the Rockies - LIGHTING: Volumetric morning mist with god rays - MODIFIERS: Underwater housing clarity, Low-angle hero perspective, Motion blur for speed, Sharp eye-focus - ENHANCERS: perfect composition, 8K resolution, volumetric scattering",
+    "timestamp": "2026-03-02T12:07:18.686Z",
+    "status": "success",
+    "files": [
+      "F:\\AI\\Videos\\20260302\\goshawk-accipiter-gentilis-diving-like-a-bullet-in_1772453332213.mp4"
+    ]
   },
   {
-    "prompt": "- SPECIES: Andean Condor (Vultur gryphus) - BEHAVIOR: Perched on a gnarled, mossy branch - HABITAT: Arid desert mesa - LIGHTING: Glowing bioluminescent accents - MODIFIERS: National Geographic aesthetic, Macro extreme detail, Sharp eye-focus, Motion blur for speed - ENHANCERS: professional color grading, perfect composition, award-winning wildlife shot",
-    "timestamp": "2026-03-02T10:13:48.368Z",
+    "prompt": "- SPECIES: Dugong (Dugong dugon) - BEHAVIOR: Navigating intricate coral reefs - HABITAT: Shipwreck reclaimed by nature - LIGHTING: Warm desert sunset with deep orange gradients - MODIFIERS: Sharp eye-focus, Underwater housing clarity, Shallow depth of field with creamy bokeh, Aerial drone cinematography - ENHANCERS: professional color grading, 8K resolution, BBC Earth quality",
+    "timestamp": "2026-03-02T12:09:02.302Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "- SPECIES: Lappet-faced Vulture (Torgos tracheliotos) - BEHAVIOR: Perched on a gnarled, mossy branch - HABITAT: Jagged coastal cliffs of the Atlantic - LIGHTING: Glowing bioluminescent accents - MODIFIERS: National Geographic aesthetic, Extreme wide-angle environmental shot, Macro extreme detail, Motion blur for speed - ENHANCERS: award-winning wildlife shot, hyper-realistic renders, professional color grading",
+    "timestamp": "2026-03-02T12:11:20.340Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "- SPECIES: Arctic fox (Vulpes lagopus) - BEHAVIOR: Fishing in a sub-zero lead in the ice pack - HABITAT: Shattered glacial valley - LIGHTING: Harsh high-contrast noon sun casting sharp shadows - MODIFIERS: Macro extreme detail, Low-angle hero perspective, Extreme wide-angle environmental shot, Telephoto lens compression - ENHANCERS: perfect composition, award-winning wildlife shot, volumetric scattering",
+    "timestamp": "2026-03-02T12:14:37.383Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "- SPECIES: Narwhal (Monodon monoceros) - BEHAVIOR: Investigating with a \"spy-hop\" head rise above the waterline - HABITAT: Deep blue waters at the edge of a kelp forest - LIGHTING: Soft diffused overcast light through dense canopy - MODIFIERS: Motion blur for speed, Low-angle hero perspective, National Geographic aesthetic, Macro extreme detail - ENHANCERS: BBC Earth quality, hyper-realistic renders, 8K resolution",
+    "timestamp": "2026-03-02T12:18:30.597Z",
+    "status": "success",
+    "files": [
+      "F:\\AI\\Videos\\20260302\\p0_f0_narwhal-monodon-monoceros-investigating-with-a-spy_20260302_131920_455.mp4",
+      "F:\\AI\\Videos\\20260302\\p0_f1_narwhal-monodon-monoceros-investigating-with-a-spy_20260302_131923_489.mp4",
+      "F:\\AI\\Videos\\20260302\\p0_f3_narwhal-monodon-monoceros-investigating-with-a-spy_20260302_132029_085.mp4"
+    ]
+  },
+  {
+    "prompt": "- SPECIES: Chinstrap Penguin (Pygoscelis antarcticus) - BEHAVIOR: Breaching through a thin layer of sea ice - HABITAT: Floating ice floes in the North Atlantic - LIGHTING: Volumetric morning mist with god rays - MODIFIERS: Aerial drone cinematography, Macro extreme detail, Extreme wide-angle environmental shot, Sharp eye-focus - ENHANCERS: intricate fur and feather detail, 8K resolution, BBC Earth quality",
+    "timestamp": "2026-03-02T12:20:41.193Z",
+    "status": "success",
+    "files": [
+      "F:\\AI\\Videos\\20260302\\p1_f1_chinstrap-penguin-pygoscelis-antarcticus-breaching_20260302_132229_714.mp4",
+      "F:\\AI\\Videos\\20260302\\p1_f2_chinstrap-penguin-pygoscelis-antarcticus-breaching_20260302_132232_762.mp4",
+      "F:\\AI\\Videos\\20260302\\p1_f3_chinstrap-penguin-pygoscelis-antarcticus-breaching_20260302_132235_834.mp4"
+    ]
+  },
+  {
+    "prompt": "- SPECIES: Peregrine falcon (Falco peregrinus) - BEHAVIOR: Diving like a bullet into a crystalline stream - HABITAT: Misty Scottish highlands - LIGHTING: Volumetric morning mist with god rays - MODIFIERS: Shallow depth of field with creamy bokeh, Aerial drone cinematography, High-speed shutter freeze, Macro extreme detail - ENHANCERS: 8K resolution, BBC Earth quality, perfect composition",
+    "timestamp": "2026-03-02T12:22:47.936Z",
+    "status": "success",
+    "files": [
+      "F:\\AI\\Videos\\20260302\\p2_f1_peregrine-falcon-falco-peregrinus-diving-like-a-bu_20260302_132436_431.mp4",
+      "F:\\AI\\Videos\\20260302\\p2_f2_peregrine-falcon-falco-peregrinus-diving-like-a-bu_20260302_132439_470.mp4",
+      "F:\\AI\\Videos\\20260302\\p2_f3_peregrine-falcon-falco-peregrinus-diving-like-a-bu_20260302_132442_497.mp4"
+    ]
+  },
+  {
+    "prompt": "- SPECIES: Marabou Stork (Leptoptilos crumenifer) - BEHAVIOR: Soaring on thermal updrafts above mountain peaks - HABITAT: Misty Scottish highlands - LIGHTING: Glowing bioluminescent accents - MODIFIERS: Macro extreme detail, Sharp eye-focus, Low-angle hero perspective, Aerial drone cinematography - ENHANCERS: hyper-realistic renders, award-winning wildlife shot, BBC Earth quality",
+    "timestamp": "2026-03-02T12:24:54.600Z",
     "status": "pending"
   }
 ]
