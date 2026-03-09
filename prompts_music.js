@@ -85,6 +85,6 @@ const count = parseInt(args[0]) || 15;
 
 const output = generateMusicBatch(count);
 
-fs.writeFileSync('music.js', output, { encoding: 'utf8' });
+fs.writeFileSync('videos.js', output, { encoding: 'utf8' });
 
 console.log('🎶 music.js generated successfully (music prompts enabled)');
