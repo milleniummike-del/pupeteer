@@ -78,8 +78,8 @@ if (Test-Path $promptFile) {
             Write-Error "Prompt generation failed."
         }
         
-        Write-Host "`nPress any key to return to PowerShell..." -ForegroundColor Gray
-        $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+        # Write-Host "`nPress any key to return to PowerShell..." -ForegroundColor Gray
+        # $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
     } else {
         Write-Error "Creator file $creatorFile not found."
     }

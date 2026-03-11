@@ -42,7 +42,7 @@ function saveTracker(tracker) {
     fs.writeFileSync(TRACKER_FILE, JSON.stringify(tracker, null, 2));
 }
 
-const environment = 2;
+const environment = 1;
 let destinationDir;
 
 if (environment == 1) {
