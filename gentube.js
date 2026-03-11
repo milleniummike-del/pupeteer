@@ -4,7 +4,11 @@ const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 puppeteer.use(StealthPlugin());
 
 (async () => {
-    const browser = await puppeteer.launch({ userDataDir: "browser", headless: false });
+    const browser = await puppeteer.launch({ userDataDir: "browser", 
+            headless: false,
+            //targetFilter: target => !!target.url(),
+            args: ["--no-sandbox", "--disable-setuid-sandbox"]
+        })
     const videos = require('./videos.js');
     const page = await browser.newPage();
 
@@ -27,9 +31,7 @@ puppeteer.use(StealthPlugin());
         await page.keyboard.down('Control');
         await page.keyboard.press('KeyV');
         await page.keyboard.up('Control');
-        await new Promise(resolve => setTimeout(resolve, 500000));
-
-        // ** todo download image?
+        await new Promise(resolve => setTimeout(resolve, 5000));
 
         const modelselect = await page.waitForSelector('button[aria-label="Clear"]');
         await modelselect.click();

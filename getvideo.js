@@ -5,7 +5,7 @@ const path = require('path');
 
 puppeteer.use(StealthPlugin());
 
-const TV_SHOWS_DIR = 'C:\\Users\\Mike\\Downloads\\TVShows';
+const TV_SHOWS_DIR = 'C:\\Users\\mike_\\Downloads\\media';
 
 function getNextEpisode(showPath) {
     const files = fs.readdirSync(showPath);
