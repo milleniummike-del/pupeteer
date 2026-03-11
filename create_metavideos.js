@@ -48,7 +48,7 @@ let destinationDir;
 if (environment == 1) {
     destinationDir = `C:\\Users\\mike_\\pupeteer\\videos\\${getTodayDateFormatted()}`;
 } else {
-    destinationDir = `F:\\AI\\Videos\\${getTodayDateFormatted()}c`;
+    destinationDir = `F:\\AI\\Videos\\${getTodayDateFormatted()}`;
 }
 console.log("📂 Download folder:", destinationDir);
 

@@ -102,5 +102,16 @@
     "prompt": "- CREATURE: Occamy (Serpentine form) - BEHAVIOR: Exhaling a jet of blue-hot magical flame - HABITAT: High-altitude mountain dragon sanctuary - LIGHTING: Magical golden hour with floating motes of light - MODIFIERS: Aerial broomstick-view cinematography, Low-angle heroic perspective, Mythical atmosphere, Cinematic wide-angle environmental shot - ENHANCERS: professional cinematic color grading, 8K resolution, Harry Potter film quality",
     "timestamp": "2026-03-06T10:35:40.044Z",
     "status": "pending"
+  },
+  {
+    "prompt": "- LOCATION: Vibrant autumn forests surrounding a mountain lake, South Korea - TIME: bright midday clarity - MOTION: clouds drifting slowly through valleys - MOOD: majestic untouched beauty - CAMERA: cinematic orbit around landscape feature, high-altitude aerial panorama - VISUAL STYLE: natural cinematic color grading, soft atmospheric haze, gentle motion blur from drone movement",
+    "timestamp": "2026-03-11T09:17:21.249Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "- LOCATION: Sunrise over ancient pyramids emerging from desert haze, Egypt - TIME: dramatic storm-light skies - MOTION: birds flying far below as tiny silhouettes - MOOD: calm reflective stillness - CAMERA: cinematic orbit around landscape feature, high-altitude aerial panorama - VISUAL STYLE: volumetric sunlight rays, ultra high resolution detail, natural cinematic color grading",
+    "timestamp": "2026-03-11T09:20:31.364Z",
+    "status": "pending"
   }
 ]

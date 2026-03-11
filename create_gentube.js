@@ -37,4 +37,9 @@ puppeteer.use(StealthPlugin());
         await modelselect.click();
 
     }
+    const pages = await browser.pages();
+    for (const page of pages) {
+        await page.close();
+    }
+    await browser.close();
 })();

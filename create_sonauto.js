@@ -11,7 +11,7 @@ function getTodayDateFormatted() {
     return `${year}${month}${day}`;
 }
 
-const environment=1;
+const environment=2;
 
 if(environment==1) {
 destinationDir = `C:\\Users\\Mike\\pupeteer\\videos\\${getTodayDateFormatted()}`;
