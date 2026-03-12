@@ -154,10 +154,23 @@ const LIGHTING = [
   'Warm golden light reflecting off a prehistoric lake'
 ];
 
+const CAMERA_STYLE = [
+  'slow forward drone glide',
+  'high-altitude aerial panorama',
+  'cinematic orbit around landscape feature',
+  'top-down vertical reveal shot',
+  'long sweeping side-to-side flyover',
+  'gradual pullback revealing massive scale',
+  'low-to-high altitude rising reveal',
+  'Low-angle hero perspective',
+  'Telephoto lens compression',
+  'Macro extreme detail'
+];
+
 const MODIFIERS = [
-  'National Geographic aesthetic', 'Macro extreme detail of scales', 'High-speed shutter freeze',
-  'Telephoto lens compression', 'Underwater housing clarity', 'Motion blur for speed',
-  'Low-angle hero perspective', 'Aerial drone cinematography', 'Sharp eye-focus',
+  'National Geographic aesthetic', 'High-speed shutter freeze',
+  'Underwater housing clarity', 'Motion blur for speed',
+  'Aerial drone cinematography', 'Sharp eye-focus',
   'Shallow depth of field with creamy bokeh', 'Extreme wide-angle environmental shot',
   'Prehistoric atmosphere', 'Cinematic lighting'
 ];
@@ -187,11 +200,12 @@ const generateDinoBatch = (count = 20) => {
     const bhv = getRandom(group.behaviors);
     const hab = getRandom(group.habitats);
     const light = getRandom(LIGHTING);
-    const mods = pickN(MODIFIERS, 4).join(', ');
+    const cam = getRandom(CAMERA_STYLE);
+    const mods = pickN(MODIFIERS, 3).join(', ');
     const enh = pickN(ENHANCERS, 3).join(', ');
 
     lines.push(
-      `videos[${i}] = \`- SPECIES: ${spec} - BEHAVIOR: ${bhv} - HABITAT: ${hab} - LIGHTING: ${light} - MODIFIERS: ${mods} - ENHANCERS: ${enh}\`;`
+      `videos[${i}] = \`1920x1080p - SPECIES: ${spec} - BEHAVIOR: ${bhv} - HABITAT: ${hab} - LIGHTING: ${light} - CAMERA: ${cam} - MODIFIERS: ${mods} - ENHANCERS: ${enh}\`;`
     );
   }
 

@@ -13,12 +13,13 @@ function getTodayDateFormatted() {
     return `${year}${month}${day}`;
 }
 
-const environment=1;
+const hostname = os.hostname();
+let destinationDir;
 
-if(environment==1) {
-destinationDir = `C:\\Users\\mike_\\pupeteer\\videos\\${getTodayDateFormatted()}`;
+if (hostname === 'DESKTOP-QPNJTTJ') {
+    destinationDir = `F:\\AI\\Videos\\${getTodayDateFormatted()}`;
 } else {
-destinationDir = `F:\\AI\\Videos\\${getTodayDateFormatted()}a`;
+    destinationDir = `C:\\Users\\mike_\\pupeteer\\videos\\${getTodayDateFormatted()}`;
 }
 console.log("📂 Download folder:", destinationDir);
 

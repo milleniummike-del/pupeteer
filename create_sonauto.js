@@ -2,6 +2,7 @@ const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 const fs = require('fs');
 const path = require('path');
+const os = require('os');
 
 function getTodayDateFormatted() {
     const today = new Date();
@@ -11,12 +12,13 @@ function getTodayDateFormatted() {
     return `${year}${month}${day}`;
 }
 
-const environment=1;
+const hostname = os.hostname();
+let destinationDir;
 
-if(environment==1) {
-destinationDir = `C:\\Users\\Mike\\pupeteer\\videos\\${getTodayDateFormatted()}`;
+if (hostname === 'DESKTOP-QPNJTTJ') {
+    destinationDir = `F:\\AI\\Videos\\${getTodayDateFormatted()}`;
 } else {
-destinationDir = `F:\\AI\\Videos\\${getTodayDateFormatted()}`;
+    destinationDir = `C:\\Users\\Mike\\pupeteer\\videos\\${getTodayDateFormatted()}`;
 }
 console.log("📂 Download folder:", destinationDir);
 puppeteer.use(StealthPlugin());

@@ -113,5 +113,16 @@
     "prompt": "- LOCATION: Sunrise over ancient pyramids emerging from desert haze, Egypt - TIME: dramatic storm-light skies - MOTION: birds flying far below as tiny silhouettes - MOOD: calm reflective stillness - CAMERA: cinematic orbit around landscape feature, high-altitude aerial panorama - VISUAL STYLE: volumetric sunlight rays, ultra high resolution detail, natural cinematic color grading",
     "timestamp": "2026-03-11T09:20:31.364Z",
     "status": "pending"
+  },
+  {
+    "prompt": "- SPECIES: Shoebill Stork (Balaeniceps rex) - BEHAVIOR: Navigating a heavy tropical monsoon storm - HABITAT: Ancient sequoia grove - LIGHTING: Golden hour rim lighting highlighting fur texture - MODIFIERS: High-speed shutter freeze, Telephoto lens compression, Underwater housing clarity, Macro extreme detail - ENHANCERS: 8K resolution, perfect composition, award-winning wildlife shot",
+    "timestamp": "2026-03-11T13:18:02.949Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "- SPECIES: Cheetah (Acinonyx jubatus) - BEHAVIOR: Camouflaged in dead leaves before a strike - HABITAT: High-altitude jagged crags of the Himalayan mountains - LIGHTING: Glowing bioluminescent accents - MODIFIERS: Shallow depth of field with creamy bokeh, Aerial drone cinematography, National Geographic aesthetic, Telephoto lens compression - ENHANCERS: 8K resolution, BBC Earth quality, volumetric scattering",
+    "timestamp": "2026-03-11T13:20:19.975Z",
+    "status": "failed",
+    "error": "No files moved"
   }
 ]

@@ -42,13 +42,13 @@ function saveTracker(tracker) {
     fs.writeFileSync(TRACKER_FILE, JSON.stringify(tracker, null, 2));
 }
 
-const environment = 1;
+const hostname = os.hostname();
 let destinationDir;
 
-if (environment == 1) {
-    destinationDir = `C:\\Users\\mike_\\pupeteer\\videos\\${getTodayDateFormatted()}`;
-} else {
+if (hostname === 'DESKTOP-QPNJTTJ') {
     destinationDir = `F:\\AI\\Videos\\${getTodayDateFormatted()}`;
+} else {
+    destinationDir = `C:\\Users\\mike_\\pupeteer\\videos\\${getTodayDateFormatted()}`;
 }
 console.log("📂 Download folder:", destinationDir);
 

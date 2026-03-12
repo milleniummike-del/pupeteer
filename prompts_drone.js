@@ -108,7 +108,7 @@ const generateDroneBatch = (count = 20) => {
     const visuals = pickN(VISUALS, 3).join(', ');
 
     batch.push(
-      `videos[${i}] = \`- LOCATION: ${loc} - TIME: ${time} - MOTION: ${motion} - MOOD: ${mood} - CAMERA: ${cam} - VISUAL STYLE: ${visuals}\`;`
+      `videos[${i}] = \`1920x1080p - LOCATION: ${loc} - TIME: ${time} - MOTION: ${motion} - MOOD: ${mood} - CAMERA: ${cam} - VISUAL STYLE: ${visuals}\`;`
     );
   }
 

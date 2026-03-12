@@ -68,7 +68,7 @@ const generateMusicPrompt = () => {
   return `music.push(\`Generate a ${genre} track. The setting is a ${natureElement}, with the prominent sound of a ${animal}. The piece should evoke ${wildlifeScene}, featuring ${instrument}. The overall tone should be ${emotionalTone}, with a sound that is ${soundModifiers}.\`);`;
 };
 
-const generateMusicBatch = (count = 15) => {
+const generateMusicBatch = (count = 1) => {
   const lines = [];
   lines.push(`const music = [];`);
 
@@ -81,10 +81,10 @@ const generateMusicBatch = (count = 15) => {
 };
 
 const args = process.argv.slice(2);
-const count = parseInt(args[0]) || 15;
+const count = parseInt(args[0]) || 1;
 
 const output = generateMusicBatch(count);
 
 fs.writeFileSync('videos.js', output, { encoding: 'utf8' });
 
-console.log('🎶 music.js generated successfully (music prompts enabled)');
+console.log('🎶 videos.js generated successfully (music prompts enabled)');

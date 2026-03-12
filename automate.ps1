@@ -13,7 +13,7 @@ $prompts = @(
 )
 
 $creators = @(
-    'gentube', 'grokvideos', 'metavideos', 'sonauto'
+    'gentube', 'grokvideos', 'metavideos', 'sonauto', 'producer'
 )
 
 # Predefined Variants
