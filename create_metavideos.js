@@ -162,9 +162,32 @@ console.log("📂 Download folder:", destinationDir);
             await page.keyboard.press('KeyV');
             await page.keyboard.up('Control');
 
+            console.log('Waiting for animate button to be enabled');
+            const selector = 'button[data-testid="composer-animate-button"]';
+
+            // Wait for the element to appear and be visible
+            await page.waitForSelector(selector, { visible: true });
+
+            // Wait until the element is enabled (no 'disabled' attribute)
+            await page.waitForFunction(
+            sel => {
+                const el = document.querySelector(sel);
+                return el && !el.disabled;
+            },
+            {timeout:120000}, // options for waitForFunction
+            selector // argument passed to the function above
+            );
+
             const submit = await page.waitForSelector('button[data-testid="composer-animate-button"]');
             await submit.click();
             console.log('submitted prompt');
+
+            
+    /*
+            <button class="enabled:active:scale-98 inline-flex shrink-0 cursor-pointer select-none items-center justify-center gap-0.5 focus:not-focus-visible:outline-none transition-transform duration-150 ease-in-out disabled:cursor-not-allowed disabled:opacity-50 rounded-full text-subheadline h-8 text-text-on-accent enabled:hover:filter-[brightness(0.95)] enabled:active:filter-[brightness(0.9)] dark:enabled:hover:filter-[brightness(1.025)] dark:enabled:active:filter-[brightness(0.95)] bg-linear-to-r from-gradient-blue-indigo-650-stop1 to-gradient-blue-indigo-650-stop2 outline-offset-2 ps-2 px-2 md:px-2" data-slot="button" data-testid="composer-animate-button" disabled=""><svg viewBox="0 0 32 32" fill="none" width="20" height="20" class="m-0.5"><path d="M8.125 8.111c0-1.833 1.988-2.974 3.571-2.05l13.524 7.887c1.57.917 1.57 3.187 0 4.104l-13.524 7.887c-1.583.924-3.57-.218-3.571-2.05V8.11z" fill="currentColor"></path></svg><span class="truncate hidden md:inline">Animate</span></button>
+
+
+        
 
             let requestEntry = {
                 prompt: currentPrompt,
@@ -235,6 +258,7 @@ console.log("📂 Download folder:", destinationDir);
             }
             
             saveTracker(tracker);
+            */
             await new Promise(resolve => setTimeout(resolve, 10000));
         }
 

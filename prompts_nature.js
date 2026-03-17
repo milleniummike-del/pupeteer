@@ -188,9 +188,10 @@ const generateNatureBatch = (count = 20) => {
     const light = getRandom(LIGHTING);
     const mods = pickN(MODIFIERS, 4).join(', ');
     const enh = pickN(ENHANCERS, 3).join(', ');
+    const ratio = 'hd video 1920x1080p';
 
     lines.push(
-      `videos[${i}] = \`- SPECIES: ${spec} - BEHAVIOR: ${bhv} - HABITAT: ${hab} - LIGHTING: ${light} - MODIFIERS: ${mods} - ENHANCERS: ${enh}\`;`
+      `videos[${i}] = \`${ratio} - SPECIES: ${spec} - BEHAVIOR: ${bhv} - HABITAT: ${hab} - LIGHTING: ${light} - MODIFIERS: ${mods} - ENHANCERS: ${enh}\`;`
     );
   }
 

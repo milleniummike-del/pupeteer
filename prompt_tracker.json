@@ -124,5 +124,31 @@
     "timestamp": "2026-03-11T13:20:19.975Z",
     "status": "failed",
     "error": "No files moved"
+  },
+  {
+    "prompt": "hd video 1920x1080p - SPECIES: Philippine Eagle (Pithecophaga jefferyi) - BEHAVIOR: Mid-air high-speed strike with talons outstretched - HABITAT: Misty Scottish highlands - LIGHTING: Warm desert sunset with deep orange gradients - MODIFIERS: Sharp eye-focus, Aerial drone cinematography, Shallow depth of field with creamy bokeh, Motion blur for speed - ENHANCERS: award-winning wildlife shot, perfect composition, 8K resolution",
+    "timestamp": "2026-03-17T14:21:06.699Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "hd video 1920x1080p - SPECIES: Ethiopian Wolf (Canis simensis) - BEHAVIOR: Defending territory against a rival - HABITAT: Deep Amazonian rainforest canopy - LIGHTING: Golden hour rim lighting highlighting fur texture - MODIFIERS: Motion blur for speed, Low-angle hero perspective, Underwater housing clarity, Telephoto lens compression - ENHANCERS: professional color grading, award-winning wildlife shot, 8K resolution",
+    "timestamp": "2026-03-17T14:30:04.485Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "hd video 1920x1080p - SPECIES: Ethiopian Wolf (Canis simensis) - BEHAVIOR: Defending territory against a rival - HABITAT: Deep Amazonian rainforest canopy - LIGHTING: Golden hour rim lighting highlighting fur texture - MODIFIERS: Motion blur for speed, Low-angle hero perspective, Underwater housing clarity, Telephoto lens compression - ENHANCERS: professional color grading, award-winning wildlife shot, 8K resolution",
+    "timestamp": "2026-03-17T14:30:54.752Z",
+    "status": "success",
+    "files": [
+      "F:\\AI\\Videos\\20260317\\p0_f0_animate-hd-video-1920x1080p---species-ethiopian-wo_20260317_153146_228.mp4",
+      "F:\\AI\\Videos\\20260317\\p0_f1_animate-hd-video-1920x1080p---species-ethiopian-wo_20260317_153150_261.mp4",
+      "F:\\AI\\Videos\\20260317\\p0_f2_animate-hd-video-1920x1080p---species-ethiopian-wo_20260317_153154_311.mp4",
+      "F:\\AI\\Videos\\20260317\\p0_f3_animate-hd-video-1920x1080p---species-ethiopian-wo_20260317_153158_371.mp4"
+    ]
+  },
+  {
+    "prompt": "hd video 1920x1080p - SPECIES: Shoebill Stork (Balaeniceps rex) - BEHAVIOR: Displaying vibrant plumage in a courtship dance - HABITAT: Jagged coastal cliffs of the Atlantic - LIGHTING: Twilight indigo haze - MODIFIERS: Underwater housing clarity, Telephoto lens compression, Extreme wide-angle environmental shot, Low-angle hero perspective - ENHANCERS: 8K resolution, professional color grading, perfect composition",
+    "timestamp": "2026-03-17T14:32:10.454Z",
+    "status": "pending"
   }
 ]

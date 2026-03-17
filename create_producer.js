@@ -3,6 +3,17 @@ const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
+const style = ``;
+const videos = require('./videos.js');
+
+function getTodayDateFormatted() {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+    const day = String(today.getDate()).padStart(2, '0');
+    return `${year}${month}${day}`;
+}
+
 
 function getTodayDateFormatted() {
     const today = new Date();
@@ -14,43 +25,137 @@ function getTodayDateFormatted() {
 
 const hostname = os.hostname();
 let destinationDir;
-const videos = require('./videos.js');
 
 if (hostname === 'DESKTOP-QPNJTTJ') {
     destinationDir = `F:\\AI\\Videos\\${getTodayDateFormatted()}`;
 } else {
-    destinationDir = `C:\\Users\\Mike\\pupeteer\\videos\\${getTodayDateFormatted()}`;
+    destinationDir = `C:\\Users\\mike_\\pupeteer\\videos\\${getTodayDateFormatted()}`;
 }
 console.log("📂 Download folder:", destinationDir);
-puppeteer.use(StealthPlugin());
+
+
+// 📁 Folder where Chrome will save files
+const downloadDir = path.resolve(__dirname, 'downloads');
+if (!fs.existsSync(downloadDir)) {
+    fs.mkdirSync(downloadDir);
+}
+
+async function moveLatestDownload(destination) {
+    const downloadsPath = path.join(os.homedir(), 'Downloads');
+    try {
+        if (!fs.existsSync(destination)) {
+            fs.mkdirSync(destination, { recursive: true });
+        }
+
+        const files = fs.readdirSync(downloadsPath);
+        if (files.length === 0) {
+            console.log('No files found in downloads directory');
+            return;
+        }
+
+        const latestFile = files.map(file => ({
+            file,
+            mtime: fs.statSync(path.join(downloadsPath, file)).mtime
+        })).sort((a, b) => b.mtime - a.mtime)[0];
+
+        if (latestFile) {
+            const oldPath = path.join(downloadsPath, latestFile.file);
+            const newPath = path.join(destination, latestFile.file);
+            fs.copyFileSync(oldPath, newPath);
+            fs.unlinkSync(oldPath);
+            console.log(`Moved ${latestFile.file} to ${destination}`);
+        }
+    } catch (error) {
+        console.error('Error moving file:', error);
+    }
+}
 
 (async () => {
     const browser = await puppeteer.launch({
         userDataDir: "browser",
-        headless: false
+        headless: false,
+        protocolTimeout: 0
     });
 
     const page = await browser.newPage();
-    const musicprompt = videos[0];
+    let realVideoUrl = null;
+    let capturedHeaders = null;
 
-    await page.goto('https://producer.ai', {});
-    const textareaSelector = 'textarea[aria-label="Chat message"]';
-    await page.waitForSelector(textareaSelector, { visible: true });
-    const contentTextarea = await page.$(textareaSelector);
+    // Capture real MP4 request + headers
+    page.on('request', req => {
+        const url = req.url();
 
-    await page.evaluate((text) => {
-        navigator.clipboard.writeText(text);
-    }, musicprompt);
+        if (req.resourceType() === 'media' && url.includes('mp4')) {
+            console.log(url);
+            realVideoUrl = url;
+            capturedHeaders = req.headers();
+            console.log('🎥 Captured real video URL + headers');
+        }
+    });
 
-    await contentTextarea.focus();
 
-    // press ctrl+v
-    await page.keyboard.down('Control');
-    await page.keyboard.press('KeyV');
-    await page.keyboard.up('Control');
-    await page.keyboard.press('Enter');
+    for (let i = 0; i < videos.length; i++) {
+        const musicprompt = videos[i];
 
-    await new Promise(resolve => setTimeout(resolve, 50000));
-    console.log('waited 50 seconds');
+        await page.goto('https://producer.ai', {});
+        const textareaSelector = 'textarea[aria-label="Chat message"]';
+        await page.waitForSelector(textareaSelector, { visible: true });
+        const contentTextarea = await page.$(textareaSelector);
+
+        await page.evaluate((text) => {
+            navigator.clipboard.writeText(text);
+        }, musicprompt);
+
+        await contentTextarea.focus();
+
+        // press ctrl+v
+        await page.keyboard.down('Control');
+        await page.keyboard.press('KeyV');
+        await page.keyboard.up('Control');
+        await page.keyboard.press('Enter');
+
+        await page.waitForFunction(() => {
+            const video = document.querySelector('video');
+            return video && video.src && video.src.includes('sample_0.mp4');
+        }, { timeout: 0 });
+        
+                // Download inside browser using fetch + Blob
+        console.log("⬇️ Downloading inside browser using fetch()...");
+
+        await page.evaluate(async ({ url, headers, filename }) => {
+
+            const res = await fetch(url, { headers });
+
+            if (!res.ok) {
+                console.error("❌ Fetch failed", res.status);
+                return;
+            }
+
+            const blob = await res.blob();
+            const blobUrl = URL.createObjectURL(blob);
+
+            const a = document.createElement('a');
+            a.href = blobUrl;
+            a.download = filename;
+            document.body.appendChild(a);
+a.click();
+
+            setTimeout(() => {
+                URL.revokeObjectURL(blobUrl);
+                a.remove();
+            }, 5000);
+
+        }, {
+            url: realVideoUrl,
+            headers: capturedHeaders,
+            filename: `${videos[i].substring(0, 50).replace(/[^a-z0-9]/gi, '_').toLowerCase()}_${Date.now()}.mp4`
+        });
+
+        console.log("✅ Browser download triggered");
+
+        await new Promise(resolve => setTimeout(resolve, 10000));
+        console.log('waited 10 seconds');
+        await moveLatestDownload(destinationDir);
+    }
 
 })();

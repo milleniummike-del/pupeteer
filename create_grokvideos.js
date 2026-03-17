@@ -23,15 +23,12 @@ if (hostname === 'DESKTOP-QPNJTTJ') {
 }
 console.log("📂 Download folder:", destinationDir);
 
-puppeteer.use(StealthPlugin());
 
 // 📁 Folder where Chrome will save files
 const downloadDir = path.resolve(__dirname, 'downloads');
 if (!fs.existsSync(downloadDir)) {
     fs.mkdirSync(downloadDir);
 }
-
-
 
 async function moveLatestDownload(destination) {
     const downloadsPath = path.join(os.homedir(), 'Downloads');
@@ -64,6 +61,7 @@ async function moveLatestDownload(destination) {
 }
 
 
+puppeteer.use(StealthPlugin());
 (async () => {
     const browser = await puppeteer.launch({
         headless: false,
