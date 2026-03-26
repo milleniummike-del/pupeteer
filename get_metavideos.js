@@ -145,47 +145,9 @@ console.log("📂 Download folder:", destinationDir);
                 const toClick = Math.min(elements.length, 4);
                 console.log(`Found ${elements.length} download buttons total. Clicking ${toClick} one-by-one.`);
 
-                const movedFiles = [];
                 for (let i = elements.length - 1; i >= elements.length - toClick; i--) {
-                    const currentDownloadDirFiles = fs.readdirSync(downloadDir);
-                    console.log(`Clicking download button @${i}`);
-                    await elements[i].click();
-                    
-                    const newFile = await waitForOneNewFile(downloadDir, currentDownloadDirFiles, 60000);
-                    if (newFile) {
-                        const oldPath = path.join(downloadDir, newFile);
-                        const timestamp = getPreciseTimestamp();
-                        const ext = path.extname(newFile);
-                        const base = path.basename(newFile, ext);
-                        
-                        let newFileName = `${elements.length - 1 - i}_${base}_${timestamp}${ext}`;
-                        let newPath = path.join(destinationDir, newFileName);
-
-                        // Final check for collisions just in case
-                        let c = 1;
-                        while (fs.existsSync(newPath)) {
-                            newPath = path.join(destinationDir, `p${v}_f${elements.length - 1 - i}_${base}_${timestamp}_c${c}${ext}`);
-                            c++;
-                        }
-
-                        fs.copyFileSync(oldPath, newPath);
-                        fs.unlinkSync(oldPath);
-                        console.log(`Successfully moved: ${newFileName}`);
-                        movedFiles.push(newPath);
-                    } else {
-                        console.warn(`Timeout waiting for file from button @${i}`);
-                    }
-                    
-                    // Small delay between downloads
-                    await new Promise(r => setTimeout(r, 2000));
-                }
+                    console.log(`${i}`);
                 
-                if (movedFiles.length > 0) {
-                    requestEntry.status = 'success';
-                    requestEntry.files = movedFiles;
-                } else {
-                    requestEntry.status = 'failed';
-                    requestEntry.error = 'No files moved';
                 }
             } catch (err) {
                 console.error(`Error processing `, err);
