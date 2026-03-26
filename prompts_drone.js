@@ -1,44 +1,138 @@
 /**
- * PromptForge: Epic Travel Drone Shot Generator
+ * PromptForge: Epic Travel Drone Shot Generator (Enhanced)
  * Usage: node drone-travel.js [count]
- * Generates cinematic aerial travel shots with no people
  */
 
 const fs = require('fs');
 
+// ---------------------------------------------------------
+// PROCEDURAL LOCATION SYSTEM (10k+ combinations)
+// ---------------------------------------------------------
+
+const REGIONS = [
+  'Iceland','Norway','Switzerland','Italy','France','Spain','Greece',
+  'Turkey','Morocco','Egypt','Tanzania','Kenya','South Africa',
+  'USA','Canada','Mexico','Peru','Chile','Brazil','Argentina',
+  'Japan','South Korea','China','Vietnam','Thailand','Indonesia',
+  'Philippines','India','Nepal','Sri Lanka','Maldives',
+  'Australia','New Zealand','Fiji','French Polynesia'
+];
+
+const TERRAINS = [
+  'mountain range','coastal cliffs','tropical island','desert dunes',
+  'rainforest valley','glacial lagoon','volcanic crater',
+  'river canyon','alpine lake','rolling hills',
+  'savanna plains','ancient ruins','waterfall basin',
+  'fjord landscape','coral reef lagoon','high plateau',
+  'forest canopy','delta wetlands','rocky arch formations'
+];
+
+const DESCRIPTORS = [
+  'dramatic','vast','remote','untouched','breathtaking',
+  'serene','wild','majestic','otherworldly','cinematic',
+  'fog-covered','sunlit','stormy','golden','lush'
+];
+
+const EXTRAS = [
+  'with mist rolling through the landscape',
+  'glowing under golden hour light',
+  'with clouds drifting below peaks',
+  'surrounded by crystal-clear water',
+  'with dramatic shadows stretching across terrain',
+  'covered in vibrant natural colors',
+  'with waves crashing against formations',
+  'blanketed in soft atmospheric haze',
+  'with sunlight reflecting across surfaces',
+  'revealed through lifting fog'
+];
+
+const generateLocations = () => {
+  const locations = [];
+  for (const region of REGIONS) {
+    for (const terrain of TERRAINS) {
+      for (const desc of DESCRIPTORS) {
+        const extra = EXTRAS[Math.floor(Math.random() * EXTRAS.length)];
+        locations.push(`${desc} ${terrain} in ${region}, ${extra}`);
+      }
+    }
+  }
+  return locations;
+};
+
+// ---------------------------------------------------------
+// ICONIC LANDMARKS & NATURAL WONDERS
+// ---------------------------------------------------------
+
+const LANDMARKS = [
+  'Santorini caldera cliffs, Greece',
+  'Amalfi Coast cliffs, Italy',
+  'Dolomites mountain peaks, Italy',
+  'Mont Saint-Michel tidal island, France',
+  'Cliffs of Moher, Ireland',
+  'Plitvice Lakes waterfalls, Croatia',
+  'Lake Bled island church, Slovenia',
+  'Geirangerfjord, Norway',
+  'Preikestolen cliff, Norway',
+  'Hallstatt alpine village, Austria',
+  'Matterhorn peak, Switzerland',
+  'Acropolis overlooking Athens, Greece',
+  'Neuschwanstein Castle, Germany',
+  'Faroe Islands sea cliffs',
+
+  'Great Wall over mountains, China',
+  'Zhangjiajie pillar mountains, China',
+  'Mount Fuji, Japan',
+  'Arashiyama bamboo forest, Japan',
+  'Ha Long Bay karsts, Vietnam',
+  'Angkor Wat temples, Cambodia',
+  'Bagan temple plains, Myanmar',
+  'Sigiriya rock fortress, Sri Lanka',
+  'Taj Mahal, India',
+  'Petra rock city, Jordan',
+  'Wadi Rum desert, Jordan',
+  'Burj Khalifa skyline, Dubai',
+  'Sheikh Zayed Grand Mosque, Abu Dhabi',
+
+  'Grand Canyon, USA',
+  'Horseshoe Bend, USA',
+  'Yosemite Valley, USA',
+  'Niagara Falls',
+  'Lake Louise, Canada',
+  'Moraine Lake, Canada',
+  'Torres del Paine, Chile',
+  'Perito Moreno Glacier, Argentina',
+  'Machu Picchu, Peru',
+  'Amazon rainforest basin',
+  'Christ the Redeemer, Brazil',
+  'Iguazu Falls',
+  'Antelope Canyon, USA',
+  'Monument Valley, USA',
+  'Salar de Uyuni, Bolivia',
+
+  'Serengeti plains, Tanzania',
+  'Mount Kilimanjaro, Tanzania',
+  'Victoria Falls',
+  'Namib Desert dunes',
+  'Table Mountain, South Africa',
+
+  'Great Barrier Reef, Australia',
+  'Uluru rock, Australia',
+  'Twelve Apostles, Australia',
+  'Milford Sound, New Zealand',
+  'Mount Cook, New Zealand',
+
+  'Maldives lagoons',
+  'Bora Bora lagoon',
+  'Seychelles beaches',
+  'Galápagos Islands'
+];
+
+// ---------------------------------------------------------
+// ORIGINAL SYSTEM ELEMENTS
+// ---------------------------------------------------------
+
 const SUGGESTIONS = {
-  locations: [
-    'Santorini cliffside villages glowing at sunset, Greece',
-    'Glassy fjords winding between towering cliffs, Norway',
-    'Ancient temples emerging from jungle mist, Cambodia',
-    'Turquoise overwater bungalows in the Maldives',
-    'Dramatic limestone karsts rising from emerald waters, Vietnam',
-    'Snow-covered peaks of the Swiss Alps at golden hour',
-    'Endless sand dunes rippling across the Sahara Desert',
-    'Winding coastal cliffs along the Amalfi Coast, Italy',
-    'Lush green rice terraces carved into mountainsides, Bali',
-    'Massive waterfalls plunging into rainforest canyons, Iceland',
-    'Serene cherry blossom parks in full bloom, Japan',
-    'Red rock arches and desert valleys, Utah, USA',
-    'Remote turquoise lagoons surrounded by coral reefs, French Polynesia',
-    'Rolling lavender fields under a pastel sky, Provence',
-    'Towering glaciers meeting the ocean, Patagonia',
-    'White marble mosques reflecting in still water, Abu Dhabi',
-    'Cliffside monasteries perched on stone pillars, Meteora, Greece',
-    'Vast savanna plains with acacia trees, Tanzania',
-    'Ancient stone city walls overlooking the sea, Dubrovnik',
-    'Crystal-clear alpine lake surrounded by pine forests, Canada',
-    'Endless tea plantations covering misty hills, Sri Lanka',
-    'Dramatic basalt sea cliffs battered by waves, Ireland',
-    'Golden pagodas glowing above a river valley, Myanmar',
-    'Remote volcanic crater lakes with deep blue water, Indonesia',
-    'Coastal highway snaking along ocean cliffs, California',
-    'Frozen ice caves glowing blue beneath a glacier, Iceland',
-    'Vibrant autumn forests surrounding a mountain lake, South Korea',
-    'Massive sandbars and swirling tidal patterns, Brazil',
-    'Sunrise over ancient pyramids emerging from desert haze, Egypt',
-    'Jagged mountain spires reflected in a mirror-like lake, New Zealand'
-  ],
+  locations: generateLocations(),
 
   naturalMotion: [
     'waves rolling gently toward the shore',
@@ -92,23 +186,38 @@ const VISUALS = [
   'gentle motion blur from drone movement'
 ];
 
+// ---------------------------------------------------------
+// HELPERS
+// ---------------------------------------------------------
+
 const getRandom = (arr) => arr[Math.floor(Math.random() * arr.length)];
 const pickN = (arr, n) => [...arr].sort(() => 0.5 - Math.random()).slice(0, n);
+
+// ---------------------------------------------------------
+// MAIN GENERATOR
+// ---------------------------------------------------------
 
 const generateDroneBatch = (count = 20) => {
   const batch = [];
   batch.push(`const videos = [];`);
 
   for (let i = 0; i < count; i++) {
-    const loc = getRandom(SUGGESTIONS.locations);
+    const useLandmark = Math.random() < 0.35;
+
+    const loc = useLandmark
+      ? getRandom(LANDMARKS)
+      : getRandom(SUGGESTIONS.locations);
+
     const motion = getRandom(SUGGESTIONS.naturalMotion);
     const time = getRandom(SUGGESTIONS.timeOfDay);
     const mood = getRandom(SUGGESTIONS.moods);
     const cam = pickN(CAMERA_STYLE, 2).join(', ');
     const visuals = pickN(VISUALS, 3).join(', ');
 
+    const label = useLandmark ? 'ICONIC LOCATION' : 'LOCATION';
+
     batch.push(
-      `videos[${i}] = \`LOCATION: ${loc} - TIME: ${time} - MOTION: ${motion} - MOOD: ${mood} - CAMERA: ${cam} - VISUAL STYLE: ${visuals}\`;`
+      `videos[${i}] = \`${label}: ${loc} - TIME: ${time} - MOTION: ${motion} - MOOD: ${mood} - CAMERA: ${cam} - VISUAL STYLE: ${visuals}\`;`
     );
   }
 
@@ -116,16 +225,15 @@ const generateDroneBatch = (count = 20) => {
   return batch.join('\n');
 };
 
-
 // ---------------------------------------------------------
 // EXECUTION
 // ---------------------------------------------------------
+
 const args = process.argv.slice(2);
 const count = parseInt(args[0]) || 20;
 
 const output = generateDroneBatch(count);
 
-// Write file in UTF-8 (NO BOM)
 fs.writeFileSync('videos.js', output, { encoding: 'utf8' });
 
-console.log('🌍 drone-videos.js generated successfully (epic travel drone mode)');
+console.log('🌍 drone-videos.js generated successfully (enhanced cinematic mode)');

@@ -1,133 +1,177 @@
 /**
- * PromptForge: Prehistoric People Generator CLI
+ * PromptForge: Historical + Futuristic People Generator CLI
  * Usage: node prompts_people.js [count]
  */
 
 const fs = require('fs');
 
 // ---------------------------------------------------------
-// PREHISTORIC PEOPLE GROUPS DATASET
+// PEOPLE GROUPS ACROSS HISTORY & FUTURE
 // ---------------------------------------------------------
 const PEOPLE_GROUPS = [
+  // PREHISTORIC
   {
-    label: 'Hunters & Gatherers',
+    label: 'Prehistoric',
     species: [
-      'Cro-Magnon hunters', 'Neanderthal tribe members', 'Early Homo sapiens', 
-      'Homo erectus foragers', 'Ice Age hunters', 'Mesolithic gatherers'
+      'Cro-Magnon hunters', 'Neanderthal tribe members', 'Early Homo sapiens',
+      'Homo erectus foragers', 'Ice Age hunters', 'Mesolithic gatherers',
+      'Primitive tool artisans', 'Tribal healers', 'Nomadic fire-keepers'
     ],
     behaviors: [
-      'Tracking a herd of woolly mammoths across a snowy tundra', 'Working together to corner a giant elk in a narrow valley', 
-      'Spearing salmon in a rushing glacial river', 'Gathering wild berries and roots in a sun-drenched meadow', 
-      'Hiding in tall grass while stalking a steppe bison', 'Scavenging a fresh kill from a sabertooth cat', 
-      'Setting a primitive trap for small game', 'Using a throwing-stick to hunt birds near a lake',
-      'Carrying a heavy load of firewood back to the camp', 'Butchering a large animal with flint tools'
+      'Tracking a herd of mammoths across a tundra', 'Knapping flint tools beside a fire',
+      'Painting symbols deep inside a cave', 'Gathering roots and berries',
+      'Teaching children how to use a spear', 'Preparing hides for clothing',
+      'Constructing a shelter from branches and bones'
     ],
     habitats: [
-      'Expansive snowy tundra under a pale blue sky', 'Dense pine forest with deep shadows', 
-      'Rolling steppe grasslands with grazing megafauna', 'Misty river valley with limestone cliffs', 
-      'Rocky shoreline with crashing waves', 'Edge of a massive retreating glacier', 
-      'Lush woodland with ancient oak trees', 'Arid savannah with scattered acacia trees', 
-      'Hidden valley with a winding stream', 'High mountain pass above the clouds'
+      'Snowy glacial plains', 'Dense pine forests', 'Rocky cave shelters',
+      'Open steppe grasslands', 'River valleys with limestone cliffs',
+      'Ancient volcanic plains'
     ],
   },
 
+  // ANCIENT CIVILIZATIONS
   {
-    label: 'Craft & Survival',
+    label: 'Ancient Civilizations',
     species: [
-      'Flint knappers', 'Hide scrapers', 'Tool makers', 
-      'Basket weavers', 'Spear crafters', 'Fire keepers'
+      'Egyptian scribes', 'Roman legionaries', 'Greek philosophers',
+      'Babylonian astronomers', 'Mayan priests', 'Han dynasty farmers',
+      'Phoenician traders', 'Persian archers', 'Nubian artisans'
     ],
     behaviors: [
-      'Expertly knapping a flint core into a sharp hand-axe', 'Scraping a mammoth hide stretched over a wooden frame', 
-      'Binding a stone tip to a wooden shaft using animal sinew', 'Drilling a hole into a shell to make jewelry', 
-      'Using a hand-drill to start a fire on a piece of dry wood', 'Weaving a sturdy basket from flexible willow branches', 
-      'Sewing a warm cloak using a bone needle and leather strips', 'Grinding ochre into a fine red powder for pigment', 
-      'Sharpening a mammoth ivory spear point', 'Drying strips of meat over a smoky fire'
+      'Carving hieroglyphs into stone tablets', 'Marching in tight formation',
+      'Debating ethics in an open-air forum', 'Charting the movement of stars',
+      'Performing a sacred ritual', 'Harvesting rice in terraced fields',
+      'Trading goods across desert routes', 'Crafting bronze tools'
     ],
     habitats: [
-      'Sheltered campsite at the base of a towering cliff', 'Interior of a large, flickering cave', 
-      'Communal work area under a primitive animal-hide tent', 'Rocky outcrop with a view of the valley', 
-      'Quiet riverside glade', 'Winter camp buried deep in the forest', 
-      'Natural rock shelter with ancient soot on the ceiling', 'Sunlit clearing in a birch forest', 
-      'Near a natural tar pit or salt lick', 'Sandy beach littered with driftwood'
+      'Bustling ancient marketplaces', 'Grand marble temples',
+      'Desert pyramids under scorching sun', 'Stone amphitheaters',
+      'Jungle-covered temple complexes', 'Terraced farmlands',
+      'River harbors filled with wooden ships'
     ],
   },
 
+  // MEDIEVAL ERA
   {
-    label: 'Art & Ritual',
+    label: 'Medieval',
     species: [
-      'Cave painters', 'Shamanic figures', 'Storytellers', 
-      'Ritual dancers', 'Elder wisdom-keepers', 'Musicians'
+      'Knights in armor', 'Peasant farmers', 'Monks in scriptoria',
+      'Viking raiders', 'Medieval merchants', 'Castle guards',
+      'Apothecaries', 'Traveling bards', 'Master blacksmiths'
     ],
     behaviors: [
-      'Blowing red pigment over a hand to create a stencil on a cave wall', 'Painting a majestic charcoal bison by torchlight', 
-      'Performing a rhythmic dance around a massive central bonfire', 'Chanting a deep, guttural ritual song', 
-      'Carving a small Venus figurine from soft limestone', 'Playing a haunting melody on a bone flute', 
-      'Telling a story with animated gestures to a circle of listeners', 'Wearing a ceremonial headdress made of antlers', 
-      'Consulting the patterns of stars in the night sky', 'Marking the changing seasons on a bone calendar'
+      'Copying illuminated manuscripts', 'Training with swords in a courtyard',
+      'Tending livestock in a muddy field', 'Sailing longships across rough seas',
+      'Trading goods along a caravan route', 'Standing watch atop castle walls',
+      'Brewing herbal remedies', 'Performing songs in a tavern'
     ],
     habitats: [
-      'Deep, winding limestone cavern with crystalline formations', 'Sacred stone circle in a remote highland', 
-      'Vibrant forest grove at the height of autumn', 'Nighttime campsite under a brilliant Milky Way', 
-      'Mist-covered hilltop at dawn', 'Narrow passage deep within a mountain', 
-      'Echoing canyon with natural acoustics', 'Edge of a sacred spring', 
-      'High plateau with a panoramic view of the horizon', 'Shadowy alcove filled with prehistoric art'
+      'Stone castles surrounded by moats', 'Foggy medieval villages',
+      'Monastery libraries lit by candles', 'Windy coastal fjords',
+      'Crowded market squares', 'Rolling green farmlands',
+      'Wooden workshops filled with tools'
     ],
   },
 
+  // EARLY MODERN (RENAISSANCE–1800s)
   {
-    label: 'Social & Domestic',
+    label: 'Early Modern',
     species: [
-      'Mother and child', 'Tribal elders', 'Playing children', 
-      'A group of friends', 'A young couple', 'The whole community'
+      'Renaissance painters', 'Sailors of the Age of Exploration',
+      'Blacksmiths', 'Court musicians', 'Enlightenment scientists',
+      'Industrial-era factory workers', 'Clockmakers', 'Cartographers',
+      'Steam-engine engineers'
     ],
     behaviors: [
-      'Tending to a small child wrapped in furs', 'Sharing a communal meal around a central hearth', 
-      'Children playing a game of tag among the huts', 'Elders engaged in a serious discussion', 
-      'Walking together along a winding forest path', 'Bathing in a warm volcanic spring', 
-      'Grooming each other in a social bonding ritual', 'Resting together after a long day of foraging', 
-      'Building a new shelter using mammoth bones and hides', 'Watching the sunset from a high ridge'
+      'Mixing pigments for a fresco', 'Charting new sea routes',
+      'Forging iron tools on an anvil', 'Performing in a royal court',
+      'Studying natural philosophy', 'Operating early steam machinery',
+      'Drafting detailed maps', 'Repairing intricate clockwork'
     ],
     habitats: [
-      'Buzzing village of circular huts and tents', 'Cozy interior of a winter lodge', 
-      'Sunny meadow near a freshwater spring', 'Shadowy forest edge at twilight', 
-      'Peaceful riverbank with swaying reeds', 'Rocky terrace with drying hides', 
-      'High alpine meadow in full bloom', 'Sheltered cove on a turquoise coast', 
-      'Near a field of tall wild grain', 'Garden-like oasis in a semi-arid landscape'
+      'Renaissance workshops', 'Tall wooden sailing ships',
+      'Bustling port cities', 'Lavish palace halls',
+      'Candlelit laboratories', 'Smoky industrial foundries',
+      'Early railway stations'
+    ],
+  },
+
+  // MODERN & CONTEMPORARY
+  {
+    label: 'Modern',
+    species: [
+      'Urban commuters', 'Scientists in laboratories', 'Construction workers',
+      'Artists in studios', 'Athletes in training', 'Photographers on assignment',
+      'Software developers', 'Medical professionals', 'Aerospace engineers',
+      'Environmental researchers', 'Robotics technicians'
+    ],
+    behaviors: [
+      'Rushing to catch a train', 'Analyzing samples under a microscope',
+      'Welding steel beams', 'Sketching on a large canvas',
+      'Practicing on a running track', 'Capturing street photography',
+      'Writing code on multiple monitors', 'Performing surgery',
+      'Testing components in a wind tunnel', 'Collecting climate data in the field'
+    ],
+    habitats: [
+      'Skyscraper-filled cityscapes', 'High-tech research labs',
+      'Busy construction sites', 'Modern art studios',
+      'Sports stadiums', 'Urban parks at sunrise',
+      'Hospital operating rooms', 'Aerospace testing facilities',
+      'Robotics workshops'
+    ],
+  },
+
+  // FUTURISTIC ERAS
+  {
+    label: 'Futuristic',
+    species: [
+      'Mars colonists', 'Cybernetic engineers', 'AI ethicists',
+      'Starship navigators', 'Quantum technicians', 'Terraforming specialists',
+      'Hologram architects', 'Zero‑gravity athletes', 'Galactic diplomats',
+      'Asteroid miners', 'Nanotech surgeons'
+    ],
+    behaviors: [
+      'Repairing a rover on the Martian surface', 'Designing cybernetic implants',
+      'Debating AI rights in a virtual forum', 'Navigating a starship through nebulae',
+      'Calibrating quantum processors', 'Shaping atmospheric generators',
+      'Constructing holographic environments', 'Training in zero‑gravity arenas',
+      'Negotiating peace between off‑world colonies', 'Extracting minerals from asteroids'
+    ],
+    habitats: [
+      'Pressurized Mars domes', 'Neon-lit cyber cities', 'Orbital research stations',
+      'Deep‑space starships', 'Terraforming outposts', 'Virtual reality megastructures',
+      'Floating cloud cities', 'Asteroid mining colonies', 'Quantum computing chambers'
     ],
   }
 ];
 
 // ---------------------------------------------------------
-// OTHER DATA ARRAYS
+// LIGHTING, MODIFIERS, ENHANCERS
 // ---------------------------------------------------------
 const LIGHTING = [
-  'Flickering orange torchlight casting dramatic shadows on cave walls',
-  'Warm golden hour sunlight filtering through the prehistoric forest',
-  'Cold, blue moonlight reflecting off a snowy landscape',
-  'Harsh, direct noon sun on the dusty steppe',
-  'Soft, diffused morning mist with rays of light',
-  'Dramatic silhouette against a vibrant crimson sunset',
-  'Glowing embers of a campfire illuminating faces in the dark',
-  'Ethereal twilight purple over the ancient hills',
-  'Electric lightning flash during a fierce storm',
-  'Dappled sunlight through a canopy of giant trees',
-  'Soft pastel dawn colors reflecting in a still lake',
-  'Cinematic backlighting highlighting the texture of fur and hide'
+  'Golden hour sunlight', 'Soft morning mist', 'Harsh desert midday sun',
+  'Candlelit interiors', 'Torchlight flickering on stone walls',
+  'Blue twilight glow', 'Overcast diffused daylight',
+  'Neon reflections on wet pavement', 'Industrial floodlights',
+  'Moonlight casting long shadows', 'Bioluminescent futuristic glow',
+  'Holographic ambient lighting'
 ];
 
 const MODIFIERS = [
-  'National Geographic documentary style', 'Extreme close-up on weathered faces', 'Wide-angle landscape shot',
-  'Cinematic 35mm film grain', 'Handheld camera movement for realism', 'Slow motion action shot',
-  'Hyper-realistic textures of skin and fur', 'Authentic prehistoric atmosphere', 'Dramatic low-angle perspective',
-  'Shallow depth of field focusing on flint tools', 'High-speed capture of a hunt', 'Aerial view of a migration',
-  'Sepia-toned historical aesthetic', 'Vivid natural colors'
+  'National Geographic documentary style', 'Cinematic 35mm film grain',
+  'Wide-angle dramatic composition', 'Handheld realism',
+  'Hyper-detailed textures', 'Historical authenticity',
+  'Low-angle heroic framing', 'Soft portrait-style focus',
+  'Dynamic action framing', 'Aerial sweeping perspective',
+  'Futuristic sci-fi aesthetic', 'High-contrast cyberpunk palette'
 ];
 
 const ENHANCERS = [
-  '8K resolution', 'highly detailed character models', 'masterpiece quality',
-  'intricate primitive details', 'perfect anatomical accuracy', 'volumetric smoke and mist',
-  'award-winning cinematography', 'professional color grading'
+  '8K resolution', 'masterpiece quality', 'highly detailed models',
+  'volumetric lighting', 'professional color grading',
+  'photorealistic rendering', 'award-winning cinematography',
+  'ultra‑realistic atmospheric effects'
 ];
 
 // ---------------------------------------------------------
@@ -169,7 +213,6 @@ const count = parseInt(args[0]) || 20;
 
 const output = generatePeopleBatch(count);
 
-// Write file in UTF-8
 fs.writeFileSync('videos.js', output, { encoding: 'utf8' });
 
-console.log('✔ videos.js generated successfully with prehistoric people (UTF-8 safe)');
+console.log('✔ videos.js generated successfully with historical + futuristic people (UTF-8 safe)');
