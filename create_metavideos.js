@@ -44,88 +44,33 @@ function saveTracker(tracker) {
 
 const hostname = os.hostname();
 let destinationDir;
-
+let sourceDir;
 if (hostname === 'DESKTOP-QPNJTTJ') {
     destinationDir = `F:\\AI\\Videos\\${getTodayDateFormatted()}`;
+    sourceDir = `??`;
 } else {
     destinationDir = `C:\\Users\\mike_\\pupeteer\\videos\\${getTodayDateFormatted()}`;
+    sourceDir = `C:\\Users\\mike_\\Downloads`;
 }
 console.log("📂 Download folder:", destinationDir);
 
+if (!fs.existsSync(destinationDir)) {
+        fs.mkdirSync(destinationDir);
+}
+
 (async () => {
     let browser;
-    const downloadDir = path.join(__dirname, 'downloads');
-
-    if (!fs.existsSync(downloadDir)) {
-        fs.mkdirSync(downloadDir);
-    }
-
-    // Clean up local download dir at start to avoid confusion with old files
-    const existingTempFiles = fs.readdirSync(downloadDir);
-    for (const file of existingTempFiles) {
-        fs.unlinkSync(path.join(downloadDir, file));
-    }
-
-    async function waitForOneNewFile(dir, initialFiles, timeout = 60000) {
-        const start = Date.now();
-        while (Date.now() - start < timeout) {
-            const files = fs.readdirSync(dir);
-            const currentFiles = files.filter(f => !f.endsWith('.crdownload') && !f.endsWith('.tmp') && !f.endsWith('.com.google.Chrome.tmp'));
-            const newFile = currentFiles.find(f => !initialFiles.includes(f));
-            if (newFile) {
-                return newFile;
-            }
-            await new Promise(r => setTimeout(r, 1000));
-        }
-        return null;
-    }
 
     try {
-        browser = await puppeteer.launch({
-            userDataDir: "browser",
-            headless: false,
-            defaultViewport: null
-        });
+        const browser = await puppeteer.launch({ userDataDir: "browser", 
+                headless: false,
+                targetFilter: target => !!target.url(),
+                args: ["--no-sandbox", "--disable-setuid-sandbox"]
+            })
 
         const pages = await browser.pages();
         const page = pages[0];
         await page.bringToFront();
-        
-        // Resolve absolute path for downloads
-        const absoluteDownloadDir = path.resolve(downloadDir);
-        if (!fs.existsSync(absoluteDownloadDir)) {
-            fs.mkdirSync(absoluteDownloadDir, { recursive: true });
-        }
-
-        // Use Browser target for global download behavior
-        const client = await browser.target().createCDPSession();
-        
-        client.on('Browser.downloadWillBegin', (event) => {
-            console.log(`🔔 Download will begin: ${event.suggestedFilename} (guid: ${event.guid})`);
-        });
-
-        client.on('Browser.downloadProgress', (event) => {
-            if (event.state === 'completed') {
-                console.log(`✅ Download completed: ${event.guid}`);
-            }
-        });
-
-        try {
-            await client.send('Browser.setDownloadBehavior', {
-                behavior: 'allow',
-                downloadPath: absoluteDownloadDir,
-                eventsEnabled: true,
-            });
-            console.log("✅ Browser download behavior set to:", absoluteDownloadDir);
-        } catch (e) {
-            console.warn("⚠️ Browser.setDownloadBehavior failed, falling back to Page.setDownloadBehavior:", e.message);
-            const pageClient = await page.target().createCDPSession();
-            await pageClient.send('Page.setDownloadBehavior', {
-                behavior: 'allow',
-                downloadPath: absoluteDownloadDir,
-            });
-        }
-
         const tracker = loadTracker();
 
         // ----------------------------------------------------
@@ -180,14 +125,7 @@ console.log("📂 Download folder:", destinationDir);
 
             const submit = await page.waitForSelector('button[data-testid="composer-animate-button"]');
             await submit.click();
-            console.log('submitted prompt');
-
-            
-    /*
-            <button class="enabled:active:scale-98 inline-flex shrink-0 cursor-pointer select-none items-center justify-center gap-0.5 focus:not-focus-visible:outline-none transition-transform duration-150 ease-in-out disabled:cursor-not-allowed disabled:opacity-50 rounded-full text-subheadline h-8 text-text-on-accent enabled:hover:filter-[brightness(0.95)] enabled:active:filter-[brightness(0.9)] dark:enabled:hover:filter-[brightness(1.025)] dark:enabled:active:filter-[brightness(0.95)] bg-linear-to-r from-gradient-blue-indigo-650-stop1 to-gradient-blue-indigo-650-stop2 outline-offset-2 ps-2 px-2 md:px-2" data-slot="button" data-testid="composer-animate-button" disabled=""><svg viewBox="0 0 32 32" fill="none" width="20" height="20" class="m-0.5"><path d="M8.125 8.111c0-1.833 1.988-2.974 3.571-2.05l13.524 7.887c1.57.917 1.57 3.187 0 4.104l-13.524 7.887c-1.583.924-3.57-.218-3.571-2.05V8.11z" fill="currentColor"></path></svg><span class="truncate hidden md:inline">Animate</span></button>
-
-
-        
+            console.log('submitted prompt');       
 
             let requestEntry = {
                 prompt: currentPrompt,
@@ -199,7 +137,7 @@ console.log("📂 Download folder:", destinationDir);
 
             try {
                 // Wait for the FIRST download button to appear
-                await page.waitForSelector('button[aria-label="Download"]', { timeout: 180000, visible: true });
+                await page.waitForSelector('button[aria-label="Download"]', { timeout: 90000, visible: true });
                 console.log('Download buttons appeared. Waiting for media to settle...');
                 
                 // Extended wait to ensure multiple videos are ready
@@ -211,54 +149,33 @@ console.log("📂 Download folder:", destinationDir);
 
                 const movedFiles = [];
                 for (let i = elements.length - 1; i >= elements.length - toClick; i--) {
-                    const currentDownloadDirFiles = fs.readdirSync(downloadDir);
                     console.log(`Clicking download button @${i}`);
                     await elements[i].click();
-                    
-                    const newFile = await waitForOneNewFile(downloadDir, currentDownloadDirFiles, 60000);
-                    if (newFile) {
-                        const oldPath = path.join(downloadDir, newFile);
-                        const timestamp = getPreciseTimestamp();
-                        const ext = path.extname(newFile);
-                        const base = path.basename(newFile, ext);
-                        
-                        let newFileName = `p${v}_f${elements.length - 1 - i}_${base}_${timestamp}${ext}`;
-                        let newPath = path.join(destinationDir, newFileName);
-
-                        // Final check for collisions just in case
-                        let c = 1;
-                        while (fs.existsSync(newPath)) {
-                            newPath = path.join(destinationDir, `p${v}_f${elements.length - 1 - i}_${base}_${timestamp}_c${c}${ext}`);
-                            c++;
-                        }
-
-                        fs.copyFileSync(oldPath, newPath);
-                        fs.unlinkSync(oldPath);
-                        console.log(`Successfully moved: ${newFileName}`);
-                        movedFiles.push(newPath);
-                    } else {
-                        console.warn(`Timeout waiting for file from button @${i}`);
-                    }
                     
                     // Small delay between downloads
                     await new Promise(r => setTimeout(r, 2000));
                 }
+
+                // copy all mp4 files from default download folder to destinationDir
+                fs.readdirSync(sourceDir).forEach(file => {
+                    if (path.extname(file) === '.mp4') {
+                        const oldPath = path.join(sourceDir, file);
+                        const newPath = path.join(destinationDir, file);
                 
-                if (movedFiles.length > 0) {
-                    requestEntry.status = 'success';
-                    requestEntry.files = movedFiles;
-                } else {
-                    requestEntry.status = 'failed';
-                    requestEntry.error = 'No files moved';
-                }
+                        fs.renameSync(oldPath, newPath);
+                
+                        console.log(`Moved ${file} to ${destinationDir}`);
+                    }
+                });
+                
             } catch (err) {
                 console.error(`Error processing prompt ${v}:`, err);
                 requestEntry.status = 'error';
                 requestEntry.error = err.message;
             }
             
+
             saveTracker(tracker);
-            */
             await new Promise(resolve => setTimeout(resolve, 10000));
         }
 

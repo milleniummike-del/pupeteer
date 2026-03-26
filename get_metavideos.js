@@ -81,11 +81,11 @@ console.log("📂 Download folder:", destinationDir);
     }
 
     try {
-        browser = await puppeteer.launch({
-            userDataDir: "browser",
-            headless: false,
-            defaultViewport: null
-        });
+        const browser = await puppeteer.launch({ userDataDir: "browser", 
+                headless: false,
+                targetFilter: target => !!target.url(),
+                args: ["--no-sandbox", "--disable-setuid-sandbox"]
+            })
 
         const pages = await browser.pages();
         const page = pages[0];
@@ -154,7 +154,7 @@ console.log("📂 Download folder:", destinationDir);
               }
             
             saveTracker(tracker);
-            await new Promise(resolve => setTimeout(resolve, 10000));
+            await new Promise(resolve => setTimeout(resolve, 1000000));
 
 
     } catch (err) {

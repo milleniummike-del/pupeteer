@@ -150,5 +150,172 @@
     "prompt": "hd video 1920x1080p - SPECIES: Shoebill Stork (Balaeniceps rex) - BEHAVIOR: Displaying vibrant plumage in a courtship dance - HABITAT: Jagged coastal cliffs of the Atlantic - LIGHTING: Twilight indigo haze - MODIFIERS: Underwater housing clarity, Telephoto lens compression, Extreme wide-angle environmental shot, Low-angle hero perspective - ENHANCERS: 8K resolution, professional color grading, perfect composition",
     "timestamp": "2026-03-17T14:32:10.454Z",
     "status": "pending"
+  },
+  {
+    "prompt": "1920x1080p - LOCATION: Endless sand dunes rippling across the Sahara Desert - TIME: dramatic storm-light skies - MOTION: wind rippling across tall grass - MOOD: calm reflective stillness - CAMERA: top-down vertical reveal shot, slow forward drone glide - VISUAL STYLE: natural cinematic color grading, ultra high resolution detail, volumetric sunlight rays",
+    "timestamp": "2026-03-26T08:18:47.619Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "1920x1080p - LOCATION: Endless sand dunes rippling across the Sahara Desert - TIME: dramatic storm-light skies - MOTION: wind rippling across tall grass - MOOD: calm reflective stillness - CAMERA: top-down vertical reveal shot, slow forward drone glide - VISUAL STYLE: natural cinematic color grading, ultra high resolution detail, volumetric sunlight rays",
+    "timestamp": "2026-03-26T08:24:07.609Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "1920x1080p - LOCATION: Cliffside monasteries perched on stone pillars, Meteora, Greece - TIME: golden hour sunset - MOTION: clouds drifting slowly through valleys - MOOD: peaceful cinematic serenity - CAMERA: gradual pullback revealing massive scale, slow forward drone glide - VISUAL STYLE: high dynamic range lighting, soft atmospheric haze, crisp environmental textures",
+    "timestamp": "2026-03-26T08:29:27.859Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "1920x1080p - LOCATION: Cliffside monasteries perched on stone pillars, Meteora, Greece - TIME: golden hour sunset - MOTION: clouds drifting slowly through valleys - MOOD: peaceful cinematic serenity - CAMERA: gradual pullback revealing massive scale, slow forward drone glide - VISUAL STYLE: high dynamic range lighting, soft atmospheric haze, crisp environmental textures",
+    "timestamp": "2026-03-26T08:30:51.340Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "1920x1080p - LOCATION: Cliffside monasteries perched on stone pillars, Meteora, Greece - TIME: golden hour sunset - MOTION: clouds drifting slowly through valleys - MOOD: peaceful cinematic serenity - CAMERA: gradual pullback revealing massive scale, slow forward drone glide - VISUAL STYLE: high dynamic range lighting, soft atmospheric haze, crisp environmental textures",
+    "timestamp": "2026-03-26T08:31:52.419Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "1920x1080p - LOCATION: Dramatic limestone karsts rising from emerald waters, Vietnam - TIME: dramatic storm-light skies - MOTION: birds flying far below as tiny silhouettes - MOOD: majestic untouched beauty - CAMERA: gradual pullback revealing massive scale, long sweeping side-to-side flyover - VISUAL STYLE: gentle motion blur from drone movement, crisp environmental textures, natural cinematic color grading",
+    "timestamp": "2026-03-26T08:32:39.316Z",
+    "status": "failed",
+    "error": "No files moved"
+  },
+  {
+    "prompt": "1920x1080p - LOCATION: Snow-covered peaks of the Swiss Alps at golden hour - TIME: soft pastel sunrise - MOTION: waves rolling gently toward the shore - MOOD: calm reflective stillness - CAMERA: high-altitude aerial panorama, long sweeping side-to-side flyover - VISUAL STYLE: natural cinematic color grading, ultra high resolution detail, gentle motion blur from drone movement",
+    "timestamp": "2026-03-26T08:34:32.341Z",
+    "status": "failed",
+    "error": "No files moved"
+  },
+  {
+    "prompt": "1920x1080p - LOCATION: Frozen ice caves glowing blue beneath a glacier, Iceland - TIME: dramatic storm-light skies - MOTION: waterfalls thundering into deep pools - MOOD: peaceful cinematic serenity - CAMERA: gradual pullback revealing massive scale, long sweeping side-to-side flyover - VISUAL STYLE: soft atmospheric haze, natural cinematic color grading, ultra high resolution detail",
+    "timestamp": "2026-03-26T08:58:49.268Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "1920x1080p - LOCATION: Frozen ice caves glowing blue beneath a glacier, Iceland - TIME: dramatic storm-light skies - MOTION: waterfalls thundering into deep pools - MOOD: peaceful cinematic serenity - CAMERA: gradual pullback revealing massive scale, long sweeping side-to-side flyover - VISUAL STYLE: soft atmospheric haze, natural cinematic color grading, ultra high resolution detail",
+    "timestamp": "2026-03-26T08:59:15.310Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "1920x1080p - LOCATION: Frozen ice caves glowing blue beneath a glacier, Iceland - TIME: dramatic storm-light skies - MOTION: waterfalls thundering into deep pools - MOOD: peaceful cinematic serenity - CAMERA: gradual pullback revealing massive scale, long sweeping side-to-side flyover - VISUAL STYLE: soft atmospheric haze, natural cinematic color grading, ultra high resolution detail",
+    "timestamp": "2026-03-26T09:00:28.493Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "LOCATION: Lush green rice terraces carved into mountainsides, Bali - TIME: golden hour sunset - MOTION: fog lifting to reveal the landscape - MOOD: calm reflective stillness - CAMERA: cinematic orbit around landscape feature, top-down vertical reveal shot - VISUAL STYLE: gentle motion blur from drone movement, crisp environmental textures, high dynamic range lighting",
+    "timestamp": "2026-03-26T09:01:44.193Z",
+    "status": "error",
+    "error": "sourceDir is not defined"
+  },
+  {
+    "prompt": "LOCATION: Endless tea plantations covering misty hills, Sri Lanka - TIME: moody overcast afternoon - MOTION: clouds drifting slowly through valleys - MOOD: majestic untouched beauty - CAMERA: long sweeping side-to-side flyover, cinematic orbit around landscape feature - VISUAL STYLE: soft atmospheric haze, natural cinematic color grading, ultra high resolution detail",
+    "timestamp": "2026-03-26T09:03:12.117Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "LOCATION: Serene cherry blossom parks in full bloom, Japan - TIME: moody overcast afternoon - MOTION: birds flying far below as tiny silhouettes - MOOD: dreamlike wanderlust atmosphere - CAMERA: cinematic orbit around landscape feature, top-down vertical reveal shot - VISUAL STYLE: gentle motion blur from drone movement, natural cinematic color grading, soft atmospheric haze",
+    "timestamp": "2026-03-26T09:05:12.664Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "LOCATION: Serene cherry blossom parks in full bloom, Japan - TIME: moody overcast afternoon - MOTION: birds flying far below as tiny silhouettes - MOOD: dreamlike wanderlust atmosphere - CAMERA: cinematic orbit around landscape feature, top-down vertical reveal shot - VISUAL STYLE: gentle motion blur from drone movement, natural cinematic color grading, soft atmospheric haze",
+    "timestamp": "2026-03-26T09:06:01.211Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "LOCATION: Red rock arches and desert valleys, Utah, USA - TIME: dramatic storm-light skies - MOTION: mist weaving between mountain peaks - MOOD: peaceful cinematic serenity - CAMERA: slow forward drone glide, high-altitude aerial panorama - VISUAL STYLE: gentle motion blur from drone movement, soft atmospheric haze, ultra high resolution detail",
+    "timestamp": "2026-03-26T09:07:41.541Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "LOCATION: Glassy fjords winding between towering cliffs, Norway - TIME: dramatic storm-light skies - MOTION: fog lifting to reveal the landscape - MOOD: peaceful cinematic serenity - CAMERA: top-down vertical reveal shot, cinematic orbit around landscape feature - VISUAL STYLE: gentle motion blur from drone movement, volumetric sunlight rays, soft atmospheric haze",
+    "timestamp": "2026-03-26T09:09:12.681Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "LOCATION: Remote volcanic crater lakes with deep blue water, Indonesia - TIME: golden hour sunset - MOTION: mist weaving between mountain peaks - MOOD: epic sense of scale - CAMERA: top-down vertical reveal shot, long sweeping side-to-side flyover - VISUAL STYLE: volumetric sunlight rays, gentle motion blur from drone movement, ultra high resolution detail",
+    "timestamp": "2026-03-26T09:10:16.537Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "LOCATION: Red rock arches and desert valleys, Utah, USA - TIME: moody overcast afternoon - MOTION: shadows stretching as the sun sets - MOOD: majestic untouched beauty - CAMERA: top-down vertical reveal shot, high-altitude aerial panorama - VISUAL STYLE: gentle motion blur from drone movement, crisp environmental textures, ultra high resolution detail",
+    "timestamp": "2026-03-26T09:11:20.306Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "LOCATION: White marble mosques reflecting in still water, Abu Dhabi - TIME: moody overcast afternoon - MOTION: fog lifting to reveal the landscape - MOOD: majestic untouched beauty - CAMERA: high-altitude aerial panorama, slow forward drone glide - VISUAL STYLE: volumetric sunlight rays, ultra high resolution detail, soft atmospheric haze",
+    "timestamp": "2026-03-26T09:12:24.121Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "LOCATION: Turquoise overwater bungalows in the Maldives - TIME: dramatic storm-light skies - MOTION: waves rolling gently toward the shore - MOOD: calm reflective stillness - CAMERA: top-down vertical reveal shot, cinematic orbit around landscape feature - VISUAL STYLE: soft atmospheric haze, high dynamic range lighting, natural cinematic color grading",
+    "timestamp": "2026-03-26T09:13:27.888Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "hd video 1920x1080p - SPECIES: Snow Petrel (Pagodroma nivea) - BEHAVIOR: Walking across floating ice floes at twilight - HABITAT: Frozen northern fjords - LIGHTING: Glowing bioluminescent accents - MODIFIERS: National Geographic aesthetic, Shallow depth of field with creamy bokeh, Motion blur for speed, Extreme wide-angle environmental shot - ENHANCERS: professional color grading, hyper-realistic renders, intricate fur and feather detail",
+    "timestamp": "2026-03-26T09:31:53.609Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "hd video 1920x1080p - SPECIES: Sand Cat (Felis margarita) - BEHAVIOR: Pouncing on hidden prey in tall grass - HABITAT: Misty swamp edge - LIGHTING: Prismatic caustic light patterns dancing underwater - MODIFIERS: National Geographic aesthetic, High-speed shutter freeze, Telephoto lens compression, Macro extreme detail - ENHANCERS: BBC Earth quality, hyper-realistic renders, professional color grading",
+    "timestamp": "2026-03-26T09:32:28.894Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": " - SPECIES: Fossa (Cryptoprocta ferox) - BEHAVIOR: Roaring in a territorial display at dusk - HABITAT: Lush tropical valley with mist - LIGHTING: Moonlit silhouettes against a starry sky - MODIFIERS: Aerial drone cinematography, Underwater housing clarity, Sharp eye-focus, Extreme wide-angle environmental shot - ENHANCERS: perfect composition, award-winning wildlife shot, 8K resolution",
+    "timestamp": "2026-03-26T09:33:51.966Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": " - SPECIES: Antarctic Krill (Euphausia superba) - BEHAVIOR: Fishing in a sub-zero lead in the ice pack - HABITAT: Icebound coastline of Antarctica - LIGHTING: Harsh high-contrast noon sun casting sharp shadows - MODIFIERS: National Geographic aesthetic, Macro extreme detail, Underwater housing clarity, Sharp eye-focus - ENHANCERS: professional color grading, perfect composition, intricate fur and feather detail",
+    "timestamp": "2026-03-26T09:35:32.168Z",
+    "status": "pending"
+  },
+  {
+    "prompt": " - SPECIES: Black panther (Panthera onca / Panthera pardus) - BEHAVIOR: Dragging a heavy kill up into a tree - HABITAT: Arid volcanic landscape - LIGHTING: Harsh high-contrast noon sun casting sharp shadows - MODIFIERS: High-speed shutter freeze, National Geographic aesthetic, Low-angle hero perspective, Underwater housing clarity - ENHANCERS: 8K resolution, professional color grading, intricate fur and feather detail",
+    "timestamp": "2026-03-26T09:36:53.760Z",
+    "status": "pending"
+  },
+  {
+    "prompt": " - SPECIES: Burrowing Owl (Athene cunicularia) - BEHAVIOR: Perched on a gnarled, mossy branch - HABITAT: Misty Scottish highlands - LIGHTING: Volumetric morning mist with god rays - MODIFIERS: Telephoto lens compression, High-speed shutter freeze, Motion blur for speed, Low-angle hero perspective - ENHANCERS: professional color grading, 8K resolution, volumetric scattering",
+    "timestamp": "2026-03-26T09:37:51.355Z",
+    "status": "pending"
+  },
+  {
+    "prompt": " - SPECIES: Beluga Whale (Delphinapterus leucas) - BEHAVIOR: Walking across floating ice floes at twilight - HABITAT: Frozen northern fjords - LIGHTING: Volumetric morning mist with god rays - MODIFIERS: High-speed shutter freeze, Aerial drone cinematography, Shallow depth of field with creamy bokeh, Sharp eye-focus - ENHANCERS: hyper-realistic renders, award-winning wildlife shot, BBC Earth quality",
+    "timestamp": "2026-03-26T09:38:55.152Z",
+    "status": "pending"
+  },
+  {
+    "prompt": " - SPECIES: Iberian Lynx (Lynx pardinus) - BEHAVIOR: Pouncing on hidden prey in tall grass - HABITAT: Snow-capped Siberian pine forest - LIGHTING: Golden hour rim lighting highlighting fur texture - MODIFIERS: Sharp eye-focus, Aerial drone cinematography, Underwater housing clarity, National Geographic aesthetic - ENHANCERS: 8K resolution, BBC Earth quality, perfect composition",
+    "timestamp": "2026-03-26T09:39:59.016Z",
+    "status": "pending"
+  },
+  {
+    "prompt": " - SPECIES: Caracal (Caracal caracal) - BEHAVIOR: Stalking through heavy undergrowth - HABITAT: Red rock canyons of the American West - LIGHTING: Twilight indigo haze - MODIFIERS: Sharp eye-focus, Shallow depth of field with creamy bokeh, Extreme wide-angle environmental shot, Motion blur for speed - ENHANCERS: volumetric scattering, perfect composition, award-winning wildlife shot",
+    "timestamp": "2026-03-26T09:41:02.821Z",
+    "status": "pending"
+  },
+  {
+    "prompt": " - SPECIES: Jaguar (Panthera onca) - BEHAVIOR: Surveying territory from a high jagged rock - HABITAT: Red rock canyons of the American West - LIGHTING: Golden hour rim lighting highlighting fur texture - MODIFIERS: Underwater housing clarity, Motion blur for speed, National Geographic aesthetic, Low-angle hero perspective - ENHANCERS: 8K resolution, BBC Earth quality, perfect composition",
+    "timestamp": "2026-03-26T09:42:06.723Z",
+    "status": "pending"
+  },
+  {
+    "prompt": " - SPECIES: Martial Eagle (Polemaetus bellicosus) - BEHAVIOR: Perched on a gnarled, mossy branch - HABITAT: Dense urban skyline at twilight - LIGHTING: Golden hour rim lighting highlighting fur texture - MODIFIERS: Motion blur for speed, Shallow depth of field with creamy bokeh, Sharp eye-focus, Underwater housing clarity - ENHANCERS: intricate fur and feather detail, hyper-realistic renders, professional color grading",
+    "timestamp": "2026-03-26T09:43:10.583Z",
+    "status": "pending"
   }
 ]

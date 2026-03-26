@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+const os = require('os');
+const hostname = os.hostname();
 
 function getTodayDateFormatted() {
   const today = new Date();
@@ -9,12 +11,12 @@ function getTodayDateFormatted() {
   return `${year}${month}${day}`;
 }
 
-const environment=2;
-
-if(environment==1) {
-destinationDir = `C:\\Users\\Mike_\\pupeteer\\videos\\${getTodayDateFormatted()}`;
+if (hostname === 'DESKTOP-QPNJTTJ') {
+    destinationDir = `F:\\AI\\Videos\\${getTodayDateFormatted()}`;
+    sourceDir = `??`;
 } else {
-destinationDir = `F:\\AI\\Videos\\${getTodayDateFormatted()}a`;
+    destinationDir = `C:\\Users\\mike_\\pupeteer\\videos\\${getTodayDateFormatted()}`;
+    sourceDir = `C:\\Users\\mike_\\Downloads`;
 }
 
 const shuffleFiles = (directoryPath) => {

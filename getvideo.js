@@ -2,6 +2,21 @@ const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 const fs = require('fs');
 const path = require('path');
+const readline = require('readline');
+
+// Utility function to wait for a key press in the terminal
+function waitForKeyPress(promptText = 'Press ENTER to continue...') {
+    return new Promise((resolve) => {
+        const rl = readline.createInterface({
+            input: process.stdin,
+            output: process.stdout
+        });
+        rl.question(promptText, () => {
+            rl.close();
+            resolve();
+        });
+    });
+}
 
 puppeteer.use(StealthPlugin());
 
@@ -70,56 +85,8 @@ function getNextEpisode(showPath) {
             
             const submitBtn = await page.waitForSelector('input[name="search"]');
             await submitBtn.click();
-            
-            try {
-                await page.waitForNavigation({ waitUntil: 'networkidle0', timeout: 15000 });
-            } catch (e) {
-                console.log('⚠️ Navigation took too long or failed, continuing...');
-            }
-
-            const results = await page.evaluate(() => {
-                const data = [];
-                const entries = document.querySelectorAll('ol#torrents li.list-entry');
-                entries.forEach(entry => {
-                    const nameElement = entry.querySelector('span.item-name a');
-                    const magnetElement = entry.querySelector('a[href^="magnet:"]');
-                    if (nameElement && magnetElement) {
-                        data.push({ name: nameElement.innerText.trim(), magnetLink: magnetElement.href });
-                    }
-                });
-                return data;
-            });
-
-            const match = results.find(r => r.name.toUpperCase().includes(targetStr.toUpperCase()));
-
-            if (match) {
-                console.log(`🎯 Found Match: ${match.name}`);
-                
-                await page.evaluate((targetName) => {
-                    const entries = document.querySelectorAll('ol#torrents li.list-entry');
-                    for (const entry of entries) {
-                        const name = entry.querySelector('span.item-name a')?.innerText || '';
-                        if (name.includes(targetName)) {
-                            const magnetBtn = entry.querySelector('a[href^="magnet:"]');
-                            if (magnetBtn) {
-                                magnetBtn.click();
-                                return true;
-                            }
-                        }
-                    }
-                    return false;
-                }, match.name);
-                
-                console.log(`✅ Clicked magnet link for ${show} ${targetStr}`);
-                // Wait a bit for the magnet protocol to trigger
-                await new Promise(resolve => setTimeout(resolve, 3000));
-            } else {
-                console.log(`❌ ${targetStr} not found for "${show}"`);
-                
-                // Optional: If E01 of next season is wanted if current season is finished, 
-                // but that requires knowing how many episodes are in a season.
-                // For now, just skipping.
-            }
+            await new Promise(resolve => setTimeout(resolve, 10000));
+            console.log('waited 10 seconds')
         }
 
         console.log('\n🏁 Finished processing all shows.');
