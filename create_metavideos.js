@@ -47,7 +47,7 @@ let destinationDir;
 let sourceDir;
 if (hostname === 'DESKTOP-QPNJTTJ') {
     destinationDir = `F:\\AI\\Videos\\${getTodayDateFormatted()}`;
-    sourceDir = `??`;
+    sourceDir = `C:\\Users\\mike\\Downloads`;
 } else {
     destinationDir = `C:\\Users\\mike_\\pupeteer\\videos\\${getTodayDateFormatted()}`;
     sourceDir = `C:\\Users\\mike_\\Downloads`;
@@ -156,15 +156,19 @@ if (!fs.existsSync(destinationDir)) {
                     await new Promise(r => setTimeout(r, 2000));
                 }
 
-                // copy all mp4 files from default download folder to destinationDir
                 fs.readdirSync(sourceDir).forEach(file => {
                     if (path.extname(file) === '.mp4') {
                         const oldPath = path.join(sourceDir, file);
                         const newPath = path.join(destinationDir, file);
                 
-                        fs.renameSync(oldPath, newPath);
+                        try {
+                            fs.copyFileSync(oldPath, newPath); // copy
+                            fs.unlinkSync(oldPath); // delete original
                 
-                        console.log(`Moved ${file} to ${destinationDir}`);
+                            console.log(`Moved ${file} to ${destinationDir}`);
+                        } catch (err) {
+                            console.error(`Error moving ${file}:`, err.message);
+                        }
                     }
                 });
                 
