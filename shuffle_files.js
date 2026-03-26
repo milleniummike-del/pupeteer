@@ -14,7 +14,7 @@ const environment=2;
 if(environment==1) {
 destinationDir = `C:\\Users\\Mike_\\pupeteer\\videos\\${getTodayDateFormatted()}`;
 } else {
-destinationDir = `F:\\AI\\Videos\\${getTodayDateFormatted()}`;
+destinationDir = `F:\\AI\\Videos\\${getTodayDateFormatted()}a`;
 }
 
 const shuffleFiles = (directoryPath) => {
