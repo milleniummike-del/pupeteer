@@ -76,16 +76,19 @@ if (!fs.existsSync(destinationDir)) {
         // ----------------------------------------------------
         // MAIN AUTOMATION LOOP
         // ----------------------------------------------------
-        await page.goto('https://www.meta.ai/', { waitUntil: 'networkidle2' });
-
-        await page.waitForSelector('button[data-slot="capability-pill"]');
-        await page.evaluate(() => {
-            const btn = [...document.querySelectorAll('button[data-slot="capability-pill"]')]
-                .find(b => (b.textContent || '').toLowerCase().includes('create video'));
-            btn?.click();
-        });
+        
 
         for (let v = 0; v < videos.length; v++) {
+
+            await page.goto('https://www.meta.ai/', { waitUntil: 'networkidle2' });
+
+            await page.waitForSelector('button[data-slot="capability-pill"]');
+            await page.evaluate(() => {
+                const btn = [...document.querySelectorAll('button[data-slot="capability-pill"]')]
+                    .find(b => (b.textContent || '').toLowerCase().includes('create video'));
+                btn?.click();
+            });
+
             const currentPrompt = videos[v];
             
             if (tracker.find(t => t.prompt === currentPrompt && t.status === 'success')) {
@@ -137,15 +140,19 @@ if (!fs.existsSync(destinationDir)) {
 
             try {
                 // Wait for the FIRST download button to appear
-                await page.waitForSelector('button[aria-label="Download"]', { timeout: 90000, visible: true });
+                await page.waitForSelector('button[aria-label="Download"]', { timeout: 90000, enabled: true });
                 console.log('Download buttons appeared. Waiting for media to settle...');
                 
                 // Extended wait to ensure multiple videos are ready
-                await new Promise(resolve => setTimeout(resolve, 45000));
 
-                const elements = await page.$$('button[aria-label="Download"]');
+                let elements = await page.$$('button[aria-label="Download"]');
                 const toClick = Math.min(elements.length, 4);
                 console.log(`Found ${elements.length} download buttons total. Clicking ${toClick} one-by-one.`);
+
+                await new Promise(resolve => setTimeout(resolve, 45000));
+
+                await page.reload({ waitUntil: ["networkidle0", "domcontentloaded"] });
+                elements = await page.$$('button[aria-label="Download"]');
 
                 const movedFiles = [];
                 for (let i = elements.length - 1; i >= elements.length - toClick; i--) {
