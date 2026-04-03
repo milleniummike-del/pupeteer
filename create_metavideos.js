@@ -2,36 +2,22 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');
-const https = require('https');
 const os = require('os');
 const videos = require('./videos.js');
-const style = ``;
 
+const style = ``;
 const TRACKER_FILE = 'prompt_tracker.json';
 
 function getTodayDateFormatted() {
     const today = new Date();
-    const year = today.getFullYear();
-    const month = String(today.getMonth() + 1).padStart(2, '0');
-    const day = String(today.getDate()).padStart(2, '0');
-    return `${year}${month}${day}`;
-}
-
-function getPreciseTimestamp() {
-    const now = new Date();
-    const datePart = getTodayDateFormatted();
-    const timePart = String(now.getHours()).padStart(2, '0') +
-                     String(now.getMinutes()).padStart(2, '0') +
-                     String(now.getSeconds()).padStart(2, '0');
-    const msPart = String(now.getMilliseconds()).padStart(3, '0');
-    return `${datePart}_${timePart}_${msPart}`;
+    return `${today.getFullYear()}${String(today.getMonth() + 1).padStart(2, '0')}${String(today.getDate()).padStart(2, '0')}`;
 }
 
 function loadTracker() {
     if (fs.existsSync(TRACKER_FILE)) {
         try {
             return JSON.parse(fs.readFileSync(TRACKER_FILE, 'utf8'));
-        } catch (e) {
+        } catch {
             return [];
         }
     }
@@ -45,43 +31,54 @@ function saveTracker(tracker) {
 const hostname = os.hostname();
 let destinationDir;
 let sourceDir;
+
 if (hostname === 'DESKTOP-QPNJTTJ') {
     destinationDir = `F:\\AI\\Videos\\${getTodayDateFormatted()}`;
     sourceDir = `C:\\Users\\mike\\Downloads`;
 } else {
-    destinationDir = `C:\\Users\\mike_\\pupeteer\\videos\\${getTodayDateFormatted()}`;
+    destinationDir = `C:\\Users\\mike_\\puppeteer\\videos\\${getTodayDateFormatted()}`;
     sourceDir = `C:\\Users\\mike_\\Downloads`;
 }
+
 console.log("📂 Download folder:", destinationDir);
 
 if (!fs.existsSync(destinationDir)) {
-        fs.mkdirSync(destinationDir);
+    fs.mkdirSync(destinationDir, { recursive: true });
 }
 
 (async () => {
     let browser;
-
+    console.log('get browser');
     try {
-        const browser = await puppeteer.launch({ userDataDir: "browser", 
-                headless: false,
-                targetFilter: target => !!target.url(),
-                args: ["--no-sandbox", "--disable-setuid-sandbox"]
-            })
+        // ✅ FIXED: no shadowing
+        browser = await puppeteer.launch({
+            userDataDir: "browser",
+            headless: false,
+            args: ["--no-sandbox", "--disable-setuid-sandbox"]
+        });
+        console.log('Opening page');
 
-        const pages = await browser.pages();
-        const page = pages[0];
+        const page = (await browser.pages())[0];
         await page.bringToFront();
-        const tracker = loadTracker();
 
-        // ----------------------------------------------------
-        // MAIN AUTOMATION LOOP
-        // ----------------------------------------------------
-        
+        const tracker = loadTracker();
 
         for (let v = 0; v < videos.length; v++) {
 
+            const currentPrompt = videos[v];
+
+            if (tracker.find(t => t.prompt === currentPrompt && t.status === 'success')) {
+                console.log(`⏭ Skipping: ${currentPrompt}`);
+                continue;
+            }
+
+            console.log(`\n🎬 [${v}] Prompt:`, currentPrompt);
+
+            // Go fresh every time
             await page.goto('https://www.meta.ai/', { waitUntil: 'networkidle2' });
 
+            // Click "Create video"
+            console.log("📝 waiting capability");
             await page.waitForSelector('button[data-slot="capability-pill"]');
             await page.evaluate(() => {
                 const btn = [...document.querySelectorAll('button[data-slot="capability-pill"]')]
@@ -89,109 +86,106 @@ if (!fs.existsSync(destinationDir)) {
                 btn?.click();
             });
 
-            const currentPrompt = videos[v];
-            
-            if (tracker.find(t => t.prompt === currentPrompt && t.status === 'success')) {
-                console.log(`Skipping already completed prompt: ${currentPrompt}`);
-                continue;
-            }
-
-            console.log(`${v}:${currentPrompt}`);
             const textareaSelector = 'div[data-testid="composer-input"]';
+            console.log("📝 waiting for composer-input");
             await page.waitForSelector(textareaSelector, { visible: true });
-            const contentTextarea = await page.$(textareaSelector);
 
-            await page.evaluate((text) => {
-                navigator.clipboard.writeText(text);
-            }, currentPrompt + " " + style);
+            const input = await page.$(textareaSelector);
 
-            await contentTextarea.focus();
-            await page.keyboard.down('Control');
-            await page.keyboard.press('KeyV');
-            await page.keyboard.up('Control');
+            // ✅ Clear existing text
+            await input.click({ clickCount: 3 });
+            await page.keyboard.press('Backspace');
 
-            console.log('Waiting for animate button to be enabled');
-            const selector = 'button[data-testid="composer-animate-button"]';
+            // ✅ Type instead of clipboard
+            await input.type(currentPrompt + " " + style, { delay: 10 });
 
-            // Wait for the element to appear and be visible
-            await page.waitForSelector(selector, { visible: true });
+            // Debug check
+            const typed = await page.evaluate(sel => {
+                return document.querySelector(sel)?.innerText;
+            }, textareaSelector);
 
-            // Wait until the element is enabled (no 'disabled' attribute)
+            console.log("📝 Typed:", typed);
+
+            // Wait for animate button
+            const animateBtn = 'button[data-testid="composer-animate-button"]';
+
+            await page.waitForSelector(animateBtn, { visible: true });
+
             await page.waitForFunction(
-            sel => {
-                const el = document.querySelector(sel);
-                return el && !el.disabled;
-            },
-            {timeout:120000}, // options for waitForFunction
-            selector // argument passed to the function above
+                sel => {
+                    const el = document.querySelector(sel);
+                    return el && !el.disabled;
+                },
+                { timeout: 120000 },
+                animateBtn
             );
 
-            const submit = await page.waitForSelector('button[data-testid="composer-animate-button"]');
-            await submit.click();
-            console.log('submitted prompt');       
+            await page.click(animateBtn);
+            console.log('🚀 Submitted');
 
             let requestEntry = {
                 prompt: currentPrompt,
                 timestamp: new Date().toISOString(),
                 status: 'pending'
             };
+
             tracker.push(requestEntry);
             saveTracker(tracker);
 
             try {
-                // Wait for the FIRST download button to appear
-                await page.waitForSelector('button[aria-label="Download"]', { timeout: 90000, enabled: true });
-                console.log('Download buttons appeared. Waiting for media to settle...');
-                
-                // Extended wait to ensure multiple videos are ready
+                // Wait for downloads
+                await page.waitForSelector('button[aria-label="Download"]', { timeout: 90000 });
 
-                let elements = await page.$$('button[aria-label="Download"]');
+                console.log('⏳ Waiting for videos to finish...');
+                await new Promise(r => setTimeout(r, 45000));
+
+                // ✅ Reload AND re-init UI (important)
+                await page.reload({ waitUntil: 'networkidle2' });
+
+                await page.waitForSelector('button[aria-label="Download"]');
+
+                const elements = await page.$$('button[aria-label="Download"]');
                 const toClick = Math.min(elements.length, 4);
-                console.log(`Found ${elements.length} download buttons total. Clicking ${toClick} one-by-one.`);
 
-                await new Promise(resolve => setTimeout(resolve, 45000));
+                console.log(`⬇ Found ${elements.length}, downloading ${toClick}`);
 
-                await page.reload({ waitUntil: ["networkidle0", "domcontentloaded"] });
-                elements = await page.$$('button[aria-label="Download"]');
-
-                const movedFiles = [];
                 for (let i = elements.length - 1; i >= elements.length - toClick; i--) {
-                    console.log(`Clicking download button @${i}`);
+                    console.log(`Clicking ${i}`);
                     await elements[i].click();
-                    
-                    // Small delay between downloads
                     await new Promise(r => setTimeout(r, 2000));
                 }
 
+                // Move files
                 fs.readdirSync(sourceDir).forEach(file => {
                     if (path.extname(file) === '.mp4') {
                         const oldPath = path.join(sourceDir, file);
                         const newPath = path.join(destinationDir, file);
-                
+
                         try {
-                            fs.copyFileSync(oldPath, newPath); // copy
-                            fs.unlinkSync(oldPath); // delete original
-                
-                            console.log(`Moved ${file} to ${destinationDir}`);
+                            fs.copyFileSync(oldPath, newPath);
+                            fs.unlinkSync(oldPath);
+                            console.log(`📦 Moved ${file}`);
                         } catch (err) {
-                            console.error(`Error moving ${file}:`, err.message);
+                            console.error(`❌ Move error:`, err.message);
                         }
                     }
                 });
-                
+
+                requestEntry.status = 'success';
+
             } catch (err) {
-                console.error(`Error processing prompt ${v}:`, err);
+                console.error(`❌ Error on prompt ${v}:`, err.message);
                 requestEntry.status = 'error';
                 requestEntry.error = err.message;
             }
-            
 
             saveTracker(tracker);
-            await new Promise(resolve => setTimeout(resolve, 10000));
+
+            await new Promise(r => setTimeout(r, 10000));
         }
 
     } catch (err) {
-        console.error('Fatal Error:', err);
+        console.error('🔥 Fatal Error:', err);
     } finally {
         if (browser) await browser.close();
     }

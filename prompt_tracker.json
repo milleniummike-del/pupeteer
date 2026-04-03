@@ -821,5 +821,778 @@
     "prompt": " - SPECIES: Meerkat (Suricata suricatta) - BEHAVIOR: A honey badger fearlessly facing off against a lion - HABITAT: Fringe of a woodland thicket - LIGHTING: Dappled sunlight through the leaves of a fever tree forest - MODIFIERS: National Geographic wildlife cinematography, Macro detail on fur and whiskers, Handheld documentary style, Telephoto lens compression - ENHANCERS: 8K ultra-high resolution, hyper-realistic textures, intricate skin and scale detail",
     "timestamp": "2026-03-30T12:20:57.173Z",
     "status": "pending"
+  },
+  {
+    "prompt": "LOCATION: fog-covered alpine lake in Indonesia, blanketed in soft atmospheric haze - TIME: blue hour twilight - MOTION: waves rolling gently toward the shore - MOOD: awe-inspiring natural grandeur - CAMERA: cinematic orbit around landscape feature, high-altitude aerial panorama - VISUAL STYLE: soft atmospheric haze, gentle motion blur from drone movement, crisp environmental textures",
+    "timestamp": "2026-03-30T12:24:07.403Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Acropolis overlooking Athens, Greece - TIME: golden hour sunset - MOTION: wind rippling across tall grass - MOOD: epic sense of scale - CAMERA: low-to-high altitude rising reveal, long sweeping side-to-side flyover - VISUAL STYLE: crisp environmental textures, ultra high resolution detail, volumetric sunlight rays",
+    "timestamp": "2026-03-30T12:25:25.294Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "LOCATION: serene rocky arch formations in Japan, with sunlight reflecting across surfaces - TIME: dramatic storm-light skies - MOTION: waves rolling gently toward the shore - MOOD: dreamlike wanderlust atmosphere - CAMERA: long sweeping side-to-side flyover, top-down vertical reveal shot - VISUAL STYLE: volumetric sunlight rays, soft atmospheric haze, high dynamic range lighting",
+    "timestamp": "2026-03-30T12:31:07.146Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "LOCATION: otherworldly rocky arch formations in France, revealed through lifting fog - TIME: blue hour twilight - MOTION: waves rolling gently toward the shore - MOOD: awe-inspiring natural grandeur - CAMERA: gradual pullback revealing massive scale, low-to-high altitude rising reveal - VISUAL STYLE: gentle motion blur from drone movement, soft atmospheric haze, natural cinematic color grading",
+    "timestamp": "2026-03-30T12:32:28.828Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "LOCATION: golden rolling hills in Morocco, with mist rolling through the landscape - TIME: moody overcast afternoon - MOTION: fog lifting to reveal the landscape - MOOD: epic sense of scale - CAMERA: top-down vertical reveal shot, slow forward drone glide - VISUAL STYLE: soft atmospheric haze, natural cinematic color grading, ultra high resolution detail",
+    "timestamp": "2026-03-30T12:33:08.769Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "LOCATION: dramatic waterfall basin in Tanzania, covered in vibrant natural colors - TIME: moody overcast afternoon - MOTION: birds flying far below as tiny silhouettes - MOOD: awe-inspiring natural grandeur - CAMERA: low-to-high altitude rising reveal, slow forward drone glide - VISUAL STYLE: ultra high resolution detail, crisp environmental textures, natural cinematic color grading",
+    "timestamp": "2026-03-30T12:34:26.245Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Twelve Apostles, Australia - TIME: soft pastel sunrise - MOTION: fog lifting to reveal the landscape - MOOD: awe-inspiring natural grandeur - CAMERA: gradual pullback revealing massive scale, long sweeping side-to-side flyover - VISUAL STYLE: crisp environmental textures, gentle motion blur from drone movement, soft atmospheric haze",
+    "timestamp": "2026-03-30T12:35:48.257Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "LOCATION: sunlit waterfall basin in Kenya, with dramatic shadows stretching across terrain - TIME: soft pastel sunrise - MOTION: wind rippling across tall grass - MOOD: calm reflective stillness - CAMERA: gradual pullback revealing massive scale, long sweeping side-to-side flyover - VISUAL STYLE: crisp environmental textures, high dynamic range lighting, volumetric sunlight rays",
+    "timestamp": "2026-03-30T12:37:07.145Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "LOCATION: golden rolling hills in Morocco, with mist rolling through the landscape - TIME: moody overcast afternoon - MOTION: fog lifting to reveal the landscape - MOOD: epic sense of scale - CAMERA: top-down vertical reveal shot, slow forward drone glide - VISUAL STYLE: soft atmospheric haze, natural cinematic color grading, ultra high resolution detail",
+    "timestamp": "2026-03-30T12:39:02.135Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "LOCATION: dramatic waterfall basin in Tanzania, covered in vibrant natural colors - TIME: moody overcast afternoon - MOTION: birds flying far below as tiny silhouettes - MOOD: awe-inspiring natural grandeur - CAMERA: low-to-high altitude rising reveal, slow forward drone glide - VISUAL STYLE: ultra high resolution detail, crisp environmental textures, natural cinematic color grading",
+    "timestamp": "2026-03-30T12:40:20.320Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Twelve Apostles, Australia - TIME: soft pastel sunrise - MOTION: fog lifting to reveal the landscape - MOOD: awe-inspiring natural grandeur - CAMERA: gradual pullback revealing massive scale, long sweeping side-to-side flyover - VISUAL STYLE: crisp environmental textures, gentle motion blur from drone movement, soft atmospheric haze",
+    "timestamp": "2026-03-30T12:41:40.949Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "LOCATION: sunlit waterfall basin in Kenya, with dramatic shadows stretching across terrain - TIME: soft pastel sunrise - MOTION: wind rippling across tall grass - MOOD: calm reflective stillness - CAMERA: gradual pullback revealing massive scale, long sweeping side-to-side flyover - VISUAL STYLE: crisp environmental textures, high dynamic range lighting, volumetric sunlight rays",
+    "timestamp": "2026-03-30T12:42:59.874Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "LOCATION: wild coastal cliffs in South Korea, with waves crashing against formations - TIME: dramatic storm-light skies - MOTION: birds flying far below as tiny silhouettes - MOOD: calm reflective stillness - CAMERA: long sweeping side-to-side flyover, gradual pullback revealing massive scale - VISUAL STYLE: natural cinematic color grading, volumetric sunlight rays, ultra high resolution detail",
+    "timestamp": "2026-03-30T12:44:18.493Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "LOCATION: lush savanna plains in Iceland, with clouds drifting below peaks - TIME: soft pastel sunrise - MOTION: mist weaving between mountain peaks - MOOD: epic sense of scale - CAMERA: slow forward drone glide, top-down vertical reveal shot - VISUAL STYLE: ultra high resolution detail, natural cinematic color grading, crisp environmental textures",
+    "timestamp": "2026-03-30T12:45:36.635Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "LOCATION: untouched fjord landscape in Spain, covered in vibrant natural colors - TIME: bright midday clarity - MOTION: wind rippling across tall grass - MOOD: majestic untouched beauty - CAMERA: cinematic orbit around landscape feature, gradual pullback revealing massive scale - VISUAL STYLE: soft atmospheric haze, ultra high resolution detail, high dynamic range lighting",
+    "timestamp": "2026-03-30T12:46:54.481Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "ULTIMATE FPV ACTION: inverted yaw spin through a narrow opening in urban construction site with steel girders - tracking a rally car kicking up dust clouds - VIBE: packed with raw energy and adrenaline - VISUALS: crisp 4K 60fps high-bitrate detail, sun-flare peaking through obstacles, volumetric dust and particles in the air",
+    "timestamp": "2026-03-30T13:06:35.144Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "ULTIMATE FPV ACTION: smooth orbit around a fast-moving target in abandoned industrial factory with broken windows - VIBE: intense sense of speed and motion blur - VISUALS: dynamic camera shake, ultra-wide FPV lens distortion, sun-flare peaking through obstacles",
+    "timestamp": "2026-03-30T13:07:54.319Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "ULTIMATE FPV ACTION: rapid wall-ride along a vertical surface in subterranean drainage tunnel with splashing water - shadowing a speedboat jumping over waves - VIBE: intense sense of speed and motion blur - VISUALS: motion-blurred edges, vibrant high-contrast color grading, sun-flare peaking through obstacles",
+    "timestamp": "2026-03-30T13:09:12.853Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "ULTIMATE FPV ACTION: vertical dive down the side of a skyscraper in dense pine forest with narrow gaps between trees - VIBE: unfiltered FPV racing aesthetic - VISUALS: crisp 4K 60fps high-bitrate detail, motion-blurred edges, volumetric dust and particles in the air",
+    "timestamp": "2026-03-30T13:10:31.932Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "ULTIMATE front person view from a drone: rapid wall-ride along a vertical surface in derelict parking garage with low ceilings - VIBE: kinetic energy with aggressive prop-wash effects - VISUALS: vibrant high-contrast color grading, motion-blurred edges, dynamic camera shake",
+    "timestamp": "2026-03-30T13:12:04.058Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "ULTIMATE front person view from a drone: pro-level matty flip over a barrier in skate park with concrete bowls and rails - following a downhill mountain biker at top speed - VIBE: heart-racing proximity and tight gaps - VISUALS: dynamic camera shake, crisp 4K 60fps high-bitrate detail, ultra-wide FPV lens distortion",
+    "timestamp": "2026-03-30T13:13:22.162Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "ULTIMATE front person view from a drone: vertical dive down the side of a skyscraper in old shipping container terminal - shadowing a speedboat jumping over waves - VIBE: packed with raw energy and adrenaline - VISUALS: vibrant high-contrast color grading, ultra-wide FPV lens distortion, crisp 4K 60fps high-bitrate detail",
+    "timestamp": "2026-03-30T13:14:40.722Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "ULTIMATE front person view from a drone: heart-racing snap-roll between obstacles in subterranean drainage tunnel with splashing water - VIBE: high-stakes technical flying - VISUALS: ultra-wide FPV lens distortion, vibrant high-contrast color grading, motion-blurred edges",
+    "timestamp": "2026-03-30T13:16:02.579Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "ULTIMATE front person view from a drone: pro-level matty flip over a barrier in skate park with concrete bowls and rails - VIBE: unfiltered FPV racing aesthetic - VISUALS: motion-blurred edges, ultra-wide FPV lens distortion, volumetric dust and particles in the air",
+    "timestamp": "2026-03-30T13:17:18.468Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "ULTIMATE front person view from a drone: vertical dive down the side of a skyscraper in thick jungle canopy with vine-covered openings - pursuing a parkour runner leaping between buildings - VIBE: unfiltered FPV racing aesthetic - VISUALS: sun-flare peaking through obstacles, ultra-wide FPV lens distortion, volumetric dust and particles in the air",
+    "timestamp": "2026-03-30T13:18:36.011Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "drone/aerial camera shot: pro-level matty flip over a barrier in old shipping container terminal - VIBE: kinetic energy with aggressive prop-wash effects - VISUALS: ultra-wide FPV lens distortion, dynamic camera shake, vibrant high-contrast color grading",
+    "timestamp": "2026-03-31T11:23:54.100Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "drone/aerial camera shot: high-speed power loop over a structure in urban construction site with steel girders - dogfighting with another FPV drone in mid-air - VIBE: high-stakes technical flying - VISUALS: dynamic camera shake, crisp 4K 60fps high-bitrate detail, motion-blurred edges",
+    "timestamp": "2026-03-31T11:25:14.465Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "drone/aerial camera shot: rapid wall-ride along a vertical surface in subterranean drainage tunnel with splashing water - VIBE: high-octane cinematic intensity - VISUALS: volumetric dust and particles in the air, motion-blurred edges, sun-flare peaking through obstacles",
+    "timestamp": "2026-03-31T11:26:34.314Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "drone/aerial camera shot: low-altitude split-S maneuver in derelict parking garage with low ceilings - tracking a rally car kicking up dust clouds - VIBE: visceral first-person pilot perspective - VISUALS: dynamic camera shake, volumetric dust and particles in the air, vibrant high-contrast color grading",
+    "timestamp": "2026-03-31T11:27:52.689Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "drone/aerial camera shot: pro-level matty flip over a barrier in quarry with massive machinery and cliffs - VIBE: visceral first-person pilot perspective - VISUALS: motion-blurred edges, vibrant high-contrast color grading, sun-flare peaking through obstacles",
+    "timestamp": "2026-03-31T11:29:10.404Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "drone/aerial camera shot: razor-sharp knife-edge turn through a tight gap in urban construction site with steel girders - VIBE: packed with raw energy and adrenaline - VISUALS: vibrant high-contrast color grading, sun-flare peaking through obstacles, dynamic camera shake",
+    "timestamp": "2026-03-31T11:30:30.509Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "drone/aerial camera shot: heart-racing snap-roll between obstacles in dense pine forest with narrow gaps between trees - VIBE: kinetic energy with aggressive prop-wash effects - VISUALS: crisp 4K 60fps high-bitrate detail, ultra-wide FPV lens distortion, dynamic camera shake",
+    "timestamp": "2026-03-31T11:31:49.861Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "drone/aerial camera shot: low-altitude split-S maneuver in high-rise rooftop ledge and HVAC systems - dogfighting with another FPV drone in mid-air - VIBE: unfiltered FPV racing aesthetic - VISUALS: motion-blurred edges, ultra-wide FPV lens distortion, volumetric dust and particles in the air",
+    "timestamp": "2026-03-31T11:32:07.876Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "drone/aerial camera shot: jittery high-speed chase through debris in derelict parking garage with low ceilings - VIBE: kinetic energy with aggressive prop-wash effects - VISUALS: motion-blurred edges, dynamic camera shake, ultra-wide FPV lens distortion",
+    "timestamp": "2026-03-31T11:33:26.345Z",
+    "status": "error",
+    "error": "Attempted to use detached Frame 'BC764048F27153C57B0B80875AD0DEAC'."
+  },
+  {
+    "prompt": "drone/aerial camera shot: vertical dive down the side of a skyscraper in winding mountain road with steep drop-offs - VIBE: visceral first-person pilot perspective - VISUALS: motion-blurred edges, dynamic camera shake, sun-flare peaking through obstacles",
+    "timestamp": "2026-03-31T11:34:21.567Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "drone/aerial camera shot: pro-level matty flip over a barrier in dense pine forest with narrow gaps between trees - VIBE: packed with raw energy and adrenaline - VISUALS: dynamic camera shake, motion-blurred edges, sun-flare peaking through obstacles",
+    "timestamp": "2026-03-31T11:34:41.878Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "drone/aerial camera shot: low-altitude split-S maneuver in cargo ship graveyard with rusted hulls - VIBE: intense sense of speed and motion blur - VISUALS: crisp 4K 60fps high-bitrate detail, sun-flare peaking through obstacles, volumetric dust and particles in the air",
+    "timestamp": "2026-03-31T11:36:02.939Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "drone/aerial camera shot: rapid wall-ride along a vertical surface in subterranean drainage tunnel with splashing water - VIBE: high-stakes technical flying - VISUALS: dynamic camera shake, motion-blurred edges, vibrant high-contrast color grading",
+    "timestamp": "2026-03-31T11:37:21.746Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "drone/aerial camera shot: razor-sharp knife-edge turn through a tight gap in urban construction site with steel girders - VIBE: packed with raw energy and adrenaline - VISUALS: vibrant high-contrast color grading, ultra-wide FPV lens distortion, volumetric dust and particles in the air",
+    "timestamp": "2026-03-31T11:38:41.149Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "LOCATION: wild tropical island in Nepal, with clouds drifting below peaks - TIME: dramatic storm-light skies - MOTION: birds flying far below as tiny silhouettes - MOOD: majestic untouched beauty - CAMERA: slow forward drone glide, cinematic orbit around landscape feature - VISUAL STYLE: crisp environmental textures, volumetric sunlight rays, ultra high resolution detail",
+    "timestamp": "2026-03-31T11:43:12.975Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "LOCATION: majestic coral reef lagoon in Philippines, with dramatic shadows stretching across terrain - TIME: soft pastel sunrise - MOTION: waterfalls thundering into deep pools - MOOD: calm reflective stillness - CAMERA: long sweeping side-to-side flyover, top-down vertical reveal shot - VISUAL STYLE: natural cinematic color grading, gentle motion blur from drone movement, soft atmospheric haze",
+    "timestamp": "2026-03-31T11:44:32.901Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Cliffs of Moher, Ireland - TIME: moody overcast afternoon - MOTION: sunlight glittering across ocean surfaces - MOOD: peaceful cinematic serenity - CAMERA: cinematic orbit around landscape feature, gradual pullback revealing massive scale - VISUAL STYLE: volumetric sunlight rays, high dynamic range lighting, crisp environmental textures",
+    "timestamp": "2026-03-31T11:44:48.095Z",
+    "status": "error",
+    "error": "Cannot read properties of undefined (reading 'click')"
+  },
+  {
+    "prompt": "LOCATION: breathtaking fjord landscape in Thailand, with waves crashing against formations - TIME: golden hour sunset - MOTION: snow blowing across high ridgelines - MOOD: calm reflective stillness - CAMERA: low-to-high altitude rising reveal, cinematic orbit around landscape feature - VISUAL STYLE: volumetric sunlight rays, crisp environmental textures, high dynamic range lighting",
+    "timestamp": "2026-03-31T11:45:54.882Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "LOCATION: cinematic coastal cliffs in Spain, with dramatic shadows stretching across terrain - TIME: dramatic storm-light skies - MOTION: clouds drifting slowly through valleys - MOOD: dreamlike wanderlust atmosphere - CAMERA: cinematic orbit around landscape feature, high-altitude aerial panorama - VISUAL STYLE: crisp environmental textures, soft atmospheric haze, high dynamic range lighting",
+    "timestamp": "2026-03-31T11:47:13.236Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "LOCATION: golden forest canopy in Norway, with dramatic shadows stretching across terrain - TIME: soft pastel sunrise - MOTION: waterfalls thundering into deep pools - MOOD: majestic untouched beauty - CAMERA: low-to-high altitude rising reveal, gradual pullback revealing massive scale - VISUAL STYLE: volumetric sunlight rays, ultra high resolution detail, natural cinematic color grading",
+    "timestamp": "2026-03-31T11:48:34.409Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "LOCATION: otherworldly tropical island in Egypt, with waves crashing against formations - TIME: blue hour twilight - MOTION: wind rippling across tall grass - MOOD: peaceful cinematic serenity - CAMERA: top-down vertical reveal shot, cinematic orbit around landscape feature - VISUAL STYLE: crisp environmental textures, volumetric sunlight rays, gentle motion blur from drone movement",
+    "timestamp": "2026-03-31T11:49:53.062Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "LOCATION: cinematic coral reef lagoon in Switzerland, glowing under golden hour light - TIME: bright midday clarity - MOTION: waves rolling gently toward the shore - MOOD: epic sense of scale - CAMERA: slow forward drone glide, high-altitude aerial panorama - VISUAL STYLE: high dynamic range lighting, volumetric sunlight rays, gentle motion blur from drone movement",
+    "timestamp": "2026-03-31T11:51:12.283Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "LOCATION: vast waterfall basin in Mexico, with dramatic shadows stretching across terrain - TIME: soft pastel sunrise - MOTION: waves rolling gently toward the shore - MOOD: dreamlike wanderlust atmosphere - CAMERA: cinematic orbit around landscape feature, high-altitude aerial panorama - VISUAL STYLE: soft atmospheric haze, high dynamic range lighting, volumetric sunlight rays",
+    "timestamp": "2026-03-31T11:52:43.465Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "LOCATION: cinematic ancient ruins in French Polynesia, blanketed in soft atmospheric haze - TIME: dramatic storm-light skies - MOTION: snow blowing across high ridgelines - MOOD: dreamlike wanderlust atmosphere - CAMERA: low-to-high altitude rising reveal, slow forward drone glide - VISUAL STYLE: high dynamic range lighting, volumetric sunlight rays, ultra high resolution detail",
+    "timestamp": "2026-03-31T11:54:03.354Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Great Wall over mountains, China - TIME: dramatic storm-light skies - MOTION: clouds drifting slowly through valleys - MOOD: dreamlike wanderlust atmosphere - CAMERA: cinematic orbit around landscape feature, high-altitude aerial panorama - VISUAL STYLE: natural cinematic color grading, soft atmospheric haze, high dynamic range lighting",
+    "timestamp": "2026-03-31T11:57:16.944Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: majestic coral reef lagoon in Iceland, revealed through lifting fog - TIME: bright midday clarity - MOTION: wind rippling across tall grass - MOOD: epic sense of scale - CAMERA: gradual pullback revealing massive scale, low-to-high altitude rising reveal - VISUAL STYLE: crisp environmental textures, high dynamic range lighting, soft atmospheric haze",
+    "timestamp": "2026-03-31T11:58:39.107Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Grand Canyon, USA - TIME: dramatic storm-light skies - MOTION: shadows stretching as the sun sets - MOOD: calm reflective stillness - CAMERA: high-altitude aerial panorama, gradual pullback revealing massive scale - VISUAL STYLE: high dynamic range lighting, ultra high resolution detail, gentle motion blur from drone movement",
+    "timestamp": "2026-03-31T12:00:20.764Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "LOCATION: wild rocky arch formations in Indonesia, with sunlight reflecting across surfaces - TIME: golden hour sunset - MOTION: snow blowing across high ridgelines - MOOD: awe-inspiring natural grandeur - CAMERA: slow forward drone glide, low-to-high altitude rising reveal - VISUAL STYLE: natural cinematic color grading, crisp environmental textures, gentle motion blur from drone movement",
+    "timestamp": "2026-03-31T12:01:33.962Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: sunlit glacial lagoon in Australia, with clouds drifting below peaks - TIME: moody overcast afternoon - MOTION: fog lifting to reveal the landscape - MOOD: dreamlike wanderlust atmosphere - CAMERA: slow forward drone glide, top-down vertical reveal shot - VISUAL STYLE: volumetric sunlight rays, ultra high resolution detail, natural cinematic color grading",
+    "timestamp": "2026-03-31T12:02:55.653Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "FLYOVER: Sydney Opera House, Sydney, Australia - TIME: bright midday clarity - CAMERA: slow rising flyover from street level to skyline, smooth aerial pass above structure - MOTION: clouds drifting above skyline - MOOD: immersive city exploration feeling - VISUAL STYLE: ultra high resolution, cinematic color grading, volumetric lighting",
+    "timestamp": "2026-03-31T12:04:54.082Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Forbidden City, Beijing, China - TIME: golden hour sunset - CAMERA: smooth aerial pass above structure, forward drone glide directly over landmark - MOTION: city lights flickering on - MOOD: epic cinematic scale - VISUAL STYLE: high dynamic range, volumetric lighting, soft atmospheric haze",
+    "timestamp": "2026-03-31T12:06:14.700Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Tokyo Skytree, Tokyo, Japan - TIME: night city lights glowing - CAMERA: low sweeping drone flyover, top-down vertical flyover reveal - MOTION: sunlight reflecting off glass structures - MOOD: immersive city exploration feeling - VISUAL STYLE: realistic shadows, volumetric lighting, soft atmospheric haze",
+    "timestamp": "2026-03-31T12:07:36.754Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Acropolis, Athens, Greece - TIME: blue hour twilight - CAMERA: low sweeping drone flyover, wide cinematic pass across skyline and landmark - MOTION: traffic flowing through surrounding streets - MOOD: epic cinematic scale - VISUAL STYLE: volumetric lighting, cinematic color grading, soft atmospheric haze",
+    "timestamp": "2026-03-31T12:08:55.787Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Acropolis, Athens, Greece - TIME: bright midday clarity - CAMERA: smooth aerial pass above structure, low sweeping drone flyover - MOTION: clouds drifting above skyline - MOOD: dreamlike travel atmosphere - VISUAL STYLE: volumetric lighting, cinematic color grading, ultra high resolution",
+    "timestamp": "2026-03-31T12:10:13.889Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Shibuya Crossing, Tokyo, Japan - TIME: blue hour twilight - CAMERA: high-altitude cinematic flyover, smooth aerial pass above structure - MOTION: people moving like tiny figures below - MOOD: immersive city exploration feeling - VISUAL STYLE: ultra high resolution, soft atmospheric haze, cinematic color grading",
+    "timestamp": "2026-03-31T12:11:36.713Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Great Wall near Beijing, China - TIME: bright midday clarity - CAMERA: top-down vertical flyover reveal, smooth aerial pass above structure - MOTION: sunlight reflecting off glass structures - MOOD: majestic architectural beauty - VISUAL STYLE: ultra high resolution, soft atmospheric haze, cinematic color grading",
+    "timestamp": "2026-03-31T12:13:00.453Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Golden Gate Bridge, San Francisco, USA - TIME: night city lights glowing - CAMERA: slow rising flyover from street level to skyline, wide cinematic pass across skyline and landmark - MOTION: people moving like tiny figures below - MOOD: dreamlike travel atmosphere - VISUAL STYLE: ultra high resolution, cinematic color grading, realistic shadows",
+    "timestamp": "2026-03-31T12:14:19.357Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Harbour Bridge, Sydney, Australia - TIME: bright midday clarity - CAMERA: top-down vertical flyover reveal, smooth aerial pass above structure - MOTION: people moving like tiny figures below - MOOD: dreamlike travel atmosphere - VISUAL STYLE: volumetric lighting, cinematic color grading, soft atmospheric haze",
+    "timestamp": "2026-03-31T12:15:39.525Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Marina Bay Sands, Singapore - TIME: blue hour twilight - CAMERA: top-down vertical flyover reveal, low sweeping drone flyover - MOTION: traffic flowing through surrounding streets - MOOD: immersive city exploration feeling - VISUAL STYLE: ultra high resolution, cinematic color grading, volumetric lighting",
+    "timestamp": "2026-03-31T12:16:57.996Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Pyramids of Giza, Egypt - TIME: blue hour twilight - CAMERA: wide cinematic pass across skyline and landmark, low sweeping drone flyover - MOTION: clouds drifting above skyline - MOOD: majestic architectural beauty - VISUAL STYLE: volumetric lighting, high dynamic range, soft atmospheric haze",
+    "timestamp": "2026-03-31T12:18:16.221Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Harbour Bridge, Sydney, Australia - TIME: night city lights glowing - CAMERA: slow rising flyover from street level to skyline, low sweeping drone flyover - MOTION: traffic flowing through surrounding streets - MOOD: majestic architectural beauty - VISUAL STYLE: realistic shadows, high dynamic range, volumetric lighting",
+    "timestamp": "2026-03-31T12:19:37.969Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Colosseum, Rome, Italy - TIME: blue hour twilight - CAMERA: low sweeping drone flyover, high-altitude cinematic flyover - MOTION: traffic flowing through surrounding streets - MOOD: awe-inspiring urban grandeur - VISUAL STYLE: realistic shadows, high dynamic range, volumetric lighting",
+    "timestamp": "2026-03-31T12:20:59.503Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Marina Bay Sands, Singapore - TIME: soft sunrise light - CAMERA: high-altitude cinematic flyover, top-down vertical flyover reveal - MOTION: people moving like tiny figures below - MOOD: epic cinematic scale - VISUAL STYLE: ultra high resolution, cinematic color grading, volumetric lighting",
+    "timestamp": "2026-03-31T12:22:19.475Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Eiffel Tower, Paris, France - TIME: golden hour sunset - CAMERA: smooth aerial pass above structure, forward drone glide directly over landmark - MOTION: people moving like tiny figures below - MOOD: dreamlike travel atmosphere - VISUAL STYLE: realistic shadows, soft atmospheric haze, high dynamic range",
+    "timestamp": "2026-03-31T12:23:37.863Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Taj Mahal, Agra, India - TIME: soft sunrise light - CAMERA: slow rising flyover from street level to skyline, low sweeping drone flyover - MOTION: people moving like tiny figures below - MOOD: majestic architectural beauty - VISUAL STYLE: volumetric lighting, cinematic color grading, high dynamic range",
+    "timestamp": "2026-03-31T12:24:58.882Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Big Ben and Houses of Parliament, London, UK - TIME: golden hour sunset - CAMERA: low sweeping drone flyover, slow rising flyover from street level to skyline - MOTION: sunlight reflecting off glass structures - MOOD: dreamlike travel atmosphere - VISUAL STYLE: soft atmospheric haze, realistic shadows, high dynamic range",
+    "timestamp": "2026-03-31T12:26:20.121Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Colosseum, Rome, Italy - TIME: bright midday clarity - CAMERA: forward drone glide directly over landmark, smooth aerial pass above structure - MOTION: traffic flowing through surrounding streets - MOOD: majestic architectural beauty - VISUAL STYLE: ultra high resolution, realistic shadows, volumetric lighting",
+    "timestamp": "2026-03-31T12:27:39.341Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Shibuya Crossing, Tokyo, Japan - TIME: golden hour sunset - CAMERA: forward drone glide directly over landmark, high-altitude cinematic flyover - MOTION: traffic flowing through surrounding streets - MOOD: immersive city exploration feeling - VISUAL STYLE: ultra high resolution, cinematic color grading, volumetric lighting",
+    "timestamp": "2026-03-31T12:29:02.131Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Acropolis, Athens, Greece - TIME: blue hour twilight - CAMERA: smooth aerial pass above structure, forward drone glide directly over landmark - MOTION: sunlight reflecting off glass structures - MOOD: majestic architectural beauty - VISUAL STYLE: high dynamic range, volumetric lighting, ultra high resolution",
+    "timestamp": "2026-03-31T12:30:24.651Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Red-billed Oxpecker (Buphagus erythrorhynchus) - BEHAVIOR: Circling high above on warm thermal updrafts - HABITAT: Reeds at the edge of a watering hole - LIGHTING: Soft dawn light with rising heat haze - MODIFIERS: Macro detail on fur and whiskers, Slow motion 120fps capture, Handheld documentary style, Sharp focus on the predator's eyes - ENHANCERS: vibrant natural colors, hyper-realistic textures, intricate skin and scale detail",
+    "timestamp": "2026-04-01T08:45:59.326Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Nile Crocodile (Crocodylus niloticus) - BEHAVIOR: Surveying the vast landscape from a high granite kopje - HABITAT: Arid acacia scrubland of the Tsavo - LIGHTING: Dramatic silhouette against a blood-red African sunset - MODIFIERS: Macro detail on fur and whiskers, National Geographic wildlife cinematography, Shallow depth of field with soft savanna background, Aerial drone view over a migration - ENHANCERS: perfect composition, award-winning nature photography, intricate skin and scale detail",
+    "timestamp": "2026-04-01T08:47:22.851Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Spotted Hyena (Crocuta crocuta) - BEHAVIOR: Trotting through the tall grass in search of food scraps - HABITAT: Tall yellow elephant grass - LIGHTING: Dramatic silhouette against a blood-red African sunset - MODIFIERS: Macro detail on fur and whiskers, Aerial drone view over a migration, Telephoto lens compression, Low-angle perspective from a hidden camera trap - ENHANCERS: BBC Planet Earth quality, intricate skin and scale detail, 8K ultra-high resolution",
+    "timestamp": "2026-04-01T08:48:47.049Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": " - SPECIES: Kori Bustard (Ardeotis kori) - BEHAVIOR: Landing on a large mammal to search for small insects - HABITAT: Reeds at the edge of a watering hole - LIGHTING: Dappled sunlight through the leaves of a fever tree forest - MODIFIERS: Macro detail on fur and whiskers, Sharp focus on the predator's eyes, Telephoto lens compression, Aerial drone view over a migration - ENHANCERS: vibrant natural colors, 8K ultra-high resolution, perfect composition",
+    "timestamp": "2026-04-01T08:50:31.200Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Secretary Bird (Sagittarius serpentarius) - BEHAVIOR: Sprinting across the flat plains at incredible speed - HABITAT: Open sky over the savanna - LIGHTING: Golden hour sun low on the horizon, glowing through the dust - MODIFIERS: Slow motion 120fps capture, National Geographic wildlife cinematography, Macro detail on fur and whiskers, Low-angle perspective from a hidden camera trap - ENHANCERS: BBC Planet Earth quality, intricate skin and scale detail, hyper-realistic textures",
+    "timestamp": "2026-04-01T08:51:55.323Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Spotted Hyena (Crocuta crocuta) - BEHAVIOR: Working together in a highly coordinated hunting pack - HABITAT: Rocky outcrops and kopjes - LIGHTING: Golden hour sun low on the horizon, glowing through the dust - MODIFIERS: Low-angle perspective from a hidden camera trap, Aerial drone view over a migration, Handheld documentary style, Macro detail on fur and whiskers - ENHANCERS: hyper-realistic textures, BBC Planet Earth quality, 8K ultra-high resolution",
+    "timestamp": "2026-04-01T08:53:19.203Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Black Rhinoceros (Diceros bicornis) - BEHAVIOR: Moving with powerful grace through the thick vegetation - HABITAT: The vast, golden plains of the Serengeti - LIGHTING: Dappled sunlight through the leaves of a fever tree forest - MODIFIERS: Handheld documentary style, Aerial drone view over a migration, Telephoto lens compression, Low-angle perspective from a hidden camera trap - ENHANCERS: perfect composition, hyper-realistic textures, vibrant natural colors",
+    "timestamp": "2026-04-01T08:54:42.925Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Blue Wildebeest (Connochaetes taurinus) - BEHAVIOR: Huddling together in a tight group to confuse predators - HABITAT: Dry savanna with scattered whistling thorn trees - LIGHTING: Dappled sunlight through the leaves of a fever tree forest - MODIFIERS: National Geographic wildlife cinematography, Aerial drone view over a migration, Slow motion 120fps capture, Handheld documentary style - ENHANCERS: hyper-realistic textures, 8K ultra-high resolution, BBC Planet Earth quality",
+    "timestamp": "2026-04-01T08:56:07.043Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Nile Crocodile (Crocodylus niloticus) - BEHAVIOR: Moving with powerful grace through the thick vegetation - HABITAT: Baobab-studded landscape of Tarangire - LIGHTING: Dramatic silhouette against a blood-red African sunset - MODIFIERS: Telephoto lens compression, Aerial drone view over a migration, Handheld documentary style, Low-angle perspective from a hidden camera trap - ENHANCERS: intricate skin and scale detail, hyper-realistic textures, BBC Planet Earth quality",
+    "timestamp": "2026-04-01T08:57:29.628Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Topi (Damaliscus lunatus jimela) - BEHAVIOR: Casting a sharp silhouette against a vibrant desert sunset - HABITAT: Riverine forest edges - LIGHTING: Dramatic silhouette against a blood-red African sunset - MODIFIERS: Telephoto lens compression, Sharp focus on the predator's eyes, National Geographic wildlife cinematography, Handheld documentary style - ENHANCERS: 8K ultra-high resolution, BBC Planet Earth quality, volumetric dust and light",
+    "timestamp": "2026-04-01T08:58:53.149Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: South African Lion (Panthera leo melanochaita) - BEHAVIOR: Kicking up thick dust in a defensive formation - HABITAT: The lush, water-logged channels of the Okavango Delta - LIGHTING: Dappled sunlight through the leaves of a fever tree forest - MODIFIERS: Sharp focus on the predator's eyes, National Geographic wildlife cinematography, Macro detail on fur and whiskers, Aerial drone view over a migration - ENHANCERS: 8K ultra-high resolution, award-winning nature photography, intricate skin and scale detail",
+    "timestamp": "2026-04-01T09:00:18.390Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Serval (Leptailurus serval) - BEHAVIOR: Running quickly with its tail held high in the air - HABITAT: Termite mound-dotted landscape - LIGHTING: Moonlit savanna with a vast, starry Milky Way above - MODIFIERS: Sharp focus on the predator's eyes, Low-angle perspective from a hidden camera trap, Telephoto lens compression, Slow motion 120fps capture - ENHANCERS: award-winning nature photography, 8K ultra-high resolution, vibrant natural colors",
+    "timestamp": "2026-04-01T09:01:40.323Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Warthog (Phacochoerus africanus) - BEHAVIOR: Competing over a scavenged carcass in the dark of night - HABITAT: Fringe of a woodland thicket - LIGHTING: Dramatic silhouette against a blood-red African sunset - MODIFIERS: National Geographic wildlife cinematography, Sharp focus on the predator's eyes, Handheld documentary style, Shallow depth of field with soft savanna background - ENHANCERS: perfect composition, hyper-realistic textures, volumetric dust and light",
+    "timestamp": "2026-04-01T09:03:02.207Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Hippopotamus (Hippopotamus amphibius) - BEHAVIOR: Sunning itself on the muddy banks of a winding river - HABITAT: The marshy floodplains of Chobe National Park - LIGHTING: Golden hour sun low on the horizon, glowing through the dust - MODIFIERS: Handheld documentary style, National Geographic wildlife cinematography, Macro detail on fur and whiskers, Telephoto lens compression - ENHANCERS: 8K ultra-high resolution, perfect composition, BBC Planet Earth quality",
+    "timestamp": "2026-04-01T09:04:24.096Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Thompson's Gazelle (Eudorcas thomsonii) - BEHAVIOR: Huddling together in a tight group to confuse predators - HABITAT: Hilly grasslands of the Maasai Mara - LIGHTING: Moonlit savanna with a vast, starry Milky Way above - MODIFIERS: Sharp focus on the predator's eyes, Low-angle perspective from a hidden camera trap, National Geographic wildlife cinematography, Shallow depth of field with soft savanna background - ENHANCERS: intricate skin and scale detail, 8K ultra-high resolution, volumetric dust and light",
+    "timestamp": "2026-04-01T09:05:48.985Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Spotted Hyena (Crocuta crocuta) - BEHAVIOR: Jumping high into the air to catch prey in mid-flight - HABITAT: Fringe of a woodland thicket - LIGHTING: Stormy sky over the plains - MODIFIERS: Telephoto lens compression, Handheld documentary style, Low-angle perspective from a hidden camera trap, Slow motion 120fps capture - ENHANCERS: vibrant natural colors, intricate skin and scale detail, 8K ultra-high resolution",
+    "timestamp": "2026-04-01T09:07:13.240Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Oryx / Gemsbok (Oryx gazella) - BEHAVIOR: Standing perfectly still and alert in the thicket - HABITAT: Dry savanna with scattered whistling thorn trees - LIGHTING: Stormy sky over the plains - MODIFIERS: Handheld documentary style, Sharp focus on the predator's eyes, Slow motion 120fps capture, Macro detail on fur and whiskers - ENHANCERS: BBC Planet Earth quality, award-winning nature photography, perfect composition",
+    "timestamp": "2026-04-01T09:08:34.159Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: White Rhinoceros (Ceratotherium simum) - BEHAVIOR: Sunning itself on the muddy banks of a winding river - HABITAT: Baobab-studded landscape of Tarangire - LIGHTING: Soft dawn light with rising heat haze - MODIFIERS: Slow motion 120fps capture, Low-angle perspective from a hidden camera trap, Handheld documentary style, Telephoto lens compression - ENHANCERS: volumetric dust and light, intricate skin and scale detail, hyper-realistic textures",
+    "timestamp": "2026-04-01T09:09:55.549Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Black-backed Jackal (Lupulella mesomelas) - BEHAVIOR: Running quickly with its tail held high in the air - HABITAT: Rocky outcrops and kopjes - LIGHTING: Cool, blue twilight with a rising full moon - MODIFIERS: Sharp focus on the predator's eyes, Telephoto lens compression, Macro detail on fur and whiskers, Aerial drone view over a migration - ENHANCERS: 8K ultra-high resolution, BBC Planet Earth quality, hyper-realistic textures",
+    "timestamp": "2026-04-01T09:11:18.818Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Greater Kudu (Tragelaphus strepsiceros) - BEHAVIOR: Standing perfectly still and alert in the thicket - HABITAT: Hilly grasslands of the Maasai Mara - LIGHTING: Soft dawn light with rising heat haze - MODIFIERS: National Geographic wildlife cinematography, Macro detail on fur and whiskers, Slow motion 120fps capture, Handheld documentary style - ENHANCERS: 8K ultra-high resolution, BBC Planet Earth quality, hyper-realistic textures",
+    "timestamp": "2026-04-01T09:12:42.307Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Shibuya Crossing, Tokyo, Japan - TIME: blue hour twilight - CAMERA: low sweeping drone flyover, smooth aerial pass above structure - MOTION: clouds drifting above skyline - MOOD: immersive city exploration feeling - VISUAL STYLE: high dynamic range, ultra high resolution, soft atmospheric haze",
+    "timestamp": "2026-04-01T10:16:18.201Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Hollywood Sign, Los Angeles, USA - TIME: night city lights glowing - CAMERA: low sweeping drone flyover, high-altitude cinematic flyover - MOTION: traffic flowing through surrounding streets - MOOD: majestic architectural beauty - VISUAL STYLE: high dynamic range, volumetric lighting, realistic shadows",
+    "timestamp": "2026-04-01T10:17:39.667Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Harbour Bridge, Sydney, Australia - TIME: blue hour twilight - CAMERA: top-down vertical flyover reveal, forward drone glide directly over landmark - MOTION: city lights flickering on - MOOD: immersive city exploration feeling - VISUAL STYLE: ultra high resolution, cinematic color grading, high dynamic range",
+    "timestamp": "2026-04-01T10:18:58.449Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Burj Khalifa, Dubai, UAE - TIME: bright midday clarity - CAMERA: low sweeping drone flyover, slow rising flyover from street level to skyline - MOTION: clouds drifting above skyline - MOOD: majestic architectural beauty - VISUAL STYLE: high dynamic range, volumetric lighting, cinematic color grading",
+    "timestamp": "2026-04-01T10:20:21.889Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Tokyo Skytree, Tokyo, Japan - TIME: bright midday clarity - CAMERA: low sweeping drone flyover, slow rising flyover from street level to skyline - MOTION: city lights flickering on - MOOD: epic cinematic scale - VISUAL STYLE: high dynamic range, volumetric lighting, cinematic color grading",
+    "timestamp": "2026-04-01T10:21:44.024Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: St. Peter’s Basilica, Vatican City - TIME: golden hour sunset - CAMERA: slow rising flyover from street level to skyline, wide cinematic pass across skyline and landmark - MOTION: sunlight reflecting off glass structures - MOOD: majestic architectural beauty - VISUAL STYLE: volumetric lighting, high dynamic range, soft atmospheric haze",
+    "timestamp": "2026-04-01T10:23:04.167Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Sheikh Zayed Grand Mosque, Abu Dhabi, UAE - TIME: night city lights glowing - CAMERA: low sweeping drone flyover, wide cinematic pass across skyline and landmark - MOTION: traffic flowing through surrounding streets - MOOD: epic cinematic scale - VISUAL STYLE: volumetric lighting, realistic shadows, soft atmospheric haze",
+    "timestamp": "2026-04-01T10:24:23.676Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "FLYOVER: Shibuya Crossing, Tokyo, Japan - TIME: golden hour sunset - CAMERA: low sweeping drone flyover, high-altitude cinematic flyover - MOTION: clouds drifting above skyline - MOOD: epic cinematic scale - VISUAL STYLE: volumetric lighting, ultra high resolution, cinematic color grading",
+    "timestamp": "2026-04-01T10:26:05.477Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "FLYOVER: Marina Bay Sands, Singapore - TIME: soft sunrise light - CAMERA: smooth aerial pass above structure, top-down vertical flyover reveal - MOTION: sunlight reflecting off glass structures - MOOD: majestic architectural beauty - VISUAL STYLE: cinematic color grading, soft atmospheric haze, ultra high resolution",
+    "timestamp": "2026-04-01T10:27:48.556Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "FLYOVER: St. Peter’s Basilica, Vatican City - TIME: night city lights glowing - CAMERA: wide cinematic pass across skyline and landmark, forward drone glide directly over landmark - MOTION: sunlight reflecting off glass structures - MOOD: dreamlike travel atmosphere - VISUAL STYLE: high dynamic range, volumetric lighting, cinematic color grading",
+    "timestamp": "2026-04-01T10:29:30.913Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "FLYOVER: Marina Bay Sands, Singapore - TIME: blue hour twilight - CAMERA: forward drone glide directly over landmark, top-down vertical flyover reveal - MOTION: traffic flowing through surrounding streets - MOOD: dreamlike travel atmosphere - VISUAL STYLE: ultra high resolution, cinematic color grading, soft atmospheric haze",
+    "timestamp": "2026-04-01T10:31:13.275Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "FLYOVER: Harbour Bridge, Sydney, Australia - TIME: night city lights glowing - CAMERA: top-down vertical flyover reveal, smooth aerial pass above structure - MOTION: sunlight reflecting off glass structures - MOOD: epic cinematic scale - VISUAL STYLE: high dynamic range, volumetric lighting, cinematic color grading",
+    "timestamp": "2026-04-01T10:36:30.115Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": " - SPECIES: African Leopard (Panthera pardus pardus) - BEHAVIOR: Leading a herd through a dust storm on the open plains - HABITAT: The marshy floodplains of Chobe National Park - LIGHTING: Moonlit savanna with a vast, starry Milky Way above - MODIFIERS: Shallow depth of field with soft savanna background, Macro detail on fur and whiskers, Handheld documentary style, Sharp focus on the predator's eyes - ENHANCERS: vibrant natural colors, intricate skin and scale detail, volumetric dust and light",
+    "timestamp": "2026-04-02T11:15:20.401Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Topi (Damaliscus lunatus jimela) - BEHAVIOR: Sprinting in a high-speed blur across the savanna - HABITAT: Vast salt pans of the Etosha - LIGHTING: Stormy sky over the plains - MODIFIERS: Slow motion 120fps capture, Handheld documentary style, Macro detail on fur and whiskers, National Geographic wildlife cinematography - ENHANCERS: vibrant natural colors, 8K ultra-high resolution, BBC Planet Earth quality",
+    "timestamp": "2026-04-02T11:16:51.935Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Topi (Damaliscus lunatus jimela) - BEHAVIOR: Huddling together in a tight group to confuse predators - HABITAT: Vast salt pans of the Etosha - LIGHTING: Warm, orange glow of a campfire illuminating the foreground - MODIFIERS: National Geographic wildlife cinematography, Aerial drone view over a migration, Slow motion 120fps capture, Low-angle perspective from a hidden camera trap - ENHANCERS: hyper-realistic textures, intricate skin and scale detail, award-winning nature photography",
+    "timestamp": "2026-04-02T11:18:16.506Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Cape Buffalo (Syncerus caffer) - BEHAVIOR: Grazing or resting peacefully in the early morning mist - HABITAT: Baobab-studded landscape of Tarangire - LIGHTING: Soft dawn light with rising heat haze - MODIFIERS: Telephoto lens compression, Sharp focus on the predator's eyes, Low-angle perspective from a hidden camera trap, Aerial drone view over a migration - ENHANCERS: 8K ultra-high resolution, BBC Planet Earth quality, hyper-realistic textures",
+    "timestamp": "2026-04-02T11:19:41.246Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Serval (Leptailurus serval) - BEHAVIOR: Trotting through the tall grass in search of food scraps - HABITAT: Burrow-filled open plains - LIGHTING: Dramatic silhouette against a blood-red African sunset - MODIFIERS: Low-angle perspective from a hidden camera trap, Slow motion 120fps capture, Macro detail on fur and whiskers, National Geographic wildlife cinematography - ENHANCERS: 8K ultra-high resolution, volumetric dust and light, award-winning nature photography",
+    "timestamp": "2026-04-02T11:21:02.604Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Spotted Hyena (Crocuta crocuta) - BEHAVIOR: Running quickly with its tail held high in the air - HABITAT: Rocky outcrops and kopjes - LIGHTING: Stormy sky over the plains - MODIFIERS: National Geographic wildlife cinematography, Sharp focus on the predator's eyes, Macro detail on fur and whiskers, Slow motion 120fps capture - ENHANCERS: volumetric dust and light, award-winning nature photography, 8K ultra-high resolution",
+    "timestamp": "2026-04-02T11:22:26.955Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Black-backed Jackal (Lupulella mesomelas) - BEHAVIOR: Standing on sentry duty at the entrance of a burrow - HABITAT: Dry riverbeds with sandy bottoms - LIGHTING: Stormy sky over the plains - MODIFIERS: Aerial drone view over a migration, Slow motion 120fps capture, Macro detail on fur and whiskers, Low-angle perspective from a hidden camera trap - ENHANCERS: 8K ultra-high resolution, BBC Planet Earth quality, hyper-realistic textures",
+    "timestamp": "2026-04-02T11:23:51.519Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: African Wild Dog (Lycaon pictus) - BEHAVIOR: Standing on sentry duty at the entrance of a burrow - HABITAT: Fringe of a woodland thicket - LIGHTING: Soft dawn light with rising heat haze - MODIFIERS: Telephoto lens compression, National Geographic wildlife cinematography, Sharp focus on the predator's eyes, Shallow depth of field with soft savanna background - ENHANCERS: 8K ultra-high resolution, BBC Planet Earth quality, award-winning nature photography",
+    "timestamp": "2026-04-02T11:25:16.445Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Red-billed Oxpecker (Buphagus erythrorhynchus) - BEHAVIOR: Engaging in an elegant and complex courtship dance - HABITAT: Open sky over the savanna - LIGHTING: Golden hour sun low on the horizon, glowing through the dust - MODIFIERS: Macro detail on fur and whiskers, Slow motion 120fps capture, National Geographic wildlife cinematography, Shallow depth of field with soft savanna background - ENHANCERS: 8K ultra-high resolution, intricate skin and scale detail, BBC Planet Earth quality",
+    "timestamp": "2026-04-02T11:26:40.571Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: African Fish Eagle (Icthyophaga vocifer) - BEHAVIOR: Using its powerful legs to strike at prey on the ground - HABITAT: Open sky over the savanna - LIGHTING: Moonlit savanna with a vast, starry Milky Way above - MODIFIERS: National Geographic wildlife cinematography, Sharp focus on the predator's eyes, Macro detail on fur and whiskers, Slow motion 120fps capture - ENHANCERS: hyper-realistic textures, vibrant natural colors, intricate skin and scale detail",
+    "timestamp": "2026-04-02T11:28:01.914Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Thompson's Gazelle (Eudorcas thomsonii) - BEHAVIOR: Standing perfectly still and alert in the thicket - HABITAT: Short-grass plains stretching to the horizon - LIGHTING: Stormy sky over the plains - MODIFIERS: Shallow depth of field with soft savanna background, Handheld documentary style, National Geographic wildlife cinematography, Macro detail on fur and whiskers - ENHANCERS: perfect composition, intricate skin and scale detail, 8K ultra-high resolution",
+    "timestamp": "2026-04-02T11:29:24.621Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Marabou Stork (Leptoptilos crumenifer) - BEHAVIOR: Sprinting across the flat plains at incredible speed - HABITAT: Dead tree branches overlooking the river - LIGHTING: Harsh midday sun creating high-contrast shadows under acacia trees - MODIFIERS: National Geographic wildlife cinematography, Slow motion 120fps capture, Handheld documentary style, Shallow depth of field with soft savanna background - ENHANCERS: hyper-realistic textures, award-winning nature photography, volumetric dust and light",
+    "timestamp": "2026-04-02T11:30:46.315Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Nile Crocodile (Crocodylus niloticus) - BEHAVIOR: Surveying the vast landscape from a high granite kopje - HABITAT: The steep, forested walls of the Ngorongoro Crater - LIGHTING: Harsh midday sun creating high-contrast shadows under acacia trees - MODIFIERS: National Geographic wildlife cinematography, Macro detail on fur and whiskers, Slow motion 120fps capture, Low-angle perspective from a hidden camera trap - ENHANCERS: perfect composition, BBC Planet Earth quality, award-winning nature photography",
+    "timestamp": "2026-04-02T11:32:07.631Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Cape Buffalo (Syncerus caffer) - BEHAVIOR: Surveying the vast landscape from a high granite kopje - HABITAT: Baobab-studded landscape of Tarangire - LIGHTING: Cool, blue twilight with a rising full moon - MODIFIERS: Handheld documentary style, National Geographic wildlife cinematography, Macro detail on fur and whiskers, Slow motion 120fps capture - ENHANCERS: 8K ultra-high resolution, vibrant natural colors, volumetric dust and light",
+    "timestamp": "2026-04-02T11:33:28.583Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Blue Wildebeest (Connochaetes taurinus) - BEHAVIOR: Performing spectacular high leaps into the air - HABITAT: Dry savanna with scattered whistling thorn trees - LIGHTING: Cool, blue twilight with a rising full moon - MODIFIERS: Shallow depth of field with soft savanna background, National Geographic wildlife cinematography, Handheld documentary style, Sharp focus on the predator's eyes - ENHANCERS: 8K ultra-high resolution, intricate skin and scale detail, award-winning nature photography",
+    "timestamp": "2026-04-02T11:34:52.255Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Plains Zebra (Equus quagga) - BEHAVIOR: Navigating a chaotic river crossing during migration - HABITAT: Dense mopane woodland - LIGHTING: Golden hour sun low on the horizon, glowing through the dust - MODIFIERS: National Geographic wildlife cinematography, Handheld documentary style, Shallow depth of field with soft savanna background, Sharp focus on the predator's eyes - ENHANCERS: BBC Planet Earth quality, award-winning nature photography, volumetric dust and light",
+    "timestamp": "2026-04-02T11:36:17.104Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Oryx / Gemsbok (Oryx gazella) - BEHAVIOR: Huddling together in a tight group to confuse predators - HABITAT: Dry savanna with scattered whistling thorn trees - LIGHTING: Dramatic silhouette against a blood-red African sunset - MODIFIERS: Aerial drone view over a migration, Sharp focus on the predator's eyes, National Geographic wildlife cinematography, Shallow depth of field with soft savanna background - ENHANCERS: vibrant natural colors, hyper-realistic textures, perfect composition",
+    "timestamp": "2026-04-02T11:37:41.327Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Meerkat (Suricata suricatta) - BEHAVIOR: Jumping high into the air to catch prey in mid-flight - HABITAT: Fringe of a woodland thicket - LIGHTING: Cool, blue twilight with a rising full moon - MODIFIERS: Handheld documentary style, Low-angle perspective from a hidden camera trap, Aerial drone view over a migration, Slow motion 120fps capture - ENHANCERS: 8K ultra-high resolution, BBC Planet Earth quality, intricate skin and scale detail",
+    "timestamp": "2026-04-02T11:39:06.061Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Thompson's Gazelle (Eudorcas thomsonii) - BEHAVIOR: Sprinting in a high-speed blur across the savanna - HABITAT: Dense mopane woodland - LIGHTING: Cool, blue twilight with a rising full moon - MODIFIERS: Shallow depth of field with soft savanna background, Macro detail on fur and whiskers, Aerial drone view over a migration, Slow motion 120fps capture - ENHANCERS: hyper-realistic textures, volumetric dust and light, BBC Planet Earth quality",
+    "timestamp": "2026-04-02T11:40:26.966Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Oryx / Gemsbok (Oryx gazella) - BEHAVIOR: Standing perfectly still and alert in the thicket - HABITAT: Vast salt pans of the Etosha - LIGHTING: Harsh midday sun creating high-contrast shadows under acacia trees - MODIFIERS: National Geographic wildlife cinematography, Macro detail on fur and whiskers, Sharp focus on the predator's eyes, Aerial drone view over a migration - ENHANCERS: BBC Planet Earth quality, hyper-realistic textures, 8K ultra-high resolution",
+    "timestamp": "2026-04-02T11:41:50.075Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: otherworldly alpine lake in Greece, with clouds drifting below peaks - TIME: moody overcast afternoon - MOTION: sunlight glittering across ocean surfaces - MOOD: dreamlike wanderlust atmosphere - CAMERA: gradual pullback revealing massive scale, long sweeping side-to-side flyover - VISUAL STYLE: ultra high resolution detail, natural cinematic color grading, gentle motion blur from drone movement",
+    "timestamp": "2026-04-02T13:37:15.755Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Namib Desert dunes - TIME: dramatic storm-light skies - MOTION: wind rippling across tall grass - MOOD: peaceful cinematic serenity - CAMERA: low-to-high altitude rising reveal, gradual pullback revealing massive scale - VISUAL STYLE: natural cinematic color grading, high dynamic range lighting, ultra high resolution detail",
+    "timestamp": "2026-04-02T13:39:00.752Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Lake Louise, Canada - TIME: moody overcast afternoon - MOTION: fog lifting to reveal the landscape - MOOD: dreamlike wanderlust atmosphere - CAMERA: long sweeping side-to-side flyover, slow forward drone glide - VISUAL STYLE: volumetric sunlight rays, high dynamic range lighting, ultra high resolution detail",
+    "timestamp": "2026-04-02T13:40:43.913Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: fog-covered river canyon in France, covered in vibrant natural colors - TIME: moody overcast afternoon - MOTION: clouds drifting slowly through valleys - MOOD: calm reflective stillness - CAMERA: top-down vertical reveal shot, gradual pullback revealing massive scale - VISUAL STYLE: volumetric sunlight rays, gentle motion blur from drone movement, ultra high resolution detail",
+    "timestamp": "2026-04-02T13:42:05.416Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "LOCATION: vast coral reef lagoon in Indonesia, with dramatic shadows stretching across terrain - TIME: bright midday clarity - MOTION: sunlight glittering across ocean surfaces - MOOD: peaceful cinematic serenity - CAMERA: slow forward drone glide, long sweeping side-to-side flyover - VISUAL STYLE: high dynamic range lighting, soft atmospheric haze, natural cinematic color grading",
+    "timestamp": "2026-04-02T13:43:49.024Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Grand Canyon, USA - TIME: golden hour sunset - MOTION: wind rippling across tall grass - MOOD: majestic untouched beauty - CAMERA: long sweeping side-to-side flyover, slow forward drone glide - VISUAL STYLE: crisp environmental textures, gentle motion blur from drone movement, high dynamic range lighting",
+    "timestamp": "2026-04-02T13:45:07.875Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: otherworldly volcanic crater in South Africa, glowing under golden hour light - TIME: golden hour sunset - MOTION: birds flying far below as tiny silhouettes - MOOD: awe-inspiring natural grandeur - CAMERA: long sweeping side-to-side flyover, top-down vertical reveal shot - VISUAL STYLE: soft atmospheric haze, volumetric sunlight rays, ultra high resolution detail",
+    "timestamp": "2026-04-02T13:46:28.112Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: wild rainforest valley in Japan, blanketed in soft atmospheric haze - TIME: bright midday clarity - MOTION: shadows stretching as the sun sets - MOOD: peaceful cinematic serenity - CAMERA: low-to-high altitude rising reveal, top-down vertical reveal shot - VISUAL STYLE: natural cinematic color grading, crisp environmental textures, soft atmospheric haze",
+    "timestamp": "2026-04-02T13:47:48.217Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: wild rainforest valley in Italy, surrounded by crystal-clear water - TIME: dramatic storm-light skies - MOTION: sunlight glittering across ocean surfaces - MOOD: awe-inspiring natural grandeur - CAMERA: low-to-high altitude rising reveal, long sweeping side-to-side flyover - VISUAL STYLE: ultra high resolution detail, volumetric sunlight rays, natural cinematic color grading",
+    "timestamp": "2026-04-02T13:49:13.504Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: breathtaking volcanic crater in French Polynesia, with sunlight reflecting across surfaces - TIME: blue hour twilight - MOTION: shadows stretching as the sun sets - MOOD: majestic untouched beauty - CAMERA: low-to-high altitude rising reveal, gradual pullback revealing massive scale - VISUAL STYLE: crisp environmental textures, soft atmospheric haze, natural cinematic color grading",
+    "timestamp": "2026-04-02T13:50:35.022Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "LOCATION: golden mountain range in South Africa, covered in vibrant natural colors - TIME: golden hour sunset - MOTION: shadows stretching as the sun sets - MOOD: dreamlike wanderlust atmosphere - CAMERA: top-down vertical reveal shot, gradual pullback revealing massive scale - VISUAL STYLE: soft atmospheric haze, high dynamic range lighting, crisp environmental textures",
+    "timestamp": "2026-04-02T13:52:17.083Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "LOCATION: majestic glacial lagoon in Morocco, covered in vibrant natural colors - TIME: soft pastel sunrise - MOTION: waves rolling gently toward the shore - MOOD: dreamlike wanderlust atmosphere - CAMERA: cinematic orbit around landscape feature, gradual pullback revealing massive scale - VISUAL STYLE: ultra high resolution detail, high dynamic range lighting, crisp environmental textures",
+    "timestamp": "2026-04-02T13:53:59.935Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: vast tropical island in Chile, revealed through lifting fog - TIME: blue hour twilight - MOTION: waterfalls thundering into deep pools - MOOD: epic sense of scale - CAMERA: cinematic orbit around landscape feature, long sweeping side-to-side flyover - VISUAL STYLE: high dynamic range lighting, natural cinematic color grading, crisp environmental textures",
+    "timestamp": "2026-04-02T13:55:22.840Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Burj Khalifa skyline, Dubai - TIME: bright midday clarity - MOTION: shadows stretching as the sun sets - MOOD: epic sense of scale - CAMERA: long sweeping side-to-side flyover, top-down vertical reveal shot - VISUAL STYLE: natural cinematic color grading, gentle motion blur from drone movement, soft atmospheric haze",
+    "timestamp": "2026-04-02T13:56:46.040Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Twelve Apostles, Australia - TIME: blue hour twilight - MOTION: snow blowing across high ridgelines - MOOD: majestic untouched beauty - CAMERA: gradual pullback revealing massive scale, slow forward drone glide - VISUAL STYLE: volumetric sunlight rays, ultra high resolution detail, natural cinematic color grading",
+    "timestamp": "2026-04-02T13:58:08.294Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Seychelles beaches - TIME: moody overcast afternoon - MOTION: mist weaving between mountain peaks - MOOD: dreamlike wanderlust atmosphere - CAMERA: gradual pullback revealing massive scale, low-to-high altitude rising reveal - VISUAL STYLE: volumetric sunlight rays, ultra high resolution detail, soft atmospheric haze",
+    "timestamp": "2026-04-02T13:59:52.043Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "LOCATION: wild savanna plains in Maldives, blanketed in soft atmospheric haze - TIME: bright midday clarity - MOTION: mist weaving between mountain peaks - MOOD: awe-inspiring natural grandeur - CAMERA: gradual pullback revealing massive scale, top-down vertical reveal shot - VISUAL STYLE: ultra high resolution detail, soft atmospheric haze, volumetric sunlight rays",
+    "timestamp": "2026-04-02T14:01:34.502Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "LOCATION: untouched rocky arch formations in France, glowing under golden hour light - TIME: soft pastel sunrise - MOTION: fog lifting to reveal the landscape - MOOD: calm reflective stillness - CAMERA: top-down vertical reveal shot, high-altitude aerial panorama - VISUAL STYLE: volumetric sunlight rays, high dynamic range lighting, gentle motion blur from drone movement",
+    "timestamp": "2026-04-02T14:03:21.461Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Petra rock city, Jordan - TIME: golden hour sunset - MOTION: mist weaving between mountain peaks - MOOD: epic sense of scale - CAMERA: cinematic orbit around landscape feature, high-altitude aerial panorama - VISUAL STYLE: soft atmospheric haze, natural cinematic color grading, gentle motion blur from drone movement",
+    "timestamp": "2026-04-02T14:04:42.043Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Cliffs of Moher, Ireland - TIME: blue hour twilight - MOTION: clouds drifting slowly through valleys - MOOD: dreamlike wanderlust atmosphere - CAMERA: low-to-high altitude rising reveal, slow forward drone glide - VISUAL STYLE: volumetric sunlight rays, ultra high resolution detail, crisp environmental textures",
+    "timestamp": "2026-04-02T14:06:05.938Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Eastern Quoll (Dasyurus viverrinus) - BEHAVIOR: Emerging from a deep sandy burrow in the moonlight - HABITAT: Fern-filled gullies of the Dandenong Ranges - LIGHTING: Dramatic storm clouds gathering over the Arnhem Land escarpment - MODIFIERS: Low-angle perspective from a hidden camera trap, Handheld documentary style, Macro detail on fur and feathers, Cinematic wildlife photography - ENHANCERS: volumetric dust and light, hyper-realistic textures, 8K ultra-high resolution",
+    "timestamp": "2026-04-03T12:34:24.865Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Red Kangaroo (Osphranter rufus) - BEHAVIOR: Engaging in a fierce, vocal display of dominance - HABITAT: Grassy woodlands of the Victorian interior - LIGHTING: Pink and purple twilight over the coastal limestone stacks - MODIFIERS: Slow motion 120fps capture, Cinematic wildlife photography, Aerial drone view over the outback, Shallow depth of field with soft bushland background - ENHANCERS: award-winning nature photography, hyper-realistic textures, volumetric dust and light",
+    "timestamp": "2026-04-03T12:35:51.271Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Feathertail Glider (Acrobates pygmaeus) - BEHAVIOR: Diving into a cool, clear mountain stream to forage - HABITAT: Dense forest floor of the Otways - LIGHTING: Soft moonlight reflecting off a quiet billabong - MODIFIERS: Telephoto lens compression, Cinematic wildlife photography, Macro detail on fur and feathers, Slow motion 120fps capture - ENHANCERS: hyper-realistic textures, award-winning nature photography, perfect composition",
+    "timestamp": "2026-04-03T12:37:15.112Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Eastern Quoll (Dasyurus viverrinus) - BEHAVIOR: Scurrying through the undergrowth under the cover of darkness - HABITAT: Subalpine woodlands of the Australian Alps - LIGHTING: Soft moonlight reflecting off a quiet billabong - MODIFIERS: Aerial drone view over the outback, Low-angle perspective from a hidden camera trap, Sharp focus on the animal's eyes, Cinematic wildlife photography - ENHANCERS: BBC Planet Earth quality, 8K ultra-high resolution, perfect composition",
+    "timestamp": "2026-04-03T12:38:35.963Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Numbat (Myrmecobius fasciatus) - BEHAVIOR: Basking in the sun on a granite outcrop - HABITAT: Coastal heathlands of Rottnest Island - LIGHTING: Dappled sunlight filtering through a dense rainforest canopy - MODIFIERS: Slow motion 120fps capture, Macro detail on fur and feathers, Aerial drone view over the outback, Cinematic wildlife photography - ENHANCERS: award-winning nature photography, vibrant natural colors, volumetric dust and light",
+    "timestamp": "2026-04-03T12:39:57.084Z",
+    "status": "success"
   }
 ]
