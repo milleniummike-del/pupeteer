@@ -1739,5 +1739,109 @@
     "prompt": " - SPECIES: Cheetah (Acinonyx jubatus) - BEHAVIOR: Performing spectacular high leaps into the air - HABITAT: Short-grass plains stretching to the horizon - LIGHTING: Dramatic silhouette against a blood-red African sunset - MODIFIERS: Sharp focus on the predator's eyes, Handheld documentary style, National Geographic wildlife cinematography, Macro detail on fur and whiskers - ENHANCERS: perfect composition, vibrant natural colors, volumetric dust and light",
     "timestamp": "2026-04-03T15:41:28.457Z",
     "status": "pending"
+  },
+  {
+    "prompt": " - SPECIES: Secretary Bird (Sagittarius serpentarius) - BEHAVIOR: Diving with precision to snatch prey from the water - HABITAT: Top of a flat-topped acacia tree - LIGHTING: Soft dawn light with rising heat haze - MODIFIERS: Slow motion 120fps capture, Aerial drone view over a migration, Shallow depth of field with soft savanna background, Sharp focus on the predator's eyes - ENHANCERS: hyper-realistic textures, BBC Planet Earth quality, perfect composition",
+    "timestamp": "2026-04-04T15:07:05.796Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Black-backed Jackal (Lupulella mesomelas) - BEHAVIOR: Jumping high into the air to catch prey in mid-flight - HABITAT: Termite mound-dotted landscape - LIGHTING: Moonlit savanna with a vast, starry Milky Way above - MODIFIERS: Macro detail on fur and whiskers, National Geographic wildlife cinematography, Slow motion 120fps capture, Shallow depth of field with soft savanna background - ENHANCERS: perfect composition, award-winning nature photography, hyper-realistic textures",
+    "timestamp": "2026-04-04T15:09:39.724Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Red-billed Oxpecker (Buphagus erythrorhynchus) - BEHAVIOR: Circling high above on warm thermal updrafts - HABITAT: Dead tree branches overlooking the river - LIGHTING: Warm, orange glow of a campfire illuminating the foreground - MODIFIERS: Macro detail on fur and whiskers, Low-angle perspective from a hidden camera trap, Aerial drone view over a migration, Shallow depth of field with soft savanna background - ENHANCERS: 8K ultra-high resolution, intricate skin and scale detail, volumetric dust and light",
+    "timestamp": "2026-04-04T15:12:07.376Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: African Fish Eagle (Icthyophaga vocifer) - BEHAVIOR: Sprinting across the flat plains at incredible speed - HABITAT: Dead tree branches overlooking the river - LIGHTING: Cool, blue twilight with a rising full moon - MODIFIERS: Aerial drone view over a migration, Telephoto lens compression, Low-angle perspective from a hidden camera trap, Sharp focus on the predator's eyes - ENHANCERS: intricate skin and scale detail, perfect composition, 8K ultra-high resolution",
+    "timestamp": "2026-04-04T15:18:02.853Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": " - SPECIES: Black-backed Jackal (Lupulella mesomelas) - BEHAVIOR: Trotting through the tall grass in search of food scraps - HABITAT: Dry riverbeds with sandy bottoms - LIGHTING: Dramatic silhouette against a blood-red African sunset - MODIFIERS: Aerial drone view over a migration, Low-angle perspective from a hidden camera trap, Slow motion 120fps capture, Telephoto lens compression - ENHANCERS: award-winning nature photography, BBC Planet Earth quality, vibrant natural colors",
+    "timestamp": "2026-04-04T15:19:57.405Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Kori Bustard (Ardeotis kori) - BEHAVIOR: Performing a series of dazzling aerial acrobatic displays - HABITAT: Top of a flat-topped acacia tree - LIGHTING: Dappled sunlight through the leaves of a fever tree forest - MODIFIERS: Handheld documentary style, Macro detail on fur and whiskers, Aerial drone view over a migration, Sharp focus on the predator's eyes - ENHANCERS: award-winning nature photography, hyper-realistic textures, BBC Planet Earth quality",
+    "timestamp": "2026-04-04T15:21:52.201Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": " - SPECIES: Meerkat (Suricata suricatta) - BEHAVIOR: Jumping high into the air to catch prey in mid-flight - HABITAT: Burrow-filled open plains - LIGHTING: Stormy sky over the plains - MODIFIERS: Sharp focus on the predator's eyes, Aerial drone view over a migration, Low-angle perspective from a hidden camera trap, Slow motion 120fps capture - ENHANCERS: intricate skin and scale detail, 8K ultra-high resolution, perfect composition",
+    "timestamp": "2026-04-04T15:23:44.939Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": " - SPECIES: Greater Kudu (Tragelaphus strepsiceros) - BEHAVIOR: Huddling together in a tight group to confuse predators - HABITAT: Riverine forest edges - LIGHTING: Soft dawn light with rising heat haze - MODIFIERS: Telephoto lens compression, Slow motion 120fps capture, Macro detail on fur and whiskers, National Geographic wildlife cinematography - ENHANCERS: award-winning nature photography, hyper-realistic textures, vibrant natural colors",
+    "timestamp": "2026-04-04T15:25:47.727Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": " - SPECIES: African Elephant (Loxodonta africana) - BEHAVIOR: Sunning itself on the muddy banks of a winding river - HABITAT: The lush, water-logged channels of the Okavango Delta - LIGHTING: Soft dawn light with rising heat haze - MODIFIERS: Aerial drone view over a migration, Macro detail on fur and whiskers, Sharp focus on the predator's eyes, Shallow depth of field with soft savanna background - ENHANCERS: BBC Planet Earth quality, vibrant natural colors, award-winning nature photography",
+    "timestamp": "2026-04-04T15:27:43.140Z",
+    "status": "pending"
+  },
+  {
+    "prompt": " - SPECIES: African Fish Eagle (Icthyophaga vocifer) - BEHAVIOR: Landing on a large mammal to search for small insects - HABITAT: Tall grass hiding ground-dwelling birds - LIGHTING: Moonlit savanna with a vast, starry Milky Way above - MODIFIERS: Handheld documentary style, Sharp focus on the predator's eyes, Slow motion 120fps capture, Aerial drone view over a migration - ENHANCERS: award-winning nature photography, perfect composition, volumetric dust and light",
+    "timestamp": "2026-04-04T15:28:33.429Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Ostrich (Struthio camelus) - BEHAVIOR: Sprinting across the flat plains at incredible speed - HABITAT: Reeds at the edge of a watering hole - LIGHTING: Harsh midday sun creating high-contrast shadows under acacia trees - MODIFIERS: Macro detail on fur and whiskers, Low-angle perspective from a hidden camera trap, Handheld documentary style, Aerial drone view over a migration - ENHANCERS: 8K ultra-high resolution, perfect composition, award-winning nature photography",
+    "timestamp": "2026-04-04T15:30:38.847Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Blue Wildebeest (Connochaetes taurinus) - BEHAVIOR: Standing perfectly still and alert in the thicket - HABITAT: Short-grass plains stretching to the horizon - LIGHTING: Warm, orange glow of a campfire illuminating the foreground - MODIFIERS: National Geographic wildlife cinematography, Sharp focus on the predator's eyes, Macro detail on fur and whiskers, Handheld documentary style - ENHANCERS: intricate skin and scale detail, vibrant natural colors, hyper-realistic textures",
+    "timestamp": "2026-04-04T15:32:43.684Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Aardvark (Orycteropus afer) - BEHAVIOR: Jumping high into the air to catch prey in mid-flight - HABITAT: Dry riverbeds with sandy bottoms - LIGHTING: Golden hour sun low on the horizon, glowing through the dust - MODIFIERS: Shallow depth of field with soft savanna background, Telephoto lens compression, Macro detail on fur and whiskers, National Geographic wildlife cinematography - ENHANCERS: volumetric dust and light, vibrant natural colors, 8K ultra-high resolution",
+    "timestamp": "2026-04-04T15:34:47.258Z",
+    "status": "pending"
+  },
+  {
+    "prompt": " - SPECIES: Lappet-faced Vulture (Torgos tracheliotos) - BEHAVIOR: Using its powerful legs to strike at prey on the ground - HABITAT: Tall grass hiding ground-dwelling birds - LIGHTING: Harsh midday sun creating high-contrast shadows under acacia trees - MODIFIERS: National Geographic wildlife cinematography, Aerial drone view over a migration, Macro detail on fur and whiskers, Shallow depth of field with soft savanna background - ENHANCERS: 8K ultra-high resolution, intricate skin and scale detail, BBC Planet Earth quality",
+    "timestamp": "2026-04-04T15:36:18.747Z",
+    "status": "pending"
+  },
+  {
+    "prompt": " - SPECIES: African Elephant (Loxodonta africana) - BEHAVIOR: Grazing or resting peacefully in the early morning mist - HABITAT: The vast, golden plains of the Serengeti - LIGHTING: Moonlit savanna with a vast, starry Milky Way above - MODIFIERS: Handheld documentary style, Aerial drone view over a migration, Telephoto lens compression, Low-angle perspective from a hidden camera trap - ENHANCERS: 8K ultra-high resolution, vibrant natural colors, volumetric dust and light",
+    "timestamp": "2026-04-04T15:38:50.298Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: South African Lion (Panthera leo melanochaita) - BEHAVIOR: Leading a herd through a dust storm on the open plains - HABITAT: Arid acacia scrubland of the Tsavo - LIGHTING: Warm, orange glow of a campfire illuminating the foreground - MODIFIERS: Handheld documentary style, Low-angle perspective from a hidden camera trap, Sharp focus on the predator's eyes, Slow motion 120fps capture - ENHANCERS: volumetric dust and light, perfect composition, award-winning nature photography",
+    "timestamp": "2026-04-04T15:40:55.408Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Marabou Stork (Leptoptilos crumenifer) - BEHAVIOR: Circling high above on warm thermal updrafts - HABITAT: Tall grass hiding ground-dwelling birds - LIGHTING: Soft dawn light with rising heat haze - MODIFIERS: Shallow depth of field with soft savanna background, Sharp focus on the predator's eyes, Handheld documentary style, Aerial drone view over a migration - ENHANCERS: 8K ultra-high resolution, hyper-realistic textures, vibrant natural colors",
+    "timestamp": "2026-04-04T15:42:58.532Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Aardvark (Orycteropus afer) - BEHAVIOR: Running quickly with its tail held high in the air - HABITAT: Fringe of a woodland thicket - LIGHTING: Golden hour sun low on the horizon, glowing through the dust - MODIFIERS: Handheld documentary style, Sharp focus on the predator's eyes, Aerial drone view over a migration, National Geographic wildlife cinematography - ENHANCERS: 8K ultra-high resolution, vibrant natural colors, volumetric dust and light",
+    "timestamp": "2026-04-04T15:45:01.513Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Spotted Hyena (Crocuta crocuta) - BEHAVIOR: Jumping high into the air to catch prey in mid-flight - HABITAT: Tall yellow elephant grass - LIGHTING: Golden hour sun low on the horizon, glowing through the dust - MODIFIERS: Slow motion 120fps capture, Sharp focus on the predator's eyes, Handheld documentary style, Macro detail on fur and whiskers - ENHANCERS: BBC Planet Earth quality, 8K ultra-high resolution, perfect composition",
+    "timestamp": "2026-04-04T15:47:05.165Z",
+    "status": "pending"
+  },
+  {
+    "prompt": " - SPECIES: Serval (Leptailurus serval) - BEHAVIOR: Working together in a highly coordinated hunting pack - HABITAT: Burrow-filled open plains - LIGHTING: Harsh midday sun creating high-contrast shadows under acacia trees - MODIFIERS: Telephoto lens compression, Handheld documentary style, Shallow depth of field with soft savanna background, Low-angle perspective from a hidden camera trap - ENHANCERS: vibrant natural colors, BBC Planet Earth quality, 8K ultra-high resolution",
+    "timestamp": "2026-04-04T15:47:35.444Z",
+    "status": "success"
   }
 ]

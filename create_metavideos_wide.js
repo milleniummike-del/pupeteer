@@ -174,10 +174,10 @@ if (!fs.existsSync(destinationDir)) {
 
                 console.log(`⬇ Found ${elements.length}, downloading ${toClick}`);
 
-                let i = 0;
+                let i = 4;
                 console.log(`Clicking ${i}`);
                 await elements[i].click();
-                await new Promise(r => setTimeout(r, 2000));
+                await new Promise(r => setTimeout(r, 10000));
 
                 // Move files
                 fs.readdirSync(sourceDir).forEach(file => {
