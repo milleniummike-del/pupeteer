@@ -1843,5 +1843,457 @@
     "prompt": " - SPECIES: Serval (Leptailurus serval) - BEHAVIOR: Working together in a highly coordinated hunting pack - HABITAT: Burrow-filled open plains - LIGHTING: Harsh midday sun creating high-contrast shadows under acacia trees - MODIFIERS: Telephoto lens compression, Handheld documentary style, Shallow depth of field with soft savanna background, Low-angle perspective from a hidden camera trap - ENHANCERS: vibrant natural colors, BBC Planet Earth quality, 8K ultra-high resolution",
     "timestamp": "2026-04-04T15:47:35.444Z",
     "status": "success"
+  },
+  {
+    "prompt": "LOCATION: cinematic high plateau in Philippines, blanketed in soft atmospheric haze - TIME: moody overcast afternoon - MOTION: snow blowing across high ridgelines - MOOD: awe-inspiring natural grandeur - CAMERA: high-altitude aerial panorama, slow forward drone glide - VISUAL STYLE: ultra high resolution detail, volumetric sunlight rays, natural cinematic color grading",
+    "timestamp": "2026-04-06T13:17:11.605Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: lush forest canopy in USA, glowing under golden hour light - TIME: blue hour twilight - MOTION: fog lifting to reveal the landscape - MOOD: majestic untouched beauty - CAMERA: long sweeping side-to-side flyover, slow forward drone glide - VISUAL STYLE: high dynamic range lighting, volumetric sunlight rays, ultra high resolution detail",
+    "timestamp": "2026-04-06T13:19:11.957Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Mount Kilimanjaro, Tanzania - TIME: blue hour twilight - MOTION: wind rippling across tall grass - MOOD: peaceful cinematic serenity - CAMERA: low-to-high altitude rising reveal, gradual pullback revealing massive scale - VISUAL STYLE: crisp environmental textures, ultra high resolution detail, natural cinematic color grading",
+    "timestamp": "2026-04-06T13:21:13.581Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Taj Mahal, India - TIME: blue hour twilight - MOTION: waterfalls thundering into deep pools - MOOD: awe-inspiring natural grandeur - CAMERA: slow forward drone glide, gradual pullback revealing massive scale - VISUAL STYLE: crisp environmental textures, natural cinematic color grading, ultra high resolution detail",
+    "timestamp": "2026-04-06T13:23:13.515Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Neuschwanstein Castle, Germany - TIME: blue hour twilight - MOTION: clouds drifting slowly through valleys - MOOD: dreamlike wanderlust atmosphere - CAMERA: top-down vertical reveal shot, low-to-high altitude rising reveal - VISUAL STYLE: gentle motion blur from drone movement, crisp environmental textures, volumetric sunlight rays",
+    "timestamp": "2026-04-06T13:25:14.593Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: vast desert dunes in Argentina, with sunlight reflecting across surfaces - TIME: blue hour twilight - MOTION: snow blowing across high ridgelines - MOOD: peaceful cinematic serenity - CAMERA: cinematic orbit around landscape feature, high-altitude aerial panorama - VISUAL STYLE: soft atmospheric haze, high dynamic range lighting, natural cinematic color grading",
+    "timestamp": "2026-04-06T13:27:15.498Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: remote delta wetlands in Indonesia, with waves crashing against formations - TIME: soft pastel sunrise - MOTION: mist weaving between mountain peaks - MOOD: calm reflective stillness - CAMERA: high-altitude aerial panorama, cinematic orbit around landscape feature - VISUAL STYLE: ultra high resolution detail, high dynamic range lighting, volumetric sunlight rays",
+    "timestamp": "2026-04-06T13:29:16.192Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Amazon rainforest basin - TIME: blue hour twilight - MOTION: mist weaving between mountain peaks - MOOD: calm reflective stillness - CAMERA: low-to-high altitude rising reveal, cinematic orbit around landscape feature - VISUAL STYLE: soft atmospheric haze, volumetric sunlight rays, crisp environmental textures",
+    "timestamp": "2026-04-06T13:31:16.926Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: cinematic river canyon in India, blanketed in soft atmospheric haze - TIME: bright midday clarity - MOTION: fog lifting to reveal the landscape - MOOD: awe-inspiring natural grandeur - CAMERA: low-to-high altitude rising reveal, long sweeping side-to-side flyover - VISUAL STYLE: volumetric sunlight rays, soft atmospheric haze, ultra high resolution detail",
+    "timestamp": "2026-04-06T13:33:17.679Z",
+    "status": "error",
+    "error": "Cannot read properties of undefined (reading 'click')"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Mount Kilimanjaro, Tanzania - TIME: dramatic storm-light skies - MOTION: clouds drifting slowly through valleys - MOOD: majestic untouched beauty - CAMERA: gradual pullback revealing massive scale, long sweeping side-to-side flyover - VISUAL STYLE: natural cinematic color grading, volumetric sunlight rays, high dynamic range lighting",
+    "timestamp": "2026-04-06T13:35:08.167Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: cinematic rocky arch formations in Argentina, blanketed in soft atmospheric haze - TIME: bright midday clarity - MOTION: birds flying far below as tiny silhouettes - MOOD: dreamlike wanderlust atmosphere - CAMERA: top-down vertical reveal shot, cinematic orbit around landscape feature - VISUAL STYLE: soft atmospheric haze, natural cinematic color grading, crisp environmental textures",
+    "timestamp": "2026-04-06T13:37:09.995Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Grand Canyon, USA - TIME: soft pastel sunrise - MOTION: waterfalls thundering into deep pools - MOOD: peaceful cinematic serenity - CAMERA: low-to-high altitude rising reveal, top-down vertical reveal shot - VISUAL STYLE: crisp environmental textures, volumetric sunlight rays, ultra high resolution detail",
+    "timestamp": "2026-04-06T13:39:10.280Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Monument Valley, USA - TIME: golden hour sunset - MOTION: birds flying far below as tiny silhouettes - MOOD: calm reflective stillness - CAMERA: top-down vertical reveal shot, cinematic orbit around landscape feature - VISUAL STYLE: ultra high resolution detail, volumetric sunlight rays, gentle motion blur from drone movement",
+    "timestamp": "2026-04-06T13:41:10.641Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: breathtaking rocky arch formations in French Polynesia, blanketed in soft atmospheric haze - TIME: dramatic storm-light skies - MOTION: snow blowing across high ridgelines - MOOD: majestic untouched beauty - CAMERA: slow forward drone glide, high-altitude aerial panorama - VISUAL STYLE: gentle motion blur from drone movement, crisp environmental textures, natural cinematic color grading",
+    "timestamp": "2026-04-06T13:43:11.784Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Hallstatt alpine village, Austria - TIME: bright midday clarity - MOTION: birds flying far below as tiny silhouettes - MOOD: peaceful cinematic serenity - CAMERA: high-altitude aerial panorama, gradual pullback revealing massive scale - VISUAL STYLE: gentle motion blur from drone movement, crisp environmental textures, soft atmospheric haze",
+    "timestamp": "2026-04-06T13:45:13.525Z",
+    "status": "error",
+    "error": "Runtime.callFunctionOn timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout if needed."
+  },
+  {
+    "prompt": "LOCATION: dramatic savanna plains in Italy, surrounded by crystal-clear water - TIME: soft pastel sunrise - MOTION: mist weaving between mountain peaks - MOOD: majestic untouched beauty - CAMERA: cinematic orbit around landscape feature, low-to-high altitude rising reveal - VISUAL STYLE: gentle motion blur from drone movement, soft atmospheric haze, volumetric sunlight rays",
+    "timestamp": "2026-04-06T14:11:02.906Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Perito Moreno Glacier, Argentina - TIME: dramatic storm-light skies - MOTION: clouds drifting slowly through valleys - MOOD: dreamlike wanderlust atmosphere - CAMERA: gradual pullback revealing massive scale, low-to-high altitude rising reveal - VISUAL STYLE: volumetric sunlight rays, crisp environmental textures, soft atmospheric haze",
+    "timestamp": "2026-04-06T14:13:05.616Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Machu Picchu, Peru - TIME: blue hour twilight - MOTION: birds flying far below as tiny silhouettes - MOOD: majestic untouched beauty - CAMERA: slow forward drone glide, top-down vertical reveal shot - VISUAL STYLE: volumetric sunlight rays, high dynamic range lighting, soft atmospheric haze",
+    "timestamp": "2026-04-06T14:15:06.117Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Acropolis overlooking Athens, Greece - TIME: bright midday clarity - MOTION: waves rolling gently toward the shore - MOOD: majestic untouched beauty - CAMERA: gradual pullback revealing massive scale, low-to-high altitude rising reveal - VISUAL STYLE: natural cinematic color grading, soft atmospheric haze, crisp environmental textures",
+    "timestamp": "2026-04-06T14:17:07.126Z",
+    "status": "error",
+    "error": "Attempted to use detached Frame '55675FCFCE29D3391385D276E38EC4A6'."
+  },
+  {
+    "prompt": " - SPECIES: Blue Wildebeest (Connochaetes taurinus) - BEHAVIOR: Huddling together in a tight group to confuse predators - HABITAT: Riverine forest edges - LIGHTING: Soft dawn light with rising heat haze - MODIFIERS: Handheld documentary style, Aerial drone view over a migration, Telephoto lens compression, Low-angle perspective from a hidden camera trap - ENHANCERS: BBC Planet Earth quality, perfect composition, 8K ultra-high resolution",
+    "timestamp": "2026-04-07T11:10:46.548Z",
+    "status": "pending"
+  },
+  {
+    "prompt": " - SPECIES: Cheetah (Acinonyx jubatus) - BEHAVIOR: Huddling together in a tight group to confuse predators - HABITAT: Dense mopane woodland - LIGHTING: Cool, blue twilight with a rising full moon - MODIFIERS: National Geographic wildlife cinematography, Sharp focus on the predator's eyes, Shallow depth of field with soft savanna background, Handheld documentary style - ENHANCERS: award-winning nature photography, perfect composition, hyper-realistic textures",
+    "timestamp": "2026-04-07T11:11:35.932Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Caracal (Caracal caracal) - BEHAVIOR: Trotting through the tall grass in search of food scraps - HABITAT: Fringe of a woodland thicket - LIGHTING: Harsh midday sun creating high-contrast shadows under acacia trees - MODIFIERS: Macro detail on fur and whiskers, Aerial drone view over a migration, Handheld documentary style, National Geographic wildlife cinematography - ENHANCERS: intricate skin and scale detail, award-winning nature photography, hyper-realistic textures",
+    "timestamp": "2026-04-07T11:13:35.923Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Black-backed Jackal (Lupulella mesomelas) - BEHAVIOR: Working together in a highly coordinated hunting pack - HABITAT: Rocky outcrops and kopjes - LIGHTING: Warm, orange glow of a campfire illuminating the foreground - MODIFIERS: Aerial drone view over a migration, Sharp focus on the predator's eyes, Macro detail on fur and whiskers, Low-angle perspective from a hidden camera trap - ENHANCERS: 8K ultra-high resolution, BBC Planet Earth quality, intricate skin and scale detail",
+    "timestamp": "2026-04-07T11:15:36.745Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Black Rhinoceros (Diceros bicornis) - BEHAVIOR: Emerging from the water in a sudden territorial display - HABITAT: The vast, golden plains of the Serengeti - LIGHTING: Soft dawn light with rising heat haze - MODIFIERS: Sharp focus on the predator's eyes, Aerial drone view over a migration, National Geographic wildlife cinematography, Macro detail on fur and whiskers - ENHANCERS: hyper-realistic textures, vibrant natural colors, award-winning nature photography",
+    "timestamp": "2026-04-07T11:17:36.850Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Masai Giraffe (Giraffa tippelskirchi) - BEHAVIOR: Moving with powerful grace through the thick vegetation - HABITAT: Arid acacia scrubland of the Tsavo - LIGHTING: Golden hour sun low on the horizon, glowing through the dust - MODIFIERS: Low-angle perspective from a hidden camera trap, Aerial drone view over a migration, Macro detail on fur and whiskers, Slow motion 120fps capture - ENHANCERS: volumetric dust and light, 8K ultra-high resolution, perfect composition",
+    "timestamp": "2026-04-07T11:19:37.122Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Oryx / Gemsbok (Oryx gazella) - BEHAVIOR: Galloping in a long, endless line across the horizon - HABITAT: Dry savanna with scattered whistling thorn trees - LIGHTING: Golden hour sun low on the horizon, glowing through the dust - MODIFIERS: National Geographic wildlife cinematography, Low-angle perspective from a hidden camera trap, Handheld documentary style, Aerial drone view over a migration - ENHANCERS: award-winning nature photography, 8K ultra-high resolution, volumetric dust and light",
+    "timestamp": "2026-04-07T11:21:38.162Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Greater Kudu (Tragelaphus strepsiceros) - BEHAVIOR: Sprinting in a high-speed blur across the savanna - HABITAT: Hilly grasslands of the Maasai Mara - LIGHTING: Harsh midday sun creating high-contrast shadows under acacia trees - MODIFIERS: Slow motion 120fps capture, Low-angle perspective from a hidden camera trap, Aerial drone view over a migration, Macro detail on fur and whiskers - ENHANCERS: BBC Planet Earth quality, award-winning nature photography, perfect composition",
+    "timestamp": "2026-04-07T11:23:17.638Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Aardvark (Orycteropus afer) - BEHAVIOR: Fearlessly facing off against a much larger predator - HABITAT: Termite mound-dotted landscape - LIGHTING: Soft dawn light with rising heat haze - MODIFIERS: Shallow depth of field with soft savanna background, Low-angle perspective from a hidden camera trap, National Geographic wildlife cinematography, Aerial drone view over a migration - ENHANCERS: 8K ultra-high resolution, BBC Planet Earth quality, hyper-realistic textures",
+    "timestamp": "2026-04-07T13:37:52.999Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Greater Kudu (Tragelaphus strepsiceros) - BEHAVIOR: Navigating a chaotic river crossing during migration - HABITAT: Dry savanna with scattered whistling thorn trees - LIGHTING: Stormy sky over the plains - MODIFIERS: Aerial drone view over a migration, Telephoto lens compression, National Geographic wildlife cinematography, Sharp focus on the predator's eyes - ENHANCERS: award-winning nature photography, volumetric dust and light, BBC Planet Earth quality",
+    "timestamp": "2026-04-07T13:39:37.476Z",
+    "status": "pending"
+  },
+  {
+    "prompt": " - SPECIES: Grey Crowned Crane (Balearica regulorum) - BEHAVIOR: Diving with precision to snatch prey from the water - HABITAT: Dead tree branches overlooking the river - LIGHTING: Harsh midday sun creating high-contrast shadows under acacia trees - MODIFIERS: Low-angle perspective from a hidden camera trap, Sharp focus on the predator's eyes, Shallow depth of field with soft savanna background, National Geographic wildlife cinematography - ENHANCERS: intricate skin and scale detail, hyper-realistic textures, perfect composition",
+    "timestamp": "2026-04-07T13:41:03.726Z",
+    "status": "pending"
+  },
+  {
+    "prompt": " - SPECIES: Serval (Leptailurus serval) - BEHAVIOR: Standing on sentry duty at the entrance of a burrow - HABITAT: Termite mound-dotted landscape - LIGHTING: Dramatic silhouette against a blood-red African sunset - MODIFIERS: Slow motion 120fps capture, Handheld documentary style, Sharp focus on the predator's eyes, Shallow depth of field with soft savanna background - ENHANCERS: intricate skin and scale detail, 8K ultra-high resolution, BBC Planet Earth quality",
+    "timestamp": "2026-04-07T13:43:14.614Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Topi (Damaliscus lunatus jimela) - BEHAVIOR: Casting a sharp silhouette against a vibrant desert sunset - HABITAT: Hilly grasslands of the Maasai Mara - LIGHTING: Dappled sunlight through the leaves of a fever tree forest - MODIFIERS: Handheld documentary style, Telephoto lens compression, Low-angle perspective from a hidden camera trap, Aerial drone view over a migration - ENHANCERS: 8K ultra-high resolution, volumetric dust and light, vibrant natural colors",
+    "timestamp": "2026-04-07T13:44:55.121Z",
+    "status": "pending"
+  },
+  {
+    "prompt": " - SPECIES: Cheetah (Acinonyx jubatus) - BEHAVIOR: Huddling together in a tight group to confuse predators - HABITAT: Dry savanna with scattered whistling thorn trees - LIGHTING: Dramatic silhouette against a blood-red African sunset - MODIFIERS: Macro detail on fur and whiskers, Low-angle perspective from a hidden camera trap, Telephoto lens compression, National Geographic wildlife cinematography - ENHANCERS: intricate skin and scale detail, award-winning nature photography, hyper-realistic textures",
+    "timestamp": "2026-04-07T13:45:14.510Z",
+    "status": "error",
+    "error": "Cannot read properties of undefined (reading 'click')"
+  },
+  {
+    "prompt": " - SPECIES: Lilac-breasted Roller (Coracias caudatus) - BEHAVIOR: Landing on a large mammal to search for small insects - HABITAT: Tall grass hiding ground-dwelling birds - LIGHTING: Warm, orange glow of a campfire illuminating the foreground - MODIFIERS: Telephoto lens compression, Low-angle perspective from a hidden camera trap, Slow motion 120fps capture, Sharp focus on the predator's eyes - ENHANCERS: hyper-realistic textures, perfect composition, intricate skin and scale detail",
+    "timestamp": "2026-04-07T13:46:25.508Z",
+    "status": "error",
+    "error": "Cannot read properties of undefined (reading 'click')"
+  },
+  {
+    "prompt": " - SPECIES: Honey Badger (Mellivora capensis) - BEHAVIOR: Working together in a highly coordinated hunting pack - HABITAT: Fringe of a woodland thicket - LIGHTING: Stormy sky over the plains - MODIFIERS: Aerial drone view over a migration, Low-angle perspective from a hidden camera trap, Slow motion 120fps capture, Telephoto lens compression - ENHANCERS: 8K ultra-high resolution, BBC Planet Earth quality, hyper-realistic textures",
+    "timestamp": "2026-04-07T13:48:03.524Z",
+    "status": "pending"
+  },
+  {
+    "prompt": " - SPECIES: Kori Bustard (Ardeotis kori) - BEHAVIOR: Sprinting across the flat plains at incredible speed - HABITAT: Dead tree branches overlooking the river - LIGHTING: Dramatic silhouette against a blood-red African sunset - MODIFIERS: Telephoto lens compression, Sharp focus on the predator's eyes, Slow motion 120fps capture, Macro detail on fur and whiskers - ENHANCERS: 8K ultra-high resolution, BBC Planet Earth quality, volumetric dust and light",
+    "timestamp": "2026-04-07T13:49:48.340Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: African Wild Dog (Lycaon pictus) - BEHAVIOR: Competing over a scavenged carcass in the dark of night - HABITAT: Termite mound-dotted landscape - LIGHTING: Golden hour sun low on the horizon, glowing through the dust - MODIFIERS: National Geographic wildlife cinematography, Low-angle perspective from a hidden camera trap, Macro detail on fur and whiskers, Telephoto lens compression - ENHANCERS: award-winning nature photography, BBC Planet Earth quality, hyper-realistic textures",
+    "timestamp": "2026-04-07T13:52:02.239Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: African Leopard (Panthera pardus pardus) - BEHAVIOR: Kicking up thick dust in a defensive formation - HABITAT: The lush, water-logged channels of the Okavango Delta - LIGHTING: Harsh midday sun creating high-contrast shadows under acacia trees - MODIFIERS: Low-angle perspective from a hidden camera trap, Slow motion 120fps capture, Aerial drone view over a migration, Macro detail on fur and whiskers - ENHANCERS: perfect composition, BBC Planet Earth quality, volumetric dust and light",
+    "timestamp": "2026-04-07T13:55:59.900Z",
+    "status": "error",
+    "error": "toClickIndex is not defined"
+  },
+  {
+    "prompt": " - SPECIES: Thompson's Gazelle (Eudorcas thomsonii) - BEHAVIOR: Navigating a chaotic river crossing during migration - HABITAT: Hilly grasslands of the Maasai Mara - LIGHTING: Soft dawn light with rising heat haze - MODIFIERS: Aerial drone view over a migration, Low-angle perspective from a hidden camera trap, Handheld documentary style, National Geographic wildlife cinematography - ENHANCERS: intricate skin and scale detail, award-winning nature photography, perfect composition",
+    "timestamp": "2026-04-07T13:57:23.085Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Plains Zebra (Equus quagga) - BEHAVIOR: Performing spectacular high leaps into the air - HABITAT: Hilly grasslands of the Maasai Mara - LIGHTING: Stormy sky over the plains - MODIFIERS: National Geographic wildlife cinematography, Macro detail on fur and whiskers, Handheld documentary style, Sharp focus on the predator's eyes - ENHANCERS: 8K ultra-high resolution, vibrant natural colors, volumetric dust and light",
+    "timestamp": "2026-04-07T13:59:30.915Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Black-backed Jackal (Lupulella mesomelas) - BEHAVIOR: Competing over a scavenged carcass in the dark of night - HABITAT: Fringe of a woodland thicket - LIGHTING: Soft dawn light with rising heat haze - MODIFIERS: Aerial drone view over a migration, Macro detail on fur and whiskers, Low-angle perspective from a hidden camera trap, Sharp focus on the predator's eyes - ENHANCERS: perfect composition, volumetric dust and light, intricate skin and scale detail",
+    "timestamp": "2026-04-07T14:01:21.663Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Oryx / Gemsbok (Oryx gazella) - BEHAVIOR: Galloping in a long, endless line across the horizon - HABITAT: Dense mopane woodland - LIGHTING: Soft dawn light with rising heat haze - MODIFIERS: Sharp focus on the predator's eyes, National Geographic wildlife cinematography, Macro detail on fur and whiskers, Slow motion 120fps capture - ENHANCERS: intricate skin and scale detail, 8K ultra-high resolution, BBC Planet Earth quality",
+    "timestamp": "2026-04-07T14:03:25.922Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Lilac-breasted Roller (Coracias caudatus) - BEHAVIOR: Landing on a large mammal to search for small insects - HABITAT: Dead tree branches overlooking the river - LIGHTING: Moonlit savanna with a vast, starry Milky Way above - MODIFIERS: Slow motion 120fps capture, Low-angle perspective from a hidden camera trap, Aerial drone view over a migration, National Geographic wildlife cinematography - ENHANCERS: vibrant natural colors, award-winning nature photography, hyper-realistic textures",
+    "timestamp": "2026-04-07T14:06:51.735Z",
+    "status": "pending"
+  },
+  {
+    "prompt": " - SPECIES: Oryx / Gemsbok (Oryx gazella) - BEHAVIOR: Performing spectacular high leaps into the air - HABITAT: Vast salt pans of the Etosha - LIGHTING: Golden hour sun low on the horizon, glowing through the dust - MODIFIERS: Aerial drone view over a migration, Sharp focus on the predator's eyes, Macro detail on fur and whiskers, National Geographic wildlife cinematography - ENHANCERS: vibrant natural colors, 8K ultra-high resolution, intricate skin and scale detail",
+    "timestamp": "2026-04-07T14:11:33.110Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: African Elephant (Loxodonta africana) - BEHAVIOR: Sunning itself on the muddy banks of a winding river - HABITAT: The steep, forested walls of the Ngorongoro Crater - LIGHTING: Soft dawn light with rising heat haze - MODIFIERS: Low-angle perspective from a hidden camera trap, Macro detail on fur and whiskers, Telephoto lens compression, Shallow depth of field with soft savanna background - ENHANCERS: 8K ultra-high resolution, award-winning nature photography, BBC Planet Earth quality",
+    "timestamp": "2026-04-07T14:15:52.068Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Oryx / Gemsbok (Oryx gazella) - BEHAVIOR: Galloping in a long, endless line across the horizon - HABITAT: Short-grass plains stretching to the horizon - LIGHTING: Moonlit savanna with a vast, starry Milky Way above - MODIFIERS: National Geographic wildlife cinematography, Macro detail on fur and whiskers, Slow motion 120fps capture, Sharp focus on the predator's eyes - ENHANCERS: intricate skin and scale detail, award-winning nature photography, perfect composition",
+    "timestamp": "2026-04-07T14:25:19.422Z",
+    "status": "error",
+    "error": "el is not defined"
+  },
+  {
+    "prompt": " - SPECIES: Lappet-faced Vulture (Torgos tracheliotos) - BEHAVIOR: Sprinting across the flat plains at incredible speed - HABITAT: Dead tree branches overlooking the river - LIGHTING: Moonlit savanna with a vast, starry Milky Way above - MODIFIERS: Macro detail on fur and whiskers, Handheld documentary style, Slow motion 120fps capture, Sharp focus on the predator's eyes - ENHANCERS: 8K ultra-high resolution, BBC Planet Earth quality, hyper-realistic textures",
+    "timestamp": "2026-04-07T14:27:33.157Z",
+    "status": "error",
+    "error": "document is not defined"
+  },
+  {
+    "prompt": " - SPECIES: Greater Kudu (Tragelaphus strepsiceros) - BEHAVIOR: Standing perfectly still and alert in the thicket - HABITAT: Hilly grasslands of the Maasai Mara - LIGHTING: Dramatic silhouette against a blood-red African sunset - MODIFIERS: Sharp focus on the predator's eyes, Macro detail on fur and whiskers, Low-angle perspective from a hidden camera trap, National Geographic wildlife cinematography - ENHANCERS: intricate skin and scale detail, vibrant natural colors, 8K ultra-high resolution",
+    "timestamp": "2026-04-07T14:29:44.370Z",
+    "status": "error",
+    "error": "el.click is not a function"
+  },
+  {
+    "prompt": " - SPECIES: African Wild Dog (Lycaon pictus) - BEHAVIOR: Competing over a scavenged carcass in the dark of night - HABITAT: Fringe of a woodland thicket - LIGHTING: Cool, blue twilight with a rising full moon - MODIFIERS: Telephoto lens compression, Handheld documentary style, National Geographic wildlife cinematography, Low-angle perspective from a hidden camera trap - ENHANCERS: perfect composition, hyper-realistic textures, volumetric dust and light",
+    "timestamp": "2026-04-07T14:30:45.529Z",
+    "status": "error",
+    "error": "el.click is not a function"
+  },
+  {
+    "prompt": " - SPECIES: Aardvark (Orycteropus afer) - BEHAVIOR: Working together in a highly coordinated hunting pack - HABITAT: Tall yellow elephant grass - LIGHTING: Moonlit savanna with a vast, starry Milky Way above - MODIFIERS: Aerial drone view over a migration, National Geographic wildlife cinematography, Macro detail on fur and whiskers, Slow motion 120fps capture - ENHANCERS: 8K ultra-high resolution, BBC Planet Earth quality, volumetric dust and light",
+    "timestamp": "2026-04-07T14:31:52.966Z",
+    "status": "error",
+    "error": "el.click is not a function"
+  },
+  {
+    "prompt": " - SPECIES: African Elephant (Loxodonta africana) - BEHAVIOR: Kicking up thick dust in a defensive formation - HABITAT: Baobab-studded landscape of Tarangire - LIGHTING: Moonlit savanna with a vast, starry Milky Way above - MODIFIERS: National Geographic wildlife cinematography, Low-angle perspective from a hidden camera trap, Sharp focus on the predator's eyes, Handheld documentary style - ENHANCERS: award-winning nature photography, intricate skin and scale detail, 8K ultra-high resolution",
+    "timestamp": "2026-04-07T14:32:59.467Z",
+    "status": "error",
+    "error": "el.click is not a function"
+  },
+  {
+    "prompt": " - SPECIES: Nile Crocodile (Crocodylus niloticus) - BEHAVIOR: Emerging from the water in a sudden territorial display - HABITAT: The steep, forested walls of the Ngorongoro Crater - LIGHTING: Cool, blue twilight with a rising full moon - MODIFIERS: National Geographic wildlife cinematography, Low-angle perspective from a hidden camera trap, Slow motion 120fps capture, Macro detail on fur and whiskers - ENHANCERS: intricate skin and scale detail, award-winning nature photography, hyper-realistic textures",
+    "timestamp": "2026-04-07T14:35:25.618Z",
+    "status": "error",
+    "error": "selector.startsWith is not a function"
+  },
+  {
+    "prompt": " - SPECIES: Oryx / Gemsbok (Oryx gazella) - BEHAVIOR: Sprinting in a high-speed blur across the savanna - HABITAT: Riverine forest edges - LIGHTING: Moonlit savanna with a vast, starry Milky Way above - MODIFIERS: Telephoto lens compression, Handheld documentary style, Low-angle perspective from a hidden camera trap, Aerial drone view over a migration - ENHANCERS: perfect composition, vibrant natural colors, award-winning nature photography",
+    "timestamp": "2026-04-07T14:36:07.588Z",
+    "status": "error",
+    "error": "selector.startsWith is not a function"
+  },
+  {
+    "prompt": " - SPECIES: Topi (Damaliscus lunatus jimela) - BEHAVIOR: Huddling together in a tight group to confuse predators - HABITAT: Short-grass plains stretching to the horizon - LIGHTING: Golden hour sun low on the horizon, glowing through the dust - MODIFIERS: National Geographic wildlife cinematography, Macro detail on fur and whiskers, Shallow depth of field with soft savanna background, Sharp focus on the predator's eyes - ENHANCERS: vibrant natural colors, 8K ultra-high resolution, BBC Planet Earth quality",
+    "timestamp": "2026-04-07T14:37:54.716Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Lilac-breasted Roller (Coracias caudatus) - BEHAVIOR: Performing a series of dazzling aerial acrobatic displays - HABITAT: Reeds at the edge of a watering hole - LIGHTING: Dappled sunlight through the leaves of a fever tree forest - MODIFIERS: Slow motion 120fps capture, Macro detail on fur and whiskers, Shallow depth of field with soft savanna background, Aerial drone view over a migration - ENHANCERS: award-winning nature photography, vibrant natural colors, 8K ultra-high resolution",
+    "timestamp": "2026-04-07T14:40:05.722Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Serval (Leptailurus serval) - BEHAVIOR: Running quickly with its tail held high in the air - HABITAT: Burrow-filled open plains - LIGHTING: Moonlit savanna with a vast, starry Milky Way above - MODIFIERS: Low-angle perspective from a hidden camera trap, Handheld documentary style, Sharp focus on the predator's eyes, Slow motion 120fps capture - ENHANCERS: 8K ultra-high resolution, perfect composition, vibrant natural colors",
+    "timestamp": "2026-04-07T14:41:29.179Z",
+    "status": "error",
+    "error": "Cannot read properties of undefined (reading 'click')"
+  },
+  {
+    "prompt": " - SPECIES: Caracal (Caracal caracal) - BEHAVIOR: Competing over a scavenged carcass in the dark of night - HABITAT: Tall yellow elephant grass - LIGHTING: Dappled sunlight through the leaves of a fever tree forest - MODIFIERS: National Geographic wildlife cinematography, Macro detail on fur and whiskers, Handheld documentary style, Sharp focus on the predator's eyes - ENHANCERS: award-winning nature photography, hyper-realistic textures, BBC Planet Earth quality",
+    "timestamp": "2026-04-07T14:42:42.867Z",
+    "status": "error",
+    "error": "Cannot read properties of undefined (reading 'click')"
+  },
+  {
+    "prompt": " - SPECIES: Hippopotamus (Hippopotamus amphibius) - BEHAVIOR: Sunning itself on the muddy banks of a winding river - HABITAT: The lush, water-logged channels of the Okavango Delta - LIGHTING: Dappled sunlight through the leaves of a fever tree forest - MODIFIERS: Aerial drone view over a migration, Handheld documentary style, National Geographic wildlife cinematography, Shallow depth of field with soft savanna background - ENHANCERS: vibrant natural colors, intricate skin and scale detail, volumetric dust and light",
+    "timestamp": "2026-04-07T14:44:27.219Z",
+    "status": "error",
+    "error": "Cannot read properties of undefined (reading 'click')"
+  },
+  {
+    "prompt": " - SPECIES: Grey Crowned Crane (Balearica regulorum) - BEHAVIOR: Sprinting across the flat plains at incredible speed - HABITAT: Reeds at the edge of a watering hole - LIGHTING: Warm, orange glow of a campfire illuminating the foreground - MODIFIERS: Low-angle perspective from a hidden camera trap, National Geographic wildlife cinematography, Aerial drone view over a migration, Handheld documentary style - ENHANCERS: volumetric dust and light, 8K ultra-high resolution, BBC Planet Earth quality",
+    "timestamp": "2026-04-07T14:45:38.346Z",
+    "status": "error",
+    "error": "Cannot read properties of undefined (reading 'click')"
+  },
+  {
+    "prompt": " - SPECIES: Aardvark (Orycteropus afer) - BEHAVIOR: Jumping high into the air to catch prey in mid-flight - HABITAT: Burrow-filled open plains - LIGHTING: Soft dawn light with rising heat haze - MODIFIERS: National Geographic wildlife cinematography, Aerial drone view over a migration, Macro detail on fur and whiskers, Slow motion 120fps capture - ENHANCERS: award-winning nature photography, BBC Planet Earth quality, volumetric dust and light",
+    "timestamp": "2026-04-07T14:46:37.800Z",
+    "status": "error",
+    "error": "Cannot read properties of undefined (reading 'click')"
+  },
+  {
+    "prompt": " - SPECIES: Thompson's Gazelle (Eudorcas thomsonii) - BEHAVIOR: Galloping in a long, endless line across the horizon - HABITAT: Short-grass plains stretching to the horizon - LIGHTING: Moonlit savanna with a vast, starry Milky Way above - MODIFIERS: National Geographic wildlife cinematography, Macro detail on fur and whiskers, Shallow depth of field with soft savanna background, Sharp focus on the predator's eyes - ENHANCERS: vibrant natural colors, intricate skin and scale detail, volumetric dust and light",
+    "timestamp": "2026-04-07T14:47:50.687Z",
+    "status": "error",
+    "error": "Cannot read properties of undefined (reading 'click')"
+  },
+  {
+    "prompt": " - SPECIES: Meerkat (Suricata suricatta) - BEHAVIOR: Fearlessly facing off against a much larger predator - HABITAT: Tall yellow elephant grass - LIGHTING: Moonlit savanna with a vast, starry Milky Way above - MODIFIERS: Aerial drone view over a migration, Low-angle perspective from a hidden camera trap, Macro detail on fur and whiskers, Shallow depth of field with soft savanna background - ENHANCERS: hyper-realistic textures, volumetric dust and light, vibrant natural colors",
+    "timestamp": "2026-04-07T14:48:52.823Z",
+    "status": "error",
+    "error": "Cannot read properties of undefined (reading 'click')"
+  },
+  {
+    "prompt": " - SPECIES: African Fish Eagle (Icthyophaga vocifer) - BEHAVIOR: Engaging in an elegant and complex courtship dance - HABITAT: Tall grass hiding ground-dwelling birds - LIGHTING: Dramatic silhouette against a blood-red African sunset - MODIFIERS: Aerial drone view over a migration, Handheld documentary style, Telephoto lens compression, Low-angle perspective from a hidden camera trap - ENHANCERS: award-winning nature photography, BBC Planet Earth quality, intricate skin and scale detail",
+    "timestamp": "2026-04-07T14:51:33.956Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Black-backed Jackal (Lupulella mesomelas) - BEHAVIOR: Working together in a highly coordinated hunting pack - HABITAT: Termite mound-dotted landscape - LIGHTING: Dramatic silhouette against a blood-red African sunset - MODIFIERS: Shallow depth of field with soft savanna background, National Geographic wildlife cinematography, Handheld documentary style, Aerial drone view over a migration - ENHANCERS: BBC Planet Earth quality, 8K ultra-high resolution, award-winning nature photography",
+    "timestamp": "2026-04-07T14:53:10.560Z",
+    "status": "pending"
+  },
+  {
+    "prompt": " - SPECIES: Masai Giraffe (Giraffa tippelskirchi) - BEHAVIOR: Moving with powerful grace through the thick vegetation - HABITAT: Baobab-studded landscape of Tarangire - LIGHTING: Warm, orange glow of a campfire illuminating the foreground - MODIFIERS: National Geographic wildlife cinematography, Macro detail on fur and whiskers, Aerial drone view over a migration, Slow motion 120fps capture - ENHANCERS: hyper-realistic textures, award-winning nature photography, volumetric dust and light",
+    "timestamp": "2026-04-07T14:54:42.317Z",
+    "status": "error",
+    "error": "Cannot access 'elements' before initialization"
+  },
+  {
+    "prompt": " - SPECIES: Masai Giraffe (Giraffa tippelskirchi) - BEHAVIOR: Grazing or resting peacefully in the early morning mist - HABITAT: The marshy floodplains of Chobe National Park - LIGHTING: Moonlit savanna with a vast, starry Milky Way above - MODIFIERS: National Geographic wildlife cinematography, Low-angle perspective from a hidden camera trap, Aerial drone view over a migration, Sharp focus on the predator's eyes - ENHANCERS: intricate skin and scale detail, 8K ultra-high resolution, BBC Planet Earth quality",
+    "timestamp": "2026-04-07T14:56:46.384Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Black Rhinoceros (Diceros bicornis) - BEHAVIOR: Kicking up thick dust in a defensive formation - HABITAT: The marshy floodplains of Chobe National Park - LIGHTING: Stormy sky over the plains - MODIFIERS: Telephoto lens compression, Shallow depth of field with soft savanna background, National Geographic wildlife cinematography, Sharp focus on the predator's eyes - ENHANCERS: award-winning nature photography, volumetric dust and light, hyper-realistic textures",
+    "timestamp": "2026-04-07T14:58:29.395Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Impala (Aepyceros melampus) - BEHAVIOR: Standing perfectly still and alert in the thicket - HABITAT: Short-grass plains stretching to the horizon - LIGHTING: Harsh midday sun creating high-contrast shadows under acacia trees - MODIFIERS: National Geographic wildlife cinematography, Shallow depth of field with soft savanna background, Aerial drone view over a migration, Telephoto lens compression - ENHANCERS: hyper-realistic textures, perfect composition, vibrant natural colors",
+    "timestamp": "2026-04-07T15:00:41.853Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Spotted Hyena (Crocuta crocuta) - BEHAVIOR: Jumping high into the air to catch prey in mid-flight - HABITAT: Rocky outcrops and kopjes - LIGHTING: Golden hour sun low on the horizon, glowing through the dust - MODIFIERS: Shallow depth of field with soft savanna background, Sharp focus on the predator's eyes, Handheld documentary style, Aerial drone view over a migration - ENHANCERS: award-winning nature photography, 8K ultra-high resolution, intricate skin and scale detail",
+    "timestamp": "2026-04-07T15:02:14.424Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Plains Zebra (Equus quagga) - BEHAVIOR: Huddling together in a tight group to confuse predators - HABITAT: Short-grass plains stretching to the horizon - LIGHTING: Soft dawn light with rising heat haze - MODIFIERS: Sharp focus on the predator's eyes, Handheld documentary style, Slow motion 120fps capture, Macro detail on fur and whiskers - ENHANCERS: perfect composition, intricate skin and scale detail, award-winning nature photography",
+    "timestamp": "2026-04-07T15:03:33.048Z",
+    "status": "pending"
+  },
+  {
+    "prompt": " - SPECIES: Plains Zebra (Equus quagga) - BEHAVIOR: Huddling together in a tight group to confuse predators - HABITAT: Dense mopane woodland - LIGHTING: Warm, orange glow of a campfire illuminating the foreground - MODIFIERS: National Geographic wildlife cinematography, Sharp focus on the predator's eyes, Shallow depth of field with soft savanna background, Low-angle perspective from a hidden camera trap - ENHANCERS: award-winning nature photography, hyper-realistic textures, BBC Planet Earth quality",
+    "timestamp": "2026-04-07T15:03:56.608Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: African Leopard (Panthera pardus pardus) - BEHAVIOR: Grazing or resting peacefully in the early morning mist - HABITAT: The marshy floodplains of Chobe National Park - LIGHTING: Moonlit savanna with a vast, starry Milky Way above - MODIFIERS: Low-angle perspective from a hidden camera trap, Handheld documentary style, Macro detail on fur and whiskers, Slow motion 120fps capture - ENHANCERS: 8K ultra-high resolution, perfect composition, intricate skin and scale detail",
+    "timestamp": "2026-04-07T15:06:37.972Z",
+    "status": "pending"
+  },
+  {
+    "prompt": " - SPECIES: African Fish Eagle (Icthyophaga vocifer) - BEHAVIOR: Engaging in an elegant and complex courtship dance - HABITAT: Reeds at the edge of a watering hole - LIGHTING: Dappled sunlight through the leaves of a fever tree forest - MODIFIERS: Telephoto lens compression, Low-angle perspective from a hidden camera trap, Handheld documentary style, Aerial drone view over a migration - ENHANCERS: 8K ultra-high resolution, volumetric dust and light, BBC Planet Earth quality",
+    "timestamp": "2026-04-07T15:08:14.442Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Topi (Damaliscus lunatus jimela) - BEHAVIOR: Performing spectacular high leaps into the air - HABITAT: Hilly grasslands of the Maasai Mara - LIGHTING: Golden hour sun low on the horizon, glowing through the dust - MODIFIERS: Macro detail on fur and whiskers, Low-angle perspective from a hidden camera trap, Handheld documentary style, National Geographic wildlife cinematography - ENHANCERS: vibrant natural colors, 8K ultra-high resolution, award-winning nature photography",
+    "timestamp": "2026-04-07T15:09:23.048Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: African Leopard (Panthera pardus pardus) - BEHAVIOR: Leading a herd through a dust storm on the open plains - HABITAT: The red dunes of the Kalahari Desert - LIGHTING: Golden hour sun low on the horizon, glowing through the dust - MODIFIERS: Sharp focus on the predator's eyes, Handheld documentary style, Aerial drone view over a migration, Shallow depth of field with soft savanna background - ENHANCERS: vibrant natural colors, intricate skin and scale detail, BBC Planet Earth quality",
+    "timestamp": "2026-04-07T15:10:27.654Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "LOCATION: cinematic alpine lake in Nepal, with dramatic shadows stretching across terrain - TIME: moody overcast afternoon - MOTION: waterfalls thundering into deep pools - MOOD: calm reflective stillness - CAMERA: low-to-high altitude rising reveal, top-down vertical reveal shot - VISUAL STYLE: volumetric sunlight rays, ultra high resolution detail, natural cinematic color grading",
+    "timestamp": "2026-04-07T15:16:51.522Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: breathtaking rocky arch formations in Italy, with mist rolling through the landscape - TIME: blue hour twilight - MOTION: fog lifting to reveal the landscape - MOOD: peaceful cinematic serenity - CAMERA: low-to-high altitude rising reveal, slow forward drone glide - VISUAL STYLE: volumetric sunlight rays, ultra high resolution detail, crisp environmental textures",
+    "timestamp": "2026-04-07T15:18:04.022Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: dramatic rainforest valley in Morocco, glowing under golden hour light - TIME: moody overcast afternoon - MOTION: birds flying far below as tiny silhouettes - MOOD: peaceful cinematic serenity - CAMERA: long sweeping side-to-side flyover, gradual pullback revealing massive scale - VISUAL STYLE: natural cinematic color grading, gentle motion blur from drone movement, soft atmospheric haze",
+    "timestamp": "2026-04-07T15:19:09.832Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: untouched savanna plains in Chile, glowing under golden hour light - TIME: moody overcast afternoon - MOTION: shadows stretching as the sun sets - MOOD: epic sense of scale - CAMERA: slow forward drone glide, gradual pullback revealing massive scale - VISUAL STYLE: crisp environmental textures, natural cinematic color grading, soft atmospheric haze",
+    "timestamp": "2026-04-07T15:20:19.576Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: vast alpine lake in Mexico, revealed through lifting fog - TIME: soft pastel sunrise - MOTION: mist weaving between mountain peaks - MOOD: dreamlike wanderlust atmosphere - CAMERA: slow forward drone glide, low-to-high altitude rising reveal - VISUAL STYLE: volumetric sunlight rays, ultra high resolution detail, natural cinematic color grading",
+    "timestamp": "2026-04-07T15:21:22.634Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: breathtaking savanna plains in France, with clouds drifting below peaks - TIME: blue hour twilight - MOTION: shadows stretching as the sun sets - MOOD: peaceful cinematic serenity - CAMERA: slow forward drone glide, high-altitude aerial panorama - VISUAL STYLE: crisp environmental textures, soft atmospheric haze, ultra high resolution detail",
+    "timestamp": "2026-04-07T15:22:23.837Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Niagara Falls - TIME: golden hour sunset - MOTION: shadows stretching as the sun sets - MOOD: majestic untouched beauty - CAMERA: low-to-high altitude rising reveal, top-down vertical reveal shot - VISUAL STYLE: ultra high resolution detail, crisp environmental textures, high dynamic range lighting",
+    "timestamp": "2026-04-07T15:23:23.474Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: wild delta wetlands in Morocco, surrounded by crystal-clear water - TIME: bright midday clarity - MOTION: snow blowing across high ridgelines - MOOD: peaceful cinematic serenity - CAMERA: gradual pullback revealing massive scale, top-down vertical reveal shot - VISUAL STYLE: natural cinematic color grading, high dynamic range lighting, soft atmospheric haze",
+    "timestamp": "2026-04-07T15:24:23.757Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: remote mountain range in Indonesia, with dramatic shadows stretching across terrain - TIME: dramatic storm-light skies - MOTION: birds flying far below as tiny silhouettes - MOOD: calm reflective stillness - CAMERA: slow forward drone glide, high-altitude aerial panorama - VISUAL STYLE: natural cinematic color grading, soft atmospheric haze, high dynamic range lighting",
+    "timestamp": "2026-04-07T15:25:23.460Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Neuschwanstein Castle, Germany - TIME: bright midday clarity - MOTION: clouds drifting slowly through valleys - MOOD: epic sense of scale - CAMERA: gradual pullback revealing massive scale, high-altitude aerial panorama - VISUAL STYLE: ultra high resolution detail, volumetric sunlight rays, crisp environmental textures",
+    "timestamp": "2026-04-07T15:26:23.090Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: breathtaking rainforest valley in Turkey, glowing under golden hour light - TIME: bright midday clarity - MOTION: snow blowing across high ridgelines - MOOD: awe-inspiring natural grandeur - CAMERA: slow forward drone glide, long sweeping side-to-side flyover - VISUAL STYLE: crisp environmental textures, soft atmospheric haze, ultra high resolution detail",
+    "timestamp": "2026-04-07T15:27:31.618Z",
+    "status": "success"
   }
 ]
