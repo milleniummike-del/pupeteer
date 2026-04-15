@@ -69,7 +69,8 @@ if (!fs.existsSync(destinationDir)) {
             userDataDir: "browser",
             headless: false,
             defaultViewport: { width: 1920, height: 1080 },
-            args: ["--no-sandbox"]
+            args: ["--no-sandbox"],
+            devtools: true
         });
 
         const page = (await browser.pages())[0];
@@ -87,15 +88,19 @@ if (!fs.existsSync(destinationDir)) {
 
             console.log(`\n🎬 Prompt: ${currentPrompt}`);
 
-            await page.goto('https://www.meta.ai/', { waitUntil: 'networkidle2' });
+            await page.goto('https://www.meta.ai/');
 
             // Click "Create image/video"
+            console.log(`\n🎬 Looking to click Create Image`);
             await page.waitForSelector('button[data-slot="capability-pill"]');
             await page.evaluate(() => {
-                const btn = [...document.querySelectorAll('button[data-slot="capability-pill"]')]
-                    .find(b => (b.textContent || '').toLowerCase().includes('create'));
-                btn?.click();
+                const btn = [...document.querySelectorAll('button[data-slot="capability-pill"]')];
+                btn[2].click();
+                console.log(`\n🎬 Clicked button`);
+
             });
+
+            
 
             // Wait input
             const textareaSelector = 'div[data-testid="composer-input"]';
@@ -115,11 +120,15 @@ if (!fs.existsSync(destinationDir)) {
             }
 
             const options = await page.$$('[role="option"]');
-            // defaults to vertical
+            // defaults to vertical if not clicked
             //await options[2].click();
 
+            //await page.evaluate(() => {debugger;});
+            
             // Send
             await page.click('button[aria-label="Send"]');
+
+            console.log(`\n🎬 Submitted animation`);
 
             let requestEntry = {
                 prompt: currentPrompt,

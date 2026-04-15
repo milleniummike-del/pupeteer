@@ -1,0 +1,1 @@
+node C:\Users\mike\auto\prompts_animals_safari.js; node C:\Users\mike\auto\create_metavideos_singles.js
