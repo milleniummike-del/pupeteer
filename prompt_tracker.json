@@ -3871,5 +3871,1427 @@
     "prompt": "FLYOVER: Neuschwanstein Castle, Germany - TIME: misty sunrise - ENVIRONMENT: fog rolling through hills - CAMERA: wide aerial pass across surrounding landscape, top-down reveal of castle layout - MOTION: sunlight reflecting off rooftops - MOOD: ancient historical majesty - VISUAL STYLE: ultra high resolution, high dynamic range, cinematic color grading",
     "timestamp": "2026-04-14T11:39:19.054Z",
     "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Eilean Donan Castle, Scotland - TIME: misty sunrise - ENVIRONMENT: snow covering rooftops and landscape - CAMERA: top-down reveal of castle layout, wide aerial pass across surrounding landscape - MOTION: sunlight reflecting off rooftops - MOOD: epic medieval grandeur - VISUAL STYLE: volumetric lighting, soft atmospheric haze, cinematic color grading",
+    "timestamp": "2026-04-15T07:26:19.929Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Mont Saint-Michel Abbey, France - TIME: bright midday clarity - ENVIRONMENT: snow covering rooftops and landscape - CAMERA: wide aerial pass across surrounding landscape, forward glide through castle approach - MOTION: soft mist drifting across stone walls - MOOD: epic medieval grandeur - VISUAL STYLE: volumetric lighting, soft atmospheric haze, ultra high resolution",
+    "timestamp": "2026-04-15T07:27:20.576Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Castel Sant’Angelo, Rome, Italy - TIME: misty sunrise - ENVIRONMENT: dense forest surrounding the fortress - CAMERA: cinematic circular orbit around towers, forward glide through castle approach - MOTION: flags waving in the wind - MOOD: epic medieval grandeur - VISUAL STYLE: volumetric lighting, soft atmospheric haze, ultra high resolution",
+    "timestamp": "2026-04-15T07:28:25.847Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Mont Saint-Michel Abbey, France - TIME: moonlit night with glowing windows - ENVIRONMENT: river flowing beside the castle - CAMERA: forward glide through castle approach, high-altitude cinematic orbit around fortress - MOTION: birds circling above towers - MOOD: fairytale fantasy feeling - VISUAL STYLE: realistic shadows, high dynamic range, soft atmospheric haze",
+    "timestamp": "2026-04-15T07:29:28.313Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Prague Castle, Czech Republic - TIME: bright midday clarity - ENVIRONMENT: dense forest surrounding the fortress - CAMERA: forward glide through castle approach, slow rising shot from moat to towers - MOTION: flags waving in the wind - MOOD: ancient historical majesty - VISUAL STYLE: realistic shadows, soft atmospheric haze, ultra high resolution",
+    "timestamp": "2026-04-15T07:30:27.678Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Eilean Donan Castle, Scotland - TIME: moonlit night with glowing windows - ENVIRONMENT: river flowing beside the castle - CAMERA: cinematic circular orbit around towers, high-altitude cinematic orbit around fortress - MOTION: flags waving in the wind - MOOD: fairytale fantasy feeling - VISUAL STYLE: ultra high resolution, soft atmospheric haze, cinematic color grading",
+    "timestamp": "2026-04-15T07:31:34.951Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Château de Chenonceau, France - TIME: bright midday clarity - ENVIRONMENT: lush green countryside stretching outward - CAMERA: forward glide through castle approach, high-altitude cinematic orbit around fortress - MOTION: sunlight reflecting off rooftops - MOOD: mysterious and legendary atmosphere - VISUAL STYLE: ultra high resolution, cinematic color grading, volumetric lighting",
+    "timestamp": "2026-04-15T07:32:38.064Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Mont Saint-Michel Abbey, France - TIME: golden hour sunset - ENVIRONMENT: river flowing beside the castle - CAMERA: slow rising shot from moat to towers, descending drone shot toward main gate - MOTION: birds circling above towers - MOOD: mysterious and legendary atmosphere - VISUAL STYLE: ultra high resolution, cinematic color grading, realistic shadows",
+    "timestamp": "2026-04-15T07:33:38.942Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Neuschwanstein Castle, Germany - TIME: blue hour twilight - ENVIRONMENT: mountains towering in the background - CAMERA: wide aerial pass across surrounding landscape, slow rising shot from moat to towers - MOTION: flags waving in the wind - MOOD: epic medieval grandeur - VISUAL STYLE: volumetric lighting, soft atmospheric haze, high dynamic range",
+    "timestamp": "2026-04-15T07:34:41.537Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Krak des Chevaliers, Syria - TIME: bright midday clarity - ENVIRONMENT: snow covering rooftops and landscape - CAMERA: top-down reveal of castle layout, descending drone shot toward main gate - MOTION: shadows moving across ancient structures - MOOD: epic medieval grandeur - VISUAL STYLE: realistic shadows, volumetric lighting, ultra high resolution",
+    "timestamp": "2026-04-15T07:35:41.198Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Prague Castle, Czech Republic - TIME: misty sunrise - ENVIRONMENT: fog rolling through hills - CAMERA: forward glide through castle approach, descending drone shot toward main gate - MOTION: birds circling above towers - MOOD: cinematic adventure tone - VISUAL STYLE: soft atmospheric haze, high dynamic range, volumetric lighting",
+    "timestamp": "2026-04-15T07:36:40.800Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Château de Chambord, France - TIME: moonlit night with glowing windows - ENVIRONMENT: snow covering rooftops and landscape - CAMERA: high-altitude cinematic orbit around fortress, cinematic circular orbit around towers - MOTION: flags waving in the wind - MOOD: mysterious and legendary atmosphere - VISUAL STYLE: high dynamic range, volumetric lighting, soft atmospheric haze",
+    "timestamp": "2026-04-15T07:37:38.535Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Krak des Chevaliers, Syria - TIME: misty sunrise - ENVIRONMENT: mountains towering in the background - CAMERA: high-altitude cinematic orbit around fortress, descending drone shot toward main gate - MOTION: flags waving in the wind - MOOD: fairytale fantasy feeling - VISUAL STYLE: high dynamic range, ultra high resolution, cinematic color grading",
+    "timestamp": "2026-04-15T07:38:43.844Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Heidelberg Castle, Germany - TIME: blue hour twilight - ENVIRONMENT: lush green countryside stretching outward - CAMERA: low sweeping drone flyover over castle walls, wide aerial pass across surrounding landscape - MOTION: shadows moving across ancient structures - MOOD: mysterious and legendary atmosphere - VISUAL STYLE: realistic shadows, cinematic color grading, ultra high resolution",
+    "timestamp": "2026-04-15T07:39:47.781Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Prague Castle, Czech Republic - TIME: bright midday clarity - ENVIRONMENT: dense forest surrounding the fortress - CAMERA: cinematic circular orbit around towers, low sweeping drone flyover over castle walls - MOTION: flags waving in the wind - MOOD: ancient historical majesty - VISUAL STYLE: cinematic color grading, volumetric lighting, high dynamic range",
+    "timestamp": "2026-04-15T07:40:48.348Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Malbork Castle, Poland - TIME: blue hour twilight - ENVIRONMENT: lush green countryside stretching outward - CAMERA: high-altitude cinematic orbit around fortress, top-down reveal of castle layout - MOTION: flags waving in the wind - MOOD: epic medieval grandeur - VISUAL STYLE: ultra high resolution, volumetric lighting, realistic shadows",
+    "timestamp": "2026-04-15T07:41:57.513Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Bled Castle, Slovenia - TIME: misty sunrise - ENVIRONMENT: mountains towering in the background - CAMERA: forward glide through castle approach, high-altitude cinematic orbit around fortress - MOTION: flags waving in the wind - MOOD: fairytale fantasy feeling - VISUAL STYLE: high dynamic range, realistic shadows, soft atmospheric haze",
+    "timestamp": "2026-04-15T07:43:01.690Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Mont Saint-Michel Abbey, France - TIME: misty sunrise - ENVIRONMENT: river flowing beside the castle - CAMERA: cinematic circular orbit around towers, low sweeping drone flyover over castle walls - MOTION: birds circling above towers - MOOD: mysterious and legendary atmosphere - VISUAL STYLE: ultra high resolution, cinematic color grading, soft atmospheric haze",
+    "timestamp": "2026-04-15T07:44:09.742Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Mehrangarh Fort, Jodhpur, India - TIME: bright midday clarity - ENVIRONMENT: fog rolling through hills - CAMERA: low sweeping drone flyover over castle walls, cinematic circular orbit around towers - MOTION: sunlight reflecting off rooftops - MOOD: fairytale fantasy feeling - VISUAL STYLE: volumetric lighting, high dynamic range, ultra high resolution",
+    "timestamp": "2026-04-15T07:45:10.053Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Eilean Donan Castle, Scotland - TIME: misty sunrise - ENVIRONMENT: dense forest surrounding the fortress - CAMERA: low sweeping drone flyover over castle walls, high-altitude cinematic orbit around fortress - MOTION: shadows moving across ancient structures - MOOD: mysterious and legendary atmosphere - VISUAL STYLE: high dynamic range, volumetric lighting, ultra high resolution",
+    "timestamp": "2026-04-15T07:46:14.656Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Clownfish (Amphiprioninae) - BEHAVIOR: Weaving gracefully through reef formations - HABITAT: Shallow lagoon ecosystems - LIGHTING: Sun rays piercing through crystal-clear blue water - MODIFIERS: National Geographic underwater cinematography, Diver perspective shot, Sharp focus on eyes and movement, Cinematic tracking shot following movement - ENHANCERS: award-winning nature documentary style, hyper-realistic water physics, perfect composition",
+    "timestamp": "2026-04-15T07:51:03.758Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Vampire Squid (Vampyroteuthis infernalis) - BEHAVIOR: Drifting with deep ocean currents - HABITAT: Midnight zone of the ocean - LIGHTING: Sun rays piercing through crystal-clear blue water - MODIFIERS: Wide-angle lens showing vast ocean environment, Sharp focus on eyes and movement, National Geographic underwater cinematography, Cinematic tracking shot following movement - ENHANCERS: 8K ultra-high resolution, BBC Blue Planet quality, hyper-realistic water physics",
+    "timestamp": "2026-04-15T07:52:08.276Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Giant Squid (Architeuthis dux) - BEHAVIOR: Expanding its body to intimidate predators - HABITAT: Cold, high-pressure abyssal plains - LIGHTING: Dark moody underwater shadows with limited visibility - MODIFIERS: Slow motion underwater capture, Diver perspective shot, Shallow depth of field with blurred aquatic background, National Geographic underwater cinematography - ENHANCERS: 8K ultra-high resolution, award-winning nature documentary style, BBC Blue Planet quality",
+    "timestamp": "2026-04-15T07:53:19.340Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Giant Squid (Architeuthis dux) - BEHAVIOR: Attacking suddenly with lightning speed - HABITAT: Hydrothermal vent fields - LIGHTING: Golden sunlight shimmering on shallow reefs - MODIFIERS: Slow motion underwater capture, National Geographic underwater cinematography, Wide-angle lens showing vast ocean environment, Shallow depth of field with blurred aquatic background - ENHANCERS: perfect composition, 8K ultra-high resolution, BBC Blue Planet quality",
+    "timestamp": "2026-04-15T07:54:27.632Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Blue Whale (Balaenoptera musculus) - BEHAVIOR: Gliding silently through the deep open ocean - HABITAT: Underwater seamounts - LIGHTING: Golden sunlight shimmering on shallow reefs - MODIFIERS: Slow motion underwater capture, Diver perspective shot, Cinematic tracking shot following movement, Underwater drone footage - ENHANCERS: hyper-realistic water physics, cinematic underwater lighting, perfect composition",
+    "timestamp": "2026-04-15T07:55:28.412Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Clownfish (Amphiprioninae) - BEHAVIOR: Darting quickly between vibrant coral structures - HABITAT: Coral atolls with crystal clear water - LIGHTING: Sparkling caustic light patterns dancing on the seabed - MODIFIERS: Cinematic tracking shot following movement, Underwater drone footage, Diver perspective shot, Sharp focus on eyes and movement - ENHANCERS: cinematic underwater lighting, BBC Blue Planet quality, vibrant marine colors",
+    "timestamp": "2026-04-15T07:56:31.032Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Fangtooth Fish (Anoplogaster cornuta) - BEHAVIOR: Luring prey with bioluminescent light - HABITAT: Cold, high-pressure abyssal plains - LIGHTING: Sparkling caustic light patterns dancing on the seabed - MODIFIERS: National Geographic underwater cinematography, Sharp focus on eyes and movement, Slow motion underwater capture, Cinematic tracking shot following movement - ENHANCERS: BBC Blue Planet quality, 8K ultra-high resolution, cinematic underwater lighting",
+    "timestamp": "2026-04-15T07:57:35.824Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Great White Shark (Carcharodon carcharias) - BEHAVIOR: Circling curiously around a diver - HABITAT: Deep open ocean abyss - LIGHTING: Golden sunlight shimmering on shallow reefs - MODIFIERS: Macro close-up on scales and textures, Slow motion underwater capture, Cinematic tracking shot following movement, National Geographic underwater cinematography - ENHANCERS: BBC Blue Planet quality, cinematic underwater lighting, vibrant marine colors",
+    "timestamp": "2026-04-15T07:58:34.701Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Sea Lion (Zalophus californianus) - BEHAVIOR: Interacting curiously with divers - HABITAT: Coastal shorelines and kelp forests - LIGHTING: Golden sunlight shimmering on shallow reefs - MODIFIERS: Sharp focus on eyes and movement, Cinematic tracking shot following movement, Slow motion underwater capture, Wide-angle lens showing vast ocean environment - ENHANCERS: award-winning nature documentary style, cinematic underwater lighting, hyper-realistic water physics",
+    "timestamp": "2026-04-15T07:59:35.352Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Deep Sea Jellyfish (Scyphozoa) - BEHAVIOR: Emitting eerie glowing pulses in total darkness - HABITAT: Midnight zone of the ocean - LIGHTING: Dark moody underwater shadows with limited visibility - MODIFIERS: National Geographic underwater cinematography, Macro close-up on scales and textures, Slow motion underwater capture, Cinematic tracking shot following movement - ENHANCERS: hyper-realistic water physics, cinematic underwater lighting, ultra-detailed textures",
+    "timestamp": "2026-04-15T08:00:36.517Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Orca / Killer Whale (Orcinus orca) - BEHAVIOR: Cruising powerfully through strong ocean currents - HABITAT: Polar marine environments - LIGHTING: Sparkling caustic light patterns dancing on the seabed - MODIFIERS: National Geographic underwater cinematography, Macro close-up on scales and textures, Slow motion underwater capture, Sharp focus on eyes and movement - ENHANCERS: vibrant marine colors, 8K ultra-high resolution, ultra-detailed textures",
+    "timestamp": "2026-04-15T08:01:38.647Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Giant Squid (Architeuthis dux) - BEHAVIOR: Expanding its body to intimidate predators - HABITAT: Deep sea trenches - LIGHTING: Bioluminescent glow in deep dark waters - MODIFIERS: Sharp focus on eyes and movement, Slow motion underwater capture, Shallow depth of field with blurred aquatic background, Wide-angle lens showing vast ocean environment - ENHANCERS: ultra-detailed textures, cinematic underwater lighting, hyper-realistic water physics",
+    "timestamp": "2026-04-15T08:02:39.630Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Vampire Squid (Vampyroteuthis infernalis) - BEHAVIOR: Floating motionless in the dark void - HABITAT: Cold, high-pressure abyssal plains - LIGHTING: Dark moody underwater shadows with limited visibility - MODIFIERS: Slow motion underwater capture, Macro close-up on scales and textures, Underwater drone footage, Diver perspective shot - ENHANCERS: 8K ultra-high resolution, BBC Blue Planet quality, hyper-realistic water physics",
+    "timestamp": "2026-04-15T08:03:49.406Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Bottlenose Dolphin (Tursiops truncatus) - BEHAVIOR: Playfully swimming alongside waves - HABITAT: Shallow tropical waters - LIGHTING: Bioluminescent glow in deep dark waters - MODIFIERS: Underwater drone footage, National Geographic underwater cinematography, Diver perspective shot, Macro close-up on scales and textures - ENHANCERS: hyper-realistic water physics, cinematic underwater lighting, vibrant marine colors",
+    "timestamp": "2026-04-15T08:05:01.767Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Bottlenose Dolphin (Tursiops truncatus) - BEHAVIOR: Resting on rocks near the shoreline - HABITAT: Seagrass meadows - LIGHTING: Dark moody underwater shadows with limited visibility - MODIFIERS: Macro close-up on scales and textures, Sharp focus on eyes and movement, Underwater drone footage, Shallow depth of field with blurred aquatic background - ENHANCERS: vibrant marine colors, award-winning nature documentary style, cinematic underwater lighting",
+    "timestamp": "2026-04-15T08:06:09.399Z",
+    "status": "error",
+    "error": "Waiting for selector `video` failed"
+  },
+  {
+    "prompt": " - SPECIES: Octopus (Octopoda) - BEHAVIOR: Changing color and texture to camouflage - HABITAT: Rocky tide pools - LIGHTING: Soft diffused light beneath the ocean surface - MODIFIERS: Macro close-up on scales and textures, National Geographic underwater cinematography, Wide-angle lens showing vast ocean environment, Shallow depth of field with blurred aquatic background - ENHANCERS: ultra-detailed textures, cinematic underwater lighting, 8K ultra-high resolution",
+    "timestamp": "2026-04-15T08:09:40.674Z",
+    "status": "error",
+    "error": "Waiting failed: 120000ms exceeded"
+  },
+  {
+    "prompt": " - SPECIES: Butterflyfish (Chaetodontidae) - BEHAVIOR: Hiding among anemone tentacles - HABITAT: Shallow lagoon ecosystems - LIGHTING: Dark moody underwater shadows with limited visibility - MODIFIERS: National Geographic underwater cinematography, Macro close-up on scales and textures, Slow motion underwater capture, Underwater drone footage - ENHANCERS: ultra-detailed textures, cinematic underwater lighting, perfect composition",
+    "timestamp": "2026-04-15T08:11:57.220Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Octopus (Octopoda) - BEHAVIOR: Changing color and texture to camouflage - HABITAT: Shallow tropical waters - LIGHTING: Sparkling caustic light patterns dancing on the seabed - MODIFIERS: Sharp focus on eyes and movement, Wide-angle lens showing vast ocean environment, Underwater drone footage, Slow motion underwater capture - ENHANCERS: ultra-detailed textures, 8K ultra-high resolution, BBC Blue Planet quality",
+    "timestamp": "2026-04-15T08:13:09.129Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Goblin Shark (Mitsukurina owstoni) - BEHAVIOR: Floating motionless in the dark void - HABITAT: Cold, high-pressure abyssal plains - LIGHTING: Sparkling caustic light patterns dancing on the seabed - MODIFIERS: National Geographic underwater cinematography, Sharp focus on eyes and movement, Cinematic tracking shot following movement, Underwater drone footage - ENHANCERS: award-winning nature documentary style, cinematic underwater lighting, vibrant marine colors",
+    "timestamp": "2026-04-15T08:14:16.904Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Caracal (Caracal caracal) - BEHAVIOR: Sniffing and inspecting passengers inside a jeep - HABITAT: Tourist-packed game drive routes in Kruger National Park - LIGHTING: Dramatic silhouette against a blood-red African sunset - MODIFIERS: Handheld shaky documentary style, Slow motion impact moment, Telephoto lens compression, Fast cut cinematic framing - ENHANCERS: 8K ultra-high resolution, BBC Planet Earth quality, volumetric dust and light",
+    "timestamp": "2026-04-16T07:36:38.574Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Striped Hyena (Hyaena hyaena) - BEHAVIOR: Defending territory aggressively near a camp - HABITAT: Tall grassland hiding predators near human activity - LIGHTING: Dark overcast sky before a thunderstorm - MODIFIERS: Telephoto lens compression, Zoom-in panic camera effect, Low-angle perspective from inside a jeep, Handheld shaky documentary style - ENHANCERS: hyper-realistic textures, 8K ultra-high resolution, cinematic color grading",
+    "timestamp": "2026-04-16T07:37:40.148Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Black Rhinoceros (Diceros bicornis) - BEHAVIOR: Growling deeply while slowly approaching humans - HABITAT: Tourist-packed game drive routes in Kruger National Park - LIGHTING: Harsh midday sun creating high-contrast shadows - MODIFIERS: Point-of-view from terrified tourist, Low-angle perspective from inside a jeep, Fast cut cinematic framing, Telephoto lens compression - ENHANCERS: cinematic color grading, hyper-realistic textures, 8K ultra-high resolution",
+    "timestamp": "2026-04-16T07:38:49.414Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Baboon (Papio spp.) - BEHAVIOR: Snarling and displaying dominance just meters from humans - HABITAT: Tourist-packed game drive routes in Kruger National Park - LIGHTING: Golden hour sun low on the horizon, glowing through the dust - MODIFIERS: Fast cut cinematic framing, Slow motion impact moment, Point-of-view from terrified tourist, Handheld shaky documentary style - ENHANCERS: extreme realism, cinematic color grading, volumetric dust and light",
+    "timestamp": "2026-04-16T07:40:00.601Z",
+    "status": "error",
+    "error": "Waiting for selector `video` failed"
+  },
+  {
+    "prompt": "SPECIES: Chimpanzee (Pan troglodytes) - BEHAVIOR: Cornering prey right next to a group of onlookers - HABITAT: Popular game drive route with heavy tourist presence - LIGHTING: Harsh midday sun with intense shadows - MODIFIERS: POV from inside jeep, Slow motion impact moment, Telephoto compression - ENHANCERS: BBC documentary quality, cinematic color grading",
+    "timestamp": "2026-04-16T07:42:48.425Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SPECIES: Anaconda (Eunectes murinus) - BEHAVIOR: Circling multiple safari jeeps filled with panicking people - HABITAT: River crossing filled with safari trucks and tourists filming - LIGHTING: Harsh midday sun with intense shadows - MODIFIERS: Handheld shaky camera, Fast cinematic cuts, POV from inside jeep - ENHANCERS: 8K ultra realistic, BBC documentary quality",
+    "timestamp": "2026-04-16T07:43:50.287Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SPECIES: Spotted Hyena (Crocuta crocuta) - BEHAVIOR: Locking eyes with a terrified tourist holding a camera - HABITAT: Narrow safari track blocked by multiple jeeps - LIGHTING: Harsh midday sun with intense shadows - MODIFIERS: Handheld shaky camera, POV from inside jeep, Zoom-in panic effect - ENHANCERS: 8K ultra realistic, BBC documentary quality",
+    "timestamp": "2026-04-16T07:44:53.408Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SPECIES: Honey Badger (Mellivora capensis) - BEHAVIOR: Approaching a group of tourists frozen in fear - HABITAT: River crossing filled with safari trucks and tourists filming - LIGHTING: Cool twilight with eerie silence - MODIFIERS: Handheld shaky camera, POV from inside jeep, Zoom-in panic effect - ENHANCERS: 8K ultra realistic, BBC documentary quality",
+    "timestamp": "2026-04-16T07:45:51.391Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SPECIES: Warthog (Phacochoerus africanus) - BEHAVIOR: Standing its ground as humans attempt to drive away - HABITAT: Narrow safari track blocked by multiple jeeps - LIGHTING: Golden hour dust glowing in the sunlight - MODIFIERS: Zoom-in panic effect, Telephoto compression, Slow motion impact moment - ENHANCERS: extreme realism, 8K ultra realistic",
+    "timestamp": "2026-04-16T07:46:50.298Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SPECIES: Saltwater Crocodile (Crocodylus porosus) - BEHAVIOR: Jumping toward a camera held by a tourist - HABITAT: Open savanna with tourists standing outside their vehicles - LIGHTING: Early morning mist with soft light - MODIFIERS: Telephoto compression, Fast cinematic cuts, Sharp focus on predator eyes - ENHANCERS: extreme realism, cinematic color grading",
+    "timestamp": "2026-04-16T07:47:52.934Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SPECIES: Striped Hyena (Hyaena hyaena) - BEHAVIOR: Circling multiple safari jeeps filled with panicking people - HABITAT: Open savanna with tourists standing outside their vehicles - LIGHTING: Golden hour dust glowing in the sunlight - MODIFIERS: Handheld shaky camera, POV from inside jeep, Zoom-in panic effect - ENHANCERS: cinematic color grading, extreme realism",
+    "timestamp": "2026-04-16T07:48:53.642Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SPECIES: African Wild Dog (Lycaon pictus) - BEHAVIOR: Locking eyes with a terrified tourist holding a camera - HABITAT: Popular game drive route with heavy tourist presence - LIGHTING: Cool twilight with eerie silence - MODIFIERS: Fast cinematic cuts, Telephoto compression, Handheld shaky camera - ENHANCERS: 8K ultra realistic, BBC documentary quality",
+    "timestamp": "2026-04-16T07:49:52.856Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SPECIES: Komodo Dragon (Varanus komodoensis) - BEHAVIOR: Charging directly toward a safari jeep full of screaming tourists - HABITAT: Luxury safari camp area with people nearby - LIGHTING: Harsh midday sun with intense shadows - MODIFIERS: Slow motion impact moment, Fast cinematic cuts, Sharp focus on predator eyes - ENHANCERS: 8K ultra realistic, extreme realism",
+    "timestamp": "2026-04-16T07:50:55.599Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SPECIES: African Elephant (Loxodonta africana) - BEHAVIOR: Approaching a group of tourists frozen in fear - HABITAT: Narrow safari track blocked by multiple jeeps - LIGHTING: Cool twilight with eerie silence - MODIFIERS: Sharp focus on predator eyes, Telephoto compression, Fast cinematic cuts - ENHANCERS: BBC documentary quality, cinematic color grading",
+    "timestamp": "2026-04-16T07:51:51.854Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SPECIES: Bengal Tiger (Panthera tigris tigris) - BEHAVIOR: Approaching a group of tourists frozen in fear - HABITAT: Tourist-packed dirt road in Kruger National Park - LIGHTING: Storm clouds building dramatic tension - MODIFIERS: Sharp focus on predator eyes, Zoom-in panic effect, Fast cinematic cuts - ENHANCERS: volumetric dust lighting, extreme realism",
+    "timestamp": "2026-04-16T07:52:58.353Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SPECIES: African Elephant (Loxodonta africana) - BEHAVIOR: Walking directly between tightly packed safari vehicles - HABITAT: Crowded safari jeep convoy filled with tourists in the Maasai Mara - LIGHTING: Early morning mist with soft light - MODIFIERS: Fast cinematic cuts, Handheld shaky camera, Slow motion impact moment - ENHANCERS: extreme realism, 8K ultra realistic",
+    "timestamp": "2026-04-16T07:53:58.308Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SPECIES: Spotted Hyena (Crocuta crocuta) - BEHAVIOR: Following a safari jeep closely while passengers panic - HABITAT: Popular game drive route with heavy tourist presence - LIGHTING: Storm clouds building dramatic tension - MODIFIERS: Sharp focus on predator eyes, Telephoto compression, Slow motion impact moment - ENHANCERS: 8K ultra realistic, BBC documentary quality",
+    "timestamp": "2026-04-16T07:55:04.351Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SPECIES: Warthog (Phacochoerus africanus) - BEHAVIOR: Charging and stopping just short of a vehicle full of people - HABITAT: Busy wildlife viewing spot with cameras pointed at the animal - LIGHTING: Early morning mist with soft light - MODIFIERS: Slow motion impact moment, Zoom-in panic effect, Fast cinematic cuts - ENHANCERS: BBC documentary quality, cinematic color grading",
+    "timestamp": "2026-04-16T07:56:13.703Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SPECIES: Wolf (Canis lupus) - BEHAVIOR: Running directly through a cluster of parked safari vehicles - HABITAT: River crossing filled with safari trucks and tourists filming - LIGHTING: Early morning mist with soft light - MODIFIERS: Handheld shaky camera, POV from inside jeep, Slow motion impact moment - ENHANCERS: BBC documentary quality, 8K ultra realistic",
+    "timestamp": "2026-04-16T07:57:21.501Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SPECIES: Anaconda (Eunectes murinus) - BEHAVIOR: Cornering prey right next to a group of onlookers - HABITAT: Crowded safari jeep convoy filled with tourists in the Maasai Mara - LIGHTING: Golden hour dust glowing in the sunlight - MODIFIERS: Slow motion impact moment, Telephoto compression, Handheld shaky camera - ENHANCERS: 8K ultra realistic, BBC documentary quality",
+    "timestamp": "2026-04-16T07:58:27.617Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SPECIES: Jaguar (Panthera onca) - BEHAVIOR: Interrupting a safari group with sudden aggression - HABITAT: Narrow safari track blocked by multiple jeeps - LIGHTING: Storm clouds building dramatic tension - MODIFIERS: Slow motion impact moment, Zoom-in panic effect, Handheld shaky camera - ENHANCERS: BBC documentary quality, cinematic color grading",
+    "timestamp": "2026-04-16T07:59:33.330Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SPECIES: Cape Buffalo (Syncerus caffer) - BEHAVIOR: Jumping toward a camera held by a tourist - HABITAT: Luxury safari camp area with people nearby - LIGHTING: Harsh midday sun with intense shadows - MODIFIERS: Sharp focus on predator eyes, Telephoto compression, Fast cinematic cuts - ENHANCERS: extreme realism, BBC documentary quality",
+    "timestamp": "2026-04-16T08:00:32.176Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SPECIES: Chimpanzee (Pan troglodytes) - BEHAVIOR: Advancing slowly toward a group of silent, terrified tourists - HABITAT: Busy wildlife viewing spot with cameras pointed at the animal - LIGHTING: Storm clouds building dramatic tension - MODIFIERS: Zoom-in panic effect, Handheld shaky camera, Sharp focus on predator eyes - ENHANCERS: extreme realism, cinematic color grading",
+    "timestamp": "2026-04-16T08:01:32.102Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SPECIES: White Rhinoceros (Ceratotherium simum) - BEHAVIOR: Approaching a group of tourists frozen in fear - HABITAT: River crossing filled with safari trucks and tourists filming - LIGHTING: Early morning mist with soft light - MODIFIERS: Telephoto compression, Fast cinematic cuts, Slow motion impact moment - ENHANCERS: 8K ultra realistic, extreme realism",
+    "timestamp": "2026-04-16T08:02:33.411Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SPECIES: Chimpanzee (Pan troglodytes) - BEHAVIOR: Circling multiple safari jeeps filled with panicking people - HABITAT: Crowded safari jeep convoy filled with tourists in the Maasai Mara - LIGHTING: Harsh midday sun with intense shadows - MODIFIERS: POV from inside jeep, Fast cinematic cuts, Zoom-in panic effect - ENHANCERS: 8K ultra realistic, BBC documentary quality",
+    "timestamp": "2026-04-16T08:06:51.118Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SPECIES: White Rhinoceros (Ceratotherium simum) - BEHAVIOR: Snapping jaws inches away from tourists filming - HABITAT: Tourist-packed dirt road in Kruger National Park - LIGHTING: Storm clouds building dramatic tension - MODIFIERS: Telephoto compression, Fast cinematic cuts, POV from inside jeep - ENHANCERS: 8K ultra realistic, BBC documentary quality",
+    "timestamp": "2026-04-16T08:07:49.962Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "ANIMAL: Baby Elephant - ACTION: slipping and accidentally falling into a pool - LOCATION: lake shore - REACTION: friends laughing uncontrollably - STYLE: zoom on impact moment, loopable ending - TONE: cute and chaotic, funny viral energy",
+    "timestamp": "2026-04-16T08:21:13.990Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Cat - ACTION: sliding into water instead of jumping - LOCATION: water park splash area - REACTION: owner shouting in surprise - STYLE: handheld phone camera, YouTube Shorts format - TONE: cute and chaotic, funny viral energy",
+    "timestamp": "2026-04-16T08:22:13.599Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Labrador Dog - ACTION: jumping repeatedly in and out of water - LOCATION: small muddy puddle - REACTION: everyone reacting with shock and laughter - STYLE: vertical video, TikTok style, loopable ending - TONE: unexpected comedic timing, meme-worthy reaction",
+    "timestamp": "2026-04-16T08:23:09.732Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Piglet - ACTION: jumping in and startling itself - LOCATION: farm water trough - REACTION: someone saying “NOOO!” just before the jump - STYLE: slow motion replay, zoom on impact moment - TONE: cute and chaotic, highly shareable moment",
+    "timestamp": "2026-04-16T08:24:11.362Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Bear Cub - ACTION: jumping in and startling itself - LOCATION: bathtub - REACTION: everyone reacting with shock and laughter - STYLE: handheld phone camera, slight camera shake - TONE: meme-worthy reaction, funny viral energy",
+    "timestamp": "2026-04-16T08:25:06.541Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Capybara - ACTION: overreacting to shallow water with a big splash - LOCATION: water park splash area - REACTION: owner shouting in surprise - STYLE: vertical video, TikTok style, slight camera shake - TONE: highly shareable moment, funny viral energy",
+    "timestamp": "2026-04-16T08:26:10.904Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Lion Cub - ACTION: overreacting to shallow water with a big splash - LOCATION: lake shore - REACTION: people laughing in the background - STYLE: vertical video, TikTok style, YouTube Shorts format - TONE: highly shareable moment, funny viral energy",
+    "timestamp": "2026-04-16T08:27:08.092Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Goat - ACTION: jumping into water and immediately panicking - LOCATION: beach shoreline - REACTION: someone saying “NOOO!” just before the jump - STYLE: slow motion replay, YouTube Shorts format - TONE: meme-worthy reaction, unexpected comedic timing",
+    "timestamp": "2026-04-16T08:28:08.904Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Sea Lion - ACTION: jumping into water with a huge splash - LOCATION: beach shoreline - REACTION: kids cheering loudly - STYLE: vertical video, TikTok style, YouTube Shorts format - TONE: funny viral energy, highly shareable moment",
+    "timestamp": "2026-04-16T08:29:09.014Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Kitten - ACTION: jumping in slow motion with a goofy expression - LOCATION: bathtub - REACTION: everyone reacting with shock and laughter - STYLE: handheld phone camera, slow motion replay - TONE: cute and chaotic, funny viral energy",
+    "timestamp": "2026-04-16T08:30:07.901Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Chimpanzee - ACTION: slipping and accidentally falling into a pool - LOCATION: garden fountain - REACTION: owner facepalming in disbelief - STYLE: loopable ending, slight camera shake - TONE: highly shareable moment, unexpected comedic timing",
+    "timestamp": "2026-04-16T08:31:04.897Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Shiba Inu - ACTION: falling in backwards unexpectedly - LOCATION: backyard swimming pool - REACTION: people laughing in the background - STYLE: loopable ending, handheld phone camera - TONE: funny viral energy, highly shareable moment",
+    "timestamp": "2026-04-16T08:32:11.372Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Sea Lion - ACTION: jumping repeatedly in and out of water - LOCATION: water park splash area - REACTION: owner shouting in surprise - STYLE: handheld phone camera, zoom on impact moment - TONE: funny viral energy, highly shareable moment",
+    "timestamp": "2026-04-16T08:33:08.063Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Goose - ACTION: jumping into water and immediately panicking - LOCATION: backyard swimming pool - REACTION: friends laughing uncontrollably - STYLE: YouTube Shorts format, vertical video, TikTok style - TONE: unexpected comedic timing, funny viral energy",
+    "timestamp": "2026-04-16T08:34:13.391Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Labrador Dog - ACTION: jumping in and splashing everyone nearby - LOCATION: water park splash area - REACTION: camera shaking from laughter - STYLE: slight camera shake, YouTube Shorts format - TONE: unexpected comedic timing, highly shareable moment",
+    "timestamp": "2026-04-16T08:35:20.762Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Squirrel - ACTION: slipping and accidentally falling into a pool - LOCATION: riverbank - REACTION: owner shouting in surprise - STYLE: handheld phone camera, slow motion replay - TONE: funny viral energy, cute and chaotic",
+    "timestamp": "2026-04-16T08:36:15.618Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Lion Cub - ACTION: slipping and accidentally falling into a pool - LOCATION: farm water trough - REACTION: everyone reacting with shock and laughter - STYLE: handheld phone camera, slight camera shake - TONE: meme-worthy reaction, funny viral energy",
+    "timestamp": "2026-04-16T08:37:23.948Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Hippo Calf - ACTION: doing a clumsy jump that turns into a splash fail - LOCATION: kids inflatable pool - REACTION: camera shaking from laughter - STYLE: loopable ending, slight camera shake - TONE: funny viral energy, highly shareable moment",
+    "timestamp": "2026-04-16T08:38:32.886Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Red Panda - ACTION: leaping dramatically into a tiny puddle - LOCATION: bathtub - REACTION: owner facepalming in disbelief - STYLE: zoom on impact moment, vertical video, TikTok style - TONE: meme-worthy reaction, funny viral energy",
+    "timestamp": "2026-04-16T08:39:32.728Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Red Panda - ACTION: jumping in and immediately shaking water everywhere - LOCATION: farm water trough - REACTION: someone saying “NOOO!” just before the jump - STYLE: slight camera shake, handheld phone camera - TONE: cute and chaotic, funny viral energy",
+    "timestamp": "2026-04-16T08:40:30.394Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Jaisalmer Fort, India - TIME: misty sunrise - ENVIRONMENT: mountains towering in the background - CAMERA: forward glide through castle approach, high-altitude cinematic orbit around fortress - MOTION: birds circling above towers - MOOD: ancient historical majesty - VISUAL STYLE: high dynamic range, realistic shadows, ultra high resolution",
+    "timestamp": "2026-04-16T08:55:56.275Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Elmina Castle, Ghana - TIME: moonlit night with glowing windows - ENVIRONMENT: river flowing beside the castle - CAMERA: top-down reveal of castle layout, low sweeping drone flyover over castle walls - MOTION: flags waving in the wind - MOOD: mysterious and legendary atmosphere - VISUAL STYLE: ultra high resolution, cinematic color grading, realistic shadows",
+    "timestamp": "2026-04-16T08:57:04.088Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Eger Castle, Hungary - TIME: blue hour twilight - ENVIRONMENT: mountains towering in the background - CAMERA: high-altitude cinematic orbit around fortress, low sweeping drone flyover over castle walls - MOTION: soft mist drifting across stone walls - MOOD: epic medieval grandeur - VISUAL STYLE: ultra high resolution, high dynamic range, realistic shadows",
+    "timestamp": "2026-04-16T08:58:11.130Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Lichtenstein Castle, Germany - TIME: blue hour twilight - ENVIRONMENT: mountains towering in the background - CAMERA: descending drone shot toward main gate, slow rising shot from moat to towers - MOTION: shadows moving across ancient structures - MOOD: ancient historical majesty - VISUAL STYLE: volumetric lighting, soft atmospheric haze, cinematic color grading",
+    "timestamp": "2026-04-16T08:59:09.329Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Alcázar of Segovia, Spain - TIME: golden hour sunset - ENVIRONMENT: snow covering rooftops and landscape - CAMERA: cinematic circular orbit around towers, low sweeping drone flyover over castle walls - MOTION: flags waving in the wind - MOOD: cinematic adventure tone - VISUAL STYLE: cinematic color grading, high dynamic range, realistic shadows",
+    "timestamp": "2026-04-16T09:00:15.643Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Bellver Castle, Spain - TIME: bright midday clarity - ENVIRONMENT: dense forest surrounding the fortress - CAMERA: low sweeping drone flyover over castle walls, cinematic circular orbit around towers - MOTION: flags waving in the wind - MOOD: ancient historical majesty - VISUAL STYLE: high dynamic range, realistic shadows, volumetric lighting",
+    "timestamp": "2026-04-16T09:01:19.334Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Prague Castle, Czech Republic - TIME: misty sunrise - ENVIRONMENT: snow covering rooftops and landscape - CAMERA: high-altitude cinematic orbit around fortress, top-down reveal of castle layout - MOTION: flags waving in the wind - MOOD: ancient historical majesty - VISUAL STYLE: high dynamic range, soft atmospheric haze, volumetric lighting",
+    "timestamp": "2026-04-16T09:02:24.891Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Castelvecchio, Italy - TIME: golden hour sunset - ENVIRONMENT: river flowing beside the castle - CAMERA: high-altitude cinematic orbit around fortress, top-down reveal of castle layout - MOTION: birds circling above towers - MOOD: cinematic adventure tone - VISUAL STYLE: soft atmospheric haze, ultra high resolution, realistic shadows",
+    "timestamp": "2026-04-16T09:03:28.074Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Amber Fort, India - TIME: moonlit night with glowing windows - ENVIRONMENT: dense forest surrounding the fortress - CAMERA: slow rising shot from moat to towers, low sweeping drone flyover over castle walls - MOTION: soft mist drifting across stone walls - MOOD: cinematic adventure tone - VISUAL STYLE: realistic shadows, high dynamic range, volumetric lighting",
+    "timestamp": "2026-04-16T09:04:27.870Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Blarney Castle, Ireland - TIME: bright midday clarity - ENVIRONMENT: fog rolling through hills - CAMERA: descending drone shot toward main gate, cinematic circular orbit around towers - MOTION: birds circling above towers - MOOD: mysterious and legendary atmosphere - VISUAL STYLE: ultra high resolution, cinematic color grading, volumetric lighting",
+    "timestamp": "2026-04-16T09:05:34.706Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Eltz Castle, Germany - TIME: golden hour sunset - ENVIRONMENT: dense forest surrounding the fortress - CAMERA: descending drone shot toward main gate, cinematic circular orbit around towers - MOTION: shadows moving across ancient structures - MOOD: epic medieval grandeur - VISUAL STYLE: ultra high resolution, high dynamic range, soft atmospheric haze",
+    "timestamp": "2026-04-16T09:06:35.531Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Mirabell Palace, Austria - TIME: golden hour sunset - ENVIRONMENT: snow covering rooftops and landscape - CAMERA: low sweeping drone flyover over castle walls, descending drone shot toward main gate - MOTION: shadows moving across ancient structures - MOOD: cinematic adventure tone - VISUAL STYLE: cinematic color grading, soft atmospheric haze, ultra high resolution",
+    "timestamp": "2026-04-16T09:07:37.304Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Trim Castle, Ireland - TIME: bright midday clarity - ENVIRONMENT: fog rolling through hills - CAMERA: forward glide through castle approach, descending drone shot toward main gate - MOTION: sunlight reflecting off rooftops - MOOD: cinematic adventure tone - VISUAL STYLE: ultra high resolution, cinematic color grading, volumetric lighting",
+    "timestamp": "2026-04-16T09:08:38.073Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Toompea Castle, Estonia - TIME: bright midday clarity - ENVIRONMENT: river flowing beside the castle - CAMERA: forward glide through castle approach, top-down reveal of castle layout - MOTION: flags waving in the wind - MOOD: fairytale fantasy feeling - VISUAL STYLE: realistic shadows, high dynamic range, volumetric lighting",
+    "timestamp": "2026-04-16T09:09:36.812Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Mirabell Palace, Austria - TIME: bright midday clarity - ENVIRONMENT: dense forest surrounding the fortress - CAMERA: forward glide through castle approach, wide aerial pass across surrounding landscape - MOTION: soft mist drifting across stone walls - MOOD: mysterious and legendary atmosphere - VISUAL STYLE: volumetric lighting, cinematic color grading, soft atmospheric haze",
+    "timestamp": "2026-04-16T09:10:39.483Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Castello Estense, Italy - TIME: misty sunrise - ENVIRONMENT: snow covering rooftops and landscape - CAMERA: descending drone shot toward main gate, top-down reveal of castle layout - MOTION: birds circling above towers - MOOD: fairytale fantasy feeling - VISUAL STYLE: volumetric lighting, high dynamic range, soft atmospheric haze",
+    "timestamp": "2026-04-16T09:11:34.810Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Hohenzollern Castle, Germany - TIME: misty sunrise - ENVIRONMENT: mountains towering in the background - CAMERA: slow rising shot from moat to towers, low sweeping drone flyover over castle walls - MOTION: sunlight reflecting off rooftops - MOOD: epic medieval grandeur - VISUAL STYLE: high dynamic range, cinematic color grading, soft atmospheric haze",
+    "timestamp": "2026-04-16T09:12:33.173Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Château de Foix, France - TIME: bright midday clarity - ENVIRONMENT: dense forest surrounding the fortress - CAMERA: low sweeping drone flyover over castle walls, high-altitude cinematic orbit around fortress - MOTION: sunlight reflecting off rooftops - MOOD: epic medieval grandeur - VISUAL STYLE: realistic shadows, volumetric lighting, cinematic color grading",
+    "timestamp": "2026-04-16T09:13:40.484Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Neuschwanstein Castle, Germany - TIME: misty sunrise - ENVIRONMENT: snow covering rooftops and landscape - CAMERA: top-down reveal of castle layout, cinematic circular orbit around towers - MOTION: birds circling above towers - MOOD: ancient historical majesty - VISUAL STYLE: high dynamic range, ultra high resolution, cinematic color grading",
+    "timestamp": "2026-04-16T09:14:42.906Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Eger Castle, Hungary - TIME: bright midday clarity - ENVIRONMENT: snow covering rooftops and landscape - CAMERA: wide aerial pass across surrounding landscape, top-down reveal of castle layout - MOTION: birds circling above towers - MOOD: cinematic adventure tone - VISUAL STYLE: volumetric lighting, ultra high resolution, soft atmospheric haze",
+    "timestamp": "2026-04-16T09:15:49.495Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Golden Retriever - ACTION: running full speed and launching into water - LOCATION: water park splash area - REACTION: owner shouting in surprise - STYLE: vertical video, TikTok style, YouTube Shorts format - TONE: unexpected comedic timing, meme-worthy reaction",
+    "timestamp": "2026-04-17T07:11:21.040Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Goat - ACTION: running full speed and launching into water - LOCATION: lake shore - REACTION: someone saying “NOOO!” just before the jump - STYLE: slow motion replay, zoom on impact moment - TONE: highly shareable moment, funny viral energy",
+    "timestamp": "2026-04-17T07:12:20.763Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Bear Cub - ACTION: running full speed and launching into water - LOCATION: farm water trough - REACTION: everyone reacting with shock and laughter - STYLE: loopable ending, slow motion replay - TONE: funny viral energy, meme-worthy reaction",
+    "timestamp": "2026-04-17T07:13:25.970Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Monkey - ACTION: jumping in and startling itself - LOCATION: garden fountain - REACTION: everyone reacting with shock and laughter - STYLE: slight camera shake, vertical video, TikTok style - TONE: highly shareable moment, unexpected comedic timing",
+    "timestamp": "2026-04-17T07:14:32.884Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Labrador Dog - ACTION: jumping in and splashing everyone nearby - LOCATION: farm water trough - REACTION: kids cheering loudly - STYLE: vertical video, TikTok style, YouTube Shorts format - TONE: highly shareable moment, funny viral energy",
+    "timestamp": "2026-04-17T07:15:32.873Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Otter - ACTION: hesitating nervously before suddenly jumping in - LOCATION: garden fountain - REACTION: someone saying “NOOO!” just before the jump - STYLE: vertical video, TikTok style, loopable ending - TONE: funny viral energy, highly shareable moment",
+    "timestamp": "2026-04-17T07:16:32.093Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Seal - ACTION: running full speed and launching into water - LOCATION: garden fountain - REACTION: everyone reacting with shock and laughter - STYLE: loopable ending, vertical video, TikTok style - TONE: funny viral energy, meme-worthy reaction",
+    "timestamp": "2026-04-17T07:17:27.193Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Seal - ACTION: falling in backwards unexpectedly - LOCATION: water park splash area - REACTION: owner shouting in surprise - STYLE: slow motion replay, vertical video, TikTok style - TONE: cute and chaotic, highly shareable moment",
+    "timestamp": "2026-04-17T07:18:33.032Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: French Bulldog - ACTION: jumping in and immediately shaking water everywhere - LOCATION: backyard swimming pool - REACTION: everyone reacting with shock and laughter - STYLE: handheld phone camera, YouTube Shorts format - TONE: meme-worthy reaction, unexpected comedic timing",
+    "timestamp": "2026-04-17T07:19:35.419Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Cow - ACTION: jumping in confidently then scrambling to get out - LOCATION: riverbank - REACTION: everyone reacting with shock and laughter - STYLE: slight camera shake, vertical video, TikTok style - TONE: unexpected comedic timing, cute and chaotic",
+    "timestamp": "2026-04-17T07:20:40.079Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Squirrel - ACTION: jumping in slow motion with a goofy expression - LOCATION: garden fountain - REACTION: friends laughing uncontrollably - STYLE: slight camera shake, handheld phone camera - TONE: funny viral energy, highly shareable moment",
+    "timestamp": "2026-04-17T07:21:37.827Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Red Panda - ACTION: copying a human and jumping into water - LOCATION: farm water trough - REACTION: camera shaking from laughter - STYLE: handheld phone camera, YouTube Shorts format - TONE: funny viral energy, highly shareable moment",
+    "timestamp": "2026-04-17T07:22:35.694Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Labrador Dog - ACTION: jumping into water with a huge splash - LOCATION: lake shore - REACTION: owner facepalming in disbelief - STYLE: YouTube Shorts format, loopable ending - TONE: meme-worthy reaction, funny viral energy",
+    "timestamp": "2026-04-17T07:23:43.526Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Labrador Dog - ACTION: jumping repeatedly in and out of water - LOCATION: small muddy puddle - REACTION: kids cheering loudly - STYLE: loopable ending, slight camera shake - TONE: funny viral energy, cute and chaotic",
+    "timestamp": "2026-04-17T07:24:45.534Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Kangaroo - ACTION: jumping in and splashing everyone nearby - LOCATION: backyard swimming pool - REACTION: everyone reacting with shock and laughter - STYLE: vertical video, TikTok style, zoom on impact moment - TONE: cute and chaotic, highly shareable moment",
+    "timestamp": "2026-04-17T07:25:42.355Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Sea Lion - ACTION: doing an unexpected belly flop into the water - LOCATION: kids inflatable pool - REACTION: owner facepalming in disbelief - STYLE: slow motion replay, zoom on impact moment - TONE: unexpected comedic timing, cute and chaotic",
+    "timestamp": "2026-04-17T07:26:42.654Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Cow - ACTION: jumping in and splashing everyone nearby - LOCATION: garden fountain - REACTION: friends laughing uncontrollably - STYLE: vertical video, TikTok style, slow motion replay - TONE: highly shareable moment, meme-worthy reaction",
+    "timestamp": "2026-04-17T07:27:41.927Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Bear Cub - ACTION: missing the jump and falling awkwardly into water - LOCATION: lake shore - REACTION: people laughing in the background - STYLE: zoom on impact moment, slow motion replay - TONE: funny viral energy, cute and chaotic",
+    "timestamp": "2026-04-17T07:28:56.062Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Capybara - ACTION: hesitating nervously before suddenly jumping in - LOCATION: backyard swimming pool - REACTION: someone saying “NOOO!” just before the jump - STYLE: zoom on impact moment, slight camera shake - TONE: unexpected comedic timing, cute and chaotic",
+    "timestamp": "2026-04-17T07:30:04.837Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Hippo Calf - ACTION: jumping in and startling itself - LOCATION: beach shoreline - REACTION: owner shouting in surprise - STYLE: zoom on impact moment, slight camera shake - TONE: funny viral energy, highly shareable moment",
+    "timestamp": "2026-04-17T07:31:07.017Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: golden tropical island in Brazil, glowing under golden hour light - TIME: soft pastel sunrise - MOTION: fog lifting to reveal the landscape - MOOD: peaceful cinematic serenity - CAMERA: gradual pullback revealing massive scale, top-down vertical reveal shot - VISUAL STYLE: natural cinematic color grading, soft atmospheric haze, high dynamic range lighting",
+    "timestamp": "2026-04-17T07:33:48.880Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Plitvice Lakes waterfalls, Croatia - TIME: dramatic storm-light skies - MOTION: waterfalls thundering into deep pools - MOOD: majestic untouched beauty - CAMERA: top-down vertical reveal shot, cinematic orbit around landscape feature - VISUAL STYLE: ultra high resolution detail, gentle motion blur from drone movement, soft atmospheric haze",
+    "timestamp": "2026-04-17T07:34:55.336Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: vast waterfall basin in Brazil, with mist rolling through the landscape - TIME: golden hour sunset - MOTION: clouds drifting slowly through valleys - MOOD: epic sense of scale - CAMERA: low-to-high altitude rising reveal, slow forward drone glide - VISUAL STYLE: volumetric sunlight rays, crisp environmental textures, gentle motion blur from drone movement",
+    "timestamp": "2026-04-17T07:36:06.274Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: dramatic waterfall basin in Canada, with waves crashing against formations - TIME: golden hour sunset - MOTION: shadows stretching as the sun sets - MOOD: calm reflective stillness - CAMERA: gradual pullback revealing massive scale, high-altitude aerial panorama - VISUAL STYLE: volumetric sunlight rays, ultra high resolution detail, gentle motion blur from drone movement",
+    "timestamp": "2026-04-17T07:37:05.220Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: otherworldly rolling hills in Indonesia, with mist rolling through the landscape - TIME: bright midday clarity - MOTION: snow blowing across high ridgelines - MOOD: peaceful cinematic serenity - CAMERA: cinematic orbit around landscape feature, high-altitude aerial panorama - VISUAL STYLE: soft atmospheric haze, crisp environmental textures, ultra high resolution detail",
+    "timestamp": "2026-04-17T07:38:15.915Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Ha Long Bay karsts, Vietnam - TIME: moody overcast afternoon - MOTION: birds flying far below as tiny silhouettes - MOOD: awe-inspiring natural grandeur - CAMERA: low-to-high altitude rising reveal, cinematic orbit around landscape feature - VISUAL STYLE: volumetric sunlight rays, high dynamic range lighting, crisp environmental textures",
+    "timestamp": "2026-04-17T07:39:21.364Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: golden rocky arch formations in Fiji, blanketed in soft atmospheric haze - TIME: soft pastel sunrise - MOTION: mist weaving between mountain peaks - MOOD: peaceful cinematic serenity - CAMERA: top-down vertical reveal shot, low-to-high altitude rising reveal - VISUAL STYLE: volumetric sunlight rays, crisp environmental textures, ultra high resolution detail",
+    "timestamp": "2026-04-17T07:40:29.655Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Maldives lagoons - TIME: moody overcast afternoon - MOTION: wind rippling across tall grass - MOOD: awe-inspiring natural grandeur - CAMERA: top-down vertical reveal shot, cinematic orbit around landscape feature - VISUAL STYLE: high dynamic range lighting, natural cinematic color grading, crisp environmental textures",
+    "timestamp": "2026-04-17T07:41:35.445Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Cliffs of Moher, Ireland - TIME: dramatic storm-light skies - MOTION: wind rippling across tall grass - MOOD: awe-inspiring natural grandeur - CAMERA: top-down vertical reveal shot, low-to-high altitude rising reveal - VISUAL STYLE: natural cinematic color grading, soft atmospheric haze, gentle motion blur from drone movement",
+    "timestamp": "2026-04-17T07:42:42.787Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: cinematic river canyon in Fiji, glowing under golden hour light - TIME: dramatic storm-light skies - MOTION: mist weaving between mountain peaks - MOOD: epic sense of scale - CAMERA: gradual pullback revealing massive scale, top-down vertical reveal shot - VISUAL STYLE: ultra high resolution detail, crisp environmental textures, natural cinematic color grading",
+    "timestamp": "2026-04-17T07:43:47.896Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: dramatic fjord landscape in Sri Lanka, revealed through lifting fog - TIME: moody overcast afternoon - MOTION: wind rippling across tall grass - MOOD: calm reflective stillness - CAMERA: low-to-high altitude rising reveal, gradual pullback revealing massive scale - VISUAL STYLE: high dynamic range lighting, volumetric sunlight rays, crisp environmental textures",
+    "timestamp": "2026-04-17T07:44:56.176Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Horseshoe Bend, USA - TIME: blue hour twilight - MOTION: birds flying far below as tiny silhouettes - MOOD: dreamlike wanderlust atmosphere - CAMERA: long sweeping side-to-side flyover, slow forward drone glide - VISUAL STYLE: crisp environmental textures, high dynamic range lighting, gentle motion blur from drone movement",
+    "timestamp": "2026-04-17T07:46:02.178Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: fog-covered savanna plains in Brazil, with mist rolling through the landscape - TIME: soft pastel sunrise - MOTION: clouds drifting slowly through valleys - MOOD: dreamlike wanderlust atmosphere - CAMERA: top-down vertical reveal shot, low-to-high altitude rising reveal - VISUAL STYLE: volumetric sunlight rays, crisp environmental textures, soft atmospheric haze",
+    "timestamp": "2026-04-17T07:47:09.290Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Great Barrier Reef, Australia - TIME: soft pastel sunrise - MOTION: shadows stretching as the sun sets - MOOD: awe-inspiring natural grandeur - CAMERA: cinematic orbit around landscape feature, low-to-high altitude rising reveal - VISUAL STYLE: soft atmospheric haze, crisp environmental textures, ultra high resolution detail",
+    "timestamp": "2026-04-17T07:48:06.987Z",
+    "status": "pending"
+  },
+  {
+    "prompt": " - SPECIES: Red-tailed Hawk (Buteo jamaicensis) - BEHAVIOR: Wading through shallow wetlands in search of food - HABITAT: Snowy plains of the northern tundra - LIGHTING: Moonlight glistening on a calm northern lake - MODIFIERS: Cinematic wildlife photography, Low-angle perspective from a hidden camera trap, Handheld documentary style, Aerial drone view over wilderness - ENHANCERS: vibrant natural colors, perfect composition, hyper-realistic textures",
+    "timestamp": "2026-04-17T07:56:56.271Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Pronghorn (Antilocapra americana) - BEHAVIOR: Grazing across a vast prairie under open skies - HABITAT: Yellowstone wilderness valleys - LIGHTING: Golden sunset casting long shadows over the prairie - MODIFIERS: Slow motion 120fps capture, Low-angle perspective from a hidden camera trap, Macro detail on fur and feathers, Sharp focus on the animal's eyes - ENHANCERS: hyper-realistic textures, award-winning nature photography, intricate fur and feather detail",
+    "timestamp": "2026-04-17T07:57:55.738Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Northern Cardinal (Cardinalis cardinalis) - BEHAVIOR: Strutting proudly through open woodland clearings - HABITAT: Open woodlands of the eastern United States - LIGHTING: Crisp winter daylight under a clear blue sky - MODIFIERS: Sharp focus on the animal's eyes, Low-angle perspective from a hidden camera trap, Macro detail on fur and feathers, Shallow depth of field with natural background - ENHANCERS: vibrant natural colors, hyper-realistic textures, BBC Planet Earth quality",
+    "timestamp": "2026-04-17T07:59:01.464Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Elk (Cervus canadensis) - BEHAVIOR: Charging across open grassland with thunderous force - HABITAT: Yellowstone wilderness valleys - LIGHTING: Dappled sunlight through dense woodland canopy - MODIFIERS: Low-angle perspective from a hidden camera trap, Slow motion 120fps capture, Aerial drone view over wilderness, Handheld documentary style - ENHANCERS: vibrant natural colors, award-winning nature photography, 8K ultra-high resolution",
+    "timestamp": "2026-04-17T08:00:04.543Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Snowy Owl (Bubo scandiacus) - BEHAVIOR: Diving at incredible speed toward unsuspecting prey - HABITAT: Wetlands and marshes across North America - LIGHTING: Soft dawn light illuminating a misty forest - MODIFIERS: Slow motion 120fps capture, Macro detail on fur and feathers, Sharp focus on the animal's eyes, Telephoto lens compression - ENHANCERS: 8K ultra-high resolution, vibrant natural colors, BBC Planet Earth quality",
+    "timestamp": "2026-04-17T08:01:12.172Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: North American Beaver (Castor canadensis) - BEHAVIOR: Gliding silently through murky swamp waters - HABITAT: Wetlands of the Great Lakes region - LIGHTING: Dappled sunlight through dense woodland canopy - MODIFIERS: Aerial drone view over wilderness, Telephoto lens compression, Shallow depth of field with natural background, Macro detail on fur and feathers - ENHANCERS: 8K ultra-high resolution, vibrant natural colors, volumetric light and atmosphere",
+    "timestamp": "2026-04-17T08:02:13.147Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Coyote (Canis latrans) - BEHAVIOR: Leaping gracefully across frozen terrain - HABITAT: Remote Yukon wilderness - LIGHTING: Warm autumn light filtering through colorful foliage - MODIFIERS: Handheld documentary style, Low-angle perspective from a hidden camera trap, Telephoto lens compression, Shallow depth of field with natural background - ENHANCERS: vibrant natural colors, BBC Planet Earth quality, volumetric light and atmosphere",
+    "timestamp": "2026-04-17T08:03:13.312Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Great Blue Heron (Ardea herodias) - BEHAVIOR: Basking motionless on a sunlit riverbank - HABITAT: Wetlands of the Great Lakes region - LIGHTING: Crisp winter daylight under a clear blue sky - MODIFIERS: Sharp focus on the animal's eyes, Handheld documentary style, Cinematic wildlife photography, Macro detail on fur and feathers - ENHANCERS: award-winning nature photography, hyper-realistic textures, perfect composition",
+    "timestamp": "2026-04-17T08:04:18.607Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Manatee (Trichechus manatus) - BEHAVIOR: Wading slowly through shallow wetlands - HABITAT: Slow-moving rivers of the Mississippi Basin - LIGHTING: Cool blue twilight over a quiet mountain valley - MODIFIERS: Low-angle perspective from a hidden camera trap, Sharp focus on the animal's eyes, Cinematic wildlife photography, Handheld documentary style - ENHANCERS: 8K ultra-high resolution, BBC Planet Earth quality, hyper-realistic textures",
+    "timestamp": "2026-04-17T08:05:19.619Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Grizzly Bear (Ursus arctos horribilis) - BEHAVIOR: Locking antlers in a powerful territorial clash - HABITAT: Rocky Mountain alpine meadows - LIGHTING: Crisp winter daylight under a clear blue sky - MODIFIERS: Shallow depth of field with natural background, Cinematic wildlife photography, Macro detail on fur and feathers, Sharp focus on the animal's eyes - ENHANCERS: volumetric light and atmosphere, hyper-realistic textures, award-winning nature photography",
+    "timestamp": "2026-04-17T08:06:29.035Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Peregrine Falcon (Falco peregrinus) - BEHAVIOR: Soaring high above rugged cliffs on thermal currents - HABITAT: Grasslands of the Midwest - LIGHTING: Cool blue twilight over a quiet mountain valley - MODIFIERS: Handheld documentary style, Aerial drone view over wilderness, Macro detail on fur and feathers, Shallow depth of field with natural background - ENHANCERS: intricate fur and feather detail, vibrant natural colors, BBC Planet Earth quality",
+    "timestamp": "2026-04-17T08:07:35.531Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Pronghorn (Antilocapra americana) - BEHAVIOR: Locking antlers in a powerful territorial clash - HABITAT: Dense boreal forests of Canada - LIGHTING: Bright midday sun reflecting off snow-covered ground - MODIFIERS: Aerial drone view over wilderness, Cinematic wildlife photography, Macro detail on fur and feathers, Slow motion 120fps capture - ENHANCERS: 8K ultra-high resolution, BBC Planet Earth quality, hyper-realistic textures",
+    "timestamp": "2026-04-17T08:08:33.217Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Gray Wolf (Canis lupus) - BEHAVIOR: Locking antlers in a powerful territorial clash - HABITAT: Rocky Mountain alpine meadows - LIGHTING: Crisp winter daylight under a clear blue sky - MODIFIERS: Handheld documentary style, Cinematic wildlife photography, Aerial drone view over wilderness, Macro detail on fur and feathers - ENHANCERS: vibrant natural colors, intricate fur and feather detail, award-winning nature photography",
+    "timestamp": "2026-04-17T08:09:33.325Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Red Fox (Vulpes vulpes) - BEHAVIOR: Darting swiftly between snow-covered rocks - HABITAT: Glacial valleys of northern Canada - LIGHTING: Cool blue twilight over a quiet mountain valley - MODIFIERS: Low-angle perspective from a hidden camera trap, Handheld documentary style, Sharp focus on the animal's eyes, Macro detail on fur and feathers - ENHANCERS: intricate fur and feather detail, volumetric light and atmosphere, hyper-realistic textures",
+    "timestamp": "2026-04-17T08:10:39.266Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Manatee (Trichechus manatus) - BEHAVIOR: Floating lazily in warm coastal waters - HABITAT: Cold mountain streams of the Rockies - LIGHTING: Moonlight glistening on a calm northern lake - MODIFIERS: Cinematic wildlife photography, Aerial drone view over wilderness, Sharp focus on the animal's eyes, Low-angle perspective from a hidden camera trap - ENHANCERS: 8K ultra-high resolution, BBC Planet Earth quality, hyper-realistic textures",
+    "timestamp": "2026-04-17T08:11:47.807Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: River Otter (Lontra canadensis) - BEHAVIOR: Wading slowly through shallow wetlands - HABITAT: Slow-moving rivers of the Mississippi Basin - LIGHTING: Cool blue twilight over a quiet mountain valley - MODIFIERS: Cinematic wildlife photography, Macro detail on fur and feathers, Handheld documentary style, Shallow depth of field with natural background - ENHANCERS: 8K ultra-high resolution, BBC Planet Earth quality, hyper-realistic textures",
+    "timestamp": "2026-04-17T08:12:56.081Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Bobcat (Lynx rufus) - BEHAVIOR: Diving beneath icy waters in pursuit of fish - HABITAT: Remote Yukon wilderness - LIGHTING: Cool blue twilight over a quiet mountain valley - MODIFIERS: Handheld documentary style, Macro detail on fur and feathers, Cinematic wildlife photography, Shallow depth of field with natural background - ENHANCERS: 8K ultra-high resolution, volumetric light and atmosphere, award-winning nature photography",
+    "timestamp": "2026-04-17T08:13:58.230Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Moose (Alces alces) - BEHAVIOR: Leading a herd across a misty valley at dawn - HABITAT: Temperate forests of the Pacific Northwest - LIGHTING: Soft dawn light illuminating a misty forest - MODIFIERS: Cinematic wildlife photography, Shallow depth of field with natural background, Low-angle perspective from a hidden camera trap, Sharp focus on the animal's eyes - ENHANCERS: award-winning nature photography, hyper-realistic textures, perfect composition",
+    "timestamp": "2026-04-17T08:14:59.546Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Wolverine (Gulo gulo) - BEHAVIOR: Howling into the cold night air - HABITAT: Frozen sea ice of the Arctic Ocean - LIGHTING: Warm autumn light filtering through colorful foliage - MODIFIERS: Telephoto lens compression, Cinematic wildlife photography, Handheld documentary style, Aerial drone view over wilderness - ENHANCERS: intricate fur and feather detail, hyper-realistic textures, BBC Planet Earth quality",
+    "timestamp": "2026-04-17T08:16:08.410Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: American Alligator (Alligator mississippiensis) - BEHAVIOR: Wading slowly through shallow wetlands - HABITAT: Slow-moving rivers of the Mississippi Basin - LIGHTING: Dappled sunlight through dense woodland canopy - MODIFIERS: Cinematic wildlife photography, Macro detail on fur and feathers, Handheld documentary style, Sharp focus on the animal's eyes - ENHANCERS: perfect composition, award-winning nature photography, vibrant natural colors",
+    "timestamp": "2026-04-17T08:17:08.422Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A chubby corgi wearing a tiny business suit frantically typing on a laptop in a chaotic corporate office, papers flying everywhere, with a stressed expression and coffee spilling",
+    "timestamp": "2026-04-18T12:31:20.666Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "A chubby corgi wearing a tiny business suit frantically typing on a laptop in a chaotic corporate office, papers flying everywhere, with a stressed expression and coffee spilling",
+    "timestamp": "2026-04-18T12:31:43.425Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A majestic lion attempting to do yoga on a crowded beach at sunrise, awkwardly tangled in a yoga mat while nearby seagulls watch in confusion",
+    "timestamp": "2026-04-18T12:32:41.406Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A penguin chef in a gourmet kitchen dramatically flipping pancakes too high, causing a stack to splatter onto the ceiling, looking both proud and shocked",
+    "timestamp": "2026-04-18T12:33:46.324Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A group of raccoons dressed as burglars unsuccessfully trying to sneak into a brightly lit bakery, tripping over each other and knocking over bread displays",
+    "timestamp": "2026-04-18T12:34:43.409Z",
+    "status": "success"
+  },
+  {
+    "prompt": "An octopus juggling rubber ducks while floating in a bathtub spaceship drifting through outer space, with a delighted and focused expression",
+    "timestamp": "2026-04-18T12:35:46.095Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A grumpy cat dressed as a medieval knight struggling to mount a tiny pony in a castle courtyard, surrounded by amused villagers",
+    "timestamp": "2026-04-18T12:36:53.480Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A giraffe crammed into a tiny elevator, neck bent at an impossible angle, awkwardly pressing buttons with its tongue",
+    "timestamp": "2026-04-18T12:37:57.820Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A golden retriever acting as a lifeguard at a busy pool, wearing sunglasses and blowing a whistle while chasing after a runaway beach ball",
+    "timestamp": "2026-04-18T12:38:56.122Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A dramatic peacock throwing a tantrum in a fashion runway backstage area, feathers tangled in clothing racks and assistants panicking",
+    "timestamp": "2026-04-18T12:39:53.774Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A sloth working at a fast-food drive-thru, moving painfully slow while an increasingly impatient line of cars forms behind",
+    "timestamp": "2026-04-18T12:40:53.131Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A frog dressed as a detective in a rainy noir city, dramatically inspecting a tiny puddle with a magnifying glass",
+    "timestamp": "2026-04-18T12:41:50.827Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A panda attempting to do stand-up comedy on stage, holding a microphone while nervously reading jokes from its paw as the audience watches",
+    "timestamp": "2026-04-18T12:42:55.283Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A hyperactive squirrel running a chaotic coffee shop, accidentally launching cups of coffee everywhere with an over-energetic espresso machine",
+    "timestamp": "2026-04-18T12:43:52.347Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A flamingo ice skating gracefully until it slips into an exaggerated spin, wings flailing dramatically in a crowded rink",
+    "timestamp": "2026-04-18T12:44:47.526Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A turtle wearing a jetpack zooming far too fast through a quiet suburban neighborhood, knocking over garden gnomes",
+    "timestamp": "2026-04-18T12:45:50.021Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A group of goats hosting a cooking show in a rustic kitchen, eating all the ingredients mid-recipe with mischievous expressions",
+    "timestamp": "2026-04-18T12:46:44.809Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A husky DJ at a nightclub, howling into a microphone while spinning records and hyping up a dancing crowd",
+    "timestamp": "2026-04-18T12:47:41.455Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A koala office worker asleep at a desk buried in paperwork, still clutching a coffee mug while coworkers carry on around it",
+    "timestamp": "2026-04-18T12:48:37.315Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A parrot acting as a news anchor in a professional studio, loudly interrupting itself mid-broadcast with random squawks",
+    "timestamp": "2026-04-18T12:49:36.191Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A tiny hamster piloting a massive construction crane, accidentally stacking objects into a wildly unstable tower while looking overly confident",
+    "timestamp": "2026-04-18T12:50:32.897Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A troop of monkeys sneaking around a haunted house",
+    "timestamp": "2026-04-18T12:54:40.280Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A highly detailed, photorealistic scene of a lion in a modern corporate office, interacting seriously with humans, captured with natural lighting, realistic textures, depth of field, and cinematic composition, showing authentic environmental details, lifelike fur or skin, subtle shadows, and believable interaction with the surroundings, as the situation unfolds in a slightly absurd yet realistic way",
+    "timestamp": "2026-04-18T13:02:21.767Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A highly detailed, photorealistic scene of a golden retriever in a nightclub with neon lights, interacting seriously with humans, captured with natural lighting, realistic textures, depth of field, and cinematic composition, showing authentic environmental details, lifelike fur or skin, subtle shadows, and believable interaction with the surroundings, as the situation unfolds in a slightly absurd yet realistic way",
+    "timestamp": "2026-04-18T13:03:21.598Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A highly detailed, photorealistic scene of a lion in a modern corporate office, failing at multitasking, captured with natural lighting, realistic textures, depth of field, and cinematic composition, showing authentic environmental details, lifelike fur or skin, subtle shadows, and believable interaction with the surroundings, as the situation unfolds in a slightly absurd yet realistic way",
+    "timestamp": "2026-04-18T13:04:21.208Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A highly detailed, photorealistic scene of a koala in a high-end restaurant kitchen, failing at multitasking, captured with natural lighting, realistic textures, depth of field, and cinematic composition, showing authentic environmental details, lifelike fur or skin, subtle shadows, and believable interaction with the surroundings, as the situation unfolds in a slightly absurd yet realistic way",
+    "timestamp": "2026-04-18T13:06:25.915Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A highly detailed, photorealistic scene of a elephant in a luxury fashion runway, overreacting dramatically to small problems, captured with natural lighting, realistic textures, depth of field, and cinematic composition, showing authentic environmental details, lifelike fur or skin, subtle shadows, and believable interaction with the surroundings, as the situation unfolds in a slightly absurd yet realistic way",
+    "timestamp": "2026-04-18T13:07:30.474Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A highly detailed, photorealistic scene of a parrot in a art studio, overreacting dramatically to small problems, captured with natural lighting, realistic textures, depth of field, and cinematic composition, showing authentic environmental details, lifelike fur or skin, subtle shadows, and believable interaction with the surroundings, as the situation unfolds in a slightly absurd yet realistic way",
+    "timestamp": "2026-04-18T13:08:32.877Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A highly detailed, photorealistic scene of a tabby cat in a crowded subway train, trying to stay calm while everything goes wrong, captured with natural lighting, realistic textures, depth of field, and cinematic composition, showing authentic environmental details, lifelike fur or skin, subtle shadows, and believable interaction with the surroundings, as the situation unfolds in a slightly absurd yet realistic way",
+    "timestamp": "2026-04-18T13:09:35.554Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A highly detailed, photorealistic scene of a sloth in a rainy city street at night, creating a chain of accidents, captured with natural lighting, realistic textures, depth of field, and cinematic composition, showing authentic environmental details, lifelike fur or skin, subtle shadows, and believable interaction with the surroundings, as the situation unfolds in a slightly absurd yet realistic way",
+    "timestamp": "2026-04-18T13:10:35.894Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A highly detailed, photorealistic scene of a hamster in a rooftop café, causing subtle chaos while working, captured with natural lighting, realistic textures, depth of field, and cinematic composition, showing authentic environmental details, lifelike fur or skin, subtle shadows, and believable interaction with the surroundings, as the situation unfolds in a slightly absurd yet realistic way",
+    "timestamp": "2026-04-18T13:11:36.822Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A highly detailed, photorealistic scene of a owl in a TV studio, trying to behave professionally, captured with natural lighting, realistic textures, depth of field, and cinematic composition, showing authentic environmental details, lifelike fur or skin, subtle shadows, and believable interaction with the surroundings, as the situation unfolds in a slightly absurd yet realistic way",
+    "timestamp": "2026-04-18T13:12:39.169Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A highly detailed, photorealistic scene of a owl in a nightclub with neon lights, attempting precise work but making mistakes, captured with natural lighting, realistic textures, depth of field, and cinematic composition, showing authentic environmental details, lifelike fur or skin, subtle shadows, and believable interaction with the surroundings, as the situation unfolds in a slightly absurd yet realistic way",
+    "timestamp": "2026-04-18T13:13:48.132Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A highly detailed, photorealistic scene of a tabby cat in a art studio, struggling to operate equipment, captured with natural lighting, realistic textures, depth of field, and cinematic composition, showing authentic environmental details, lifelike fur or skin, subtle shadows, and believable interaction with the surroundings, as the situation unfolds in a slightly absurd yet realistic way",
+    "timestamp": "2026-04-18T13:14:48.923Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A highly detailed, photorealistic scene of a elephant in a TV studio, trying to stay calm while everything goes wrong, captured with natural lighting, realistic textures, depth of field, and cinematic composition, showing authentic environmental details, lifelike fur or skin, subtle shadows, and believable interaction with the surroundings, as the situation unfolds in a slightly absurd yet realistic way",
+    "timestamp": "2026-04-18T13:15:48.856Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A highly detailed, photorealistic scene of a flamingo in a classroom lecture hall, struggling to operate equipment, captured with natural lighting, realistic textures, depth of field, and cinematic composition, showing authentic environmental details, lifelike fur or skin, subtle shadows, and believable interaction with the surroundings, as the situation unfolds in a slightly absurd yet realistic way",
+    "timestamp": "2026-04-18T13:16:51.778Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A highly detailed, photorealistic scene of a owl in a modern corporate office, trying to behave professionally, captured with natural lighting, realistic textures, depth of field, and cinematic composition, showing authentic environmental details, lifelike fur or skin, subtle shadows, and believable interaction with the surroundings, as the situation unfolds in a slightly absurd yet realistic way",
+    "timestamp": "2026-04-18T13:17:58.378Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A highly detailed, photorealistic scene of a sloth in a beach at sunrise, trying to behave professionally, captured with natural lighting, realistic textures, depth of field, and cinematic composition, showing authentic environmental details, lifelike fur or skin, subtle shadows, and believable interaction with the surroundings, as the situation unfolds in a slightly absurd yet realistic way",
+    "timestamp": "2026-04-18T13:19:00.562Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A highly detailed, photorealistic scene of a tabby cat in a luxury fashion runway, causing subtle chaos while working, captured with natural lighting, realistic textures, depth of field, and cinematic composition, showing authentic environmental details, lifelike fur or skin, subtle shadows, and believable interaction with the surroundings, as the situation unfolds in a slightly absurd yet realistic way",
+    "timestamp": "2026-04-18T13:20:01.819Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A highly detailed, photorealistic scene of a raccoon in a luxury fashion runway, awkwardly attempting to perform human tasks, captured with natural lighting, realistic textures, depth of field, and cinematic composition, showing authentic environmental details, lifelike fur or skin, subtle shadows, and believable interaction with the surroundings, as the situation unfolds in a slightly absurd yet realistic way",
+    "timestamp": "2026-04-18T13:21:09.552Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A highly detailed, photorealistic scene of a frog in a construction site, attempting precise work but making mistakes, captured with natural lighting, realistic textures, depth of field, and cinematic composition, showing authentic environmental details, lifelike fur or skin, subtle shadows, and believable interaction with the surroundings, as the situation unfolds in a slightly absurd yet realistic way",
+    "timestamp": "2026-04-18T13:22:10.319Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A highly detailed, photorealistic scene of a golden retriever in a art studio, struggling to operate equipment, captured with natural lighting, realistic textures, depth of field, and cinematic composition, showing authentic environmental details, lifelike fur or skin, subtle shadows, and believable interaction with the surroundings, as the situation unfolds in a slightly absurd yet realistic way",
+    "timestamp": "2026-04-18T13:23:10.530Z",
+    "status": "error",
+    "error": "Waiting failed"
+  },
+  {
+    "prompt": "ANIMAL: Lion - ACTION: trying to dance smoothly but causing chaos - LOCATION: glow party with UV lighting - REACTION: audience clapping and shouting - STYLE: quick cuts synced to music, YouTube Shorts format - TONE: unexpected comedic timing, crowd hype atmosphere",
+    "timestamp": "2026-04-18T13:29:35.784Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Flamingo - ACTION: jumping repeatedly to the rhythm - LOCATION: dance battle circle in a club - REACTION: people stepping back in disbelief - STYLE: handheld phone camera, quick cuts synced to music - TONE: wild and unpredictable, intense party energy",
+    "timestamp": "2026-04-18T13:30:32.903Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Lion - ACTION: jumping repeatedly to the rhythm - LOCATION: warehouse rave with fog machines - REACTION: people stepping back in disbelief - STYLE: club lighting effects, cinematic lighting with neon glow - TONE: unexpected comedic timing, high energy nightlife vibe",
+    "timestamp": "2026-04-18T13:31:32.955Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Octopus - ACTION: trying to dance smoothly but causing chaos - LOCATION: warehouse rave with fog machines - REACTION: friends reacting with excitement - STYLE: dynamic camera movement, YouTube Shorts format - TONE: funny viral energy, chaotic dance moment",
+    "timestamp": "2026-04-18T13:32:40.610Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Gorilla - ACTION: doing exaggerated slow motion dance moves - LOCATION: glow party with UV lighting - REACTION: friends reacting with excitement - STYLE: camera zoom on key dance moments, vertical video, TikTok style - TONE: wild and unpredictable, crowd hype atmosphere",
+    "timestamp": "2026-04-18T13:33:46.656Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Gorilla - ACTION: randomly switching dance styles mid-song - LOCATION: warehouse rave with fog machines - REACTION: audience clapping and shouting - STYLE: handheld phone camera, club lighting effects - TONE: wild and unpredictable, high energy nightlife vibe",
+    "timestamp": "2026-04-18T13:34:44.713Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Seal - ACTION: performing dramatic spins and twirls - LOCATION: open-air concert crowd - REACTION: people stepping back in disbelief - STYLE: quick cuts synced to music, camera zoom on key dance moments - TONE: meme-worthy performance, crowd hype atmosphere",
+    "timestamp": "2026-04-18T13:35:46.101Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Kangaroo - ACTION: freestyling energetically in the middle of the crowd - LOCATION: underground techno rave - REACTION: DJ reacting in shock - STYLE: loopable ending, dynamic camera movement - TONE: crowd hype atmosphere, unexpected comedic timing",
+    "timestamp": "2026-04-18T13:36:45.590Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Bear - ACTION: copying humans dancing nearby - LOCATION: crowded bar dance floor - REACTION: crowd cheering loudly - STYLE: YouTube Shorts format, cinematic lighting with neon glow - TONE: chaotic dance moment, funny viral energy",
+    "timestamp": "2026-04-18T13:37:44.918Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Elephant - ACTION: dancing like a professional DJ hype performer - LOCATION: crowded bar dance floor - REACTION: dancers forming a circle around the animal - STYLE: camera zoom on key dance moments, handheld phone camera - TONE: crowd hype atmosphere, meme-worthy performance",
+    "timestamp": "2026-04-18T13:38:41.868Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Penguin - ACTION: spinning uncontrollably during the beat drop - LOCATION: retro disco dance floor - REACTION: DJ reacting in shock - STYLE: dynamic camera movement, camera zoom on key dance moments - TONE: meme-worthy performance, intense party energy",
+    "timestamp": "2026-04-18T13:39:47.790Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Hippo - ACTION: spinning uncontrollably during the beat drop - LOCATION: massive arena concert floor - REACTION: friends reacting with excitement - STYLE: quick cuts synced to music, slow motion during beat drop - TONE: high energy nightlife vibe, funny viral energy",
+    "timestamp": "2026-04-18T13:40:51.226Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Hippo - ACTION: doing exaggerated slow motion dance moves - LOCATION: glow party with UV lighting - REACTION: people stepping back in disbelief - STYLE: vertical video, TikTok style, YouTube Shorts format - TONE: intense party energy, funny viral energy",
+    "timestamp": "2026-04-18T13:41:48.489Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Penguin - ACTION: performing dramatic spins and twirls - LOCATION: DJ booth area surrounded by dancers - REACTION: everyone laughing and hyping it up - STYLE: quick cuts synced to music, slow motion during beat drop - TONE: high energy nightlife vibe, funny viral energy",
+    "timestamp": "2026-04-18T13:42:51.183Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Alligator - ACTION: dancing like a professional DJ hype performer - LOCATION: silent disco with headphones - REACTION: audience clapping and shouting - STYLE: club lighting effects, loopable ending - TONE: chaotic dance moment, intense party energy",
+    "timestamp": "2026-04-18T13:43:52.331Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Eagle - ACTION: freestyling energetically in the middle of the crowd - LOCATION: glow party with UV lighting - REACTION: friends reacting with excitement - STYLE: vertical video, TikTok style, slow motion during beat drop - TONE: unexpected comedic timing, high energy nightlife vibe",
+    "timestamp": "2026-04-18T13:44:57.703Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Kangaroo - ACTION: dancing wildly to loud electronic music - LOCATION: outdoor music festival at night - REACTION: crowd going wild during the performance - STYLE: cinematic lighting with neon glow, handheld phone camera - TONE: high energy nightlife vibe, intense party energy",
+    "timestamp": "2026-04-18T13:45:53.994Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Rhino - ACTION: dancing aggressively in a circle like a dance battle - LOCATION: underground techno rave - REACTION: people filming on their phones - STYLE: camera zoom on key dance moments, quick cuts synced to music - TONE: intense party energy, meme-worthy performance",
+    "timestamp": "2026-04-18T13:46:56.008Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ANIMAL: Giraffe - ACTION: attempting synchronized choreography and failing - LOCATION: outdoor music festival at night - REACTION: crowd going wild during the performance - STYLE: cinematic lighting with neon glow, handheld phone camera - TONE: high energy nightlife vibe, funny viral energy",
+    "timestamp": "2026-04-18T13:47:59.019Z",
+    "status": "error",
+    "error": "Waiting failed"
+  },
+  {
+    "prompt": "Photorealistic video of a Penguin inside an underground techno rave with strobe lighting, performing repeated rhythmic motions that resemble dancing, surrounded by humans in a realistic nightlife setting, people adjusting positions to avoid the animal, cinematic lighting with natural shadows, dynamic exposure shifts from flashing lights, captured on a 50mm lens, with physically accurate lighting, high detail fur and skin rendering, cinematic realism, natural movement, believable anatomy, realistic physics, no cartoon style, real-world documentary footage feel",
+    "timestamp": "2026-04-18T13:50:10.428Z",
+    "status": "success"
+  },
+  {
+    "prompt": "Photorealistic video of a Rhino inside an underground techno rave with strobe lighting, moving unpredictably but in sync with the music energy, surrounded by humans in a realistic nightlife setting, nearby dancers watching and reacting naturally, slight camera shake from handheld filming, motion blur during fast movement, close-up framing with background compression, with natural color grading, physically accurate lighting, cinematic realism, natural movement, believable anatomy, realistic physics, no cartoon style, real-world documentary footage feel",
+    "timestamp": "2026-04-18T13:51:59.643Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "Photorealistic video of a Cheetah inside a luxury VIP nightclub with laser lighting and dark ambiance, reacting instinctively to sound and vibration in a dance-like motion, surrounded by humans in a realistic nightlife setting, people reacting with genuine surprise and stepping back, slight camera shake from handheld filming, cinematic lighting with natural shadows, wide angle lens with slight distortion, with ultra photorealistic textures, high detail fur and skin rendering, natural color grading, natural movement, believable anatomy, realistic physics, no cartoon style, real-world documentary footage feel",
+    "timestamp": "2026-04-18T13:54:09.227Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "Photorealistic video of a Hippo inside a beach party at sunset transitioning into night lighting, awkwardly attempting human dance movements while maintaining animal posture, surrounded by humans in a realistic nightlife setting, crowd forming space around the animal instinctively, slight camera shake from handheld filming, shallow depth of field with realistic focus falloff, captured on a 50mm lens, with lifelike motion and physics, ultra photorealistic textures, high detail fur and skin rendering, natural movement, believable anatomy, realistic physics, no cartoon style, real-world documentary footage feel",
+    "timestamp": "2026-04-18T13:56:19.474Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "Photorealistic video of a Wolf inside a beach party at sunset transitioning into night lighting, moving rhythmically to loud electronic music with surprisingly natural body motion, surrounded by humans in a realistic nightlife setting, people reacting with genuine surprise and stepping back, shot on handheld smartphone camera, shallow depth of field with realistic focus falloff, captured on a 50mm lens, with lifelike motion and physics, high detail fur and skin rendering, ultra photorealistic textures, natural movement, believable anatomy, realistic physics, no cartoon style, real-world documentary footage feel",
+    "timestamp": "2026-04-18T13:58:29.607Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "Photorealistic video of a Rhino inside a large outdoor music festival at night with stage lights, awkwardly attempting human dance movements while maintaining animal posture, surrounded by humans in a realistic nightlife setting, crowd forming space around the animal instinctively, cinematic lighting with natural shadows, dynamic exposure shifts from flashing lights, captured on a 50mm lens, with physically accurate lighting, high detail fur and skin rendering, cinematic realism, natural movement, believable anatomy, realistic physics, no cartoon style, real-world documentary footage feel",
+    "timestamp": "2026-04-18T14:00:23.557Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "Photorealistic video of a Koala inside a warehouse rave with industrial lighting and haze, shifting weight and swaying to the beat under flashing lights, surrounded by humans in a realistic nightlife setting, people adjusting positions to avoid the animal, dynamic exposure shifts from flashing lights, low-light high ISO grain typical of nightlife footage, close-up framing with background compression, with realistic environmental interaction, physically accurate lighting, natural color grading, natural movement, believable anatomy, realistic physics, no cartoon style, real-world documentary footage feel",
+    "timestamp": "2026-04-18T14:02:17.388Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "Photorealistic video of a Owl inside an underground techno rave with strobe lighting, mirroring nearby dancers with slightly off-timing movements, surrounded by humans in a realistic nightlife setting, people reacting with genuine surprise and stepping back, dynamic exposure shifts from flashing lights, shallow depth of field with realistic focus falloff, captured on a 35mm lens, with natural color grading, lifelike motion and physics, cinematic realism, natural movement, believable anatomy, realistic physics, no cartoon style, real-world documentary footage feel",
+    "timestamp": "2026-04-18T14:04:13.074Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "Photorealistic video of a Lion inside a warehouse rave with industrial lighting and haze, moving rhythmically to loud electronic music with surprisingly natural body motion, surrounded by humans in a realistic nightlife setting, people adjusting positions to avoid the animal, dynamic exposure shifts from flashing lights, shallow depth of field with realistic focus falloff, close-up framing with background compression, with natural color grading, realistic environmental interaction, physically accurate lighting, natural movement, believable anatomy, realistic physics, no cartoon style, real-world documentary footage feel",
+    "timestamp": "2026-04-18T14:06:07.568Z",
+    "status": "success"
+  },
+  {
+    "prompt": "Photorealistic video of a Giraffe inside a rooftop nightclub overlooking a realistic city skyline, mirroring nearby dancers with slightly off-timing movements, surrounded by humans in a realistic nightlife setting, nearby dancers watching and reacting naturally, slight camera shake from handheld filming, dynamic exposure shifts from flashing lights, wide angle lens with slight distortion, with ultra photorealistic textures, realistic environmental interaction, physically accurate lighting, natural movement, believable anatomy, realistic physics, no cartoon style, real-world documentary footage feel",
+    "timestamp": "2026-04-18T14:07:54.167Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "Photorealistic video of a Crocodile inside a rooftop nightclub overlooking a realistic city skyline, moving rhythmically to loud electronic music with surprisingly natural body motion, surrounded by humans in a realistic nightlife setting, DJ briefly noticing and reacting while continuing performance, slight camera shake from handheld filming, low-light high ISO grain typical of nightlife footage, close-up framing with background compression, with cinematic realism, ultra photorealistic textures, high detail fur and skin rendering, natural movement, believable anatomy, realistic physics, no cartoon style, real-world documentary footage feel",
+    "timestamp": "2026-04-18T14:09:48.914Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "Photorealistic video of a Tiger inside a large outdoor music festival at night with stage lights, shifting weight and swaying to the beat under flashing lights, surrounded by humans in a realistic nightlife setting, subtle facial expressions of confusion and excitement, dynamic exposure shifts from flashing lights, low-light high ISO grain typical of nightlife footage, captured on a 35mm lens, with physically accurate lighting, high detail fur and skin rendering, lifelike motion and physics, natural movement, believable anatomy, realistic physics, no cartoon style, real-world documentary footage feel",
+    "timestamp": "2026-04-18T14:11:43.215Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "Photorealistic video of a Flamingo inside a luxury VIP nightclub with laser lighting and dark ambiance, mirroring nearby dancers with slightly off-timing movements, surrounded by humans in a realistic nightlife setting, crowd members recording on smartphones with realistic motion blur, shot on handheld smartphone camera, lens flare from stage lighting, captured on a 50mm lens, with lifelike motion and physics, realistic environmental interaction, ultra photorealistic textures, natural movement, believable anatomy, realistic physics, no cartoon style, real-world documentary footage feel",
+    "timestamp": "2026-04-18T14:13:37.364Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "Photorealistic video of a Brown Bear inside a crowded nightclub with neon lights and dense fog, performing repeated rhythmic motions that resemble dancing, surrounded by humans in a realistic nightlife setting, DJ briefly noticing and reacting while continuing performance, slight camera shake from handheld filming, shot on handheld smartphone camera, captured on a 35mm lens, with natural color grading, high detail fur and skin rendering, physically accurate lighting, natural movement, believable anatomy, realistic physics, no cartoon style, real-world documentary footage feel",
+    "timestamp": "2026-04-18T14:15:31.549Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "Photorealistic video of a Orangutan inside a retro disco dance floor with reflective surfaces, responding to crowd energy with heightened physical movement, surrounded by humans in a realistic nightlife setting, DJ briefly noticing and reacting while continuing performance, dynamic exposure shifts from flashing lights, slight camera shake from handheld filming, wide angle lens with slight distortion, with high detail fur and skin rendering, ultra photorealistic textures, physically accurate lighting, natural movement, believable anatomy, realistic physics, no cartoon style, real-world documentary footage feel",
+    "timestamp": "2026-04-18T14:17:43.610Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "Photorealistic video of a Wolf inside a warehouse rave with industrial lighting and haze, shifting weight and swaying to the beat under flashing lights, surrounded by humans in a realistic nightlife setting, people adjusting positions to avoid the animal, shot on handheld smartphone camera, shallow depth of field with realistic focus falloff, captured on a 50mm lens, with ultra photorealistic textures, high detail fur and skin rendering, lifelike motion and physics, natural movement, believable anatomy, realistic physics, no cartoon style, real-world documentary footage feel",
+    "timestamp": "2026-04-18T14:19:37.526Z",
+    "status": "success"
+  },
+  {
+    "prompt": "Photorealistic video of a Rhino inside a rooftop nightclub overlooking a realistic city skyline, awkwardly attempting human dance movements while maintaining animal posture, surrounded by humans in a realistic nightlife setting, people adjusting positions to avoid the animal, dynamic exposure shifts from flashing lights, slight camera shake from handheld filming, captured on a 50mm lens, with lifelike motion and physics, cinematic realism, natural color grading, natural movement, believable anatomy, realistic physics, no cartoon style, real-world documentary footage feel",
+    "timestamp": "2026-04-18T14:21:25.565Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "Photorealistic video of a Crocodile inside a luxury VIP nightclub with laser lighting and dark ambiance, shifting weight and swaying to the beat under flashing lights, surrounded by humans in a realistic nightlife setting, security cautiously observing from a distance, low-light high ISO grain typical of nightlife footage, slight camera shake from handheld filming, close-up framing with background compression, with natural color grading, high detail fur and skin rendering, realistic environmental interaction, natural movement, believable anatomy, realistic physics, no cartoon style, real-world documentary footage feel",
+    "timestamp": "2026-04-18T14:23:20.513Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "Photorealistic video of a Hippo inside an underground techno rave with strobe lighting, making subtle but rhythmic movements reacting to bass vibrations, surrounded by humans in a realistic nightlife setting, people reacting with genuine surprise and stepping back, dynamic exposure shifts from flashing lights, low-light high ISO grain typical of nightlife footage, captured on a 50mm lens, with cinematic realism, ultra photorealistic textures, high detail fur and skin rendering, natural movement, believable anatomy, realistic physics, no cartoon style, real-world documentary footage feel",
+    "timestamp": "2026-04-18T14:25:31.770Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": "Photorealistic video of a Polar Bear inside a rooftop nightclub overlooking a realistic city skyline, mirroring nearby dancers with slightly off-timing movements, surrounded by humans in a realistic nightlife setting, subtle facial expressions of confusion and excitement, shot on handheld smartphone camera, shallow depth of field with realistic focus falloff, captured on a 50mm lens, with lifelike motion and physics, high detail fur and skin rendering, physically accurate lighting, natural movement, believable anatomy, realistic physics, no cartoon style, real-world documentary footage feel",
+    "timestamp": "2026-04-18T14:27:27.167Z",
+    "status": "error",
+    "error": "Waiting for selector `button[aria-label=\"Download\"]` failed"
+  },
+  {
+    "prompt": " - SPECIES: Spotted Hyena (Crocuta crocuta) - BEHAVIOR: Running quickly with its tail held high in the air - HABITAT: Burrow-filled open plains - LIGHTING: Moonlit savanna with a vast, starry Milky Way above - MODIFIERS: Low-angle perspective from a hidden camera trap, Handheld documentary style, Slow motion 120fps capture, Aerial drone view over a migration - ENHANCERS: 8K ultra-high resolution, BBC Planet Earth quality, volumetric dust and light",
+    "timestamp": "2026-04-20T09:22:02.370Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: African Leopard (Panthera pardus pardus) - BEHAVIOR: Emerging from the water in a sudden territorial display - HABITAT: The steep, forested walls of the Ngorongoro Crater - LIGHTING: Dramatic silhouette against a blood-red African sunset - MODIFIERS: Low-angle perspective from a hidden camera trap, Slow motion 120fps capture, Macro detail on fur and whiskers, Telephoto lens compression - ENHANCERS: award-winning nature photography, BBC Planet Earth quality, volumetric dust and light",
+    "timestamp": "2026-04-20T09:23:08.820Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Red-billed Oxpecker (Buphagus erythrorhynchus) - BEHAVIOR: Sprinting across the flat plains at incredible speed - HABITAT: Top of a flat-topped acacia tree - LIGHTING: Dappled sunlight through the leaves of a fever tree forest - MODIFIERS: National Geographic wildlife cinematography, Macro detail on fur and whiskers, Shallow depth of field with soft savanna background, Aerial drone view over a migration - ENHANCERS: intricate skin and scale detail, award-winning nature photography, hyper-realistic textures",
+    "timestamp": "2026-04-20T09:24:10.574Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: White Rhinoceros (Ceratotherium simum) - BEHAVIOR: Leading a herd through a dust storm on the open plains - HABITAT: Baobab-studded landscape of Tarangire - LIGHTING: Golden hour sun low on the horizon, glowing through the dust - MODIFIERS: National Geographic wildlife cinematography, Macro detail on fur and whiskers, Shallow depth of field with soft savanna background, Sharp focus on the predator's eyes - ENHANCERS: hyper-realistic textures, perfect composition, 8K ultra-high resolution",
+    "timestamp": "2026-04-20T09:25:13.976Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Oryx / Gemsbok (Oryx gazella) - BEHAVIOR: Sprinting in a high-speed blur across the savanna - HABITAT: Hilly grasslands of the Maasai Mara - LIGHTING: Dramatic silhouette against a blood-red African sunset - MODIFIERS: Handheld documentary style, National Geographic wildlife cinematography, Telephoto lens compression, Sharp focus on the predator's eyes - ENHANCERS: hyper-realistic textures, intricate skin and scale detail, BBC Planet Earth quality",
+    "timestamp": "2026-04-20T09:26:23.662Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Black-backed Jackal (Lupulella mesomelas) - BEHAVIOR: Standing on sentry duty at the entrance of a burrow - HABITAT: Rocky outcrops and kopjes - LIGHTING: Warm, orange glow of a campfire illuminating the foreground - MODIFIERS: Sharp focus on the predator's eyes, Aerial drone view over a migration, Slow motion 120fps capture, Macro detail on fur and whiskers - ENHANCERS: 8K ultra-high resolution, BBC Planet Earth quality, hyper-realistic textures",
+    "timestamp": "2026-04-20T09:27:30.900Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Springbok (Antidorcas marsupialis) - BEHAVIOR: Huddling together in a tight group to confuse predators - HABITAT: Dense mopane woodland - LIGHTING: Dappled sunlight through the leaves of a fever tree forest - MODIFIERS: Low-angle perspective from a hidden camera trap, Shallow depth of field with soft savanna background, Sharp focus on the predator's eyes, Macro detail on fur and whiskers - ENHANCERS: perfect composition, award-winning nature photography, hyper-realistic textures",
+    "timestamp": "2026-04-20T09:28:39.990Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Serval (Leptailurus serval) - BEHAVIOR: Fearlessly facing off against a much larger predator - HABITAT: Burrow-filled open plains - LIGHTING: Soft dawn light with rising heat haze - MODIFIERS: Shallow depth of field with soft savanna background, Aerial drone view over a migration, Handheld documentary style, Low-angle perspective from a hidden camera trap - ENHANCERS: vibrant natural colors, intricate skin and scale detail, 8K ultra-high resolution",
+    "timestamp": "2026-04-20T09:29:48.660Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Hippopotamus (Hippopotamus amphibius) - BEHAVIOR: Engaging in a powerful display of dominance - HABITAT: The steep, forested walls of the Ngorongoro Crater - LIGHTING: Moonlit savanna with a vast, starry Milky Way above - MODIFIERS: Macro detail on fur and whiskers, Low-angle perspective from a hidden camera trap, Aerial drone view over a migration, Telephoto lens compression - ENHANCERS: 8K ultra-high resolution, vibrant natural colors, award-winning nature photography",
+    "timestamp": "2026-04-20T09:30:51.511Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Thompson's Gazelle (Eudorcas thomsonii) - BEHAVIOR: Standing perfectly still and alert in the thicket - HABITAT: Dry savanna with scattered whistling thorn trees - LIGHTING: Harsh midday sun creating high-contrast shadows under acacia trees - MODIFIERS: Low-angle perspective from a hidden camera trap, Sharp focus on the predator's eyes, Slow motion 120fps capture, Aerial drone view over a migration - ENHANCERS: intricate skin and scale detail, 8K ultra-high resolution, volumetric dust and light",
+    "timestamp": "2026-04-20T09:32:04.486Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Black-backed Jackal (Lupulella mesomelas) - BEHAVIOR: Running quickly with its tail held high in the air - HABITAT: Tall yellow elephant grass - LIGHTING: Soft dawn light with rising heat haze - MODIFIERS: Slow motion 120fps capture, Aerial drone view over a migration, Macro detail on fur and whiskers, National Geographic wildlife cinematography - ENHANCERS: volumetric dust and light, 8K ultra-high resolution, BBC Planet Earth quality",
+    "timestamp": "2026-04-20T09:33:03.836Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Oryx / Gemsbok (Oryx gazella) - BEHAVIOR: Performing spectacular high leaps into the air - HABITAT: Dry savanna with scattered whistling thorn trees - LIGHTING: Cool, blue twilight with a rising full moon - MODIFIERS: Sharp focus on the predator's eyes, Telephoto lens compression, Low-angle perspective from a hidden camera trap, National Geographic wildlife cinematography - ENHANCERS: 8K ultra-high resolution, BBC Planet Earth quality, hyper-realistic textures",
+    "timestamp": "2026-04-20T09:34:15.040Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Lilac-breasted Roller (Coracias caudatus) - BEHAVIOR: Sprinting across the flat plains at incredible speed - HABITAT: Open sky over the savanna - LIGHTING: Dappled sunlight through the leaves of a fever tree forest - MODIFIERS: Slow motion 120fps capture, Telephoto lens compression, Low-angle perspective from a hidden camera trap, Shallow depth of field with soft savanna background - ENHANCERS: 8K ultra-high resolution, volumetric dust and light, perfect composition",
+    "timestamp": "2026-04-20T09:35:15.301Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Grey Crowned Crane (Balearica regulorum) - BEHAVIOR: Engaging in an elegant and complex courtship dance - HABITAT: Tall grass hiding ground-dwelling birds - LIGHTING: Harsh midday sun creating high-contrast shadows under acacia trees - MODIFIERS: National Geographic wildlife cinematography, Aerial drone view over a migration, Macro detail on fur and whiskers, Telephoto lens compression - ENHANCERS: BBC Planet Earth quality, award-winning nature photography, 8K ultra-high resolution",
+    "timestamp": "2026-04-20T09:36:20.078Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Aardvark (Orycteropus afer) - BEHAVIOR: Trotting through the tall grass in search of food scraps - HABITAT: Burrow-filled open plains - LIGHTING: Stormy sky over the plains - MODIFIERS: Slow motion 120fps capture, Macro detail on fur and whiskers, National Geographic wildlife cinematography, Aerial drone view over a migration - ENHANCERS: vibrant natural colors, intricate skin and scale detail, BBC Planet Earth quality",
+    "timestamp": "2026-04-20T09:37:29.506Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Ostrich (Struthio camelus) - BEHAVIOR: Circling high above on warm thermal updrafts - HABITAT: Open sky over the savanna - LIGHTING: Cool, blue twilight with a rising full moon - MODIFIERS: Low-angle perspective from a hidden camera trap, National Geographic wildlife cinematography, Macro detail on fur and whiskers, Shallow depth of field with soft savanna background - ENHANCERS: perfect composition, 8K ultra-high resolution, BBC Planet Earth quality",
+    "timestamp": "2026-04-20T09:38:33.152Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Greater Kudu (Tragelaphus strepsiceros) - BEHAVIOR: Standing perfectly still and alert in the thicket - HABITAT: Riverine forest edges - LIGHTING: Dramatic silhouette against a blood-red African sunset - MODIFIERS: Low-angle perspective from a hidden camera trap, Aerial drone view over a migration, Slow motion 120fps capture, Macro detail on fur and whiskers - ENHANCERS: hyper-realistic textures, volumetric dust and light, BBC Planet Earth quality",
+    "timestamp": "2026-04-20T09:39:33.556Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Masai Giraffe (Giraffa tippelskirchi) - BEHAVIOR: Leading a herd through a dust storm on the open plains - HABITAT: The lush, water-logged channels of the Okavango Delta - LIGHTING: Soft dawn light with rising heat haze - MODIFIERS: Aerial drone view over a migration, Shallow depth of field with soft savanna background, National Geographic wildlife cinematography, Slow motion 120fps capture - ENHANCERS: volumetric dust and light, vibrant natural colors, hyper-realistic textures",
+    "timestamp": "2026-04-20T09:40:33.449Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Plains Zebra (Equus quagga) - BEHAVIOR: Casting a sharp silhouette against a vibrant desert sunset - HABITAT: Riverine forest edges - LIGHTING: Moonlit savanna with a vast, starry Milky Way above - MODIFIERS: Slow motion 120fps capture, Macro detail on fur and whiskers, Low-angle perspective from a hidden camera trap, Telephoto lens compression - ENHANCERS: BBC Planet Earth quality, award-winning nature photography, volumetric dust and light",
+    "timestamp": "2026-04-20T09:41:38.619Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Cheetah (Acinonyx jubatus) - BEHAVIOR: Standing perfectly still and alert in the thicket - HABITAT: Short-grass plains stretching to the horizon - LIGHTING: Harsh midday sun creating high-contrast shadows under acacia trees - MODIFIERS: Slow motion 120fps capture, Shallow depth of field with soft savanna background, Low-angle perspective from a hidden camera trap, Handheld documentary style - ENHANCERS: 8K ultra-high resolution, BBC Planet Earth quality, hyper-realistic textures",
+    "timestamp": "2026-04-20T09:42:46.769Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: untouched delta wetlands in Australia, blanketed in soft atmospheric haze - TIME: bright midday clarity - MOTION: snow blowing across high ridgelines - MOOD: peaceful cinematic serenity - CAMERA: slow forward drone glide, low-to-high altitude rising reveal - VISUAL STYLE: gentle motion blur from drone movement, crisp environmental textures, high dynamic range lighting",
+    "timestamp": "2026-04-20T10:23:17.768Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: cinematic high plateau in South Korea, covered in vibrant natural colors - TIME: golden hour sunset - MOTION: waves rolling gently toward the shore - MOOD: calm reflective stillness - CAMERA: top-down vertical reveal shot, low-to-high altitude rising reveal - VISUAL STYLE: soft atmospheric haze, ultra high resolution detail, volumetric sunlight rays",
+    "timestamp": "2026-04-20T10:24:21.533Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: golden high plateau in Sri Lanka, covered in vibrant natural colors - TIME: soft pastel sunrise - MOTION: shadows stretching as the sun sets - MOOD: calm reflective stillness - CAMERA: top-down vertical reveal shot, gradual pullback revealing massive scale - VISUAL STYLE: soft atmospheric haze, gentle motion blur from drone movement, ultra high resolution detail",
+    "timestamp": "2026-04-20T10:25:22.486Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Dolomites mountain peaks, Italy - TIME: bright midday clarity - MOTION: wind rippling across tall grass - MOOD: awe-inspiring natural grandeur - CAMERA: slow forward drone glide, high-altitude aerial panorama - VISUAL STYLE: crisp environmental textures, volumetric sunlight rays, gentle motion blur from drone movement",
+    "timestamp": "2026-04-20T10:26:27.354Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: otherworldly coastal cliffs in USA, with dramatic shadows stretching across terrain - TIME: soft pastel sunrise - MOTION: shadows stretching as the sun sets - MOOD: epic sense of scale - CAMERA: long sweeping side-to-side flyover, slow forward drone glide - VISUAL STYLE: volumetric sunlight rays, ultra high resolution detail, crisp environmental textures",
+    "timestamp": "2026-04-20T10:27:35.575Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Mount Fuji, Japan - TIME: dramatic storm-light skies - MOTION: clouds drifting slowly through valleys - MOOD: calm reflective stillness - CAMERA: top-down vertical reveal shot, cinematic orbit around landscape feature - VISUAL STYLE: soft atmospheric haze, crisp environmental textures, natural cinematic color grading",
+    "timestamp": "2026-04-20T10:28:41.062Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Hallstatt alpine village, Austria - TIME: golden hour sunset - MOTION: fog lifting to reveal the landscape - MOOD: calm reflective stillness - CAMERA: top-down vertical reveal shot, low-to-high altitude rising reveal - VISUAL STYLE: volumetric sunlight rays, soft atmospheric haze, ultra high resolution detail",
+    "timestamp": "2026-04-20T10:29:49.932Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Acropolis overlooking Athens, Greece - TIME: golden hour sunset - MOTION: shadows stretching as the sun sets - MOOD: calm reflective stillness - CAMERA: long sweeping side-to-side flyover, top-down vertical reveal shot - VISUAL STYLE: high dynamic range lighting, soft atmospheric haze, volumetric sunlight rays",
+    "timestamp": "2026-04-20T10:30:56.492Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: vast alpine lake in New Zealand, glowing under golden hour light - TIME: blue hour twilight - MOTION: waves rolling gently toward the shore - MOOD: awe-inspiring natural grandeur - CAMERA: slow forward drone glide, gradual pullback revealing massive scale - VISUAL STYLE: volumetric sunlight rays, gentle motion blur from drone movement, ultra high resolution detail",
+    "timestamp": "2026-04-20T10:31:53.577Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: remote mountain range in India, surrounded by crystal-clear water - TIME: soft pastel sunrise - MOTION: clouds drifting slowly through valleys - MOOD: majestic untouched beauty - CAMERA: top-down vertical reveal shot, slow forward drone glide - VISUAL STYLE: soft atmospheric haze, volumetric sunlight rays, gentle motion blur from drone movement",
+    "timestamp": "2026-04-20T10:32:55.363Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: breathtaking tropical island in Chile, blanketed in soft atmospheric haze - TIME: moody overcast afternoon - MOTION: wind rippling across tall grass - MOOD: dreamlike wanderlust atmosphere - CAMERA: top-down vertical reveal shot, high-altitude aerial panorama - VISUAL STYLE: gentle motion blur from drone movement, volumetric sunlight rays, crisp environmental textures",
+    "timestamp": "2026-04-20T10:34:04.863Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: otherworldly coastal cliffs in Greece, with sunlight reflecting across surfaces - TIME: moody overcast afternoon - MOTION: clouds drifting slowly through valleys - MOOD: awe-inspiring natural grandeur - CAMERA: top-down vertical reveal shot, low-to-high altitude rising reveal - VISUAL STYLE: volumetric sunlight rays, high dynamic range lighting, ultra high resolution detail",
+    "timestamp": "2026-04-20T10:35:09.408Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Antelope Canyon, USA - TIME: soft pastel sunrise - MOTION: waterfalls thundering into deep pools - MOOD: calm reflective stillness - CAMERA: slow forward drone glide, top-down vertical reveal shot - VISUAL STYLE: soft atmospheric haze, volumetric sunlight rays, gentle motion blur from drone movement",
+    "timestamp": "2026-04-20T10:36:16.684Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: breathtaking alpine lake in Kenya, revealed through lifting fog - TIME: bright midday clarity - MOTION: shadows stretching as the sun sets - MOOD: dreamlike wanderlust atmosphere - CAMERA: gradual pullback revealing massive scale, slow forward drone glide - VISUAL STYLE: gentle motion blur from drone movement, crisp environmental textures, high dynamic range lighting",
+    "timestamp": "2026-04-20T10:37:18.615Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: majestic glacial lagoon in Tanzania, with sunlight reflecting across surfaces - TIME: soft pastel sunrise - MOTION: wind rippling across tall grass - MOOD: peaceful cinematic serenity - CAMERA: top-down vertical reveal shot, low-to-high altitude rising reveal - VISUAL STYLE: high dynamic range lighting, crisp environmental textures, gentle motion blur from drone movement",
+    "timestamp": "2026-04-20T10:38:28.196Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Geirangerfjord, Norway - TIME: blue hour twilight - MOTION: sunlight glittering across ocean surfaces - MOOD: peaceful cinematic serenity - CAMERA: gradual pullback revealing massive scale, cinematic orbit around landscape feature - VISUAL STYLE: high dynamic range lighting, soft atmospheric haze, natural cinematic color grading",
+    "timestamp": "2026-04-20T10:39:34.697Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Moraine Lake, Canada - TIME: blue hour twilight - MOTION: fog lifting to reveal the landscape - MOOD: majestic untouched beauty - CAMERA: high-altitude aerial panorama, low-to-high altitude rising reveal - VISUAL STYLE: volumetric sunlight rays, soft atmospheric haze, ultra high resolution detail",
+    "timestamp": "2026-04-20T10:40:32.460Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: cinematic river canyon in Iceland, covered in vibrant natural colors - TIME: bright midday clarity - MOTION: shadows stretching as the sun sets - MOOD: dreamlike wanderlust atmosphere - CAMERA: slow forward drone glide, low-to-high altitude rising reveal - VISUAL STYLE: crisp environmental textures, high dynamic range lighting, soft atmospheric haze",
+    "timestamp": "2026-04-20T10:41:36.974Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: otherworldly delta wetlands in China, with dramatic shadows stretching across terrain - TIME: moody overcast afternoon - MOTION: snow blowing across high ridgelines - MOOD: dreamlike wanderlust atmosphere - CAMERA: low-to-high altitude rising reveal, top-down vertical reveal shot - VISUAL STYLE: high dynamic range lighting, volumetric sunlight rays, ultra high resolution detail",
+    "timestamp": "2026-04-20T10:42:38.033Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: untouched high plateau in Nepal, surrounded by crystal-clear water - TIME: moody overcast afternoon - MOTION: clouds drifting slowly through valleys - MOOD: dreamlike wanderlust atmosphere - CAMERA: long sweeping side-to-side flyover, top-down vertical reveal shot - VISUAL STYLE: volumetric sunlight rays, gentle motion blur from drone movement, ultra high resolution detail",
+    "timestamp": "2026-04-20T10:43:39.561Z",
+    "status": "success"
   }
 ]
