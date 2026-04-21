@@ -125,12 +125,21 @@ if (!fs.existsSync(destinationDir)) {
             await page.keyboard.press('Backspace');
             await input.type(currentPrompt, { delay: 10 });
 
+
+
+
             await page.waitForSelector('[data-slot="select-trigger"]');
 
             const triggers = await page.$$('[data-slot="select-trigger"]');
             if (triggers.length >= 2) {
                 await triggers[1].click();
             }
+
+                        const options = await page.$$('[role="option"]');
+            // defaults to vertical if not clicked
+            await options[2].click();
+
+            //await page.evaluate(() => {debugger;});
 
             await page.click('button[aria-label="Send"]');
 
