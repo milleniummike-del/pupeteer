@@ -6,6 +6,7 @@ const videos = require('./videos.js');
 const directory = require('./directory.js');
 
 const TRACKER_FILE = 'prompt_tracker.json';
+const DEBUG=false;
 
 function loadTracker() {
     if (fs.existsSync(TRACKER_FILE)) {
@@ -56,7 +57,7 @@ console.log(destinationDir);
             headless: false,
             defaultViewport: { width: 1920, height: 1080 },
             args: ["--no-sandbox"],
-            devtools: true
+            devtools: DEBUG
         });
 
         const page = (await browser.pages())[0];

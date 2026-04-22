@@ -14,7 +14,6 @@ function getTodayDateFormatted() {
     return `${year}${month}${day}`;
 }
 
-
 function getTodayDateFormatted() {
     const today = new Date();
     const year = today.getFullYear();

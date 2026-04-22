@@ -5671,5 +5671,89 @@
     "prompt": " - SPECIES: Caracal (Caracal caracal) - BEHAVIOR: Running quickly with its tail held high in the air - HABITAT: Burrow-filled open plains - LIGHTING: Soft dawn light with rising heat haze - MODIFIERS: National Geographic wildlife cinematography, Telephoto lens compression, Aerial drone view over a migration, Macro detail on fur and whiskers - ENHANCERS: intricate skin and scale detail, volumetric dust and light, vibrant natural colors",
     "timestamp": "2026-04-22T07:58:52.784Z",
     "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Marabou Stork (Leptoptilos crumenifer) - BEHAVIOR: Circling high above on warm thermal updrafts - HABITAT: Top of a flat-topped acacia tree - LIGHTING: Warm, orange glow of a campfire illuminating the foreground - MODIFIERS: Slow motion 120fps capture, Macro detail on fur and whiskers, Handheld documentary style, National Geographic wildlife cinematography - ENHANCERS: BBC Planet Earth quality, award-winning nature photography, 8K ultra-high resolution",
+    "timestamp": "2026-04-22T08:00:01.180Z",
+    "status": "error",
+    "error": "Waiting failed: 120000ms exceeded"
+  },
+  {
+    "prompt": " - SPECIES: Cheetah (Acinonyx jubatus) - BEHAVIOR: Standing perfectly still and alert in the thicket - HABITAT: Hilly grasslands of the Maasai Mara - LIGHTING: Harsh midday sun creating high-contrast shadows under acacia trees - MODIFIERS: Aerial drone view over a migration, Handheld documentary style, Macro detail on fur and whiskers, National Geographic wildlife cinematography - ENHANCERS: 8K ultra-high resolution, BBC Planet Earth quality, volumetric dust and light",
+    "timestamp": "2026-04-22T08:13:44.345Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Lappet-faced Vulture (Torgos tracheliotos) - BEHAVIOR: Sprinting across the flat plains at incredible speed - HABITAT: Reeds at the edge of a watering hole - LIGHTING: Dramatic silhouette against a blood-red African sunset - MODIFIERS: Slow motion 120fps capture, Handheld documentary style, Shallow depth of field with soft savanna background, Macro detail on fur and whiskers - ENHANCERS: BBC Planet Earth quality, 8K ultra-high resolution, perfect composition",
+    "timestamp": "2026-04-22T08:14:53.406Z",
+    "status": "error",
+    "error": "Waiting failed: 120000ms exceeded"
+  },
+  {
+    "prompt": " - SPECIES: Thompson's Gazelle (Eudorcas thomsonii) - BEHAVIOR: Casting a sharp silhouette against a vibrant desert sunset - HABITAT: Vast salt pans of the Etosha - LIGHTING: Moonlit savanna with a vast, starry Milky Way above - MODIFIERS: National Geographic wildlife cinematography, Macro detail on fur and whiskers, Shallow depth of field with soft savanna background, Sharp focus on the predator's eyes - ENHANCERS: award-winning nature photography, intricate skin and scale detail, 8K ultra-high resolution",
+    "timestamp": "2026-04-22T08:17:21.259Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Greater Kudu (Tragelaphus strepsiceros) - BEHAVIOR: Standing perfectly still and alert in the thicket - HABITAT: Dry savanna with scattered whistling thorn trees - LIGHTING: Warm, orange glow of a campfire illuminating the foreground - MODIFIERS: National Geographic wildlife cinematography, Shallow depth of field with soft savanna background, Macro detail on fur and whiskers, Slow motion 120fps capture - ENHANCERS: 8K ultra-high resolution, perfect composition, award-winning nature photography",
+    "timestamp": "2026-04-22T08:18:33.452Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Blue Wildebeest (Connochaetes taurinus) - BEHAVIOR: Performing spectacular high leaps into the air - HABITAT: Vast salt pans of the Etosha - LIGHTING: Warm, orange glow of a campfire illuminating the foreground - MODIFIERS: Sharp focus on the predator's eyes, Shallow depth of field with soft savanna background, Handheld documentary style, Aerial drone view over a migration - ENHANCERS: vibrant natural colors, award-winning nature photography, perfect composition",
+    "timestamp": "2026-04-22T08:19:43.109Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Plains Zebra (Equus quagga) - BEHAVIOR: Navigating a chaotic river crossing during migration - HABITAT: Dense mopane woodland - LIGHTING: Golden hour sun low on the horizon, glowing through the dust - MODIFIERS: Aerial drone view over a migration, National Geographic wildlife cinematography, Telephoto lens compression, Handheld documentary style - ENHANCERS: perfect composition, award-winning nature photography, volumetric dust and light",
+    "timestamp": "2026-04-22T08:20:47.218Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Grey Crowned Crane (Balearica regulorum) - BEHAVIOR: Performing a series of dazzling aerial acrobatic displays - HABITAT: Tall grass hiding ground-dwelling birds - LIGHTING: Stormy sky over the plains - MODIFIERS: Macro detail on fur and whiskers, Low-angle perspective from a hidden camera trap, Telephoto lens compression, Shallow depth of field with soft savanna background - ENHANCERS: 8K ultra-high resolution, vibrant natural colors, award-winning nature photography",
+    "timestamp": "2026-04-22T08:21:58.501Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Aardvark (Orycteropus afer) - BEHAVIOR: Trotting through the tall grass in search of food scraps - HABITAT: Dry riverbeds with sandy bottoms - LIGHTING: Harsh midday sun creating high-contrast shadows under acacia trees - MODIFIERS: National Geographic wildlife cinematography, Telephoto lens compression, Aerial drone view over a migration, Low-angle perspective from a hidden camera trap - ENHANCERS: hyper-realistic textures, BBC Planet Earth quality, volumetric dust and light",
+    "timestamp": "2026-04-22T08:24:35.718Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A seamless loop of a crystal shard made of diamond morphing into another shape and back into its original form, fluid motion, glossy reflective material, soft shadows, glow lighting, no jump cuts, no visible start or end frame, 4K",
+    "timestamp": "2026-04-22T08:28:40.630Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "A seamless loop of paper melting smoothly and reforming into its original shape, glossy texture, slow fluid motion, highly satisfying, macro shot, misty environment, no jump cuts, hypnotic visual rhythm, 4K",
+    "timestamp": "2026-04-22T08:30:37.493Z",
+    "status": "error",
+    "error": "Waiting failed: 120000ms exceeded"
+  },
+  {
+    "prompt": "A seamless loop of pine wood objects being crushed and instantly reforming, crisp textures, slow motion feel, highly satisfying, white studio background, no jump cuts, hypnotic visual rhythm, 4K",
+    "timestamp": "2026-04-22T08:32:54.221Z",
+    "status": "error",
+    "error": "Waiting failed: 120000ms exceeded"
+  },
+  {
+    "prompt": "A seamless loop of rusted metal objects being crushed and instantly reforming, crisp textures, slow motion feel, highly satisfying, neon-lit environment, perfectly centered composition, no jump cuts, 4K",
+    "timestamp": "2026-04-22T08:35:11.100Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "A perfectly seamless loop of a sharp knife slicing through paper, each slice regenerates instantly, smooth continuous motion, glossy texture, satisfying cutting rhythm, black void, perfectly centered composition, no visible start or end frame, 4K",
+    "timestamp": "2026-04-22T08:36:08.761Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A seamless loop of a rotating disc made of sponge morphing into another shape and back into its original form, fluid motion, glossy reflective material, soft shadows, studio lighting, no jump cuts, perfectly centered composition, 4K",
+    "timestamp": "2026-04-22T08:37:00.015Z",
+    "status": "success"
+  },
+  {
+    "prompt": "A seamless loop of a floating orb made of sugar glass morphing into another shape and back into its original form, fluid motion, glossy reflective material, soft shadows, cinematic lighting, perfectly centered composition, no visible start or end frame, 4K",
+    "timestamp": "2026-04-22T08:37:47.788Z",
+    "status": "pending"
   }
 ]
