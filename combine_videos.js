@@ -3,219 +3,175 @@ const path = require('path');
 const { spawn } = require('child_process');
 const directory = require('./directory.js');
 
-let destinationDir=directory.getPath();
+let destinationDir = directory.getPath();
 console.log("📂 Download folder:", destinationDir);
 
 const runCommand = (command, args) => {
-    return new Promise((resolve, reject) => {
-      const child = spawn(command, args);
-      let output = '';
+  return new Promise((resolve, reject) => {
+    const child = spawn(command, args);
+    let output = '';
 
-      child.stdout.on('data', (data) => {
-        output += data.toString();
-      });
-
-      child.stderr.on('data', (data) => {
-        // console.error(data.toString()); // Commenting out to reduce console noise
-      });
-
-      child.on('close', (code) => {
-        if (code === 0) {
-          resolve(output);
-        } else {
-          reject(new Error(`${command} process exited with code ${code}`));
-        }
-      });
+    child.stdout.on('data', (data) => {
+      output += data.toString();
     });
-  };
+
+    child.stderr.on('data', () => {});
+
+    child.on('close', (code) => {
+      if (code === 0) resolve(output);
+      else reject(new Error(`${command} exited with code ${code}`));
+    });
+  });
+};
 
 async function getVideoDuration(videoPath) {
-    try {
-        const ffprobeArgs = ['-v', 'error', '-show_entries', 'format=duration', '-of', 'default=noprint_wrappers=1:nokey=1', videoPath];
-        const durationStr = await runCommand('ffprobe', ffprobeArgs);
-        return parseFloat(durationStr);
-    } catch (error) {
-        console.error(`Error getting duration for ${videoPath}:`, error.message);
-        return 0;
+  try {
+    const args = [
+      '-v', 'error',
+      '-show_entries', 'format=duration',
+      '-of', 'default=noprint_wrappers=1:nokey=1',
+      videoPath
+    ];
+    const out = await runCommand('ffprobe', args);
+    return parseFloat(out);
+  } catch {
+    return 0;
+  }
+}
+
+// Trim individual video if >3 min
+async function processVideo(videoFile, targetDirectory, tempFiles) {
+  const duration = await getVideoDuration(videoFile);
+  const name = path.basename(videoFile);
+
+  if (duration > 180) {
+    const trimmedPath = path.join(targetDirectory, `temp_${name}`);
+
+    const args = [
+      '-y',
+      '-i', videoFile,
+      '-t', '175',
+      '-vf', 'fade=t=out:st=174.5:d=0.5',
+      '-af', 'afade=t=out:st=170:d=5',
+      '-c:v', 'libx264',
+      '-preset', 'fast',
+      '-crf', '23',
+      '-c:a', 'aac',
+      trimmedPath
+    ];
+
+    await runCommand('ffmpeg', args);
+    tempFiles.push(trimmedPath);
+    return { path: trimmedPath, duration: 175 };
+  }
+
+  return { path: videoFile, duration };
+}
+
+// Split into batches of maxDuration seconds
+function createBatches(videos, maxDuration) {
+  const batches = [];
+  let currentBatch = [];
+  let currentDuration = 0;
+
+  for (const vid of videos) {
+    if (currentDuration + vid.duration > maxDuration && currentBatch.length) {
+      batches.push(currentBatch);
+      currentBatch = [];
+      currentDuration = 0;
     }
+
+    currentBatch.push(vid);
+    currentDuration += vid.duration;
+  }
+
+  if (currentBatch.length) batches.push(currentBatch);
+
+  return batches;
+}
+
+async function combineBatch(batch, index, targetDirectory) {
+  const fileListPath = path.join(targetDirectory, `file_list_${index}.txt`);
+  const outputPath = path.join(targetDirectory, `combined_${index}.mp4`);
+
+  const content = batch
+    .map(v => `file '${v.path.replace(/'/g, "'\\''")}'`)
+    .join('\n');
+
+  fs.writeFileSync(fileListPath, content);
+
+  await runCommand('ffmpeg', [
+    '-y',
+    '-f', 'concat',
+    '-safe', '0',
+    '-i', fileListPath,
+    '-c', 'copy',
+    outputPath
+  ]);
+
+  fs.unlinkSync(fileListPath);
+
+  console.log(`✅ Created: combined_${index}.mp4`);
 }
 
 const combineVideos = async (targetDirectory) => {
   if (!fs.existsSync(targetDirectory)) {
-    console.error(`Error: Directory not found: ${targetDirectory}`);
-    process.exit(1);
-  }
-
-  const files = fs.readdirSync(targetDirectory);
-  const videoExtensions = ['.mp4', '.mov', '.mkv', '.webm', '.avi'];
-  let videoFiles = [];
-  let audioFile = null;
-  let tempFiles = [];
-
-  files.forEach(file => {
-    const ext = path.extname(file).toLowerCase();
-    if (videoExtensions.includes(ext)) {
-      videoFiles.push(path.join(targetDirectory, file));
-    } else if (ext === '.wav' || ext === '.mp3' ) {
-      audioFile = path.join(targetDirectory, file);
-    }
-  });
-
-  if (videoFiles.length === 0) {
-    console.log('No video files found to combine.');
+    console.error("Directory not found");
     return;
   }
 
-  console.log('Video files found to combine:' + videoFiles.length);
+  const files = fs.readdirSync(targetDirectory);
+  const videoExt = ['.mp4', '.mov', '.mkv', '.webm', '.avi'];
+
+  let videoFiles = [];
+  let tempFiles = [];
+
+  for (const file of files) {
+    if (videoExt.includes(path.extname(file).toLowerCase())) {
+      videoFiles.push(path.join(targetDirectory, file));
+    }
+  }
+
+  if (!videoFiles.length) {
+    console.log("No videos found");
+    return;
+  }
 
   videoFiles.sort();
 
-  const processedVideoFiles = [];
-  for (const videoFile of videoFiles) {
-      const duration = await getVideoDuration(videoFile);
-      const originalFileName = path.basename(videoFile);
+  console.log(`Found ${videoFiles.length} videos`);
 
-      if (duration > 180) { // 3 minutes
-          console.log(`Video ${originalFileName} is longer than 3 minutes (${duration.toFixed(2)}s). Trimming to 2m55s with audio fade.`);
-          const trimmedDuration = 175; // 2 minutes 55 seconds
-          const fadeDuration = 5;
-          const fadeStartTime = trimmedDuration - fadeDuration;
-          const tempTrimmedPath = path.join(targetDirectory, `temp_trimmed_${originalFileName}`);
-          
-          const ffmpegTrimArgs = [
-              '-y',
-              '-i', videoFile,
-              '-t', trimmedDuration.toString(),
-              '-vf', 'fade=t=out:st=' + (trimmedDuration - 0.5) + ':d=0.5', // Video fade out at the very end
-              '-af', 'afade=t=out:st=' + fadeStartTime + ':d=' + fadeDuration,
-              '-c:v', 'libx264', // Re-encode video to ensure fade works correctly
-              '-preset', 'fast',
-              '-crf', '23',
-              '-c:a', 'aac',
-              tempTrimmedPath
-          ];
-          await runCommand('ffmpeg', ffmpegTrimArgs);
-          processedVideoFiles.push(tempTrimmedPath);
-          tempFiles.push(tempTrimmedPath);
-      } else {
-          processedVideoFiles.push(videoFile);
-      }
+  // Step 1: preprocess videos
+  const processed = [];
+  for (const v of videoFiles) {
+    const result = await processVideo(v, targetDirectory, tempFiles);
+    processed.push(result);
   }
 
+  // Step 2: batch into 2-minute chunks
+  const batches = createBatches(processed, 120);
 
-  const outputVideoPath = path.join(targetDirectory, 'combined_video.mp4');
-  const fileListPath = path.join(targetDirectory, 'file_list.txt');
-  const fileListContent = processedVideoFiles.map(file => `file '${file.replace(/'/g, "'\\''")}'`).join('\n');
-  fs.writeFileSync(fileListPath, fileListContent);
+  console.log(`Creating ${batches.length} output videos`);
 
-  try {
-    const ffmpegArgs = ['-y', '-f', 'concat', '-safe', '0', '-i', fileListPath, '-c', 'copy', outputVideoPath];
-    await runCommand('ffmpeg', ffmpegArgs);
-    console.log('Videos combined successfully.');
-
-    // Get duration of the initially combined video
-    let currentCombinedVideoPath = outputVideoPath;
-    let combinedDuration = await getVideoDuration(currentCombinedVideoPath);
-
-    if (combinedDuration > 180) { // If combined video is longer than 3 minutes
-        console.log(`Combined video is longer than 3 minutes (${combinedDuration.toFixed(2)}s). Trimming to 2m55s with audio fade.`);
-        const finalTrimmedDuration = 175; // 2 minutes 55 seconds
-        const fadeDuration = 5;
-        const fadeStartTime = finalTrimmedDuration - fadeDuration;
-        const finalTempTrimmedPath = path.join(targetDirectory, `final_trimmed_combined_video.mp4`);
-
-        const ffmpegFinalTrimArgs = [
-            '-y',
-            '-i', currentCombinedVideoPath,
-            '-t', finalTrimmedDuration.toString(),
-            '-vf', 'fade=t=out:st=' + (finalTrimmedDuration - 0.5) + ':d=0.5', // Video fade out
-            '-af', 'afade=t=out:st=' + fadeStartTime + ':d=' + fadeDuration,
-            '-c:v', 'libx264',
-            '-preset', 'fast',
-            '-crf', '23',
-            '-c:a', 'aac',
-            finalTempTrimmedPath
-        ];
-        await runCommand('ffmpeg', ffmpegFinalTrimArgs);
-        console.log('Final combined video trimmed and faded successfully.');
-        
-        // If the original combined_video.mp4 was created, delete it and use the trimmed version
-        if (fs.existsSync(outputVideoPath) && outputVideoPath !== finalTempTrimmedPath) {
-            fs.unlinkSync(outputVideoPath);
-        }
-        currentCombinedVideoPath = finalTempTrimmedPath;
-        tempFiles.push(finalTempTrimmedPath); // Add to tempFiles for cleanup
-    }
-
-    if (audioFile) {
-      const audioDuration = await getVideoDuration(audioFile);
-      let duration = await getVideoDuration(currentCombinedVideoPath);
-
-      console.log(`Audio duration: ${audioDuration.toFixed(2)}s, Video duration: ${duration.toFixed(2)}s`);
-
-      if (duration > audioDuration) {
-          console.log(`Trimming video to match audio length (${audioDuration.toFixed(2)}s).`);
-          const videoToAudioTrimPath = path.join(targetDirectory, 'video_trimmed_to_audio.mp4');
-          const fadeDuration = Math.min(3, audioDuration / 2);
-          const fadeStartTime = audioDuration - fadeDuration;
-          
-          const trimArgs = [
-              '-y',
-              '-i', currentCombinedVideoPath,
-              '-t', audioDuration.toString(),
-              '-vf', `fade=t=out:st=${audioDuration - 0.5}:d=0.5`,
-              '-af', `afade=t=out:st=${fadeStartTime}:d=${fadeDuration}`,
-              '-c:v', 'libx264', '-preset', 'fast', '-crf', '23',
-              '-c:a', 'aac',
-              videoToAudioTrimPath
-          ];
-          await runCommand('ffmpeg', trimArgs);
-          
-          if (currentCombinedVideoPath !== outputVideoPath && fs.existsSync(currentCombinedVideoPath)) {
-              fs.unlinkSync(currentCombinedVideoPath);
-          }
-          currentCombinedVideoPath = videoToAudioTrimPath;
-          duration = audioDuration;
-          tempFiles.push(videoToAudioTrimPath);
-      }
-
-      console.log(`Final video duration for audio mixing: ${duration.toFixed(2)} seconds`);
-
-      // Trim audio
-      const trimmedAudioPath = path.join(targetDirectory, 'trimmed_audio.aac');
-      const fadeOutStartTime = Math.max(0, duration - 3);
-      const audioArgs = ['-y', '-i', audioFile, '-ss', '0', '-t', duration.toString(), '-af', `afade=t=out:st=${fadeOutStartTime}:d=3`, trimmedAudioPath];
-      await runCommand('ffmpeg', audioArgs);
-      console.log('Audio trimmed and faded successfully.');
-
-      // Combine video and trimmed audio
-      const videoWithAudioPath = path.join(targetDirectory, 'combined_video_with_audio.mp4');
-      const combineArgs = ['-y', '-i', currentCombinedVideoPath, '-i', trimmedAudioPath, '-c:v', 'copy', '-c:a', 'aac', '-map', '0:v:0', '-map', '1:a:0', videoWithAudioPath];
-      await runCommand('ffmpeg', combineArgs);
-      console.log('Audio added successfully. Final video:', videoWithAudioPath);
-
-      // Clean up intermediate files
-      if (currentCombinedVideoPath !== outputVideoPath) { // Only unlink if it's a temp file
-        fs.unlinkSync(currentCombinedVideoPath);
-      }
-      fs.unlinkSync(trimmedAudioPath);
-    } else {
-      console.log('Final video:', currentCombinedVideoPath);
-    }
-  } finally {
-    fs.unlinkSync(fileListPath);
-    for (const tempFile of tempFiles) {
-        if (fs.existsSync(tempFile)) { // Check if file exists before trying to unlink
-            fs.unlinkSync(tempFile);
-        }
-    }
+  // Step 3: combine each batch
+  let index = 1;
+  for (const batch of batches) {
+    await combineBatch(batch, index, targetDirectory);
+    index++;
   }
+
+  // Cleanup
+  for (const file of tempFiles) {
+    if (fs.existsSync(file)) fs.unlinkSync(file);
+  }
+
+  console.log("🎉 Done");
 };
 
 const targetDirectory = destinationDir;
 
 if (!targetDirectory) {
-  console.error('Usage: node combine_videos.js <targetDirectory>');
+  console.error("Missing directory");
   process.exit(1);
 }
 

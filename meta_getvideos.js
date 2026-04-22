@@ -2,7 +2,6 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
-const videos = require('./videos.js');
 const directory = require('./directory.js');
 
 const TRACKER_FILE = 'prompt_tracker.json';
@@ -46,7 +45,6 @@ function downloadVideo(url, outputPath) {
 
 let destinationDir = directory.getPath();
 console.log(destinationDir);
-
 
 (async () => {
     let browser;

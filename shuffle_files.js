@@ -2,22 +2,10 @@ const fs = require('fs');
 const path = require('path');
 const os = require('os');
 const hostname = os.hostname();
+const directory = require('./directory.js');
 
-function getTodayDateFormatted() {
-  const today = new Date();
-  const year = today.getFullYear();
-  const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
-  const day = String(today.getDate()).padStart(2, '0');
-  return `${year}${month}${day}`;
-}
-
-if (hostname === 'DESKTOP-QPNJTTJ') {
-    destinationDir = `F:\\AI\\Videos\\${getTodayDateFormatted()}`;
-    sourceDir = `??`;
-} else {
-    destinationDir = `C:\\Users\\mike_\\pupeteer\\videos\\${getTodayDateFormatted()}`;
-    sourceDir = `C:\\Users\\mike_\\Downloads`;
-}
+let destinationDir = directory.getPath();
+console.log(destinationDir);
 
 const shuffleFiles = (directoryPath) => {
   fs.readdir(directoryPath, (err, files) => {
