@@ -1,4 +1,4 @@
-const target='https://www.meta.ai/prompt/503b4a93-177b-48f4-8e49-e12213779a1a';
+const target='https://www.meta.ai/prompt/ff670a30-3c5a-4ad9-81fa-562100608888';
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');

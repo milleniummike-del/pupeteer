@@ -1,4 +1,4 @@
-$inputDir = "F:\AI\Videos\20260422\test"
+$inputDir = "F:\AI\Videos\20260422\glitchloop"
 $outputDir = "$inputDir\upscaled"
 
 if (!(Test-Path $outputDir)) {

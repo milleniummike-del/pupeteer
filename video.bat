@@ -1,1 +1,1 @@
-node .\prompts_castles.js;node .\meta_createvideos.js;node .\meta_getvideos.js;node .\shuffle_files.js;.\upscale.ps1
+node .\prompts_castles.js;node .\meta_createvideos.js; --> node .\meta_getvideos.js;.\upscale.ps1;node .\shuffle_files.js
