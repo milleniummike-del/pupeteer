@@ -65,7 +65,7 @@ console.log(destinationDir);
 
         const tracker = loadTracker();
 
-        await page.goto('https://www.meta.ai/prompt/f1225a36-d695-49df-b9c8-efd2ece84bf7');
+        await page.goto('https://www.meta.ai/prompt/234a5fef-55ff-4d3d-958d-144d0666537a');
 
         await new Promise(r => setTimeout(r, 8000));
  
