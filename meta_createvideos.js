@@ -6,7 +6,7 @@ const videos = require('./videos.js');
 const directory = require('./directory.js');
 
 const TRACKER_FILE = 'prompt_tracker.json';
-const DEBUG=false;
+const DEBUG = false;
 
 function loadTracker() {
     if (fs.existsSync(TRACKER_FILE)) {
@@ -64,6 +64,8 @@ console.log(destinationDir);
         await page.bringToFront();
 
         const tracker = loadTracker();
+        
+            await page.goto('https://www.meta.ai/');
 
         for (let v = 0; v < videos.length; v++) {
             const currentPrompt = videos[v];
@@ -75,7 +77,6 @@ console.log(destinationDir);
 
             console.log(`\n🎬 Prompt: ${currentPrompt}`);
 
-            await page.goto('https://www.meta.ai/');
             const textareaSelector = 'div[data-testid="composer-input"]';
             await page.waitForSelector(textareaSelector, { visible: true });
 
@@ -98,31 +99,7 @@ console.log(destinationDir);
             tracker.push(requestEntry);
             saveTracker(tracker);
 
-                await page.waitForSelector('video', { timeout: 180000 });
-
-                const videoUrl = await page.evaluate(() => {
-                    const video = document.querySelector('video');
-                    return video?.src;
-                });
-
-                if (!videoUrl) throw new Error("No video URL found");
-
-                console.log('🎥 Video URL:', videoUrl);
-
-                const safeName = currentPrompt
-                    .slice(0, 40)
-                    .replace(/[^a-z0-9]/gi, '_')
-                    .toLowerCase();
-
-                const filename = `${safeName}_${Date.now()}.mp4`;
-                const outputPath = path.join(destinationDir, filename);
-
-                console.log('⬇️ Downloading...');
-                await downloadVideo(videoUrl, outputPath);
-
-                console.log(`✅ Saved: ${filename}`);
-
-                requestEntry.status = 'success';
+            requestEntry.status = 'success';
 
             saveTracker(tracker);
 
