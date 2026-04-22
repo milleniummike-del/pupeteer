@@ -1,22 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 const { spawn } = require('child_process');
+const directory = require('./directory.js');
 
-function getTodayDateFormatted() {
-  const today = new Date();
-  const year = today.getFullYear();
-  const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
-  const day = String(today.getDate()).padStart(2, '0');
-  return `${year}${month}${day}`;
-}
-
-const environment=2;
-
-if(environment==1) {
-destinationDir = `C:\\Users\\Mike_\\pupeteer\\videos\\${getTodayDateFormatted()}`;
-} else {
-destinationDir = `F:\\AI\\Videos\\${getTodayDateFormatted()}`;
-}
+let destinationDir=directory.getPath();
 console.log("📂 Download folder:", destinationDir);
 
 const runCommand = (command, args) => {

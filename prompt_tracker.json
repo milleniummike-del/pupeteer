@@ -5629,5 +5629,47 @@
     "prompt": "A seamless loop of a slab made of pearlescent material morphing into another shape and back into its original form, fluid motion, glossy reflective material, soft shadows, volumetric lighting, perfectly centered composition, no visible start or end frame, 4K",
     "timestamp": "2026-04-21T11:42:41.307Z",
     "status": "pending"
+  },
+  {
+    "prompt": " - SPECIES: Cape Buffalo (Syncerus caffer) - BEHAVIOR: Engaging in a powerful display of dominance - HABITAT: Arid acacia scrubland of the Tsavo - LIGHTING: Warm, orange glow of a campfire illuminating the foreground - MODIFIERS: Slow motion 120fps capture, Telephoto lens compression, Sharp focus on the predator's eyes, Aerial drone view over a migration - ENHANCERS: perfect composition, volumetric dust and light, BBC Planet Earth quality",
+    "timestamp": "2026-04-22T07:41:13.433Z",
+    "status": "error",
+    "error": "Waiting for selector `video` failed"
+  },
+  {
+    "prompt": " - SPECIES: Masai Giraffe (Giraffa tippelskirchi) - BEHAVIOR: Leading a herd through a dust storm on the open plains - HABITAT: The steep, forested walls of the Ngorongoro Crater - LIGHTING: Dappled sunlight through the leaves of a fever tree forest - MODIFIERS: National Geographic wildlife cinematography, Sharp focus on the predator's eyes, Low-angle perspective from a hidden camera trap, Macro detail on fur and whiskers - ENHANCERS: perfect composition, 8K ultra-high resolution, volumetric dust and light",
+    "timestamp": "2026-04-22T07:45:13.836Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Nile Crocodile (Crocodylus niloticus) - BEHAVIOR: Kicking up thick dust in a defensive formation - HABITAT: The vast, golden plains of the Serengeti - LIGHTING: Moonlit savanna with a vast, starry Milky Way above - MODIFIERS: Low-angle perspective from a hidden camera trap, Handheld documentary style, National Geographic wildlife cinematography, Aerial drone view over a migration - ENHANCERS: hyper-realistic textures, award-winning nature photography, BBC Planet Earth quality",
+    "timestamp": "2026-04-22T07:46:22.680Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Grey Crowned Crane (Balearica regulorum) - BEHAVIOR: Using its powerful legs to strike at prey on the ground - HABITAT: Top of a flat-topped acacia tree - LIGHTING: Soft dawn light with rising heat haze - MODIFIERS: Low-angle perspective from a hidden camera trap, Handheld documentary style, Shallow depth of field with soft savanna background, Slow motion 120fps capture - ENHANCERS: award-winning nature photography, BBC Planet Earth quality, vibrant natural colors",
+    "timestamp": "2026-04-22T07:47:43.459Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Cheetah (Acinonyx jubatus) - BEHAVIOR: Galloping in a long, endless line across the horizon - HABITAT: Vast salt pans of the Etosha - LIGHTING: Warm, orange glow of a campfire illuminating the foreground - MODIFIERS: Slow motion 120fps capture, Macro detail on fur and whiskers, Telephoto lens compression, Sharp focus on the predator's eyes - ENHANCERS: vibrant natural colors, perfect composition, award-winning nature photography",
+    "timestamp": "2026-04-22T07:48:54.909Z",
+    "status": "error",
+    "error": "Waiting failed"
+  },
+  {
+    "prompt": " - SPECIES: Kori Bustard (Ardeotis kori) - BEHAVIOR: Performing a series of dazzling aerial acrobatic displays - HABITAT: Open sky over the savanna - LIGHTING: Stormy sky over the plains - MODIFIERS: National Geographic wildlife cinematography, Low-angle perspective from a hidden camera trap, Sharp focus on the predator's eyes, Telephoto lens compression - ENHANCERS: 8K ultra-high resolution, intricate skin and scale detail, vibrant natural colors",
+    "timestamp": "2026-04-22T07:56:36.853Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Caracal (Caracal caracal) - BEHAVIOR: Trotting through the tall grass in search of food scraps - HABITAT: Termite mound-dotted landscape - LIGHTING: Moonlit savanna with a vast, starry Milky Way above - MODIFIERS: Low-angle perspective from a hidden camera trap, Aerial drone view over a migration, National Geographic wildlife cinematography, Sharp focus on the predator's eyes - ENHANCERS: hyper-realistic textures, intricate skin and scale detail, award-winning nature photography",
+    "timestamp": "2026-04-22T07:57:45.391Z",
+    "status": "success"
+  },
+  {
+    "prompt": " - SPECIES: Caracal (Caracal caracal) - BEHAVIOR: Running quickly with its tail held high in the air - HABITAT: Burrow-filled open plains - LIGHTING: Soft dawn light with rising heat haze - MODIFIERS: National Geographic wildlife cinematography, Telephoto lens compression, Aerial drone view over a migration, Macro detail on fur and whiskers - ENHANCERS: intricate skin and scale detail, volumetric dust and light, vibrant natural colors",
+    "timestamp": "2026-04-22T07:58:52.784Z",
+    "status": "success"
   }
 ]

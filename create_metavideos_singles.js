@@ -1,29 +1,11 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');
-const os = require('os');
 const https = require('https');
 const videos = require('./videos.js');
+const directory = require('./directory.js');
 
 const TRACKER_FILE = 'prompt_tracker.json';
-const TAG_FILE = 'tag.txt';
-
-function getTodayDateFormatted() {
-    const today = new Date();
-    return `${today.getFullYear()}${String(today.getMonth() + 1).padStart(2, '0')}${String(today.getDate()).padStart(2, '0')}`;
-}
-
-function loadTag() {
-    try {
-        if (fs.existsSync(TAG_FILE)) {
-            const tag = fs.readFileSync(TAG_FILE, 'utf8').trim();
-            return tag || 'default';
-        }
-    } catch (err) {
-        console.warn('⚠️ Failed to read tag.txt, using default');
-    }
-    return 'default';
-}
 
 function loadTracker() {
     if (fs.existsSync(TRACKER_FILE)) {
@@ -61,23 +43,9 @@ function downloadVideo(url, outputPath) {
     });
 }
 
-const hostname = os.hostname();
-const tag = loadTag();
+let destinationDir = directory.getPath();
+console.log(destinationDir);
 
-let baseDir;
-
-if (hostname === 'DESKTOP-QPNJTTJ') {
-    baseDir = 'F:\\AI\\Videos';
-} else {
-    baseDir = 'C:\\Users\\mike_\\puppeteer\\videos';
-}
-
-// destinationDir now includes tag from tag.txt
-const destinationDir = path.join(baseDir, getTodayDateFormatted(), tag);
-
-if (!fs.existsSync(destinationDir)) {
-    fs.mkdirSync(destinationDir, { recursive: true });
-}
 
 (async () => {
     let browser;
@@ -109,12 +77,6 @@ if (!fs.existsSync(destinationDir)) {
             await page.goto('https://www.meta.ai/');
 
             console.log(`\n🎬 Looking to click Create Image`);
-            await page.waitForSelector('button[data-slot="capability-pill"]');
-            await page.evaluate(() => {
-                const btn = [...document.querySelectorAll('button[data-slot="capability-pill"]')];
-                btn[2].click();
-                console.log(`\n🎬 Clicked button`);
-            });
 
             const textareaSelector = 'div[data-testid="composer-input"]';
             await page.waitForSelector(textareaSelector, { visible: true });
@@ -125,25 +87,9 @@ if (!fs.existsSync(destinationDir)) {
             await page.keyboard.press('Backspace');
             await input.type(currentPrompt, { delay: 10 });
 
-
-
-
-            await page.waitForSelector('[data-slot="select-trigger"]');
-
-            const triggers = await page.$$('[data-slot="select-trigger"]');
-            if (triggers.length >= 2) {
-                await triggers[1].click();
-            }
-
-                        const options = await page.$$('[role="option"]');
-            // defaults to vertical if not clicked
-            await options[2].click();
-
-            //await page.evaluate(() => {debugger;});
-
             await page.click('button[aria-label="Send"]');
 
-            console.log(`\n🎬 Submitted animation`);
+            console.log(`\n🎬 Submitted prompt`);
 
             let requestEntry = {
                 prompt: currentPrompt,
@@ -164,6 +110,7 @@ if (!fs.existsSync(destinationDir)) {
                     const btn = [...document.querySelectorAll('button')]
                         .find(b => b.textContent.includes('Animate'));
                     btn?.click();
+                    console.log(`\n🎬 Submitted animate`);
                 });
 
                 await page.waitForSelector('video', { timeout: 180000 });
