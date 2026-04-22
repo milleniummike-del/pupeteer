@@ -1,1 +1,1 @@
-node C:\Users\mike\auto\prompts_animals_safari.js; node C:\Users\mike\auto\create_metavideos_singles.js
+node .\prompts_castles.js;node .\meta_createvideos.js;node .\meta_getvideos.js;node .\shuffle_files.js;.\upscale.ps1

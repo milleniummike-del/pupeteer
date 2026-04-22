@@ -4,7 +4,7 @@ const os = require('os');
 const hostname = os.hostname();
 const directory = require('./directory.js');
 
-let destinationDir = directory.getPath();
+let destinationDir = directory.getPath()+'\\upscaled';
 console.log(destinationDir);
 
 const shuffleFiles = (directoryPath) => {
