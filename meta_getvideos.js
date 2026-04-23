@@ -63,8 +63,8 @@ console.log(destinationDir);
         await page.bringToFront();
 
         const tracker = loadTracker();
-
-        await page.goto(target);
+        const pageUrl = directory.loadPage();
+        await page.goto(pageUrl);
 
         await new Promise(r => setTimeout(r, 8000));
  
@@ -92,7 +92,7 @@ console.log(destinationDir);
             await downloadVideo(videoUrl, outputPath);
 
             console.log(`✅ Saved: ${filename}`);
-            console.log('& "C:\\Program Files\\Video2X Qt6\\video2x.exe" ` -i "'+outputPath+'" ` -o "'+destinationDir+'\\upscaled\\'+filename+'" -p "realesrgan" -s "3"');
+            //console.log('& "C:\\Program Files\\Video2X Qt6\\video2x.exe" ` -i "'+outputPath+'" ` -o "'+destinationDir+'\\upscaled\\'+filename+'" -p "realesrgan" -s "3"');
         }
 
     } catch (err) {

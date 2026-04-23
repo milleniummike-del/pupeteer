@@ -6,8 +6,12 @@ const videos = require('./videos.js');
 const directory = require('./directory.js');
 
 const TRACKER_FILE = 'prompt_tracker.json';
+const PAGE_FILE = 'page.txt';
 const DEBUG = false;
 
+// ---------------------------------------------------------
+// TRACKER
+// ---------------------------------------------------------
 function loadTracker() {
     if (fs.existsSync(TRACKER_FILE)) {
         try {
@@ -23,6 +27,17 @@ function saveTracker(tracker) {
     fs.writeFileSync(TRACKER_FILE, JSON.stringify(tracker, null, 2));
 }
 
+// ---------------------------------------------------------
+// SAVE PAGE URL
+// ---------------------------------------------------------
+function savePageURL(url) {
+    const line = `${url}\n`;
+    fs.writeFileSync(PAGE_FILE, line, 'utf8');
+}
+
+// ---------------------------------------------------------
+// DOWNLOAD VIDEO (unused but kept)
+// ---------------------------------------------------------
 function downloadVideo(url, outputPath) {
     return new Promise((resolve, reject) => {
         const file = fs.createWriteStream(outputPath);
@@ -44,10 +59,13 @@ function downloadVideo(url, outputPath) {
     });
 }
 
+// ---------------------------------------------------------
 let destinationDir = directory.getPath();
 console.log(destinationDir);
 
-
+// ---------------------------------------------------------
+// MAIN
+// ---------------------------------------------------------
 (async () => {
     let browser;
 
@@ -66,7 +84,6 @@ console.log(destinationDir);
         const tracker = loadTracker();
 
         await page.goto('https://www.meta.ai/');
-
 
         try {
             for (let v = 0; v < videos.length; v++) {
@@ -90,7 +107,7 @@ console.log(destinationDir);
 
                 await page.click('button[aria-label="Send"]');
 
-                console.log(`\n🎬 Submitted prompt`);
+                console.log(`✅ Submitted prompt`);
 
                 let requestEntry = {
                     prompt: currentPrompt,
@@ -101,24 +118,26 @@ console.log(destinationDir);
                 tracker.push(requestEntry);
                 saveTracker(tracker);
 
-                requestEntry.status = 'success';
-
-                saveTracker(tracker);
-
+                // wait for response to generate
                 await new Promise(r => setTimeout(r, 20000));
+
                 let url = page.url();
-                console.log(url);
+                console.log(`🌐 URL: ${url}`);
+
+                // ✅ SAVE URL TO FILE
+                savePageURL(url);
+
+                requestEntry.status = 'success';
+                saveTracker(tracker);
             }
         }
         catch (err) {
-            console.log(err);
+            console.log('⚠ Loop error:', err);
         }
 
     } catch (err) {
         console.error('🔥 Fatal Error:', err);
     } finally {
-        const url = page.url();
-        console.log(url);
         if (browser) await browser.close();
     }
 })();

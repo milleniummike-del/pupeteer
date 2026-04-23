@@ -36,6 +36,21 @@ function getTodayDateFormatted() {
     return `${today.getFullYear()}${String(today.getMonth() + 1).padStart(2, '0')}${String(today.getDate()).padStart(2, '0')}`;
 }
 
+function loadPage() {
+    const TAG_FILE = path.join(__dirname, 'page.txt');
+    console.log(TAG_FILE);
+    const fs = require('fs');
+    try {
+        if (fs.existsSync(TAG_FILE)) {
+            const tag = fs.readFileSync(TAG_FILE, 'utf8').trim();
+            return tag || 'default';
+        }
+    } catch (err) {
+        console.log(err);
+        console.warn('⚠️ Failed to read tag.txt, using default');
+    }
+    return '';
+}
 
 
 function loadTag() {
@@ -55,5 +70,5 @@ function loadTag() {
 }
 
 module.exports = {
-    getPath
+    getPath, loadPage
 };

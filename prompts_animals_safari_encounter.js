@@ -142,7 +142,7 @@ const generateFunnyWaterClips = (count = 20) => {
 
     const title = `${animal} Jumps Into Water 😂`;
 
-    lines.push(`videos[${i}] = \`${ratio} - SPECIES: ${spec} - BEHAVIOR: ${bhv} - HABITAT: ${hab} - LIGHTING: ${light} - MODIFIERS: ${mods} - ENHANCERS: ${enh}\`;`);
+    lines.push(`videos[${i}] = \`video of - SPECIES: ${spec} - BEHAVIOR: ${bhv} - HABITAT: ${hab} - LIGHTING: ${light} - MODIFIERS: ${mods} - ENHANCERS: ${enh}\`;`);
   }
 
   lines.push(`module.exports = videos;`);

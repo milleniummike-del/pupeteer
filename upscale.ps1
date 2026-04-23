@@ -1,5 +1,8 @@
-$inputDir = "F:\AI\Videos\20260422\glitchloop"
+const directory = require('./directory.js');
 $outputDir = "$inputDir\upscaled"
+const inputDir = directory.getPath();
+console.log('t');
+console.log(inputDir);
 
 if (!(Test-Path $outputDir)) {
     New-Item -ItemType Directory -Path $outputDir | Out-Null
