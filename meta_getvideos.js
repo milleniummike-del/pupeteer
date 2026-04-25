@@ -1,4 +1,3 @@
-const target='https://www.meta.ai/prompt/ff670a30-3c5a-4ad9-81fa-562100608888';
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');
@@ -66,7 +65,8 @@ console.log(destinationDir);
         const pageUrl = directory.loadPage();
         await page.goto(pageUrl);
 
-        await new Promise(r => setTimeout(r, 8000));
+        console.log(`Waiting 10`);
+        await new Promise(r => setTimeout(r, 10000));
  
         const vids = await page.$$('video', { timeout: 180000 });
 

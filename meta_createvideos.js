@@ -143,6 +143,8 @@ console.log(destinationDir);
     } catch (err) {
         console.error('🔥 Fatal Error:', err);
     } finally {
+        console.log(`Waiting 60 seconds as final thing`);
+        await new Promise(r => setTimeout(r, 60000));
         if (browser) await browser.close();
     }
 })();

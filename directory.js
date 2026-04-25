@@ -43,7 +43,8 @@ function loadPage() {
     try {
         if (fs.existsSync(TAG_FILE)) {
             const tag = fs.readFileSync(TAG_FILE, 'utf8').trim();
-            return tag || 'default';
+            const cleaned = tag.replace(/\?new=\d+$/, "");
+            return cleaned || 'default';
         }
     } catch (err) {
         console.log(err);

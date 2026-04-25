@@ -1,3 +1,3 @@
 const videos = [];
-videos[0] = `Funny cute animal video of a orange tabby cat suddenly zooming across the room at full speed in a modern living space. YouTube shorts comedic timing, low-angle perspective for comedic effect, loopable action for replay value. adorable expressive eyes, soft fluffy textures clearly visible, sharp focus with soft background blur, high-definition video quality.`;
+videos[0] = `Funny cute animal video of a hedgehog falling over in a clumsy but adorable way in a cozy indoor corner. YouTube shorts comedic timing, close-up framing focused on facial expressions, real-time with natural movement. perfect comedic timing, soft fluffy textures clearly visible, vibrant natural colors, high-definition video quality.`;
 module.exports = videos;
