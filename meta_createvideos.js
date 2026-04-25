@@ -95,15 +95,18 @@ console.log(destinationDir);
                 }
 
                 console.log(`\n🎬 Prompt: ${currentPrompt}`);
-
+                console.log(`✅ Waiting for textarea`);
                 const textareaSelector = 'div[data-testid="composer-input"]';
                 await page.waitForSelector(textareaSelector, { visible: true });
 
+                
                 const input = await page.$(textareaSelector);
 
                 await input.click({ clickCount: 3 });
                 await page.keyboard.press('Backspace');
                 await input.type(currentPrompt, { delay: 10 });
+
+                console.log(`Waiting for send`);
 
                 await page.click('button[aria-label="Send"]');
 
@@ -119,7 +122,8 @@ console.log(destinationDir);
                 saveTracker(tracker);
 
                 // wait for response to generate
-                await new Promise(r => setTimeout(r, 20000));
+                console.log(`Waiting 40 seconds`);
+                await new Promise(r => setTimeout(r, 40000));
 
                 let url = page.url();
                 console.log(`🌐 URL: ${url}`);
@@ -129,6 +133,7 @@ console.log(destinationDir);
 
                 requestEntry.status = 'success';
                 saveTracker(tracker);
+
             }
         }
         catch (err) {
