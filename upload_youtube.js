@@ -1,6 +1,13 @@
 const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
+const path = require('path');
+
 const DEBUG = true;
+
+const directory = require('./directory.js');
+
+let destinationDir = directory.getPath() + '\\upscaled';
+console.log("📂 Upload folder:", destinationDir);
 
 puppeteer.use(StealthPlugin());
 
@@ -38,33 +45,34 @@ puppeteer.use(StealthPlugin());
     const fileInput = await page.waitForSelector("input[type='file']", { visible: false });
 
     // Upload file directly
-    await fileInput.uploadFile("F:\\AI\\Videos\\20260425\\cute\\upscaled\\final_1.mp4");
+    const file = path.join(destinationDir, `final_1.mp4`);
+    await fileInput.uploadFile("F:\\AI\\Videos\\20260425\\test\\upscaled\\final_1.mp4");
 
     console.log("📤 Uploading video...");
 
     // Step 5: Wait for upload input field (title)
     await page.waitForSelector("#textbox", { timeout: 60000 });
 
-   // --- SET TITLE ---
-await page.waitForSelector("ytcp-video-title #textbox");
+    // --- SET TITLE ---
+    await page.waitForSelector("ytcp-video-title #textbox");
 
-const titleBox = await page.$("ytcp-video-title #textbox");
+    const titleBox = await page.$("ytcp-video-title #textbox");
 
-await page.evaluate((el, text) => {
-    el.textContent = text;
-    el.dispatchEvent(new Event("input", { bubbles: true }));
-}, titleBox, "My Automated Upload");
+    await page.evaluate((el, text) => {
+        el.textContent = text;
+        el.dispatchEvent(new Event("input", { bubbles: true }));
+    }, titleBox, "My Automated Upload");
 
 
-// --- SET DESCRIPTION ---
-await page.waitForSelector("ytcp-video-description #textbox");
+    // --- SET DESCRIPTION ---
+    await page.waitForSelector("ytcp-video-description #textbox");
 
-const descBox = await page.$("ytcp-video-description #textbox");
+    const descBox = await page.$("ytcp-video-description #textbox");
 
-await page.evaluate((el, text) => {
-    el.textContent = text;
-    el.dispatchEvent(new Event("input", { bubbles: true }));
-}, descBox, "This is my automated description added by Puppeteer.");
+    await page.evaluate((el, text) => {
+        el.textContent = text;
+        el.dispatchEvent(new Event("input", { bubbles: true }));
+    }, descBox, "This is my automated description added by Puppeteer.");
 
 
     // Step 6: Click "Next" through steps
@@ -76,7 +84,7 @@ await page.evaluate((el, text) => {
     }
 
     // Step 7: Set visibility to Public (optional)
-    const publicRadio = await page.$("tp-yt-paper-radio-button[name='PUBLIC']");
+    const publicRadio = await page.$("tp-yt-paper-radio-button[name='PRIVATE']");
     if (publicRadio) {
         await publicRadio.click();
     }
