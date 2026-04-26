@@ -191,7 +191,7 @@ const generateSurrealBatch = (count = 20) => {
     const mods = pickN(MODIFIERS, 4).join(', ');
     const enh = pickN(ENHANCERS, 3).join(', ');
     
-    batch.push(`videos[${i}] = \`- SUBJECT: ${subjects} - TRANSFORMATION: ${trans} - ENVIRONMENT: ${env} - TONE: ${tone} - MODIFIERS: ${mods} - ENHANCERS: ${enh}\`;`);
+    batch.push(`videos[${i}] = \`video of - SUBJECT: ${subjects} - TRANSFORMATION: ${trans} - ENVIRONMENT: ${env} - TONE: ${tone} - MODIFIERS: ${mods} - ENHANCERS: ${enh}\`;`);
 
   }
   batch.push(`module.exports = videos;`);
