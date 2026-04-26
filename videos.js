@@ -1,3 +1,6 @@
 const videos = [];
-videos[0] = `Funny cute animal video of a hedgehog falling over in a clumsy but adorable way in a cozy indoor corner. YouTube shorts comedic timing, close-up framing focused on facial expressions, real-time with natural movement. perfect comedic timing, soft fluffy textures clearly visible, vibrant natural colors, high-definition video quality.`;
+videos.push(`A seamless loop of wet pavement being pressure washed with milk, the dirt continuously reappears as the water passes, smooth back-and-forth motion, highly satisfying, realistic fluid physics, futuristic setting, perfectly centered composition, no visible start or end frame, 4K`);
+videos.push(`A seamless loop of orb made of neon material moving on a conveyor belt, perfectly spaced, continuous motion, objects reappear endlessly, industrial aesthetic, minimal clean background, perfectly centered composition, no visible start or end frame, 4K`);
+videos.push(`A seamless looping animation of green and yellow palette geometric patterns expanding outward and folding back into themselves, symmetrical design, smooth transitions, mesmerizing motion, neon glow, soft shadow environment, perfectly centered composition, continuous cyclic motion, 4K`);
+videos.push(`A seamless loop of a spring made of soft foam morphing into another shape and back into its original form, fluid motion, glossy reflective material, soft shadows, glow lighting, no jump cuts, continuous cyclic motion, 4K`);
 module.exports = videos;

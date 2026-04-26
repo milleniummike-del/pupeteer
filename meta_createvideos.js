@@ -122,8 +122,8 @@ console.log(destinationDir);
                 saveTracker(tracker);
 
                 // wait for response to generate
-                console.log(`Waiting 40 seconds`);
-                await new Promise(r => setTimeout(r, 40000));
+                console.log(`Waiting 60 seconds`);
+                await new Promise(r => setTimeout(r, 60000));
 
                 let url = page.url();
                 console.log(`🌐 URL: ${url}`);
@@ -143,8 +143,8 @@ console.log(destinationDir);
     } catch (err) {
         console.error('🔥 Fatal Error:', err);
     } finally {
-        console.log(`Waiting 60 seconds as final thing`);
-        await new Promise(r => setTimeout(r, 60000));
+        console.log(`Waiting 30 seconds as final thing`);
+        await new Promise(r => setTimeout(r, 30000));
         if (browser) await browser.close();
     }
 })();

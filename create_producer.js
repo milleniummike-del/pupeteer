@@ -92,9 +92,8 @@ async function moveLatestDownload(destination) {
         }
     });
 
-
-    for (let i = 0; i < videos.length; i++) {
-        const musicprompt = videos[i];
+    for (let i = 0; i < 2; i++) {
+        const musicprompt = 'soundtrack for ' + videos[i];
 
         await page.goto('https://producer.ai', {});
         const textareaSelector = 'textarea[aria-label="Chat message"]';
@@ -113,48 +112,9 @@ async function moveLatestDownload(destination) {
         await page.keyboard.up('Control');
         await page.keyboard.press('Enter');
 
-        await page.waitForFunction(() => {
-            const video = document.querySelector('video');
-            return video && video.src && video.src.includes('sample_0.mp4');
-        }, { timeout: 0 });
-        
-                // Download inside browser using fetch + Blob
-        console.log("⬇️ Downloading inside browser using fetch()...");
-
-        await page.evaluate(async ({ url, headers, filename }) => {
-
-            const res = await fetch(url, { headers });
-
-            if (!res.ok) {
-                console.error("❌ Fetch failed", res.status);
-                return;
-            }
-
-            const blob = await res.blob();
-            const blobUrl = URL.createObjectURL(blob);
-
-            const a = document.createElement('a');
-            a.href = blobUrl;
-            a.download = filename;
-            document.body.appendChild(a);
-a.click();
-
-            setTimeout(() => {
-                URL.revokeObjectURL(blobUrl);
-                a.remove();
-            }, 5000);
-
-        }, {
-            url: realVideoUrl,
-            headers: capturedHeaders,
-            filename: `${videos[i].substring(0, 50).replace(/[^a-z0-9]/gi, '_').toLowerCase()}_${Date.now()}.mp4`
-        });
-
-        console.log("✅ Browser download triggered");
-
-        await new Promise(resolve => setTimeout(resolve, 10000));
-        console.log('waited 10 seconds');
-        await moveLatestDownload(destinationDir);
+         // Download inside browser using fetch + Blob
+        console.log("⬇️ GET DOWNLOADING WORKING!");
     }
+    if (browser) await browser.close();
 
 })();

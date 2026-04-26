@@ -24,6 +24,41 @@ const runCommand = (command, args) => {
   });
 };
 
+// 🧹 Cleanup old generated files
+function cleanOldOutputs(dir) {
+  const files = fs.readdirSync(dir);
+
+  let deleted = 0;
+
+  for (const file of files) {
+    if (
+      file.startsWith('combined_') ||
+      file.startsWith('final_') ||
+      file.startsWith('file_list_')
+    ) {
+      const filePath = path.join(dir, file);
+      try {
+        fs.unlinkSync(filePath);
+        console.log(`🗑️ Deleted: ${file}`);
+        deleted++;
+      } catch (err) {
+        console.warn(`⚠️ Failed to delete ${file}: ${err.message}`);
+      }
+    }
+  }
+
+  console.log(`🧹 Cleanup complete (${deleted} files removed)\n`);
+}
+
+// 🎲 Fisher-Yates shuffle
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
 async function getVideoDuration(videoPath) {
   try {
     const args = [
@@ -115,7 +150,7 @@ async function combineBatch(batch, index, targetDirectory) {
   return outputPath;
 }
 
-// 🔊 Add audio to video
+// 🔊 Add audio
 async function addAudioToVideo(videoPath, audioPath, index, targetDirectory) {
   const outputPath = path.join(targetDirectory, `final_${index}.mp4`);
 
@@ -134,12 +169,29 @@ async function addAudioToVideo(videoPath, audioPath, index, targetDirectory) {
   console.log(`🎵 Added audio -> final_${index}.mp4`);
 }
 
-// Main function
+// No-audio fallback
+async function createFinalWithoutAudio(videoPath, index, targetDirectory) {
+  const outputPath = path.join(targetDirectory, `final_${index}.mp4`);
+
+  await runCommand('ffmpeg', [
+    '-y',
+    '-i', videoPath,
+    '-c', 'copy',
+    outputPath
+  ]);
+
+  console.log(`📦 No audio -> final_${index}.mp4`);
+}
+
+// Main
 const combineVideos = async (targetDirectory) => {
   if (!fs.existsSync(targetDirectory)) {
     console.error("Directory not found");
     return;
   }
+
+  // 🧹 Clean old outputs FIRST
+  cleanOldOutputs(targetDirectory);
 
   const files = fs.readdirSync(targetDirectory);
 
@@ -167,40 +219,35 @@ const combineVideos = async (targetDirectory) => {
     return;
   }
 
-  videoFiles.sort();
-  audioFiles.sort();
+  shuffleArray(videoFiles);
+  shuffleArray(audioFiles);
 
-  console.log(`Found ${videoFiles.length} videos`);
+  console.log(`🎲 Shuffled ${videoFiles.length} videos`);
   console.log(`Found ${audioFiles.length} audio files`);
 
-  // Step 1: preprocess videos
   const processed = [];
   for (const v of videoFiles) {
     const result = await processVideo(v, targetDirectory, tempFiles);
     processed.push(result);
   }
 
-  // Step 2: batch into 2-minute chunks
   const batches = createBatches(processed, 120);
   console.log(`Creating ${batches.length} output videos`);
 
-  // Step 3: combine + attach audio
   let index = 0;
   for (const batch of batches) {
     const combinedPath = await combineBatch(batch, index + 1, targetDirectory);
 
     if (audioFiles.length > 0) {
-      // 🔁 recycle audio if fewer than videos
       const audioIndex = index % audioFiles.length;
-      const audioPath = audioFiles[audioIndex];
-
-      await addAudioToVideo(combinedPath, audioPath, index + 1, targetDirectory);
+      await addAudioToVideo(combinedPath, audioFiles[audioIndex], index + 1, targetDirectory);
+    } else {
+      await createFinalWithoutAudio(combinedPath, index + 1, targetDirectory);
     }
 
     index++;
   }
 
-  // Cleanup temp files
   for (const file of tempFiles) {
     if (fs.existsSync(file)) fs.unlinkSync(file);
   }

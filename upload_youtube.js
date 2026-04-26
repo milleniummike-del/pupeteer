@@ -1,13 +1,72 @@
+/**
+ * YouTube Upload Automation (File-based metadata)
+ */
+
+const channel = 'https://studio.youtube.com/channel/UCotGGoP_MQUh6lgB1smxrfw';
+
 const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 const path = require('path');
-
-const DEBUG = true;
+const fs = require('fs');
 
 const directory = require('./directory.js');
 
+const DEBUG = true;
+
+// ---------------------------------------------------------
+// 🧠 CLI ARG PARSER
+// ---------------------------------------------------------
+function getArg(name, fallback = '') {
+    const arg = process.argv.find(a => a.startsWith(`--${name}=`));
+    if (!arg) return fallback;
+    return arg.split('=').slice(1).join('=');
+}
+
+// ---------------------------------------------------------
+// 📄 READ TEXT FILE HELPER
+// ---------------------------------------------------------
+function readTextFile(filePath, fallback = '') {
+    try {
+        if (fs.existsSync(filePath)) {
+            return fs.readFileSync(filePath, 'utf8').trim();
+        }
+    } catch (err) {
+        console.warn(`⚠️ Failed to read ${filePath}:`, err.message);
+    }
+    return fallback;
+}
+
+// ---------------------------------------------------------
+// INPUTS
+// ---------------------------------------------------------
+
+// File-based inputs (priority)
+const TITLE_FILE = path.join(__dirname, 'title.txt');
+const DESC_FILE = path.join(__dirname, 'description.txt');
+
+// CLI fallback
+const TITLE_CLI = getArg('title', 'My Automated Upload');
+const DESC_CLI = getArg('description', 'Uploaded with Puppeteer automation');
+
+// Final values (file overrides CLI)
+const TITLE = readTextFile(TITLE_FILE, TITLE_CLI);
+const DESCRIPTION = readTextFile(DESC_FILE, DESC_CLI);
+
+// Other CLI inputs
+const CHANNEL = getArg('channel', channel);
+const FILE_NAME = getArg('file', 'final_1.mp4');
+
+// Paths
 let destinationDir = directory.getPath() + '\\upscaled';
+const FILE_PATH = path.join(destinationDir, FILE_NAME);
+
 console.log("📂 Upload folder:", destinationDir);
+console.log("🎬 File:", FILE_PATH);
+console.log("📝 Title:", TITLE);
+console.log("📄 Description:", DESCRIPTION);
+console.log("📺 Channel:", CHANNEL);
+
+// ---------------------------------------------------------
 
 puppeteer.use(StealthPlugin());
 
@@ -15,68 +74,60 @@ puppeteer.use(StealthPlugin());
     const browser = await puppeteer.launch({
         userDataDir: "browser",
         headless: false,
-        targetFilter: target => !!target.url(),
         args: ["--no-sandbox", "--disable-setuid-sandbox"],
         devtools: DEBUG
-    })
+    });
+
     try {
         const page = (await browser.pages())[0];
         await page.bringToFront();
-        await page.goto('https://studio.youtube.com/channel/UCwUI5e_vV229JZZcTLoIdgg', {
+
+        await page.goto(CHANNEL, {
             waitUntil: "networkidle2",
         });
 
-        console.log("👉 Please log in manually if not already logged in...");
+        console.log("👉 Log in if needed...");
 
-        // Wait for user to be logged in (checks for Create button)
         await page.waitForSelector("ytcp-icon-button#upload-icon", {
             timeout: 0,
         });
 
         console.log("✅ Logged in!");
 
-        // Step 2: Click "Create" button
+        // Click Create
         await page.click("ytcp-icon-button#upload-icon");
 
-        // Step 3: Click "Upload videos"
-
+        // Click Upload
         await page.click("ytcp-button#select-files-button");
 
-        // Wait for the hidden file input
+        // Upload file
         const fileInput = await page.waitForSelector("input[type='file']", { visible: false });
+        await fileInput.uploadFile(FILE_PATH);
 
-        // Upload file directly
-        const file = path.join(destinationDir, `final_1.mp4`);
-        await fileInput.uploadFile(file);
+        console.log("📤 Uploading video...");
 
-        console.log("📤 Uploading video... " + file);
-
-        // Step 5: Wait for upload input field (title)
+        // Wait for title field
         await page.waitForSelector("#textbox", { timeout: 60000 });
 
-        // --- SET TITLE ---
+        // --- TITLE ---
         await page.waitForSelector("ytcp-video-title #textbox");
-
         const titleBox = await page.$("ytcp-video-title #textbox");
 
         await page.evaluate((el, text) => {
             el.textContent = text;
             el.dispatchEvent(new Event("input", { bubbles: true }));
-        }, titleBox, "My Automated Upload");
+        }, titleBox, TITLE);
 
-
-        // --- SET DESCRIPTION ---
+        // --- DESCRIPTION ---
         await page.waitForSelector("ytcp-video-description #textbox");
-
         const descBox = await page.$("ytcp-video-description #textbox");
 
         await page.evaluate((el, text) => {
             el.textContent = text;
             el.dispatchEvent(new Event("input", { bubbles: true }));
-        }, descBox, "This is my automated description added by Puppeteer.");
+        }, descBox, DESCRIPTION);
 
-
-        // Step 6: Click "Next" through steps
+        // --- NEXT BUTTONS ---
         const nextBtnSelector = "ytcp-button#next-button";
 
         for (let i = 0; i < 3; i++) {
@@ -84,24 +135,24 @@ puppeteer.use(StealthPlugin());
             await page.click(nextBtnSelector);
         }
 
-        // Step 7: Set visibility to Public (optional)
-        const publicRadio = await page.$("tp-yt-paper-radio-button[name='PRIVATE']");
-        if (publicRadio) {
-            await publicRadio.click();
+        // --- VISIBILITY (PRIVATE safer default) ---
+        const privateRadio = await page.$("tp-yt-paper-radio-button[name='PRIVATE']");
+        if (privateRadio) {
+            await privateRadio.click();
         }
 
-        // Step 8: Publish
+        // --- SAVE ---
         const saveBtn = await page.$('button[aria-label="Save"]');
         if (saveBtn) {
             await saveBtn.click();
         }
 
         console.log("🎉 Upload complete!");
-    } catch (e) {
-        console.log(e)
-    }
-    finally {
 
+    } catch (e) {
+        console.error("🔥 Error:", e);
+    } finally {
+        // Keep browser open for debugging
         await new Promise(resolve => setTimeout(resolve, 555000));
     }
 })();
