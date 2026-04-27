@@ -2,7 +2,9 @@
  * YouTube Upload Automation (File-based metadata)
  */
 
-const channel = 'https://studio.youtube.com/channel/UCotGGoP_MQUh6lgB1smxrfw';
+const channels = ['https://studio.youtube.com/channel/UCwUI5e_vV229JZZcTLoIdgg','https://studio.youtube.com/channel/UCotGGoP_MQUh6lgB1smxrfw', 'https://studio.youtube.com/channel/UC5A2FeUQSnut7JqHRNGGmBA']; // drone, creation, animals
+
+const channel = channels[2];
 
 const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
