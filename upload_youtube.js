@@ -41,8 +41,8 @@ function readTextFile(filePath, fallback = '') {
 // ---------------------------------------------------------
 
 // File-based inputs (priority)
-const TITLE_FILE = path.join(__dirname, 'title.txt');
-const DESC_FILE = path.join(__dirname, 'description.txt');
+const TITLE_FILE = path.join(__dirname, 'youtube_title.txt');
+const DESC_FILE = path.join(__dirname, 'youtube_description.txt');
 
 // CLI fallback
 const TITLE_CLI = getArg('title', 'My Automated Upload');

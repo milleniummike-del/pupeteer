@@ -6685,5 +6685,30 @@
     "prompt": "video of - SUBJECT: A glass eye that sees infrared ghosts, A giant hourglass filled with black sand - TRANSFORMATION: calcifying into ancient coral - ENVIRONMENT: ocean of floating books - TONE: Timeless stillness - MODIFIERS: hyperreal textures, silence made visible, time folding onto itself, dream logic - ENHANCERS: global illumination, painterly realism, ultra-fine grain",
     "timestamp": "2026-04-26T15:36:04.598Z",
     "status": "success"
+  },
+  {
+    "prompt": "JUNGLE CINEMATIC VIDEO - SPECIES: Gibbon - BEHAVIOR: foraging for fruit in the canopy - HABITAT: lush tropical forest layers - LIGHTING: misty jungle morning with soft light - MODIFIERS: handheld documentary style, slow motion capture, drone shot above canopy - ENHANCERS: high humidity atmosphere, cinematic color grading, immersive jungle environment",
+    "timestamp": "2026-04-27T06:57:23.899Z",
+    "status": "success"
+  },
+  {
+    "prompt": "JUNGLE CINEMATIC VIDEO - SPECIES: Green Anaconda (Eunectes murinus) - BEHAVIOR: moving stealthily through thick vines and roots - HABITAT: humid mangrove jungle - LIGHTING: dark moody forest with minimal light - MODIFIERS: macro detail on textures and skin, shallow depth of field, cinematic tracking shot - ENHANCERS: ultra طبیعی colors, hyper-detailed textures, volumetric light rays",
+    "timestamp": "2026-04-27T06:58:30.563Z",
+    "status": "success"
+  },
+  {
+    "prompt": "JUNGLE CINEMATIC VIDEO - SPECIES: Green Anaconda (Eunectes murinus) - BEHAVIOR: silently stalking prey through dense undergrowth - HABITAT: dark forest interior with minimal sunlight - LIGHTING: dark moody forest with minimal light - MODIFIERS: macro detail on textures and skin, handheld documentary style, cinematic tracking shot - ENHANCERS: volumetric light rays, immersive jungle environment, high humidity atmosphere",
+    "timestamp": "2026-04-27T06:59:38.037Z",
+    "status": "success"
+  },
+  {
+    "prompt": "JUNGLE CINEMATIC VIDEO - SPECIES: Bird of Paradise - BEHAVIOR: perching and calling loudly - HABITAT: dense rainforest treetops - LIGHTING: sun rays piercing through dense canopy - MODIFIERS: shallow depth of field, handheld documentary style, cinematic tracking shot - ENHANCERS: high humidity atmosphere, cinematic color grading, volumetric light rays",
+    "timestamp": "2026-04-27T07:00:44.104Z",
+    "status": "success"
+  },
+  {
+    "prompt": "JUNGLE CINEMATIC VIDEO - SPECIES: Orangutan - BEHAVIOR: calling loudly across the jungle - HABITAT: lush tropical forest layers - LIGHTING: misty jungle morning with soft light - MODIFIERS: National Geographic wildlife cinematography, slow motion capture, cinematic tracking shot - ENHANCERS: 8K ultra realistic, hyper-detailed textures, ultra طبیعی colors",
+    "timestamp": "2026-04-27T07:01:49.999Z",
+    "status": "pending"
   }
 ]
