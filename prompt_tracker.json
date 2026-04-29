@@ -6870,5 +6870,430 @@
     "prompt": "photorealistic hyper realistic video of - SUBJECT: A human skull blooming with flowers, A piano whose keys are frozen waterfalls - TRANSFORMATION: transforming into a swarm of moths - ENVIRONMENT: glass labyrinth - TONE: Timeless stillness - MODIFIERS: metaphysical scale, liminal space, paradoxical lighting, symbolic anatomy - ENHANCERS: volumetric lighting, global illumination, painterly realism",
     "timestamp": "2026-04-27T09:23:06.392Z",
     "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: Zebra + Forest Elephant + Impala - INTERACTION: coexisting in close proximity - BEHAVIOR: performing courtship display - HABITAT: water edges - LIGHTING: dramatic red sunset - MODIFIERS: telephoto lens, slow motion, cinematic wildlife documentary - ENHANCERS: 8K resolution, hyper-realistic",
+    "timestamp": "2026-04-28T07:40:39.666Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: African Elephant + Honey Badger - INTERACTION: sharing the same environment - BEHAVIOR: scavenging a carcass - HABITAT: grassland edges - LIGHTING: harsh midday light - MODIFIERS: slow motion, telephoto lens, aerial drone shot - ENHANCERS: 8K resolution, hyper-realistic",
+    "timestamp": "2026-04-28T07:41:45.045Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: Eland - BEHAVIOR: crossing a river during migration - HABITAT: salt pans - LIGHTING: storm clouds gathering - MODIFIERS: low-angle camera trap, slow motion, shallow depth of field - ENHANCERS: ultra detail, hyper-realistic",
+    "timestamp": "2026-04-28T07:42:49.513Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: Bat-eared Fox + Waterbuck + Lion - INTERACTION: interacting cautiously - BEHAVIOR: perching on animals - HABITAT: savanna grass - LIGHTING: soft dawn haze - MODIFIERS: slow motion, low-angle camera trap, telephoto lens - ENHANCERS: BBC quality, volumetric lighting",
+    "timestamp": "2026-04-28T07:43:54.379Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: Nyala - BEHAVIOR: diving for prey - HABITAT: tree branches - LIGHTING: harsh midday light - MODIFIERS: slow motion, telephoto lens, shallow depth of field - ENHANCERS: 8K resolution, hyper-realistic",
+    "timestamp": "2026-04-28T07:44:57.971Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: Topi + Caracal - INTERACTION: sharing the same environment - BEHAVIOR: kicking up dust while advancing - HABITAT: Okavango Delta - LIGHTING: storm clouds gathering - MODIFIERS: cinematic wildlife documentary, shallow depth of field, low-angle camera trap - ENHANCERS: hyper-realistic, volumetric lighting",
+    "timestamp": "2026-04-28T07:46:03.351Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: Cheetah - BEHAVIOR: searching for food scraps - HABITAT: rocky outcrops - LIGHTING: soft dawn haze - MODIFIERS: low-angle camera trap, cinematic wildlife documentary, shallow depth of field - ENHANCERS: 8K resolution, hyper-realistic",
+    "timestamp": "2026-04-28T07:50:13.583Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: Bongo + Crane - INTERACTION: engaged in a tense standoff - BEHAVIOR: moving stealthily through grass - HABITAT: grassland edges - LIGHTING: dramatic red sunset - MODIFIERS: slow motion, aerial drone shot, cinematic wildlife documentary - ENHANCERS: ultra detail, 8K resolution",
+    "timestamp": "2026-04-28T07:51:18.311Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: Secretary Bird + Gazelle + Eland - INTERACTION: sharing the same environment - BEHAVIOR: moving stealthily through grass - HABITAT: dry riverbeds - LIGHTING: dramatic red sunset - MODIFIERS: shallow depth of field, cinematic wildlife documentary, telephoto lens - ENHANCERS: volumetric lighting, BBC quality",
+    "timestamp": "2026-04-28T07:52:23.678Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: Cape Fox + Cape Buffalo - INTERACTION: sharing the same environment - BEHAVIOR: standing guard at burrows - HABITAT: burrow plains - LIGHTING: harsh midday light - MODIFIERS: low-angle camera trap, slow motion, telephoto lens - ENHANCERS: volumetric lighting, ultra detail",
+    "timestamp": "2026-04-28T07:53:28.386Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: Leopard - BEHAVIOR: coordinating a hunt - HABITAT: savanna scrub - LIGHTING: moonlit savanna - MODIFIERS: low-angle camera trap, aerial drone shot, telephoto lens - ENHANCERS: BBC quality, 8K resolution",
+    "timestamp": "2026-04-28T07:54:32.154Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: Roller + Kudu - INTERACTION: interacting cautiously - BEHAVIOR: kicking up dust while advancing - HABITAT: Chobe floodplains - LIGHTING: harsh midday light - MODIFIERS: low-angle camera trap, shallow depth of field, aerial drone shot - ENHANCERS: 8K resolution, volumetric lighting",
+    "timestamp": "2026-04-28T07:55:37.129Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: Reedbuck - BEHAVIOR: crossing a river channel - HABITAT: Okavango Delta - LIGHTING: storm clouds gathering - MODIFIERS: shallow depth of field, cinematic wildlife documentary, telephoto lens - ENHANCERS: volumetric lighting, 8K resolution",
+    "timestamp": "2026-04-28T07:56:41.474Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: Hippopotamus + Hyena - INTERACTION: one observing the other carefully - BEHAVIOR: standing alert in tall grass - HABITAT: dry woodland - LIGHTING: golden hour dust glow - MODIFIERS: shallow depth of field, cinematic wildlife documentary, telephoto lens - ENHANCERS: 8K resolution, volumetric lighting",
+    "timestamp": "2026-04-28T07:57:46.981Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: Leopard - BEHAVIOR: perching on animals - HABITAT: open sky - LIGHTING: harsh midday light - MODIFIERS: slow motion, telephoto lens, low-angle camera trap - ENHANCERS: 8K resolution, hyper-realistic",
+    "timestamp": "2026-04-28T07:58:50.873Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: African Elephant + Waterbuck - INTERACTION: coexisting in close proximity - BEHAVIOR: moving through thick vegetation - HABITAT: Tsavo scrubland - LIGHTING: soft dawn haze - MODIFIERS: low-angle camera trap, slow motion, telephoto lens - ENHANCERS: volumetric lighting, 8K resolution",
+    "timestamp": "2026-04-28T07:59:56.087Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: Hornbill - BEHAVIOR: running across plains - HABITAT: savanna grass - LIGHTING: golden hour dust glow - MODIFIERS: shallow depth of field, aerial drone shot, low-angle camera trap - ENHANCERS: BBC quality, hyper-realistic",
+    "timestamp": "2026-04-28T08:01:00.217Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: Crane - BEHAVIOR: sprinting across open ground - HABITAT: open savanna - LIGHTING: storm clouds gathering - MODIFIERS: shallow depth of field, slow motion, aerial drone shot - ENHANCERS: hyper-realistic, volumetric lighting",
+    "timestamp": "2026-04-28T08:02:04.587Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: Gazelle + Giraffe + Fish Eagle - INTERACTION: interacting cautiously - BEHAVIOR: kicking up dust while advancing - HABITAT: Tarangire baobab valley - LIGHTING: harsh midday light - MODIFIERS: low-angle camera trap, slow motion, aerial drone shot - ENHANCERS: BBC quality, hyper-realistic",
+    "timestamp": "2026-04-28T08:03:10.400Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: Raptor - BEHAVIOR: grouping tightly in defense - HABITAT: salt pans - LIGHTING: soft dawn haze - MODIFIERS: cinematic wildlife documentary, telephoto lens, slow motion - ENHANCERS: BBC quality, hyper-realistic",
+    "timestamp": "2026-04-28T08:04:14.593Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: Roan Antelope - BEHAVIOR: crossing a river channel - HABITAT: Tsavo scrubland - LIGHTING: soft dawn haze - MODIFIERS: slow motion, telephoto lens, low-angle camera trap - ENHANCERS: 8K resolution, volumetric lighting",
+    "timestamp": "2026-04-28T08:05:18.872Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: Oryx + Cape Fox + Bird Flock - INTERACTION: interacting cautiously - BEHAVIOR: perching on animals - HABITAT: riverbanks - LIGHTING: harsh midday light - MODIFIERS: slow motion, telephoto lens, shallow depth of field - ENHANCERS: hyper-realistic, volumetric lighting",
+    "timestamp": "2026-04-28T08:06:24.004Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: Honey Badger - BEHAVIOR: perching on animals - HABITAT: water edges - LIGHTING: golden hour dust glow - MODIFIERS: cinematic wildlife documentary, telephoto lens, slow motion - ENHANCERS: ultra detail, volumetric lighting",
+    "timestamp": "2026-04-28T08:07:28.524Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: Eagle Pair - BEHAVIOR: grouping tightly in defense - HABITAT: open savanna - LIGHTING: golden hour dust glow - MODIFIERS: low-angle camera trap, slow motion, aerial drone shot - ENHANCERS: volumetric lighting, BBC quality",
+    "timestamp": "2026-04-28T08:08:32.953Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: African Elephant + Black Rhino - INTERACTION: one observing the other carefully - BEHAVIOR: displaying dominance - HABITAT: Tsavo scrubland - LIGHTING: golden hour dust glow - MODIFIERS: low-angle camera trap, cinematic wildlife documentary, slow motion - ENHANCERS: 8K resolution, hyper-realistic",
+    "timestamp": "2026-04-28T08:09:38.672Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: Impala + Ostrich - INTERACTION: interacting cautiously - BEHAVIOR: grouping tightly in defense - HABITAT: open savanna - LIGHTING: harsh midday light - MODIFIERS: aerial drone shot, low-angle camera trap, cinematic wildlife documentary - ENHANCERS: ultra detail, 8K resolution",
+    "timestamp": "2026-04-28T08:10:44.296Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Notre-Dame Cathedral, Paris, France - TIME: blue hour twilight - ENVIRONMENT: vast open plains surrounding the site - CAMERA: top-down reveal of architectural symmetry, slow rising shot revealing full scale - MOTION: sunlight reflecting off weathered surfaces - MOOD: ancient and mysterious atmosphere - VISUAL STYLE: ultra high resolution, realistic shadows, soft atmospheric haze",
+    "timestamp": "2026-04-28T08:50:14.011Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Prague Castle, Czech Republic - TIME: bright midday clarity - ENVIRONMENT: vast open plains surrounding the site - CAMERA: wide aerial pass across surrounding landscape, low sweeping drone flyover across ancient walls - MOTION: sunlight reflecting off weathered surfaces - MOOD: ancient and mysterious atmosphere - VISUAL STYLE: soft atmospheric haze, ultra high resolution, cinematic color grading",
+    "timestamp": "2026-04-28T08:51:20.672Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "FLYOVER: Colosseum, Rome, Italy - TIME: blue hour twilight - ENVIRONMENT: snow covering rooftops and pathways - CAMERA: descending drone shot toward ruins below, cinematic circular orbit around central structure - MOTION: subtle human presence in the distance - MOOD: awe-inspiring historical grandeur - VISUAL STYLE: realistic shadows, volumetric lighting, ultra high resolution",
+    "timestamp": "2026-04-28T08:52:48.751Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Pantheon, Rome, Italy - TIME: bright midday clarity - ENVIRONMENT: dense jungle partially reclaiming structures - CAMERA: low sweeping drone flyover across ancient walls, high-altitude cinematic orbit around the structure - MOTION: birds circling above the structure - MOOD: timeless archaeological wonder - VISUAL STYLE: ultra high resolution, cinematic color grading, high dynamic range",
+    "timestamp": "2026-04-28T08:53:55.263Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Tower of London, England - TIME: moonlit night - ENVIRONMENT: vast open plains surrounding the site - CAMERA: descending drone shot toward ruins below, wide aerial pass across surrounding landscape - MOTION: wind moving through broken stone corridors - MOOD: quiet and reflective tone - VISUAL STYLE: ultra high resolution, soft atmospheric haze, realistic shadows",
+    "timestamp": "2026-04-28T08:55:01.448Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Pompeii Ruins, Italy - TIME: blue hour twilight - ENVIRONMENT: dense jungle partially reclaiming structures - CAMERA: low sweeping drone flyover across ancient walls, wide aerial pass across surrounding landscape - MOTION: sunlight reflecting off weathered surfaces - MOOD: quiet and reflective tone - VISUAL STYLE: ultra high resolution, cinematic color grading, soft atmospheric haze",
+    "timestamp": "2026-04-28T08:56:07.836Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Pompeii Ruins, Italy - TIME: blue hour twilight - ENVIRONMENT: vast open plains surrounding the site - CAMERA: descending drone shot toward ruins below, top-down reveal of architectural symmetry - MOTION: wind moving through broken stone corridors - MOOD: cinematic epic scale - VISUAL STYLE: volumetric lighting, cinematic color grading, high dynamic range",
+    "timestamp": "2026-04-28T08:57:13.798Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Meenakshi Temple, India - TIME: moonlit night - ENVIRONMENT: ancient city ruins stretching into distance - CAMERA: low sweeping drone flyover across ancient walls, slow rising shot revealing full scale - MOTION: wind moving through broken stone corridors - MOOD: timeless archaeological wonder - VISUAL STYLE: high dynamic range, cinematic color grading, volumetric lighting",
+    "timestamp": "2026-04-28T08:58:20.114Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: St. Peter’s Basilica, Vatican City - TIME: bright midday clarity - ENVIRONMENT: snow covering rooftops and pathways - CAMERA: low sweeping drone flyover across ancient walls, slow rising shot revealing full scale - MOTION: subtle human presence in the distance - MOOD: timeless archaeological wonder - VISUAL STYLE: ultra high resolution, high dynamic range, cinematic color grading",
+    "timestamp": "2026-04-28T08:59:26.791Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Rialto Bridge, Venice, Italy - TIME: moonlit night - ENVIRONMENT: ancient city ruins stretching into distance - CAMERA: low sweeping drone flyover across ancient walls, wide aerial pass across surrounding landscape - MOTION: soft mist drifting across ruins - MOOD: ancient and mysterious atmosphere - VISUAL STYLE: volumetric lighting, cinematic color grading, soft atmospheric haze",
+    "timestamp": "2026-04-28T09:00:33.372Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Pantheon, Rome, Italy - TIME: moonlit night - ENVIRONMENT: river reflecting ancient stone - CAMERA: forward glide toward monumental entrance, descending drone shot toward ruins below - MOTION: wind moving through broken stone corridors - MOOD: cinematic epic scale - VISUAL STYLE: high dynamic range, realistic shadows, volumetric lighting",
+    "timestamp": "2026-04-28T09:01:39.330Z",
+    "status": "success"
+  },
+  {
+    "prompt": "FLYOVER: Roman Forum, Rome, Italy - TIME: misty sunrise - ENVIRONMENT: vast open plains surrounding the site - CAMERA: low sweeping drone flyover across ancient walls, forward glide toward monumental entrance - MOTION: wind moving through broken stone corridors - MOOD: quiet and reflective tone - VISUAL STYLE: high dynamic range, volumetric lighting, soft atmospheric haze",
+    "timestamp": "2026-04-28T09:02:45.703Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Angelfish seated in a rollercoaster cart, stabilizing themselves during high-speed descent - CAMERA: cinematic follow shot with slight motion shake - ENVIRONMENT: large-scale steel rollercoaster in a theme park - LIGHTING: overcast sky with diffused lighting - VISUAL STYLE: physically accurate lighting, natural color grading, photorealistic rendering",
+    "timestamp": "2026-04-28T09:05:46.360Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Hammerhead Shark + Sea Otter + Orca seated in a rollercoaster cart, stabilizing themselves during high-speed descent - CAMERA: cinematic follow shot with slight motion shake - ENVIRONMENT: sunlit amusement park with realistic crowds in distance - LIGHTING: late afternoon light with long shadows - VISUAL STYLE: detailed surface reflections, natural color grading, physically accurate lighting",
+    "timestamp": "2026-04-28T09:06:53.209Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Blue Tang seated in a rollercoaster cart, holding firmly during a high-speed loop - CAMERA: cinematic follow shot with slight motion shake - ENVIRONMENT: sunlit amusement park with realistic crowds in distance - LIGHTING: late afternoon light with long shadows - VISUAL STYLE: detailed surface reflections, realistic motion blur, photorealistic rendering",
+    "timestamp": "2026-04-28T09:07:59.581Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Hammerhead Shark seated in a rollercoaster cart, adjusting posture as the track twists rapidly - CAMERA: handheld-style tracking from rear perspective - ENVIRONMENT: large-scale steel rollercoaster in a theme park - LIGHTING: golden hour sunlight with soft highlights - VISUAL STYLE: physically accurate lighting, photorealistic rendering, detailed surface reflections",
+    "timestamp": "2026-04-28T09:09:06.143Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Octopus + Bottlenose Dolphin seated in a rollercoaster cart, leaning into a sharp turn under strong G-forces - CAMERA: handheld-style tracking from rear perspective - ENVIRONMENT: large-scale steel rollercoaster in a theme park - LIGHTING: clear sky with strong directional sunlight - VISUAL STYLE: detailed surface reflections, natural color grading, realistic motion blur",
+    "timestamp": "2026-04-28T09:10:12.946Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Octopus + Manta Ray + Blue Tang seated in a rollercoaster cart, bracing as the coaster descends a steep drop - CAMERA: stabilized chase camera directly behind the coaster - ENVIRONMENT: open-air theme park with natural sky and lighting - LIGHTING: overcast sky with diffused lighting - VISUAL STYLE: high-resolution textures, physically accurate lighting, photorealistic rendering",
+    "timestamp": "2026-04-28T09:11:19.820Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Sea Lion + Great White Shark + Parrotfish seated in a rollercoaster cart, maintaining balance during intense motion - CAMERA: GoPro-style tracking shot from behind - ENVIRONMENT: open-air theme park with natural sky and lighting - LIGHTING: clear sky with strong directional sunlight - VISUAL STYLE: detailed surface reflections, photorealistic rendering, realistic motion blur",
+    "timestamp": "2026-04-28T09:12:26.648Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Sea Lion + Sea Otter + Manta Ray seated in a rollercoaster cart, adjusting posture as the track twists rapidly - CAMERA: stabilized chase camera directly behind the coaster - ENVIRONMENT: sunlit amusement park with realistic crowds in distance - LIGHTING: golden hour sunlight with soft highlights - VISUAL STYLE: high-resolution textures, physically accurate lighting, photorealistic rendering",
+    "timestamp": "2026-04-28T09:13:34.066Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Angelfish + Parrotfish seated in a rollercoaster cart as the rollercoaster comes down a steep hill CAMERA: selfie front view - ENVIRONMENT: large-scale steel rollercoaster in a theme park",
+    "timestamp": "2026-04-28T09:22:02.211Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Sea Lion + Blue Whale + Sea Otter seated in a rollercoaster cart as the rollercoaster comes down a steep hill CAMERA: selfie front view - ENVIRONMENT: large-scale steel rollercoaster in a theme park",
+    "timestamp": "2026-04-28T09:23:06.008Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Hammerhead Shark + Octopus + Great White Shark seated in a rollercoaster cart as the rollercoaster comes down a steep hill CAMERA: selfie front view - ENVIRONMENT: large-scale steel rollercoaster in a theme park",
+    "timestamp": "2026-04-28T09:24:10.204Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Orca + Sea Turtle seated in a rollercoaster cart as the rollercoaster comes down a steep hill CAMERA: selfie front view - ENVIRONMENT: large-scale steel rollercoaster in a theme park",
+    "timestamp": "2026-04-28T09:25:14.097Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Fangtooth Fish + Orca seated in a rollercoaster cart as the rollercoaster comes down a steep hill CAMERA: selfie front view - ENVIRONMENT: large-scale steel rollercoaster in a theme park",
+    "timestamp": "2026-04-28T09:26:18.013Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Octopus + Hammerhead Shark + Bottlenose Dolphin seated in a rollercoaster cart as the rollercoaster comes down a steep hill CAMERA: selfie front view - ENVIRONMENT: large-scale steel rollercoaster in a theme park",
+    "timestamp": "2026-04-28T09:27:22.509Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Parrotfish seated in a rollercoaster cart as the rollercoaster comes down a steep hill CAMERA: selfie front view - ENVIRONMENT: large-scale steel rollercoaster in a theme park",
+    "timestamp": "2026-04-28T09:28:26.047Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Manta Ray + Goblin Shark + Seal seated in a rollercoaster cart as the rollercoaster comes down a steep hill CAMERA: selfie front view - ENVIRONMENT: large-scale steel rollercoaster in a theme park",
+    "timestamp": "2026-04-28T09:29:30.148Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Hammerhead Shark + Sea Lion seated in a rollercoaster cart as the rollercoaster comes down a steep hill CAMERA: selfie front view - ENVIRONMENT: large-scale steel rollercoaster in a theme park",
+    "timestamp": "2026-04-28T09:30:34.320Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Sea Turtle + Sea Otter seated in a rollercoaster cart as the rollercoaster comes down a steep hill CAMERA: selfie front view - ENVIRONMENT: large-scale steel rollercoaster in a theme park",
+    "timestamp": "2026-04-28T09:31:39.519Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Octopus seated in a rollercoaster cart as the rollercoaster comes down a steep hill CAMERA: selfie front view - ENVIRONMENT: large-scale steel rollercoaster in a theme park",
+    "timestamp": "2026-04-28T09:32:43.270Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Great White Shark + Angelfish seated in a rollercoaster cart as the rollercoaster comes down a steep hill CAMERA: selfie front view - ENVIRONMENT: large-scale steel rollercoaster in a theme park",
+    "timestamp": "2026-04-28T09:33:47.435Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Bearded Dragon + Beisa Oryx + Toad seated in a rollercoaster cart as the rollercoaster comes down a steep hill CAMERA: selfie front view - ENVIRONMENT: large-scale steel rollercoaster in a theme park",
+    "timestamp": "2026-04-28T09:38:17.255Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Amphiuma seated in a rollercoaster cart as the rollercoaster comes down a steep hill CAMERA: selfie front view - ENVIRONMENT: large-scale steel rollercoaster in a theme park",
+    "timestamp": "2026-04-28T09:39:20.677Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Yellowhammer + Prawn seated in a rollercoaster cart as the rollercoaster comes down a steep hill CAMERA: selfie front view - ENVIRONMENT: large-scale steel rollercoaster in a theme park",
+    "timestamp": "2026-04-28T09:40:24.193Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Armadillo Lizard + Weasel seated in a rollercoaster cart as the rollercoaster comes down a steep hill CAMERA: selfie front view - ENVIRONMENT: large-scale steel rollercoaster in a theme park",
+    "timestamp": "2026-04-28T09:41:27.954Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Adelie Penguin seated in a rollercoaster cart as the rollercoaster comes down a steep hill CAMERA: selfie front view - ENVIRONMENT: large-scale steel rollercoaster in a theme park",
+    "timestamp": "2026-04-28T09:42:31.508Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Moth + Gecko + Dog seated in a rollercoaster cart as the rollercoaster comes down a steep hill CAMERA: selfie front view - ENVIRONMENT: large-scale steel rollercoaster in a theme park",
+    "timestamp": "2026-04-28T09:43:35.124Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Vine Snake + Monkey seated in a rollercoaster cart as the rollercoaster comes down a steep hill CAMERA: selfie front view - ENVIRONMENT: large-scale steel rollercoaster in a theme park",
+    "timestamp": "2026-04-28T09:44:38.903Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Frigatebird seated in a rollercoaster cart as the rollercoaster comes down a steep hill CAMERA: selfie front view - ENVIRONMENT: large-scale steel rollercoaster in a theme park",
+    "timestamp": "2026-04-28T09:45:42.524Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Hummingbird seated in a rollercoaster cart as the rollercoaster comes down a steep hill CAMERA: selfie front view - ENVIRONMENT: large-scale steel rollercoaster in a theme park",
+    "timestamp": "2026-04-28T09:46:46.220Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Groundhog + Olingo + Red Kite seated in a rollercoaster cart as the rollercoaster comes down a steep hill CAMERA: selfie front view - ENVIRONMENT: large-scale steel rollercoaster in a theme park",
+    "timestamp": "2026-04-28T09:47:50.208Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of - ANIMALS: Opossum + Aardwolf seated in a rollercoaster cart as the rollercoaster comes down a steep hill CAMERA: selfie front view - ENVIRONMENT: large-scale steel rollercoaster in a theme park",
+    "timestamp": "2026-04-28T09:48:54.181Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "photorealistic video of Barnacle + Sea Cucumber taking a selfie in front of Marina Bay Sands",
+    "timestamp": "2026-04-28T10:23:59.943Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of Flounder + Lancehead taking a selfie in front of Marina Bay Sands",
+    "timestamp": "2026-04-28T10:25:01.501Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of Lamprey + Porcupine taking a selfie - the iphone camera being used should have it's back towards the camera so the screen is not visible - the animals stand in front of Eiffel Tower",
+    "timestamp": "2026-04-28T10:28:29.675Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of Robin + Kakapo taking a selfie - the iphone camera being used should have it's back towards the camera so the screen is not visible - the animals stand in front of Acropolis",
+    "timestamp": "2026-04-28T10:29:33.072Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of Octopus + Minnow + Shrew taking a selfie - the iphone camera being used should have it's back towards the camera so the screen is not visible - the animals stand in front of Colosseum",
+    "timestamp": "2026-04-28T10:30:36.532Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of Bison taking a selfie - the iphone camera being used should have it's back towards the camera so the screen is not visible - the animals stand in front of Eiffel Tower",
+    "timestamp": "2026-04-28T10:33:16.209Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of Goldfinch + Chimpanzee + Conch taking a selfie - the iphone camera being used should have it's back towards the camera so the screen is not visible - the animals stand in front of St. Peter’s Basilica",
+    "timestamp": "2026-04-28T10:34:20.068Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of Honeybee + Duck taking a selfie - the iphone camera being used should have it's back towards the camera so the screen is not visible - the animals stand in front of Great Wall near Beijing",
+    "timestamp": "2026-04-28T10:35:23.736Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of Leafcutter Ant + Boa taking a selfie - the iphone camera being used should have it's back towards the camera so the screen is not visible - the animals stand in front of Harbour Bridge",
+    "timestamp": "2026-04-28T10:36:27.236Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of Clam taking a selfie - the iphone camera being used should have it's back towards the camera so the screen is not visible - the animals stand in front of Marina Bay Sands",
+    "timestamp": "2026-04-28T10:37:30.511Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of Firefly + Asiatic Black Bear + Praying Mantis taking a selfie - the iphone camera being used should have it's back towards the camera so the screen is not visible - the animals stand in front of St. Peter’s Basilica",
+    "timestamp": "2026-04-28T10:38:34.577Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of Reef Shark + Moth taking a selfie - the iphone camera being used should have it's back towards the camera so the screen is not visible - the animals stand in front of Empire State Building",
+    "timestamp": "2026-04-28T10:39:38.299Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of Grasshopper + Shrimp taking a selfie - the iphone camera being used should have it's back towards the camera so the screen is not visible - the animals stand in front of Great Wall near Beijing",
+    "timestamp": "2026-04-28T10:40:42.039Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of Flamingo taking a selfie - the iphone camera being used should have it's back towards the camera so the screen is not visible - the animals stand in front of Central Park skyline",
+    "timestamp": "2026-04-28T10:41:45.488Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of Greater Kudu taking a selfie - the iphone camera being used should have it's back towards the camera so the screen is not visible - the animals stand in front of Empire State Building",
+    "timestamp": "2026-04-28T10:42:48.989Z",
+    "status": "success"
+  },
+  {
+    "prompt": "photorealistic video of Lizard taking a selfie - the iphone camera being used should have it's back towards the camera so the screen is not visible - the animals stand in front of Statue of Liberty",
+    "timestamp": "2026-04-28T10:43:52.531Z",
+    "status": "pending"
   }
 ]
