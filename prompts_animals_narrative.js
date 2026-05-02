@@ -234,29 +234,30 @@ const generateStory = () => {
     }
   };
 
-  add('intro', 5);
-  add('tension', 5);
-  add('action', 6);
-  add('climax', 4);
-  add('resolution', 4);
+  add('intro', 1);
+  add('tension', 1);
+  add('action', 2);
+  add('climax', 2);
+  add('resolution', 1);
 
   return seq;
 };
 
 // ---------------------------------------------------------
-const generate = (count = 3) => {
+const generate = (count = 1) => {
   const lines = [];
   lines.push(`const videos = [];`);
+
+  let index = 0;
 
   for (let v = 0; v < count; v++) {
     const story = generateStory();
 
-    lines.push(`videos[${v}] = [];`);
-
-    story.forEach((s, i) => {
+    story.forEach((s) => {
       lines.push(
-`videos[${v}][${i}] = \`video of ${s.species}, ${s.behavior}, in ${s.habitat}, ${s.lighting}, ${s.camera}, ${s.style}, 5 seconds\`;`
+        `videos[${index}] = \`video of ${s.species}, ${s.behavior}, in ${s.habitat}, ${s.lighting}, ${s.camera}, ${s.style}, 5 seconds\`;`
       );
+      index++;
     });
   }
 
@@ -264,9 +265,10 @@ const generate = (count = 3) => {
   return lines.join('\n');
 };
 
+
 // ---------------------------------------------------------
 const count = parseInt(process.argv[2]) || 3;
-const output = generate(count);
+const output = generate(1);
 
-fs.writeFileSync('videos_story.js', output);
+fs.writeFileSync('videos.js', output);
 console.log('✔ Generated narrative safari prompts');

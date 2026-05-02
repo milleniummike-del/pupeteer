@@ -7295,5 +7295,80 @@
     "prompt": "photorealistic video of Lizard taking a selfie - the iphone camera being used should have it's back towards the camera so the screen is not visible - the animals stand in front of Statue of Liberty",
     "timestamp": "2026-04-28T10:43:52.531Z",
     "status": "pending"
+  },
+  {
+    "prompt": "video of Oxpecker, wide establishing shot, in Riverbanks, golden hour, aerial drone, hyper realistic, 5 seconds",
+    "timestamp": "2026-05-02T13:03:11.519Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of Oxpecker, senses danger, in Riverbanks, sunset red glow, close-up, hyper realistic, 5 seconds",
+    "timestamp": "2026-05-02T13:04:19.759Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of Oxpecker, rapid escape, in Riverbanks, moonlight, handheld, National Geographic, 5 seconds",
+    "timestamp": "2026-05-02T13:05:23.126Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of Oxpecker, rapid escape, in Riverbanks, storm clouds, cinematic pan, cinematic depth, 5 seconds",
+    "timestamp": "2026-05-02T13:06:26.729Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of Oxpecker, intense confrontation, in Riverbanks, sunset red glow, aerial drone, hyper realistic, 5 seconds",
+    "timestamp": "2026-05-02T13:07:30.515Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of Oxpecker, intense confrontation, in Riverbanks, harsh daylight, close-up, 8K detail, 5 seconds",
+    "timestamp": "2026-05-02T13:08:33.696Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of Oxpecker, wide closing shot, in Riverbanks, golden hour, tracking shot, wildlife documentary, 5 seconds",
+    "timestamp": "2026-05-02T13:09:37.566Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of South African Lion (Panthera leo melanochaita), wide establishing shot, in Tarangire baobab valley, golden hour, low angle, wildlife documentary, 5 seconds",
+    "timestamp": "2026-05-02T13:12:52.154Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of South African Lion (Panthera leo melanochaita), becomes alert, in Tarangire baobab valley, golden hour, aerial drone, wildlife documentary, 5 seconds",
+    "timestamp": "2026-05-02T13:15:29.424Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of South African Lion (Panthera leo melanochaita), running at speed, in Tarangire baobab valley, storm clouds, close-up, wildlife documentary, 5 seconds",
+    "timestamp": "2026-05-02T13:16:34.577Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of South African Lion (Panthera leo melanochaita), rapid escape, in Tarangire baobab valley, dawn mist, low angle, hyper realistic, 5 seconds",
+    "timestamp": "2026-05-02T13:17:39.836Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of South African Lion (Panthera leo melanochaita), intense confrontation, in Tarangire baobab valley, harsh daylight, tracking shot, National Geographic, 5 seconds",
+    "timestamp": "2026-05-02T13:18:45.402Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of South African Lion (Panthera leo melanochaita), life-or-death struggle, in Tarangire baobab valley, golden hour, handheld, hyper realistic, 5 seconds",
+    "timestamp": "2026-05-02T13:19:50.807Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of South African Lion (Panthera leo melanochaita), wide closing shot, in Tarangire baobab valley, harsh daylight, aerial drone, National Geographic, 5 seconds",
+    "timestamp": "2026-05-02T13:20:56.276Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of African Wild Dog, environment detail focus, in Scrubland, sunset red glow, low angle, BBC Earth style, 5 seconds",
+    "timestamp": "2026-05-02T13:57:27.401Z",
+    "status": "pending"
   }
 ]

@@ -4,6 +4,7 @@ const { spawn } = require('child_process');
 const directory = require('./directory.js');
 
 let destinationDir = directory.getPath() + '\\upscaled';
+destinationDir = directory.getPath();
 console.log("📂 Download folder:", destinationDir);
 
 const runCommand = (command, args) => {

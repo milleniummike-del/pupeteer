@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Video Reviewer</title>
+    <style>
+        body {
+            background: #111;
+            color: white;
+            text-align: center;
+        }
+
+        video {
+            width: 90%;
+            margin-top: 20px;
+        }
+
+        button {
+            font-size: 24px;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        #fail {
+            background: red;
+            color: white;
+        }
+
+        #next {
+            background: gray;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div><button id="prev" style="font-size:24px; padding:20px; margin:20px; background:#444; color:white;">
+            PREVIOUS
+        </button>
+        <button id="fail">FAIL (Delete)</button>
+        <button id="next">NEXT</button>
+    </div>
+    <div>
+
+        <video id="player" controls autoplay style="width:30%; height:auto;"></video>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+
+</html>
