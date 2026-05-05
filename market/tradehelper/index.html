@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8" />
   <title>Trade Helper</title>
@@ -7,20 +8,53 @@
   <script src="https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js"></script>
 
   <style>
-    body { font-family: Arial; margin: 20px; }
-    #chart { width: 100%; height: 500px; border: 1px solid #ccc; margin-top: 20px; }
-    #output { margin-top: 20px; font-family: monospace; font-size: 18px; }
-    button { margin-right: 10px; }
+    body {
+      font-family: Arial;
+      margin: 20px;
+    }
+
+    #chart {
+      width: 100%;
+      height: 500px;
+      border: 1px solid #ccc;
+      margin-top: 20px;
+    }
+
+    #output {
+      margin-top: 20px;
+      font-family: monospace;
+      font-size: 18px;
+    }
+
+    button {
+      margin-right: 10px;
+    }
   </style>
 </head>
 
 <body>
   <h2>Trade Helper</h2>
-<h3>Recent Symbols</h3>
-<div id="symbolHistory"></div>
+  <h3>Recent Symbols</h3>
+  <div id="symbolHistory"></div>
 
   <label>Symbol:</label>
   <input id="symbol" placeholder="MU" />
+
+  <label for="interval">Interval:</label>
+  <select id="interval">
+    <option value="OneMinute">1 Minute</option>
+    <option value="FiveMinutes">5 Minutes</option>
+    <option value="TenMinutes">10 Minutes</option>
+    <option value="FifteenMinutes">15 Minutes</option>
+    <option value="ThirtyMinutes">30 Minutes</option>
+    <option value="OneHour">1 Hour</option>
+    <option value="FourHours">4 Hours</option>
+    <option value="OneDay">1 Day</option>
+    <option value="OneWeek">1 Week</option>
+  </select>
+
+  <label for="leverage">Leverage:</label>
+  <input id="leverage" type="number" value="5" min="1" />
 
   <button id="load">Load Chart</button>
   <button id="clearLines">Clear Lines</button>
@@ -32,4 +66,5 @@
 
   <script type="module" src="renderer.js"></script>
 </body>
+
 </html>
