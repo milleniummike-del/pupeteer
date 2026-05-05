@@ -3,10 +3,8 @@ const fs = require('fs');
 const path = require('path');
 const directory = require('../directory.js');
 
-let destinationDir = directory.getPath() + '\\upscaled';
 destinationDir = directory.getPath();
 console.log("📂 Download folder:", destinationDir);
-
 
 const VIDEO_FOLDER = path.join(destinationDir);
 

@@ -7369,6 +7369,231 @@
   {
     "prompt": "video of African Wild Dog, environment detail focus, in Scrubland, sunset red glow, low angle, BBC Earth style, 5 seconds",
     "timestamp": "2026-05-02T13:57:27.401Z",
-    "status": "pending"
+    "status": "success"
+  },
+  {
+    "prompt": "video of African Wild Dog, becomes alert, in Scrubland, harsh daylight, handheld, hyper realistic, 5 seconds",
+    "timestamp": "2026-05-02T13:58:31.081Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of African Wild Dog, rapid escape, in Scrubland, storm clouds, tracking shot, 8K detail, 5 seconds",
+    "timestamp": "2026-05-02T14:01:35.051Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of African Wild Dog, running at speed, in Scrubland, storm clouds, aerial drone, hyper realistic, 5 seconds",
+    "timestamp": "2026-05-02T14:02:39.096Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of African Wild Dog, life-or-death struggle, in Scrubland, sunset red glow, close-up, 8K detail, 5 seconds",
+    "timestamp": "2026-05-02T14:03:43.151Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of African Wild Dog, intense confrontation, in Scrubland, storm clouds, handheld, cinematic depth, 5 seconds",
+    "timestamp": "2026-05-02T14:04:47.194Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of African Wild Dog, slow breathing, in Scrubland, sunset red glow, handheld, hyper realistic, 5 seconds",
+    "timestamp": "2026-05-02T14:05:51.237Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: sunlit rolling hills in Turkey, surrounded by crystal-clear water - TIME: golden hour sunset - MOTION: mist weaving between mountain peaks - MOOD: awe-inspiring natural grandeur - CAMERA: top-down vertical reveal shot, long sweeping side-to-side flyover - VISUAL STYLE: volumetric sunlight rays, ultra high resolution detail, high dynamic range lighting",
+    "timestamp": "2026-05-02T14:12:50.599Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: majestic fjord landscape in Sri Lanka, glowing under golden hour light - TIME: dramatic storm-light skies - MOTION: fog lifting to reveal the landscape - MOOD: epic sense of scale - CAMERA: long sweeping side-to-side flyover, top-down vertical reveal shot - VISUAL STYLE: natural cinematic color grading, soft atmospheric haze, crisp environmental textures",
+    "timestamp": "2026-05-02T14:14:02.860Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: dramatic ancient ruins in Indonesia, with dramatic shadows stretching across terrain - TIME: dramatic storm-light skies - MOTION: clouds drifting slowly through valleys - MOOD: calm reflective stillness - CAMERA: top-down vertical reveal shot, slow forward drone glide - VISUAL STYLE: ultra high resolution detail, gentle motion blur from drone movement, soft atmospheric haze",
+    "timestamp": "2026-05-02T14:15:15.604Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: serene high plateau in Norway, with clouds drifting below peaks - TIME: bright midday clarity - MOTION: fog lifting to reveal the landscape - MOOD: awe-inspiring natural grandeur - CAMERA: slow forward drone glide, top-down vertical reveal shot - VISUAL STYLE: crisp environmental textures, gentle motion blur from drone movement, high dynamic range lighting",
+    "timestamp": "2026-05-02T14:16:28.138Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Taj Mahal, India - TIME: blue hour twilight - MOTION: sunlight glittering across ocean surfaces - MOOD: majestic untouched beauty - CAMERA: long sweeping side-to-side flyover, slow forward drone glide - VISUAL STYLE: crisp environmental textures, high dynamic range lighting, soft atmospheric haze",
+    "timestamp": "2026-05-02T14:17:38.975Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: breathtaking high plateau in Tanzania, covered in vibrant natural colors - TIME: blue hour twilight - MOTION: clouds drifting slowly through valleys - MOOD: dreamlike wanderlust atmosphere - CAMERA: cinematic orbit around landscape feature, long sweeping side-to-side flyover - VISUAL STYLE: volumetric sunlight rays, crisp environmental textures, high dynamic range lighting",
+    "timestamp": "2026-05-02T14:18:53.358Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Hallstatt alpine village, Austria - TIME: dramatic storm-light skies - MOTION: waves rolling gently toward the shore - MOOD: majestic untouched beauty - CAMERA: top-down vertical reveal shot, low-to-high altitude rising reveal - VISUAL STYLE: gentle motion blur from drone movement, natural cinematic color grading, crisp environmental textures",
+    "timestamp": "2026-05-02T14:20:05.604Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: stormy river canyon in Turkey, with waves crashing against formations - TIME: dramatic storm-light skies - MOTION: clouds drifting slowly through valleys - MOOD: peaceful cinematic serenity - CAMERA: low-to-high altitude rising reveal, cinematic orbit around landscape feature - VISUAL STYLE: high dynamic range lighting, soft atmospheric haze, crisp environmental textures",
+    "timestamp": "2026-05-02T14:21:18.589Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: serene alpine lake in France, with mist rolling through the landscape - TIME: blue hour twilight - MOTION: waves rolling gently toward the shore - MOOD: calm reflective stillness - CAMERA: slow forward drone glide, gradual pullback revealing massive scale - VISUAL STYLE: high dynamic range lighting, volumetric sunlight rays, ultra high resolution detail",
+    "timestamp": "2026-05-02T14:22:31.195Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Mount Cook, New Zealand - TIME: bright midday clarity - MOTION: mist weaving between mountain peaks - MOOD: dreamlike wanderlust atmosphere - CAMERA: top-down vertical reveal shot, high-altitude aerial panorama - VISUAL STYLE: natural cinematic color grading, crisp environmental textures, soft atmospheric haze",
+    "timestamp": "2026-05-02T14:23:42.564Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Amazon rainforest basin - TIME: moody overcast afternoon - MOTION: fog lifting to reveal the landscape - MOOD: epic sense of scale - CAMERA: top-down vertical reveal shot, slow forward drone glide - VISUAL STYLE: volumetric sunlight rays, ultra high resolution detail, natural cinematic color grading",
+    "timestamp": "2026-05-02T14:24:53.612Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: otherworldly alpine lake in Fiji, covered in vibrant natural colors - TIME: bright midday clarity - MOTION: fog lifting to reveal the landscape - MOOD: majestic untouched beauty - CAMERA: top-down vertical reveal shot, cinematic orbit around landscape feature - VISUAL STYLE: volumetric sunlight rays, ultra high resolution detail, natural cinematic color grading",
+    "timestamp": "2026-05-02T14:26:06.545Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: untouched waterfall basin in French Polynesia, with sunlight reflecting across surfaces - TIME: moody overcast afternoon - MOTION: sunlight glittering across ocean surfaces - MOOD: peaceful cinematic serenity - CAMERA: cinematic orbit around landscape feature, low-to-high altitude rising reveal - VISUAL STYLE: volumetric sunlight rays, ultra high resolution detail, crisp environmental textures",
+    "timestamp": "2026-05-02T14:27:20.719Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Preikestolen cliff, Norway - TIME: golden hour sunset - MOTION: mist weaving between mountain peaks - MOOD: epic sense of scale - CAMERA: gradual pullback revealing massive scale, low-to-high altitude rising reveal - VISUAL STYLE: gentle motion blur from drone movement, volumetric sunlight rays, natural cinematic color grading",
+    "timestamp": "2026-05-02T14:28:32.699Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: sunlit savanna plains in Argentina, glowing under golden hour light - TIME: moody overcast afternoon - MOTION: shadows stretching as the sun sets - MOOD: dreamlike wanderlust atmosphere - CAMERA: low-to-high altitude rising reveal, gradual pullback revealing massive scale - VISUAL STYLE: crisp environmental textures, high dynamic range lighting, soft atmospheric haze",
+    "timestamp": "2026-05-02T14:29:45.993Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: serene volcanic crater in Vietnam, with sunlight reflecting across surfaces - TIME: soft pastel sunrise - MOTION: fog lifting to reveal the landscape - MOOD: awe-inspiring natural grandeur - CAMERA: low-to-high altitude rising reveal, gradual pullback revealing massive scale - VISUAL STYLE: volumetric sunlight rays, ultra high resolution detail, high dynamic range lighting",
+    "timestamp": "2026-05-02T14:30:59.574Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Burj Khalifa skyline, Dubai - TIME: dramatic storm-light skies - MOTION: mist weaving between mountain peaks - MOOD: epic sense of scale - CAMERA: cinematic orbit around landscape feature, high-altitude aerial panorama - VISUAL STYLE: natural cinematic color grading, gentle motion blur from drone movement, crisp environmental textures",
+    "timestamp": "2026-05-02T14:32:11.945Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Geirangerfjord, Norway - TIME: moody overcast afternoon - MOTION: fog lifting to reveal the landscape - MOOD: majestic untouched beauty - CAMERA: long sweeping side-to-side flyover, cinematic orbit around landscape feature - VISUAL STYLE: natural cinematic color grading, gentle motion blur from drone movement, ultra high resolution detail",
+    "timestamp": "2026-05-02T14:33:24.606Z",
+    "status": "success"
+  },
+  {
+    "prompt": "LOCATION: lush coral reef lagoon in New Zealand, with clouds drifting below peaks - TIME: soft pastel sunrise - MOTION: fog lifting to reveal the landscape - MOOD: peaceful cinematic serenity - CAMERA: long sweeping side-to-side flyover, gradual pullback revealing massive scale - VISUAL STYLE: natural cinematic color grading, ultra high resolution detail, crisp environmental textures",
+    "timestamp": "2026-05-02T14:34:38.244Z",
+    "status": "success"
+  },
+  {
+    "prompt": "ICONIC LOCATION: Neuschwanstein Castle, Germany - TIME: moody overcast afternoon - MOTION: clouds drifting slowly through valleys - MOOD: epic sense of scale - CAMERA: slow forward drone glide, gradual pullback revealing massive scale - VISUAL STYLE: gentle motion blur from drone movement, volumetric sunlight rays, high dynamic range lighting",
+    "timestamp": "2026-05-02T14:35:50.363Z",
+    "status": "success"
+  },
+  {
+    "prompt": "JUNGLE CINEMATIC VIDEO - SPECIES: Macaw Parrot - BEHAVIOR: gliding between trees with vibrant feathers - HABITAT: branches above jungle rivers - LIGHTING: dark moody forest with minimal light - MODIFIERS: National Geographic wildlife cinematography, handheld documentary style, shallow depth of field - ENHANCERS: high humidity atmosphere, cinematic color grading, hyper-detailed textures",
+    "timestamp": "2026-05-03T14:27:56.649Z",
+    "status": "success"
+  },
+  {
+    "prompt": "JUNGLE CINEMATIC VIDEO - SPECIES: Howler Monkey - BEHAVIOR: swinging rapidly between trees - HABITAT: thick vine-covered treetops - LIGHTING: glowing sunset through thick foliage - MODIFIERS: National Geographic wildlife cinematography, cinematic tracking shot, handheld documentary style - ENHANCERS: 8K ultra realistic, hyper-detailed textures, cinematic color grading",
+    "timestamp": "2026-05-03T14:29:06.968Z",
+    "status": "success"
+  },
+  {
+    "prompt": "JUNGLE CINEMATIC VIDEO - SPECIES: Jaguar (Panthera onca) - BEHAVIOR: emerging from the shadows with piercing eyes - HABITAT: humid mangrove jungle - LIGHTING: sun rays piercing through dense canopy - MODIFIERS: drone shot above canopy, shallow depth of field, handheld documentary style - ENHANCERS: cinematic color grading, immersive jungle environment, volumetric light rays",
+    "timestamp": "2026-05-03T14:30:17.885Z",
+    "status": "success"
+  },
+  {
+    "prompt": "JUNGLE CINEMATIC VIDEO - SPECIES: Chameleon - BEHAVIOR: leaping between branches - HABITAT: humid undergrowth - LIGHTING: sun rays piercing through dense canopy - MODIFIERS: National Geographic wildlife cinematography, macro detail on textures and skin, handheld documentary style - ENHANCERS: 8K ultra realistic, hyper-detailed textures, volumetric light rays",
+    "timestamp": "2026-05-03T14:31:28.269Z",
+    "status": "success"
+  },
+  {
+    "prompt": "JUNGLE CINEMATIC VIDEO - SPECIES: Green Anaconda (Eunectes murinus) - BEHAVIOR: swimming powerfully through a murky jungle river - HABITAT: thick Southeast Asian jungle canopy - LIGHTING: humid golden light filtering through leaves - MODIFIERS: low-angle jungle perspective, handheld documentary style, macro detail on textures and skin - ENHANCERS: volumetric light rays, 8K ultra realistic, immersive jungle environment",
+    "timestamp": "2026-05-03T14:32:40.818Z",
+    "status": "success"
+  },
+  {
+    "prompt": "JUNGLE CINEMATIC VIDEO - SPECIES: Bengal Tiger (Panthera tigris tigris) - BEHAVIOR: silently stalking prey through dense undergrowth - HABITAT: dense Amazon rainforest floor - LIGHTING: sun rays piercing through dense canopy - MODIFIERS: National Geographic wildlife cinematography, macro detail on textures and skin, slow motion capture - ENHANCERS: 8K ultra realistic, ultra طبیعی colors, hyper-detailed textures",
+    "timestamp": "2026-05-03T14:33:56.249Z",
+    "status": "success"
+  },
+  {
+    "prompt": "JUNGLE CINEMATIC VIDEO - SPECIES: Hornbill - BEHAVIOR: perching and calling loudly - HABITAT: misty jungle mornings - LIGHTING: glowing sunset through thick foliage - MODIFIERS: slow motion capture, low-angle jungle perspective, cinematic tracking shot - ENHANCERS: volumetric light rays, ultra طبیعی colors, 8K ultra realistic",
+    "timestamp": "2026-05-03T14:35:06.281Z",
+    "status": "success"
+  },
+  {
+    "prompt": "JUNGLE CINEMATIC VIDEO - SPECIES: Leaf Insect - BEHAVIOR: remaining completely still as camouflage - HABITAT: wet jungle floor covered in leaves - LIGHTING: humid golden light filtering through leaves - MODIFIERS: slow motion capture, handheld documentary style, macro detail on textures and skin - ENHANCERS: high humidity atmosphere, 8K ultra realistic, hyper-detailed textures",
+    "timestamp": "2026-05-03T14:36:16.867Z",
+    "status": "success"
+  },
+  {
+    "prompt": "Wildlife documentary scene set in the Tropical Rainforest: a Sloth moving silently through dense vegetation in humid rainforest with thick foliage, in blue twilight just after sunset. captured using aerial drone footage. National Geographic documentary quality, dust and particles moving naturally, heat haze or atmospheric effects.",
+    "timestamp": "2026-05-05T06:47:54.046Z",
+    "status": "success"
+  },
+  {
+    "prompt": "Wildlife documentary scene set in the Desert: a Desert Eagle remaining still to conserve energy in vast rolling sand dunes, in blue twilight just after sunset. filmed handheld in documentary style. hyper-detailed natural realism, heat haze or atmospheric effects, wind interacting with the environment.",
+    "timestamp": "2026-05-05T06:49:02.324Z",
+    "status": "success"
+  },
+  {
+    "prompt": "Wildlife documentary scene set in the Tropical Rainforest: a Jaguar climbing high into the forest canopy in misty forest floor covered in vines, during a dramatic sunset sky. recorded in slow motion at 120fps. BBC Planet Earth level cinematography, natural lighting and shadows, subtle muscle movements visible.",
+    "timestamp": "2026-05-05T06:50:10.851Z",
+    "status": "success"
+  },
+  {
+    "prompt": "Wildlife documentary scene set in the Tropical Rainforest: a Sloth ambushing prey near a riverbank in humid rainforest with thick foliage, during a dramatic sunset sky. recorded in slow motion at 120fps. true-to-life animal behavior, wind interacting with the environment, dust and particles moving naturally.",
+    "timestamp": "2026-05-05T06:51:19.439Z",
+    "status": "success"
+  },
+  {
+    "prompt": "Wildlife documentary scene set in the Desert: a Scorpion moving across hot sand dunes in vast rolling sand dunes, at night under a star-filled sky. recorded in slow motion at 120fps. true-to-life animal behavior, natural lighting and shadows, dust and particles moving naturally.",
+    "timestamp": "2026-05-05T06:52:27.163Z",
+    "status": "success"
+  },
+  {
+    "prompt": "Wildlife documentary scene set in the Ocean Depths: a Manta Ray gliding effortlessly through deep water in vibrant coral reef ecosystems, at night under a star-filled sky. shot with a cinematic tracking shot. National Geographic documentary quality, natural lighting and shadows, subtle muscle movements visible.",
+    "timestamp": "2026-05-05T06:53:36.015Z",
+    "status": "success"
+  },
+  {
+    "prompt": "Wildlife documentary scene set in the Desert: a Sidewinder Snake remaining still to conserve energy in vast rolling sand dunes, under harsh midday sunlight. filmed from a low-angle ground perspective. hyper-detailed natural realism, subtle muscle movements visible, heat haze or atmospheric effects.",
+    "timestamp": "2026-05-05T06:54:44.436Z",
+    "status": "success"
+  },
+  {
+    "prompt": "Wildlife documentary scene set in the Mountain Wilderness: a Golden Eagle climbing steep rocky cliffs in rocky high-altitude terrain, during a dramatic sunset sky. captured with a telephoto wildlife lens. true-to-life animal behavior, wind interacting with the environment, dust and particles moving naturally.",
+    "timestamp": "2026-05-05T06:55:53.218Z",
+    "status": "success"
+  },
+  {
+    "prompt": "Wildlife documentary scene set in the Arctic Wilderness: a Reindeer resting against the icy terrain in floating sea ice under pale sunlight, at night under a star-filled sky. recorded in slow motion at 120fps. ultra-realistic textures and lighting, environmental immersion and realism, subtle muscle movements visible.",
+    "timestamp": "2026-05-05T07:53:00.646Z",
+    "status": "success"
+  },
+  {
+    "prompt": "Wildlife documentary scene set in the Mountain Wilderness: a Yak leaping across narrow ledges in misty mountain forests, under harsh midday sunlight. shot with a cinematic tracking shot. true-to-life animal behavior, dust and particles moving naturally, wind interacting with the environment.",
+    "timestamp": "2026-05-05T07:54:10.078Z",
+    "status": "success"
+  },
+  {
+    "prompt": "Wildlife documentary scene set in the Arctic Wilderness: a Arctic Fox enduring harsh winds in extreme cold in endless frozen tundra, at night under a star-filled sky. captured using aerial drone footage. ultra-realistic textures and lighting, dust and particles moving naturally, wind interacting with the environment.",
+    "timestamp": "2026-05-05T07:55:20.715Z",
+    "status": "success"
   }
 ]

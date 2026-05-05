@@ -1,9 +1,10 @@
 const videos = [];
-videos[0] = `video of African Wild Dog, environment detail focus, in Scrubland, sunset red glow, low angle, BBC Earth style, 5 seconds`;
-videos[1] = `video of African Wild Dog, becomes alert, in Scrubland, harsh daylight, handheld, hyper realistic, 5 seconds`;
-videos[2] = `video of African Wild Dog, rapid escape, in Scrubland, storm clouds, tracking shot, 8K detail, 5 seconds`;
-videos[3] = `video of African Wild Dog, running at speed, in Scrubland, storm clouds, aerial drone, hyper realistic, 5 seconds`;
-videos[4] = `video of African Wild Dog, life-or-death struggle, in Scrubland, sunset red glow, close-up, 8K detail, 5 seconds`;
-videos[5] = `video of African Wild Dog, intense confrontation, in Scrubland, storm clouds, handheld, cinematic depth, 5 seconds`;
-videos[6] = `video of African Wild Dog, slow breathing, in Scrubland, sunset red glow, handheld, hyper realistic, 5 seconds`;
+videos[0] = `Wildlife documentary scene set in the Arctic Wilderness: a Reindeer resting against the icy terrain in floating sea ice under pale sunlight, at night under a star-filled sky. recorded in slow motion at 120fps. ultra-realistic textures and lighting, environmental immersion and realism, subtle muscle movements visible.`;
+videos[1] = `Wildlife documentary scene set in the Mountain Wilderness: a Yak leaping across narrow ledges in misty mountain forests, under harsh midday sunlight. shot with a cinematic tracking shot. true-to-life animal behavior, dust and particles moving naturally, wind interacting with the environment.`;
+videos[2] = `Wildlife documentary scene set in the Arctic Wilderness: a Arctic Fox enduring harsh winds in extreme cold in endless frozen tundra, at night under a star-filled sky. captured using aerial drone footage. ultra-realistic textures and lighting, dust and particles moving naturally, wind interacting with the environment.`;
+videos[3] = `Wildlife documentary scene set in the Desert: a Scorpion searching for food in extreme heat in rocky desert under intense sun, during a dramatic sunset sky. recorded in slow motion at 120fps. hyper-detailed natural realism, subtle muscle movements visible, dust and particles moving naturally.`;
+videos[4] = `Wildlife documentary scene set in the African Savanna: a Leopard moving in a coordinated herd across open plains in golden grasslands stretching to the horizon, during a dramatic sunset sky. shot with a cinematic tracking shot. true-to-life animal behavior, heat haze or atmospheric effects, environmental immersion and realism.`;
+videos[5] = `Wildlife documentary scene set in the Desert: a Desert Eagle burrowing beneath the surface in rocky desert under intense sun, in blue twilight just after sunset. captured using aerial drone footage. hyper-detailed natural realism, environmental immersion and realism, subtle muscle movements visible.`;
+videos[6] = `Wildlife documentary scene set in the Ocean Depths: a Manta Ray surfacing gracefully for air in sunlight piercing through water from above, in blue twilight just after sunset. recorded in slow motion at 120fps. true-to-life animal behavior, subtle muscle movements visible, environmental immersion and realism.`;
+videos[7] = `Wildlife documentary scene set in the Ocean Depths: a Blue Whale gliding effortlessly through deep water in sunlight piercing through water from above, in blue twilight just after sunset. captured with a telephoto wildlife lens. hyper-detailed natural realism, wind interacting with the environment, dust and particles moving naturally.`;
 module.exports = videos;

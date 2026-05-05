@@ -1,16 +1,16 @@
 // run_pipeline.js
 const { execSync } = require('child_process');
 
-const promptsFile = process.argv[2] || 'prompts_animals_jungle';
+const promptsFile = process.argv[2] || 'prompts_animals_global';
 const count = process.argv[3] || '8';
 
 const commands = [
   `node .\\${promptsFile} ${count}`,
-  'node create_producer.js',
+ // 'node create_producer.js',
   'node .\\meta_createvideos.js',
   'node .\\meta_getvideos.js',
-  'node .\\upscale.js',
-  'node combine_videos.js'
+  //'node .\\upscale.js',
+  //'node combine_videos.js'
 ];
 
 for (const cmd of commands) {
