@@ -3,8 +3,26 @@ const path = require('path');
 const { spawn } = require('child_process');
 const directory = require('./directory.js');
 
-let destinationDir = directory.getPath() + '\\upscaled';
-//destinationDir = directory.getPath();
+// -------------------------
+// Named arguments parser
+// -------------------------
+const args = Object.fromEntries(
+  process.argv.slice(2).map(arg => {
+    const [key, value] = arg.split('=');
+    return [key, value];
+  })
+);
+
+// -------------------------
+// Config
+// -------------------------
+
+const d = args.path || '';
+let destinationDir = directory.getPath()
+if (d) {
+  destinationDir = directory.getPath() + '\\'+path;
+}
+
 console.log("📂 Download folder:", destinationDir);
 
 const runCommand = (command, args) => {

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Trade Helper</title>
+
+  <script src="https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js"></script>
+
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    #chart { width: 100%; height: 500px; border: 1px solid #ccc; margin-top: 20px; }
+    #output { margin-top: 20px; font-family: monospace; font-size: 18px; }
+    button { margin-right: 10px; }
+  </style>
+</head>
+
+<body>
+  <h2>Trade Helper</h2>
+<h3>Recent Symbols</h3>
+<div id="symbolHistory"></div>
+
+  <label>Symbol:</label>
+  <input id="symbol" placeholder="MU" />
+
+  <button id="load">Load Chart</button>
+  <button id="clearLines">Clear Lines</button>
+  <button id="makeTrade">Make Trade</button>
+
+  <div id="chart"></div>
+
+  <div id="output"></div>
+
+  <script type="module" src="renderer.js"></script>
+</body>
+</html>

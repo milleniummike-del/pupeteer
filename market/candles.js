@@ -1,5 +1,5 @@
 const headers = require('./headers.js');
-
+const fs = require('fs');
 // -------------------------
 // Named arguments parser
 // -------------------------
@@ -15,7 +15,7 @@ const args = Object.fromEntries(
 // -------------------------
 const symbol = args.symbol || 'BTC';
 
-const interval = `FifteenMinutes`;
+const interval = args.interval || `FifteenMinutes`;
 const direction = `asc`;
 
 // -------------------------
@@ -85,7 +85,17 @@ const placeOrder = async () => {
 
     const candleData = await safeJson(candleRes);
 
-    console.log(candleData.candles);
+   // console.log(candleData.candles);
+
+    const filePath = "tradehelper/mock.json";
+
+  fs.writeFile(filePath, JSON.stringify(candleData, null, 2), (err) => {
+    if (err) {
+      console.error("Error writing JSON:", err);
+    } else {
+      console.log("JSON saved to mock.json");
+    }
+  });
 
   } catch (err) {
     console.error('ERROR:', err.message);

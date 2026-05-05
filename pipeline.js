@@ -1,8 +1,22 @@
 // run_pipeline.js
 const { execSync } = require('child_process');
 
-const promptsFile = process.argv[2] || 'prompts_animals_global';
-const count = process.argv[3] || '8';
+// -------------------------
+// Named arguments parser
+// -------------------------
+const args = Object.fromEntries(
+  process.argv.slice(2).map(arg => {
+    const [key, value] = arg.split('=');
+    return [key, value];
+  })
+);
+
+// -------------------------
+// Config
+// -------------------------
+
+const promptsFile = args.promptfile || 'prompts_animals_global';
+const count = args.count || '8';
 
 const commands = [
   `node .\\${promptsFile} ${count}`,

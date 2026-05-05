@@ -1,7 +1,7 @@
 const headers = require('./headers.js');
 
 // -------------------------
-// Parse named arguments
+// Named arguments parser
 // -------------------------
 const args = Object.fromEntries(
   process.argv.slice(2).map(arg => {
@@ -13,18 +13,19 @@ const args = Object.fromEntries(
 // -------------------------
 // Config
 // -------------------------
-const symbol = args.symbol || 'BTC';
+const symbol = args.symbol || 'OIL';
 const position = (args.position || 'LONG').toUpperCase();
-
 const amount = Number(args.amount ?? 1000);
-const rate = args.rate !== undefined ? Number(args.rate) : null;
-const leverage = Number(args.leverage ?? 1);
+const leverage = Number(args.leverage ?? 5);
 
-const stop = Number(args.stop ?? rate - rate*0.008);
-const profit = Number(args.profit ?? rate + rate * 0.005);
+const stopPercent = Number(args.stop ?? 0.008);
+const profitPercent = Number(args.profit ?? 0.005);
+
+const stopMultiplier = 1 - stopPercent;
+const profitMultiplier = 1 + profitPercent;
 
 // -------------------------
-// Helpers
+// Safe JSON helper
 // -------------------------
 async function safeJson(res) {
   const text = await res.text();
@@ -42,10 +43,10 @@ async function safeJson(res) {
 const placeOrder = async () => {
   try {
     console.log('--- CONFIG ---');
-    console.log({ symbol, position, amount, rate, leverage });
+    console.log({ symbol, position, amount, leverage });
 
     // -------------------------
-    // 1. Get instrument ID
+    // 1. Get instrument
     // -------------------------
     const searchUrl =
       `https://public-api.etoro.com/api/v1/market-data/search?internalSymbolFull=${symbol}`;
@@ -58,21 +59,56 @@ const placeOrder = async () => {
     );
 
     if (!instrument) {
-      throw new Error(`Instrument not found for ${symbol}`);
+      throw new Error(`Instrument not found: ${symbol}`);
     }
 
     const instrumentId = instrument.instrumentId;
     console.log('Instrument ID:', instrumentId);
 
     // -------------------------
-    // 4. Build order
+    // 2. Get price
+    // -------------------------
+    const priceUrl =
+      `https://public-api.etoro.com/api/v1/market-data/instruments/rates?instrumentIds=${instrumentId}`;
+
+    const priceRes = await fetch(priceUrl, {
+      method: 'GET',
+      headers
+    });
+
+    const priceData = await safeJson(priceRes);
+    const price = priceData.rates?.[0]?.bid;
+
+    if (!price) {
+      throw new Error('Price not available');
+    }
+
+    console.log('Price:', price);
+
+    // -------------------------
+    // 3. SL / TP calculation
+    // -------------------------
+    let stopLoss, takeProfit;
+
+    if (position === 'LONG') {
+      stopLoss = price * stopMultiplier;
+      takeProfit = price * profitMultiplier;
+    } else {
+      stopLoss = price * profitMultiplier;
+      takeProfit = price * stopMultiplier;
+    }
+
+    console.log('Stop Loss:', stopLoss);
+    console.log('Take Profit:', takeProfit);
+
+    // -------------------------
+    // 4. Order payload
     // -------------------------
     const orderBody = {
       InstrumentId: instrumentId,
       Amount: amount,
-      Rate: rate, // IMPORTANT: may need valid value for limit orders
-      StopLossRate: stop,
-      TakeProfitRate: profit,
+      StopLossRate: stopLoss,
+      TakeProfitRate: takeProfit,
       Leverage: leverage,
       IsBuy: position === 'LONG'
     };
@@ -84,7 +120,7 @@ const placeOrder = async () => {
     // 5. Place order
     // -------------------------
     const orderUrl =
-      'https://public-api.etoro.com/api/v1/trading/execution/demo/limit-orders';
+      'https://public-api.etoro.com/api/v1/trading/execution/demo/market-open-orders/by-amount';
 
     const orderRes = await fetch(orderUrl, {
       method: 'POST',

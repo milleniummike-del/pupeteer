@@ -1,0 +1,915 @@
+{
+  "interval": "FifteenMinutes",
+  "candles": [
+    {
+      "instrumentId": 100000,
+      "candles": [
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T09:15:00Z",
+          "open": 79712.87,
+          "high": 79806.01,
+          "low": 79691.5,
+          "close": 79710.01,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T09:30:00Z",
+          "open": 79710.01,
+          "high": 79867.21,
+          "low": 79674,
+          "close": 79840.08,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T09:45:00Z",
+          "open": 79840.06,
+          "high": 79909.02,
+          "low": 79772.01,
+          "close": 79815.22,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T10:00:00Z",
+          "open": 79815.22,
+          "high": 79866.49,
+          "low": 78578.56,
+          "close": 78735.82,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T10:15:00Z",
+          "open": 78735.85,
+          "high": 78751.79,
+          "low": 78211.99,
+          "close": 78491.01,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T10:30:00Z",
+          "open": 78494.46,
+          "high": 79042,
+          "low": 78445,
+          "close": 78922.97,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T10:45:00Z",
+          "open": 78922.97,
+          "high": 79097.23,
+          "low": 78839.03,
+          "close": 78935.21,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T11:00:00Z",
+          "open": 78935.21,
+          "high": 79072.27,
+          "low": 78897,
+          "close": 79042.62,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T11:15:00Z",
+          "open": 79042.62,
+          "high": 79131.32,
+          "low": 78912.22,
+          "close": 78956.46,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T11:30:00Z",
+          "open": 78956.46,
+          "high": 78956.46,
+          "low": 78692.49,
+          "close": 78714.8,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T11:45:00Z",
+          "open": 78714.8,
+          "high": 78851.39,
+          "low": 78710,
+          "close": 78782.95,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T12:00:00Z",
+          "open": 78784.99,
+          "high": 78840.99,
+          "low": 78704.51,
+          "close": 78793.36,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T12:15:00Z",
+          "open": 78793.36,
+          "high": 79020.13,
+          "low": 78729.44,
+          "close": 78959.99,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T12:30:00Z",
+          "open": 78959.99,
+          "high": 78989.99,
+          "low": 78842,
+          "close": 78985.21,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T12:45:00Z",
+          "open": 78985.21,
+          "high": 78998.99,
+          "low": 78841.35,
+          "close": 78852,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T13:00:00Z",
+          "open": 78848,
+          "high": 78977,
+          "low": 78561,
+          "close": 78926.44,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T13:15:00Z",
+          "open": 78926.44,
+          "high": 79056.89,
+          "low": 78897,
+          "close": 78952.6,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T13:30:00Z",
+          "open": 78952.6,
+          "high": 79113.99,
+          "low": 78841,
+          "close": 78856.37,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T13:45:00Z",
+          "open": 78856.37,
+          "high": 78950.16,
+          "low": 78718.5,
+          "close": 78774.73,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T14:00:00Z",
+          "open": 78780.1,
+          "high": 78992.01,
+          "low": 78498,
+          "close": 78967.01,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T14:15:00Z",
+          "open": 78960,
+          "high": 79396.1,
+          "low": 78946.43,
+          "close": 79237.55,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T14:30:00Z",
+          "open": 79237.57,
+          "high": 79594.19,
+          "low": 79232.08,
+          "close": 79541.71,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T14:45:00Z",
+          "open": 79541.71,
+          "high": 80566.99,
+          "low": 79541.71,
+          "close": 80226.32,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T15:00:00Z",
+          "open": 80227.13,
+          "high": 80391.49,
+          "low": 79936.7,
+          "close": 80117.29,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T15:15:00Z",
+          "open": 80117.29,
+          "high": 80233.99,
+          "low": 79345.87,
+          "close": 79705.71,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T15:30:00Z",
+          "open": 79712.01,
+          "high": 79936.49,
+          "low": 79480.01,
+          "close": 79914.55,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T15:45:00Z",
+          "open": 79921,
+          "high": 80129.91,
+          "low": 79558.59,
+          "close": 80026,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T16:00:00Z",
+          "open": 80026,
+          "high": 80076.49,
+          "low": 79660.41,
+          "close": 79722.71,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T16:15:00Z",
+          "open": 79717.25,
+          "high": 80414,
+          "low": 79615.17,
+          "close": 80254,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T16:30:00Z",
+          "open": 80254,
+          "high": 80370,
+          "low": 80151.11,
+          "close": 80279.5,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T16:45:00Z",
+          "open": 80276,
+          "high": 80339.21,
+          "low": 79975,
+          "close": 80024,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T17:00:00Z",
+          "open": 80024,
+          "high": 80470.4,
+          "low": 80023.17,
+          "close": 80391.99,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T17:15:00Z",
+          "open": 80391.99,
+          "high": 80529.84,
+          "low": 80370.51,
+          "close": 80451,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T17:30:00Z",
+          "open": 80451,
+          "high": 80471.49,
+          "low": 80258.98,
+          "close": 80281.67,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T17:45:00Z",
+          "open": 80281.67,
+          "high": 80748.5,
+          "low": 80265.5,
+          "close": 80396.78,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T18:00:00Z",
+          "open": 80391.27,
+          "high": 80440.07,
+          "low": 80258.5,
+          "close": 80388,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T18:15:00Z",
+          "open": 80384.5,
+          "high": 80384.5,
+          "low": 80140,
+          "close": 80259.09,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T18:30:00Z",
+          "open": 80259.09,
+          "high": 80303.07,
+          "low": 80146.58,
+          "close": 80170.99,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T18:45:00Z",
+          "open": 80170.99,
+          "high": 80170.99,
+          "low": 80021.91,
+          "close": 80108.9,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T19:00:00Z",
+          "open": 80108.9,
+          "high": 80138.01,
+          "low": 79937.44,
+          "close": 80089.6,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T19:15:00Z",
+          "open": 80089.6,
+          "high": 80096.48,
+          "low": 79880.5,
+          "close": 79920,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T19:30:00Z",
+          "open": 79920,
+          "high": 80004.99,
+          "low": 79881.17,
+          "close": 79989,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T19:45:00Z",
+          "open": 79989,
+          "high": 80094.38,
+          "low": 79960,
+          "close": 80050.98,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T20:00:00Z",
+          "open": 80049.84,
+          "high": 80139.48,
+          "low": 79951.41,
+          "close": 80139.48,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T20:15:00Z",
+          "open": 80139.48,
+          "high": 80162,
+          "low": 79920.86,
+          "close": 80037.83,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T20:30:00Z",
+          "open": 80036.52,
+          "high": 80044.98,
+          "low": 79891.64,
+          "close": 79917.1,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T20:45:00Z",
+          "open": 79917.1,
+          "high": 80004.2,
+          "low": 79903.57,
+          "close": 79935.83,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T21:00:00Z",
+          "open": 79929.65,
+          "high": 80142.06,
+          "low": 79929.65,
+          "close": 80110.59,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T21:15:00Z",
+          "open": 80110.59,
+          "high": 80289.83,
+          "low": 80062.43,
+          "close": 80198.99,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T21:30:00Z",
+          "open": 80198.99,
+          "high": 80286.49,
+          "low": 80198.99,
+          "close": 80232.65,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T21:45:00Z",
+          "open": 80232.65,
+          "high": 80375.44,
+          "low": 80232.65,
+          "close": 80260.07,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T22:00:00Z",
+          "open": 80260.07,
+          "high": 80383.63,
+          "low": 80219.86,
+          "close": 80347.2,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T22:15:00Z",
+          "open": 80347.2,
+          "high": 80396.14,
+          "low": 80249.03,
+          "close": 80251.5,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T22:30:00Z",
+          "open": 80251.5,
+          "high": 80254.32,
+          "low": 80101,
+          "close": 80101.01,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T22:45:00Z",
+          "open": 80101.01,
+          "high": 80195,
+          "low": 80035.91,
+          "close": 80059.69,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T23:00:00Z",
+          "open": 80059.69,
+          "high": 80059.69,
+          "low": 79888.33,
+          "close": 79915.49,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T23:15:00Z",
+          "open": 79915.49,
+          "high": 79957.49,
+          "low": 79860.55,
+          "close": 79947.98,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T23:30:00Z",
+          "open": 79947.98,
+          "high": 79947.98,
+          "low": 79733.5,
+          "close": 79754.51,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-04T23:45:00Z",
+          "open": 79754.51,
+          "high": 79852.49,
+          "low": 79741.73,
+          "close": 79852.36,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T00:00:00Z",
+          "open": 79852.36,
+          "high": 79999.41,
+          "low": 79789.5,
+          "close": 79953.99,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T00:15:00Z",
+          "open": 79953.99,
+          "high": 79969.9,
+          "low": 79852.51,
+          "close": 79852.51,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T00:30:00Z",
+          "open": 79852.51,
+          "high": 80130.59,
+          "low": 79852.51,
+          "close": 80078,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T00:45:00Z",
+          "open": 80078,
+          "high": 80181.94,
+          "low": 80027.5,
+          "close": 80163.98,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T01:00:00Z",
+          "open": 80163.98,
+          "high": 80247.99,
+          "low": 80066.29,
+          "close": 80189.03,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T01:15:00Z",
+          "open": 80189.03,
+          "high": 80284.3,
+          "low": 80178,
+          "close": 80258,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T01:30:00Z",
+          "open": 80258,
+          "high": 80317.99,
+          "low": 80164,
+          "close": 80236.38,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T01:45:00Z",
+          "open": 80236.38,
+          "high": 80378.4,
+          "low": 80236.38,
+          "close": 80345.99,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T02:00:00Z",
+          "open": 80345.99,
+          "high": 80506.99,
+          "low": 80290,
+          "close": 80447.14,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T02:15:00Z",
+          "open": 80447.14,
+          "high": 80532.97,
+          "low": 80374,
+          "close": 80461.5,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T02:30:00Z",
+          "open": 80461.5,
+          "high": 80807.24,
+          "low": 80444,
+          "close": 80807.24,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T02:45:00Z",
+          "open": 80807.24,
+          "high": 80900.83,
+          "low": 80498,
+          "close": 80549.22,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T03:00:00Z",
+          "open": 80549.22,
+          "high": 80713.56,
+          "low": 80446.87,
+          "close": 80664.51,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T03:15:00Z",
+          "open": 80664.51,
+          "high": 80853.49,
+          "low": 80624.02,
+          "close": 80793.99,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T03:30:00Z",
+          "open": 80793.99,
+          "high": 81079.32,
+          "low": 80741.71,
+          "close": 80913.74,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T03:45:00Z",
+          "open": 80913.74,
+          "high": 80945.67,
+          "low": 80808.36,
+          "close": 80878,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T04:00:00Z",
+          "open": 80870.88,
+          "high": 80975.99,
+          "low": 80776.5,
+          "close": 80808,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T04:15:00Z",
+          "open": 80808,
+          "high": 80919.99,
+          "low": 80787,
+          "close": 80797.48,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T04:30:00Z",
+          "open": 80797.48,
+          "high": 80852.65,
+          "low": 80724.31,
+          "close": 80753.34,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T04:45:00Z",
+          "open": 80753.34,
+          "high": 80964,
+          "low": 80713.5,
+          "close": 80900.32,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T05:00:00Z",
+          "open": 80900.32,
+          "high": 80961.99,
+          "low": 80829.01,
+          "close": 80871.99,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T05:15:00Z",
+          "open": 80871.99,
+          "high": 81186.8,
+          "low": 80871.99,
+          "close": 81056.12,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T05:30:00Z",
+          "open": 81054.28,
+          "high": 81324.58,
+          "low": 81020,
+          "close": 81039,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T05:45:00Z",
+          "open": 81039,
+          "high": 81062.53,
+          "low": 80916.5,
+          "close": 80965.55,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T06:00:00Z",
+          "open": 80965.55,
+          "high": 81008.54,
+          "low": 80888.5,
+          "close": 80948.97,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T06:15:00Z",
+          "open": 80948.97,
+          "high": 80967.99,
+          "low": 80800,
+          "close": 80815.54,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T06:30:00Z",
+          "open": 80808.02,
+          "high": 80886.61,
+          "low": 80787.62,
+          "close": 80794,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T06:45:00Z",
+          "open": 80794,
+          "high": 80974.93,
+          "low": 80794,
+          "close": 80968.99,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T07:00:00Z",
+          "open": 80968.99,
+          "high": 81014.49,
+          "low": 80888.89,
+          "close": 80993.49,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T07:15:00Z",
+          "open": 80993.49,
+          "high": 81087.5,
+          "low": 80962,
+          "close": 81039,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T07:30:00Z",
+          "open": 81039,
+          "high": 81136.99,
+          "low": 81007.98,
+          "close": 81015.03,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T07:45:00Z",
+          "open": 81015.03,
+          "high": 81035.49,
+          "low": 80829.39,
+          "close": 80850.04,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T08:00:00Z",
+          "open": 80856.58,
+          "high": 80889.45,
+          "low": 80834.96,
+          "close": 80847.35,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T08:15:00Z",
+          "open": 80847.35,
+          "high": 80880.4,
+          "low": 80807.99,
+          "close": 80843.42,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T08:30:00Z",
+          "open": 80843.42,
+          "high": 80866.99,
+          "low": 80705.24,
+          "close": 80741.88,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T08:45:00Z",
+          "open": 80741.88,
+          "high": 80835.87,
+          "low": 80740.8,
+          "close": 80817.96,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T09:00:00Z",
+          "open": 80817.96,
+          "high": 80817.96,
+          "low": 80661.73,
+          "close": 80671.32,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T09:15:00Z",
+          "open": 80671.32,
+          "high": 80694.86,
+          "low": 80600,
+          "close": 80653.54,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T09:30:00Z",
+          "open": 80653.54,
+          "high": 80705.99,
+          "low": 80554.73,
+          "close": 80590.18,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T09:45:00Z",
+          "open": 80590.18,
+          "high": 80616.17,
+          "low": 80516,
+          "close": 80585.83,
+          "volume": null
+        },
+        {
+          "instrumentID": 100000,
+          "fromDate": "2026-05-05T10:00:00Z",
+          "open": 80585.83,
+          "high": 80585.83,
+          "low": 80561.97,
+          "close": 80561.97,
+          "volume": null
+        }
+      ],
+      "rangeOpen": 79712.87,
+      "rangeClose": 80561.97,
+      "rangeHigh": 81324.58,
+      "rangeLow": 78211.99,
+      "volume": 0
+    }
+  ]
+}
