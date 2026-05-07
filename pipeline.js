@@ -15,15 +15,15 @@ const args = Object.fromEntries(
 // Config
 // -------------------------
 
-const promptsFile = args.promptfile || 'prompts_animals_global';
+const promptsFile = args.promptfile || 'prompts_drone_travel';
 const count = args.count || '8';
 
 const commands = [
   `node .\\${promptsFile} ${count}`,
- // 'node create_producer.js',
+  //'node create_producer.js',
   'node .\\meta_createvideos.js',
   'node .\\meta_getvideos.js',
-  //'node .\\upscale.js',
+  'node .\\upscale.js',
   //'node combine_videos.js'
 ];
 

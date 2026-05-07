@@ -1,13 +1,17 @@
-const { app, BrowserWindow, ipcMain, clipboard } = require("electron");
+const { shell, app, BrowserWindow, ipcMain, clipboard } = require("electron");
 const path = require("path");
 const fs = require("fs");
+
+ipcMain.on("open-external", (event, url) => {
+  shell.openExternal(url);
+});
 
 const symbolsFile = path.join(__dirname, "symbols.json");
 const tradesFile = path.join(__dirname, "trades.json");
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 1400,
+    width: 600,
     height: 1000,
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
@@ -25,19 +29,31 @@ app.on("window-all-closed", () => {
 });
 
 /* -------------------------------------------------
-   SAVE JSON (candle data)
+   HELPERS: LOAD & SAVE TRADES
 ------------------------------------------------- */
-ipcMain.on("save-json", (event, data) => {
-  const filePath = path.join(__dirname, "candleData.json");
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-});
+function loadTrades(symbol) {
+  try {
+    if (fs.existsSync(tradesFile)) {
+      const db = JSON.parse(fs.readFileSync(tradesFile, "utf8"));
+      return db[symbol.toUpperCase()] || [];
+    }
+  } catch {}
 
-/* -------------------------------------------------
-   COPY TO CLIPBOARD
-------------------------------------------------- */
-ipcMain.on("copy-to-clipboard", (event, text) => {
-  clipboard.writeText(text);
-});
+  return [];
+}
+
+function saveTrades(symbol, trades) {
+  let db = {};
+
+  try {
+    if (fs.existsSync(tradesFile)) {
+      db = JSON.parse(fs.readFileSync(tradesFile, "utf8"));
+    }
+  } catch {}
+
+  db[symbol.toUpperCase()] = trades;
+  fs.writeFileSync(tradesFile, JSON.stringify(db, null, 2));
+}
 
 /* -------------------------------------------------
    SAVE SYMBOL HISTORY
@@ -76,32 +92,24 @@ ipcMain.handle("get-symbols", async () => {
    SAVE TRADE (per symbol)
 ------------------------------------------------- */
 ipcMain.on("save-trade", (event, { symbol, trade }) => {
-  let db = {};
-
-  try {
-    if (fs.existsSync(tradesFile)) {
-      db = JSON.parse(fs.readFileSync(tradesFile, "utf8"));
-    }
-  } catch {}
-
-  symbol = symbol.toUpperCase();
-
-  if (!db[symbol]) db[symbol] = [];
-  db[symbol].push(trade);
-
-  fs.writeFileSync(tradesFile, JSON.stringify(db, null, 2));
+  const trades = loadTrades(symbol);
+  trades.push(trade);
+  saveTrades(symbol, trades);
 });
 
 /* -------------------------------------------------
    GET TRADES (per symbol)
 ------------------------------------------------- */
 ipcMain.handle("get-trades", async (event, symbol) => {
-  try {
-    if (fs.existsSync(tradesFile)) {
-      const db = JSON.parse(fs.readFileSync(tradesFile, "utf8"));
-      return db[symbol.toUpperCase()] || [];
-    }
-  } catch {}
+  return loadTrades(symbol);
+});
 
-  return [];
+/* -------------------------------------------------
+   DELETE TRADE (per symbol)
+------------------------------------------------- */
+ipcMain.handle("delete-trade", async (event, symbol, index) => {
+  const trades = loadTrades(symbol);
+  trades.splice(index, 1);
+  saveTrades(symbol, trades);
+  return true;
 });

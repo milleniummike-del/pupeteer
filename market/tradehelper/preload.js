@@ -1,6 +1,8 @@
 const { contextBridge, ipcRenderer } = require("electron");
 
 contextBridge.exposeInMainWorld("api", {
+
+  openExternal: (url) => ipcRenderer.send("open-external", url),
   
   // Save candle JSON to file
   saveJson: (data) => ipcRenderer.send("save-json", data),
@@ -18,5 +20,7 @@ contextBridge.exposeInMainWorld("api", {
   saveTrade: (symbol, trade) => ipcRenderer.send("save-trade", { symbol, trade }),
 
   // Retrieve saved trades for a symbol
-  getTrades: (symbol) => ipcRenderer.invoke("get-trades", symbol)
+  getTrades: (symbol) => ipcRenderer.invoke("get-trades", symbol),
+
+  deleteTrade: (symbol, index) => ipcRenderer.invoke("delete-trade", symbol, index),
 });
