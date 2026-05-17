@@ -13,10 +13,11 @@ let buyPrice = null;
 let profitPrice = null;
 let stopPrice = null;
 let amount = 1000;
-const margin = 0.02; // 5%
+let lastMarketPrice = 0;
 
 // Track ALL price lines for robust clearing
 let allLines = [];
+let marketRefLines = [];
 
 // -----------------------------
 // INIT CHART
@@ -27,11 +28,31 @@ function initChart() {
   chart = LightweightCharts.createChart(container, {
     width: container.clientWidth,
     height: container.clientHeight,
-    layout: { background: { color: "#ffffff" }, textColor: "#000000" },
-    timeScale: { borderVisible: true }
+    layout: { 
+      background: { color: "#0f1116" }, 
+      textColor: "#e6e6e6" 
+    },
+    grid: {
+      vertLines: { color: "#2a2e39" },
+      horzLines: { color: "#2a2e39" }
+    },
+    timeScale: { borderVisible: true },
+    rightPriceScale: {
+      borderVisible: true,
+      scaleMargins: {
+        top: 0.1,
+        bottom: 0.1,
+      },
+    },
   });
 
-  candleSeries = chart.addCandlestickSeries();
+  candleSeries = chart.addCandlestickSeries({
+    upColor: "#4dff88",
+    downColor: "#ff4d4d",
+    borderVisible: false,
+    wickUpColor: "#4dff88",
+    wickDownColor: "#ff4d4d"
+  });
 
   // CLICK HANDLER
   chart.subscribeClick(param => {
@@ -48,10 +69,11 @@ function initChart() {
 
       const line = candleSeries.createPriceLine({
         price,
-        color: "blue",
+        color: "#4da3ff", 
         lineWidth: 2,
-        lineStyle: 2,
-        title: "ENTER"
+        lineStyle: 0, 
+        title: "ENTER",
+        axisLabelVisible: true
       });
 
       allLines.push(line);
@@ -63,10 +85,11 @@ function initChart() {
 
       const line = candleSeries.createPriceLine({
         price,
-        color: "green",
+        color: "#4dff88", 
         lineWidth: 2,
-        lineStyle: 2,
-        title: "PROFIT"
+        lineStyle: 0, 
+        title: "PROFIT",
+        axisLabelVisible: true
       });
 
       allLines.push(line);
@@ -78,16 +101,108 @@ function initChart() {
 
       const line = candleSeries.createPriceLine({
         price,
-        color: "red",
+        color: "#d2bb34", 
         lineWidth: 2,
-        lineStyle: 2,
-        title: "STOP"
+        lineStyle: 0, 
+        title: "STOP",
+        axisLabelVisible: true
       });
 
       allLines.push(line);
+      updatePnLDisplay();
     }
   });
 }
+
+// -----------------------------
+// MARKET PRICE INFO
+// -----------------------------
+function updateMarketPriceInfo(price) {
+  if (!price) return;
+  lastMarketPrice = price;
+  
+  document.getElementById("currentPriceDisplay").textContent = `$${price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 4 })}`;
+  
+  const p1 = price * 1.01;
+  const p2 = price * 1.02;
+  const p3 = price * 1.05;
+  const m1 = price * 0.99;
+  const m2 = price * 0.98;
+  const m3 = price * 0.95;
+
+  document.getElementById("plus1").textContent = p1.toFixed(2);
+  document.getElementById("plus2").textContent = p2.toFixed(2);
+  document.getElementById("minus1").textContent = m1.toFixed(2);
+  document.getElementById("minus2").textContent = m2.toFixed(2);
+
+  // Clear old reference lines
+  marketRefLines.forEach(line => candleSeries.removePriceLine(line));
+  marketRefLines = [];
+
+  // Add new reference lines to chart
+  const levels = [
+    { price: p1, title: "+1%", color: "#4dff88", width: 2, style: 0 },
+    { price: p2, title: "+2%", color: "#00ff00", width: 2, style: 0 },
+    { price: p3, title: "+5%", color: "#00ff00", width: 2, style: 0 },
+    { price: m1, title: "-1%", color: "#f90000", width: 2, style: 0 },
+    { price: m2, title: "-2%", color: "#e81414", width: 2, style: 0 },
+    { price: m3, title: "-5%", color: "#e81414", width: 2, style: 0 }
+  ];
+
+  levels.forEach(l => {
+    const line = candleSeries.createPriceLine({
+      price: l.price,
+      color: l.color,
+      lineWidth: l.width,
+      lineStyle: l.style, 
+      title: l.title,
+      axisLabelVisible: true,
+    });
+    marketRefLines.push(line);
+  });
+}
+
+// -----------------------------
+// PNL DISPLAY
+// -----------------------------
+function updatePnLDisplay() {
+  const profitSpan = document.getElementById("profitDollar");
+  const stopSpan = document.getElementById("stopDollar");
+  const profitPcntSpan = document.getElementById("profitPcnt");
+  const stopPcntSpan = document.getElementById("stopPcnt");
+
+  if (buyPrice === null || profitPrice === null || stopPrice === null) {
+    profitSpan.textContent = "$0.00";
+    stopSpan.textContent = "$0.00";
+    profitPcntSpan.textContent = "0.00%";
+    stopPcntSpan.textContent = "0.00%";
+    return;
+  }
+
+  const amountValue = parseFloat(document.getElementById("amount").value) || 0;
+  const leverageValue = parseFloat(document.getElementById("leverage").value) || 1;
+
+  const isLong = profitPrice > buyPrice;
+  
+  let profitPcnt = (profitPrice / buyPrice) - 1;
+  let stopPcnt = (stopPrice / buyPrice) - 1;
+
+  if (!isLong) {
+    profitPcnt = 1 - (profitPrice / buyPrice);
+    stopPcnt = 1 - (stopPrice / buyPrice);
+  }
+
+  const profitDollar = profitPcnt * amountValue * leverageValue;
+  const stopDollar = stopPcnt * amountValue * leverageValue;
+
+  profitSpan.textContent = `$${profitDollar.toFixed(2)}`;
+  stopSpan.textContent = `$${stopDollar.toFixed(2)}`;
+  profitPcntSpan.textContent = `${(profitPcnt * 100).toFixed(2)}%`;
+  stopPcntSpan.textContent = `${(stopPcnt * 100).toFixed(2)}%`;
+}
+
+document.getElementById("amount").addEventListener("input", updatePnLDisplay);
+document.getElementById("leverage").addEventListener("input", updatePnLDisplay);
 
 // -----------------------------
 // LOAD CHART (BTC default)
@@ -96,9 +211,10 @@ const loadChart = async () => {
   if (!chart) initChart();
 
   try {
-    const json = await getCandles("BTC");
-    const candles = convertAPIResponseToCandles(json);
-    candleSeries.setData(candles);
+    const { candles, currentPrice } = await getCandles("BTC");
+    const chartCandles = convertAPIResponseToCandles(candles);
+    candleSeries.setData(chartCandles);
+    updateMarketPriceInfo(currentPrice);
   } catch (err) {
     console.error("Error loading BTC:", err);
   }
@@ -130,6 +246,7 @@ document.getElementById("clearLines").addEventListener("click", () => {
   stopPrice = null;
 
   clickCount = 0;
+  updatePnLDisplay();
 });
 
 // -----------------------------
@@ -139,7 +256,7 @@ document.getElementById("makeTrade").addEventListener("click", async () => {
   if (clickCount<3) {return}
   const symbol = document.getElementById("symbol").value.trim().toUpperCase();
   const leverage = document.getElementById("leverage").value.trim();
-  const amount = 1000; //todo get from gui
+  const amount = parseFloat(document.getElementById("amount").value.trim());
 
   let position = buyPrice < profitPrice ? "LONG" : "SHORT";
   const trade = await makeTrade(symbol, amount, buyPrice, profitPrice, stopPrice, leverage, position);
@@ -155,11 +272,12 @@ document.getElementById("makeTrade").addEventListener("click", async () => {
 document.getElementById("makeMarketTrade").addEventListener("click", async () => {
   const symbol = document.getElementById("symbol").value.trim().toUpperCase();
   const leverage = document.getElementById("leverage").value.trim();
-  const amount = 1000; //todo get from gui
+  const margin = parseFloat(document.getElementById("margin").value.trim()) / 100;
+  const amount = parseFloat(document.getElementById("amount").value.trim());
 
   let position = "LONG";
 
-  const trade = await makeMarketTrade(symbol, amount, leverage, position);
+  const trade = await makeMarketTrade(symbol, amount, leverage, position, margin);
   window.api.saveTrade(symbol, trade);
   loadTradeHistory(symbol);
 });
@@ -167,11 +285,12 @@ document.getElementById("makeMarketTrade").addEventListener("click", async () =>
 document.getElementById("makeShortMarketTrade").addEventListener("click", async () => {
   const symbol = document.getElementById("symbol").value.trim().toUpperCase();
   const leverage = document.getElementById("leverage").value.trim();
-  const amount = 1000; //todo get from gui
+  const margin = parseFloat(document.getElementById("margin").value.trim()) / 100;
+  const amount = parseFloat(document.getElementById("amount").value.trim());
 
   let position = "SHORT";
 
-  const trade = await makeMarketTrade(symbol, amount, leverage, position);
+  const trade = await makeMarketTrade(symbol, amount, leverage, position, margin);
 
   window.api.saveTrade(symbol, trade);
   loadTradeHistory(symbol);
@@ -225,7 +344,7 @@ const getCandles = async (symbol, interval = "FifteenMinutes") => {
     const candleRes = await fetch(candleUrl, { method: "GET", headers });
     const candleData = await safeJson(candleRes);
 
-    return candleData.candles;
+    return { candles: candleData.candles, currentPrice: price };
   } catch (err) {
     console.error("ERROR:", err.message);
   }
@@ -279,7 +398,7 @@ const makeTrade = async (symbol, amount, rate, profit, stop, leverage = 1, posit
 // -----------------------------
 // MAKE MARKET TRADE
 // -----------------------------
-const makeMarketTrade = async (symbol, amount, leverage = 1, position = "LONG") => {
+const makeMarketTrade = async (symbol, amount, leverage = 1, position = "LONG", margin = 0.02) => {
 
   const searchUrl =
     `https://public-api.etoro.com/api/v1/market-data/search?internalSymbolFull=${symbol}`;
@@ -411,30 +530,34 @@ function loadTradeLines(trade) {
 
   const buyLine = candleSeries.createPriceLine({
     price: buyPrice,
-    color: "blue",
+    color: "#4da3ff",
     lineWidth: 2,
-    lineStyle: 2,
-    title: "ENTER"
+    lineStyle: 0,
+    title: "ENTER",
+    axisLabelVisible: true
   });
   allLines.push(buyLine);
 
   const profitLine = candleSeries.createPriceLine({
     price: profitPrice,
-    color: "green",
+    color: "#4dff88",
     lineWidth: 2,
-    lineStyle: 2,
-    title: "PROFIT"
+    lineStyle: 0,
+    title: "PROFIT",
+    axisLabelVisible: true
   });
   allLines.push(profitLine);
 
   const stopLine = candleSeries.createPriceLine({
     price: stopPrice,
-    color: "red",
+    color: "#d2bb34",
     lineWidth: 2,
-    lineStyle: 2,
-    title: "STOP"
+    lineStyle: 0,
+    title: "STOP",
+    axisLabelVisible: true
   });
   allLines.push(stopLine);
+  updatePnLDisplay();
 }
 
 
@@ -446,9 +569,10 @@ async function refreshChart() {
   if (!symbol) { return }
 
   try {
-    const json = await getCandles(symbol, interval);
-    const candles = convertAPIResponseToCandles(json);
-    candleSeries.setData(candles);
+    const { candles, currentPrice } = await getCandles(symbol, interval);
+    const chartCandles = convertAPIResponseToCandles(candles);
+    candleSeries.setData(chartCandles);
+    updateMarketPriceInfo(currentPrice);
 
   } catch (err) {
     console.error("Error loading chart:", err);
@@ -456,15 +580,26 @@ async function refreshChart() {
 }
 
 // -----------------------------
-// AUTO REFRESH EVERY 10 SECONDS
+// AUTO REFRESH
 // -----------------------------
-setInterval(() => {
-  refreshChart();
-  console.log('refresh chart');
-}, 10000);
+let refreshTimer = null;
+
+function startAutoRefresh() {
+  if (refreshTimer) clearInterval(refreshTimer);
+
+  const seconds = parseInt(document.getElementById("refreshInterval").value.trim()) || 10;
+  refreshTimer = setInterval(() => {
+    refreshChart();
+    console.log('refresh chart');
+  }, seconds * 1000);
+}
+
+// Update timer when value changes
+document.getElementById("refreshInterval").addEventListener("change", startAutoRefresh);
 
 // -----------------------------
 // INIT
 // -----------------------------
 loadSymbolHistory();
 loadChart();
+startAutoRefresh();

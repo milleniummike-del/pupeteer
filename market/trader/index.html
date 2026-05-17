@@ -127,9 +127,24 @@
 
   <label>Symbol:</label>
   <input id="symbol" value="BTC" />
-
+  
+  <label for="interval">Interval:</label>
+  <select id="interval">
+    <option value="OneMinute">1 Minute</option>
+    <option value="FiveMinutes">5 Minutes</option>
+    <option value="TenMinutes">10 Minutes</option>
+    <option value="FifteenMinutes" selected>15 Minutes</option>
+    <option value="ThirtyMinutes">30 Minutes</option>
+    <option value="OneHour">1 Hour</option>
+    <option value="FourHours">4 Hours</option>
+    <option value="OneDay">1 Day</option>
+    <option value="OneWeek">1 Week</option>
+  </select>
+<hr/>
   <a id="chartLink" href="">Etoro Chart</a> |
   <a id="newsLink" href="">Yahoo News</a>
+  <button id="load">Load Chart</button>
+  <button id="clearLines">Clear Lines</button>
 
   <script>
     document.getElementById("chartLink").addEventListener("click", (e) => {
@@ -147,35 +162,45 @@
     });
   </script>
 
-  <br><br>
-
-  <label for="interval">Interval:</label>
-  <select id="interval">
-    <option value="OneMinute">1 Minute</option>
-    <option value="FiveMinutes">5 Minutes</option>
-    <option value="TenMinutes">10 Minutes</option>
-    <option value="FifteenMinutes" selected>15 Minutes</option>
-    <option value="ThirtyMinutes">30 Minutes</option>
-    <option value="OneHour">1 Hour</option>
-    <option value="FourHours">4 Hours</option>
-    <option value="OneDay">1 Day</option>
-    <option value="OneWeek">1 Week</option>
-  </select>
-
-  <label for="leverage">Leverage:</label>
-  <input id="leverage" type="number" value="10" min="1" />
-
-  <button id="load">Load Chart</button>
-  <button id="clearLines">Clear Lines</button>
   <hr/>
+    <h3>Trade Actions</h3>
   <button id="makeTrade">BID Trade</button>
   <button id="makeMarketTrade">LONG At Market</button>
   <button id="makeShortMarketTrade">SHORT At Market</button>
+
+  <div id="marketPriceInfo" style="margin-top: 15px; font-size: 1em; color: var(--accent);">
+    Current Price: <span id="currentPriceDisplay" style="font-weight: bold;">$0.00</span> | 
+    <span style="font-size: 0.9em; opacity: 0.8;">
+      +1%: <span id="plus1" style="color: var(--success);">0</span> | 
+      +2%: <span id="plus2" style="color: var(--success);">0</span> | 
+      -1%: <span id="minus1" style="color: var(--danger);">0</span> | 
+      -2%: <span id="minus2" style="color: var(--danger);">0</span>
+    </span>
+  </div>
+
+  <div id="pnlDisplay" style="margin-top: 5px; font-size: 1.1em; font-weight: bold;">
+    Potential Profit: <span id="profitDollar" style="color: var(--success);">$0.00</span> (<span id="profitPcnt">0.00%</span>) | 
+    Potential Stop: <span id="stopDollar" style="color: var(--danger);">$0.00</span> (<span id="stopPcnt">0.00%</span>)
+  </div>
 
   <div id="chart"></div>
 
   <h3>Saved Trades</h3>
   <div id="tradeHistory"></div>
+
+<hr/>
+  <h3>Trade Settings</h3>
+  <label for="leverage">Leverage:</label>
+  <input id="leverage" type="number" value="5" min="1" />
+<br/>
+  <label for="amount">Amount ($):</label>
+  <input id="amount" type="number" value="1000" min="10" />
+<br/>
+  <label for="margin">Margin %:</label>
+  <input id="margin" type="number" value="2" step="0.1" min="0" />
+  <br/>
+    <label for="refreshInterval">Refresh (sec):</label>
+  <input id="refreshInterval" type="number" value="30" min="1" />
 
   <script type="module" src="renderer.js"></script>
 </body>
