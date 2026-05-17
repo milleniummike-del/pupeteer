@@ -17,7 +17,7 @@ const args = Object.fromEntries(
 // Config
 // -------------------------
 
-const d = args.path || '';
+const d = args.path || 'upscaled';
 let destinationDir = directory.getPath()
 if (d) {
   destinationDir = directory.getPath() + '\\'+d;

@@ -4,6 +4,7 @@ import { headers } from "./headers.js";
 // -----------------------------
 // GLOBAL STATE
 // -----------------------------
+const tradelive = true;
 let chart = null;
 let candleSeries = null;
 
@@ -12,6 +13,7 @@ let buyPrice = null;
 let profitPrice = null;
 let stopPrice = null;
 let amount = 1000;
+const margin = 0.02; // 5%
 
 // Track ALL price lines for robust clearing
 let allLines = [];
@@ -133,26 +135,16 @@ document.getElementById("clearLines").addEventListener("click", () => {
 // -----------------------------
 // MAKE TRADE BUTTON
 // -----------------------------
-document.getElementById("makeTrade").addEventListener("click", () => {
+document.getElementById("makeTrade").addEventListener("click", async () => {
+  if (clickCount<3) {return}
   const symbol = document.getElementById("symbol").value.trim().toUpperCase();
   const leverage = document.getElementById("leverage").value.trim();
   const amount = 1000; //todo get from gui
 
   let position = buyPrice < profitPrice ? "LONG" : "SHORT";
+  const trade = await makeTrade(symbol, amount, buyPrice, profitPrice, stopPrice, leverage, position);
 
-  // SAVE TRADE
-  const trade = {
-    buy: buyPrice,
-    amount: amount,
-    leverage: leverage,
-    position: position,
-    amount: amount,
-    profit: profitPrice,
-    stop: stopPrice,
-    timestamp: Math.floor(Date.now() / 1000)
-  };
-
-  makeTrade(symbol, amount, buyPrice, profitPrice, stopPrice, leverage, position);
+  console.log(trade);
   window.api.saveTrade(symbol, trade);
   loadTradeHistory(symbol);
 });
@@ -166,21 +158,8 @@ document.getElementById("makeMarketTrade").addEventListener("click", async () =>
   const amount = 1000; //todo get from gui
 
   let position = "LONG";
-  const price = await makeMarketTrade(symbol, amount, buyPrice, profitPrice, stopPrice, leverage, position);
 
-
-  // SAVE TRADE
-  const trade = {
-    buy: price,
-    amount: amount,
-    leverage: leverage,
-    position: position,
-    amount: amount,
-    profit: profitPrice,
-    stop: stopPrice,
-    timestamp: Math.floor(Date.now() / 1000)
-  };
-
+  const trade = await makeMarketTrade(symbol, amount, leverage, position);
   window.api.saveTrade(symbol, trade);
   loadTradeHistory(symbol);
 });
@@ -191,19 +170,8 @@ document.getElementById("makeShortMarketTrade").addEventListener("click", async 
   const amount = 1000; //todo get from gui
 
   let position = "SHORT";
-  const price = await makeMarketTrade(symbol, amount, buyPrice, profitPrice, stopPrice, leverage, position);
 
-  // SAVE TRADE
-  const trade = {
-    buy: price,
-    amount: amount,
-    leverage: leverage,
-    position: position,
-    amount: amount,
-    profit: profitPrice,
-    stop: stopPrice,
-    timestamp: Math.floor(Date.now() / 1000)
-  };
+  const trade = await makeMarketTrade(symbol, amount, leverage, position);
 
   window.api.saveTrade(symbol, trade);
   loadTradeHistory(symbol);
@@ -285,10 +253,14 @@ const makeTrade = async (symbol, amount, rate, profit, stop, leverage = 1, posit
     StopLossRate: stop,
     TakeProfitRate: profit,
     Leverage: leverage,
-    IsBuy: position === "LONG"
+    IsBuy: position === "LONG",
+    Position: position,
+    timestamp: Math.floor(Date.now() / 1000)
   };
 
   console.log(orderBody);
+
+  if (tradelive === false) {return orderBody; }
 
   const orderUrl =
     "https://public-api.etoro.com/api/v1/trading/execution/demo/limit-orders";
@@ -301,12 +273,13 @@ const makeTrade = async (symbol, amount, rate, profit, stop, leverage = 1, posit
 
   const result = await safeJson(orderRes);
   console.log("Order Response:", result);
+  return orderBody;
 };
 
 // -----------------------------
 // MAKE MARKET TRADE
 // -----------------------------
-const makeMarketTrade = async (symbol, amount, rate, profit, stop, leverage = 1, position = "LONG") => {
+const makeMarketTrade = async (symbol, amount, leverage = 1, position = "LONG") => {
 
   const searchUrl =
     `https://public-api.etoro.com/api/v1/market-data/search?internalSymbolFull=${symbol}`;
@@ -319,28 +292,37 @@ const makeMarketTrade = async (symbol, amount, rate, profit, stop, leverage = 1,
 
   const instrumentId = instrument.instrumentId;
 
-
   // 2. Get price
   const priceUrl =
     `https://public-api.etoro.com/api/v1/market-data/instruments/rates?instrumentIds=${instrumentId}`;
 
   const priceRes = await fetch(priceUrl, { method: "GET", headers });
   const priceData = await safeJson(priceRes);
-
   const price = priceData.rates?.[0]?.bid;
 
+  let stop = price*(1-margin);
+  let profit = price*(1+margin);
+
+  if (position !== "LONG") {
+    stop = price*(1+margin);
+    profit = price*(1-margin);
+  }
 
   const orderBody = {
     InstrumentId: instrumentId,
     Amount: amount,
-    // Rate: rate,
-    // StopLossRate: stop,
-    // TakeProfitRate: profit,
+    Rate: price,
+    StopLossRate: stop,
+    TakeProfitRate: profit,
     Leverage: leverage,
-    IsBuy: position === "LONG"
+    Position: position,
+    IsBuy: position === "LONG",
+    timestamp: Math.floor(Date.now() / 1000)
   };
 
   console.log(orderBody);
+
+   if (tradelive === false) {return orderBody}
 
   const orderUrl =
     'https://public-api.etoro.com/api/v1/trading/execution/demo/market-open-orders/by-amount';
@@ -351,7 +333,7 @@ const makeMarketTrade = async (symbol, amount, rate, profit, stop, leverage = 1,
     body: JSON.stringify(orderBody)
   });
 
-  return price;
+  return orderBody;
 };
 
 // -----------------------------
@@ -397,7 +379,7 @@ async function loadTradeHistory(symbol) {
 
     const text = document.createElement("span");
     text.textContent =
-      `ENTER ${t.buy} | PROFIT ${t.profit} | STOP ${t.stop} | AMOUNT ${t.amount} |LEVERAGE ${t.leverage} | POSITION ${t.position} | ${new Date(t.timestamp * 1000).toLocaleString()}}`;
+      `ENTER ${t.Rate} | PROFIT ${t.TakeProfitRate} | STOP ${t.StopLossRate} | AMOUNT ${t.Amount} |LEVERAGE ${t.Leverage} | POSITION ${t.Position} | ${new Date(t.timestamp * 1000).toLocaleString()}}`;
     text.style.cursor = "pointer";
     text.onclick = () => loadTradeLines(t);
 
@@ -422,13 +404,13 @@ function loadTradeLines(trade) {
   allLines.forEach(line => candleSeries.removePriceLine(line));
   allLines = [];
 
-  buyPrice = trade.buy;
-  profitPrice = trade.profit;
-  stopPrice = trade.stop;
+  buyPrice = trade.Rate;
+  profitPrice = trade.TakeProfitRate;
+  stopPrice = trade.StopLossRate;
   clickCount = 3;
 
   const buyLine = candleSeries.createPriceLine({
-    price: trade.buy,
+    price: buyPrice,
     color: "blue",
     lineWidth: 2,
     lineStyle: 2,
@@ -437,7 +419,7 @@ function loadTradeLines(trade) {
   allLines.push(buyLine);
 
   const profitLine = candleSeries.createPriceLine({
-    price: trade.profit,
+    price: profitPrice,
     color: "green",
     lineWidth: 2,
     lineStyle: 2,
@@ -446,7 +428,7 @@ function loadTradeLines(trade) {
   allLines.push(profitLine);
 
   const stopLine = candleSeries.createPriceLine({
-    price: trade.stop,
+    price: stopPrice,
     color: "red",
     lineWidth: 2,
     lineStyle: 2,

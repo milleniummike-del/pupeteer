@@ -167,7 +167,7 @@ const generateDroneBatch = (count = 20) => {
     const visuals = pickN(VISUALS, 3).join(', ');
 
     batch.push(
-      `videos[${i}] = \`FPV RUN: ${loc} — TIME: ${time} — ACTION: ${motion} — MOOD: ${mood} — CAMERA: ${cam} — VISUALS: ${visuals}\`;`
+      `videos[${i}] = \`aerial video ensuring no propellors, wings, video or drones are visible front view -  ${loc} — TIME: ${time} — ACTION: ${motion} — MOOD: ${mood} — CAMERA: ${cam} — VISUALS: ${visuals}\`;`
     );
   }
 

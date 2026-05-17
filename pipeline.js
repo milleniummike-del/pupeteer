@@ -15,7 +15,7 @@ const args = Object.fromEntries(
 // Config
 // -------------------------
 
-const promptsFile = args.promptfile || 'prompts_drone_travel';
+const promptsFile = args.promptfile || 'prompts_drone_travel.js';
 const count = args.count || '8';
 
 const commands = [
