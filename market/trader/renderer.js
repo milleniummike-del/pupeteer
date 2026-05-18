@@ -419,11 +419,11 @@ const makeMarketTrade = async (symbol, amount, leverage = 1, position = "LONG", 
   const priceData = await safeJson(priceRes);
   const price = priceData.rates?.[0]?.bid;
 
-  let stop = price*(1-margin);
+  let stop = price*(1-margin*0.5);
   let profit = price*(1+margin);
 
   if (position !== "LONG") {
-    stop = price*(1+margin);
+    stop = price*(1+margin*0.5);
     profit = price*(1-margin);
   }
 
@@ -550,7 +550,7 @@ function loadTradeLines(trade) {
 
   const stopLine = candleSeries.createPriceLine({
     price: stopPrice,
-    color: "#d2bb34",
+    color: "#fc0606",
     lineWidth: 2,
     lineStyle: 0,
     title: "STOP",

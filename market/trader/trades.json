@@ -48,14 +48,27 @@
   "SHEL.L": [
     {
       "InstrumentId": 2171,
-      "Amount": 1000,
-      "Rate": 3184,
-      "StopLossRate": 3120.32,
-      "TakeProfitRate": 3247.68,
-      "Leverage": "10",
+      "Amount": 5000,
+      "Rate": 3220.5,
+      "StopLossRate": 3212.44875,
+      "TakeProfitRate": 3236.6024999999995,
+      "Leverage": "1",
       "Position": "LONG",
       "IsBuy": true,
-      "timestamp": 1779011518
+      "timestamp": 1779089640
+    }
+  ],
+  "LLOY.L": [
+    {
+      "InstrumentId": 2050,
+      "Amount": 5000,
+      "Rate": 93.86,
+      "StopLossRate": 93.62535,
+      "TakeProfitRate": 94.32929999999999,
+      "Leverage": "1",
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779090803
     }
   ]
 }
