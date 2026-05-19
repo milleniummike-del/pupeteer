@@ -231,7 +231,7 @@ const buildPrompt = () => {
   const realism = getRandom(REALISM);
   const details = pickN(DETAILS, 2).join(', ');
 
-  return `Wildlife documentary scene set in the ${biome.name}: a ${species} ${action} in ${environment}, ${time}. ${camera}. ${realism}, ${details}.`;
+  return `video of a wildlife documentary scene set in the ${biome.name}: a ${species} ${action} in ${environment}, ${time}. ${camera}. ${realism}, ${details}.`;
 };
 
 // ---------------------------------------------------------

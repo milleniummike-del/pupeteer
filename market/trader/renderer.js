@@ -259,11 +259,13 @@ document.getElementById("makeTrade").addEventListener("click", async () => {
   const amount = parseFloat(document.getElementById("amount").value.trim());
 
   let position = buyPrice < profitPrice ? "LONG" : "SHORT";
-  const trade = await makeTrade(symbol, amount, buyPrice, profitPrice, stopPrice, leverage, position);
+  for (let i = 0; i < leverage; i++) {
+    const trade = await makeTrade(symbol, amount, buyPrice, profitPrice, stopPrice, 1, position);
 
-  console.log(trade);
-  window.api.saveTrade(symbol, trade);
-  loadTradeHistory(symbol);
+    console.log(trade);
+    window.api.saveTrade(symbol, trade);
+    loadTradeHistory(symbol);
+  }
 });
 
 // -----------------------------
@@ -277,9 +279,13 @@ document.getElementById("makeMarketTrade").addEventListener("click", async () =>
 
   let position = "LONG";
 
-  const trade = await makeMarketTrade(symbol, amount, leverage, position, margin);
+  for (let i = 0; i < leverage; i++) {
+  const trade = await makeMarketTrade(symbol, amount, 1, position, margin);
   window.api.saveTrade(symbol, trade);
   loadTradeHistory(symbol);
+  }
+
+
 });
 
 document.getElementById("makeShortMarketTrade").addEventListener("click", async () => {
@@ -290,10 +296,12 @@ document.getElementById("makeShortMarketTrade").addEventListener("click", async 
 
   let position = "SHORT";
 
-  const trade = await makeMarketTrade(symbol, amount, leverage, position, margin);
+   for (let i = 0; i < leverage; i++) {
+  const trade = await makeMarketTrade(symbol, amount, 1, position, margin);
 
   window.api.saveTrade(symbol, trade);
   loadTradeHistory(symbol);
+   }
 });
 
 // -----------------------------
