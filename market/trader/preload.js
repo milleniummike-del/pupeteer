@@ -23,4 +23,9 @@ contextBridge.exposeInMainWorld("api", {
   getTrades: (symbol) => ipcRenderer.invoke("get-trades", symbol),
 
   deleteTrade: (symbol, index) => ipcRenderer.invoke("delete-trade", symbol, index),
+
+  // New API calls moved to main
+  getCandles: (symbol, interval) => ipcRenderer.invoke("get-candles", symbol, interval),
+  makeTrade: (args) => ipcRenderer.invoke("make-trade", args),
+  makeMarketTrade: (args) => ipcRenderer.invoke("make-market-trade", args),
 });

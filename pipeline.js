@@ -17,8 +17,9 @@ const args = Object.fromEntries(
 
 const promptsFile = args.promptfile || 'prompts_animals_narrative.js';
 const count = args.count || '8';
-
+for (var countrt=0;countrt<10;countrt++){
 const commands = [
+  `node .\\closetabs.js`,
   `node .\\${promptsFile} ${count}`,
   //'node create_producer.js',
   'node .\\meta_createvideos.js',
@@ -39,3 +40,4 @@ for (const cmd of commands) {
 }
 
 console.log('\nPipeline completed successfully.');
+}

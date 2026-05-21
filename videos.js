@@ -1,9 +1,5 @@
 const videos = [];
-videos[0] = `video of African Wild Dog, wide establishing shot, in Scrubland, dawn mist, close-up, National Geographic, 5 seconds`;
-videos[1] = `video of African Wild Dog, scans horizon, in Scrubland, harsh daylight, tracking shot, National Geographic, 5 seconds`;
-videos[2] = `video of African Wild Dog, chase begins, in Scrubland, storm clouds, cinematic pan, cinematic depth, 5 seconds`;
-videos[3] = `video of African Wild Dog, sudden movement, in Scrubland, dawn mist, cinematic pan, 8K detail, 5 seconds`;
-videos[4] = `video of African Wild Dog, dust and chaos, in Scrubland, harsh daylight, tracking shot, National Geographic, 5 seconds`;
-videos[5] = `video of African Wild Dog, life-or-death struggle, in Scrubland, dawn mist, tracking shot, cinematic depth, 5 seconds`;
-videos[6] = `video of African Wild Dog, slow breathing, in Scrubland, golden hour, aerial drone, cinematic depth, 5 seconds`;
+videos[0] = `video of Springbok (Antidorcas marsupialis), slow movement, in River edges, harsh daylight, aerial drone, wildlife documentary, 5 seconds`;
+videos[1] = `video of Springbok (Antidorcas marsupialis), chase begins, in River edges, dawn mist, aerial drone, 8K detail, 5 seconds`;
+videos[2] = `video of Springbok (Antidorcas marsupialis), dust and chaos, in River edges, storm clouds, cinematic pan, cinematic depth, 5 seconds`;
 module.exports = videos;

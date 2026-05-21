@@ -125,21 +125,7 @@
   <h3>Recent Symbols</h3>
   <div id="symbolHistory"></div>
 
-  <label>Symbol:</label>
-  <input id="symbol" value="BTC" />
-  
-  <label for="interval">Interval:</label>
-  <select id="interval">
-    <option value="OneMinute">1 Minute</option>
-    <option value="FiveMinutes">5 Minutes</option>
-    <option value="TenMinutes">10 Minutes</option>
-    <option value="FifteenMinutes" selected>15 Minutes</option>
-    <option value="ThirtyMinutes">30 Minutes</option>
-    <option value="OneHour">1 Hour</option>
-    <option value="FourHours">4 Hours</option>
-    <option value="OneDay">1 Day</option>
-    <option value="OneWeek">1 Week</option>
-  </select>
+
 <hr/>
   <a id="chartLink" href="">Etoro Chart</a> |
   <a id="newsLink" href="">Yahoo News</a>
@@ -163,10 +149,24 @@
   </script>
 
   <hr/>
+    <label>Symbol:</label>
+  <input id="symbol" value="BTC" />
+  
+  <label for="interval">Interval:</label>
+  <select id="interval">
+    <option value="OneMinute">1 Minute</option>
+    <option value="FiveMinutes">5 Minutes</option>
+    <option value="TenMinutes">10 Minutes</option>
+    <option value="FifteenMinutes" selected>15 Minutes</option>
+    <option value="ThirtyMinutes">30 Minutes</option>
+    <option value="OneHour">1 Hour</option>
+    <option value="FourHours">4 Hours</option>
+    <option value="OneDay">1 Day</option>
+    <option value="OneWeek">1 Week</option>
+  </select>
     <h3>Trade Actions</h3>
   <button id="makeTrade">BID Trade</button>
   <button id="makeMarketTrade">LONG At Market</button>
-  <button id="makeShortMarketTrade">SHORT At Market</button>
 
   <div id="marketPriceInfo" style="margin-top: 15px; font-size: 1em; color: var(--accent);">
     Current Price: <span id="currentPriceDisplay" style="font-weight: bold;">$0.00</span> | 

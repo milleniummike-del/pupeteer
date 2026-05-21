@@ -235,10 +235,8 @@ const generateStory = () => {
   };
 
   add('intro', 1);
-  add('tension', 1);
-  add('action', 2);
-  add('climax', 2);
-  add('resolution', 1);
+  add('action', 1);
+  add('climax', 1);
 
   return seq;
 };
@@ -267,7 +265,7 @@ const generate = (count = 1) => {
 
 
 // ---------------------------------------------------------
-const count = parseInt(process.argv[2]) || 3;
+const count = parseInt(process.argv[2]) || 1;
 const output = generate(1);
 
 fs.writeFileSync('videos.js', output);

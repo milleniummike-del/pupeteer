@@ -1,10 +1,8 @@
 import { convertAPIResponseToCandles } from "./marketData.js";
-import { headers } from "./headers.js";
 
 // -----------------------------
 // GLOBAL STATE
 // -----------------------------
-const tradelive = true;
 let chart = null;
 let candleSeries = null;
 
@@ -36,7 +34,13 @@ function initChart() {
       vertLines: { color: "#2a2e39" },
       horzLines: { color: "#2a2e39" }
     },
-    timeScale: { borderVisible: true },
+    timeScale: { 
+      borderVisible: true,
+      timeVisible: true,
+      secondsVisible: false,
+      rightOffset: 12,
+      barSpacing: 6,
+    },
     rightPriceScale: {
       borderVisible: true,
       scaleMargins: {
@@ -211,7 +215,7 @@ const loadChart = async () => {
   if (!chart) initChart();
 
   try {
-    const { candles, currentPrice } = await getCandles("BTC");
+    const { candles, currentPrice } = await window.api.getCandles("BTC");
     const chartCandles = convertAPIResponseToCandles(candles);
     candleSeries.setData(chartCandles);
     updateMarketPriceInfo(currentPrice);
@@ -260,7 +264,15 @@ document.getElementById("makeTrade").addEventListener("click", async () => {
 
   let position = buyPrice < profitPrice ? "LONG" : "SHORT";
   for (let i = 0; i < leverage; i++) {
-    const trade = await makeTrade(symbol, amount, buyPrice, profitPrice, stopPrice, 1, position);
+    const trade = await window.api.makeTrade({ 
+      symbol, 
+      amount, 
+      rate: buyPrice, 
+      profit: profitPrice, 
+      stop: stopPrice, 
+      leverage: 1, 
+      position 
+    });
 
     console.log(trade);
     window.api.saveTrade(symbol, trade);
@@ -280,14 +292,14 @@ document.getElementById("makeMarketTrade").addEventListener("click", async () =>
   let position = "LONG";
 
   for (let i = 0; i < leverage; i++) {
-  const trade = await makeMarketTrade(symbol, amount, 1, position, margin);
+  const trade = await window.api.makeMarketTrade({ symbol, amount, leverage: 1, position, margin });
   window.api.saveTrade(symbol, trade);
   loadTradeHistory(symbol);
   }
 
 
 });
-
+/*
 document.getElementById("makeShortMarketTrade").addEventListener("click", async () => {
   const symbol = document.getElementById("symbol").value.trim().toUpperCase();
   const leverage = document.getElementById("leverage").value.trim();
@@ -297,172 +309,13 @@ document.getElementById("makeShortMarketTrade").addEventListener("click", async 
   let position = "SHORT";
 
    for (let i = 0; i < leverage; i++) {
-  const trade = await makeMarketTrade(symbol, amount, 1, position, margin);
+  const trade = await window.api.makeMarketTrade({ symbol, amount, leverage: 1, position, margin });
 
   window.api.saveTrade(symbol, trade);
   loadTradeHistory(symbol);
    }
 });
-
-// -----------------------------
-// SAFE JSON
-// -----------------------------
-async function safeJson(res) {
-  const text = await res.text();
-  try {
-    return JSON.parse(text);
-  } catch {
-    return { raw: text };
-  }
-}
-
-// -----------------------------
-// GET CANDLES
-// -----------------------------
-const getCandles = async (symbol, interval = "FifteenMinutes") => {
-  const direction = "asc";
-
-  try {
-    // 1. Search instrument
-    const searchUrl =
-      `https://public-api.etoro.com/api/v1/market-data/search?internalSymbolFull=${symbol}`;
-
-    const searchRes = await fetch(searchUrl, { headers });
-    const searchData = await safeJson(searchRes);
-
-    const instrument = searchData.items?.find(i => i.internalSymbolFull === symbol);
-    if (!instrument) throw new Error(`Instrument not found: ${symbol}`);
-
-    const instrumentId = instrument.instrumentId;
-
-    // 2. Get price
-    const priceUrl =
-      `https://public-api.etoro.com/api/v1/market-data/instruments/rates?instrumentIds=${instrumentId}`;
-
-    const priceRes = await fetch(priceUrl, { method: "GET", headers });
-    const priceData = await safeJson(priceRes);
-
-    const price = priceData.rates?.[0]?.bid;
-    if (!price) throw new Error("Price not available");
-
-    // 3. Get candles
-    const candleUrl =
-      `https://public-api.etoro.com/api/v1/market-data/instruments/${instrumentId}/history/candles/${direction}/${interval}/100`;
-
-    const candleRes = await fetch(candleUrl, { method: "GET", headers });
-    const candleData = await safeJson(candleRes);
-
-    return { candles: candleData.candles, currentPrice: price };
-  } catch (err) {
-    console.error("ERROR:", err.message);
-  }
-};
-
-// -----------------------------
-// MAKE TRADE
-// -----------------------------
-const makeTrade = async (symbol, amount, rate, profit, stop, leverage = 1, position = "LONG") => {
-  const searchUrl =
-    `https://public-api.etoro.com/api/v1/market-data/search?internalSymbolFull=${symbol}`;
-
-  const searchRes = await fetch(searchUrl, { headers });
-  const searchData = await safeJson(searchRes);
-
-  const instrument = searchData.items?.find(i => i.internalSymbolFull === symbol);
-  if (!instrument) throw new Error(`Instrument not found for ${symbol}`);
-
-  const instrumentId = instrument.instrumentId;
-
-  const orderBody = {
-    InstrumentId: instrumentId,
-    Amount: amount,
-    Rate: rate,
-    StopLossRate: stop,
-    TakeProfitRate: profit,
-    Leverage: leverage,
-    IsBuy: position === "LONG",
-    Position: position,
-    timestamp: Math.floor(Date.now() / 1000)
-  };
-
-  console.log(orderBody);
-
-  if (tradelive === false) {return orderBody; }
-
-  const orderUrl =
-    "https://public-api.etoro.com/api/v1/trading/execution/demo/limit-orders";
-
-  const orderRes = await fetch(orderUrl, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(orderBody)
-  });
-
-  const result = await safeJson(orderRes);
-  console.log("Order Response:", result);
-  return orderBody;
-};
-
-// -----------------------------
-// MAKE MARKET TRADE
-// -----------------------------
-const makeMarketTrade = async (symbol, amount, leverage = 1, position = "LONG", margin = 0.02) => {
-
-  const searchUrl =
-    `https://public-api.etoro.com/api/v1/market-data/search?internalSymbolFull=${symbol}`;
-
-  const searchRes = await fetch(searchUrl, { headers });
-  const searchData = await safeJson(searchRes);
-
-  const instrument = searchData.items?.find(i => i.internalSymbolFull === symbol);
-  if (!instrument) throw new Error(`Instrument not found for ${symbol}`);
-
-  const instrumentId = instrument.instrumentId;
-
-  // 2. Get price
-  const priceUrl =
-    `https://public-api.etoro.com/api/v1/market-data/instruments/rates?instrumentIds=${instrumentId}`;
-
-  const priceRes = await fetch(priceUrl, { method: "GET", headers });
-  const priceData = await safeJson(priceRes);
-  const price = priceData.rates?.[0]?.bid;
-
-  let stop = price*(1-margin*0.5);
-  let profit = price*(1+margin);
-
-  if (position !== "LONG") {
-    stop = price*(1+margin*0.5);
-    profit = price*(1-margin);
-  }
-
-  const orderBody = {
-    InstrumentId: instrumentId,
-    Amount: amount,
-    Rate: price,
-    StopLossRate: stop,
-    TakeProfitRate: profit,
-    Leverage: leverage,
-    Position: position,
-    IsBuy: position === "LONG",
-    timestamp: Math.floor(Date.now() / 1000)
-  };
-
-  console.log(orderBody);
-
-   if (tradelive === false) {return orderBody}
-
-  const orderUrl =
-    'https://public-api.etoro.com/api/v1/trading/execution/demo/market-open-orders/by-amount';
-
-  const orderRes = await fetch(orderUrl, {
-    method: 'POST',
-    headers,
-    body: JSON.stringify(orderBody)
-  });
-
-  return orderBody;
-};
-
+*/
 // -----------------------------
 // SYMBOL HISTORY
 // -----------------------------
@@ -472,13 +325,24 @@ async function loadSymbolHistory() {
 
   container.innerHTML = "";
 
-  list.forEach(sym => {
+  // Sort alphabetically
+  const sortedList = [...list].sort((a, b) => a.localeCompare(b));
+
+  sortedList.forEach(sym => {
     const btn = document.createElement("button");
     btn.textContent = sym;
     btn.style.marginRight = "8px";
-    btn.onclick = () => {
+    btn.onclick = async () => {
       document.getElementById("symbol").value = sym;
-      document.getElementById("load").click();
+      await refreshChart();
+      loadTradeHistory(sym);
+
+      // Load latest trade into lines
+      const trades = await window.api.getTrades(sym);
+      if (trades && trades.length > 0) {
+        const latestTrade = trades[trades.length - 1];
+        loadTradeLines(latestTrade);
+      }
     };
     container.appendChild(btn);
   });
@@ -576,8 +440,15 @@ async function refreshChart() {
   const symbol = document.getElementById("symbol").value.trim().toUpperCase();
   if (!symbol) { return }
 
+  const isIntraday = !interval.includes("Day") && !interval.includes("Week");
+  chart.applyOptions({
+    timeScale: {
+      timeVisible: isIntraday,
+    }
+  });
+
   try {
-    const { candles, currentPrice } = await getCandles(symbol, interval);
+    const { candles, currentPrice } = await window.api.getCandles(symbol, interval);
     const chartCandles = convertAPIResponseToCandles(candles);
     candleSeries.setData(chartCandles);
     updateMarketPriceInfo(currentPrice);
