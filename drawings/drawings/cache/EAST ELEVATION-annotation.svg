@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:ifc="http://www.ifcopenshell.org/ns" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" data-scale="1:50" height="134.23784119948994mm" id="root" version="1.1" viewBox="0 0 223.39075088500977 134.23784119948994" width="223.39075088500977mm">
+  <defs/>
+  <use transform="rotate(90.00000933466734, 34.4509162902832, 66.7874755859375)" x="34.4509162902832" xlink:href="#elevation-arrow" y="66.7874755859375"/>
+  <use x="34.4509162902832" xlink:href="#elevation-tag" y="66.7874755859375"/>
+  <text class="ELEVATION" dominant-baseline="middle" text-anchor="middle" x="34.4509162902832" y="64.2874755859375">-</text>
+  <text class="ELEVATION" dominant-baseline="middle" text-anchor="middle" x="34.4509162902832" y="69.2874755859375">-</text>
+  <path class="GlobalId-3D2jaeBsz0SRDsrS0WTJKH IfcAnnotation PredefinedType-SECTIONLEVEL" d="M 206.18472290039062 106.78748321533203 L 17.206010818481445 106.78748321533203"/>
+  <text dominant-baseline="baseline" style="font-size: 0;" text-anchor="start" transform="translate(206.18472290039062, 103.28748321533203) rotate(0.0)">
+    <tspan class="SECTIONLEVEL" dy="-1em" x="0" y="0">My Storey</tspan>
+    <tspan class="SECTIONLEVEL" dy="0em" x="0" y="0">RL -0</tspan>
+  </text>
+  <line class="GlobalId-3dqUpgIRPAxgKJmhYLA1Q5 IfcAnnotation PredefinedType-DIMENSION" x1="215.9949951171875" x2="215.9949951171875" y1="106.78748321533203" y2="67.18748474121094"/>
+  <text dominant-baseline="baseline" style="font-size: 0;" text-anchor="middle" transform="translate(214.9949951171875, 86.98748779296875) rotate(-90.00000250447816)">
+    <tspan class="DIMENSION" dy="0em" x="0" y="0">1980</tspan>
+  </text>
+  <line class="GlobalId-2VHQTRe7r1cuudMd8Svf2a IfcAnnotation PredefinedType-DIMENSION" x1="29.05477523803711" x2="139.6499786376953" y1="115.44269561767578" y2="115.44269561767578"/>
+  <text dominant-baseline="baseline" style="font-size: 0;" text-anchor="middle" transform="translate(84.35237121582031, 114.44269561767578) rotate(0.0)">
+    <tspan class="DIMENSION" dy="0em" x="0" y="0">5530</tspan>
+  </text>
+  <line class="GlobalId-2VHQTRe7r1cuudMd8Svf2a IfcAnnotation PredefinedType-DIMENSION" x1="139.6499786376953" x2="203.6499786376953" y1="115.44269561767578" y2="115.44269561767578"/>
+  <text dominant-baseline="baseline" style="font-size: 0;" text-anchor="middle" transform="translate(171.6499786376953, 114.44269561767578) rotate(0.0)">
+    <tspan class="DIMENSION" dy="0em" x="0" y="0">3200</tspan>
+  </text>
+  <line class="GlobalId-29$JYW9uP4HuAdXrYh8Ffy IfcAnnotation PredefinedType-DIMENSION" x1="25.40058135986328" x2="25.40058135986328" y1="106.33134460449219" y2="48.33134460449219"/>
+  <text dominant-baseline="baseline" style="font-size: 0;" text-anchor="middle" transform="translate(24.40058135986328, 77.33134460449219) rotate(-90.00000250447816)">
+    <tspan class="DIMENSION" dy="0em" x="0" y="0">2900</tspan>
+  </text>
+  <text dominant-baseline="baseline" style="font-size: 0;" text-anchor="start" transform="translate(160.41806030273438, 79.77674865722656) rotate(-8.537736462515939e-07)">
+    <tspan class="GlobalId-16c9ostzP1cuP7N3kJZP_8 IfcAnnotation PredefinedType-TEXT" dy="0em" x="0" y="0">abri de jardin existant</tspan>
+  </text>
+  <text dominant-baseline="baseline" style="font-size: 0;" text-anchor="start" transform="translate(88.85881042480469, 79.52072143554688) rotate(-8.537736462515939e-07)">
+    <tspan class="GlobalId-2941DemYf3jAG4MCM3HjBP IfcAnnotation PredefinedType-TEXT" dy="0em" x="0" y="0">nouvel abri de voiture</tspan>
+  </text>
+</svg>

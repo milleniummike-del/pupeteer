@@ -8805,5 +8805,25 @@
     "prompt": "video of Springbok (Antidorcas marsupialis), slow movement, in River edges, harsh daylight, aerial drone, wildlife documentary, 5 seconds",
     "timestamp": "2026-05-21T10:46:08.712Z",
     "status": "pending"
+  },
+  {
+    "prompt": "video of - SPECIES: African Civet (Civettictis civetta) - BEHAVIOR: Facing off larger predators - HABITAT: Tall grass regions - LIGHTING: Blue twilight moonrise - MODIFIERS: Sharp eye focus, Handheld documentary style, National Geographic cinematography, Macro fur detail - ENHANCERS: BBC Planet Earth quality, 8K resolution, natural colors",
+    "timestamp": "2026-05-24T16:23:38.455Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: Topi (Damaliscus lunatus jimela) - BEHAVIOR: Crossing a dangerous river during migration - HABITAT: Short-grass plains - LIGHTING: Dappled forest light - MODIFIERS: Shallow depth of field, Handheld documentary style, Slow motion 120fps, Aerial drone view - ENHANCERS: 8K resolution, award-winning photography, perfect composition",
+    "timestamp": "2026-05-24T16:26:13.138Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: African Fish Eagle (Icthyophaga vocifer) - BEHAVIOR: Engaging in courtship dance - HABITAT: Waterhole edges - LIGHTING: Soft dawn haze - MODIFIERS: Telephoto compression, National Geographic cinematography, Handheld documentary style, Aerial drone view - ENHANCERS: 8K resolution, BBC Planet Earth quality, hyper-realistic",
+    "timestamp": "2026-05-24T16:36:00.605Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of - SPECIES: Striped Hyena (Hyaena hyaena) - BEHAVIOR: Standing guard at a burrow - HABITAT: Termite mound landscapes - LIGHTING: Moonlit savanna under stars - MODIFIERS: Aerial drone view, Handheld documentary style, Sharp eye focus, Low-angle camera trap - ENHANCERS: volumetric lighting, 8K resolution, perfect composition",
+    "timestamp": "2026-05-24T16:37:12.362Z",
+    "status": "success"
   }
 ]

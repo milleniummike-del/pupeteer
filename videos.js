@@ -1,5 +1,4 @@
 const videos = [];
-videos[0] = `video of Springbok (Antidorcas marsupialis), slow movement, in River edges, harsh daylight, aerial drone, wildlife documentary, 5 seconds`;
-videos[1] = `video of Springbok (Antidorcas marsupialis), chase begins, in River edges, dawn mist, aerial drone, 8K detail, 5 seconds`;
-videos[2] = `video of Springbok (Antidorcas marsupialis), dust and chaos, in River edges, storm clouds, cinematic pan, cinematic depth, 5 seconds`;
+videos[0] = `video of - SPECIES: African Fish Eagle (Icthyophaga vocifer) - BEHAVIOR: Engaging in courtship dance - HABITAT: Waterhole edges - LIGHTING: Soft dawn haze - MODIFIERS: Telephoto compression, National Geographic cinematography, Handheld documentary style, Aerial drone view - ENHANCERS: 8K resolution, BBC Planet Earth quality, hyper-realistic`;
+videos[1] = `video of - SPECIES: Striped Hyena (Hyaena hyaena) - BEHAVIOR: Standing guard at a burrow - HABITAT: Termite mound landscapes - LIGHTING: Moonlit savanna under stars - MODIFIERS: Aerial drone view, Handheld documentary style, Sharp eye focus, Low-angle camera trap - ENHANCERS: volumetric lighting, 8K resolution, perfect composition`;
 module.exports = videos;

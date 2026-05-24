@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:ifc="http://www.ifcopenshell.org/ns" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" data-scale="1:50" height="213.60000610351562mm" id="root" version="1.1" viewBox="0 0 169.52381436786953 213.60000610351562" width="169.52381436786953mm">
+  <defs/>
+  <line class="GlobalId-3kkEuet616DR7GgcD7emu3 IfcAnnotation PredefinedType-DIMENSION" x1="30.108699798583984" x2="64.57238006591797" y1="71.15035247802734" y2="71.15035247802734"/>
+  <text dominant-baseline="baseline" style="font-size: 0;" text-anchor="middle" transform="translate(47.340538024902344, 70.15035247802734) rotate(0.0)">
+    <tspan class="DIMENSION" dy="0em" x="0" y="0">1723</tspan>
+  </text>
+  <line class="GlobalId-1XC5DwqFrDoeuPS8eiM9zj IfcAnnotation PredefinedType-DIMENSION" x1="127.82451629638672" x2="156.65371704101562" y1="71.50863647460938" y2="71.50863647460938"/>
+  <text dominant-baseline="baseline" style="font-size: 0;" text-anchor="middle" transform="translate(142.23912048339844, 70.50863647460938) rotate(0.0)">
+    <tspan class="DIMENSION" dy="0em" x="0" y="0">1441</tspan>
+  </text>
+  <line class="GlobalId-0WCW5Y5Ef6MOZvsRCqQIZs IfcAnnotation PredefinedType-DIMENSION" x1="30.941190719604492" x2="155.82611083984375" y1="207.492431640625" y2="207.492431640625"/>
+  <text dominant-baseline="baseline" style="font-size: 0;" text-anchor="middle" transform="translate(93.38365173339844, 206.492431640625) rotate(0.0)">
+    <tspan class="DIMENSION" dy="0em" x="0" y="0">6244</tspan>
+  </text>
+  <use transform="rotate(-90.00000250447816, 178.66432189941406, 95.61380004882812)" x="178.66432189941406" xlink:href="#elevation-arrow" y="95.61380004882812"/>
+  <use x="178.66432189941406" xlink:href="#elevation-tag" y="95.61380004882812"/>
+  <text class="ELEVATION" dominant-baseline="middle" text-anchor="middle" x="178.66432189941406" y="93.11380004882812">-</text>
+  <text class="ELEVATION" dominant-baseline="middle" text-anchor="middle" x="178.66432189941406" y="98.11380004882812">-</text>
+  <use transform="rotate(-0.0, 104.76190185546875, 191.99905395507812)" x="104.76190185546875" xlink:href="#elevation-arrow" y="191.99905395507812"/>
+  <use x="104.76190185546875" xlink:href="#elevation-tag" y="191.99905395507812"/>
+  <text class="ELEVATION" dominant-baseline="middle" text-anchor="middle" x="104.76190185546875" y="189.49905395507812">-</text>
+  <text class="ELEVATION" dominant-baseline="middle" text-anchor="middle" x="104.76190185546875" y="194.49905395507812">-</text>
+  <line class="GlobalId-3lUC6Fh9P0L9rYRVS4CQ3b IfcAnnotation PredefinedType-DIMENSION" x1="64.88436889648438" x2="128.8843536376953" y1="7.015876770019531" y2="7.015876770019531"/>
+  <text dominant-baseline="baseline" style="font-size: 0;" text-anchor="middle" transform="translate(96.88436126708984, 6.015876770019531) rotate(0.0)">
+    <tspan class="DIMENSION" dy="0em" x="0" y="0">3200</tspan>
+  </text>
+  <line class="GlobalId-34fBHutNz1tBpGroPpEf6r IfcAnnotation PredefinedType-DIMENSION" x1="24.746809005737305" x2="24.74677085876465" y1="198.5950927734375" y2="85.89530181884766"/>
+  <text dominant-baseline="baseline" style="font-size: 0;" text-anchor="middle" transform="translate(23.746789932250977, 142.2451934814453) rotate(-90.0000161648565)">
+    <tspan class="DIMENSION" dy="0em" x="0" y="0">5635</tspan>
+  </text>
+  <line class="GlobalId-34fBHutNz1tBpGroPpEf6r IfcAnnotation PredefinedType-DIMENSION" x1="24.74677085876465" x2="24.74677085876465" y1="85.89530181884766" y2="21.895322799682617"/>
+  <text dominant-baseline="baseline" style="font-size: 0;" text-anchor="middle" transform="translate(23.74677085876465, 53.89531326293945) rotate(-90.00000250447816)">
+    <tspan class="DIMENSION" dy="0em" x="0" y="0">3200</tspan>
+  </text>
+  <text dominant-baseline="baseline" style="font-size: 0;" text-anchor="start" transform="translate(83.63833618164062, 54.7913932800293) rotate(-0.0)">
+    <tspan class="GlobalId-2bf7L4aTf78eMrvfh5wn_S IfcAnnotation PredefinedType-TEXT" dy="0em" x="0" y="0">abri de jardin existant</tspan>
+  </text>
+  <text dominant-baseline="baseline" style="font-size: 0;" text-anchor="start" transform="translate(94.4894790649414, 126.26432800292969) rotate(-0.0)">
+    <tspan class="GlobalId-0UlQ7Tjfn1EwLTw4bihaPN IfcAnnotation PredefinedType-TEXT" dy="0em" x="0" y="0">nouvel abri de voiture</tspan>
+  </text>
+</svg>

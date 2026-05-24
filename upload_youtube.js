@@ -4,7 +4,7 @@
 
 const channels = ['https://studio.youtube.com/channel/UCwUI5e_vV229JZZcTLoIdgg','https://studio.youtube.com/channel/UCotGGoP_MQUh6lgB1smxrfw', 'https://studio.youtube.com/channel/UC5A2FeUQSnut7JqHRNGGmBA']; // drone, creation, animals
 
-const channel = channels[0];
+const channel = channels[2];
 
 const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
@@ -59,7 +59,8 @@ const CHANNEL = getArg('channel', channel);
 const FILE_NAME = getArg('file', 'final_1.mp4');
 
 // Paths
-let destinationDir = directory.getPath() + '\\upscaled';
+//let destinationDir = directory.getPath() + '\\upscaled';
+let destinationDir = directory.getPath();
 const FILE_PATH = path.join(destinationDir, FILE_NAME);
 
 console.log("📂 Upload folder:", destinationDir);
@@ -98,9 +99,6 @@ puppeteer.use(StealthPlugin());
 
         // Click Create
         await page.click("ytcp-icon-button#upload-icon");
-
-        // Click Upload
-        await page.click("ytcp-button#select-files-button");
 
         // Upload file
         const fileInput = await page.waitForSelector("input[type='file']", { visible: false });

@@ -264,9 +264,9 @@ const generate = (count = 1) => {
 };
 
 
-// ---------------------------------------------------------
+// -------------------------
 const count = parseInt(process.argv[2]) || 1;
-const output = generate(1);
+const output = generate(count);
 
 fs.writeFileSync('videos.js', output);
 console.log('✔ Generated narrative safari prompts');
