@@ -20,7 +20,7 @@ const args = Object.fromEntries(
 const d = args.path || 'upscaled';
 let destinationDir = directory.getPath()
 if (d) {
-  //destinationDir = directory.getPath() + '\\'+d;
+  destinationDir = directory.getPath() + '\\'+d;
 }
 
 console.log("📂 Download folder:", destinationDir);

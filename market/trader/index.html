@@ -115,92 +115,134 @@
       height: 500px;
       border: 1px solid var(--border);
       background: #000;
-      margin-top: 20px;
+      margin-top: 10px;
       border-radius: 6px;
+    }
+
+    /* TABS */
+    #tabBar {
+      display: flex;
+      gap: 5px;
+      margin-bottom: 10px;
+      overflow-x: auto;
+      padding-bottom: 5px;
+    }
+
+    .tab-button {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 8px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      white-space: nowrap;
+    }
+
+    .tab-button.active {
+      background: var(--accent);
+      color: #000;
+      border-color: var(--accent);
+    }
+
+    .tab-button .close-tab {
+      font-weight: bold;
+      opacity: 0.6;
+    }
+
+    .tab-button .close-tab:hover {
+      opacity: 1;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
     }
   </style>
 </head>
 
 <body>
+  
   <h3>Recent Symbols</h3>
   <div id="symbolHistory"></div>
-
-
-<hr/>
-  <a id="chartLink" href="">Etoro Chart</a> |
-  <a id="newsLink" href="">Yahoo News</a>
-  <button id="load">Load Chart</button>
-  <button id="clearLines">Clear Lines</button>
-
-  <script>
-    document.getElementById("chartLink").addEventListener("click", (e) => {
-      e.preventDefault();
-      const symbol = document.getElementById("symbol").value.trim().toUpperCase();
-      const link = 'https://www.etoro.com/markets/' + symbol + '/chart';
-      window.api.openExternal(link);
-    });
-
-    document.getElementById("newsLink").addEventListener("click", (e) => {
-      e.preventDefault();
-      const symbol = document.getElementById("symbol").value.trim().toUpperCase();
-      const link = 'https://finance.yahoo.com/quote/' + symbol + '/news/';
-      window.api.openExternal(link);
-    });
-  </script>
-
-  <hr/>
-    <label>Symbol:</label>
-  <input id="symbol" value="BTC" />
-  
-  <label for="interval">Interval:</label>
-  <select id="interval">
-    <option value="OneMinute">1 Minute</option>
-    <option value="FiveMinutes">5 Minutes</option>
-    <option value="TenMinutes">10 Minutes</option>
-    <option value="FifteenMinutes" selected>15 Minutes</option>
-    <option value="ThirtyMinutes">30 Minutes</option>
-    <option value="OneHour">1 Hour</option>
-    <option value="FourHours">4 Hours</option>
-    <option value="OneDay">1 Day</option>
-    <option value="OneWeek">1 Week</option>
-  </select>
-    <h3>Trade Actions</h3>
-  <button id="makeTrade">BID Trade</button>
-  <button id="makeMarketTrade">LONG At Market</button>
-
-  <div id="marketPriceInfo" style="margin-top: 15px; font-size: 1em; color: var(--accent);">
-    Current Price: <span id="currentPriceDisplay" style="font-weight: bold;">$0.00</span> | 
-    <span style="font-size: 0.9em; opacity: 0.8;">
-      +1%: <span id="plus1" style="color: var(--success);">0</span> | 
-      +2%: <span id="plus2" style="color: var(--success);">0</span> | 
-      -1%: <span id="minus1" style="color: var(--danger);">0</span> | 
-      -2%: <span id="minus2" style="color: var(--danger);">0</span>
-    </span>
+<body>
+  <div id="tabBar"></div>
+  <div id="tabContainer">
+    <!-- Tab contents will be injected here -->
   </div>
 
-  <div id="pnlDisplay" style="margin-top: 5px; font-size: 1.1em; font-weight: bold;">
-    Potential Profit: <span id="profitDollar" style="color: var(--success);">$0.00</span> (<span id="profitPcnt">0.00%</span>) | 
-    Potential Stop: <span id="stopDollar" style="color: var(--danger);">$0.00</span> (<span id="stopPcnt">0.00%</span>)
-  </div>
+  <template id="tabTemplate">
+    <div class="tab-content">
+      <div class="tab-header">
+        <h3 class="tab-title">Symbol</h3>
+        <div class="symbol-info">
+          <a class="chartLink" href="">Etoro Chart</a> |
+          <a class="newsLink" href="">Yahoo News</a>
+          <button class="loadBtn">Load Chart</button>
+          <button class="clearLinesBtn">Clear Lines</button>
+        </div>
+        <hr/>
+        <label>Symbol:</label>
+        <input class="symbolInput" value="" />
+        
+        <label>Interval:</label>
+        <select class="intervalSelect">
+          <option value="OneMinute">1 Minute</option>
+          <option value="FiveMinutes">5 Minutes</option>
+          <option value="TenMinutes">10 Minutes</option>
+          <option value="FifteenMinutes" selected>15 Minutes</option>
+          <option value="ThirtyMinutes">30 Minutes</option>
+          <option value="OneHour">1 Hour</option>
+          <option value="FourHours">4 Hours</option>
+          <option value="OneDay">1 Day</option>
+          <option value="OneWeek">1 Week</option>
+        </select>
+        
+        <h3>Trade Actions</h3>
+        <button class="makeTradeBtn">BID Trade</button>
+        <button class="makeMarketTradeBtn">LONG At Market</button>
 
-  <div id="chart"></div>
+        <div class="marketPriceInfo" style="margin-top: 15px; font-size: 1em; color: var(--accent);">
+          Current Price: <span class="currentPriceDisplay" style="font-weight: bold;">$0.00</span> | 
+          <span style="font-size: 0.9em; opacity: 0.8;">
+            +1%: <span class="plus1" style="color: var(--success);">0</span> | 
+            +2%: <span class="plus2" style="color: var(--success);">0</span> | 
+            -1%: <span class="minus1" style="color: var(--danger);">0</span> | 
+            -2%: <span class="minus2" style="color: var(--danger);">0</span>
+          </span>
+        </div>
 
-  <h3>Saved Trades</h3>
-  <div id="tradeHistory"></div>
+        <div class="pnlDisplay" style="margin-top: 5px; font-size: 1.1em; font-weight: bold;">
+          Potential Profit: <span class="profitDollar" style="color: var(--success);">$0.00</span> (<span class="profitPcnt">0.00%</span>) | 
+          Potential Stop: <span class="stopDollar" style="color: var(--danger);">$0.00</span> (<span class="stopPcnt">0.00%</span>)
+        </div>
+      </div>
 
-<hr/>
-  <h3>Trade Settings</h3>
-  <label for="leverage">Leverage:</label>
-  <input id="leverage" type="number" value="5" min="1" />
-<br/>
-  <label for="amount">Amount ($):</label>
-  <input id="amount" type="number" value="1000" min="10" />
-<br/>
-  <label for="margin">Margin %:</label>
-  <input id="margin" type="number" value="0.5" step="0.1" min="0" />
-  <br/>
-    <label for="refreshInterval">Refresh (sec):</label>
-  <input id="refreshInterval" type="number" value="30" min="1" />
+      <div class="chart-container" style="width: 100%; height: 500px; border: 1px solid var(--border); background: #000; margin-top: 10px; border-radius: 6px;"></div>
+
+      <h3>Saved Trades</h3>
+      <div class="tradeHistory"></div>
+
+      <hr/>
+      <h3>Trade Settings</h3>
+      <label>Leverage:</label>
+      <input class="leverageInput" type="number" value="5" min="1" />
+      <br/>
+      <label>Amount ($):</label>
+      <input class="amountInput" type="number" value="1000" min="10" />
+      <br/>
+      <label>Margin %:</label>
+      <input class="marginInput" type="number" value="0.5" step="0.1" min="0" />
+      <br/>
+      <label>Refresh (sec):</label>
+      <input class="refreshIntervalInput" type="number" value="30" min="1" />
+    </div>
+  </template>
 
   <script type="module" src="renderer.js"></script>
 </body>

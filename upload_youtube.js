@@ -1,8 +1,12 @@
 /**
- * YouTube Upload Automation (File-based metadata)
+ * YouTube Upload Automation (STABLE + VERSION SAFE)
  */
 
-const channels = ['https://studio.youtube.com/channel/UCwUI5e_vV229JZZcTLoIdgg','https://studio.youtube.com/channel/UCotGGoP_MQUh6lgB1smxrfw', 'https://studio.youtube.com/channel/UC5A2FeUQSnut7JqHRNGGmBA']; // drone, creation, animals
+const channels = [
+    'https://studio.youtube.com/channel/UCwUI5e_vV229JZZcTLoIdgg',
+    'https://studio.youtube.com/channel/UCotGGoP_MQUh6lgB1smxrfw',
+    'https://studio.youtube.com/channel/UC5A2FeUQSnut7JqHRNGGmBA'
+];
 
 const channel = channels[2];
 
@@ -16,7 +20,12 @@ const directory = require('./directory.js');
 const DEBUG = true;
 
 // ---------------------------------------------------------
-// 🧠 CLI ARG PARSER
+// SAFE SLEEP (replaces waitForTimeout everywhere)
+// ---------------------------------------------------------
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+// ---------------------------------------------------------
+// CLI PARSER
 // ---------------------------------------------------------
 function getArg(name, fallback = '') {
     const arg = process.argv.find(a => a.startsWith(`--${name}=`));
@@ -25,7 +34,7 @@ function getArg(name, fallback = '') {
 }
 
 // ---------------------------------------------------------
-// 📄 READ TEXT FILE HELPER
+// FILE READER
 // ---------------------------------------------------------
 function readTextFile(filePath, fallback = '') {
     try {
@@ -39,41 +48,26 @@ function readTextFile(filePath, fallback = '') {
 }
 
 // ---------------------------------------------------------
-// INPUTS
-// ---------------------------------------------------------
 
-// File-based inputs (priority)
 const TITLE_FILE = path.join(__dirname, 'youtube_title.txt');
 const DESC_FILE = path.join(__dirname, 'youtube_description.txt');
 
-// CLI fallback
-const TITLE_CLI = getArg('title', 'My Automated Upload');
-const DESC_CLI = getArg('description', 'Uploaded with Puppeteer automation');
+const TITLE = readTextFile(TITLE_FILE, getArg('title', 'My Automated Upload'));
+const DESCRIPTION = readTextFile(DESC_FILE, getArg('description', 'Uploaded with Puppeteer automation'));
 
-// Final values (file overrides CLI)
-const TITLE = readTextFile(TITLE_FILE, TITLE_CLI);
-const DESCRIPTION = readTextFile(DESC_FILE, DESC_CLI);
-
-// Other CLI inputs
 const CHANNEL = getArg('channel', channel);
-const FILE_NAME = getArg('file', 'final_1.mp4');
+const FILE_NAME = getArg('file', 'upscaled/final_1.mp4');
 
-// Paths
-//let destinationDir = directory.getPath() + '\\upscaled';
-let destinationDir = directory.getPath();
-const FILE_PATH = path.join(destinationDir, FILE_NAME);
+const FILE_PATH = path.join(directory.getPath(), FILE_NAME);
 
-console.log("📂 Upload folder:", destinationDir);
-console.log("🎬 File:", FILE_PATH);
+console.log("📂 File:", FILE_PATH);
 console.log("📝 Title:", TITLE);
 console.log("📄 Description:", DESCRIPTION);
-console.log("📺 Channel:", CHANNEL);
-
-// ---------------------------------------------------------
 
 puppeteer.use(StealthPlugin());
 
 (async () => {
+
     const browser = await puppeteer.launch({
         userDataDir: "browser",
         headless: false,
@@ -81,78 +75,187 @@ puppeteer.use(StealthPlugin());
         devtools: DEBUG
     });
 
+    // IMPORTANT: page must be OUTSIDE try/catch
+    const page = (await browser.pages())[0];
+    await page.bringToFront();
+
     try {
-        const page = (await browser.pages())[0];
-        await page.bringToFront();
 
-        await page.goto(CHANNEL, {
-            waitUntil: "networkidle2",
+        page.on('dialog', async dialog => {
+            console.log("⚠️ Dialog:", dialog.message());
+            await dialog.dismiss();
         });
 
-        console.log("👉 Log in if needed...");
+        await page.goto(CHANNEL, { waitUntil: "networkidle2" });
 
-        await page.waitForSelector("ytcp-icon-button#upload-icon", {
-            timeout: 0,
-        });
+        console.log("👉 Login if needed...");
 
-        console.log("✅ Logged in!");
+        await page.waitForSelector("ytcp-icon-button#upload-icon", { timeout: 0 });
 
-        // Click Create
+        console.log("✅ Upload button found");
+
         await page.click("ytcp-icon-button#upload-icon");
 
-        // Upload file
-        const fileInput = await page.waitForSelector("input[type='file']", { visible: false });
+        const fileInput = await page.waitForSelector("input[type='file']");
         await fileInput.uploadFile(FILE_PATH);
 
-        console.log("📤 Uploading video...");
+        console.log("📤 Uploading...");
 
-        // Wait for title field
-        await page.waitForSelector("#textbox", { timeout: 60000 });
+        await page.waitForSelector("ytcp-video-title #textbox", { timeout: 60000 });
 
-        // --- TITLE ---
-        await page.waitForSelector("ytcp-video-title #textbox");
+        // -------------------------------------------------
+        // TITLE (stable input)
+        // -------------------------------------------------
         const titleBox = await page.$("ytcp-video-title #textbox");
 
         await page.evaluate((el, text) => {
-            el.textContent = text;
+            el.focus();
+            document.execCommand('selectAll', false, null);
+            document.execCommand('delete', false, null);
+            document.execCommand('insertText', false, text);
             el.dispatchEvent(new Event("input", { bubbles: true }));
         }, titleBox, TITLE);
 
-        // --- DESCRIPTION ---
-        await page.waitForSelector("ytcp-video-description #textbox");
+        // -------------------------------------------------
+        // DESCRIPTION
+        // -------------------------------------------------
         const descBox = await page.$("ytcp-video-description #textbox");
 
         await page.evaluate((el, text) => {
-            el.textContent = text;
+            el.focus();
+            document.execCommand('selectAll', false, null);
+            document.execCommand('delete', false, null);
+            document.execCommand('insertText', false, text);
             el.dispatchEvent(new Event("input", { bubbles: true }));
         }, descBox, DESCRIPTION);
 
-        // --- NEXT BUTTONS ---
-        const nextBtnSelector = "ytcp-button#next-button";
+        console.log("✍️ Title + Description set");
 
-        for (let i = 0; i < 3; i++) {
-            await page.waitForSelector(nextBtnSelector);
-            await page.click(nextBtnSelector);
+        // -------------------------------------------------
+        // NEXT FLOW (safe + non-stuck)
+        // -------------------------------------------------
+        console.log("➡️ Wizard steps...");
+
+        for (let i = 0; i < 6; i++) {
+
+            const nextBtn = await page.$('ytcp-button#next-button');
+
+            if (!nextBtn) break;
+
+            const disabled = await page.evaluate(btn =>
+                btn.hasAttribute('disabled') ||
+                btn.getAttribute('aria-disabled') === 'true',
+                nextBtn
+            );
+
+            if (disabled) {
+                console.log("⏳ Waiting for step (likely audience)...");
+
+                await sleep(2000);
+                continue;
+            }
+
+            await nextBtn.click();
+            await sleep(2000);
         }
 
-        // --- VISIBILITY (PRIVATE safer default) ---
-        const privateRadio = await page.$("tp-yt-paper-radio-button[name='PRIVATE']");
-        if (privateRadio) {
-            await privateRadio.click();
+        // -------------------------------------------------
+        // AUDIENCE FIX (CRITICAL)
+        // -------------------------------------------------
+        console.log("👶 Setting audience...");
+
+        await sleep(2000);
+
+        const notForKids = await page.evaluateHandle(() => {
+            const buttons = Array.from(
+                document.querySelectorAll('tp-yt-paper-radio-button')
+            );
+
+            return buttons.find(btn => {
+                const text = (btn.innerText || "").toLowerCase();
+
+                return (
+                    text.includes("not made for kids") ||
+                    text.includes("no, it's not made for kids")
+                );
+            });
+        });
+
+        const exists = await page.evaluate(el => !!el, notForKids);
+
+        if (exists) {
+            const checked = await page.evaluate(el =>
+                el.getAttribute("aria-checked") === "true",
+                notForKids
+            );
+
+            if (!checked) {
+                console.log("🖱️ Clicking 'Not made for kids'...");
+                await page.evaluate(el => el.click(), notForKids);
+                await sleep(1500);
+            } else {
+                console.log("ℹ️ Already set");
+            }
         }
 
-        // --- SAVE ---
-        const saveBtn = await page.$('button[aria-label="Save"]');
-        if (saveBtn) {
-            await saveBtn.click();
+        console.log("➡️ Click next...");
+
+
+            let nextBtn = await page.$('ytcp-button#next-button');
+
+            await nextBtn.click();
+
+            console.log("➡️ Click next...");
+
+
+             nextBtn = await page.$('ytcp-button#next-button');
+
+            await nextBtn.click();
+
+            console.log("➡️ Click next...");
+
+
+             nextBtn = await page.$('ytcp-button#next-button');
+
+            await nextBtn.click();
+
+        // -------------------------------------------------
+        // SAVE (safe selector)
+        // -------------------------------------------------
+        console.log("💾 Saving...");
+
+        let saved = false;
+
+        for (let i = 0; i < 10; i++) {
+
+            const saveBtn = await page.$('button[aria-label="Save"]');
+
+            if (saveBtn) {
+                const disabled = await page.evaluate(btn =>
+                    btn.getAttribute("aria-disabled") === "true",
+                    saveBtn
+                );
+
+                if (!disabled) {
+                    await saveBtn.click();
+                    saved = true;
+                    break;
+                }
+            }
+
+            await sleep(1500);
         }
 
-        console.log("🎉 Upload complete!");
+        if (saved) {
+            console.log("✅ Upload complete!");
+            await sleep(5000);
+        } else {
+            console.log("❌ Save failed");
+        }
 
     } catch (e) {
         console.error("🔥 Error:", e);
     } finally {
-        // Keep browser open for debugging
-        await new Promise(resolve => setTimeout(resolve, 555000));
+        if (browser) await browser.close();
     }
 })();

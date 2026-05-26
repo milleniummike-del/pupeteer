@@ -18,7 +18,7 @@ const args = Object.fromEntries(
 // -------------------------
 
 const promptsFile = args.promptfile || 'prompts_animals_safari.js';
-const count = args.count || '2';
+const count = args.count || '5';
 
 for (var countrt = 0; countrt < 1; countrt++) {
   const commands = [
@@ -26,8 +26,9 @@ for (var countrt = 0; countrt < 1; countrt++) {
     `node .\\${promptsFile} ${count}`,
     'node .\\meta_createvideos.js',
     'node .\\meta_getvideos.js',
-//    'node .\\upscale.js',
+    'node .\\upscale.js',
     'node .\\combine_videos.js',
+    'node .\\upload_youtube.js'
   ];
 
   for (const cmd of commands) {
@@ -62,7 +63,10 @@ for (var countrt = 0; countrt < 1; countrt++) {
 
               // Create a short summary title
               const uniqueSpecies = [...new Set(storyDetails.map(s => s.species.split('(')[0].trim()))];
-              const shortTitle = `${uniqueSpecies.slice(0, 3).join(', ')}${uniqueSpecies.length > 3 ? ' & More' : ''} | Afro Chill Out Mix`;
+              let shortTitle = `${uniqueSpecies.slice(0, 3).join(', ')}${uniqueSpecies.length > 3 ? ' & More' : ''} | Afro Chill Out Mix`;
+              if (shortTitle.length > 100) {
+                shortTitle = shortTitle.slice(0, 100);
+              }
 
               // Create a summary description listing all videos
               let description = "Experience the breathtaking beauty of African wildlife in this cinematic collection.\n\nFeatured in this batch:\n";
@@ -70,12 +74,10 @@ for (var countrt = 0; countrt < 1; countrt++) {
                 description += `- ${s.species} in the ${s.habitat}\n`;
               });
               description += "\nRelaxing Afro Chill Out music provides the perfect rhythmic backdrop for these stunning scenes. #WildLife #Africa #AfroChill #Nature";
-
-              // Write to the main files and ALL 15 numbered files
               fs.writeFileSync('youtube_title.txt', shortTitle);
               fs.writeFileSync('youtube_description.txt', description);
               
-              console.log(`  ✅ Batch summary metadata updated: ${shortTitle}`);
+              console.log(`  ✅ title: ${shortTitle}`);
             }
           }
         } catch (metaErr) {

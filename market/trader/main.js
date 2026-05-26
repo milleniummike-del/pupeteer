@@ -153,7 +153,7 @@ ipcMain.handle("get-candles", async (event, symbol, interval = "FifteenMinutes")
     const candleRes = await fetch(candleUrl, { method: "GET", headers });
     const candleData = await safeJson(candleRes);
 
-    return { candles: candleData.candles, currentPrice: price };
+    return { candles: candleData.candles || candleData, currentPrice: price };
   } catch (err) {
     console.error("ERROR in get-candles:", err.message);
     throw err;
