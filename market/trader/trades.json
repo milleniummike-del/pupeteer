@@ -559,9 +559,285 @@
       "Position": "LONG",
       "IsBuy": true,
       "timestamp": 1779287131
+    },
+    {
+      "InstrumentId": 1111,
+      "Amount": 1000,
+      "Rate": 426.7,
+      "StopLossRate": 424.56649999999996,
+      "TakeProfitRate": 430.967,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779805742
+    },
+    {
+      "InstrumentId": 1111,
+      "Amount": 1000,
+      "Rate": 426.7,
+      "StopLossRate": 424.56649999999996,
+      "TakeProfitRate": 430.967,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779805742
+    },
+    {
+      "InstrumentId": 1111,
+      "Amount": 1000,
+      "Rate": 426.55,
+      "StopLossRate": 424.41725,
+      "TakeProfitRate": 430.81550000000004,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779805743
+    },
+    {
+      "InstrumentId": 1111,
+      "Amount": 1000,
+      "Rate": 426.55,
+      "StopLossRate": 424.41725,
+      "TakeProfitRate": 430.81550000000004,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779805743
+    },
+    {
+      "InstrumentId": 1111,
+      "Amount": 1000,
+      "Rate": 426.44,
+      "StopLossRate": 424.3078,
+      "TakeProfitRate": 430.7044,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779805744
     }
   ],
-  "MSTR": [],
+  "MSTR": [
+    {
+      "InstrumentId": 6473,
+      "Amount": 1000,
+      "Rate": 165.26,
+      "StopLossRate": 164.4337,
+      "TakeProfitRate": 166.9126,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779806399
+    },
+    {
+      "InstrumentId": 6473,
+      "Amount": 1000,
+      "Rate": 165.26,
+      "StopLossRate": 164.4337,
+      "TakeProfitRate": 166.9126,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779806400
+    },
+    {
+      "InstrumentId": 6473,
+      "Amount": 1000,
+      "Rate": 165.26,
+      "StopLossRate": 164.4337,
+      "TakeProfitRate": 166.9126,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779806400
+    },
+    {
+      "InstrumentId": 6473,
+      "Amount": 1000,
+      "Rate": 165.26,
+      "StopLossRate": 164.4337,
+      "TakeProfitRate": 166.9126,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779806400
+    },
+    {
+      "InstrumentId": 6473,
+      "Amount": 1000,
+      "Rate": 165.26,
+      "StopLossRate": 164.4337,
+      "TakeProfitRate": 166.9126,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779806401
+    },
+    {
+      "InstrumentId": 6473,
+      "Amount": 1000,
+      "Rate": 165.1,
+      "StopLossRate": 164.2745,
+      "TakeProfitRate": 166.751,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779806415
+    },
+    {
+      "InstrumentId": 6473,
+      "Amount": 1000,
+      "Rate": 165.1,
+      "StopLossRate": 164.2745,
+      "TakeProfitRate": 166.751,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779806416
+    },
+    {
+      "InstrumentId": 6473,
+      "Amount": 1000,
+      "Rate": 165.1,
+      "StopLossRate": 164.2745,
+      "TakeProfitRate": 166.751,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779806416
+    },
+    {
+      "InstrumentId": 6473,
+      "Amount": 1000,
+      "Rate": 165.1,
+      "StopLossRate": 164.2745,
+      "TakeProfitRate": 166.751,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779806416
+    },
+    {
+      "InstrumentId": 6473,
+      "Amount": 1000,
+      "Rate": 165.1,
+      "StopLossRate": 164.2745,
+      "TakeProfitRate": 166.751,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779806417
+    },
+    {
+      "InstrumentId": 6473,
+      "Amount": 1000,
+      "Rate": 164.6,
+      "StopLossRate": 163.777,
+      "TakeProfitRate": 166.246,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779806884
+    },
+    {
+      "InstrumentId": 6473,
+      "Amount": 1000,
+      "Rate": 164.6,
+      "StopLossRate": 163.777,
+      "TakeProfitRate": 166.246,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779806884
+    },
+    {
+      "InstrumentId": 6473,
+      "Amount": 1000,
+      "Rate": 164.6,
+      "StopLossRate": 163.777,
+      "TakeProfitRate": 166.246,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779806885
+    },
+    {
+      "InstrumentId": 6473,
+      "Amount": 1000,
+      "Rate": 164.6,
+      "StopLossRate": 163.777,
+      "TakeProfitRate": 166.246,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779806885
+    },
+    {
+      "InstrumentId": 6473,
+      "Amount": 1000,
+      "Rate": 164.6,
+      "StopLossRate": 163.777,
+      "TakeProfitRate": 166.246,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779806885
+    },
+    {
+      "InstrumentId": 6473,
+      "Amount": 1000,
+      "Rate": 164.62,
+      "StopLossRate": 163.7969,
+      "TakeProfitRate": 166.2662,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779806890
+    },
+    {
+      "InstrumentId": 6473,
+      "Amount": 1000,
+      "Rate": 164.62,
+      "StopLossRate": 163.7969,
+      "TakeProfitRate": 166.2662,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779806891
+    },
+    {
+      "InstrumentId": 6473,
+      "Amount": 1000,
+      "Rate": 164.62,
+      "StopLossRate": 163.7969,
+      "TakeProfitRate": 166.2662,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779806891
+    },
+    {
+      "InstrumentId": 6473,
+      "Amount": 1000,
+      "Rate": 164.85,
+      "StopLossRate": 164.02575,
+      "TakeProfitRate": 166.4985,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779806893
+    },
+    {
+      "InstrumentId": 6473,
+      "Amount": 1000,
+      "Rate": 164.85,
+      "StopLossRate": 164.02575,
+      "TakeProfitRate": 166.4985,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779806893
+    }
+  ],
   "NOW": [
     {
       "InstrumentId": 4260,
@@ -1069,112 +1345,57 @@
     {
       "InstrumentId": 1021,
       "Amount": 1000,
-      "Rate": 106.36,
-      "StopLossRate": 105.2964,
-      "TakeProfitRate": 108.4872,
+      "Rate": 121.97,
+      "StopLossRate": 121.36015,
+      "TakeProfitRate": 123.1897,
       "Leverage": 1,
       "Position": "LONG",
       "IsBuy": true,
-      "timestamp": 1779120107
+      "timestamp": 1779804874
     },
     {
       "InstrumentId": 1021,
       "Amount": 1000,
-      "Rate": 106.36,
-      "StopLossRate": 105.2964,
-      "TakeProfitRate": 108.4872,
+      "Rate": 121.96,
+      "StopLossRate": 121.35019999999999,
+      "TakeProfitRate": 123.1796,
       "Leverage": 1,
       "Position": "LONG",
       "IsBuy": true,
-      "timestamp": 1779120108
+      "timestamp": 1779804875
     },
     {
       "InstrumentId": 1021,
       "Amount": 1000,
-      "Rate": 106.39,
-      "StopLossRate": 105.3261,
-      "TakeProfitRate": 108.51780000000001,
+      "Rate": 121.96,
+      "StopLossRate": 121.35019999999999,
+      "TakeProfitRate": 123.1796,
       "Leverage": 1,
       "Position": "LONG",
       "IsBuy": true,
-      "timestamp": 1779120108
+      "timestamp": 1779804875
     },
     {
       "InstrumentId": 1021,
       "Amount": 1000,
-      "Rate": 106.39,
-      "StopLossRate": 105.3261,
-      "TakeProfitRate": 108.51780000000001,
+      "Rate": 121.96,
+      "StopLossRate": 121.35019999999999,
+      "TakeProfitRate": 123.1796,
       "Leverage": 1,
       "Position": "LONG",
       "IsBuy": true,
-      "timestamp": 1779120108
+      "timestamp": 1779804876
     },
     {
       "InstrumentId": 1021,
       "Amount": 1000,
-      "Rate": 106.39,
-      "StopLossRate": 105.3261,
-      "TakeProfitRate": 108.51780000000001,
+      "Rate": 121.96,
+      "StopLossRate": 121.35019999999999,
+      "TakeProfitRate": 123.1796,
       "Leverage": 1,
       "Position": "LONG",
       "IsBuy": true,
-      "timestamp": 1779120109
-    },
-    {
-      "InstrumentId": 1021,
-      "Amount": 1000,
-      "Rate": 114.89521707381837,
-      "StopLossRate": 114.48337426978226,
-      "TakeProfitRate": 116.50514803505045,
-      "Leverage": 1,
-      "IsBuy": true,
-      "Position": "LONG",
-      "timestamp": 1779278991
-    },
-    {
-      "InstrumentId": 1021,
-      "Amount": 1000,
-      "Rate": 114.89521707381837,
-      "StopLossRate": 114.48337426978226,
-      "TakeProfitRate": 116.50514803505045,
-      "Leverage": 1,
-      "IsBuy": true,
-      "Position": "LONG",
-      "timestamp": 1779278992
-    },
-    {
-      "InstrumentId": 1021,
-      "Amount": 1000,
-      "Rate": 114.89521707381837,
-      "StopLossRate": 114.48337426978226,
-      "TakeProfitRate": 116.50514803505045,
-      "Leverage": 1,
-      "IsBuy": true,
-      "Position": "LONG",
-      "timestamp": 1779278993
-    },
-    {
-      "InstrumentId": 1021,
-      "Amount": 1000,
-      "Rate": 114.89521707381837,
-      "StopLossRate": 114.48337426978226,
-      "TakeProfitRate": 116.50514803505045,
-      "Leverage": 1,
-      "IsBuy": true,
-      "Position": "LONG",
-      "timestamp": 1779278993
-    },
-    {
-      "InstrumentId": 1021,
-      "Amount": 1000,
-      "Rate": 114.89521707381837,
-      "StopLossRate": 114.48337426978226,
-      "TakeProfitRate": 116.50514803505045,
-      "Leverage": 1,
-      "IsBuy": true,
-      "Position": "LONG",
-      "timestamp": 1779278993
+      "timestamp": 1779804876
     }
   ],
   "HSBA.L": [
@@ -1235,7 +1456,63 @@
     }
   ],
   "MRVL": [],
-  "MU": [],
+  "MU": [
+    {
+      "InstrumentId": 1130,
+      "Amount": 1000,
+      "Rate": 883.24,
+      "StopLossRate": 878.8238,
+      "TakeProfitRate": 892.0724,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779806618
+    },
+    {
+      "InstrumentId": 1130,
+      "Amount": 1000,
+      "Rate": 883.24,
+      "StopLossRate": 878.8238,
+      "TakeProfitRate": 892.0724,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779806618
+    },
+    {
+      "InstrumentId": 1130,
+      "Amount": 1000,
+      "Rate": 883,
+      "StopLossRate": 878.585,
+      "TakeProfitRate": 891.83,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779806619
+    },
+    {
+      "InstrumentId": 1130,
+      "Amount": 1000,
+      "Rate": 883,
+      "StopLossRate": 878.585,
+      "TakeProfitRate": 891.83,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779806619
+    },
+    {
+      "InstrumentId": 1130,
+      "Amount": 1000,
+      "Rate": 883,
+      "StopLossRate": 878.585,
+      "TakeProfitRate": 891.83,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779806619
+    }
+  ],
   "XOM": [],
   "GLD": [],
   "GOLD": [
@@ -1462,6 +1739,340 @@
       "IsBuy": true,
       "Position": "LONG",
       "timestamp": 1779798345
+    },
+    {
+      "InstrumentId": 1001,
+      "Amount": 1000,
+      "Rate": 310.4,
+      "StopLossRate": 308.84799999999996,
+      "TakeProfitRate": 313.50399999999996,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779801672
+    },
+    {
+      "InstrumentId": 1001,
+      "Amount": 1000,
+      "Rate": 310.4,
+      "StopLossRate": 308.84799999999996,
+      "TakeProfitRate": 313.50399999999996,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779801672
+    },
+    {
+      "InstrumentId": 1001,
+      "Amount": 1000,
+      "Rate": 310.4,
+      "StopLossRate": 308.84799999999996,
+      "TakeProfitRate": 313.50399999999996,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779801672
+    },
+    {
+      "InstrumentId": 1001,
+      "Amount": 1000,
+      "Rate": 310.4,
+      "StopLossRate": 308.84799999999996,
+      "TakeProfitRate": 313.50399999999996,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779801673
+    },
+    {
+      "InstrumentId": 1001,
+      "Amount": 1000,
+      "Rate": 310.4,
+      "StopLossRate": 308.84799999999996,
+      "TakeProfitRate": 313.50399999999996,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779801673
+    },
+    {
+      "InstrumentId": 1001,
+      "Amount": 1000,
+      "Rate": 309.5,
+      "StopLossRate": 307.9525,
+      "TakeProfitRate": 312.595,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779802167
+    },
+    {
+      "InstrumentId": 1001,
+      "Amount": 1000,
+      "Rate": 309.5,
+      "StopLossRate": 307.9525,
+      "TakeProfitRate": 312.595,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779802168
+    },
+    {
+      "InstrumentId": 1001,
+      "Amount": 1000,
+      "Rate": 309.5,
+      "StopLossRate": 307.9525,
+      "TakeProfitRate": 312.595,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779802168
+    },
+    {
+      "InstrumentId": 1001,
+      "Amount": 1000,
+      "Rate": 309.5,
+      "StopLossRate": 307.9525,
+      "TakeProfitRate": 312.595,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779802168
+    },
+    {
+      "InstrumentId": 1001,
+      "Amount": 1000,
+      "Rate": 309.5,
+      "StopLossRate": 307.9525,
+      "TakeProfitRate": 312.595,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779802169
+    }
+  ],
+  "OKLO": [
+    {
+      "InstrumentId": 9956,
+      "Amount": 1000,
+      "Rate": 70.12,
+      "StopLossRate": 69.7694,
+      "TakeProfitRate": 70.8212,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779804650
+    },
+    {
+      "InstrumentId": 9956,
+      "Amount": 1000,
+      "Rate": 70.12,
+      "StopLossRate": 69.7694,
+      "TakeProfitRate": 70.8212,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779804650
+    },
+    {
+      "InstrumentId": 9956,
+      "Amount": 1000,
+      "Rate": 70.12,
+      "StopLossRate": 69.7694,
+      "TakeProfitRate": 70.8212,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779804650
+    },
+    {
+      "InstrumentId": 9956,
+      "Amount": 1000,
+      "Rate": 70.12,
+      "StopLossRate": 69.7694,
+      "TakeProfitRate": 70.8212,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779804651
+    },
+    {
+      "InstrumentId": 9956,
+      "Amount": 1000,
+      "Rate": 70.12,
+      "StopLossRate": 69.7694,
+      "TakeProfitRate": 70.8212,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779804651
+    },
+    {
+      "InstrumentId": 9956,
+      "Amount": 1000,
+      "Rate": 70.93,
+      "StopLossRate": 70.57535,
+      "TakeProfitRate": 71.6393,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779805398
+    },
+    {
+      "InstrumentId": 9956,
+      "Amount": 1000,
+      "Rate": 70.93,
+      "StopLossRate": 70.57535,
+      "TakeProfitRate": 71.6393,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779805398
+    },
+    {
+      "InstrumentId": 9956,
+      "Amount": 1000,
+      "Rate": 70.93,
+      "StopLossRate": 70.57535,
+      "TakeProfitRate": 71.6393,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779805398
+    },
+    {
+      "InstrumentId": 9956,
+      "Amount": 1000,
+      "Rate": 70.93,
+      "StopLossRate": 70.57535,
+      "TakeProfitRate": 71.6393,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779805398
+    },
+    {
+      "InstrumentId": 9956,
+      "Amount": 1000,
+      "Rate": 70.93,
+      "StopLossRate": 70.57535,
+      "TakeProfitRate": 71.6393,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779805399
+    }
+  ],
+  "SOFI": [
+    {
+      "InstrumentId": 9255,
+      "Amount": 1000,
+      "Rate": 16.11,
+      "StopLossRate": 16.02945,
+      "TakeProfitRate": 16.2711,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779802672
+    },
+    {
+      "InstrumentId": 9255,
+      "Amount": 1000,
+      "Rate": 16.11,
+      "StopLossRate": 16.02945,
+      "TakeProfitRate": 16.2711,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779802673
+    },
+    {
+      "InstrumentId": 9255,
+      "Amount": 1000,
+      "Rate": 16.11,
+      "StopLossRate": 16.02945,
+      "TakeProfitRate": 16.2711,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779802673
+    },
+    {
+      "InstrumentId": 9255,
+      "Amount": 1000,
+      "Rate": 16.11,
+      "StopLossRate": 16.02945,
+      "TakeProfitRate": 16.2711,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779802674
+    },
+    {
+      "InstrumentId": 9255,
+      "Amount": 1000,
+      "Rate": 16.11,
+      "StopLossRate": 16.02945,
+      "TakeProfitRate": 16.2711,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779802674
+    },
+    {
+      "InstrumentId": 9255,
+      "Amount": 1000,
+      "Rate": 16.03,
+      "StopLossRate": 15.949850000000001,
+      "TakeProfitRate": 16.1903,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779803169
+    },
+    {
+      "InstrumentId": 9255,
+      "Amount": 1000,
+      "Rate": 16.03,
+      "StopLossRate": 15.949850000000001,
+      "TakeProfitRate": 16.1903,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779803169
+    },
+    {
+      "InstrumentId": 9255,
+      "Amount": 1000,
+      "Rate": 16.03,
+      "StopLossRate": 15.949850000000001,
+      "TakeProfitRate": 16.1903,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779803170
+    },
+    {
+      "InstrumentId": 9255,
+      "Amount": 1000,
+      "Rate": 16.03,
+      "StopLossRate": 15.949850000000001,
+      "TakeProfitRate": 16.1903,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779803170
+    },
+    {
+      "InstrumentId": 9255,
+      "Amount": 1000,
+      "Rate": 16.03,
+      "StopLossRate": 15.949850000000001,
+      "TakeProfitRate": 16.1903,
+      "Leverage": 1,
+      "Position": "LONG",
+      "IsBuy": true,
+      "timestamp": 1779803170
     }
   ]
 }

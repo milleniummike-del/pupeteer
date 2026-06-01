@@ -140,7 +140,14 @@ class Tab {
 
   async loadSymbolData() {
     await this.refreshChart();
-    this.loadTradeHistory();
+    await this.loadTradeHistory();
+
+    // Load latest trade into lines
+    const trades = await window.api.getTrades(this.symbol);
+    if (trades && trades.length > 0) {
+      const latestTrade = trades[trades.length - 1];
+      this.loadTradeLines(latestTrade);
+    }
   }
 
   async refreshChart() {
