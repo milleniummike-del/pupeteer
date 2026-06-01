@@ -17,7 +17,7 @@ const args = Object.fromEntries(
 // Config
 // -------------------------
 
-const promptsFile = args.promptfile || 'prompts_animals_safari.js';
+const promptsFile = args.promptfile || 'prompts_animals_global.js';
 const count = args.count || '5';
 
 for (var countrt = 0; countrt < 1; countrt++) {

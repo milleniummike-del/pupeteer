@@ -8970,5 +8970,30 @@
     "prompt": "video of - SPECIES: Genet (Genetta genetta) - BEHAVIOR: Standing guard at a burrow - HABITAT: Woodland edges - LIGHTING: Harsh midday contrast - MODIFIERS: Handheld documentary style, Shallow depth of field, Aerial drone view, Telephoto compression - ENHANCERS: 8K resolution, BBC Planet Earth quality, volumetric lighting",
     "timestamp": "2026-05-26T11:28:14.829Z",
     "status": "success"
+  },
+  {
+    "prompt": "video of a wildlife documentary scene set in the African Savanna: a Wildebeest stalking prey silently through tall grass in dry savanna dotted with acacia trees, during a dramatic sunset sky. captured with a telephoto wildlife lens. National Geographic documentary quality, subtle muscle movements visible, environmental immersion and realism.",
+    "timestamp": "2026-06-01T09:14:59.689Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of a wildlife documentary scene set in the Temperate Forest: a Brown Bear moving through autumn leaves in autumn woodland with falling leaves, under harsh midday sunlight. captured with a telephoto wildlife lens. BBC Planet Earth level cinematography, dust and particles moving naturally, heat haze or atmospheric effects.",
+    "timestamp": "2026-06-01T09:16:05.070Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of a wildlife documentary scene set in the Arctic Wilderness: a Snowy Owl enduring harsh winds in extreme cold in endless frozen tundra, in blue twilight just after sunset. shot with a cinematic tracking shot. BBC Planet Earth level cinematography, natural lighting and shadows, wind interacting with the environment.",
+    "timestamp": "2026-06-01T09:17:10.287Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of a wildlife documentary scene set in the Desert: a Meerkat hunting in the cool of night in dry barren landscape with minimal vegetation, at night under a star-filled sky. shot with a cinematic tracking shot. National Geographic documentary quality, dust and particles moving naturally, natural lighting and shadows.",
+    "timestamp": "2026-06-01T09:18:15.521Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of a wildlife documentary scene set in the Ocean Depths: a Manta Ray diving into the dark ocean depths in deep blue open ocean, in blue twilight just after sunset. filmed from a low-angle ground perspective. BBC Planet Earth level cinematography, heat haze or atmospheric effects, environmental immersion and realism.",
+    "timestamp": "2026-06-01T09:19:20.766Z",
+    "status": "success"
   }
 ]
