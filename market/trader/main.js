@@ -185,7 +185,8 @@ ipcMain.handle("make-trade", async (event, { symbol, amount, rate, profit, stop,
 
     if (tradelive === false) return orderBody;
 
-    const orderUrl = "https://public-api.etoro.com/api/v1/trading/execution/demo/limit-orders";
+    const orderDemoUrl = "https://public-api.etoro.com/api/v1/trading/execution/demo/limit-orders";
+    const orderUrl = "https://public-api.etoro.com/api/v1/trading/execution/limit-orders";
     const orderRes = await fetch(orderUrl, {
       method: "POST",
       headers,
@@ -239,7 +240,8 @@ ipcMain.handle("make-market-trade", async (event, { symbol, amount, leverage, po
 
     if (tradelive === false) return orderBody;
 
-    const orderUrl = 'https://public-api.etoro.com/api/v1/trading/execution/demo/market-open-orders/by-amount';
+    const orderUrl = 'https://public-api.etoro.com/api/v1/trading/execution/market-open-orders/by-amount';
+    const orderDemoUrl = 'https://public-api.etoro.com/api/v1/trading/execution/demo/market-open-orders/by-amount';
     const orderRes = await fetch(orderUrl, {
       method: 'POST',
       headers,

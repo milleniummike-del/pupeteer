@@ -28,7 +28,7 @@ for (var countrt = 0; countrt < 1; countrt++) {
     'node .\\meta_getvideos.js',
     'node .\\upscale.js',
     'node .\\combine_videos.js',
-    'node .\\upload_youtube.js'
+    //'node .\\upload_youtube.js'
   ];
 
   for (const cmd of commands) {
