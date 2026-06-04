@@ -9065,5 +9065,260 @@
     "prompt": "video of a wildlife documentary scene set in the Desert: a Fennec Fox searching for food in extreme heat in rocky desert under intense sun, in blue twilight just after sunset. filmed handheld in documentary style. hyper-detailed natural realism, subtle muscle movements visible, dust and particles moving naturally.",
     "timestamp": "2026-06-01T10:58:26.817Z",
     "status": "success"
+  },
+  {
+    "prompt": "SHOT: a rainforest river winding through dense foliage - CAMERA: slow cinematic flyover, smooth POV glide - MOOD: cinematic wanderlust tone - VISUALS: soft atmospheric haze, high dynamic range contrast, crisp environmental detail",
+    "timestamp": "2026-06-02T10:45:27.134Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SHOT: a glacier-fed river delta branching outward - CAMERA: low sweeping pass, smooth POV glide - MOOD: epic scale and atmosphere - VISUALS: natural cinematic color grading, soft atmospheric haze, golden hour glow",
+    "timestamp": "2026-06-02T10:46:30.561Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SHOT: a lava river flowing through volcanic rock - CAMERA: forward push-in toward subject, slow cinematic flyover - MOOD: serene dreamlike calm - VISUALS: gentle motion blur from movement, golden hour glow, soft atmospheric haze",
+    "timestamp": "2026-06-02T10:47:34.277Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SHOT: a cliffside waterfall plunging into the sea - CAMERA: slow cinematic flyover, dramatic pullback reveal - MOOD: wild untamed energy - VISUALS: soft atmospheric haze, golden hour glow, volumetric sunlight rays",
+    "timestamp": "2026-06-02T10:48:37.713Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SHOT: a turquoise lake surrounded by pine forests - CAMERA: high-altitude reveal shot, low sweeping pass - MOOD: quiet reflective beauty - VISUALS: high dynamic range contrast, volumetric sunlight rays, natural cinematic color grading",
+    "timestamp": "2026-06-02T10:49:41.504Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SHOT: a snowy forest blanketed in silence - CAMERA: orbiting cinematic rotation, forward push-in toward subject - MOOD: quiet reflective beauty - VISUALS: crisp environmental detail, high dynamic range contrast, volumetric sunlight rays",
+    "timestamp": "2026-06-02T10:57:50.042Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SHOT: a whale surfacing beside a small boat - CAMERA: slow cinematic flyover, smooth POV glide - MOOD: quiet reflective beauty - VISUALS: gentle motion blur from movement, soft atmospheric haze, golden hour glow",
+    "timestamp": "2026-06-02T10:58:53.523Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SHOT: a massive waterfall viewed from above - CAMERA: slow cinematic flyover, smooth POV glide - MOOD: dramatic natural intensity - VISUALS: volumetric sunlight rays, crisp environmental detail, high dynamic range contrast",
+    "timestamp": "2026-06-02T10:59:57.265Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SHOT: a fisherman casting a net at dawn - CAMERA: top-down tracking shot, orbiting cinematic rotation - MOOD: wild untamed energy - VISUALS: crisp environmental detail, natural cinematic color grading, volumetric sunlight rays",
+    "timestamp": "2026-06-02T11:01:01.135Z",
+    "status": "success"
+  },
+  {
+    "prompt": "SHOT: a rainforest river winding through dense foliage - CAMERA: forward push-in toward subject, low sweeping pass - MOOD: serene dreamlike calm - VISUALS: golden hour glow, soft atmospheric haze, natural cinematic color grading",
+    "timestamp": "2026-06-02T11:02:04.824Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of SHOT: a fighter jet slicing past rugged cliffs - CAMERA: low sweeping pass, forward push-in toward subject - MOOD: wild untamed energy - VISUALS: high dynamic range contrast, crisp environmental detail, gentle motion blur from movement",
+    "timestamp": "2026-06-02T11:12:56.357Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of SHOT: a rally car drifting along a mountain ridge road - CAMERA: smooth POV glide, orbiting cinematic rotation - MOOD: epic scale and atmosphere - VISUALS: natural cinematic color grading, volumetric sunlight rays, high dynamic range contrast",
+    "timestamp": "2026-06-02T11:14:00.424Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of SHOT: a speedboat tearing across neon-blue tropical water - CAMERA: top-down tracking shot, slow cinematic flyover - MOOD: wild untamed energy - VISUALS: golden hour glow, crisp environmental detail, gentle motion blur from movement",
+    "timestamp": "2026-06-02T11:15:04.453Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of SHOT: a wingsuit flyer diving through a narrow canyon - CAMERA: smooth POV glide, forward push-in toward subject - MOOD: dramatic natural intensity - VISUALS: soft atmospheric haze, high dynamic range contrast, volumetric sunlight rays",
+    "timestamp": "2026-06-02T11:16:08.517Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of SHOT: a mountain biker launching off a rocky ridge - CAMERA: orbiting cinematic rotation, low sweeping pass - MOOD: wild untamed energy - VISUALS: crisp environmental detail, natural cinematic color grading, gentle motion blur from movement",
+    "timestamp": "2026-06-02T11:17:12.578Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of SHOT: a helicopter racing above stormy ocean waves - CAMERA: high-altitude reveal shot, forward push-in toward subject - MOOD: dramatic natural intensity - VISUALS: high dynamic range contrast, volumetric sunlight rays, soft atmospheric haze",
+    "timestamp": "2026-06-02T11:18:16.821Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of SHOT: a snowboarder carving down a steep powder face - CAMERA: smooth POV glide, top-down tracking shot - MOOD: epic scale and atmosphere - VISUALS: crisp environmental detail, gentle motion blur from movement, high dynamic range contrast",
+    "timestamp": "2026-06-02T11:19:21.057Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of SHOT: a pack of wild horses sprinting across open plains - CAMERA: low sweeping pass, orbiting cinematic rotation - MOOD: wild untamed energy - VISUALS: natural cinematic color grading, volumetric sunlight rays, soft atmospheric haze",
+    "timestamp": "2026-06-02T11:20:25.155Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of SHOT: a cliff diver leaping into turquoise water - CAMERA: forward push-in toward subject, slow cinematic flyover - MOOD: dramatic natural intensity - VISUALS: golden hour glow, crisp environmental detail, gentle motion blur from movement",
+    "timestamp": "2026-06-02T11:21:29.318Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of SHOT: a motocross rider launching over desert dunes - CAMERA: low sweeping pass, orbiting cinematic rotation - MOOD: wild untamed energy - VISUALS: high dynamic range contrast, natural cinematic color grading, volumetric sunlight rays",
+    "timestamp": "2026-06-02T11:22:33.394Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of A downhill mountain biker rockets through a twisting forest trail as the drone dives low and sweeps beside them, motion blur streaking through sunlit trees.",
+    "timestamp": "2026-06-02T11:51:49.211Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of A skateboarder launches out of a concrete bowl while the drone whips around the rim, catching the spin mid‑air in a fast, energetic orbit.",
+    "timestamp": "2026-06-02T11:52:51.602Z",
+    "status": "pending"
+  },
+  {
+    "prompt": "video of A downhill mountain biker tears through a twisting forest trail, the camera racing just above the dirt as sunlight flickers through the canopy in rapid bursts. The rider leans hard into each turn, spraying arcs of dust that catch the light like sparks, while the forest blurs into streaks of green and gold. The shot surges forward with relentless momentum, weaving between trees as the trail drops steeply into shadow before exploding back into brilliant sun.",
+    "timestamp": "2026-06-02T11:57:14.254Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of A skateboarder rockets out of a concrete bowl, soaring into the air as the camera sweeps upward in a fast, rising arc that captures the full height of the trick. The bowl’s curved walls flash past in smooth grey ribbons, graffiti colors smearing into motion trails. As the skater spins, the camera whips around them in a tight, fluid orbit, catching the moment their board reconnects with the ramp in a burst of speed and grit.",
+    "timestamp": "2026-06-02T11:58:21.371Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of A motocross rider launches off a massive dirt jump, the camera slicing low across the track before rising sharply to meet the rider mid‑air. Dust erupts behind the bike in a golden plume, glowing in the harsh sun as the rider twists through the sky. The camera dives with them toward the landing, the ground rushing upward in a blur before the tires slam into the dirt and the rider accelerates into another explosive burst of speed.",
+    "timestamp": "2026-06-02T11:59:28.465Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of A surfer drops into the face of a towering wave, the camera skimming just above the churning water as the wave curls overhead like a moving cathedral of blue glass. Spray blasts outward in shimmering arcs, catching the sun in a thousand glittering fragments. The camera sweeps along the wave’s wall, keeping pace as the surfer carves a perfect line through the roaring tunnel before bursting out into open light.",
+    "timestamp": "2026-06-02T12:00:35.304Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of A parkour athlete sprints across a series of rooftop edges, the camera gliding just behind and above them as the city stretches out in every direction. Each leap sends the skyline tilting and shifting in dramatic perspective changes. Wind rushes across the frame as the athlete vaults over vents, rolls across gravel, and launches across a wide gap, the camera diving with them before rising sharply to reveal the dizzying drop below.",
+    "timestamp": "2026-06-02T12:01:42.584Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of A snowboarder charges down a steep powder face, carving deep lines through untouched snow as the camera descends in a fast, fluid chase. Plumes of powder explode behind each turn, drifting upward in slow, weightless clouds that glow in the cold sunlight. The shot dives over the edge of a cliff just as the rider drops, following them through a rush of white and shadow before they land in a soft burst of snow.",
+    "timestamp": "2026-06-02T12:02:49.376Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of A wingsuit flyer rockets through a narrow mountain corridor, the camera locked into a blistering pursuit as jagged rock walls rush past on either side. Wind tears across the frame, and the landscape below blurs into streaks of green and stone. The flyer threads through a tight gap, and the camera follows with a sudden, breathtaking acceleration, bursting out into a vast open valley drenched in golden light.",
+    "timestamp": "2026-06-02T12:03:56.286Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of A kiteboarder launches high above turquoise water, the camera spiraling upward in a smooth, fast ascent that captures the full arc of the jump. Sunlight flashes across the waves as the rider twists in mid‑air, suspended for a moment against the bright horizon. The camera drops with them toward the water, skimming the surface as the board slices back into the sea in a spray of glittering droplets.",
+    "timestamp": "2026-06-02T12:05:03.302Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of A rock climber pulls over the lip of a towering cliff, the camera rising rapidly along the sheer wall before sweeping out into a wide, breathtaking reveal of the landscape below. The climber’s chalked hands grip the final hold as wind whips across the ridge. The camera circles upward in a smooth, dramatic climb, catching the moment they stand atop the summit with the world stretching endlessly beneath them.",
+    "timestamp": "2026-06-02T12:06:10.642Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of A sprinter explodes down the track, the camera racing just inches above the lanes as shadows stretch and distort across the surface. Muscles fire in rapid, powerful bursts, each stride sending shockwaves through the frame. The camera surges forward in perfect sync, capturing the raw intensity of acceleration as the stadium blurs into streaks of color and the finish line rushes closer with electrifying speed.",
+    "timestamp": "2026-06-02T12:07:17.813Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of  - SPECIES: Great Blue Heron (Ardea herodias) - BEHAVIOR: Floating lazily in warm coastal waters - HABITAT: Swamps of the Florida Everglades - LIGHTING: Warm autumn light filtering through colorful foliage - MODIFIERS: Low-angle perspective from a hidden camera trap, Sharp focus on the animal's eyes, Slow motion 120fps capture, Telephoto lens compression - ENHANCERS: award-winning nature photography, vibrant natural colors, hyper-realistic textures",
+    "timestamp": "2026-06-04T08:17:03.866Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of  - SPECIES: Gray Wolf (Canis lupus) - BEHAVIOR: Leading a herd across a misty valley at dawn - HABITAT: Great Plains grasslands stretching to the horizon - LIGHTING: Dappled sunlight through dense woodland canopy - MODIFIERS: Cinematic wildlife photography, Shallow depth of field with natural background, Telephoto lens compression, Handheld documentary style - ENHANCERS: volumetric light and atmosphere, intricate fur and feather detail, award-winning nature photography",
+    "timestamp": "2026-06-04T08:18:11.553Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of  - SPECIES: Grizzly Bear (Ursus arctos horribilis) - BEHAVIOR: Leading a herd across a misty valley at dawn - HABITAT: Northern tundra of Alaska - LIGHTING: Soft dawn light illuminating a misty forest - MODIFIERS: Cinematic wildlife photography, Low-angle perspective from a hidden camera trap, Sharp focus on the animal's eyes, Shallow depth of field with natural background - ENHANCERS: BBC Planet Earth quality, hyper-realistic textures, 8K ultra-high resolution",
+    "timestamp": "2026-06-04T08:19:18.466Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of  - SPECIES: Wolverine (Gulo gulo) - BEHAVIOR: Leaping gracefully across frozen terrain - HABITAT: Remote Yukon wilderness - LIGHTING: Warm autumn light filtering through colorful foliage - MODIFIERS: Slow motion 120fps capture, Low-angle perspective from a hidden camera trap, Handheld documentary style, Sharp focus on the animal's eyes - ENHANCERS: BBC Planet Earth quality, volumetric light and atmosphere, 8K ultra-high resolution",
+    "timestamp": "2026-06-04T08:20:24.807Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of  - SPECIES: Moose (Alces alces) - BEHAVIOR: Roaming through dense pine forests in search of food - HABITAT: Great Plains grasslands stretching to the horizon - LIGHTING: Soft dawn light illuminating a misty forest - MODIFIERS: Aerial drone view over wilderness, Slow motion 120fps capture, Shallow depth of field with natural background, Sharp focus on the animal's eyes - ENHANCERS: vibrant natural colors, 8K ultra-high resolution, perfect composition",
+    "timestamp": "2026-06-04T08:21:31.389Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of  - SPECIES: Polar Bear (Ursus maritimus) - BEHAVIOR: Hunting stealthily through deep snow - HABITAT: Frozen sea ice of the Arctic Ocean - LIGHTING: Cool blue twilight over a quiet mountain valley - MODIFIERS: Shallow depth of field with natural background, Slow motion 120fps capture, Aerial drone view over wilderness, Telephoto lens compression - ENHANCERS: 8K ultra-high resolution, vibrant natural colors, intricate fur and feather detail",
+    "timestamp": "2026-06-04T08:38:02.096Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of  - SPECIES: River Otter (Lontra canadensis) - BEHAVIOR: Gliding silently through murky swamp waters - HABITAT: Wetlands of the Great Lakes region - LIGHTING: Bright midday sun reflecting off snow-covered ground - MODIFIERS: Macro detail on fur and feathers, Low-angle perspective from a hidden camera trap, Shallow depth of field with natural background, Aerial drone view over wilderness - ENHANCERS: BBC Planet Earth quality, volumetric light and atmosphere, 8K ultra-high resolution",
+    "timestamp": "2026-06-04T08:39:09.436Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of  - SPECIES: Peregrine Falcon (Falco peregrinus) - BEHAVIOR: Perching on a branch scanning the ground below - HABITAT: Wetlands and marshes across North America - LIGHTING: Dappled sunlight through dense woodland canopy - MODIFIERS: Slow motion 120fps capture, Sharp focus on the animal's eyes, Handheld documentary style, Macro detail on fur and feathers - ENHANCERS: perfect composition, 8K ultra-high resolution, intricate fur and feather detail",
+    "timestamp": "2026-06-04T08:40:16.110Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of  - SPECIES: River Otter (Lontra canadensis) - BEHAVIOR: Gliding silently through murky swamp waters - HABITAT: Swamps of the Florida Everglades - LIGHTING: Warm autumn light filtering through colorful foliage - MODIFIERS: Cinematic wildlife photography, Macro detail on fur and feathers, Sharp focus on the animal's eyes, Slow motion 120fps capture - ENHANCERS: vibrant natural colors, perfect composition, award-winning nature photography",
+    "timestamp": "2026-06-04T08:41:22.533Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of  - SPECIES: Canada Lynx (Lynx canadensis) - BEHAVIOR: Tracking prey with keen precision - HABITAT: Snow-covered boreal forests - LIGHTING: Dappled sunlight through dense woodland canopy - MODIFIERS: Slow motion 120fps capture, Sharp focus on the animal's eyes, Handheld documentary style, Cinematic wildlife photography - ENHANCERS: award-winning nature photography, intricate fur and feather detail, perfect composition",
+    "timestamp": "2026-06-04T08:42:28.697Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of  - SPECIES: Wolverine (Gulo gulo) - BEHAVIOR: Darting swiftly between snow-covered rocks - HABITAT: Arctic tundra of northern Alaska - LIGHTING: Warm autumn light filtering through colorful foliage - MODIFIERS: Handheld documentary style, Slow motion 120fps capture, Telephoto lens compression, Aerial drone view over wilderness - ENHANCERS: vibrant natural colors, 8K ultra-high resolution, BBC Planet Earth quality",
+    "timestamp": "2026-06-04T08:50:17.231Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of  - SPECIES: River Otter (Lontra canadensis) - BEHAVIOR: Gliding silently through murky swamp waters - HABITAT: Coastal estuaries of the Gulf of Mexico - LIGHTING: Golden sunset casting long shadows over the prairie - MODIFIERS: Cinematic wildlife photography, Macro detail on fur and feathers, Aerial drone view over wilderness, Sharp focus on the animal's eyes - ENHANCERS: award-winning nature photography, vibrant natural colors, volumetric light and atmosphere",
+    "timestamp": "2026-06-04T08:51:24.003Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of  - SPECIES: Elk (Cervus canadensis) - BEHAVIOR: Grazing across a vast prairie under open skies - HABITAT: Northern tundra of Alaska - LIGHTING: Golden sunset casting long shadows over the prairie - MODIFIERS: Cinematic wildlife photography, Macro detail on fur and feathers, Slow motion 120fps capture, Low-angle perspective from a hidden camera trap - ENHANCERS: award-winning nature photography, vibrant natural colors, intricate fur and feather detail",
+    "timestamp": "2026-06-04T08:52:30.628Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of  - SPECIES: Harbor Seal (Phoca vitulina) - BEHAVIOR: Hunting stealthily through deep snow - HABITAT: Arctic tundra of northern Alaska - LIGHTING: Warm autumn light filtering through colorful foliage - MODIFIERS: Handheld documentary style, Cinematic wildlife photography, Sharp focus on the animal's eyes, Telephoto lens compression - ENHANCERS: award-winning nature photography, perfect composition, volumetric light and atmosphere",
+    "timestamp": "2026-06-04T08:53:37.040Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of  - SPECIES: Muskrat (Ondatra zibethicus) - BEHAVIOR: Wading slowly through shallow wetlands - HABITAT: Slow-moving rivers of the Mississippi Basin - LIGHTING: Soft dawn light illuminating a misty forest - MODIFIERS: Cinematic wildlife photography, Macro detail on fur and feathers, Slow motion 120fps capture, Low-angle perspective from a hidden camera trap - ENHANCERS: vibrant natural colors, BBC Planet Earth quality, 8K ultra-high resolution",
+    "timestamp": "2026-06-04T08:54:43.648Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of  - SPECIES: Canada Lynx (Lynx canadensis) - BEHAVIOR: Leaping gracefully across frozen terrain - HABITAT: Arctic tundra of northern Alaska - LIGHTING: Bright midday sun reflecting off snow-covered ground - MODIFIERS: Aerial drone view over wilderness, Handheld documentary style, Low-angle perspective from a hidden camera trap, Sharp focus on the animal's eyes - ENHANCERS: vibrant natural colors, perfect composition, hyper-realistic textures",
+    "timestamp": "2026-06-04T09:22:08.135Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of  - SPECIES: Red-tailed Hawk (Buteo jamaicensis) - BEHAVIOR: Soaring high above rugged cliffs on thermal currents - HABITAT: Grasslands of the Midwest - LIGHTING: Dappled sunlight through dense woodland canopy - MODIFIERS: Telephoto lens compression, Low-angle perspective from a hidden camera trap, Shallow depth of field with natural background, Aerial drone view over wilderness - ENHANCERS: 8K ultra-high resolution, BBC Planet Earth quality, hyper-realistic textures",
+    "timestamp": "2026-06-04T09:23:15.130Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of  - SPECIES: Sandhill Crane (Antigone canadensis) - BEHAVIOR: Gliding silently across snowy fields at dusk - HABITAT: Snowy plains of the northern tundra - LIGHTING: Golden sunset casting long shadows over the prairie - MODIFIERS: Cinematic wildlife photography, Aerial drone view over wilderness, Macro detail on fur and feathers, Shallow depth of field with natural background - ENHANCERS: volumetric light and atmosphere, 8K ultra-high resolution, BBC Planet Earth quality",
+    "timestamp": "2026-06-04T09:24:22.257Z",
+    "status": "success"
+  },
+  {
+    "prompt": "video of  - SPECIES: Blue Jay (Cyanocitta cristata) - BEHAVIOR: Strutting proudly through open woodland clearings - HABITAT: Cliffs overlooking vast river valleys - LIGHTING: Bright midday sun reflecting off snow-covered ground - MODIFIERS: Macro detail on fur and feathers, Aerial drone view over wilderness, Low-angle perspective from a hidden camera trap, Handheld documentary style - ENHANCERS: hyper-realistic textures, perfect composition, BBC Planet Earth quality",
+    "timestamp": "2026-06-04T09:25:29.148Z",
+    "status": "success"
   }
 ]

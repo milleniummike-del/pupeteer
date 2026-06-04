@@ -65,9 +65,6 @@ console.log(destinationDir);
         const pageUrl = directory.loadPage();
         await page.goto(pageUrl);
 
-        console.log(`Waiting 10`);
-        await new Promise(r => setTimeout(r, 10000));
- 
         const vids = await page.$$('video', { timeout: 180000 });
 
         console.log(vids);

@@ -17,12 +17,12 @@ const args = Object.fromEntries(
 // Config
 // -------------------------
 
-const promptsFile = args.promptfile || 'prompts_animals_global.js';
+const promptsFile = args.promptfile || 'prompts_animals_northamerica.js';
 const count = args.count || '5';
 
 for (var countrt = 0; countrt < 1; countrt++) {
   const commands = [
-//`node .\\closetabs.js`,
+    `node .\\closetabs.js`,
     `node .\\${promptsFile} ${count}`,
     'node .\\meta_createvideos.js',
     'node .\\meta_getvideos.js',

@@ -87,7 +87,7 @@ console.log(destinationDir);
 
         try {
             for (let v = 0; v < videos.length; v++) {
-                const currentPrompt = videos[v];
+                const currentPrompt = "video of "+videos[v];
 
                 if (tracker.find(t => t.prompt === currentPrompt && t.status === 'success')) {
                     console.log(`⏭ Skipping: ${currentPrompt}`);

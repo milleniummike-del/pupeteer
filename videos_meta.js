@@ -22,28 +22,4 @@ video_title[5]='Calm Animal Escape | Chill Music for Relaxation';
 video_description[6]='Slow down and enjoy peaceful animal-inspired ambience paired with relaxing chill music for stress relief, focus, and calm moods.';
 video_title[6]='Relax With Animals | Peaceful Chill Music Experience';
 
-video_description[7]='Experience calming animal scenes with mellow background music that helps create a cozy and peaceful atmosphere wherever you are.';
-video_title[7]='Cozy Animal Chill Session | Relaxing Music & Nature';
-
-video_description[8]='Beautiful animal moments combined with soothing music to help you relax, study, meditate, sleep, or simply enjoy peaceful vibes.';
-video_title[8]='Animal Serenity | Chill Beats & Relaxing Atmosphere';
-
-video_description[9]='Immerse yourself in tranquil animal visuals and smooth chill sounds crafted for calm minds, quiet moments, and peaceful relaxation.';
-video_title[9]='Tranquil Animal Vibes | Relaxing Chillout Music';
-
-video_description[10]='Relax your mind with peaceful animal imagery and chilled background music perfect for mindfulness, yoga, focus sessions, or restful evenings.';
-video_title[10]='Peaceful Nature Animals | Chill Music for Calm Energy';
-
-video_description[11]='Enjoy a soothing combination of relaxing music and gentle animal scenes designed to bring balance, calmness, and peaceful vibes to your day.';
-video_title[11]='Animal Relaxation Lounge | Calm Music & Nature';
-
-video_description[12]='Unwind with soft chill music and comforting animal visuals that create a relaxing environment for studying, sleeping, meditation, and quiet reflection.';
-video_title[12]='Dreamy Animal Chillout | Relaxing Music Journey';
-
-video_description[13]='Take a break from the noise with calming animal moments and laid-back music that helps you relax, focus, and recharge naturally.';
-video_title[13]='Chill Animal Retreat | Relaxing Sounds & Nature';
-
-video_description[14]='A peaceful collection of animal-inspired visuals and chilled music created for relaxation, stress relief, mindfulness, and positive vibes anytime.';
-video_title[14]='Ultimate Animal Chill Mix | Relaxing Music Experience';
-
 module.exports = [video_title, video_description];
