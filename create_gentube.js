@@ -13,7 +13,7 @@ puppeteer.use(StealthPlugin());
     const page = await browser.newPage();
 
     await page.goto('https://www.gentube.app/feed/spotlight?creating=1', {});
-    await new Promise(resolve => setTimeout(resolve, 5000));
+    await new Promise(resolve => setTimeout(resolve, 1000));
 
     for (let i = 0; i < videos.length; i++) {
 

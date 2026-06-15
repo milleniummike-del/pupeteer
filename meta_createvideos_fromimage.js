@@ -2,7 +2,6 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
-const videos = require('./videos.js');
 const directory = require('./directory.js');
 
 const TRACKER_FILE = 'prompt_tracker.json';
@@ -36,80 +35,80 @@ function savePageURL(url) {
 }
 
 // ---------------------------------------------------------
-// DOWNLOAD VIDEO (unused but kept)
+// SCAN A USER-SPECIFIED FOLDER FOR IMAGES
 // ---------------------------------------------------------
-function downloadVideo(url, outputPath) {
-    return new Promise((resolve, reject) => {
-        const file = fs.createWriteStream(outputPath);
+function getImagesFromFolder(folderPath) {
+    const abs = path.resolve(folderPath);
 
-        https.get(url, (response) => {
-            if (response.statusCode !== 200) {
-                reject(new Error(`Download failed: ${response.statusCode}`));
-                return;
-            }
+    if (!fs.existsSync(abs)) {
+        throw new Error(`❌ Folder does not exist: ${abs}`);
+    }
 
-            response.pipe(file);
+    const files = fs.readdirSync(abs);
 
-            file.on('finish', () => {
-                file.close(resolve);
-            });
-        }).on('error', (err) => {
-            fs.unlink(outputPath, () => reject(err));
-        });
-    });
+    return files
+        .filter(f => /\.(webp|png|jpg|jpeg)$/i.test(f))
+        .sort()
+        .map(f => path.join(abs, f));
 }
 
+// ---------------------------------------------------------
+// IMAGE UPLOAD (hidden input bypass)
+// ---------------------------------------------------------
+async function uploadImage(page, imagePath) {
+    console.log("🔍 Searching for hidden file input…");
+
+    const fileInput = await page.$('input[type="file"]');
+
+    if (!fileInput) {
+        throw new Error("❌ No file input found in DOM");
+    }
+
+    console.log("📤 Uploading file:", imagePath);
+    await fileInput.uploadFile(imagePath);
+
+    console.log("📸 Waiting for preview…");
+    await page.waitForSelector('img', { visible: true });
+
+    console.log("✅ Image preview detected");
+}
+
+// ---------------------------------------------------------
+// WAIT FOR VIDEO + DOWNLOAD
+// ---------------------------------------------------------
 async function waitForVideoAndDownload(page, downloadDir) {
     console.log("🎥 Waiting for video container…");
 
-    // 1. Wait for the media item container
-    const mediaSelector = 'div.group\\/media-item, div[class*="group/media-item"]';
-    await page.waitForSelector(mediaSelector, { timeout: 180000 }); // 3 minutes
+    const mediaSelector = 'div[class*="group/media-item"]';
+    await page.waitForSelector(mediaSelector, { timeout: 180000 });
 
     console.log("📦 Media container detected");
 
-    // 2. Wait for the <video> tag to appear
     console.log("🎬 Waiting for <video> element…");
     await page.waitForSelector("video", { timeout: 180000 });
 
-    // 3. Wait for the video src to be non-empty
-    console.log("🔍 Waiting for video src to load…");
+    console.log("🔍 Waiting for video src…");
     let videoSrc = null;
 
-    for (let i = 0; i < 60; i++) { // retry for up to 60 seconds
+    for (let i = 0; i < 120; i++) { // up to 2 minutes
         videoSrc = await page.$eval("video", el => el.getAttribute("src"));
         if (videoSrc && videoSrc.startsWith("http")) break;
         await new Promise(r => setTimeout(r, 1000));
     }
 
-    if (!videoSrc) {
-        throw new Error("❌ Video src never loaded");
-    }
+    if (!videoSrc) throw new Error("❌ Video src never loaded");
 
     console.log("🎞 Video src:", videoSrc);
 
-    // 4. Extract data-video-url (if available)
-    let dataVideoUrl = null;
-    try {
-        dataVideoUrl = await page.$eval('[data-testid="generated-video"]', el =>
-            el.getAttribute("data-video-url")
-        );
-    } catch {}
-
-    const finalUrl = dataVideoUrl || videoSrc;
-
-    console.log("🔗 Final video URL:", finalUrl);
-
-    // 5. Download the video
     const fileName = `video_${Date.now()}.mp4`;
     const filePath = path.join(downloadDir, fileName);
 
-    console.log("⬇ Downloading video to:", filePath);
+    console.log("⬇ Downloading:", filePath);
 
     await new Promise((resolve, reject) => {
         const file = fs.createWriteStream(filePath);
 
-        https.get(finalUrl, response => {
+        https.get(videoSrc, response => {
             if (response.statusCode !== 200) {
                 reject(new Error(`Download failed: ${response.statusCode}`));
                 return;
@@ -122,36 +121,13 @@ async function waitForVideoAndDownload(page, downloadDir) {
         });
     });
 
-    console.log("✅ Video downloaded:", filePath);
+    console.log("✅ Download complete:", filePath);
     return filePath;
 }
 
-
-
-async function uploadImage(page, imagePath) {
-    console.log("🔍 Searching for hidden file input…");
-
-    // Find ANY file input on the page, even if hidden
-    const fileInput = await page.$('input[type="file"]');
-
-    if (!fileInput) {
-        throw new Error("❌ No file input found in DOM");
-    }
-
-    console.log("📤 Uploading file directly (bypassing menu + OS dialog)…");
-    await fileInput.uploadFile(imagePath);
-
-    console.log("📸 Waiting for preview…");
-    await page.waitForSelector('img', { visible: true });
-
-    console.log("✅ Image preview detected");
-}
-
-
-
 // ---------------------------------------------------------
 let destinationDir = directory.getPath();
-console.log(destinationDir);
+console.log("Download directory:", destinationDir);
 
 // ---------------------------------------------------------
 // MAIN
@@ -160,6 +136,18 @@ console.log(destinationDir);
     let browser;
 
     try {
+        // -------------------------
+        // READ INPUT FOLDER
+        // -------------------------
+        const folderArg = process.argv[2];
+        if (!folderArg) {
+            console.error("❌ Usage: node meta_createvideos_fromimage.js <folder>");
+            process.exit(1);
+        }
+
+        const promptImages = getImagesFromFolder(folderArg);
+        console.log("Found images:", promptImages);
+
         browser = await puppeteer.launch({
             userDataDir: "browser",
             headless: false,
@@ -173,70 +161,53 @@ console.log(destinationDir);
 
         const tracker = loadTracker();
 
-        await page.goto('https://www.meta.ai/');
+        for (const img of promptImages) {
 
-        try {
+            await page.goto('https://www.meta.ai/');
             const currentPrompt = "make a video";
-            const imagePath = path.join(__dirname, "prompt.webp");
 
-            if (tracker.find(t => t.prompt === currentPrompt && t.status === 'success')) {
-                console.log(`⏭ Skipping: ${currentPrompt}`);
-            }
-
-            console.log(`\n🎬 Prompt: ${currentPrompt}`);
-            console.log(`Waiting for textarea`);
+            console.log(`\n🖼 Using image: ${img}`);
+            console.log(`🎬 Prompt: ${currentPrompt}`);
 
             const textareaSelector = 'div[data-testid="composer-input"]';
             await page.waitForSelector(textareaSelector, { visible: true });
 
             const input = await page.$(textareaSelector);
 
-            // Clear previous text
             await input.click({ clickCount: 3 });
             await page.keyboard.press('Backspace');
-
-            // Type prompt
             await input.type(currentPrompt, { delay: 10 });
 
-            // Upload image using the Add Attachment menu flow
-            await uploadImage(page, imagePath);
+            // Upload image
+            await uploadImage(page, img);
 
-            console.log(`Waiting for send`);
-
+            // Send
             await page.click('button[aria-label="Send"]');
+            console.log("🚀 Prompt submitted");
 
-            console.log(`✅ Submitted prompt with image`);
-
+            // Track
             let requestEntry = {
-                prompt: currentPrompt,
+                prompt: img,
                 timestamp: new Date().toISOString(),
                 status: 'pending'
             };
-
             tracker.push(requestEntry);
             saveTracker(tracker);
 
-            // Wait for video and download it
+            // Wait for video + download
             await waitForVideoAndDownload(page, destinationDir);
-
-
-
-            let url = page.url();
-            console.log(`🌐 URL: ${url}`);
-
-            // SAVE URL
-            savePageURL(url);
 
             requestEntry.status = 'success';
             saveTracker(tracker);
 
-        } catch (err) {
-            console.log('⚠ Loop error:', err);
+            console.log("✅ Completed:", img);
         }
 
     } catch (err) {
         console.error('🔥 Fatal Error:', err);
     } finally {
+        console.log(`Waiting 10 seconds before closing browser…`);
+        await new Promise(r => setTimeout(r, 10000));
         if (browser) await browser.close();
     }
 })();

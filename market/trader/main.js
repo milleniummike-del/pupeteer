@@ -218,11 +218,11 @@ ipcMain.handle("make-market-trade", async (event, { symbol, amount, leverage, po
     const priceData = await safeJson(priceRes);
     const price = priceData.rates?.[0]?.bid;
 
-    let stop = price * (1 - (margin || 0.02) * 0.5);
+    let stop = price * (1 - (margin || 0.02) * 0.3);
     let profit = price * (1 + (margin || 0.02));
 
     if (position !== "LONG") {
-      stop = price * (1 + (margin || 0.02) * 0.5);
+      stop = price * (1 + (margin || 0.02) * 0.3);
       profit = price * (1 - (margin || 0.02));
     }
 

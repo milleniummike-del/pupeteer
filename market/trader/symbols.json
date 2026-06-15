@@ -24,8 +24,6 @@
   "RGTI",
   "RKLB",
   "SHOP",
-  "SILVER",
-  "SLV",
   "STRL.US",
   "TSLA",
   "UBER",
@@ -37,7 +35,6 @@
   "HIVE",
   "HSBA.L",
   "CBRS",
-  "CBRS.NQ",
   "XOM",
   "GLD",
   "GOLD",
@@ -56,5 +53,8 @@
   "ORCL",
   "IREN",
   "GME",
-  "LASE"
+  "SMCI",
+  "QNT",
+  "QNT.US",
+  "IBM"
 ]
