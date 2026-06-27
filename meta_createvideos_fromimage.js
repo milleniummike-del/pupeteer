@@ -53,16 +53,13 @@ function getImagesFromFolder(folderPath) {
 }
 
 // ---------------------------------------------------------
-// IMAGE UPLOAD (hidden input bypass)
+// IMAGE UPLOAD
 // ---------------------------------------------------------
 async function uploadImage(page, imagePath) {
     console.log("🔍 Searching for hidden file input…");
 
     const fileInput = await page.$('input[type="file"]');
-
-    if (!fileInput) {
-        throw new Error("❌ No file input found in DOM");
-    }
+    if (!fileInput) throw new Error("❌ No file input found in DOM");
 
     console.log("📤 Uploading file:", imagePath);
     await fileInput.uploadFile(imagePath);
@@ -90,7 +87,7 @@ async function waitForVideoAndDownload(page, downloadDir) {
     console.log("🔍 Waiting for video src…");
     let videoSrc = null;
 
-    for (let i = 0; i < 120; i++) { // up to 2 minutes
+    for (let i = 0; i < 120; i++) {
         videoSrc = await page.$eval("video", el => el.getAttribute("src"));
         if (videoSrc && videoSrc.startsWith("http")) break;
         await new Promise(r => setTimeout(r, 1000));
@@ -136,9 +133,6 @@ console.log("Download directory:", destinationDir);
     let browser;
 
     try {
-        // -------------------------
-        // READ INPUT FOLDER
-        // -------------------------
         const folderArg = process.argv[2];
         if (!folderArg) {
             console.error("❌ Usage: node meta_createvideos_fromimage.js <folder>");
@@ -156,32 +150,81 @@ console.log("Download directory:", destinationDir);
             devtools: DEBUG
         });
 
-        const page = (await browser.pages())[0];
-        await page.bringToFront();
-
         const tracker = loadTracker();
 
         for (const img of promptImages) {
 
-            await page.goto('https://www.meta.ai/');
+            // ---------------------------------------------------------
+            // ALWAYS GET THE LAST TAB (Meta sometimes opens new ones)
+            // ---------------------------------------------------------
+            let pages = await browser.pages();
+            let page = pages[pages.length - 1];
+            await page.bringToFront();
+
+            // ---------------------------------------------------------
+            // NAVIGATE
+            // ---------------------------------------------------------
+            await page.goto('https://www.meta.ai/', {
+                waitUntil: 'networkidle0',
+                timeout: 0
+            });
+
+            // Let UI settle
+            await new Promise(r => setTimeout(r, 3000));
+
+            // Refresh page reference in case Meta opened a new tab
+            pages = await browser.pages();
+            page = pages[pages.length - 1];
+            await page.bringToFront();
+
             const currentPrompt = "make a video";
 
             console.log(`\n🖼 Using image: ${img}`);
             console.log(`🎬 Prompt: ${currentPrompt}`);
 
-            const textareaSelector = 'div[data-testid="composer-input"]';
-            await page.waitForSelector(textareaSelector, { visible: true });
+            // ---------------------------------------------------------
+            // FIND COMPOSER INPUT (robust)
+            // ---------------------------------------------------------
+            const composerSelectors = [
+                'div[data-testid="composer-input"]',
+                'div[contenteditable="true"]',
+                'div[role="textbox"]'
+            ];
 
-            const input = await page.$(textareaSelector);
+            let input = null;
 
+            for (const sel of composerSelectors) {
+                try {
+                    await page.waitForSelector(sel, { visible: true, timeout: 60000 });
+                    input = await page.$(sel);
+                    if (input) {
+                        console.log(`✅ Found composer using selector: ${sel}`);
+                        break;
+                    }
+                } catch {
+                    // try next selector
+                }
+            }
+
+            if (!input) {
+                throw new Error("❌ Could not find composer input on Meta.ai");
+            }
+
+            // ---------------------------------------------------------
+            // TYPE PROMPT
+            // ---------------------------------------------------------
             await input.click({ clickCount: 3 });
             await page.keyboard.press('Backspace');
-            await input.type(currentPrompt, { delay: 10 });
+            await input.type(currentPrompt);
 
-            // Upload image
+            // ---------------------------------------------------------
+            // UPLOAD IMAGE
+            // ---------------------------------------------------------
             await uploadImage(page, img);
 
-            // Send
+            // ---------------------------------------------------------
+            // SEND PROMPT
+            // ---------------------------------------------------------
             await page.click('button[aria-label="Send"]');
             console.log("🚀 Prompt submitted");
 
@@ -194,7 +237,9 @@ console.log("Download directory:", destinationDir);
             tracker.push(requestEntry);
             saveTracker(tracker);
 
-            // Wait for video + download
+            // ---------------------------------------------------------
+            // WAIT FOR VIDEO + DOWNLOAD
+            // ---------------------------------------------------------
             await waitForVideoAndDownload(page, destinationDir);
 
             requestEntry.status = 'success';

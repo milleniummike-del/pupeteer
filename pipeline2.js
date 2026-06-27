@@ -37,16 +37,17 @@ function waitForSpacebar() {
 // -------------------------
 // Config
 // -------------------------
-const promptsFile = args.promptfile || 'prompts_animals_global.js';
-const count = args.count || '5';
+const promptsFile = args.promptfile || 'prompts_animals_water.js';
+const count = args.count || '20';
 
 (async () => {
 
   for (var countrt = 0; countrt < 1; countrt++) {
     const commands = [
-     // `node .\\closetabs.js`,
-     // `node .\\${promptsFile} ${count}`,
-     // 'node .\\create_gentube.js',
+      //`node .\\closetabs.js`,
+      `node .\\${promptsFile} ${count}`,
+      'node .\\create_gentube.js',
+      'node get_gentube.js',
       'WAIT FOR KEY HERE',
       'node .\\meta_createvideos_fromimage.js inputimages',
       'node .\\upscale.js',

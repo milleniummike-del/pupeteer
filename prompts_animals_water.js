@@ -132,7 +132,7 @@ const LIGHTING = [
 ];
 
 const MODIFIERS = [
-  'National Geographic underwater cinematography',
+  'underwater cinematography',
   'Macro close-up on scales and textures',
   'Slow motion underwater capture',
   'Wide-angle lens showing vast ocean environment',
