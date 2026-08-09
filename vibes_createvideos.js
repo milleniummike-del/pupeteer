@@ -113,15 +113,15 @@ console.log(destinationDir);
             await page.waitForSelector('button.cursor_pointer', { visible: true });
 
             await page.evaluate(() => {
-            const buttons = [...document.querySelectorAll('button.cursor_pointer')];
-            const target = buttons.find(b => b.innerText.includes('Add start frame'));
-            if (target) target.click();
+                const buttons = [...document.querySelectorAll('button.cursor_pointer')];
+                const target = buttons.find(b => b.innerText.includes('Add start frame'));
+                if (target) target.click();
             });
 
             await page.evaluate(() => {
-            const buttons = [...document.querySelectorAll('button')];
-            const target = buttons.find(b => b.innerText.includes('Upload'));
-            if (target) target.click();
+                const buttons = [...document.querySelectorAll('button')];
+                const target = buttons.find(b => b.innerText.includes('Upload'));
+                if (target) target.click();
             });
 
             console.log(`🖊 Uploading image`);
@@ -139,15 +139,14 @@ console.log(destinationDir);
 
             await fileChooser.accept([img]);
 
-
             await page.waitForFunction(() => {
-    const btn = document.querySelector('#radix-_R_3r9bsnpflcilb_ > div > div.d_flex.gap_3.px_6.py_4 > button');
-    return btn && !btn.disabled;
-});
+                const btn = document.querySelector('#radix-_R_3r9bsnpflcilb_ > div > div.d_flex.gap_3.px_6.py_4 > button');
+                return btn && !btn.disabled;
+            });
 
-const btnHandle = await page.$('#radix-_R_3r9bsnpflcilb_ > div > div.d_flex.gap_3.px_6.py_4 > button');
-const box = await btnHandle.boundingBox();
-await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2);
+            const btnHandle = await page.$('#radix-_R_3r9bsnpflcilb_ > div > div.d_flex.gap_3.px_6.py_4 > button');
+            const box = await btnHandle.boundingBox();
+            await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2);
         }
 
     } catch (err) {
