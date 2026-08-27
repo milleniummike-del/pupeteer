@@ -131,7 +131,7 @@ console.log(destinationDir);
                 page.click('div[role="button"]')   // opens the file dialog
             ]);
 
-            let img = 'C:/Users/mike_/Pictures/Screenshots/2.png';
+            let img = 'C:/Users/mike/Pictures/Screenshots/upload.png';
 
             if (!fs.existsSync(img)) {
                 throw new Error(`Image not found: ${img}`);

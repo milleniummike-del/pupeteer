@@ -1,22 +1,82 @@
-const videos = [];
-videos[0] = `video of - SPECIES: Chrono‑Raptor Temporal Hunter - BEHAVIOR: Leaping between dimensional fractures - HABITAT: Fractured dimensional rifts - LIGHTING: Bioluminescent glow from alien flora - MODIFIERS: First‑person explorer perspective, Drone‑style orbital sweep, Dynamic motion capture of alien movement, Cinematic sci‑fi composition - ENHANCERS: Award‑winning sci‑fi documentary style, Ultra‑detailed exobiology textures, High‑fidelity atmospheric scattering`;
-videos[1] = `video of - SPECIES: Thalorian Water‑Breathing Scholar - BEHAVIOR: Manipulating matter with soft telekinesis - HABITAT: Atmospheric cities suspended in clouds - LIGHTING: Soft luminous fog drifting across alien terrain - MODIFIERS: High‑contrast cosmic lighting, Macro detail on alien skin textures, Ultra‑wide alien landscape shot, First‑person explorer perspective - ENHANCERS: 8K ultra‑resolution, Hyper‑realistic sci‑fi rendering, Ultra‑detailed exobiology textures`;
-videos[2] = `video of - SPECIES: Auralis Harmonic Weaver - BEHAVIOR: Exchanging knowledge through light‑patterns - HABITAT: Atmospheric cities suspended in clouds - LIGHTING: Dim starlight filtered through cosmic dust - MODIFIERS: High‑contrast cosmic lighting, Ultra‑wide alien landscape shot, Slow‑motion capture of energy emissions, Dynamic motion capture of alien movement - ENHANCERS: Alien color spectrum enhancement, Hyper‑realistic sci‑fi rendering, Ultra‑detailed exobiology textures`;
-videos[3] = `video of - SPECIES: Shardborn Silicon Titan - BEHAVIOR: Communicating through telepathic resonance - HABITAT: Binary‑star desert planets - LIGHTING: Dim starlight filtered through cosmic dust - MODIFIERS: High‑contrast cosmic lighting, Macro detail on alien skin textures, Ultra‑wide alien landscape shot, Shallow depth of field on alien anatomy - ENHANCERS: Ultra‑detailed exobiology textures, High‑fidelity atmospheric scattering, 8K ultra‑resolution`;
-videos[4] = `video of - SPECIES: Ooloi Gas‑Giant Floater - BEHAVIOR: Constructing megastructures with organic tools - HABITAT: Binary‑star desert planets - LIGHTING: Bioluminescent glow from alien flora - MODIFIERS: Dynamic motion capture of alien movement, Ultra‑wide alien landscape shot, First‑person explorer perspective, High‑contrast cosmic lighting - ENHANCERS: Alien color spectrum enhancement, Award‑winning sci‑fi documentary style, 8K ultra‑resolution`;
-videos[5] = `video of - SPECIES: Auralis Harmonic Weaver - BEHAVIOR: Manipulating matter with soft telekinesis - HABITAT: Floating citadels above alien oceans - LIGHTING: Twin‑sun illumination casting long alien shadows - MODIFIERS: First‑person explorer perspective, High‑contrast cosmic lighting, Ultra‑wide alien landscape shot, Dynamic motion capture of alien movement - ENHANCERS: 8K ultra‑resolution, Cinematic volumetric lighting, High‑fidelity atmospheric scattering`;
-videos[6] = `video of - SPECIES: Astraeon Lattice‑Serpent - BEHAVIOR: Orbiting stars in synchronized spirals - HABITAT: Inside ionized plasma rivers - LIGHTING: Bioluminescent glow from alien flora - MODIFIERS: First‑person explorer perspective, Drone‑style orbital sweep, Dynamic motion capture of alien movement, Slow‑motion capture of energy emissions - ENHANCERS: Award‑winning sci‑fi documentary style, 8K ultra‑resolution, Hyper‑realistic sci‑fi rendering`;
-videos[7] = `video of - SPECIES: Quantum‑Phase Ribbon Eel - BEHAVIOR: Orbiting stars in synchronized spirals - HABITAT: Near the corona of unstable stars - LIGHTING: Dim starlight filtered through cosmic dust - MODIFIERS: Shallow depth of field on alien anatomy, Slow‑motion capture of energy emissions, Dynamic motion capture of alien movement, Drone‑style orbital sweep - ENHANCERS: Hyper‑realistic sci‑fi rendering, Alien color spectrum enhancement, High‑fidelity atmospheric scattering`;
-videos[8] = `video of - SPECIES: Thalorian Water‑Breathing Scholar - BEHAVIOR: Floating serenely above alien landscapes - HABITAT: Crystal forests on ancient worlds - LIGHTING: Bioluminescent glow from alien flora - MODIFIERS: Dynamic motion capture of alien movement, Shallow depth of field on alien anatomy, Macro detail on alien skin textures, Ultra‑wide alien landscape shot - ENHANCERS: Award‑winning sci‑fi documentary style, 8K ultra‑resolution, Ultra‑detailed exobiology textures`;
-videos[9] = `video of - SPECIES: Astraeus‑Class Starship Symbiote - BEHAVIOR: Singing harmonic tones that shape the air - HABITAT: Atmospheric cities suspended in clouds - LIGHTING: Pulsing nebula light reflecting off exoskeletons - MODIFIERS: High‑contrast cosmic lighting, Cinematic sci‑fi composition, Ultra‑wide alien landscape shot, Slow‑motion capture of energy emissions - ENHANCERS: Alien color spectrum enhancement, Cinematic volumetric lighting, Ultra‑detailed exobiology textures`;
-videos[10] = `video of - SPECIES: Astraeon Lattice‑Serpent - BEHAVIOR: Shifting between physical and photonic states - HABITAT: Near the corona of unstable stars - LIGHTING: Bioluminescent glow from alien flora - MODIFIERS: Slow‑motion capture of energy emissions, Cinematic sci‑fi composition, Ultra‑wide alien landscape shot, First‑person explorer perspective - ENHANCERS: Ultra‑detailed exobiology textures, Alien color spectrum enhancement, Award‑winning sci‑fi documentary style`;
-videos[11] = `video of - SPECIES: Elyndra Crystal‑Mind Diplomat - BEHAVIOR: Exchanging knowledge through light‑patterns - HABITAT: Crystal forests on ancient worlds - LIGHTING: Iridescent atmospheric scattering - MODIFIERS: High‑contrast cosmic lighting, Cinematic sci‑fi composition, Dynamic motion capture of alien movement, First‑person explorer perspective - ENHANCERS: 8K ultra‑resolution, Hyper‑realistic sci‑fi rendering, Award‑winning sci‑fi documentary style`;
-videos[12] = `video of - SPECIES: Luminid Stellar Entity - BEHAVIOR: Constructing megastructures with organic tools - HABITAT: Subterranean fungal super‑colonies - LIGHTING: Harsh ultraviolet alien daylight - MODIFIERS: Cinematic sci‑fi composition, Ultra‑wide alien landscape shot, High‑contrast cosmic lighting, Shallow depth of field on alien anatomy - ENHANCERS: Ultra‑detailed exobiology textures, Award‑winning sci‑fi documentary style, Cinematic volumetric lighting`;
-videos[13] = `video of - SPECIES: Luminid Stellar Entity - BEHAVIOR: Harvesting geothermal vents for energy - HABITAT: Subterranean fungal super‑colonies - LIGHTING: Twin‑sun illumination casting long alien shadows - MODIFIERS: Slow‑motion capture of energy emissions, Dynamic motion capture of alien movement, Macro detail on alien skin textures, Ultra‑wide alien landscape shot - ENHANCERS: Alien color spectrum enhancement, Ultra‑detailed exobiology textures, High‑fidelity atmospheric scattering`;
-videos[14] = `video of - SPECIES: Star‑Drifting Nebula Manta - BEHAVIOR: Absorbing stellar radiation to recharge - HABITAT: Near the corona of unstable stars - LIGHTING: Dim starlight filtered through cosmic dust - MODIFIERS: Dynamic motion capture of alien movement, Cinematic sci‑fi composition, First‑person explorer perspective, Drone‑style orbital sweep - ENHANCERS: 8K ultra‑resolution, Hyper‑realistic sci‑fi rendering, High‑fidelity atmospheric scattering`;
-videos[15] = `video of - SPECIES: Shardborn Silicon Titan - BEHAVIOR: Communicating through telepathic resonance - HABITAT: Binary‑star desert planets - LIGHTING: Bioluminescent glow from alien flora - MODIFIERS: Cinematic sci‑fi composition, Ultra‑wide alien landscape shot, Macro detail on alien skin textures, Drone‑style orbital sweep - ENHANCERS: Cinematic volumetric lighting, Alien color spectrum enhancement, Hyper‑realistic sci‑fi rendering`;
-videos[16] = `video of - SPECIES: Void‑Leviathan Planet‑Eater - BEHAVIOR: Tracking prey across multiple timelines - HABITAT: High‑gravity volcanic worlds - LIGHTING: Harsh ultraviolet alien daylight - MODIFIERS: Slow‑motion capture of energy emissions, Cinematic sci‑fi composition, Dynamic motion capture of alien movement, Drone‑style orbital sweep - ENHANCERS: High‑fidelity atmospheric scattering, Alien color spectrum enhancement, 8K ultra‑resolution`;
-videos[17] = `video of - SPECIES: Lumivyre Photonic Ray - BEHAVIOR: Shifting between physical and photonic states - HABITAT: Drifting through cosmic dust fields - LIGHTING: Iridescent atmospheric scattering - MODIFIERS: High‑contrast cosmic lighting, Cinematic sci‑fi composition, Ultra‑wide alien landscape shot, First‑person explorer perspective - ENHANCERS: Hyper‑realistic sci‑fi rendering, Award‑winning sci‑fi documentary style, High‑fidelity atmospheric scattering`;
-videos[18] = `video of - SPECIES: Thalorian Water‑Breathing Scholar - BEHAVIOR: Growing living architecture from bio‑crystals - HABITAT: Crystal forests on ancient worlds - LIGHTING: Iridescent atmospheric scattering - MODIFIERS: Slow‑motion capture of energy emissions, Cinematic sci‑fi composition, Dynamic motion capture of alien movement, First‑person explorer perspective - ENHANCERS: Award‑winning sci‑fi documentary style, Cinematic volumetric lighting, Hyper‑realistic sci‑fi rendering`;
-videos[19] = `video of - SPECIES: Elyndra Crystal‑Mind Diplomat - BEHAVIOR: Growing living architecture from bio‑crystals - HABITAT: Floating citadels above alien oceans - LIGHTING: Iridescent atmospheric scattering - MODIFIERS: Macro detail on alien skin textures, Shallow depth of field on alien anatomy, High‑contrast cosmic lighting, Cinematic sci‑fi composition - ENHANCERS: Cinematic volumetric lighting, Alien color spectrum enhancement, 8K ultra‑resolution`;
+const videos = [
+  {
+    "prompt": "A dimly lit room washed in rain‑streaked window light. A trench‑coated figure stands with their back to the camera, silhouetted against the blinds. Across from them, a sharply dressed man in a pinstripe suit watches with cold calculation. Cigarette smoke coils upward as the detective demands answers about a missing singer whose trail has gone bloody.",
+    "dialog": [
+      "Detective: \"You’re gonna tell me what happened to her.\"",
+      "Man in Suit: \"Careful, detective. Some doors stay closed for a reason.\"",
+      "Detective: \"Not tonight.\""
+    ]
+  },
+  {
+    "prompt": "A rain‑soaked dock beneath a steel bridge. Police lights strobe across the mist as the detective confronts a glamorous woman in a green satin gown. Their conversation is sharp, dangerous, and intimate — she knows more than she admits.",
+    "dialog": [
+      "Detective: \"You were the last one to see her alive.\"",
+      "Femme Fatale: \"Alive is such a fragile word.\"",
+      "Detective: \"Start talking.\""
+    ]
+  },
+  {
+    "prompt": "A close‑up of a cassette tape smeared with red liquid, lying atop a ruined paper sleeve. Rain droplets strike the surface in rhythmic taps. This tape contains the singer’s final recording.",
+    "dialog": [
+      "Detective: \"What were you trying to tell me, Lila?\"",
+      "Voice on Tape: \"If anything happens… don’t trust them.\""
+    ]
+  },
+  {
+    "prompt": "A narrow alleyway lit by warm lamps reflecting off wet brick. The detective stands alone, cigarette glowing, trench coat heavy with rain. A shadow moves at the far end of the alley.",
+    "dialog": [
+      "Detective: \"I know you're there.\"",
+      "Unknown Voice: \"Then you know you should walk away.\"",
+      "Detective: \"Not my style.\""
+    ]
+  },
+  {
+    "prompt": "Another alley, deeper and darker. The detective walks forward cautiously as a second figure retreats into the distance. Water drips from fire escapes overhead.",
+    "dialog": [
+      "Detective: \"Stop! I just want answers.\"",
+      "Shadowed Figure: \"Answers cost more than you can pay.\"",
+      "Detective: \"Try me.\""
+    ]
+  },
+  {
+    "prompt": "A neon‑lit street lined with vintage cars and glowing signs. The Blue Lantern Club dominates the scene with its electric blue glow. This is where the singer performed her final show.",
+    "dialog": [
+      "Detective: \"Blue Lantern… everything leads back here.\"",
+      "Doorman: \"If you're looking for ghosts, you came to the right place.\"",
+      "Detective: \"I’m looking for the truth.\""
+    ]
+  },
+  {
+    "prompt": "A dim urban corner beneath metal columns. The detective stands opposite the femme fatale, who sits elegantly in her gown. She reveals fragments of truth — enough to deepen the mystery.",
+    "dialog": [
+      "Femme Fatale: \"She wasn’t supposed to die.\"",
+      "Detective: \"Then who made sure she did?\"",
+      "Femme Fatale: \"Someone who fears her voice.\""
+    ]
+  },
+  {
+    "prompt": "A dramatic moment beneath the steel bridge. The detective slides across the wet pavement, narrowly avoiding danger — a speeding car or an unseen attacker.",
+    "dialog": [
+      "Detective: \"That all you got?!\"",
+      "Attacker: \"You should've stayed out of this.\"",
+      "Detective: \"Too late.\""
+    ]
+  },
+  {
+    "prompt": "Inside a smoky room overlooking the rainy street. The detective sits at a table, cigar smoke curling upward. He listens to the cassette, hearing the singer’s final haunting notes.",
+    "dialog": [
+      "Singer (on tape): \"If you’re hearing this… I didn’t make it.\"",
+      "Detective: \"I’ll finish what you started. I promise.\""
+    ]
+  },
+  {
+    "prompt": "The detective returns to the Blue Lantern Club, now empty and echoing. He discovers the hidden connection between the singer, the femme fatale, and the man in the pinstripe suit.",
+    "dialog": [
+      "Detective: \"It was you all along.\"",
+      "Man in Suit: \"I warned you not to open that door.\"",
+      "Detective: \"And now I’m kicking it off the hinges.\""
+    ]
+  }
+];
+
 module.exports = videos;
