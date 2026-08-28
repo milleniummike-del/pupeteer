@@ -35,7 +35,6 @@ async function downloadViaPuppeteer(page, url, filepath) {
     let files = fs.readdirSync(inputDir)
         .filter(f => /\.(png|jpg|jpeg|webp)$/i.test(f));
 
-    // Sort numerically if possible
     files.sort((a, b) => {
         const na = parseInt(a);
         const nb = parseInt(b);
@@ -50,7 +49,7 @@ async function downloadViaPuppeteer(page, url, filepath) {
     for (let v = 0; v < files.length; v++) {
 
         const filePath = path.join(inputDir, files[v]);
-        const currentPrompt = `${JSON.stringify(matrix[v].video_motion_prompt)}`;
+        const currentPrompt = `${JSON.stringify(matrix[v].visual_action) + JSON.stringify(matrix[v].dialogue)}`;
 
         // ---------------------------------------------------------
         // WAIT FOR FILE INPUT
@@ -95,17 +94,28 @@ async function downloadViaPuppeteer(page, url, filepath) {
         console.log("Clicked Configure for frame " + (v + 1));
 
         // ---------------------------------------------------------
-        // TYPE INTO CONFIGURE FIELD
+        // TYPE INTO CONFIGURE FIELD (FAST REACT-SAFE INJECTION)
         // ---------------------------------------------------------
-        await page.waitForFunction(() => {
-            return document.querySelector('textarea, input[type="text"]');
-        });
+        await page.waitForSelector('textarea.input-field', { visible: true });
 
-        const fieldHandle = await page.$('textarea, input[type="text"]');
-        await fieldHandle.click({ clickCount: 3 });
-        await page.keyboard.type(currentPrompt);
+        const textarea = await page.$('textarea.input-field');
+        await textarea.click({ clickCount: 3 });
 
-        console.log("Typed prompt:", currentPrompt);
+        await page.evaluate((text) => {
+            const el = document.querySelector('textarea.input-field');
+
+            const setter = Object.getOwnPropertyDescriptor(
+                window.HTMLTextAreaElement.prototype,
+                'value'
+            ).set;
+
+            setter.call(el, text);
+
+            el.dispatchEvent(new Event('input', { bubbles: true }));
+            el.dispatchEvent(new Event('change', { bubbles: true }));
+        }, currentPrompt);
+
+        console.log("Injected prompt:", currentPrompt);
 
         // ---------------------------------------------------------
         // CLICK DONE

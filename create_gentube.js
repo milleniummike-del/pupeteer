@@ -21,8 +21,8 @@ puppeteer.use(StealthPlugin());
     );
 
     // CLICK CHARACTER CARD
-    await page.waitForSelector('img[alt="Amina Okafor"]', { visible: true });
-    await page.click('img[alt="Amina Okafor"]');
+    await page.waitForSelector('img[alt="Amina"]', { visible: true });
+    await page.click('img[alt="Amina"]');
 
     // Ensure download directory exists
     const downloadDir = path.join(__dirname, "inputimages");
