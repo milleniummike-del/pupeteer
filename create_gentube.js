@@ -21,8 +21,10 @@ puppeteer.use(StealthPlugin());
     );
 
     // CLICK CHARACTER CARD
-    await page.waitForSelector('img[alt="Amina"]', { visible: true });
-    await page.click('img[alt="Amina"]');
+    await page.waitForSelector('img[alt="Zephyr"]', { visible: true });
+    await page.click('img[alt="Zephyr"]');
+    await page.waitForSelector('img[alt="KAELEN THORNE"]', { visible: true });
+    await page.click('img[alt="KAELEN THORNE"]');
 
     // Ensure download directory exists
     const downloadDir = path.join(__dirname, "inputimages");
@@ -51,7 +53,7 @@ puppeteer.use(StealthPlugin());
     // ---------------------------------------------------------
     // MAIN LOOP: Type prompts, wait, capture largest DATA image, clear
     // ---------------------------------------------------------
-    for (let i = 0; i < matrix.length; i++) {
+    for (let i = 0; i < matrix.shots.length; i++) {
 
         const textareaSelector = 'textarea';
         await page.waitForSelector(textareaSelector, { visible: true });
@@ -63,7 +65,7 @@ puppeteer.use(StealthPlugin());
         await page.keyboard.press('Backspace');
 
         // Type full prompt using setter trick
-        const text = `${JSON.stringify(matrix[i].still_frame_prompt)}`;
+        const text = `${JSON.stringify(matrix.shots[i].still_prompt)}`;
 
         await page.evaluate((selector, value) => {
             const el = document.querySelector(selector);

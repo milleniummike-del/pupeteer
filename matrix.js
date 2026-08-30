@@ -1,3074 +1,547 @@
 const matrix = 
-[
-  {
-    "shot_number": 1,
-    "shot_heading": "ATRIUM ELEGANCE",
-    "timecode": "00:00 - 00:05",
-    "duration_seconds": 5,
-    "camera": {
-      "lens_and_angle": "Wide-angle, low crane shot.",
-      "motion": "Cinematic tracking motion over 5s shot window"
-    },
-    "environment": {
-      "set_name": "The Imperial Atrium",
-      "location_type": "Interior (Patrician Villa)",
-      "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-      "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-      "camera_angles": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-    },
-    "characters": [
-      {
-        "name": "Lyra of Cyrene",
-        "role": "Protagonist, a gifted enslaved dancer.",
-        "age": "22",
-        "sex": "Female",
-        "height": "5'6\"",
-        "weight": "120 lbs",
-        "skin_tone": "Olive",
-        "racial_descent": "North African (Berber/Egyptian ancestry)",
-        "physical_description": "A 22-year-old North African (Berber/Egyptian ancestry) female (standing 5'6\" tall, weighing 120 lbs) with Olive skin tone. Features Lean, agile dancer's physique with expressive dark eyes. Her long, dark hair is often intricately braided. Despite her captivity, her movements retain an inherent dignity and power.",
-        "personality_traits": "Resilient, passionate, graceful, defiant, observant, empathetic.",
-        "costumes": [
-          {
-            "name": "Chains of Art",
-            "description": "A simple yet elegant flowing tunic of cream linen, with subtle gold embroidery at the neck and cuffs. It allows for full freedom of movement while hinting at the confines of her servitude.",
-            "materials_and_colors": "Cream linen, subtle gold thread embroidery, soft leather sandals.",
-            "thematic_significance": "Represents her role as an enslaved artist, bound by her circumstances but expressing beauty within them."
-          },
-          {
-            "name": "Desert Bloom",
-            "description": "An ethereal gown of sheer, vibrant fabrics, layered and flowing, adorned with delicate beadwork and a headpiece inspired by desert flora. Designed for a captivating, solo performance.",
-            "materials_and_colors": "Sheer silk in ochre, deep terracotta, and azure, with intricate brass and glass beadwork.",
-            "thematic_significance": "Symbolizes her hidden heritage and the blossoming of her true artistic spirit, even in a foreign land."
-          },
-          {
-            "name": "Shadow Weaver",
-            "description": "Dark, practical, close-fitting tunic and trousers, with a hooded cloak. Designed for stealth and movement through Rome's shadowy backstreets.",
-            "materials_and_colors": "Dark grey wool, deep indigo linen, practical leather boots.",
-            "thematic_significance": "Reflects her clandestine activities and her growing involvement in the rebellion, moving unseen through the city."
-          },
-          {
-            "name": "Imperial Masque",
-            "description": "An opulent, heavily embroidered toga-style dress in gold and deep purple, adorned with precious stones and a regal headpiece. For formal performances before the Roman elite.",
-            "materials_and_colors": "Gold brocade, deep imperial purple silk, emeralds, rubies, and intricate golden filigree.",
-            "thematic_significance": "Her forced persona as a Roman entertainer, masking her true identity and rebellious spirit behind a facade of imperial grandeur."
-          },
-          {
-            "name": "Wings of Freedom",
-            "description": "A lightweight, flowing costume made from multiple layers of translucent fabric, designed to create a visual 'wing' effect during movement. Bright and unrestrictive.",
-            "materials_and_colors": "Lightweight, sheer white and sky-blue silk, silver accents, bare feet.",
-            "thematic_significance": "Symbolizes her ultimate quest for freedom and her aspiration to transcend her enslaved status, embodying hope and rebellion."
-          }
-        ]
-      },
-      {
-        "name": "Senator Valerius Corvus",
-        "role": "Antagonist, a corrupt Roman patrician.",
-        "age": "50",
-        "sex": "Male",
-        "height": "5'9\"",
-        "weight": "220 lbs",
-        "skin_tone": "Pale",
-        "racial_descent": "Roman (European)",
-        "physical_description": "A 50-year-old Roman (European) male (standing 5'9\" tall, weighing 220 lbs) with Pale skin tone. Features Portly and well-fed, with heavy-lidded eyes that frequently betray his boredom or sinister intentions. His fingers are adorned with numerous elaborate rings, and his toga is always impeccably draped.",
-        "personality_traits": "Arrogant, cruel, manipulative, hedonistic, possessive, shrewd.",
-        "costumes": [
-          {
-            "name": "Patrician's Robe",
-            "description": "A voluminous toga of the finest white wool draped over a tunic of deep imperial purple, adorned with heavy gold brooches and a large signet ring. Exudes authority and opulence.",
-            "materials_and_colors": "Finest white wool, imperial purple silk, heavy gold, emerald and ruby jewelry.",
-            "thematic_significance": "Represents his immense power, wealth, and status within Roman society, a symbol of the empire's peak."
-          },
-          {
-            "name": "Feast Garb",
-            "description": "A looser, more casually opulent tunic and lighter toga in rich, embroidered fabrics, designed for comfort during lavish banquets and private entertainment.",
-            "materials_and_colors": "Embroidered crimson silk, gold thread, soft kid leather slippers.",
-            "thematic_significance": "Highlights his gluttony and hedonism, his indulgence in the empire's decadent pleasures."
-          },
-          {
-            "name": "Senatorial Authority",
-            "description": "A formal toga with the broad purple stripe of a senator, worn with an air of cold calculation. For official Senate proceedings and public appearances.",
-            "materials_and_colors": "Crisp white linen, broad imperial purple stripe, polished ivory accessories.",
-            "thematic_significance": "Symbolizes his political influence and the corrupt power he wields within the Roman government."
-          },
-          {
-            "name": "Midnight Intrigue",
-            "description": "A dark, rich cloak made of heavy wool, designed to conceal his identity during shadowy dealings and clandestine meetings in the city's underbelly.",
-            "materials_and_colors": "Deepest black wool, hidden silk lining, minimal adornment.",
-            "thematic_significance": "Represents his manipulative and ruthless nature, engaging in illicit activities to maintain his control."
-          },
-          {
-            "name": "Decadent Slumber",
-            "description": "Flowing silk loungewear in muted, luxurious tones, worn in his private chambers, accompanied by a heavy gold necklace and rings.",
-            "materials_and_colors": "Softest navy blue silk, silver-grey embroidery, heavy gold chains.",
-            "thematic_significance": "Reveals his ultimate self-indulgence and disregard for anything beyond his own comfort and desires."
-          }
-        ]
-      },
-      {
-        "name": "Aelius the Lydian",
-        "role": "Mentor, a wise elder and musician.",
-        "age": "68",
-        "sex": "Male",
-        "height": "5'5\"",
-        "weight": "145 lbs",
-        "skin_tone": "Tanned",
-        "racial_descent": "Anatolian (Lydian/Greek ancestry)",
-        "physical_description": "A 68-year-old Anatolian (Lydian/Greek ancestry) male (standing 5'5\" tall, weighing 145 lbs) with Tanned skin tone. Features Frail but dignified, with a gentle, knowing gaze. His long grey beard and hair frame a face etched with years of contemplation. He often carries a small, exquisitely crafted lyre.",
-        "personality_traits": "Calm, insightful, empathetic, melancholic, patient, wise.",
-        "costumes": [
-          {
-            "name": "Scholar's Drape",
-            "description": "A simple, worn tunic of undyed wool, with a darker, heavier cloak draped over his shoulders. Practical and unassuming, reflecting his humble servitude and scholarly pursuits.",
-            "materials_and_colors": "Coarse grey and brown wool, simple leather belt.",
-            "thematic_significance": "Represents his quiet wisdom and his role as a keeper of ancient knowledge, blending into the background."
-          },
-          {
-            "name": "Musician's Robe",
-            "description": "A more decorated but still modest robe, woven with subtle geometric patterns in muted colors. For formal performances or when teaching his craft.",
-            "materials_and_colors": "Fine beige linen, subtle purple and ochre embroidery, soft sandals.",
-            "thematic_significance": "Highlights his role as an artist and educator, using his craft to subtly preserve cultural identity."
-          },
-          {
-            "name": "Tutor's Attire",
-            "description": "Plain, functional attire suitable for long hours of teaching and quiet study, made of sturdy, comfortable fabrics.",
-            "materials_and_colors": "Off-white cotton, a simple leather satchel, wooden staff.",
-            "thematic_significance": "Emphasizes his dedication to passing on knowledge and fostering the talents of others."
-          },
-          {
-            "name": "Temple Weaver",
-            "description": "A long, flowing white linen robe, with intricate, almost hieroglyphic patterns woven into the fabric. For moments of deep philosophical discussion or spiritual reflection.",
-            "materials_and_colors": "Pure white linen, subtle gold and silver thread, intricate Eastern motifs.",
-            "thematic_significance": "Symbolizes his connection to ancient wisdom and spiritual heritage, a link to a forgotten, purer past."
-          },
-          {
-            "name": "Sage's Farewell",
-            "description": "A light, unadorned robe, signifying detachment and peace, possibly worn towards the story's climax or after a significant sacrifice.",
-            "materials_and_colors": "Simple, undyed linen, very light and flowing, symbolic of letting go.",
-            "thematic_significance": "Represents his acceptance of fate and his role in guiding the younger generation towards a future he may not see."
-          }
-        ]
-      }
-    ],
-    "props": [
-      {
-        "name": "Lyra's Ancestral Pendant",
-        "appearance": "An intricately carved silver pendant, depicting an ancient North African symbol resembling a stylized ankh intertwined with a crescent moon. It has a hidden clasp.",
-        "narrative_significance": "Symbolizes Lyra's lost heritage and serves as a literal key to the rebellion's hidden network and a message from her ancestors.",
-        "key_scene_usage": "Lyra fiddles with it during her performance, a subtle act of defiance. Later, Kaelus discovers it contains a miniature, coded map to the Catacombs, revealing a meeting point."
-      }
-    ],
-    "visual_action": "Movie Title: Gladius & Grace: The Roman Rhapsody. Genre: Musical / Dance. Scene Title: Whispers in Marble. Set Location: Imperial Atrium of Senator Valerius's Villa, opulent marble, grand statues, intricate mosaics. Lighting Cues: Rich, warm, indirect lighting from unseen oil lamps, creating dramatic shadows and highlighting architectural details. Characters present: None yet visible, but the space suggests impending performance. Props used: None visible. Camera Angle: Wide-angle, low crane shot. Staging Action: The camera slowly pans across the vast, empty atrium, showcasing its decadent grandeur before the performance begins.",
-    "still_frame_prompt": {
-      "aspect_ratio": "16:9",
-      "render_style": "Photorealistic 8k Cinematic Movie Still",
-      "film_genre": "Musical / Dance",
-      "movie_title": "Gladius & Grace: The Roman Rhapsody",
-      "subject_and_action": "Movie Title: Gladius & Grace: The Roman Rhapsody. Genre: Musical / Dance. Scene Title: Whispers in Marble. Set Location: Imperial Atrium of Senator Valerius's Villa, opulent marble, grand statues, intricate mosaics. Lighting Cues: Rich, warm, indirect lighting from unseen oil lamps, creating dramatic shadows and highlighting architectural details. Characters present: None yet visible, but the space suggests impending performance. Props used: None visible. Camera Angle: Wide-angle, low crane shot. Staging Action: The camera slowly pans across the vast, empty atrium, showcasing its decadent grandeur before the performance begins.",
-      "set_environment": {
-        "location": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-        "camera_angles_guidance": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-      },
-      "camera_specs": {
-        "angle_and_lens": "Wide-angle, low crane shot.",
-        "depth_of_field": "Cinematic shallow depth of field with sharp focal plane"
-      },
-      "characters_in_frame": [
-        {
-          "name": "Lyra of Cyrene",
-          "role": "Protagonist, a gifted enslaved dancer.",
-          "age": "22",
-          "sex": "Female",
-          "height": "5'6\"",
-          "weight": "120 lbs",
-          "skin_tone": "Olive",
-          "racial_descent": "North African (Berber/Egyptian ancestry)",
-          "physical_description": "A 22-year-old North African (Berber/Egyptian ancestry) female (standing 5'6\" tall, weighing 120 lbs) with Olive skin tone. Features Lean, agile dancer's physique with expressive dark eyes. Her long, dark hair is often intricately braided. Despite her captivity, her movements retain an inherent dignity and power.",
-          "traits": "Resilient, passionate, graceful, defiant, observant, empathetic.",
-          "costume": "Chains of Art: A simple yet elegant flowing tunic of cream linen, with subtle gold embroidery at the neck and cuffs. It allows for full freedom of movement while hinting at the confines of her servitude.",
-          "costume_materials": "Cream linen, subtle gold thread embroidery, soft leather sandals.",
-          "costume_thematic_significance": "Represents her role as an enslaved artist, bound by her circumstances but expressing beauty within them.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        },
-        {
-          "name": "Senator Valerius Corvus",
-          "role": "Antagonist, a corrupt Roman patrician.",
-          "age": "50",
-          "sex": "Male",
-          "height": "5'9\"",
-          "weight": "220 lbs",
-          "skin_tone": "Pale",
-          "racial_descent": "Roman (European)",
-          "physical_description": "A 50-year-old Roman (European) male (standing 5'9\" tall, weighing 220 lbs) with Pale skin tone. Features Portly and well-fed, with heavy-lidded eyes that frequently betray his boredom or sinister intentions. His fingers are adorned with numerous elaborate rings, and his toga is always impeccably draped.",
-          "traits": "Arrogant, cruel, manipulative, hedonistic, possessive, shrewd.",
-          "costume": "Patrician's Robe: A voluminous toga of the finest white wool draped over a tunic of deep imperial purple, adorned with heavy gold brooches and a large signet ring. Exudes authority and opulence.",
-          "costume_materials": "Finest white wool, imperial purple silk, heavy gold, emerald and ruby jewelry.",
-          "costume_thematic_significance": "Represents his immense power, wealth, and status within Roman society, a symbol of the empire's peak.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        },
-        {
-          "name": "Aelius the Lydian",
-          "role": "Mentor, a wise elder and musician.",
-          "age": "68",
-          "sex": "Male",
-          "height": "5'5\"",
-          "weight": "145 lbs",
-          "skin_tone": "Tanned",
-          "racial_descent": "Anatolian (Lydian/Greek ancestry)",
-          "physical_description": "A 68-year-old Anatolian (Lydian/Greek ancestry) male (standing 5'5\" tall, weighing 145 lbs) with Tanned skin tone. Features Frail but dignified, with a gentle, knowing gaze. His long grey beard and hair frame a face etched with years of contemplation. He often carries a small, exquisitely crafted lyre.",
-          "traits": "Calm, insightful, empathetic, melancholic, patient, wise.",
-          "costume": "Scholar's Drape: A simple, worn tunic of undyed wool, with a darker, heavier cloak draped over his shoulders. Practical and unassuming, reflecting his humble servitude and scholarly pursuits.",
-          "costume_materials": "Coarse grey and brown wool, simple leather belt.",
-          "costume_thematic_significance": "Represents his quiet wisdom and his role as a keeper of ancient knowledge, blending into the background.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        }
-      ],
-      "key_props": [
-        {
-          "name": "Lyra's Ancestral Pendant",
-          "appearance": "An intricately carved silver pendant, depicting an ancient North African symbol resembling a stylized ankh intertwined with a crescent moon. It has a hidden clasp.",
-          "narrative_significance": "Symbolizes Lyra's lost heritage and serves as a literal key to the rebellion's hidden network and a message from her ancestors.",
-          "key_scene_usage": "Lyra fiddles with it during her performance, a subtle act of defiance. Later, Kaelus discovers it contains a miniature, coded map to the Catacombs, revealing a meeting point."
-        }
-      ],
-      "negative_prompt": "no text, no speech bubbles, no dialogue subtitles, no logos, no captions, no watermarks, no frame borders"
-    },
-    "video_motion_prompt": {
-      "target_generator": "Runway Gen-3 Alpha / Luma Dream Machine / Sora / Kling AI / Pika",
-      "timecode": "00:00 - 00:05",
-      "duration_seconds": 5,
-      "shot_heading": "ATRIUM ELEGANCE",
-      "camera_motion": {
-        "movement_type": "Wide-angle, low crane shot.",
-        "speed_and_pacing": "Smooth cinematic camera movement tailored to 5s shot duration"
-      },
-      "physical_action_and_staging": "The camera slowly pans across the vast, empty atrium, showcasing its decadent grandeur before the performance begins.",
-      "environment_and_atmosphere": {
-        "set_name": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area."
-      },
-      "motion_physics": {
-        "fps": 24,
-        "motion_blur": "natural cinematic motion blur",
-        "facial_gestures": "expressive natural character physics and realistic eye micro-movements",
-        "quality": "8k photorealistic video animation"
-      }
-    }
+{
+  "movie_title": "ZEPHYR: THE DRAGONBOND CHRONICLES",
+  "genre": "High Fantasy",
+  "scene_number": 1,
+  "scene_title": "Scene 1: The Dragon's Roost & Alpine Peak Aery",
+  "total_shots": 16,
+  "generation_spec": {
+    "maximum_take_duration_seconds": 8,
+    "frame_rate": "24fps",
+    "target_engine": "Runway Gen-3 Alpha / Luma Dream Machine / Sora / Kling AI / Hailuo MiniMax",
+    "speech_rate_cadence": "2.6 words per second",
+    "still_frame_specification": "8K photorealistic static keyframe prompt (strictly ZERO action and ZERO dialog)"
   },
-  {
-    "shot_number": 2,
-    "shot_heading": "LYRA'S RESTRAINED GRACE",
-    "timecode": "00:05 - 00:13",
-    "duration_seconds": 8,
-    "camera": {
-      "lens_and_angle": "Medium shot, eye-level.",
-      "motion": "Cinematic tracking motion over 8s shot window"
-    },
-    "environment": {
-      "set_name": "The Imperial Atrium",
-      "location_type": "Interior (Patrician Villa)",
-      "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-      "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-      "camera_angles": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-    },
-    "characters": [
-      {
-        "name": "Lyra of Cyrene",
-        "role": "Protagonist, a gifted enslaved dancer.",
-        "age": "22",
-        "sex": "Female",
-        "height": "5'6\"",
-        "weight": "120 lbs",
-        "skin_tone": "Olive",
-        "racial_descent": "North African (Berber/Egyptian ancestry)",
-        "physical_description": "A 22-year-old North African (Berber/Egyptian ancestry) female (standing 5'6\" tall, weighing 120 lbs) with Olive skin tone. Features Lean, agile dancer's physique with expressive dark eyes. Her long, dark hair is often intricately braided. Despite her captivity, her movements retain an inherent dignity and power.",
-        "personality_traits": "Resilient, passionate, graceful, defiant, observant, empathetic.",
-        "costumes": [
-          {
-            "name": "Chains of Art",
-            "description": "A simple yet elegant flowing tunic of cream linen, with subtle gold embroidery at the neck and cuffs. It allows for full freedom of movement while hinting at the confines of her servitude.",
-            "materials_and_colors": "Cream linen, subtle gold thread embroidery, soft leather sandals.",
-            "thematic_significance": "Represents her role as an enslaved artist, bound by her circumstances but expressing beauty within them."
-          },
-          {
-            "name": "Desert Bloom",
-            "description": "An ethereal gown of sheer, vibrant fabrics, layered and flowing, adorned with delicate beadwork and a headpiece inspired by desert flora. Designed for a captivating, solo performance.",
-            "materials_and_colors": "Sheer silk in ochre, deep terracotta, and azure, with intricate brass and glass beadwork.",
-            "thematic_significance": "Symbolizes her hidden heritage and the blossoming of her true artistic spirit, even in a foreign land."
-          },
-          {
-            "name": "Shadow Weaver",
-            "description": "Dark, practical, close-fitting tunic and trousers, with a hooded cloak. Designed for stealth and movement through Rome's shadowy backstreets.",
-            "materials_and_colors": "Dark grey wool, deep indigo linen, practical leather boots.",
-            "thematic_significance": "Reflects her clandestine activities and her growing involvement in the rebellion, moving unseen through the city."
-          },
-          {
-            "name": "Imperial Masque",
-            "description": "An opulent, heavily embroidered toga-style dress in gold and deep purple, adorned with precious stones and a regal headpiece. For formal performances before the Roman elite.",
-            "materials_and_colors": "Gold brocade, deep imperial purple silk, emeralds, rubies, and intricate golden filigree.",
-            "thematic_significance": "Her forced persona as a Roman entertainer, masking her true identity and rebellious spirit behind a facade of imperial grandeur."
-          },
-          {
-            "name": "Wings of Freedom",
-            "description": "A lightweight, flowing costume made from multiple layers of translucent fabric, designed to create a visual 'wing' effect during movement. Bright and unrestrictive.",
-            "materials_and_colors": "Lightweight, sheer white and sky-blue silk, silver accents, bare feet.",
-            "thematic_significance": "Symbolizes her ultimate quest for freedom and her aspiration to transcend her enslaved status, embodying hope and rebellion."
-          }
-        ]
-      }
-    ],
-    "props": [
-      {
-        "name": "Lyra's Ancestral Pendant",
-        "appearance": "An intricately carved silver pendant, depicting an ancient North African symbol resembling a stylized ankh intertwined with a crescent moon. It has a hidden clasp.",
-        "narrative_significance": "Symbolizes Lyra's lost heritage and serves as a literal key to the rebellion's hidden network and a message from her ancestors.",
-        "key_scene_usage": "Lyra fiddles with it during her performance, a subtle act of defiance. Later, Kaelus discovers it contains a miniature, coded map to the Catacombs, revealing a meeting point."
-      }
-    ],
-    "visual_action": "Movie Title: Gladius & Grace: The Roman Rhapsody. Genre: Musical / Dance. Scene Title: Whispers in Marble. Set Location: Imperial Atrium of Senator Valerius's Villa. Lighting Cues: Soft, warm light from overhead, highlighting the central performance area. Characters present: LYRA (22, Female, 5'6\", 120 lbs, Olive skin, North African/Berber descent, in 'Chains of Art' costume: elegant flowing tunic of cream linen with subtle gold embroidery at the neck and cuffs, expressing understated grace and hidden strength). Props used: None. Camera Angle: Medium shot, eye-level. Staging Action: Lyra begins her dance, movements fluid but contained, her expression hinting at a deeper yearning beneath the practiced grace.",
-    "still_frame_prompt": {
-      "aspect_ratio": "16:9",
-      "render_style": "Photorealistic 8k Cinematic Movie Still",
-      "film_genre": "Musical / Dance",
-      "movie_title": "Gladius & Grace: The Roman Rhapsody",
-      "subject_and_action": "Movie Title: Gladius & Grace: The Roman Rhapsody. Genre: Musical / Dance. Scene Title: Whispers in Marble. Set Location: Imperial Atrium of Senator Valerius's Villa. Lighting Cues: Soft, warm light from overhead, highlighting the central performance area. Characters present: LYRA (22, Female, 5'6\", 120 lbs, Olive skin, North African/Berber descent, in 'Chains of Art' costume: elegant flowing tunic of cream linen with subtle gold embroidery at the neck and cuffs, expressing understated grace and hidden strength). Props used: None. Camera Angle: Medium shot, eye-level. Staging Action: Lyra begins her dance, movements fluid but contained, her expression hinting at a deeper yearning beneath the practiced grace.",
-      "set_environment": {
-        "location": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-        "camera_angles_guidance": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-      },
-      "camera_specs": {
-        "angle_and_lens": "Medium shot, eye-level.",
-        "depth_of_field": "Cinematic shallow depth of field with sharp focal plane"
-      },
-      "characters_in_frame": [
-        {
-          "name": "Lyra of Cyrene",
-          "role": "Protagonist, a gifted enslaved dancer.",
-          "age": "22",
-          "sex": "Female",
-          "height": "5'6\"",
-          "weight": "120 lbs",
-          "skin_tone": "Olive",
-          "racial_descent": "North African (Berber/Egyptian ancestry)",
-          "physical_description": "A 22-year-old North African (Berber/Egyptian ancestry) female (standing 5'6\" tall, weighing 120 lbs) with Olive skin tone. Features Lean, agile dancer's physique with expressive dark eyes. Her long, dark hair is often intricately braided. Despite her captivity, her movements retain an inherent dignity and power.",
-          "traits": "Resilient, passionate, graceful, defiant, observant, empathetic.",
-          "costume": "Chains of Art: A simple yet elegant flowing tunic of cream linen, with subtle gold embroidery at the neck and cuffs. It allows for full freedom of movement while hinting at the confines of her servitude.",
-          "costume_materials": "Cream linen, subtle gold thread embroidery, soft leather sandals.",
-          "costume_thematic_significance": "Represents her role as an enslaved artist, bound by her circumstances but expressing beauty within them.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        }
+  "shots": [
+    {
+      "shot_number": 1,
+      "heading": "EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 1",
+      "duration_seconds": 4.5,
+      "timecode": "00:00 - 00:04",
+      "camera_lens": "24mm Ultra-Wide Anamorphic Prime",
+      "camera_motion": "Slow establishing dolly-in with atmospheric depth",
+      "characters_present": [
+        "Zephyr"
       ],
-      "key_props": [
-        {
-          "name": "Lyra's Ancestral Pendant",
-          "appearance": "An intricately carved silver pendant, depicting an ancient North African symbol resembling a stylized ankh intertwined with a crescent moon. It has a hidden clasp.",
-          "narrative_significance": "Symbolizes Lyra's lost heritage and serves as a literal key to the rebellion's hidden network and a message from her ancestors.",
-          "key_scene_usage": "Lyra fiddles with it during her performance, a subtle act of defiance. Later, Kaelus discovers it contains a miniature, coded map to the Catacombs, revealing a meeting point."
-        }
+      "set_used": "The Dragon's Roost & Alpine Peak Aery",
+      "props_used": [
+        "The Dragon-Bonding Crest of the Skies"
       ],
-      "negative_prompt": "no text, no speech bubbles, no dialogue subtitles, no logos, no captions, no watermarks, no frame borders"
-    },
-    "video_motion_prompt": {
-      "target_generator": "Runway Gen-3 Alpha / Luma Dream Machine / Sora / Kling AI / Pika",
-      "timecode": "00:05 - 00:13",
-      "duration_seconds": 8,
-      "shot_heading": "LYRA'S RESTRAINED GRACE",
-      "camera_motion": {
-        "movement_type": "Medium shot, eye-level.",
-        "speed_and_pacing": "Smooth cinematic camera movement tailored to 8s shot duration"
-      },
-      "physical_action_and_staging": "Lyra begins her dance, movements fluid but contained, her expression hinting at a deeper yearning beneath the practiced grace.",
-      "environment_and_atmosphere": {
-        "set_name": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area."
-      },
-      "motion_physics": {
-        "fps": 24,
-        "motion_blur": "natural cinematic motion blur",
-        "facial_gestures": "expressive natural character physics and realistic eye micro-movements",
-        "quality": "8k photorealistic video animation"
-      }
-    }
-  },
-  {
-    "shot_number": 3,
-    "shot_heading": "VALERIUS'S GAZE",
-    "timecode": "00:13 - 00:21",
-    "duration_seconds": 8,
-    "camera": {
-      "lens_and_angle": "Close-up, slightly low angle.",
-      "motion": "Cinematic tracking motion over 8s shot window"
-    },
-    "environment": {
-      "set_name": "The Imperial Atrium",
-      "location_type": "Interior (Patrician Villa)",
-      "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-      "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-      "camera_angles": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-    },
-    "characters": [
-      {
-        "name": "Senator Valerius Corvus",
-        "role": "Antagonist, a corrupt Roman patrician.",
-        "age": "50",
-        "sex": "Male",
-        "height": "5'9\"",
-        "weight": "220 lbs",
-        "skin_tone": "Pale",
-        "racial_descent": "Roman (European)",
-        "physical_description": "A 50-year-old Roman (European) male (standing 5'9\" tall, weighing 220 lbs) with Pale skin tone. Features Portly and well-fed, with heavy-lidded eyes that frequently betray his boredom or sinister intentions. His fingers are adorned with numerous elaborate rings, and his toga is always impeccably draped.",
-        "personality_traits": "Arrogant, cruel, manipulative, hedonistic, possessive, shrewd.",
-        "costumes": [
-          {
-            "name": "Patrician's Robe",
-            "description": "A voluminous toga of the finest white wool draped over a tunic of deep imperial purple, adorned with heavy gold brooches and a large signet ring. Exudes authority and opulence.",
-            "materials_and_colors": "Finest white wool, imperial purple silk, heavy gold, emerald and ruby jewelry.",
-            "thematic_significance": "Represents his immense power, wealth, and status within Roman society, a symbol of the empire's peak."
-          },
-          {
-            "name": "Feast Garb",
-            "description": "A looser, more casually opulent tunic and lighter toga in rich, embroidered fabrics, designed for comfort during lavish banquets and private entertainment.",
-            "materials_and_colors": "Embroidered crimson silk, gold thread, soft kid leather slippers.",
-            "thematic_significance": "Highlights his gluttony and hedonism, his indulgence in the empire's decadent pleasures."
-          },
-          {
-            "name": "Senatorial Authority",
-            "description": "A formal toga with the broad purple stripe of a senator, worn with an air of cold calculation. For official Senate proceedings and public appearances.",
-            "materials_and_colors": "Crisp white linen, broad imperial purple stripe, polished ivory accessories.",
-            "thematic_significance": "Symbolizes his political influence and the corrupt power he wields within the Roman government."
-          },
-          {
-            "name": "Midnight Intrigue",
-            "description": "A dark, rich cloak made of heavy wool, designed to conceal his identity during shadowy dealings and clandestine meetings in the city's underbelly.",
-            "materials_and_colors": "Deepest black wool, hidden silk lining, minimal adornment.",
-            "thematic_significance": "Represents his manipulative and ruthless nature, engaging in illicit activities to maintain his control."
-          },
-          {
-            "name": "Decadent Slumber",
-            "description": "Flowing silk loungewear in muted, luxurious tones, worn in his private chambers, accompanied by a heavy gold necklace and rings.",
-            "materials_and_colors": "Softest navy blue silk, silver-grey embroidery, heavy gold chains.",
-            "thematic_significance": "Reveals his ultimate self-indulgence and disregard for anything beyond his own comfort and desires."
-          }
-        ]
-      }
-    ],
-    "props": [
-      {
-        "name": "Lyra's Ancestral Pendant",
-        "appearance": "An intricately carved silver pendant, depicting an ancient North African symbol resembling a stylized ankh intertwined with a crescent moon. It has a hidden clasp.",
-        "narrative_significance": "Symbolizes Lyra's lost heritage and serves as a literal key to the rebellion's hidden network and a message from her ancestors.",
-        "key_scene_usage": "Lyra fiddles with it during her performance, a subtle act of defiance. Later, Kaelus discovers it contains a miniature, coded map to the Catacombs, revealing a meeting point."
-      }
-    ],
-    "visual_action": "Movie Title: Gladius & Grace: The Roman Rhapsody. Genre: Musical / Dance. Scene Title: Whispers in Marble. Set Location: Imperial Atrium of Senator Valerius's Villa. Lighting Cues: Dramatic, slightly dappled light, casting shadows across his face, emphasizing his sinister aspect. Characters present: SENATOR VALERIUS CORVUS (50, Male, 5'9\", 220 lbs, Pale skin, Roman/European descent, in 'Patrician's Robe' costume: a lavish, deep crimson toga draped over a tunic of fine purple silk, adorned with heavy gold brooches and rings on his fingers, exuding decadent power). Props used: None. Camera Angle: Close-up, slightly low angle. Staging Action: Valerius watches Lyra, a bored, possessive glint in his heavy-lidded eyes, slowly raising a hand to signal a slave for more wine.",
-    "still_frame_prompt": {
-      "aspect_ratio": "16:9",
-      "render_style": "Photorealistic 8k Cinematic Movie Still",
-      "film_genre": "Musical / Dance",
-      "movie_title": "Gladius & Grace: The Roman Rhapsody",
-      "subject_and_action": "Movie Title: Gladius & Grace: The Roman Rhapsody. Genre: Musical / Dance. Scene Title: Whispers in Marble. Set Location: Imperial Atrium of Senator Valerius's Villa. Lighting Cues: Dramatic, slightly dappled light, casting shadows across his face, emphasizing his sinister aspect. Characters present: SENATOR VALERIUS CORVUS (50, Male, 5'9\", 220 lbs, Pale skin, Roman/European descent, in 'Patrician's Robe' costume: a lavish, deep crimson toga draped over a tunic of fine purple silk, adorned with heavy gold brooches and rings on his fingers, exuding decadent power). Props used: None. Camera Angle: Close-up, slightly low angle. Staging Action: Valerius watches Lyra, a bored, possessive glint in his heavy-lidded eyes, slowly raising a hand to signal a slave for more wine.",
-      "set_environment": {
-        "location": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-        "camera_angles_guidance": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-      },
-      "camera_specs": {
-        "angle_and_lens": "Close-up, slightly low angle.",
-        "depth_of_field": "Cinematic shallow depth of field with sharp focal plane"
-      },
-      "characters_in_frame": [
+      "spoken_dialogue": null,
+      "action_description": "Gale-force alpine winds whip across the stone precipice. Below, a sea of stormy crimson clouds stretches endlessly toward the horizon.",
+      "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 1. Camera: 24mm Ultra-Wide Anamorphic Prime, Slow establishing dolly-in with atmospheric depth. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Zephyr. Action: Gale-force alpine winds whip across the stone precipice. Below, a sea of stormy crimson clouds stretches endlessly toward the horizon..  Photorealistic, hyper-detailed, award-winning cinematography.",
+      "video_prompt": "[AI Video Motion 24fps] Camera: 24mm Ultra-Wide Anamorphic Prime, Slow establishing dolly-in with atmospheric depth. Staging: Gale-force alpine winds whip across the stone precipice. Below, a sea of stormy crimson clouds stretches endlessly toward the horizon. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
         {
-          "name": "Senator Valerius Corvus",
-          "role": "Antagonist, a corrupt Roman patrician.",
-          "age": "50",
-          "sex": "Male",
-          "height": "5'9\"",
-          "weight": "220 lbs",
-          "skin_tone": "Pale",
-          "racial_descent": "Roman (European)",
-          "physical_description": "A 50-year-old Roman (European) male (standing 5'9\" tall, weighing 220 lbs) with Pale skin tone. Features Portly and well-fed, with heavy-lidded eyes that frequently betray his boredom or sinister intentions. His fingers are adorned with numerous elaborate rings, and his toga is always impeccably draped.",
-          "traits": "Arrogant, cruel, manipulative, hedonistic, possessive, shrewd.",
-          "costume": "Patrician's Robe: A voluminous toga of the finest white wool draped over a tunic of deep imperial purple, adorned with heavy gold brooches and a large signet ring. Exudes authority and opulence.",
-          "costume_materials": "Finest white wool, imperial purple silk, heavy gold, emerald and ruby jewelry.",
-          "costume_thematic_significance": "Represents his immense power, wealth, and status within Roman society, a symbol of the empire's peak.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 4.5,
+          "timecode": "00:00 - 00:05",
+          "camera_instruction": "24mm Ultra-Wide Anamorphic Prime, Slow establishing dolly-in with atmospheric depth",
+          "motion_vector": "Slow establishing dolly-in with atmospheric depth",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 1. Camera: 24mm Ultra-Wide Anamorphic Prime, Slow establishing dolly-in with atmospheric depth. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Zephyr. Action: Gale-force alpine winds whip across the stone precipice. Below, a sea of stormy crimson clouds stretches endlessly toward the horizon..  Photorealistic, hyper-detailed, award-winning cinematography.",
+          "video_prompt": "[AI Video Motion 24fps] Camera: 24mm Ultra-Wide Anamorphic Prime, Slow establishing dolly-in with atmospheric depth. Staging: Gale-force alpine winds whip across the stone precipice. Below, a sea of stormy crimson clouds stretches endlessly toward the horizon. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
         }
+      ]
+    },
+    {
+      "shot_number": 2,
+      "heading": "EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 2",
+      "duration_seconds": 4.5,
+      "timecode": "00:04 - 00:09",
+      "camera_lens": "35mm Wide Cinematic Lens",
+      "camera_motion": "Steadicam tracking shot following character forward",
+      "characters_present": [
+        "Zephyr"
       ],
-      "key_props": [
+      "set_used": "The Dragon's Roost & Alpine Peak Aery",
+      "props_used": [
+        "The Dragon-Bonding Crest of the Skies"
+      ],
+      "spoken_dialogue": null,
+      "action_description": "Zephyr the dragon finds a rider.",
+      "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 2. Camera: 35mm Wide Cinematic Lens, Steadicam tracking shot following character forward. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Zephyr. Action: Zephyr the dragon finds a rider..  Photorealistic, hyper-detailed, award-winning cinematography.",
+      "video_prompt": "[AI Video Motion 24fps] Camera: 35mm Wide Cinematic Lens, Steadicam tracking shot following character forward. Staging: Zephyr the dragon finds a rider. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
         {
-          "name": "Lyra's Ancestral Pendant",
-          "appearance": "An intricately carved silver pendant, depicting an ancient North African symbol resembling a stylized ankh intertwined with a crescent moon. It has a hidden clasp.",
-          "narrative_significance": "Symbolizes Lyra's lost heritage and serves as a literal key to the rebellion's hidden network and a message from her ancestors.",
-          "key_scene_usage": "Lyra fiddles with it during her performance, a subtle act of defiance. Later, Kaelus discovers it contains a miniature, coded map to the Catacombs, revealing a meeting point."
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 4.5,
+          "timecode": "00:00 - 00:05",
+          "camera_instruction": "35mm Wide Cinematic Lens, Steadicam tracking shot following character forward",
+          "motion_vector": "Steadicam tracking shot following character forward",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 2. Camera: 35mm Wide Cinematic Lens, Steadicam tracking shot following character forward. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Zephyr. Action: Zephyr the dragon finds a rider..  Photorealistic, hyper-detailed, award-winning cinematography.",
+          "video_prompt": "[AI Video Motion 24fps] Camera: 35mm Wide Cinematic Lens, Steadicam tracking shot following character forward. Staging: Zephyr the dragon finds a rider. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
         }
-      ],
-      "negative_prompt": "no text, no speech bubbles, no dialogue subtitles, no logos, no captions, no watermarks, no frame borders"
+      ]
     },
-    "video_motion_prompt": {
-      "target_generator": "Runway Gen-3 Alpha / Luma Dream Machine / Sora / Kling AI / Pika",
-      "timecode": "00:13 - 00:21",
-      "duration_seconds": 8,
-      "shot_heading": "VALERIUS'S GAZE",
-      "camera_motion": {
-        "movement_type": "Close-up, slightly low angle.",
-        "speed_and_pacing": "Smooth cinematic camera movement tailored to 8s shot duration"
-      },
-      "physical_action_and_staging": "Valerius watches Lyra, a bored, possessive glint in his heavy-lidded eyes, slowly raising a hand to signal a slave for more wine.",
-      "environment_and_atmosphere": {
-        "set_name": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area."
-      },
-      "motion_physics": {
-        "fps": 24,
-        "motion_blur": "natural cinematic motion blur",
-        "facial_gestures": "expressive natural character physics and realistic eye micro-movements",
-        "quality": "8k photorealistic video animation"
-      }
-    }
-  },
-  {
-    "shot_number": 4,
-    "shot_heading": "AELIUS'S WARNING",
-    "timecode": "00:21 - 00:29",
-    "duration_seconds": 8,
-    "camera": {
-      "lens_and_angle": "Wider shot, slightly high.",
-      "motion": "Cinematic tracking motion over 8s shot window"
-    },
-    "environment": {
-      "set_name": "The Imperial Atrium",
-      "location_type": "Interior (Patrician Villa)",
-      "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-      "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-      "camera_angles": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-    },
-    "characters": [
-      {
-        "name": "Lyra of Cyrene",
-        "role": "Protagonist, a gifted enslaved dancer.",
-        "age": "22",
-        "sex": "Female",
-        "height": "5'6\"",
-        "weight": "120 lbs",
-        "skin_tone": "Olive",
-        "racial_descent": "North African (Berber/Egyptian ancestry)",
-        "physical_description": "A 22-year-old North African (Berber/Egyptian ancestry) female (standing 5'6\" tall, weighing 120 lbs) with Olive skin tone. Features Lean, agile dancer's physique with expressive dark eyes. Her long, dark hair is often intricately braided. Despite her captivity, her movements retain an inherent dignity and power.",
-        "personality_traits": "Resilient, passionate, graceful, defiant, observant, empathetic.",
-        "costumes": [
-          {
-            "name": "Chains of Art",
-            "description": "A simple yet elegant flowing tunic of cream linen, with subtle gold embroidery at the neck and cuffs. It allows for full freedom of movement while hinting at the confines of her servitude.",
-            "materials_and_colors": "Cream linen, subtle gold thread embroidery, soft leather sandals.",
-            "thematic_significance": "Represents her role as an enslaved artist, bound by her circumstances but expressing beauty within them."
-          },
-          {
-            "name": "Desert Bloom",
-            "description": "An ethereal gown of sheer, vibrant fabrics, layered and flowing, adorned with delicate beadwork and a headpiece inspired by desert flora. Designed for a captivating, solo performance.",
-            "materials_and_colors": "Sheer silk in ochre, deep terracotta, and azure, with intricate brass and glass beadwork.",
-            "thematic_significance": "Symbolizes her hidden heritage and the blossoming of her true artistic spirit, even in a foreign land."
-          },
-          {
-            "name": "Shadow Weaver",
-            "description": "Dark, practical, close-fitting tunic and trousers, with a hooded cloak. Designed for stealth and movement through Rome's shadowy backstreets.",
-            "materials_and_colors": "Dark grey wool, deep indigo linen, practical leather boots.",
-            "thematic_significance": "Reflects her clandestine activities and her growing involvement in the rebellion, moving unseen through the city."
-          },
-          {
-            "name": "Imperial Masque",
-            "description": "An opulent, heavily embroidered toga-style dress in gold and deep purple, adorned with precious stones and a regal headpiece. For formal performances before the Roman elite.",
-            "materials_and_colors": "Gold brocade, deep imperial purple silk, emeralds, rubies, and intricate golden filigree.",
-            "thematic_significance": "Her forced persona as a Roman entertainer, masking her true identity and rebellious spirit behind a facade of imperial grandeur."
-          },
-          {
-            "name": "Wings of Freedom",
-            "description": "A lightweight, flowing costume made from multiple layers of translucent fabric, designed to create a visual 'wing' effect during movement. Bright and unrestrictive.",
-            "materials_and_colors": "Lightweight, sheer white and sky-blue silk, silver accents, bare feet.",
-            "thematic_significance": "Symbolizes her ultimate quest for freedom and her aspiration to transcend her enslaved status, embodying hope and rebellion."
-          }
-        ]
-      },
-      {
-        "name": "Aelius the Lydian",
-        "role": "Mentor, a wise elder and musician.",
-        "age": "68",
-        "sex": "Male",
-        "height": "5'5\"",
-        "weight": "145 lbs",
-        "skin_tone": "Tanned",
-        "racial_descent": "Anatolian (Lydian/Greek ancestry)",
-        "physical_description": "A 68-year-old Anatolian (Lydian/Greek ancestry) male (standing 5'5\" tall, weighing 145 lbs) with Tanned skin tone. Features Frail but dignified, with a gentle, knowing gaze. His long grey beard and hair frame a face etched with years of contemplation. He often carries a small, exquisitely crafted lyre.",
-        "personality_traits": "Calm, insightful, empathetic, melancholic, patient, wise.",
-        "costumes": [
-          {
-            "name": "Scholar's Drape",
-            "description": "A simple, worn tunic of undyed wool, with a darker, heavier cloak draped over his shoulders. Practical and unassuming, reflecting his humble servitude and scholarly pursuits.",
-            "materials_and_colors": "Coarse grey and brown wool, simple leather belt.",
-            "thematic_significance": "Represents his quiet wisdom and his role as a keeper of ancient knowledge, blending into the background."
-          },
-          {
-            "name": "Musician's Robe",
-            "description": "A more decorated but still modest robe, woven with subtle geometric patterns in muted colors. For formal performances or when teaching his craft.",
-            "materials_and_colors": "Fine beige linen, subtle purple and ochre embroidery, soft sandals.",
-            "thematic_significance": "Highlights his role as an artist and educator, using his craft to subtly preserve cultural identity."
-          },
-          {
-            "name": "Tutor's Attire",
-            "description": "Plain, functional attire suitable for long hours of teaching and quiet study, made of sturdy, comfortable fabrics.",
-            "materials_and_colors": "Off-white cotton, a simple leather satchel, wooden staff.",
-            "thematic_significance": "Emphasizes his dedication to passing on knowledge and fostering the talents of others."
-          },
-          {
-            "name": "Temple Weaver",
-            "description": "A long, flowing white linen robe, with intricate, almost hieroglyphic patterns woven into the fabric. For moments of deep philosophical discussion or spiritual reflection.",
-            "materials_and_colors": "Pure white linen, subtle gold and silver thread, intricate Eastern motifs.",
-            "thematic_significance": "Symbolizes his connection to ancient wisdom and spiritual heritage, a link to a forgotten, purer past."
-          },
-          {
-            "name": "Sage's Farewell",
-            "description": "A light, unadorned robe, signifying detachment and peace, possibly worn towards the story's climax or after a significant sacrifice.",
-            "materials_and_colors": "Simple, undyed linen, very light and flowing, symbolic of letting go.",
-            "thematic_significance": "Represents his acceptance of fate and his role in guiding the younger generation towards a future he may not see."
-          }
-        ]
-      }
-    ],
-    "props": [
-      {
-        "name": "Lyra's Ancestral Pendant",
-        "appearance": "An intricately carved silver pendant, depicting an ancient North African symbol resembling a stylized ankh intertwined with a crescent moon. It has a hidden clasp.",
-        "narrative_significance": "Symbolizes Lyra's lost heritage and serves as a literal key to the rebellion's hidden network and a message from her ancestors.",
-        "key_scene_usage": "Lyra fiddles with it during her performance, a subtle act of defiance. Later, Kaelus discovers it contains a miniature, coded map to the Catacombs, revealing a meeting point."
-      }
-    ],
-    "visual_action": "Movie Title: Gladius & Grace: The Roman Rhapsody. Genre: Musical / Dance. Scene Title: Whispers in Marble. Set Location: Imperial Atrium of Senator Valerius's Villa, near a marble column. Lighting Cues: A softer, more melancholic light illuminates Aelius, contrasting with the main performance area. Characters present: AELIUS THE LYDIAN (68, Male, 5'5\", 145 lbs, Tanned skin, Anatolian/Lydian descent, in 'Scholar's Drape' costume: a simple, worn tunic of undyed wool, a darker, heavier cloak draped over his shoulders, his long grey beard prominent), LYRA (performing in 'Chains of Art' costume). Props used: Aelius's Lyre (polished wood, ancient design, held by Aelius). Camera Angle: Wider shot, slightly high. Staging Action: Aelius plays a haunting, almost mournful melody on his lyre, his eyes meeting Lyra's for a brief, knowing moment, a subtle warning in his gaze as Lyra continues her dance.",
-    "still_frame_prompt": {
-      "aspect_ratio": "16:9",
-      "render_style": "Photorealistic 8k Cinematic Movie Still",
-      "film_genre": "Musical / Dance",
-      "movie_title": "Gladius & Grace: The Roman Rhapsody",
-      "subject_and_action": "Movie Title: Gladius & Grace: The Roman Rhapsody. Genre: Musical / Dance. Scene Title: Whispers in Marble. Set Location: Imperial Atrium of Senator Valerius's Villa, near a marble column. Lighting Cues: A softer, more melancholic light illuminates Aelius, contrasting with the main performance area. Characters present: AELIUS THE LYDIAN (68, Male, 5'5\", 145 lbs, Tanned skin, Anatolian/Lydian descent, in 'Scholar's Drape' costume: a simple, worn tunic of undyed wool, a darker, heavier cloak draped over his shoulders, his long grey beard prominent), LYRA (performing in 'Chains of Art' costume). Props used: Aelius's Lyre (polished wood, ancient design, held by Aelius). Camera Angle: Wider shot, slightly high. Staging Action: Aelius plays a haunting, almost mournful melody on his lyre, his eyes meeting Lyra's for a brief, knowing moment, a subtle warning in his gaze as Lyra continues her dance.",
-      "set_environment": {
-        "location": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-        "camera_angles_guidance": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-      },
-      "camera_specs": {
-        "angle_and_lens": "Wider shot, slightly high.",
-        "depth_of_field": "Cinematic shallow depth of field with sharp focal plane"
-      },
-      "characters_in_frame": [
-        {
-          "name": "Lyra of Cyrene",
-          "role": "Protagonist, a gifted enslaved dancer.",
-          "age": "22",
-          "sex": "Female",
-          "height": "5'6\"",
-          "weight": "120 lbs",
-          "skin_tone": "Olive",
-          "racial_descent": "North African (Berber/Egyptian ancestry)",
-          "physical_description": "A 22-year-old North African (Berber/Egyptian ancestry) female (standing 5'6\" tall, weighing 120 lbs) with Olive skin tone. Features Lean, agile dancer's physique with expressive dark eyes. Her long, dark hair is often intricately braided. Despite her captivity, her movements retain an inherent dignity and power.",
-          "traits": "Resilient, passionate, graceful, defiant, observant, empathetic.",
-          "costume": "Chains of Art: A simple yet elegant flowing tunic of cream linen, with subtle gold embroidery at the neck and cuffs. It allows for full freedom of movement while hinting at the confines of her servitude.",
-          "costume_materials": "Cream linen, subtle gold thread embroidery, soft leather sandals.",
-          "costume_thematic_significance": "Represents her role as an enslaved artist, bound by her circumstances but expressing beauty within them.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        },
-        {
-          "name": "Aelius the Lydian",
-          "role": "Mentor, a wise elder and musician.",
-          "age": "68",
-          "sex": "Male",
-          "height": "5'5\"",
-          "weight": "145 lbs",
-          "skin_tone": "Tanned",
-          "racial_descent": "Anatolian (Lydian/Greek ancestry)",
-          "physical_description": "A 68-year-old Anatolian (Lydian/Greek ancestry) male (standing 5'5\" tall, weighing 145 lbs) with Tanned skin tone. Features Frail but dignified, with a gentle, knowing gaze. His long grey beard and hair frame a face etched with years of contemplation. He often carries a small, exquisitely crafted lyre.",
-          "traits": "Calm, insightful, empathetic, melancholic, patient, wise.",
-          "costume": "Scholar's Drape: A simple, worn tunic of undyed wool, with a darker, heavier cloak draped over his shoulders. Practical and unassuming, reflecting his humble servitude and scholarly pursuits.",
-          "costume_materials": "Coarse grey and brown wool, simple leather belt.",
-          "costume_thematic_significance": "Represents his quiet wisdom and his role as a keeper of ancient knowledge, blending into the background.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        }
-      ],
-      "key_props": [
-        {
-          "name": "Lyra's Ancestral Pendant",
-          "appearance": "An intricately carved silver pendant, depicting an ancient North African symbol resembling a stylized ankh intertwined with a crescent moon. It has a hidden clasp.",
-          "narrative_significance": "Symbolizes Lyra's lost heritage and serves as a literal key to the rebellion's hidden network and a message from her ancestors.",
-          "key_scene_usage": "Lyra fiddles with it during her performance, a subtle act of defiance. Later, Kaelus discovers it contains a miniature, coded map to the Catacombs, revealing a meeting point."
-        }
-      ],
-      "negative_prompt": "no text, no speech bubbles, no dialogue subtitles, no logos, no captions, no watermarks, no frame borders"
-    },
-    "video_motion_prompt": {
-      "target_generator": "Runway Gen-3 Alpha / Luma Dream Machine / Sora / Kling AI / Pika",
-      "timecode": "00:21 - 00:29",
-      "duration_seconds": 8,
-      "shot_heading": "AELIUS'S WARNING",
-      "camera_motion": {
-        "movement_type": "Wider shot, slightly high.",
-        "speed_and_pacing": "Smooth cinematic camera movement tailored to 8s shot duration"
-      },
-      "physical_action_and_staging": "Aelius plays a haunting, almost mournful melody on his lyre, his eyes meeting Lyra's for a brief, knowing moment, a subtle warning in his gaze as Lyra continues her dance.",
-      "environment_and_atmosphere": {
-        "set_name": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area."
-      },
-      "motion_physics": {
-        "fps": 24,
-        "motion_blur": "natural cinematic motion blur",
-        "facial_gestures": "expressive natural character physics and realistic eye micro-movements",
-        "quality": "8k photorealistic video animation"
-      }
-    }
-  },
-  {
-    "shot_number": 5,
-    "shot_heading": "THE PENDANT'S SECRET",
-    "timecode": "00:29 - 00:32",
-    "duration_seconds": 3,
-    "camera": {
-      "lens_and_angle": "Close-up, tracking shot.",
-      "motion": "Cinematic tracking motion over 3s shot window"
-    },
-    "environment": {
-      "set_name": "The Imperial Atrium",
-      "location_type": "Interior (Patrician Villa)",
-      "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-      "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-      "camera_angles": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-    },
-    "characters": [
-      {
-        "name": "Lyra of Cyrene",
-        "role": "Protagonist, a gifted enslaved dancer.",
-        "age": "22",
-        "sex": "Female",
-        "height": "5'6\"",
-        "weight": "120 lbs",
-        "skin_tone": "Olive",
-        "racial_descent": "North African (Berber/Egyptian ancestry)",
-        "physical_description": "A 22-year-old North African (Berber/Egyptian ancestry) female (standing 5'6\" tall, weighing 120 lbs) with Olive skin tone. Features Lean, agile dancer's physique with expressive dark eyes. Her long, dark hair is often intricately braided. Despite her captivity, her movements retain an inherent dignity and power.",
-        "personality_traits": "Resilient, passionate, graceful, defiant, observant, empathetic.",
-        "costumes": [
-          {
-            "name": "Chains of Art",
-            "description": "A simple yet elegant flowing tunic of cream linen, with subtle gold embroidery at the neck and cuffs. It allows for full freedom of movement while hinting at the confines of her servitude.",
-            "materials_and_colors": "Cream linen, subtle gold thread embroidery, soft leather sandals.",
-            "thematic_significance": "Represents her role as an enslaved artist, bound by her circumstances but expressing beauty within them."
-          },
-          {
-            "name": "Desert Bloom",
-            "description": "An ethereal gown of sheer, vibrant fabrics, layered and flowing, adorned with delicate beadwork and a headpiece inspired by desert flora. Designed for a captivating, solo performance.",
-            "materials_and_colors": "Sheer silk in ochre, deep terracotta, and azure, with intricate brass and glass beadwork.",
-            "thematic_significance": "Symbolizes her hidden heritage and the blossoming of her true artistic spirit, even in a foreign land."
-          },
-          {
-            "name": "Shadow Weaver",
-            "description": "Dark, practical, close-fitting tunic and trousers, with a hooded cloak. Designed for stealth and movement through Rome's shadowy backstreets.",
-            "materials_and_colors": "Dark grey wool, deep indigo linen, practical leather boots.",
-            "thematic_significance": "Reflects her clandestine activities and her growing involvement in the rebellion, moving unseen through the city."
-          },
-          {
-            "name": "Imperial Masque",
-            "description": "An opulent, heavily embroidered toga-style dress in gold and deep purple, adorned with precious stones and a regal headpiece. For formal performances before the Roman elite.",
-            "materials_and_colors": "Gold brocade, deep imperial purple silk, emeralds, rubies, and intricate golden filigree.",
-            "thematic_significance": "Her forced persona as a Roman entertainer, masking her true identity and rebellious spirit behind a facade of imperial grandeur."
-          },
-          {
-            "name": "Wings of Freedom",
-            "description": "A lightweight, flowing costume made from multiple layers of translucent fabric, designed to create a visual 'wing' effect during movement. Bright and unrestrictive.",
-            "materials_and_colors": "Lightweight, sheer white and sky-blue silk, silver accents, bare feet.",
-            "thematic_significance": "Symbolizes her ultimate quest for freedom and her aspiration to transcend her enslaved status, embodying hope and rebellion."
-          }
-        ]
-      }
-    ],
-    "props": [
-      {
-        "name": "Lyra's Ancestral Pendant",
-        "appearance": "An intricately carved silver pendant, depicting an ancient North African symbol resembling a stylized ankh intertwined with a crescent moon. It has a hidden clasp.",
-        "narrative_significance": "Symbolizes Lyra's lost heritage and serves as a literal key to the rebellion's hidden network and a message from her ancestors.",
-        "key_scene_usage": "Lyra fiddles with it during her performance, a subtle act of defiance. Later, Kaelus discovers it contains a miniature, coded map to the Catacombs, revealing a meeting point."
-      }
-    ],
-    "visual_action": "Movie Title: Gladius & Grace: The Roman Rhapsody. Genre: Musical / Dance. Scene Title: Whispers in Marble. Set Location: Imperial Atrium of Senator Valerius's Villa. Lighting Cues: A focused, soft spotlight on Lyra's hand and neck, drawing attention to the pendant. Characters present: LYRA (22, Female, 5'6\", 120 lbs, Olive skin, North African/Berber descent, in 'Chains of Art' costume: elegant flowing tunic of cream linen with subtle gold embroidery). Props used: LYRA'S ANCESTRAL PENDANT (prop001, intricately carved silver, an ancient North African symbol, worn around Lyra's neck). Camera Angle: Close-up, tracking shot. Staging Action: As Lyra executes a final, deeply expressive movement, her hand subtly brushes against the ANCESTRAL PENDANT at her throat, a fleeting, almost imperceptible gesture of defiance or solace amidst her forced performance.",
-    "still_frame_prompt": {
-      "aspect_ratio": "16:9",
-      "render_style": "Photorealistic 8k Cinematic Movie Still",
-      "film_genre": "Musical / Dance",
-      "movie_title": "Gladius & Grace: The Roman Rhapsody",
-      "subject_and_action": "Movie Title: Gladius & Grace: The Roman Rhapsody. Genre: Musical / Dance. Scene Title: Whispers in Marble. Set Location: Imperial Atrium of Senator Valerius's Villa. Lighting Cues: A focused, soft spotlight on Lyra's hand and neck, drawing attention to the pendant. Characters present: LYRA (22, Female, 5'6\", 120 lbs, Olive skin, North African/Berber descent, in 'Chains of Art' costume: elegant flowing tunic of cream linen with subtle gold embroidery). Props used: LYRA'S ANCESTRAL PENDANT (prop001, intricately carved silver, an ancient North African symbol, worn around Lyra's neck). Camera Angle: Close-up, tracking shot. Staging Action: As Lyra executes a final, deeply expressive movement, her hand subtly brushes against the ANCESTRAL PENDANT at her throat, a fleeting, almost imperceptible gesture of defiance or solace amidst her forced performance.",
-      "set_environment": {
-        "location": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-        "camera_angles_guidance": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-      },
-      "camera_specs": {
-        "angle_and_lens": "Close-up, tracking shot.",
-        "depth_of_field": "Cinematic shallow depth of field with sharp focal plane"
-      },
-      "characters_in_frame": [
-        {
-          "name": "Lyra of Cyrene",
-          "role": "Protagonist, a gifted enslaved dancer.",
-          "age": "22",
-          "sex": "Female",
-          "height": "5'6\"",
-          "weight": "120 lbs",
-          "skin_tone": "Olive",
-          "racial_descent": "North African (Berber/Egyptian ancestry)",
-          "physical_description": "A 22-year-old North African (Berber/Egyptian ancestry) female (standing 5'6\" tall, weighing 120 lbs) with Olive skin tone. Features Lean, agile dancer's physique with expressive dark eyes. Her long, dark hair is often intricately braided. Despite her captivity, her movements retain an inherent dignity and power.",
-          "traits": "Resilient, passionate, graceful, defiant, observant, empathetic.",
-          "costume": "Chains of Art: A simple yet elegant flowing tunic of cream linen, with subtle gold embroidery at the neck and cuffs. It allows for full freedom of movement while hinting at the confines of her servitude.",
-          "costume_materials": "Cream linen, subtle gold thread embroidery, soft leather sandals.",
-          "costume_thematic_significance": "Represents her role as an enslaved artist, bound by her circumstances but expressing beauty within them.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        }
-      ],
-      "key_props": [
-        {
-          "name": "Lyra's Ancestral Pendant",
-          "appearance": "An intricately carved silver pendant, depicting an ancient North African symbol resembling a stylized ankh intertwined with a crescent moon. It has a hidden clasp.",
-          "narrative_significance": "Symbolizes Lyra's lost heritage and serves as a literal key to the rebellion's hidden network and a message from her ancestors.",
-          "key_scene_usage": "Lyra fiddles with it during her performance, a subtle act of defiance. Later, Kaelus discovers it contains a miniature, coded map to the Catacombs, revealing a meeting point."
-        }
-      ],
-      "negative_prompt": "no text, no speech bubbles, no dialogue subtitles, no logos, no captions, no watermarks, no frame borders"
-    },
-    "video_motion_prompt": {
-      "target_generator": "Runway Gen-3 Alpha / Luma Dream Machine / Sora / Kling AI / Pika",
-      "timecode": "00:29 - 00:32",
-      "duration_seconds": 3,
-      "shot_heading": "THE PENDANT'S SECRET",
-      "camera_motion": {
-        "movement_type": "Close-up, tracking shot.",
-        "speed_and_pacing": "Smooth cinematic camera movement tailored to 3s shot duration"
-      },
-      "physical_action_and_staging": "As Lyra executes a final, deeply expressive movement, her hand subtly brushes against the ANCESTRAL PENDANT at her throat, a fleeting, almost imperceptible gesture of defiance or solace amidst her forced performance.",
-      "environment_and_atmosphere": {
-        "set_name": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area."
-      },
-      "motion_physics": {
-        "fps": 24,
-        "motion_blur": "natural cinematic motion blur",
-        "facial_gestures": "expressive natural character physics and realistic eye micro-movements",
-        "quality": "8k photorealistic video animation"
-      }
-    }
-  },
-  {
-    "shot_number": 6,
-    "shot_heading": "OMINOUS PROPOSAL",
-    "timecode": "00:32 - 00:37",
-    "duration_seconds": 5,
-    "camera": {
-      "lens_and_angle": "Two-shot, medium.",
-      "motion": "Cinematic tracking motion over 5s shot window"
-    },
-    "environment": {
-      "set_name": "The Imperial Atrium",
-      "location_type": "Interior (Patrician Villa)",
-      "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-      "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-      "camera_angles": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-    },
-    "characters": [
-      {
-        "name": "Lyra of Cyrene",
-        "role": "Protagonist, a gifted enslaved dancer.",
-        "age": "22",
-        "sex": "Female",
-        "height": "5'6\"",
-        "weight": "120 lbs",
-        "skin_tone": "Olive",
-        "racial_descent": "North African (Berber/Egyptian ancestry)",
-        "physical_description": "A 22-year-old North African (Berber/Egyptian ancestry) female (standing 5'6\" tall, weighing 120 lbs) with Olive skin tone. Features Lean, agile dancer's physique with expressive dark eyes. Her long, dark hair is often intricately braided. Despite her captivity, her movements retain an inherent dignity and power.",
-        "personality_traits": "Resilient, passionate, graceful, defiant, observant, empathetic.",
-        "costumes": [
-          {
-            "name": "Chains of Art",
-            "description": "A simple yet elegant flowing tunic of cream linen, with subtle gold embroidery at the neck and cuffs. It allows for full freedom of movement while hinting at the confines of her servitude.",
-            "materials_and_colors": "Cream linen, subtle gold thread embroidery, soft leather sandals.",
-            "thematic_significance": "Represents her role as an enslaved artist, bound by her circumstances but expressing beauty within them."
-          },
-          {
-            "name": "Desert Bloom",
-            "description": "An ethereal gown of sheer, vibrant fabrics, layered and flowing, adorned with delicate beadwork and a headpiece inspired by desert flora. Designed for a captivating, solo performance.",
-            "materials_and_colors": "Sheer silk in ochre, deep terracotta, and azure, with intricate brass and glass beadwork.",
-            "thematic_significance": "Symbolizes her hidden heritage and the blossoming of her true artistic spirit, even in a foreign land."
-          },
-          {
-            "name": "Shadow Weaver",
-            "description": "Dark, practical, close-fitting tunic and trousers, with a hooded cloak. Designed for stealth and movement through Rome's shadowy backstreets.",
-            "materials_and_colors": "Dark grey wool, deep indigo linen, practical leather boots.",
-            "thematic_significance": "Reflects her clandestine activities and her growing involvement in the rebellion, moving unseen through the city."
-          },
-          {
-            "name": "Imperial Masque",
-            "description": "An opulent, heavily embroidered toga-style dress in gold and deep purple, adorned with precious stones and a regal headpiece. For formal performances before the Roman elite.",
-            "materials_and_colors": "Gold brocade, deep imperial purple silk, emeralds, rubies, and intricate golden filigree.",
-            "thematic_significance": "Her forced persona as a Roman entertainer, masking her true identity and rebellious spirit behind a facade of imperial grandeur."
-          },
-          {
-            "name": "Wings of Freedom",
-            "description": "A lightweight, flowing costume made from multiple layers of translucent fabric, designed to create a visual 'wing' effect during movement. Bright and unrestrictive.",
-            "materials_and_colors": "Lightweight, sheer white and sky-blue silk, silver accents, bare feet.",
-            "thematic_significance": "Symbolizes her ultimate quest for freedom and her aspiration to transcend her enslaved status, embodying hope and rebellion."
-          }
-        ]
-      },
-      {
-        "name": "Senator Valerius Corvus",
-        "role": "Antagonist, a corrupt Roman patrician.",
-        "age": "50",
-        "sex": "Male",
-        "height": "5'9\"",
-        "weight": "220 lbs",
-        "skin_tone": "Pale",
-        "racial_descent": "Roman (European)",
-        "physical_description": "A 50-year-old Roman (European) male (standing 5'9\" tall, weighing 220 lbs) with Pale skin tone. Features Portly and well-fed, with heavy-lidded eyes that frequently betray his boredom or sinister intentions. His fingers are adorned with numerous elaborate rings, and his toga is always impeccably draped.",
-        "personality_traits": "Arrogant, cruel, manipulative, hedonistic, possessive, shrewd.",
-        "costumes": [
-          {
-            "name": "Patrician's Robe",
-            "description": "A voluminous toga of the finest white wool draped over a tunic of deep imperial purple, adorned with heavy gold brooches and a large signet ring. Exudes authority and opulence.",
-            "materials_and_colors": "Finest white wool, imperial purple silk, heavy gold, emerald and ruby jewelry.",
-            "thematic_significance": "Represents his immense power, wealth, and status within Roman society, a symbol of the empire's peak."
-          },
-          {
-            "name": "Feast Garb",
-            "description": "A looser, more casually opulent tunic and lighter toga in rich, embroidered fabrics, designed for comfort during lavish banquets and private entertainment.",
-            "materials_and_colors": "Embroidered crimson silk, gold thread, soft kid leather slippers.",
-            "thematic_significance": "Highlights his gluttony and hedonism, his indulgence in the empire's decadent pleasures."
-          },
-          {
-            "name": "Senatorial Authority",
-            "description": "A formal toga with the broad purple stripe of a senator, worn with an air of cold calculation. For official Senate proceedings and public appearances.",
-            "materials_and_colors": "Crisp white linen, broad imperial purple stripe, polished ivory accessories.",
-            "thematic_significance": "Symbolizes his political influence and the corrupt power he wields within the Roman government."
-          },
-          {
-            "name": "Midnight Intrigue",
-            "description": "A dark, rich cloak made of heavy wool, designed to conceal his identity during shadowy dealings and clandestine meetings in the city's underbelly.",
-            "materials_and_colors": "Deepest black wool, hidden silk lining, minimal adornment.",
-            "thematic_significance": "Represents his manipulative and ruthless nature, engaging in illicit activities to maintain his control."
-          },
-          {
-            "name": "Decadent Slumber",
-            "description": "Flowing silk loungewear in muted, luxurious tones, worn in his private chambers, accompanied by a heavy gold necklace and rings.",
-            "materials_and_colors": "Softest navy blue silk, silver-grey embroidery, heavy gold chains.",
-            "thematic_significance": "Reveals his ultimate self-indulgence and disregard for anything beyond his own comfort and desires."
-          }
-        ]
-      }
-    ],
-    "props": [
-      {
-        "name": "Lyra's Ancestral Pendant",
-        "appearance": "An intricately carved silver pendant, depicting an ancient North African symbol resembling a stylized ankh intertwined with a crescent moon. It has a hidden clasp.",
-        "narrative_significance": "Symbolizes Lyra's lost heritage and serves as a literal key to the rebellion's hidden network and a message from her ancestors.",
-        "key_scene_usage": "Lyra fiddles with it during her performance, a subtle act of defiance. Later, Kaelus discovers it contains a miniature, coded map to the Catacombs, revealing a meeting point."
-      }
-    ],
-    "visual_action": "Movie Title: Gladius & Grace: The Roman Rhapsody. Genre: Musical / Dance. Scene Title: Whispers in Marble. Set Location: Imperial Atrium of Senator Valerius's Villa. Lighting Cues: The light shifts to create a stark contrast between Valerius's illuminated figure and Lyra slightly in shadow, emphasizing power imbalance. Characters present: SENATOR VALERIUS CORVUS (50, Male, 5'9\", 220 lbs, Pale skin, Roman/European descent, in 'Patrician's Robe' costume), LYRA (22, Female, 5'6\", 120 lbs, Olive skin, North African/Berber descent, in 'Chains of Art' costume). Props used: None visible. Camera Angle: Two-shot, medium. Staging Action: Valerius leans forward, a predatory smile on his lips, making a veiled proposition to Lyra, who recoils slightly, her composure barely held.",
-    "still_frame_prompt": {
-      "aspect_ratio": "16:9",
-      "render_style": "Photorealistic 8k Cinematic Movie Still",
-      "film_genre": "Musical / Dance",
-      "movie_title": "Gladius & Grace: The Roman Rhapsody",
-      "subject_and_action": "Movie Title: Gladius & Grace: The Roman Rhapsody. Genre: Musical / Dance. Scene Title: Whispers in Marble. Set Location: Imperial Atrium of Senator Valerius's Villa. Lighting Cues: The light shifts to create a stark contrast between Valerius's illuminated figure and Lyra slightly in shadow, emphasizing power imbalance. Characters present: SENATOR VALERIUS CORVUS (50, Male, 5'9\", 220 lbs, Pale skin, Roman/European descent, in 'Patrician's Robe' costume), LYRA (22, Female, 5'6\", 120 lbs, Olive skin, North African/Berber descent, in 'Chains of Art' costume). Props used: None visible. Camera Angle: Two-shot, medium. Staging Action: Valerius leans forward, a predatory smile on his lips, making a veiled proposition to Lyra, who recoils slightly, her composure barely held.",
-      "set_environment": {
-        "location": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-        "camera_angles_guidance": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-      },
-      "camera_specs": {
-        "angle_and_lens": "Two-shot, medium.",
-        "depth_of_field": "Cinematic shallow depth of field with sharp focal plane"
-      },
-      "characters_in_frame": [
-        {
-          "name": "Lyra of Cyrene",
-          "role": "Protagonist, a gifted enslaved dancer.",
-          "age": "22",
-          "sex": "Female",
-          "height": "5'6\"",
-          "weight": "120 lbs",
-          "skin_tone": "Olive",
-          "racial_descent": "North African (Berber/Egyptian ancestry)",
-          "physical_description": "A 22-year-old North African (Berber/Egyptian ancestry) female (standing 5'6\" tall, weighing 120 lbs) with Olive skin tone. Features Lean, agile dancer's physique with expressive dark eyes. Her long, dark hair is often intricately braided. Despite her captivity, her movements retain an inherent dignity and power.",
-          "traits": "Resilient, passionate, graceful, defiant, observant, empathetic.",
-          "costume": "Chains of Art: A simple yet elegant flowing tunic of cream linen, with subtle gold embroidery at the neck and cuffs. It allows for full freedom of movement while hinting at the confines of her servitude.",
-          "costume_materials": "Cream linen, subtle gold thread embroidery, soft leather sandals.",
-          "costume_thematic_significance": "Represents her role as an enslaved artist, bound by her circumstances but expressing beauty within them.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        },
-        {
-          "name": "Senator Valerius Corvus",
-          "role": "Antagonist, a corrupt Roman patrician.",
-          "age": "50",
-          "sex": "Male",
-          "height": "5'9\"",
-          "weight": "220 lbs",
-          "skin_tone": "Pale",
-          "racial_descent": "Roman (European)",
-          "physical_description": "A 50-year-old Roman (European) male (standing 5'9\" tall, weighing 220 lbs) with Pale skin tone. Features Portly and well-fed, with heavy-lidded eyes that frequently betray his boredom or sinister intentions. His fingers are adorned with numerous elaborate rings, and his toga is always impeccably draped.",
-          "traits": "Arrogant, cruel, manipulative, hedonistic, possessive, shrewd.",
-          "costume": "Patrician's Robe: A voluminous toga of the finest white wool draped over a tunic of deep imperial purple, adorned with heavy gold brooches and a large signet ring. Exudes authority and opulence.",
-          "costume_materials": "Finest white wool, imperial purple silk, heavy gold, emerald and ruby jewelry.",
-          "costume_thematic_significance": "Represents his immense power, wealth, and status within Roman society, a symbol of the empire's peak.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        }
-      ],
-      "key_props": [
-        {
-          "name": "Lyra's Ancestral Pendant",
-          "appearance": "An intricately carved silver pendant, depicting an ancient North African symbol resembling a stylized ankh intertwined with a crescent moon. It has a hidden clasp.",
-          "narrative_significance": "Symbolizes Lyra's lost heritage and serves as a literal key to the rebellion's hidden network and a message from her ancestors.",
-          "key_scene_usage": "Lyra fiddles with it during her performance, a subtle act of defiance. Later, Kaelus discovers it contains a miniature, coded map to the Catacombs, revealing a meeting point."
-        }
-      ],
-      "negative_prompt": "no text, no speech bubbles, no dialogue subtitles, no logos, no captions, no watermarks, no frame borders"
-    },
-    "video_motion_prompt": {
-      "target_generator": "Runway Gen-3 Alpha / Luma Dream Machine / Sora / Kling AI / Pika",
-      "timecode": "00:32 - 00:37",
-      "duration_seconds": 5,
-      "shot_heading": "OMINOUS PROPOSAL",
-      "camera_motion": {
-        "movement_type": "Two-shot, medium.",
-        "speed_and_pacing": "Smooth cinematic camera movement tailored to 5s shot duration"
-      },
-      "physical_action_and_staging": "Valerius leans forward, a predatory smile on his lips, making a veiled proposition to Lyra, who recoils slightly, her composure barely held.",
-      "environment_and_atmosphere": {
-        "set_name": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area."
-      },
-      "motion_physics": {
-        "fps": 24,
-        "motion_blur": "natural cinematic motion blur",
-        "facial_gestures": "expressive natural character physics and realistic eye micro-movements",
-        "quality": "8k photorealistic video animation"
-      }
-    }
-  },
-  {
-    "shot_number": 7,
-    "shot_heading": "INT/EXT. THE IMPERIAL ATRIUM - REACTION CLOSE-UP",
-    "timecode": "00:37 - 00:45",
-    "duration_seconds": 8,
-    "camera": {
-      "lens_and_angle": "85mm Prime Lens, f/1.4 Tight Close-Up",
-      "motion": "Cinematic tracking motion over 8s shot window"
-    },
-    "environment": {
-      "set_name": "The Imperial Atrium",
-      "location_type": "Interior (Patrician Villa)",
-      "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-      "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-      "camera_angles": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-    },
-    "characters": [
-      {
-        "name": "Lyra of Cyrene",
-        "role": "Protagonist, a gifted enslaved dancer.",
-        "age": "22",
-        "sex": "Female",
-        "height": "5'6\"",
-        "weight": "120 lbs",
-        "skin_tone": "Olive",
-        "racial_descent": "North African (Berber/Egyptian ancestry)",
-        "physical_description": "A 22-year-old North African (Berber/Egyptian ancestry) female (standing 5'6\" tall, weighing 120 lbs) with Olive skin tone. Features Lean, agile dancer's physique with expressive dark eyes. Her long, dark hair is often intricately braided. Despite her captivity, her movements retain an inherent dignity and power.",
-        "personality_traits": "Resilient, passionate, graceful, defiant, observant, empathetic.",
-        "costumes": [
-          {
-            "name": "Chains of Art",
-            "description": "A simple yet elegant flowing tunic of cream linen, with subtle gold embroidery at the neck and cuffs. It allows for full freedom of movement while hinting at the confines of her servitude.",
-            "materials_and_colors": "Cream linen, subtle gold thread embroidery, soft leather sandals.",
-            "thematic_significance": "Represents her role as an enslaved artist, bound by her circumstances but expressing beauty within them."
-          },
-          {
-            "name": "Desert Bloom",
-            "description": "An ethereal gown of sheer, vibrant fabrics, layered and flowing, adorned with delicate beadwork and a headpiece inspired by desert flora. Designed for a captivating, solo performance.",
-            "materials_and_colors": "Sheer silk in ochre, deep terracotta, and azure, with intricate brass and glass beadwork.",
-            "thematic_significance": "Symbolizes her hidden heritage and the blossoming of her true artistic spirit, even in a foreign land."
-          },
-          {
-            "name": "Shadow Weaver",
-            "description": "Dark, practical, close-fitting tunic and trousers, with a hooded cloak. Designed for stealth and movement through Rome's shadowy backstreets.",
-            "materials_and_colors": "Dark grey wool, deep indigo linen, practical leather boots.",
-            "thematic_significance": "Reflects her clandestine activities and her growing involvement in the rebellion, moving unseen through the city."
-          },
-          {
-            "name": "Imperial Masque",
-            "description": "An opulent, heavily embroidered toga-style dress in gold and deep purple, adorned with precious stones and a regal headpiece. For formal performances before the Roman elite.",
-            "materials_and_colors": "Gold brocade, deep imperial purple silk, emeralds, rubies, and intricate golden filigree.",
-            "thematic_significance": "Her forced persona as a Roman entertainer, masking her true identity and rebellious spirit behind a facade of imperial grandeur."
-          },
-          {
-            "name": "Wings of Freedom",
-            "description": "A lightweight, flowing costume made from multiple layers of translucent fabric, designed to create a visual 'wing' effect during movement. Bright and unrestrictive.",
-            "materials_and_colors": "Lightweight, sheer white and sky-blue silk, silver accents, bare feet.",
-            "thematic_significance": "Symbolizes her ultimate quest for freedom and her aspiration to transcend her enslaved status, embodying hope and rebellion."
-          }
-        ]
-      }
-    ],
-    "props": [
-      {
-        "name": "Lyra's Ancestral Pendant",
-        "appearance": "An intricately carved silver pendant, depicting an ancient North African symbol resembling a stylized ankh intertwined with a crescent moon. It has a hidden clasp.",
-        "narrative_significance": "Symbolizes Lyra's lost heritage and serves as a literal key to the rebellion's hidden network and a message from her ancestors.",
-        "key_scene_usage": "Lyra fiddles with it during her performance, a subtle act of defiance. Later, Kaelus discovers it contains a miniature, coded map to the Catacombs, revealing a meeting point."
-      }
-    ],
-    "visual_action": "char001 shifts focus as light flickers across their face, reacting with intense focus as dramatic shadows cross the frame.",
-    "still_frame_prompt": {
-      "aspect_ratio": "16:9",
-      "render_style": "Photorealistic 8k Cinematic Movie Still",
-      "film_genre": "Musical / Dance",
-      "movie_title": "Gladius & Grace: The Roman Rhapsody",
-      "subject_and_action": "char001 shifts focus as light flickers across their face, reacting with intense focus as dramatic shadows cross the frame.",
-      "set_environment": {
-        "location": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-        "camera_angles_guidance": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-      },
-      "camera_specs": {
-        "angle_and_lens": "85mm Prime Lens, f/1.4 Tight Close-Up",
-        "depth_of_field": "Cinematic shallow depth of field with sharp focal plane"
-      },
-      "characters_in_frame": [
-        {
-          "name": "Lyra of Cyrene",
-          "role": "Protagonist, a gifted enslaved dancer.",
-          "age": "22",
-          "sex": "Female",
-          "height": "5'6\"",
-          "weight": "120 lbs",
-          "skin_tone": "Olive",
-          "racial_descent": "North African (Berber/Egyptian ancestry)",
-          "physical_description": "A 22-year-old North African (Berber/Egyptian ancestry) female (standing 5'6\" tall, weighing 120 lbs) with Olive skin tone. Features Lean, agile dancer's physique with expressive dark eyes. Her long, dark hair is often intricately braided. Despite her captivity, her movements retain an inherent dignity and power.",
-          "traits": "Resilient, passionate, graceful, defiant, observant, empathetic.",
-          "costume": "Chains of Art: A simple yet elegant flowing tunic of cream linen, with subtle gold embroidery at the neck and cuffs. It allows for full freedom of movement while hinting at the confines of her servitude.",
-          "costume_materials": "Cream linen, subtle gold thread embroidery, soft leather sandals.",
-          "costume_thematic_significance": "Represents her role as an enslaved artist, bound by her circumstances but expressing beauty within them.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        }
-      ],
-      "key_props": [
-        {
-          "name": "Lyra's Ancestral Pendant",
-          "appearance": "An intricately carved silver pendant, depicting an ancient North African symbol resembling a stylized ankh intertwined with a crescent moon. It has a hidden clasp.",
-          "narrative_significance": "Symbolizes Lyra's lost heritage and serves as a literal key to the rebellion's hidden network and a message from her ancestors.",
-          "key_scene_usage": "Lyra fiddles with it during her performance, a subtle act of defiance. Later, Kaelus discovers it contains a miniature, coded map to the Catacombs, revealing a meeting point."
-        }
-      ],
-      "negative_prompt": "no text, no speech bubbles, no dialogue subtitles, no logos, no captions, no watermarks, no frame borders"
-    },
-    "video_motion_prompt": {
-      "target_generator": "Runway Gen-3 Alpha / Luma Dream Machine / Sora / Kling AI / Pika",
-      "timecode": "00:37 - 00:45",
-      "duration_seconds": 8,
-      "shot_heading": "INT/EXT. THE IMPERIAL ATRIUM - REACTION CLOSE-UP",
-      "camera_motion": {
-        "movement_type": "85mm Prime Lens, f/1.4 Tight Close-Up",
-        "speed_and_pacing": "Smooth cinematic camera movement tailored to 8s shot duration"
-      },
-      "physical_action_and_staging": "char001 shifts focus as light flickers across their face, reacting with intense focus as dramatic shadows cross the frame.",
-      "environment_and_atmosphere": {
-        "set_name": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area."
-      },
-      "motion_physics": {
-        "fps": 24,
-        "motion_blur": "natural cinematic motion blur",
-        "facial_gestures": "expressive natural character physics and realistic eye micro-movements",
-        "quality": "8k photorealistic video animation"
-      }
-    }
-  },
-  {
-    "shot_number": 8,
-    "shot_heading": "INT/EXT. THE IMPERIAL ATRIUM - PROP INSERT SHOT",
-    "timecode": "00:45 - 00:48",
-    "duration_seconds": 3,
-    "camera": {
-      "lens_and_angle": "100mm Macro Lens, Extreme Close-Up",
-      "motion": "Cinematic tracking motion over 3s shot window"
-    },
-    "environment": {
-      "set_name": "The Imperial Atrium",
-      "location_type": "Interior (Patrician Villa)",
-      "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-      "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-      "camera_angles": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-    },
-    "characters": [
-      {
-        "name": "Lyra of Cyrene",
-        "role": "Protagonist, a gifted enslaved dancer.",
-        "age": "22",
-        "sex": "Female",
-        "height": "5'6\"",
-        "weight": "120 lbs",
-        "skin_tone": "Olive",
-        "racial_descent": "North African (Berber/Egyptian ancestry)",
-        "physical_description": "A 22-year-old North African (Berber/Egyptian ancestry) female (standing 5'6\" tall, weighing 120 lbs) with Olive skin tone. Features Lean, agile dancer's physique with expressive dark eyes. Her long, dark hair is often intricately braided. Despite her captivity, her movements retain an inherent dignity and power.",
-        "personality_traits": "Resilient, passionate, graceful, defiant, observant, empathetic.",
-        "costumes": [
-          {
-            "name": "Chains of Art",
-            "description": "A simple yet elegant flowing tunic of cream linen, with subtle gold embroidery at the neck and cuffs. It allows for full freedom of movement while hinting at the confines of her servitude.",
-            "materials_and_colors": "Cream linen, subtle gold thread embroidery, soft leather sandals.",
-            "thematic_significance": "Represents her role as an enslaved artist, bound by her circumstances but expressing beauty within them."
-          },
-          {
-            "name": "Desert Bloom",
-            "description": "An ethereal gown of sheer, vibrant fabrics, layered and flowing, adorned with delicate beadwork and a headpiece inspired by desert flora. Designed for a captivating, solo performance.",
-            "materials_and_colors": "Sheer silk in ochre, deep terracotta, and azure, with intricate brass and glass beadwork.",
-            "thematic_significance": "Symbolizes her hidden heritage and the blossoming of her true artistic spirit, even in a foreign land."
-          },
-          {
-            "name": "Shadow Weaver",
-            "description": "Dark, practical, close-fitting tunic and trousers, with a hooded cloak. Designed for stealth and movement through Rome's shadowy backstreets.",
-            "materials_and_colors": "Dark grey wool, deep indigo linen, practical leather boots.",
-            "thematic_significance": "Reflects her clandestine activities and her growing involvement in the rebellion, moving unseen through the city."
-          },
-          {
-            "name": "Imperial Masque",
-            "description": "An opulent, heavily embroidered toga-style dress in gold and deep purple, adorned with precious stones and a regal headpiece. For formal performances before the Roman elite.",
-            "materials_and_colors": "Gold brocade, deep imperial purple silk, emeralds, rubies, and intricate golden filigree.",
-            "thematic_significance": "Her forced persona as a Roman entertainer, masking her true identity and rebellious spirit behind a facade of imperial grandeur."
-          },
-          {
-            "name": "Wings of Freedom",
-            "description": "A lightweight, flowing costume made from multiple layers of translucent fabric, designed to create a visual 'wing' effect during movement. Bright and unrestrictive.",
-            "materials_and_colors": "Lightweight, sheer white and sky-blue silk, silver accents, bare feet.",
-            "thematic_significance": "Symbolizes her ultimate quest for freedom and her aspiration to transcend her enslaved status, embodying hope and rebellion."
-          }
-        ]
-      },
-      {
-        "name": "Senator Valerius Corvus",
-        "role": "Antagonist, a corrupt Roman patrician.",
-        "age": "50",
-        "sex": "Male",
-        "height": "5'9\"",
-        "weight": "220 lbs",
-        "skin_tone": "Pale",
-        "racial_descent": "Roman (European)",
-        "physical_description": "A 50-year-old Roman (European) male (standing 5'9\" tall, weighing 220 lbs) with Pale skin tone. Features Portly and well-fed, with heavy-lidded eyes that frequently betray his boredom or sinister intentions. His fingers are adorned with numerous elaborate rings, and his toga is always impeccably draped.",
-        "personality_traits": "Arrogant, cruel, manipulative, hedonistic, possessive, shrewd.",
-        "costumes": [
-          {
-            "name": "Patrician's Robe",
-            "description": "A voluminous toga of the finest white wool draped over a tunic of deep imperial purple, adorned with heavy gold brooches and a large signet ring. Exudes authority and opulence.",
-            "materials_and_colors": "Finest white wool, imperial purple silk, heavy gold, emerald and ruby jewelry.",
-            "thematic_significance": "Represents his immense power, wealth, and status within Roman society, a symbol of the empire's peak."
-          },
-          {
-            "name": "Feast Garb",
-            "description": "A looser, more casually opulent tunic and lighter toga in rich, embroidered fabrics, designed for comfort during lavish banquets and private entertainment.",
-            "materials_and_colors": "Embroidered crimson silk, gold thread, soft kid leather slippers.",
-            "thematic_significance": "Highlights his gluttony and hedonism, his indulgence in the empire's decadent pleasures."
-          },
-          {
-            "name": "Senatorial Authority",
-            "description": "A formal toga with the broad purple stripe of a senator, worn with an air of cold calculation. For official Senate proceedings and public appearances.",
-            "materials_and_colors": "Crisp white linen, broad imperial purple stripe, polished ivory accessories.",
-            "thematic_significance": "Symbolizes his political influence and the corrupt power he wields within the Roman government."
-          },
-          {
-            "name": "Midnight Intrigue",
-            "description": "A dark, rich cloak made of heavy wool, designed to conceal his identity during shadowy dealings and clandestine meetings in the city's underbelly.",
-            "materials_and_colors": "Deepest black wool, hidden silk lining, minimal adornment.",
-            "thematic_significance": "Represents his manipulative and ruthless nature, engaging in illicit activities to maintain his control."
-          },
-          {
-            "name": "Decadent Slumber",
-            "description": "Flowing silk loungewear in muted, luxurious tones, worn in his private chambers, accompanied by a heavy gold necklace and rings.",
-            "materials_and_colors": "Softest navy blue silk, silver-grey embroidery, heavy gold chains.",
-            "thematic_significance": "Reveals his ultimate self-indulgence and disregard for anything beyond his own comfort and desires."
-          }
-        ]
-      },
-      {
-        "name": "Aelius the Lydian",
-        "role": "Mentor, a wise elder and musician.",
-        "age": "68",
-        "sex": "Male",
-        "height": "5'5\"",
-        "weight": "145 lbs",
-        "skin_tone": "Tanned",
-        "racial_descent": "Anatolian (Lydian/Greek ancestry)",
-        "physical_description": "A 68-year-old Anatolian (Lydian/Greek ancestry) male (standing 5'5\" tall, weighing 145 lbs) with Tanned skin tone. Features Frail but dignified, with a gentle, knowing gaze. His long grey beard and hair frame a face etched with years of contemplation. He often carries a small, exquisitely crafted lyre.",
-        "personality_traits": "Calm, insightful, empathetic, melancholic, patient, wise.",
-        "costumes": [
-          {
-            "name": "Scholar's Drape",
-            "description": "A simple, worn tunic of undyed wool, with a darker, heavier cloak draped over his shoulders. Practical and unassuming, reflecting his humble servitude and scholarly pursuits.",
-            "materials_and_colors": "Coarse grey and brown wool, simple leather belt.",
-            "thematic_significance": "Represents his quiet wisdom and his role as a keeper of ancient knowledge, blending into the background."
-          },
-          {
-            "name": "Musician's Robe",
-            "description": "A more decorated but still modest robe, woven with subtle geometric patterns in muted colors. For formal performances or when teaching his craft.",
-            "materials_and_colors": "Fine beige linen, subtle purple and ochre embroidery, soft sandals.",
-            "thematic_significance": "Highlights his role as an artist and educator, using his craft to subtly preserve cultural identity."
-          },
-          {
-            "name": "Tutor's Attire",
-            "description": "Plain, functional attire suitable for long hours of teaching and quiet study, made of sturdy, comfortable fabrics.",
-            "materials_and_colors": "Off-white cotton, a simple leather satchel, wooden staff.",
-            "thematic_significance": "Emphasizes his dedication to passing on knowledge and fostering the talents of others."
-          },
-          {
-            "name": "Temple Weaver",
-            "description": "A long, flowing white linen robe, with intricate, almost hieroglyphic patterns woven into the fabric. For moments of deep philosophical discussion or spiritual reflection.",
-            "materials_and_colors": "Pure white linen, subtle gold and silver thread, intricate Eastern motifs.",
-            "thematic_significance": "Symbolizes his connection to ancient wisdom and spiritual heritage, a link to a forgotten, purer past."
-          },
-          {
-            "name": "Sage's Farewell",
-            "description": "A light, unadorned robe, signifying detachment and peace, possibly worn towards the story's climax or after a significant sacrifice.",
-            "materials_and_colors": "Simple, undyed linen, very light and flowing, symbolic of letting go.",
-            "thematic_significance": "Represents his acceptance of fate and his role in guiding the younger generation towards a future he may not see."
-          }
-        ]
-      }
-    ],
-    "props": [
-      {
-        "name": "Lyra's Ancestral Pendant",
-        "appearance": "An intricately carved silver pendant, depicting an ancient North African symbol resembling a stylized ankh intertwined with a crescent moon. It has a hidden clasp.",
-        "narrative_significance": "Symbolizes Lyra's lost heritage and serves as a literal key to the rebellion's hidden network and a message from her ancestors.",
-        "key_scene_usage": "Lyra fiddles with it during her performance, a subtle act of defiance. Later, Kaelus discovers it contains a miniature, coded map to the Catacombs, revealing a meeting point."
-      }
-    ],
-    "visual_action": "Detailed macro shot of prop001 catching key reflections, revealing intricate surface etchings and glowing activation light.",
-    "still_frame_prompt": {
-      "aspect_ratio": "16:9",
-      "render_style": "Photorealistic 8k Cinematic Movie Still",
-      "film_genre": "Musical / Dance",
-      "movie_title": "Gladius & Grace: The Roman Rhapsody",
-      "subject_and_action": "Detailed macro shot of prop001 catching key reflections, revealing intricate surface etchings and glowing activation light.",
-      "set_environment": {
-        "location": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-        "camera_angles_guidance": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-      },
-      "camera_specs": {
-        "angle_and_lens": "100mm Macro Lens, Extreme Close-Up",
-        "depth_of_field": "Cinematic shallow depth of field with sharp focal plane"
-      },
-      "characters_in_frame": [
-        {
-          "name": "Lyra of Cyrene",
-          "role": "Protagonist, a gifted enslaved dancer.",
-          "age": "22",
-          "sex": "Female",
-          "height": "5'6\"",
-          "weight": "120 lbs",
-          "skin_tone": "Olive",
-          "racial_descent": "North African (Berber/Egyptian ancestry)",
-          "physical_description": "A 22-year-old North African (Berber/Egyptian ancestry) female (standing 5'6\" tall, weighing 120 lbs) with Olive skin tone. Features Lean, agile dancer's physique with expressive dark eyes. Her long, dark hair is often intricately braided. Despite her captivity, her movements retain an inherent dignity and power.",
-          "traits": "Resilient, passionate, graceful, defiant, observant, empathetic.",
-          "costume": "Chains of Art: A simple yet elegant flowing tunic of cream linen, with subtle gold embroidery at the neck and cuffs. It allows for full freedom of movement while hinting at the confines of her servitude.",
-          "costume_materials": "Cream linen, subtle gold thread embroidery, soft leather sandals.",
-          "costume_thematic_significance": "Represents her role as an enslaved artist, bound by her circumstances but expressing beauty within them.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        },
-        {
-          "name": "Senator Valerius Corvus",
-          "role": "Antagonist, a corrupt Roman patrician.",
-          "age": "50",
-          "sex": "Male",
-          "height": "5'9\"",
-          "weight": "220 lbs",
-          "skin_tone": "Pale",
-          "racial_descent": "Roman (European)",
-          "physical_description": "A 50-year-old Roman (European) male (standing 5'9\" tall, weighing 220 lbs) with Pale skin tone. Features Portly and well-fed, with heavy-lidded eyes that frequently betray his boredom or sinister intentions. His fingers are adorned with numerous elaborate rings, and his toga is always impeccably draped.",
-          "traits": "Arrogant, cruel, manipulative, hedonistic, possessive, shrewd.",
-          "costume": "Patrician's Robe: A voluminous toga of the finest white wool draped over a tunic of deep imperial purple, adorned with heavy gold brooches and a large signet ring. Exudes authority and opulence.",
-          "costume_materials": "Finest white wool, imperial purple silk, heavy gold, emerald and ruby jewelry.",
-          "costume_thematic_significance": "Represents his immense power, wealth, and status within Roman society, a symbol of the empire's peak.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        },
-        {
-          "name": "Aelius the Lydian",
-          "role": "Mentor, a wise elder and musician.",
-          "age": "68",
-          "sex": "Male",
-          "height": "5'5\"",
-          "weight": "145 lbs",
-          "skin_tone": "Tanned",
-          "racial_descent": "Anatolian (Lydian/Greek ancestry)",
-          "physical_description": "A 68-year-old Anatolian (Lydian/Greek ancestry) male (standing 5'5\" tall, weighing 145 lbs) with Tanned skin tone. Features Frail but dignified, with a gentle, knowing gaze. His long grey beard and hair frame a face etched with years of contemplation. He often carries a small, exquisitely crafted lyre.",
-          "traits": "Calm, insightful, empathetic, melancholic, patient, wise.",
-          "costume": "Scholar's Drape: A simple, worn tunic of undyed wool, with a darker, heavier cloak draped over his shoulders. Practical and unassuming, reflecting his humble servitude and scholarly pursuits.",
-          "costume_materials": "Coarse grey and brown wool, simple leather belt.",
-          "costume_thematic_significance": "Represents his quiet wisdom and his role as a keeper of ancient knowledge, blending into the background.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        }
-      ],
-      "key_props": [
-        {
-          "name": "Lyra's Ancestral Pendant",
-          "appearance": "An intricately carved silver pendant, depicting an ancient North African symbol resembling a stylized ankh intertwined with a crescent moon. It has a hidden clasp.",
-          "narrative_significance": "Symbolizes Lyra's lost heritage and serves as a literal key to the rebellion's hidden network and a message from her ancestors.",
-          "key_scene_usage": "Lyra fiddles with it during her performance, a subtle act of defiance. Later, Kaelus discovers it contains a miniature, coded map to the Catacombs, revealing a meeting point."
-        }
-      ],
-      "negative_prompt": "no text, no speech bubbles, no dialogue subtitles, no logos, no captions, no watermarks, no frame borders"
-    },
-    "video_motion_prompt": {
-      "target_generator": "Runway Gen-3 Alpha / Luma Dream Machine / Sora / Kling AI / Pika",
-      "timecode": "00:45 - 00:48",
-      "duration_seconds": 3,
-      "shot_heading": "INT/EXT. THE IMPERIAL ATRIUM - PROP INSERT SHOT",
-      "camera_motion": {
-        "movement_type": "100mm Macro Lens, Extreme Close-Up",
-        "speed_and_pacing": "Smooth cinematic camera movement tailored to 3s shot duration"
-      },
-      "physical_action_and_staging": "Detailed macro shot of prop001 catching key reflections, revealing intricate surface etchings and glowing activation light.",
-      "environment_and_atmosphere": {
-        "set_name": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area."
-      },
-      "motion_physics": {
-        "fps": 24,
-        "motion_blur": "natural cinematic motion blur",
-        "facial_gestures": "expressive natural character physics and realistic eye micro-movements",
-        "quality": "8k photorealistic video animation"
-      }
-    }
-  },
-  {
-    "shot_number": 9,
-    "shot_heading": "INT/EXT. THE IMPERIAL ATRIUM - LOW ANGLE HERO FRAMING",
-    "timecode": "00:48 - 00:56",
-    "duration_seconds": 8,
-    "camera": {
-      "lens_and_angle": "24mm Wide Lens, Low Angle Up-Tilt",
-      "motion": "Cinematic tracking motion over 8s shot window"
-    },
-    "environment": {
-      "set_name": "The Imperial Atrium",
-      "location_type": "Interior (Patrician Villa)",
-      "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-      "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-      "camera_angles": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-    },
-    "characters": [
-      {
-        "name": "Senator Valerius Corvus",
-        "role": "Antagonist, a corrupt Roman patrician.",
-        "age": "50",
-        "sex": "Male",
-        "height": "5'9\"",
-        "weight": "220 lbs",
-        "skin_tone": "Pale",
-        "racial_descent": "Roman (European)",
-        "physical_description": "A 50-year-old Roman (European) male (standing 5'9\" tall, weighing 220 lbs) with Pale skin tone. Features Portly and well-fed, with heavy-lidded eyes that frequently betray his boredom or sinister intentions. His fingers are adorned with numerous elaborate rings, and his toga is always impeccably draped.",
-        "personality_traits": "Arrogant, cruel, manipulative, hedonistic, possessive, shrewd.",
-        "costumes": [
-          {
-            "name": "Patrician's Robe",
-            "description": "A voluminous toga of the finest white wool draped over a tunic of deep imperial purple, adorned with heavy gold brooches and a large signet ring. Exudes authority and opulence.",
-            "materials_and_colors": "Finest white wool, imperial purple silk, heavy gold, emerald and ruby jewelry.",
-            "thematic_significance": "Represents his immense power, wealth, and status within Roman society, a symbol of the empire's peak."
-          },
-          {
-            "name": "Feast Garb",
-            "description": "A looser, more casually opulent tunic and lighter toga in rich, embroidered fabrics, designed for comfort during lavish banquets and private entertainment.",
-            "materials_and_colors": "Embroidered crimson silk, gold thread, soft kid leather slippers.",
-            "thematic_significance": "Highlights his gluttony and hedonism, his indulgence in the empire's decadent pleasures."
-          },
-          {
-            "name": "Senatorial Authority",
-            "description": "A formal toga with the broad purple stripe of a senator, worn with an air of cold calculation. For official Senate proceedings and public appearances.",
-            "materials_and_colors": "Crisp white linen, broad imperial purple stripe, polished ivory accessories.",
-            "thematic_significance": "Symbolizes his political influence and the corrupt power he wields within the Roman government."
-          },
-          {
-            "name": "Midnight Intrigue",
-            "description": "A dark, rich cloak made of heavy wool, designed to conceal his identity during shadowy dealings and clandestine meetings in the city's underbelly.",
-            "materials_and_colors": "Deepest black wool, hidden silk lining, minimal adornment.",
-            "thematic_significance": "Represents his manipulative and ruthless nature, engaging in illicit activities to maintain his control."
-          },
-          {
-            "name": "Decadent Slumber",
-            "description": "Flowing silk loungewear in muted, luxurious tones, worn in his private chambers, accompanied by a heavy gold necklace and rings.",
-            "materials_and_colors": "Softest navy blue silk, silver-grey embroidery, heavy gold chains.",
-            "thematic_significance": "Reveals his ultimate self-indulgence and disregard for anything beyond his own comfort and desires."
-          }
-        ]
-      }
-    ],
-    "props": [
-      {
-        "name": "Lyra's Ancestral Pendant",
-        "appearance": "An intricately carved silver pendant, depicting an ancient North African symbol resembling a stylized ankh intertwined with a crescent moon. It has a hidden clasp.",
-        "narrative_significance": "Symbolizes Lyra's lost heritage and serves as a literal key to the rebellion's hidden network and a message from her ancestors.",
-        "key_scene_usage": "Lyra fiddles with it during her performance, a subtle act of defiance. Later, Kaelus discovers it contains a miniature, coded map to the Catacombs, revealing a meeting point."
-      }
-    ],
-    "visual_action": "char003 steps forward into the key light, standing tall as silhouetted atmospheric smoke drifts past.",
-    "still_frame_prompt": {
-      "aspect_ratio": "16:9",
-      "render_style": "Photorealistic 8k Cinematic Movie Still",
-      "film_genre": "Musical / Dance",
-      "movie_title": "Gladius & Grace: The Roman Rhapsody",
-      "subject_and_action": "char003 steps forward into the key light, standing tall as silhouetted atmospheric smoke drifts past.",
-      "set_environment": {
-        "location": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-        "camera_angles_guidance": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-      },
-      "camera_specs": {
-        "angle_and_lens": "24mm Wide Lens, Low Angle Up-Tilt",
-        "depth_of_field": "Cinematic shallow depth of field with sharp focal plane"
-      },
-      "characters_in_frame": [
-        {
-          "name": "Senator Valerius Corvus",
-          "role": "Antagonist, a corrupt Roman patrician.",
-          "age": "50",
-          "sex": "Male",
-          "height": "5'9\"",
-          "weight": "220 lbs",
-          "skin_tone": "Pale",
-          "racial_descent": "Roman (European)",
-          "physical_description": "A 50-year-old Roman (European) male (standing 5'9\" tall, weighing 220 lbs) with Pale skin tone. Features Portly and well-fed, with heavy-lidded eyes that frequently betray his boredom or sinister intentions. His fingers are adorned with numerous elaborate rings, and his toga is always impeccably draped.",
-          "traits": "Arrogant, cruel, manipulative, hedonistic, possessive, shrewd.",
-          "costume": "Patrician's Robe: A voluminous toga of the finest white wool draped over a tunic of deep imperial purple, adorned with heavy gold brooches and a large signet ring. Exudes authority and opulence.",
-          "costume_materials": "Finest white wool, imperial purple silk, heavy gold, emerald and ruby jewelry.",
-          "costume_thematic_significance": "Represents his immense power, wealth, and status within Roman society, a symbol of the empire's peak.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        }
-      ],
-      "key_props": [
-        {
-          "name": "Lyra's Ancestral Pendant",
-          "appearance": "An intricately carved silver pendant, depicting an ancient North African symbol resembling a stylized ankh intertwined with a crescent moon. It has a hidden clasp.",
-          "narrative_significance": "Symbolizes Lyra's lost heritage and serves as a literal key to the rebellion's hidden network and a message from her ancestors.",
-          "key_scene_usage": "Lyra fiddles with it during her performance, a subtle act of defiance. Later, Kaelus discovers it contains a miniature, coded map to the Catacombs, revealing a meeting point."
-        }
-      ],
-      "negative_prompt": "no text, no speech bubbles, no dialogue subtitles, no logos, no captions, no watermarks, no frame borders"
-    },
-    "video_motion_prompt": {
-      "target_generator": "Runway Gen-3 Alpha / Luma Dream Machine / Sora / Kling AI / Pika",
-      "timecode": "00:48 - 00:56",
-      "duration_seconds": 8,
-      "shot_heading": "INT/EXT. THE IMPERIAL ATRIUM - LOW ANGLE HERO FRAMING",
-      "camera_motion": {
-        "movement_type": "24mm Wide Lens, Low Angle Up-Tilt",
-        "speed_and_pacing": "Smooth cinematic camera movement tailored to 8s shot duration"
-      },
-      "physical_action_and_staging": "char003 steps forward into the key light, standing tall as silhouetted atmospheric smoke drifts past.",
-      "environment_and_atmosphere": {
-        "set_name": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area."
-      },
-      "motion_physics": {
-        "fps": 24,
-        "motion_blur": "natural cinematic motion blur",
-        "facial_gestures": "expressive natural character physics and realistic eye micro-movements",
-        "quality": "8k photorealistic video animation"
-      }
-    }
-  },
-  {
-    "shot_number": 10,
-    "shot_heading": "INT/EXT. THE IMPERIAL ATRIUM - HIGH ANGLE ENVIRONMENT OVERVIEW",
-    "timecode": "00:56 - 01:04",
-    "duration_seconds": 8,
-    "camera": {
-      "lens_and_angle": "18mm Ultra-Wide, Crane Overhead Shot",
-      "motion": "Cinematic tracking motion over 8s shot window"
-    },
-    "environment": {
-      "set_name": "The Imperial Atrium",
-      "location_type": "Interior (Patrician Villa)",
-      "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-      "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-      "camera_angles": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-    },
-    "characters": [
-      {
-        "name": "Lyra of Cyrene",
-        "role": "Protagonist, a gifted enslaved dancer.",
-        "age": "22",
-        "sex": "Female",
-        "height": "5'6\"",
-        "weight": "120 lbs",
-        "skin_tone": "Olive",
-        "racial_descent": "North African (Berber/Egyptian ancestry)",
-        "physical_description": "A 22-year-old North African (Berber/Egyptian ancestry) female (standing 5'6\" tall, weighing 120 lbs) with Olive skin tone. Features Lean, agile dancer's physique with expressive dark eyes. Her long, dark hair is often intricately braided. Despite her captivity, her movements retain an inherent dignity and power.",
-        "personality_traits": "Resilient, passionate, graceful, defiant, observant, empathetic.",
-        "costumes": [
-          {
-            "name": "Chains of Art",
-            "description": "A simple yet elegant flowing tunic of cream linen, with subtle gold embroidery at the neck and cuffs. It allows for full freedom of movement while hinting at the confines of her servitude.",
-            "materials_and_colors": "Cream linen, subtle gold thread embroidery, soft leather sandals.",
-            "thematic_significance": "Represents her role as an enslaved artist, bound by her circumstances but expressing beauty within them."
-          },
-          {
-            "name": "Desert Bloom",
-            "description": "An ethereal gown of sheer, vibrant fabrics, layered and flowing, adorned with delicate beadwork and a headpiece inspired by desert flora. Designed for a captivating, solo performance.",
-            "materials_and_colors": "Sheer silk in ochre, deep terracotta, and azure, with intricate brass and glass beadwork.",
-            "thematic_significance": "Symbolizes her hidden heritage and the blossoming of her true artistic spirit, even in a foreign land."
-          },
-          {
-            "name": "Shadow Weaver",
-            "description": "Dark, practical, close-fitting tunic and trousers, with a hooded cloak. Designed for stealth and movement through Rome's shadowy backstreets.",
-            "materials_and_colors": "Dark grey wool, deep indigo linen, practical leather boots.",
-            "thematic_significance": "Reflects her clandestine activities and her growing involvement in the rebellion, moving unseen through the city."
-          },
-          {
-            "name": "Imperial Masque",
-            "description": "An opulent, heavily embroidered toga-style dress in gold and deep purple, adorned with precious stones and a regal headpiece. For formal performances before the Roman elite.",
-            "materials_and_colors": "Gold brocade, deep imperial purple silk, emeralds, rubies, and intricate golden filigree.",
-            "thematic_significance": "Her forced persona as a Roman entertainer, masking her true identity and rebellious spirit behind a facade of imperial grandeur."
-          },
-          {
-            "name": "Wings of Freedom",
-            "description": "A lightweight, flowing costume made from multiple layers of translucent fabric, designed to create a visual 'wing' effect during movement. Bright and unrestrictive.",
-            "materials_and_colors": "Lightweight, sheer white and sky-blue silk, silver accents, bare feet.",
-            "thematic_significance": "Symbolizes her ultimate quest for freedom and her aspiration to transcend her enslaved status, embodying hope and rebellion."
-          }
-        ]
-      },
-      {
-        "name": "Senator Valerius Corvus",
-        "role": "Antagonist, a corrupt Roman patrician.",
-        "age": "50",
-        "sex": "Male",
-        "height": "5'9\"",
-        "weight": "220 lbs",
-        "skin_tone": "Pale",
-        "racial_descent": "Roman (European)",
-        "physical_description": "A 50-year-old Roman (European) male (standing 5'9\" tall, weighing 220 lbs) with Pale skin tone. Features Portly and well-fed, with heavy-lidded eyes that frequently betray his boredom or sinister intentions. His fingers are adorned with numerous elaborate rings, and his toga is always impeccably draped.",
-        "personality_traits": "Arrogant, cruel, manipulative, hedonistic, possessive, shrewd.",
-        "costumes": [
-          {
-            "name": "Patrician's Robe",
-            "description": "A voluminous toga of the finest white wool draped over a tunic of deep imperial purple, adorned with heavy gold brooches and a large signet ring. Exudes authority and opulence.",
-            "materials_and_colors": "Finest white wool, imperial purple silk, heavy gold, emerald and ruby jewelry.",
-            "thematic_significance": "Represents his immense power, wealth, and status within Roman society, a symbol of the empire's peak."
-          },
-          {
-            "name": "Feast Garb",
-            "description": "A looser, more casually opulent tunic and lighter toga in rich, embroidered fabrics, designed for comfort during lavish banquets and private entertainment.",
-            "materials_and_colors": "Embroidered crimson silk, gold thread, soft kid leather slippers.",
-            "thematic_significance": "Highlights his gluttony and hedonism, his indulgence in the empire's decadent pleasures."
-          },
-          {
-            "name": "Senatorial Authority",
-            "description": "A formal toga with the broad purple stripe of a senator, worn with an air of cold calculation. For official Senate proceedings and public appearances.",
-            "materials_and_colors": "Crisp white linen, broad imperial purple stripe, polished ivory accessories.",
-            "thematic_significance": "Symbolizes his political influence and the corrupt power he wields within the Roman government."
-          },
-          {
-            "name": "Midnight Intrigue",
-            "description": "A dark, rich cloak made of heavy wool, designed to conceal his identity during shadowy dealings and clandestine meetings in the city's underbelly.",
-            "materials_and_colors": "Deepest black wool, hidden silk lining, minimal adornment.",
-            "thematic_significance": "Represents his manipulative and ruthless nature, engaging in illicit activities to maintain his control."
-          },
-          {
-            "name": "Decadent Slumber",
-            "description": "Flowing silk loungewear in muted, luxurious tones, worn in his private chambers, accompanied by a heavy gold necklace and rings.",
-            "materials_and_colors": "Softest navy blue silk, silver-grey embroidery, heavy gold chains.",
-            "thematic_significance": "Reveals his ultimate self-indulgence and disregard for anything beyond his own comfort and desires."
-          }
-        ]
-      },
-      {
-        "name": "Aelius the Lydian",
-        "role": "Mentor, a wise elder and musician.",
-        "age": "68",
-        "sex": "Male",
-        "height": "5'5\"",
-        "weight": "145 lbs",
-        "skin_tone": "Tanned",
-        "racial_descent": "Anatolian (Lydian/Greek ancestry)",
-        "physical_description": "A 68-year-old Anatolian (Lydian/Greek ancestry) male (standing 5'5\" tall, weighing 145 lbs) with Tanned skin tone. Features Frail but dignified, with a gentle, knowing gaze. His long grey beard and hair frame a face etched with years of contemplation. He often carries a small, exquisitely crafted lyre.",
-        "personality_traits": "Calm, insightful, empathetic, melancholic, patient, wise.",
-        "costumes": [
-          {
-            "name": "Scholar's Drape",
-            "description": "A simple, worn tunic of undyed wool, with a darker, heavier cloak draped over his shoulders. Practical and unassuming, reflecting his humble servitude and scholarly pursuits.",
-            "materials_and_colors": "Coarse grey and brown wool, simple leather belt.",
-            "thematic_significance": "Represents his quiet wisdom and his role as a keeper of ancient knowledge, blending into the background."
-          },
-          {
-            "name": "Musician's Robe",
-            "description": "A more decorated but still modest robe, woven with subtle geometric patterns in muted colors. For formal performances or when teaching his craft.",
-            "materials_and_colors": "Fine beige linen, subtle purple and ochre embroidery, soft sandals.",
-            "thematic_significance": "Highlights his role as an artist and educator, using his craft to subtly preserve cultural identity."
-          },
-          {
-            "name": "Tutor's Attire",
-            "description": "Plain, functional attire suitable for long hours of teaching and quiet study, made of sturdy, comfortable fabrics.",
-            "materials_and_colors": "Off-white cotton, a simple leather satchel, wooden staff.",
-            "thematic_significance": "Emphasizes his dedication to passing on knowledge and fostering the talents of others."
-          },
-          {
-            "name": "Temple Weaver",
-            "description": "A long, flowing white linen robe, with intricate, almost hieroglyphic patterns woven into the fabric. For moments of deep philosophical discussion or spiritual reflection.",
-            "materials_and_colors": "Pure white linen, subtle gold and silver thread, intricate Eastern motifs.",
-            "thematic_significance": "Symbolizes his connection to ancient wisdom and spiritual heritage, a link to a forgotten, purer past."
-          },
-          {
-            "name": "Sage's Farewell",
-            "description": "A light, unadorned robe, signifying detachment and peace, possibly worn towards the story's climax or after a significant sacrifice.",
-            "materials_and_colors": "Simple, undyed linen, very light and flowing, symbolic of letting go.",
-            "thematic_significance": "Represents his acceptance of fate and his role in guiding the younger generation towards a future he may not see."
-          }
-        ]
-      }
-    ],
-    "props": [
-      {
-        "name": "Lyra's Ancestral Pendant",
-        "appearance": "An intricately carved silver pendant, depicting an ancient North African symbol resembling a stylized ankh intertwined with a crescent moon. It has a hidden clasp.",
-        "narrative_significance": "Symbolizes Lyra's lost heritage and serves as a literal key to the rebellion's hidden network and a message from her ancestors.",
-        "key_scene_usage": "Lyra fiddles with it during her performance, a subtle act of defiance. Later, Kaelus discovers it contains a miniature, coded map to the Catacombs, revealing a meeting point."
-      }
-    ],
-    "visual_action": "Sweeping high angle view revealing the full architectural scope of The Imperial Atrium under dramatic key lighting.",
-    "still_frame_prompt": {
-      "aspect_ratio": "16:9",
-      "render_style": "Photorealistic 8k Cinematic Movie Still",
-      "film_genre": "Musical / Dance",
-      "movie_title": "Gladius & Grace: The Roman Rhapsody",
-      "subject_and_action": "Sweeping high angle view revealing the full architectural scope of The Imperial Atrium under dramatic key lighting.",
-      "set_environment": {
-        "location": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-        "camera_angles_guidance": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-      },
-      "camera_specs": {
-        "angle_and_lens": "18mm Ultra-Wide, Crane Overhead Shot",
-        "depth_of_field": "Cinematic shallow depth of field with sharp focal plane"
-      },
-      "characters_in_frame": [
-        {
-          "name": "Lyra of Cyrene",
-          "role": "Protagonist, a gifted enslaved dancer.",
-          "age": "22",
-          "sex": "Female",
-          "height": "5'6\"",
-          "weight": "120 lbs",
-          "skin_tone": "Olive",
-          "racial_descent": "North African (Berber/Egyptian ancestry)",
-          "physical_description": "A 22-year-old North African (Berber/Egyptian ancestry) female (standing 5'6\" tall, weighing 120 lbs) with Olive skin tone. Features Lean, agile dancer's physique with expressive dark eyes. Her long, dark hair is often intricately braided. Despite her captivity, her movements retain an inherent dignity and power.",
-          "traits": "Resilient, passionate, graceful, defiant, observant, empathetic.",
-          "costume": "Chains of Art: A simple yet elegant flowing tunic of cream linen, with subtle gold embroidery at the neck and cuffs. It allows for full freedom of movement while hinting at the confines of her servitude.",
-          "costume_materials": "Cream linen, subtle gold thread embroidery, soft leather sandals.",
-          "costume_thematic_significance": "Represents her role as an enslaved artist, bound by her circumstances but expressing beauty within them.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        },
-        {
-          "name": "Senator Valerius Corvus",
-          "role": "Antagonist, a corrupt Roman patrician.",
-          "age": "50",
-          "sex": "Male",
-          "height": "5'9\"",
-          "weight": "220 lbs",
-          "skin_tone": "Pale",
-          "racial_descent": "Roman (European)",
-          "physical_description": "A 50-year-old Roman (European) male (standing 5'9\" tall, weighing 220 lbs) with Pale skin tone. Features Portly and well-fed, with heavy-lidded eyes that frequently betray his boredom or sinister intentions. His fingers are adorned with numerous elaborate rings, and his toga is always impeccably draped.",
-          "traits": "Arrogant, cruel, manipulative, hedonistic, possessive, shrewd.",
-          "costume": "Patrician's Robe: A voluminous toga of the finest white wool draped over a tunic of deep imperial purple, adorned with heavy gold brooches and a large signet ring. Exudes authority and opulence.",
-          "costume_materials": "Finest white wool, imperial purple silk, heavy gold, emerald and ruby jewelry.",
-          "costume_thematic_significance": "Represents his immense power, wealth, and status within Roman society, a symbol of the empire's peak.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        },
-        {
-          "name": "Aelius the Lydian",
-          "role": "Mentor, a wise elder and musician.",
-          "age": "68",
-          "sex": "Male",
-          "height": "5'5\"",
-          "weight": "145 lbs",
-          "skin_tone": "Tanned",
-          "racial_descent": "Anatolian (Lydian/Greek ancestry)",
-          "physical_description": "A 68-year-old Anatolian (Lydian/Greek ancestry) male (standing 5'5\" tall, weighing 145 lbs) with Tanned skin tone. Features Frail but dignified, with a gentle, knowing gaze. His long grey beard and hair frame a face etched with years of contemplation. He often carries a small, exquisitely crafted lyre.",
-          "traits": "Calm, insightful, empathetic, melancholic, patient, wise.",
-          "costume": "Scholar's Drape: A simple, worn tunic of undyed wool, with a darker, heavier cloak draped over his shoulders. Practical and unassuming, reflecting his humble servitude and scholarly pursuits.",
-          "costume_materials": "Coarse grey and brown wool, simple leather belt.",
-          "costume_thematic_significance": "Represents his quiet wisdom and his role as a keeper of ancient knowledge, blending into the background.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        }
-      ],
-      "key_props": [
-        {
-          "name": "Lyra's Ancestral Pendant",
-          "appearance": "An intricately carved silver pendant, depicting an ancient North African symbol resembling a stylized ankh intertwined with a crescent moon. It has a hidden clasp.",
-          "narrative_significance": "Symbolizes Lyra's lost heritage and serves as a literal key to the rebellion's hidden network and a message from her ancestors.",
-          "key_scene_usage": "Lyra fiddles with it during her performance, a subtle act of defiance. Later, Kaelus discovers it contains a miniature, coded map to the Catacombs, revealing a meeting point."
-        }
-      ],
-      "negative_prompt": "no text, no speech bubbles, no dialogue subtitles, no logos, no captions, no watermarks, no frame borders"
-    },
-    "video_motion_prompt": {
-      "target_generator": "Runway Gen-3 Alpha / Luma Dream Machine / Sora / Kling AI / Pika",
-      "timecode": "00:56 - 01:04",
-      "duration_seconds": 8,
-      "shot_heading": "INT/EXT. THE IMPERIAL ATRIUM - HIGH ANGLE ENVIRONMENT OVERVIEW",
-      "camera_motion": {
-        "movement_type": "18mm Ultra-Wide, Crane Overhead Shot",
-        "speed_and_pacing": "Smooth cinematic camera movement tailored to 8s shot duration"
-      },
-      "physical_action_and_staging": "Sweeping high angle view revealing the full architectural scope of The Imperial Atrium under dramatic key lighting.",
-      "environment_and_atmosphere": {
-        "set_name": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area."
-      },
-      "motion_physics": {
-        "fps": 24,
-        "motion_blur": "natural cinematic motion blur",
-        "facial_gestures": "expressive natural character physics and realistic eye micro-movements",
-        "quality": "8k photorealistic video animation"
-      }
-    }
-  },
-  {
-    "shot_number": 11,
-    "shot_heading": "INT/EXT. THE IMPERIAL ATRIUM - TWO-SHOT CONFRONTATION",
-    "timecode": "01:04 - 01:09",
-    "duration_seconds": 5,
-    "camera": {
-      "lens_and_angle": "50mm Medium Lens, Eye-Level Framing",
-      "motion": "Cinematic tracking motion over 5s shot window"
-    },
-    "environment": {
-      "set_name": "The Imperial Atrium",
-      "location_type": "Interior (Patrician Villa)",
-      "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-      "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-      "camera_angles": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-    },
-    "characters": [
-      {
-        "name": "Lyra of Cyrene",
-        "role": "Protagonist, a gifted enslaved dancer.",
-        "age": "22",
-        "sex": "Female",
-        "height": "5'6\"",
-        "weight": "120 lbs",
-        "skin_tone": "Olive",
-        "racial_descent": "North African (Berber/Egyptian ancestry)",
-        "physical_description": "A 22-year-old North African (Berber/Egyptian ancestry) female (standing 5'6\" tall, weighing 120 lbs) with Olive skin tone. Features Lean, agile dancer's physique with expressive dark eyes. Her long, dark hair is often intricately braided. Despite her captivity, her movements retain an inherent dignity and power.",
-        "personality_traits": "Resilient, passionate, graceful, defiant, observant, empathetic.",
-        "costumes": [
-          {
-            "name": "Chains of Art",
-            "description": "A simple yet elegant flowing tunic of cream linen, with subtle gold embroidery at the neck and cuffs. It allows for full freedom of movement while hinting at the confines of her servitude.",
-            "materials_and_colors": "Cream linen, subtle gold thread embroidery, soft leather sandals.",
-            "thematic_significance": "Represents her role as an enslaved artist, bound by her circumstances but expressing beauty within them."
-          },
-          {
-            "name": "Desert Bloom",
-            "description": "An ethereal gown of sheer, vibrant fabrics, layered and flowing, adorned with delicate beadwork and a headpiece inspired by desert flora. Designed for a captivating, solo performance.",
-            "materials_and_colors": "Sheer silk in ochre, deep terracotta, and azure, with intricate brass and glass beadwork.",
-            "thematic_significance": "Symbolizes her hidden heritage and the blossoming of her true artistic spirit, even in a foreign land."
-          },
-          {
-            "name": "Shadow Weaver",
-            "description": "Dark, practical, close-fitting tunic and trousers, with a hooded cloak. Designed for stealth and movement through Rome's shadowy backstreets.",
-            "materials_and_colors": "Dark grey wool, deep indigo linen, practical leather boots.",
-            "thematic_significance": "Reflects her clandestine activities and her growing involvement in the rebellion, moving unseen through the city."
-          },
-          {
-            "name": "Imperial Masque",
-            "description": "An opulent, heavily embroidered toga-style dress in gold and deep purple, adorned with precious stones and a regal headpiece. For formal performances before the Roman elite.",
-            "materials_and_colors": "Gold brocade, deep imperial purple silk, emeralds, rubies, and intricate golden filigree.",
-            "thematic_significance": "Her forced persona as a Roman entertainer, masking her true identity and rebellious spirit behind a facade of imperial grandeur."
-          },
-          {
-            "name": "Wings of Freedom",
-            "description": "A lightweight, flowing costume made from multiple layers of translucent fabric, designed to create a visual 'wing' effect during movement. Bright and unrestrictive.",
-            "materials_and_colors": "Lightweight, sheer white and sky-blue silk, silver accents, bare feet.",
-            "thematic_significance": "Symbolizes her ultimate quest for freedom and her aspiration to transcend her enslaved status, embodying hope and rebellion."
-          }
-        ]
-      },
-      {
-        "name": "Senator Valerius Corvus",
-        "role": "Antagonist, a corrupt Roman patrician.",
-        "age": "50",
-        "sex": "Male",
-        "height": "5'9\"",
-        "weight": "220 lbs",
-        "skin_tone": "Pale",
-        "racial_descent": "Roman (European)",
-        "physical_description": "A 50-year-old Roman (European) male (standing 5'9\" tall, weighing 220 lbs) with Pale skin tone. Features Portly and well-fed, with heavy-lidded eyes that frequently betray his boredom or sinister intentions. His fingers are adorned with numerous elaborate rings, and his toga is always impeccably draped.",
-        "personality_traits": "Arrogant, cruel, manipulative, hedonistic, possessive, shrewd.",
-        "costumes": [
-          {
-            "name": "Patrician's Robe",
-            "description": "A voluminous toga of the finest white wool draped over a tunic of deep imperial purple, adorned with heavy gold brooches and a large signet ring. Exudes authority and opulence.",
-            "materials_and_colors": "Finest white wool, imperial purple silk, heavy gold, emerald and ruby jewelry.",
-            "thematic_significance": "Represents his immense power, wealth, and status within Roman society, a symbol of the empire's peak."
-          },
-          {
-            "name": "Feast Garb",
-            "description": "A looser, more casually opulent tunic and lighter toga in rich, embroidered fabrics, designed for comfort during lavish banquets and private entertainment.",
-            "materials_and_colors": "Embroidered crimson silk, gold thread, soft kid leather slippers.",
-            "thematic_significance": "Highlights his gluttony and hedonism, his indulgence in the empire's decadent pleasures."
-          },
-          {
-            "name": "Senatorial Authority",
-            "description": "A formal toga with the broad purple stripe of a senator, worn with an air of cold calculation. For official Senate proceedings and public appearances.",
-            "materials_and_colors": "Crisp white linen, broad imperial purple stripe, polished ivory accessories.",
-            "thematic_significance": "Symbolizes his political influence and the corrupt power he wields within the Roman government."
-          },
-          {
-            "name": "Midnight Intrigue",
-            "description": "A dark, rich cloak made of heavy wool, designed to conceal his identity during shadowy dealings and clandestine meetings in the city's underbelly.",
-            "materials_and_colors": "Deepest black wool, hidden silk lining, minimal adornment.",
-            "thematic_significance": "Represents his manipulative and ruthless nature, engaging in illicit activities to maintain his control."
-          },
-          {
-            "name": "Decadent Slumber",
-            "description": "Flowing silk loungewear in muted, luxurious tones, worn in his private chambers, accompanied by a heavy gold necklace and rings.",
-            "materials_and_colors": "Softest navy blue silk, silver-grey embroidery, heavy gold chains.",
-            "thematic_significance": "Reveals his ultimate self-indulgence and disregard for anything beyond his own comfort and desires."
-          }
-        ]
-      }
-    ],
-    "props": [
-      {
-        "name": "Lyra's Ancestral Pendant",
-        "appearance": "An intricately carved silver pendant, depicting an ancient North African symbol resembling a stylized ankh intertwined with a crescent moon. It has a hidden clasp.",
-        "narrative_significance": "Symbolizes Lyra's lost heritage and serves as a literal key to the rebellion's hidden network and a message from her ancestors.",
-        "key_scene_usage": "Lyra fiddles with it during her performance, a subtle act of defiance. Later, Kaelus discovers it contains a miniature, coded map to the Catacombs, revealing a meeting point."
-      }
-    ],
-    "visual_action": "Tense dialogue framing between char001 and char003 illuminated in high contrast chiaroscuro lighting.",
-    "still_frame_prompt": {
-      "aspect_ratio": "16:9",
-      "render_style": "Photorealistic 8k Cinematic Movie Still",
-      "film_genre": "Musical / Dance",
-      "movie_title": "Gladius & Grace: The Roman Rhapsody",
-      "subject_and_action": "Tense dialogue framing between char001 and char003 illuminated in high contrast chiaroscuro lighting.",
-      "set_environment": {
-        "location": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-        "camera_angles_guidance": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-      },
-      "camera_specs": {
-        "angle_and_lens": "50mm Medium Lens, Eye-Level Framing",
-        "depth_of_field": "Cinematic shallow depth of field with sharp focal plane"
-      },
-      "characters_in_frame": [
-        {
-          "name": "Lyra of Cyrene",
-          "role": "Protagonist, a gifted enslaved dancer.",
-          "age": "22",
-          "sex": "Female",
-          "height": "5'6\"",
-          "weight": "120 lbs",
-          "skin_tone": "Olive",
-          "racial_descent": "North African (Berber/Egyptian ancestry)",
-          "physical_description": "A 22-year-old North African (Berber/Egyptian ancestry) female (standing 5'6\" tall, weighing 120 lbs) with Olive skin tone. Features Lean, agile dancer's physique with expressive dark eyes. Her long, dark hair is often intricately braided. Despite her captivity, her movements retain an inherent dignity and power.",
-          "traits": "Resilient, passionate, graceful, defiant, observant, empathetic.",
-          "costume": "Chains of Art: A simple yet elegant flowing tunic of cream linen, with subtle gold embroidery at the neck and cuffs. It allows for full freedom of movement while hinting at the confines of her servitude.",
-          "costume_materials": "Cream linen, subtle gold thread embroidery, soft leather sandals.",
-          "costume_thematic_significance": "Represents her role as an enslaved artist, bound by her circumstances but expressing beauty within them.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        },
-        {
-          "name": "Senator Valerius Corvus",
-          "role": "Antagonist, a corrupt Roman patrician.",
-          "age": "50",
-          "sex": "Male",
-          "height": "5'9\"",
-          "weight": "220 lbs",
-          "skin_tone": "Pale",
-          "racial_descent": "Roman (European)",
-          "physical_description": "A 50-year-old Roman (European) male (standing 5'9\" tall, weighing 220 lbs) with Pale skin tone. Features Portly and well-fed, with heavy-lidded eyes that frequently betray his boredom or sinister intentions. His fingers are adorned with numerous elaborate rings, and his toga is always impeccably draped.",
-          "traits": "Arrogant, cruel, manipulative, hedonistic, possessive, shrewd.",
-          "costume": "Patrician's Robe: A voluminous toga of the finest white wool draped over a tunic of deep imperial purple, adorned with heavy gold brooches and a large signet ring. Exudes authority and opulence.",
-          "costume_materials": "Finest white wool, imperial purple silk, heavy gold, emerald and ruby jewelry.",
-          "costume_thematic_significance": "Represents his immense power, wealth, and status within Roman society, a symbol of the empire's peak.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        }
-      ],
-      "key_props": [
-        {
-          "name": "Lyra's Ancestral Pendant",
-          "appearance": "An intricately carved silver pendant, depicting an ancient North African symbol resembling a stylized ankh intertwined with a crescent moon. It has a hidden clasp.",
-          "narrative_significance": "Symbolizes Lyra's lost heritage and serves as a literal key to the rebellion's hidden network and a message from her ancestors.",
-          "key_scene_usage": "Lyra fiddles with it during her performance, a subtle act of defiance. Later, Kaelus discovers it contains a miniature, coded map to the Catacombs, revealing a meeting point."
-        }
-      ],
-      "negative_prompt": "no text, no speech bubbles, no dialogue subtitles, no logos, no captions, no watermarks, no frame borders"
-    },
-    "video_motion_prompt": {
-      "target_generator": "Runway Gen-3 Alpha / Luma Dream Machine / Sora / Kling AI / Pika",
-      "timecode": "01:04 - 01:09",
-      "duration_seconds": 5,
-      "shot_heading": "INT/EXT. THE IMPERIAL ATRIUM - TWO-SHOT CONFRONTATION",
-      "camera_motion": {
-        "movement_type": "50mm Medium Lens, Eye-Level Framing",
-        "speed_and_pacing": "Smooth cinematic camera movement tailored to 5s shot duration"
-      },
-      "physical_action_and_staging": "Tense dialogue framing between char001 and char003 illuminated in high contrast chiaroscuro lighting.",
-      "environment_and_atmosphere": {
-        "set_name": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area."
-      },
-      "motion_physics": {
-        "fps": 24,
-        "motion_blur": "natural cinematic motion blur",
-        "facial_gestures": "expressive natural character physics and realistic eye micro-movements",
-        "quality": "8k photorealistic video animation"
-      }
-    }
-  },
-  {
-    "shot_number": 12,
-    "shot_heading": "INT/EXT. THE IMPERIAL ATRIUM - DYNAMIC TRACKING SHOT",
-    "timecode": "01:09 - 01:14",
-    "duration_seconds": 5,
-    "camera": {
-      "lens_and_angle": "35mm Steadicam Tracking, Handheld Motion",
-      "motion": "Cinematic tracking motion over 5s shot window"
-    },
-    "environment": {
-      "set_name": "The Imperial Atrium",
-      "location_type": "Interior (Patrician Villa)",
-      "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-      "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-      "camera_angles": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-    },
-    "characters": [
-      {
-        "name": "Lyra of Cyrene",
-        "role": "Protagonist, a gifted enslaved dancer.",
-        "age": "22",
-        "sex": "Female",
-        "height": "5'6\"",
-        "weight": "120 lbs",
-        "skin_tone": "Olive",
-        "racial_descent": "North African (Berber/Egyptian ancestry)",
-        "physical_description": "A 22-year-old North African (Berber/Egyptian ancestry) female (standing 5'6\" tall, weighing 120 lbs) with Olive skin tone. Features Lean, agile dancer's physique with expressive dark eyes. Her long, dark hair is often intricately braided. Despite her captivity, her movements retain an inherent dignity and power.",
-        "personality_traits": "Resilient, passionate, graceful, defiant, observant, empathetic.",
-        "costumes": [
-          {
-            "name": "Chains of Art",
-            "description": "A simple yet elegant flowing tunic of cream linen, with subtle gold embroidery at the neck and cuffs. It allows for full freedom of movement while hinting at the confines of her servitude.",
-            "materials_and_colors": "Cream linen, subtle gold thread embroidery, soft leather sandals.",
-            "thematic_significance": "Represents her role as an enslaved artist, bound by her circumstances but expressing beauty within them."
-          },
-          {
-            "name": "Desert Bloom",
-            "description": "An ethereal gown of sheer, vibrant fabrics, layered and flowing, adorned with delicate beadwork and a headpiece inspired by desert flora. Designed for a captivating, solo performance.",
-            "materials_and_colors": "Sheer silk in ochre, deep terracotta, and azure, with intricate brass and glass beadwork.",
-            "thematic_significance": "Symbolizes her hidden heritage and the blossoming of her true artistic spirit, even in a foreign land."
-          },
-          {
-            "name": "Shadow Weaver",
-            "description": "Dark, practical, close-fitting tunic and trousers, with a hooded cloak. Designed for stealth and movement through Rome's shadowy backstreets.",
-            "materials_and_colors": "Dark grey wool, deep indigo linen, practical leather boots.",
-            "thematic_significance": "Reflects her clandestine activities and her growing involvement in the rebellion, moving unseen through the city."
-          },
-          {
-            "name": "Imperial Masque",
-            "description": "An opulent, heavily embroidered toga-style dress in gold and deep purple, adorned with precious stones and a regal headpiece. For formal performances before the Roman elite.",
-            "materials_and_colors": "Gold brocade, deep imperial purple silk, emeralds, rubies, and intricate golden filigree.",
-            "thematic_significance": "Her forced persona as a Roman entertainer, masking her true identity and rebellious spirit behind a facade of imperial grandeur."
-          },
-          {
-            "name": "Wings of Freedom",
-            "description": "A lightweight, flowing costume made from multiple layers of translucent fabric, designed to create a visual 'wing' effect during movement. Bright and unrestrictive.",
-            "materials_and_colors": "Lightweight, sheer white and sky-blue silk, silver accents, bare feet.",
-            "thematic_significance": "Symbolizes her ultimate quest for freedom and her aspiration to transcend her enslaved status, embodying hope and rebellion."
-          }
-        ]
-      }
-    ],
-    "props": [
-      {
-        "name": "Lyra's Ancestral Pendant",
-        "appearance": "An intricately carved silver pendant, depicting an ancient North African symbol resembling a stylized ankh intertwined with a crescent moon. It has a hidden clasp.",
-        "narrative_significance": "Symbolizes Lyra's lost heritage and serves as a literal key to the rebellion's hidden network and a message from her ancestors.",
-        "key_scene_usage": "Lyra fiddles with it during her performance, a subtle act of defiance. Later, Kaelus discovers it contains a miniature, coded map to the Catacombs, revealing a meeting point."
-      }
-    ],
-    "visual_action": "Camera tracks rapidly behind char001 navigating through haze and ambient particle effects toward the central entrance.",
-    "still_frame_prompt": {
-      "aspect_ratio": "16:9",
-      "render_style": "Photorealistic 8k Cinematic Movie Still",
-      "film_genre": "Musical / Dance",
-      "movie_title": "Gladius & Grace: The Roman Rhapsody",
-      "subject_and_action": "Camera tracks rapidly behind char001 navigating through haze and ambient particle effects toward the central entrance.",
-      "set_environment": {
-        "location": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-        "camera_angles_guidance": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-      },
-      "camera_specs": {
-        "angle_and_lens": "35mm Steadicam Tracking, Handheld Motion",
-        "depth_of_field": "Cinematic shallow depth of field with sharp focal plane"
-      },
-      "characters_in_frame": [
-        {
-          "name": "Lyra of Cyrene",
-          "role": "Protagonist, a gifted enslaved dancer.",
-          "age": "22",
-          "sex": "Female",
-          "height": "5'6\"",
-          "weight": "120 lbs",
-          "skin_tone": "Olive",
-          "racial_descent": "North African (Berber/Egyptian ancestry)",
-          "physical_description": "A 22-year-old North African (Berber/Egyptian ancestry) female (standing 5'6\" tall, weighing 120 lbs) with Olive skin tone. Features Lean, agile dancer's physique with expressive dark eyes. Her long, dark hair is often intricately braided. Despite her captivity, her movements retain an inherent dignity and power.",
-          "traits": "Resilient, passionate, graceful, defiant, observant, empathetic.",
-          "costume": "Chains of Art: A simple yet elegant flowing tunic of cream linen, with subtle gold embroidery at the neck and cuffs. It allows for full freedom of movement while hinting at the confines of her servitude.",
-          "costume_materials": "Cream linen, subtle gold thread embroidery, soft leather sandals.",
-          "costume_thematic_significance": "Represents her role as an enslaved artist, bound by her circumstances but expressing beauty within them.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        }
-      ],
-      "key_props": [
-        {
-          "name": "Lyra's Ancestral Pendant",
-          "appearance": "An intricately carved silver pendant, depicting an ancient North African symbol resembling a stylized ankh intertwined with a crescent moon. It has a hidden clasp.",
-          "narrative_significance": "Symbolizes Lyra's lost heritage and serves as a literal key to the rebellion's hidden network and a message from her ancestors.",
-          "key_scene_usage": "Lyra fiddles with it during her performance, a subtle act of defiance. Later, Kaelus discovers it contains a miniature, coded map to the Catacombs, revealing a meeting point."
-        }
-      ],
-      "negative_prompt": "no text, no speech bubbles, no dialogue subtitles, no logos, no captions, no watermarks, no frame borders"
-    },
-    "video_motion_prompt": {
-      "target_generator": "Runway Gen-3 Alpha / Luma Dream Machine / Sora / Kling AI / Pika",
-      "timecode": "01:09 - 01:14",
-      "duration_seconds": 5,
-      "shot_heading": "INT/EXT. THE IMPERIAL ATRIUM - DYNAMIC TRACKING SHOT",
-      "camera_motion": {
-        "movement_type": "35mm Steadicam Tracking, Handheld Motion",
-        "speed_and_pacing": "Smooth cinematic camera movement tailored to 5s shot duration"
-      },
-      "physical_action_and_staging": "Camera tracks rapidly behind char001 navigating through haze and ambient particle effects toward the central entrance.",
-      "environment_and_atmosphere": {
-        "set_name": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area."
-      },
-      "motion_physics": {
-        "fps": 24,
-        "motion_blur": "natural cinematic motion blur",
-        "facial_gestures": "expressive natural character physics and realistic eye micro-movements",
-        "quality": "8k photorealistic video animation"
-      }
-    }
-  },
-  {
-    "shot_number": 13,
-    "shot_heading": "INT/EXT. THE IMPERIAL ATRIUM - DUTCH TILT TENSION SHOT",
-    "timecode": "01:14 - 01:19",
-    "duration_seconds": 5,
-    "camera": {
-      "lens_and_angle": "35mm Anamorphic, 15-Degree Dutch Angle",
-      "motion": "Cinematic tracking motion over 5s shot window"
-    },
-    "environment": {
-      "set_name": "The Imperial Atrium",
-      "location_type": "Interior (Patrician Villa)",
-      "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-      "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-      "camera_angles": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-    },
-    "characters": [
-      {
-        "name": "Lyra of Cyrene",
-        "role": "Protagonist, a gifted enslaved dancer.",
-        "age": "22",
-        "sex": "Female",
-        "height": "5'6\"",
-        "weight": "120 lbs",
-        "skin_tone": "Olive",
-        "racial_descent": "North African (Berber/Egyptian ancestry)",
-        "physical_description": "A 22-year-old North African (Berber/Egyptian ancestry) female (standing 5'6\" tall, weighing 120 lbs) with Olive skin tone. Features Lean, agile dancer's physique with expressive dark eyes. Her long, dark hair is often intricately braided. Despite her captivity, her movements retain an inherent dignity and power.",
-        "personality_traits": "Resilient, passionate, graceful, defiant, observant, empathetic.",
-        "costumes": [
-          {
-            "name": "Chains of Art",
-            "description": "A simple yet elegant flowing tunic of cream linen, with subtle gold embroidery at the neck and cuffs. It allows for full freedom of movement while hinting at the confines of her servitude.",
-            "materials_and_colors": "Cream linen, subtle gold thread embroidery, soft leather sandals.",
-            "thematic_significance": "Represents her role as an enslaved artist, bound by her circumstances but expressing beauty within them."
-          },
-          {
-            "name": "Desert Bloom",
-            "description": "An ethereal gown of sheer, vibrant fabrics, layered and flowing, adorned with delicate beadwork and a headpiece inspired by desert flora. Designed for a captivating, solo performance.",
-            "materials_and_colors": "Sheer silk in ochre, deep terracotta, and azure, with intricate brass and glass beadwork.",
-            "thematic_significance": "Symbolizes her hidden heritage and the blossoming of her true artistic spirit, even in a foreign land."
-          },
-          {
-            "name": "Shadow Weaver",
-            "description": "Dark, practical, close-fitting tunic and trousers, with a hooded cloak. Designed for stealth and movement through Rome's shadowy backstreets.",
-            "materials_and_colors": "Dark grey wool, deep indigo linen, practical leather boots.",
-            "thematic_significance": "Reflects her clandestine activities and her growing involvement in the rebellion, moving unseen through the city."
-          },
-          {
-            "name": "Imperial Masque",
-            "description": "An opulent, heavily embroidered toga-style dress in gold and deep purple, adorned with precious stones and a regal headpiece. For formal performances before the Roman elite.",
-            "materials_and_colors": "Gold brocade, deep imperial purple silk, emeralds, rubies, and intricate golden filigree.",
-            "thematic_significance": "Her forced persona as a Roman entertainer, masking her true identity and rebellious spirit behind a facade of imperial grandeur."
-          },
-          {
-            "name": "Wings of Freedom",
-            "description": "A lightweight, flowing costume made from multiple layers of translucent fabric, designed to create a visual 'wing' effect during movement. Bright and unrestrictive.",
-            "materials_and_colors": "Lightweight, sheer white and sky-blue silk, silver accents, bare feet.",
-            "thematic_significance": "Symbolizes her ultimate quest for freedom and her aspiration to transcend her enslaved status, embodying hope and rebellion."
-          }
-        ]
-      },
-      {
-        "name": "Senator Valerius Corvus",
-        "role": "Antagonist, a corrupt Roman patrician.",
-        "age": "50",
-        "sex": "Male",
-        "height": "5'9\"",
-        "weight": "220 lbs",
-        "skin_tone": "Pale",
-        "racial_descent": "Roman (European)",
-        "physical_description": "A 50-year-old Roman (European) male (standing 5'9\" tall, weighing 220 lbs) with Pale skin tone. Features Portly and well-fed, with heavy-lidded eyes that frequently betray his boredom or sinister intentions. His fingers are adorned with numerous elaborate rings, and his toga is always impeccably draped.",
-        "personality_traits": "Arrogant, cruel, manipulative, hedonistic, possessive, shrewd.",
-        "costumes": [
-          {
-            "name": "Patrician's Robe",
-            "description": "A voluminous toga of the finest white wool draped over a tunic of deep imperial purple, adorned with heavy gold brooches and a large signet ring. Exudes authority and opulence.",
-            "materials_and_colors": "Finest white wool, imperial purple silk, heavy gold, emerald and ruby jewelry.",
-            "thematic_significance": "Represents his immense power, wealth, and status within Roman society, a symbol of the empire's peak."
-          },
-          {
-            "name": "Feast Garb",
-            "description": "A looser, more casually opulent tunic and lighter toga in rich, embroidered fabrics, designed for comfort during lavish banquets and private entertainment.",
-            "materials_and_colors": "Embroidered crimson silk, gold thread, soft kid leather slippers.",
-            "thematic_significance": "Highlights his gluttony and hedonism, his indulgence in the empire's decadent pleasures."
-          },
-          {
-            "name": "Senatorial Authority",
-            "description": "A formal toga with the broad purple stripe of a senator, worn with an air of cold calculation. For official Senate proceedings and public appearances.",
-            "materials_and_colors": "Crisp white linen, broad imperial purple stripe, polished ivory accessories.",
-            "thematic_significance": "Symbolizes his political influence and the corrupt power he wields within the Roman government."
-          },
-          {
-            "name": "Midnight Intrigue",
-            "description": "A dark, rich cloak made of heavy wool, designed to conceal his identity during shadowy dealings and clandestine meetings in the city's underbelly.",
-            "materials_and_colors": "Deepest black wool, hidden silk lining, minimal adornment.",
-            "thematic_significance": "Represents his manipulative and ruthless nature, engaging in illicit activities to maintain his control."
-          },
-          {
-            "name": "Decadent Slumber",
-            "description": "Flowing silk loungewear in muted, luxurious tones, worn in his private chambers, accompanied by a heavy gold necklace and rings.",
-            "materials_and_colors": "Softest navy blue silk, silver-grey embroidery, heavy gold chains.",
-            "thematic_significance": "Reveals his ultimate self-indulgence and disregard for anything beyond his own comfort and desires."
-          }
-        ]
-      },
-      {
-        "name": "Aelius the Lydian",
-        "role": "Mentor, a wise elder and musician.",
-        "age": "68",
-        "sex": "Male",
-        "height": "5'5\"",
-        "weight": "145 lbs",
-        "skin_tone": "Tanned",
-        "racial_descent": "Anatolian (Lydian/Greek ancestry)",
-        "physical_description": "A 68-year-old Anatolian (Lydian/Greek ancestry) male (standing 5'5\" tall, weighing 145 lbs) with Tanned skin tone. Features Frail but dignified, with a gentle, knowing gaze. His long grey beard and hair frame a face etched with years of contemplation. He often carries a small, exquisitely crafted lyre.",
-        "personality_traits": "Calm, insightful, empathetic, melancholic, patient, wise.",
-        "costumes": [
-          {
-            "name": "Scholar's Drape",
-            "description": "A simple, worn tunic of undyed wool, with a darker, heavier cloak draped over his shoulders. Practical and unassuming, reflecting his humble servitude and scholarly pursuits.",
-            "materials_and_colors": "Coarse grey and brown wool, simple leather belt.",
-            "thematic_significance": "Represents his quiet wisdom and his role as a keeper of ancient knowledge, blending into the background."
-          },
-          {
-            "name": "Musician's Robe",
-            "description": "A more decorated but still modest robe, woven with subtle geometric patterns in muted colors. For formal performances or when teaching his craft.",
-            "materials_and_colors": "Fine beige linen, subtle purple and ochre embroidery, soft sandals.",
-            "thematic_significance": "Highlights his role as an artist and educator, using his craft to subtly preserve cultural identity."
-          },
-          {
-            "name": "Tutor's Attire",
-            "description": "Plain, functional attire suitable for long hours of teaching and quiet study, made of sturdy, comfortable fabrics.",
-            "materials_and_colors": "Off-white cotton, a simple leather satchel, wooden staff.",
-            "thematic_significance": "Emphasizes his dedication to passing on knowledge and fostering the talents of others."
-          },
-          {
-            "name": "Temple Weaver",
-            "description": "A long, flowing white linen robe, with intricate, almost hieroglyphic patterns woven into the fabric. For moments of deep philosophical discussion or spiritual reflection.",
-            "materials_and_colors": "Pure white linen, subtle gold and silver thread, intricate Eastern motifs.",
-            "thematic_significance": "Symbolizes his connection to ancient wisdom and spiritual heritage, a link to a forgotten, purer past."
-          },
-          {
-            "name": "Sage's Farewell",
-            "description": "A light, unadorned robe, signifying detachment and peace, possibly worn towards the story's climax or after a significant sacrifice.",
-            "materials_and_colors": "Simple, undyed linen, very light and flowing, symbolic of letting go.",
-            "thematic_significance": "Represents his acceptance of fate and his role in guiding the younger generation towards a future he may not see."
-          }
-        ]
-      }
-    ],
-    "props": [
-      {
-        "name": "Secondary Prop"
-      }
-    ],
-    "visual_action": "Unsettling tilted angle captures the growing instability as alarms flare in the background.",
-    "still_frame_prompt": {
-      "aspect_ratio": "16:9",
-      "render_style": "Photorealistic 8k Cinematic Movie Still",
-      "film_genre": "Musical / Dance",
-      "movie_title": "Gladius & Grace: The Roman Rhapsody",
-      "subject_and_action": "Unsettling tilted angle captures the growing instability as alarms flare in the background.",
-      "set_environment": {
-        "location": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-        "camera_angles_guidance": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-      },
-      "camera_specs": {
-        "angle_and_lens": "35mm Anamorphic, 15-Degree Dutch Angle",
-        "depth_of_field": "Cinematic shallow depth of field with sharp focal plane"
-      },
-      "characters_in_frame": [
-        {
-          "name": "Lyra of Cyrene",
-          "role": "Protagonist, a gifted enslaved dancer.",
-          "age": "22",
-          "sex": "Female",
-          "height": "5'6\"",
-          "weight": "120 lbs",
-          "skin_tone": "Olive",
-          "racial_descent": "North African (Berber/Egyptian ancestry)",
-          "physical_description": "A 22-year-old North African (Berber/Egyptian ancestry) female (standing 5'6\" tall, weighing 120 lbs) with Olive skin tone. Features Lean, agile dancer's physique with expressive dark eyes. Her long, dark hair is often intricately braided. Despite her captivity, her movements retain an inherent dignity and power.",
-          "traits": "Resilient, passionate, graceful, defiant, observant, empathetic.",
-          "costume": "Chains of Art: A simple yet elegant flowing tunic of cream linen, with subtle gold embroidery at the neck and cuffs. It allows for full freedom of movement while hinting at the confines of her servitude.",
-          "costume_materials": "Cream linen, subtle gold thread embroidery, soft leather sandals.",
-          "costume_thematic_significance": "Represents her role as an enslaved artist, bound by her circumstances but expressing beauty within them.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        },
-        {
-          "name": "Senator Valerius Corvus",
-          "role": "Antagonist, a corrupt Roman patrician.",
-          "age": "50",
-          "sex": "Male",
-          "height": "5'9\"",
-          "weight": "220 lbs",
-          "skin_tone": "Pale",
-          "racial_descent": "Roman (European)",
-          "physical_description": "A 50-year-old Roman (European) male (standing 5'9\" tall, weighing 220 lbs) with Pale skin tone. Features Portly and well-fed, with heavy-lidded eyes that frequently betray his boredom or sinister intentions. His fingers are adorned with numerous elaborate rings, and his toga is always impeccably draped.",
-          "traits": "Arrogant, cruel, manipulative, hedonistic, possessive, shrewd.",
-          "costume": "Patrician's Robe: A voluminous toga of the finest white wool draped over a tunic of deep imperial purple, adorned with heavy gold brooches and a large signet ring. Exudes authority and opulence.",
-          "costume_materials": "Finest white wool, imperial purple silk, heavy gold, emerald and ruby jewelry.",
-          "costume_thematic_significance": "Represents his immense power, wealth, and status within Roman society, a symbol of the empire's peak.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        },
-        {
-          "name": "Aelius the Lydian",
-          "role": "Mentor, a wise elder and musician.",
-          "age": "68",
-          "sex": "Male",
-          "height": "5'5\"",
-          "weight": "145 lbs",
-          "skin_tone": "Tanned",
-          "racial_descent": "Anatolian (Lydian/Greek ancestry)",
-          "physical_description": "A 68-year-old Anatolian (Lydian/Greek ancestry) male (standing 5'5\" tall, weighing 145 lbs) with Tanned skin tone. Features Frail but dignified, with a gentle, knowing gaze. His long grey beard and hair frame a face etched with years of contemplation. He often carries a small, exquisitely crafted lyre.",
-          "traits": "Calm, insightful, empathetic, melancholic, patient, wise.",
-          "costume": "Scholar's Drape: A simple, worn tunic of undyed wool, with a darker, heavier cloak draped over his shoulders. Practical and unassuming, reflecting his humble servitude and scholarly pursuits.",
-          "costume_materials": "Coarse grey and brown wool, simple leather belt.",
-          "costume_thematic_significance": "Represents his quiet wisdom and his role as a keeper of ancient knowledge, blending into the background.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        }
-      ],
-      "key_props": [
-        {
-          "name": "Secondary Prop",
-          "appearance": "Hero movie artifact"
-        }
-      ],
-      "negative_prompt": "no text, no speech bubbles, no dialogue subtitles, no logos, no captions, no watermarks, no frame borders"
-    },
-    "video_motion_prompt": {
-      "target_generator": "Runway Gen-3 Alpha / Luma Dream Machine / Sora / Kling AI / Pika",
-      "timecode": "01:14 - 01:19",
-      "duration_seconds": 5,
-      "shot_heading": "INT/EXT. THE IMPERIAL ATRIUM - DUTCH TILT TENSION SHOT",
-      "camera_motion": {
-        "movement_type": "35mm Anamorphic, 15-Degree Dutch Angle",
-        "speed_and_pacing": "Smooth cinematic camera movement tailored to 5s shot duration"
-      },
-      "physical_action_and_staging": "Unsettling tilted angle captures the growing instability as alarms flare in the background.",
-      "environment_and_atmosphere": {
-        "set_name": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area."
-      },
-      "motion_physics": {
-        "fps": 24,
-        "motion_blur": "natural cinematic motion blur",
-        "facial_gestures": "expressive natural character physics and realistic eye micro-movements",
-        "quality": "8k photorealistic video animation"
-      }
-    }
-  },
-  {
-    "shot_number": 14,
-    "shot_heading": "INT/EXT. THE IMPERIAL ATRIUM - CLIMAX KEYFRAME",
-    "timecode": "01:19 - 01:25",
-    "duration_seconds": 6,
-    "camera": {
-      "lens_and_angle": "24mm Anamorphic, Wide Cinematic Keyframe",
-      "motion": "Cinematic tracking motion over 6s shot window"
-    },
-    "environment": {
-      "set_name": "The Imperial Atrium",
-      "location_type": "Interior (Patrician Villa)",
-      "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-      "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-      "camera_angles": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-    },
-    "characters": [
-      {
-        "name": "Lyra of Cyrene",
-        "role": "Protagonist, a gifted enslaved dancer.",
-        "age": "22",
-        "sex": "Female",
-        "height": "5'6\"",
-        "weight": "120 lbs",
-        "skin_tone": "Olive",
-        "racial_descent": "North African (Berber/Egyptian ancestry)",
-        "physical_description": "A 22-year-old North African (Berber/Egyptian ancestry) female (standing 5'6\" tall, weighing 120 lbs) with Olive skin tone. Features Lean, agile dancer's physique with expressive dark eyes. Her long, dark hair is often intricately braided. Despite her captivity, her movements retain an inherent dignity and power.",
-        "personality_traits": "Resilient, passionate, graceful, defiant, observant, empathetic.",
-        "costumes": [
-          {
-            "name": "Chains of Art",
-            "description": "A simple yet elegant flowing tunic of cream linen, with subtle gold embroidery at the neck and cuffs. It allows for full freedom of movement while hinting at the confines of her servitude.",
-            "materials_and_colors": "Cream linen, subtle gold thread embroidery, soft leather sandals.",
-            "thematic_significance": "Represents her role as an enslaved artist, bound by her circumstances but expressing beauty within them."
-          },
-          {
-            "name": "Desert Bloom",
-            "description": "An ethereal gown of sheer, vibrant fabrics, layered and flowing, adorned with delicate beadwork and a headpiece inspired by desert flora. Designed for a captivating, solo performance.",
-            "materials_and_colors": "Sheer silk in ochre, deep terracotta, and azure, with intricate brass and glass beadwork.",
-            "thematic_significance": "Symbolizes her hidden heritage and the blossoming of her true artistic spirit, even in a foreign land."
-          },
-          {
-            "name": "Shadow Weaver",
-            "description": "Dark, practical, close-fitting tunic and trousers, with a hooded cloak. Designed for stealth and movement through Rome's shadowy backstreets.",
-            "materials_and_colors": "Dark grey wool, deep indigo linen, practical leather boots.",
-            "thematic_significance": "Reflects her clandestine activities and her growing involvement in the rebellion, moving unseen through the city."
-          },
-          {
-            "name": "Imperial Masque",
-            "description": "An opulent, heavily embroidered toga-style dress in gold and deep purple, adorned with precious stones and a regal headpiece. For formal performances before the Roman elite.",
-            "materials_and_colors": "Gold brocade, deep imperial purple silk, emeralds, rubies, and intricate golden filigree.",
-            "thematic_significance": "Her forced persona as a Roman entertainer, masking her true identity and rebellious spirit behind a facade of imperial grandeur."
-          },
-          {
-            "name": "Wings of Freedom",
-            "description": "A lightweight, flowing costume made from multiple layers of translucent fabric, designed to create a visual 'wing' effect during movement. Bright and unrestrictive.",
-            "materials_and_colors": "Lightweight, sheer white and sky-blue silk, silver accents, bare feet.",
-            "thematic_significance": "Symbolizes her ultimate quest for freedom and her aspiration to transcend her enslaved status, embodying hope and rebellion."
-          }
-        ]
-      },
-      {
-        "name": "Senator Valerius Corvus",
-        "role": "Antagonist, a corrupt Roman patrician.",
-        "age": "50",
-        "sex": "Male",
-        "height": "5'9\"",
-        "weight": "220 lbs",
-        "skin_tone": "Pale",
-        "racial_descent": "Roman (European)",
-        "physical_description": "A 50-year-old Roman (European) male (standing 5'9\" tall, weighing 220 lbs) with Pale skin tone. Features Portly and well-fed, with heavy-lidded eyes that frequently betray his boredom or sinister intentions. His fingers are adorned with numerous elaborate rings, and his toga is always impeccably draped.",
-        "personality_traits": "Arrogant, cruel, manipulative, hedonistic, possessive, shrewd.",
-        "costumes": [
-          {
-            "name": "Patrician's Robe",
-            "description": "A voluminous toga of the finest white wool draped over a tunic of deep imperial purple, adorned with heavy gold brooches and a large signet ring. Exudes authority and opulence.",
-            "materials_and_colors": "Finest white wool, imperial purple silk, heavy gold, emerald and ruby jewelry.",
-            "thematic_significance": "Represents his immense power, wealth, and status within Roman society, a symbol of the empire's peak."
-          },
-          {
-            "name": "Feast Garb",
-            "description": "A looser, more casually opulent tunic and lighter toga in rich, embroidered fabrics, designed for comfort during lavish banquets and private entertainment.",
-            "materials_and_colors": "Embroidered crimson silk, gold thread, soft kid leather slippers.",
-            "thematic_significance": "Highlights his gluttony and hedonism, his indulgence in the empire's decadent pleasures."
-          },
-          {
-            "name": "Senatorial Authority",
-            "description": "A formal toga with the broad purple stripe of a senator, worn with an air of cold calculation. For official Senate proceedings and public appearances.",
-            "materials_and_colors": "Crisp white linen, broad imperial purple stripe, polished ivory accessories.",
-            "thematic_significance": "Symbolizes his political influence and the corrupt power he wields within the Roman government."
-          },
-          {
-            "name": "Midnight Intrigue",
-            "description": "A dark, rich cloak made of heavy wool, designed to conceal his identity during shadowy dealings and clandestine meetings in the city's underbelly.",
-            "materials_and_colors": "Deepest black wool, hidden silk lining, minimal adornment.",
-            "thematic_significance": "Represents his manipulative and ruthless nature, engaging in illicit activities to maintain his control."
-          },
-          {
-            "name": "Decadent Slumber",
-            "description": "Flowing silk loungewear in muted, luxurious tones, worn in his private chambers, accompanied by a heavy gold necklace and rings.",
-            "materials_and_colors": "Softest navy blue silk, silver-grey embroidery, heavy gold chains.",
-            "thematic_significance": "Reveals his ultimate self-indulgence and disregard for anything beyond his own comfort and desires."
-          }
-        ]
-      },
-      {
-        "name": "Aelius the Lydian",
-        "role": "Mentor, a wise elder and musician.",
-        "age": "68",
-        "sex": "Male",
-        "height": "5'5\"",
-        "weight": "145 lbs",
-        "skin_tone": "Tanned",
-        "racial_descent": "Anatolian (Lydian/Greek ancestry)",
-        "physical_description": "A 68-year-old Anatolian (Lydian/Greek ancestry) male (standing 5'5\" tall, weighing 145 lbs) with Tanned skin tone. Features Frail but dignified, with a gentle, knowing gaze. His long grey beard and hair frame a face etched with years of contemplation. He often carries a small, exquisitely crafted lyre.",
-        "personality_traits": "Calm, insightful, empathetic, melancholic, patient, wise.",
-        "costumes": [
-          {
-            "name": "Scholar's Drape",
-            "description": "A simple, worn tunic of undyed wool, with a darker, heavier cloak draped over his shoulders. Practical and unassuming, reflecting his humble servitude and scholarly pursuits.",
-            "materials_and_colors": "Coarse grey and brown wool, simple leather belt.",
-            "thematic_significance": "Represents his quiet wisdom and his role as a keeper of ancient knowledge, blending into the background."
-          },
-          {
-            "name": "Musician's Robe",
-            "description": "A more decorated but still modest robe, woven with subtle geometric patterns in muted colors. For formal performances or when teaching his craft.",
-            "materials_and_colors": "Fine beige linen, subtle purple and ochre embroidery, soft sandals.",
-            "thematic_significance": "Highlights his role as an artist and educator, using his craft to subtly preserve cultural identity."
-          },
-          {
-            "name": "Tutor's Attire",
-            "description": "Plain, functional attire suitable for long hours of teaching and quiet study, made of sturdy, comfortable fabrics.",
-            "materials_and_colors": "Off-white cotton, a simple leather satchel, wooden staff.",
-            "thematic_significance": "Emphasizes his dedication to passing on knowledge and fostering the talents of others."
-          },
-          {
-            "name": "Temple Weaver",
-            "description": "A long, flowing white linen robe, with intricate, almost hieroglyphic patterns woven into the fabric. For moments of deep philosophical discussion or spiritual reflection.",
-            "materials_and_colors": "Pure white linen, subtle gold and silver thread, intricate Eastern motifs.",
-            "thematic_significance": "Symbolizes his connection to ancient wisdom and spiritual heritage, a link to a forgotten, purer past."
-          },
-          {
-            "name": "Sage's Farewell",
-            "description": "A light, unadorned robe, signifying detachment and peace, possibly worn towards the story's climax or after a significant sacrifice.",
-            "materials_and_colors": "Simple, undyed linen, very light and flowing, symbolic of letting go.",
-            "thematic_significance": "Represents his acceptance of fate and his role in guiding the younger generation towards a future he may not see."
-          }
-        ]
-      }
-    ],
-    "props": [
-      {
-        "name": "Lyra's Ancestral Pendant",
-        "appearance": "An intricately carved silver pendant, depicting an ancient North African symbol resembling a stylized ankh intertwined with a crescent moon. It has a hidden clasp.",
-        "narrative_significance": "Symbolizes Lyra's lost heritage and serves as a literal key to the rebellion's hidden network and a message from her ancestors.",
-        "key_scene_usage": "Lyra fiddles with it during her performance, a subtle act of defiance. Later, Kaelus discovers it contains a miniature, coded map to the Catacombs, revealing a meeting point."
-      }
-    ],
-    "visual_action": "High-stakes confrontation peak where prop001 is activated amidst flashing environmental atmosphere.",
-    "still_frame_prompt": {
-      "aspect_ratio": "16:9",
-      "render_style": "Photorealistic 8k Cinematic Movie Still",
-      "film_genre": "Musical / Dance",
-      "movie_title": "Gladius & Grace: The Roman Rhapsody",
-      "subject_and_action": "High-stakes confrontation peak where prop001 is activated amidst flashing environmental atmosphere.",
-      "set_environment": {
-        "location": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-        "camera_angles_guidance": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-      },
-      "camera_specs": {
-        "angle_and_lens": "24mm Anamorphic, Wide Cinematic Keyframe",
-        "depth_of_field": "Cinematic shallow depth of field with sharp focal plane"
-      },
-      "characters_in_frame": [
-        {
-          "name": "Lyra of Cyrene",
-          "role": "Protagonist, a gifted enslaved dancer.",
-          "age": "22",
-          "sex": "Female",
-          "height": "5'6\"",
-          "weight": "120 lbs",
-          "skin_tone": "Olive",
-          "racial_descent": "North African (Berber/Egyptian ancestry)",
-          "physical_description": "A 22-year-old North African (Berber/Egyptian ancestry) female (standing 5'6\" tall, weighing 120 lbs) with Olive skin tone. Features Lean, agile dancer's physique with expressive dark eyes. Her long, dark hair is often intricately braided. Despite her captivity, her movements retain an inherent dignity and power.",
-          "traits": "Resilient, passionate, graceful, defiant, observant, empathetic.",
-          "costume": "Chains of Art: A simple yet elegant flowing tunic of cream linen, with subtle gold embroidery at the neck and cuffs. It allows for full freedom of movement while hinting at the confines of her servitude.",
-          "costume_materials": "Cream linen, subtle gold thread embroidery, soft leather sandals.",
-          "costume_thematic_significance": "Represents her role as an enslaved artist, bound by her circumstances but expressing beauty within them.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        },
-        {
-          "name": "Senator Valerius Corvus",
-          "role": "Antagonist, a corrupt Roman patrician.",
-          "age": "50",
-          "sex": "Male",
-          "height": "5'9\"",
-          "weight": "220 lbs",
-          "skin_tone": "Pale",
-          "racial_descent": "Roman (European)",
-          "physical_description": "A 50-year-old Roman (European) male (standing 5'9\" tall, weighing 220 lbs) with Pale skin tone. Features Portly and well-fed, with heavy-lidded eyes that frequently betray his boredom or sinister intentions. His fingers are adorned with numerous elaborate rings, and his toga is always impeccably draped.",
-          "traits": "Arrogant, cruel, manipulative, hedonistic, possessive, shrewd.",
-          "costume": "Patrician's Robe: A voluminous toga of the finest white wool draped over a tunic of deep imperial purple, adorned with heavy gold brooches and a large signet ring. Exudes authority and opulence.",
-          "costume_materials": "Finest white wool, imperial purple silk, heavy gold, emerald and ruby jewelry.",
-          "costume_thematic_significance": "Represents his immense power, wealth, and status within Roman society, a symbol of the empire's peak.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        },
-        {
-          "name": "Aelius the Lydian",
-          "role": "Mentor, a wise elder and musician.",
-          "age": "68",
-          "sex": "Male",
-          "height": "5'5\"",
-          "weight": "145 lbs",
-          "skin_tone": "Tanned",
-          "racial_descent": "Anatolian (Lydian/Greek ancestry)",
-          "physical_description": "A 68-year-old Anatolian (Lydian/Greek ancestry) male (standing 5'5\" tall, weighing 145 lbs) with Tanned skin tone. Features Frail but dignified, with a gentle, knowing gaze. His long grey beard and hair frame a face etched with years of contemplation. He often carries a small, exquisitely crafted lyre.",
-          "traits": "Calm, insightful, empathetic, melancholic, patient, wise.",
-          "costume": "Scholar's Drape: A simple, worn tunic of undyed wool, with a darker, heavier cloak draped over his shoulders. Practical and unassuming, reflecting his humble servitude and scholarly pursuits.",
-          "costume_materials": "Coarse grey and brown wool, simple leather belt.",
-          "costume_thematic_significance": "Represents his quiet wisdom and his role as a keeper of ancient knowledge, blending into the background.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        }
-      ],
-      "key_props": [
-        {
-          "name": "Lyra's Ancestral Pendant",
-          "appearance": "An intricately carved silver pendant, depicting an ancient North African symbol resembling a stylized ankh intertwined with a crescent moon. It has a hidden clasp.",
-          "narrative_significance": "Symbolizes Lyra's lost heritage and serves as a literal key to the rebellion's hidden network and a message from her ancestors.",
-          "key_scene_usage": "Lyra fiddles with it during her performance, a subtle act of defiance. Later, Kaelus discovers it contains a miniature, coded map to the Catacombs, revealing a meeting point."
-        }
-      ],
-      "negative_prompt": "no text, no speech bubbles, no dialogue subtitles, no logos, no captions, no watermarks, no frame borders"
-    },
-    "video_motion_prompt": {
-      "target_generator": "Runway Gen-3 Alpha / Luma Dream Machine / Sora / Kling AI / Pika",
-      "timecode": "01:19 - 01:25",
-      "duration_seconds": 6,
-      "shot_heading": "INT/EXT. THE IMPERIAL ATRIUM - CLIMAX KEYFRAME",
-      "camera_motion": {
-        "movement_type": "24mm Anamorphic, Wide Cinematic Keyframe",
-        "speed_and_pacing": "Smooth cinematic camera movement tailored to 6s shot duration"
-      },
-      "physical_action_and_staging": "High-stakes confrontation peak where prop001 is activated amidst flashing environmental atmosphere.",
-      "environment_and_atmosphere": {
-        "set_name": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area."
-      },
-      "motion_physics": {
-        "fps": 24,
-        "motion_blur": "natural cinematic motion blur",
-        "facial_gestures": "expressive natural character physics and realistic eye micro-movements",
-        "quality": "8k photorealistic video animation"
-      }
-    }
-  },
-  {
-    "shot_number": 15,
-    "shot_heading": "INT/EXT. THE IMPERIAL ATRIUM - REVERSE ANGLE POV",
-    "timecode": "01:25 - 01:30",
-    "duration_seconds": 5,
-    "camera": {
-      "lens_and_angle": "50mm Prime Lens, Subjective POV Shot",
-      "motion": "Cinematic tracking motion over 5s shot window"
-    },
-    "environment": {
-      "set_name": "The Imperial Atrium",
-      "location_type": "Interior (Patrician Villa)",
-      "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-      "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-      "camera_angles": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-    },
-    "characters": [
-      {
-        "name": "Senator Valerius Corvus",
-        "role": "Antagonist, a corrupt Roman patrician.",
-        "age": "50",
-        "sex": "Male",
-        "height": "5'9\"",
-        "weight": "220 lbs",
-        "skin_tone": "Pale",
-        "racial_descent": "Roman (European)",
-        "physical_description": "A 50-year-old Roman (European) male (standing 5'9\" tall, weighing 220 lbs) with Pale skin tone. Features Portly and well-fed, with heavy-lidded eyes that frequently betray his boredom or sinister intentions. His fingers are adorned with numerous elaborate rings, and his toga is always impeccably draped.",
-        "personality_traits": "Arrogant, cruel, manipulative, hedonistic, possessive, shrewd.",
-        "costumes": [
-          {
-            "name": "Patrician's Robe",
-            "description": "A voluminous toga of the finest white wool draped over a tunic of deep imperial purple, adorned with heavy gold brooches and a large signet ring. Exudes authority and opulence.",
-            "materials_and_colors": "Finest white wool, imperial purple silk, heavy gold, emerald and ruby jewelry.",
-            "thematic_significance": "Represents his immense power, wealth, and status within Roman society, a symbol of the empire's peak."
-          },
-          {
-            "name": "Feast Garb",
-            "description": "A looser, more casually opulent tunic and lighter toga in rich, embroidered fabrics, designed for comfort during lavish banquets and private entertainment.",
-            "materials_and_colors": "Embroidered crimson silk, gold thread, soft kid leather slippers.",
-            "thematic_significance": "Highlights his gluttony and hedonism, his indulgence in the empire's decadent pleasures."
-          },
-          {
-            "name": "Senatorial Authority",
-            "description": "A formal toga with the broad purple stripe of a senator, worn with an air of cold calculation. For official Senate proceedings and public appearances.",
-            "materials_and_colors": "Crisp white linen, broad imperial purple stripe, polished ivory accessories.",
-            "thematic_significance": "Symbolizes his political influence and the corrupt power he wields within the Roman government."
-          },
-          {
-            "name": "Midnight Intrigue",
-            "description": "A dark, rich cloak made of heavy wool, designed to conceal his identity during shadowy dealings and clandestine meetings in the city's underbelly.",
-            "materials_and_colors": "Deepest black wool, hidden silk lining, minimal adornment.",
-            "thematic_significance": "Represents his manipulative and ruthless nature, engaging in illicit activities to maintain his control."
-          },
-          {
-            "name": "Decadent Slumber",
-            "description": "Flowing silk loungewear in muted, luxurious tones, worn in his private chambers, accompanied by a heavy gold necklace and rings.",
-            "materials_and_colors": "Softest navy blue silk, silver-grey embroidery, heavy gold chains.",
-            "thematic_significance": "Reveals his ultimate self-indulgence and disregard for anything beyond his own comfort and desires."
-          }
-        ]
-      }
-    ],
-    "props": [
-      {
-        "name": "Lyra's Ancestral Pendant",
-        "appearance": "An intricately carved silver pendant, depicting an ancient North African symbol resembling a stylized ankh intertwined with a crescent moon. It has a hidden clasp.",
-        "narrative_significance": "Symbolizes Lyra's lost heritage and serves as a literal key to the rebellion's hidden network and a message from her ancestors.",
-        "key_scene_usage": "Lyra fiddles with it during her performance, a subtle act of defiance. Later, Kaelus discovers it contains a miniature, coded map to the Catacombs, revealing a meeting point."
-      }
-    ],
-    "visual_action": "Subjective camera perspective looking from char001's eyes as char003 signals to move forward.",
-    "still_frame_prompt": {
-      "aspect_ratio": "16:9",
-      "render_style": "Photorealistic 8k Cinematic Movie Still",
-      "film_genre": "Musical / Dance",
-      "movie_title": "Gladius & Grace: The Roman Rhapsody",
-      "subject_and_action": "Subjective camera perspective looking from char001's eyes as char003 signals to move forward.",
-      "set_environment": {
-        "location": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-        "camera_angles_guidance": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-      },
-      "camera_specs": {
-        "angle_and_lens": "50mm Prime Lens, Subjective POV Shot",
-        "depth_of_field": "Cinematic shallow depth of field with sharp focal plane"
-      },
-      "characters_in_frame": [
-        {
-          "name": "Senator Valerius Corvus",
-          "role": "Antagonist, a corrupt Roman patrician.",
-          "age": "50",
-          "sex": "Male",
-          "height": "5'9\"",
-          "weight": "220 lbs",
-          "skin_tone": "Pale",
-          "racial_descent": "Roman (European)",
-          "physical_description": "A 50-year-old Roman (European) male (standing 5'9\" tall, weighing 220 lbs) with Pale skin tone. Features Portly and well-fed, with heavy-lidded eyes that frequently betray his boredom or sinister intentions. His fingers are adorned with numerous elaborate rings, and his toga is always impeccably draped.",
-          "traits": "Arrogant, cruel, manipulative, hedonistic, possessive, shrewd.",
-          "costume": "Patrician's Robe: A voluminous toga of the finest white wool draped over a tunic of deep imperial purple, adorned with heavy gold brooches and a large signet ring. Exudes authority and opulence.",
-          "costume_materials": "Finest white wool, imperial purple silk, heavy gold, emerald and ruby jewelry.",
-          "costume_thematic_significance": "Represents his immense power, wealth, and status within Roman society, a symbol of the empire's peak.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        }
-      ],
-      "key_props": [
-        {
-          "name": "Lyra's Ancestral Pendant",
-          "appearance": "An intricately carved silver pendant, depicting an ancient North African symbol resembling a stylized ankh intertwined with a crescent moon. It has a hidden clasp.",
-          "narrative_significance": "Symbolizes Lyra's lost heritage and serves as a literal key to the rebellion's hidden network and a message from her ancestors.",
-          "key_scene_usage": "Lyra fiddles with it during her performance, a subtle act of defiance. Later, Kaelus discovers it contains a miniature, coded map to the Catacombs, revealing a meeting point."
-        }
-      ],
-      "negative_prompt": "no text, no speech bubbles, no dialogue subtitles, no logos, no captions, no watermarks, no frame borders"
-    },
-    "video_motion_prompt": {
-      "target_generator": "Runway Gen-3 Alpha / Luma Dream Machine / Sora / Kling AI / Pika",
-      "timecode": "01:25 - 01:30",
-      "duration_seconds": 5,
-      "shot_heading": "INT/EXT. THE IMPERIAL ATRIUM - REVERSE ANGLE POV",
-      "camera_motion": {
-        "movement_type": "50mm Prime Lens, Subjective POV Shot",
-        "speed_and_pacing": "Smooth cinematic camera movement tailored to 5s shot duration"
-      },
-      "physical_action_and_staging": "Subjective camera perspective looking from char001's eyes as char003 signals to move forward.",
-      "environment_and_atmosphere": {
-        "set_name": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area."
-      },
-      "motion_physics": {
-        "fps": 24,
-        "motion_blur": "natural cinematic motion blur",
-        "facial_gestures": "expressive natural character physics and realistic eye micro-movements",
-        "quality": "8k photorealistic video animation"
-      }
-    }
-  },
-  {
-    "shot_number": 16,
-    "shot_heading": "INT/EXT. THE IMPERIAL ATRIUM - OVER-THE-SHOULDER TENSION",
-    "timecode": "01:30 - 01:34",
-    "duration_seconds": 4,
-    "camera": {
-      "lens_and_angle": "85mm Medium Close-Up Over-the-Shoulder",
-      "motion": "Cinematic tracking motion over 4s shot window"
-    },
-    "environment": {
-      "set_name": "The Imperial Atrium",
-      "location_type": "Interior (Patrician Villa)",
-      "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-      "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-      "camera_angles": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-    },
-    "characters": [
-      {
-        "name": "Lyra of Cyrene",
-        "role": "Protagonist, a gifted enslaved dancer.",
-        "age": "22",
-        "sex": "Female",
-        "height": "5'6\"",
-        "weight": "120 lbs",
-        "skin_tone": "Olive",
-        "racial_descent": "North African (Berber/Egyptian ancestry)",
-        "physical_description": "A 22-year-old North African (Berber/Egyptian ancestry) female (standing 5'6\" tall, weighing 120 lbs) with Olive skin tone. Features Lean, agile dancer's physique with expressive dark eyes. Her long, dark hair is often intricately braided. Despite her captivity, her movements retain an inherent dignity and power.",
-        "personality_traits": "Resilient, passionate, graceful, defiant, observant, empathetic.",
-        "costumes": [
-          {
-            "name": "Chains of Art",
-            "description": "A simple yet elegant flowing tunic of cream linen, with subtle gold embroidery at the neck and cuffs. It allows for full freedom of movement while hinting at the confines of her servitude.",
-            "materials_and_colors": "Cream linen, subtle gold thread embroidery, soft leather sandals.",
-            "thematic_significance": "Represents her role as an enslaved artist, bound by her circumstances but expressing beauty within them."
-          },
-          {
-            "name": "Desert Bloom",
-            "description": "An ethereal gown of sheer, vibrant fabrics, layered and flowing, adorned with delicate beadwork and a headpiece inspired by desert flora. Designed for a captivating, solo performance.",
-            "materials_and_colors": "Sheer silk in ochre, deep terracotta, and azure, with intricate brass and glass beadwork.",
-            "thematic_significance": "Symbolizes her hidden heritage and the blossoming of her true artistic spirit, even in a foreign land."
-          },
-          {
-            "name": "Shadow Weaver",
-            "description": "Dark, practical, close-fitting tunic and trousers, with a hooded cloak. Designed for stealth and movement through Rome's shadowy backstreets.",
-            "materials_and_colors": "Dark grey wool, deep indigo linen, practical leather boots.",
-            "thematic_significance": "Reflects her clandestine activities and her growing involvement in the rebellion, moving unseen through the city."
-          },
-          {
-            "name": "Imperial Masque",
-            "description": "An opulent, heavily embroidered toga-style dress in gold and deep purple, adorned with precious stones and a regal headpiece. For formal performances before the Roman elite.",
-            "materials_and_colors": "Gold brocade, deep imperial purple silk, emeralds, rubies, and intricate golden filigree.",
-            "thematic_significance": "Her forced persona as a Roman entertainer, masking her true identity and rebellious spirit behind a facade of imperial grandeur."
-          },
-          {
-            "name": "Wings of Freedom",
-            "description": "A lightweight, flowing costume made from multiple layers of translucent fabric, designed to create a visual 'wing' effect during movement. Bright and unrestrictive.",
-            "materials_and_colors": "Lightweight, sheer white and sky-blue silk, silver accents, bare feet.",
-            "thematic_significance": "Symbolizes her ultimate quest for freedom and her aspiration to transcend her enslaved status, embodying hope and rebellion."
-          }
-        ]
-      },
-      {
-        "name": "Senator Valerius Corvus",
-        "role": "Antagonist, a corrupt Roman patrician.",
-        "age": "50",
-        "sex": "Male",
-        "height": "5'9\"",
-        "weight": "220 lbs",
-        "skin_tone": "Pale",
-        "racial_descent": "Roman (European)",
-        "physical_description": "A 50-year-old Roman (European) male (standing 5'9\" tall, weighing 220 lbs) with Pale skin tone. Features Portly and well-fed, with heavy-lidded eyes that frequently betray his boredom or sinister intentions. His fingers are adorned with numerous elaborate rings, and his toga is always impeccably draped.",
-        "personality_traits": "Arrogant, cruel, manipulative, hedonistic, possessive, shrewd.",
-        "costumes": [
-          {
-            "name": "Patrician's Robe",
-            "description": "A voluminous toga of the finest white wool draped over a tunic of deep imperial purple, adorned with heavy gold brooches and a large signet ring. Exudes authority and opulence.",
-            "materials_and_colors": "Finest white wool, imperial purple silk, heavy gold, emerald and ruby jewelry.",
-            "thematic_significance": "Represents his immense power, wealth, and status within Roman society, a symbol of the empire's peak."
-          },
-          {
-            "name": "Feast Garb",
-            "description": "A looser, more casually opulent tunic and lighter toga in rich, embroidered fabrics, designed for comfort during lavish banquets and private entertainment.",
-            "materials_and_colors": "Embroidered crimson silk, gold thread, soft kid leather slippers.",
-            "thematic_significance": "Highlights his gluttony and hedonism, his indulgence in the empire's decadent pleasures."
-          },
-          {
-            "name": "Senatorial Authority",
-            "description": "A formal toga with the broad purple stripe of a senator, worn with an air of cold calculation. For official Senate proceedings and public appearances.",
-            "materials_and_colors": "Crisp white linen, broad imperial purple stripe, polished ivory accessories.",
-            "thematic_significance": "Symbolizes his political influence and the corrupt power he wields within the Roman government."
-          },
-          {
-            "name": "Midnight Intrigue",
-            "description": "A dark, rich cloak made of heavy wool, designed to conceal his identity during shadowy dealings and clandestine meetings in the city's underbelly.",
-            "materials_and_colors": "Deepest black wool, hidden silk lining, minimal adornment.",
-            "thematic_significance": "Represents his manipulative and ruthless nature, engaging in illicit activities to maintain his control."
-          },
-          {
-            "name": "Decadent Slumber",
-            "description": "Flowing silk loungewear in muted, luxurious tones, worn in his private chambers, accompanied by a heavy gold necklace and rings.",
-            "materials_and_colors": "Softest navy blue silk, silver-grey embroidery, heavy gold chains.",
-            "thematic_significance": "Reveals his ultimate self-indulgence and disregard for anything beyond his own comfort and desires."
-          }
-        ]
-      }
-    ],
-    "props": [
-      {
-        "name": "Secondary Prop"
-      }
-    ],
-    "visual_action": "Framed over char003's shoulder as char001 inspects Secondary Prop for critical details.",
-    "still_frame_prompt": {
-      "aspect_ratio": "16:9",
-      "render_style": "Photorealistic 8k Cinematic Movie Still",
-      "film_genre": "Musical / Dance",
-      "movie_title": "Gladius & Grace: The Roman Rhapsody",
-      "subject_and_action": "Framed over char003's shoulder as char001 inspects Secondary Prop for critical details.",
-      "set_environment": {
-        "location": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area.",
-        "camera_angles_guidance": "Low angles to emphasize height and power, wide shots for grandeur, tracking shots following performers, overhead shots to show intricate dance patterns on the mosaics."
-      },
-      "camera_specs": {
-        "angle_and_lens": "85mm Medium Close-Up Over-the-Shoulder",
-        "depth_of_field": "Cinematic shallow depth of field with sharp focal plane"
-      },
-      "characters_in_frame": [
-        {
-          "name": "Lyra of Cyrene",
-          "role": "Protagonist, a gifted enslaved dancer.",
-          "age": "22",
-          "sex": "Female",
-          "height": "5'6\"",
-          "weight": "120 lbs",
-          "skin_tone": "Olive",
-          "racial_descent": "North African (Berber/Egyptian ancestry)",
-          "physical_description": "A 22-year-old North African (Berber/Egyptian ancestry) female (standing 5'6\" tall, weighing 120 lbs) with Olive skin tone. Features Lean, agile dancer's physique with expressive dark eyes. Her long, dark hair is often intricately braided. Despite her captivity, her movements retain an inherent dignity and power.",
-          "traits": "Resilient, passionate, graceful, defiant, observant, empathetic.",
-          "costume": "Chains of Art: A simple yet elegant flowing tunic of cream linen, with subtle gold embroidery at the neck and cuffs. It allows for full freedom of movement while hinting at the confines of her servitude.",
-          "costume_materials": "Cream linen, subtle gold thread embroidery, soft leather sandals.",
-          "costume_thematic_significance": "Represents her role as an enslaved artist, bound by her circumstances but expressing beauty within them.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        },
-        {
-          "name": "Senator Valerius Corvus",
-          "role": "Antagonist, a corrupt Roman patrician.",
-          "age": "50",
-          "sex": "Male",
-          "height": "5'9\"",
-          "weight": "220 lbs",
-          "skin_tone": "Pale",
-          "racial_descent": "Roman (European)",
-          "physical_description": "A 50-year-old Roman (European) male (standing 5'9\" tall, weighing 220 lbs) with Pale skin tone. Features Portly and well-fed, with heavy-lidded eyes that frequently betray his boredom or sinister intentions. His fingers are adorned with numerous elaborate rings, and his toga is always impeccably draped.",
-          "traits": "Arrogant, cruel, manipulative, hedonistic, possessive, shrewd.",
-          "costume": "Patrician's Robe: A voluminous toga of the finest white wool draped over a tunic of deep imperial purple, adorned with heavy gold brooches and a large signet ring. Exudes authority and opulence.",
-          "costume_materials": "Finest white wool, imperial purple silk, heavy gold, emerald and ruby jewelry.",
-          "costume_thematic_significance": "Represents his immense power, wealth, and status within Roman society, a symbol of the empire's peak.",
-          "pose_and_expression": "In-character staging for shot action in The Imperial Atrium"
-        }
-      ],
-      "key_props": [
-        {
-          "name": "Secondary Prop",
-          "appearance": "Hero movie artifact"
-        }
-      ],
-      "negative_prompt": "no text, no speech bubbles, no dialogue subtitles, no logos, no captions, no watermarks, no frame borders"
-    },
-    "video_motion_prompt": {
-      "target_generator": "Runway Gen-3 Alpha / Luma Dream Machine / Sora / Kling AI / Pika",
-      "timecode": "01:30 - 01:34",
+    {
+      "shot_number": 3,
+      "heading": "EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 3",
       "duration_seconds": 4,
-      "shot_heading": "INT/EXT. THE IMPERIAL ATRIUM - OVER-THE-SHOULDER TENSION",
-      "camera_motion": {
-        "movement_type": "85mm Medium Close-Up Over-the-Shoulder",
-        "speed_and_pacing": "Smooth cinematic camera movement tailored to 4s shot duration"
+      "timecode": "00:09 - 00:13",
+      "camera_lens": "50mm Standard Prime Lens",
+      "camera_motion": "Eye-level medium tracking shot, subtle handheld float",
+      "characters_present": [
+        "Zephyr"
+      ],
+      "set_used": "The Dragon's Roost & Alpine Peak Aery",
+      "props_used": [
+        "The Dragon-Bonding Crest of the Skies"
+      ],
+      "spoken_dialogue": null,
+      "action_description": "ZEPHYR stands upon the edge of the jagged rock ledge. Colossal wings slowly unfurl against the howling tempest, scattering golden embers into the freezing air.",
+      "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 3. Camera: 50mm Standard Prime Lens, Eye-level medium tracking shot, subtle handheld float. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Zephyr. Action: ZEPHYR stands upon the edge of the jagged rock ledge. Colossal wings slowly unfurl against the howling tempest, scattering golden embers into the freezing air..  Photorealistic, hyper-detailed, award-winning cinematography.",
+      "video_prompt": "[AI Video Motion 24fps] Camera: 50mm Standard Prime Lens, Eye-level medium tracking shot, subtle handheld float. Staging: ZEPHYR stands upon the edge of the jagged rock ledge. Colossal wings slowly unfurl against the howling tempest, scattering golden embers into the freezing air. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 4,
+          "timecode": "00:00 - 00:04",
+          "camera_instruction": "50mm Standard Prime Lens, Eye-level medium tracking shot, subtle handheld float",
+          "motion_vector": "Eye-level medium tracking shot, subtle handheld float",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 3. Camera: 50mm Standard Prime Lens, Eye-level medium tracking shot, subtle handheld float. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Zephyr. Action: ZEPHYR stands upon the edge of the jagged rock ledge. Colossal wings slowly unfurl against the howling tempest, scattering golden embers into the freezing air..  Photorealistic, hyper-detailed, award-winning cinematography.",
+          "video_prompt": "[AI Video Motion 24fps] Camera: 50mm Standard Prime Lens, Eye-level medium tracking shot, subtle handheld float. Staging: ZEPHYR stands upon the edge of the jagged rock ledge. Colossal wings slowly unfurl against the howling tempest, scattering golden embers into the freezing air. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 4,
+      "heading": "EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 4",
+      "duration_seconds": 4,
+      "timecode": "00:13 - 00:17",
+      "camera_lens": "85mm Portrait Telephoto Lens",
+      "camera_motion": "Tight medium close-up with soft background bokeh",
+      "characters_present": [
+        "Kaelen"
+      ],
+      "set_used": "The Dragon's Roost & Alpine Peak Aery",
+      "props_used": [
+        "The Dragon-Bonding Crest of the Skies"
+      ],
+      "spoken_dialogue": null,
+      "action_description": "KAELEN steps forward onto the snow-dusted platform, breath pluming in the icy mountain draft. In hand, the THE DRAGON-BONDING CREST OF THE SKIES begins to glow with warm celestial light.",
+      "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 4. Camera: 85mm Portrait Telephoto Lens, Tight medium close-up with soft background bokeh. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Kaelen. Action: KAELEN steps forward onto the snow-dusted platform, breath pluming in the icy mountain draft. In hand, the THE DRAGON-BONDING CREST OF THE SKIES begins to glow with warm celestial light..  Photorealistic, hyper-detailed, award-winning cinematography.",
+      "video_prompt": "[AI Video Motion 24fps] Camera: 85mm Portrait Telephoto Lens, Tight medium close-up with soft background bokeh. Staging: KAELEN steps forward onto the snow-dusted platform, breath pluming in the icy mountain draft. In hand, the THE DRAGON-BONDING CREST OF THE SKIES begins to glow with warm celestial light. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 4,
+          "timecode": "00:00 - 00:04",
+          "camera_instruction": "85mm Portrait Telephoto Lens, Tight medium close-up with soft background bokeh",
+          "motion_vector": "Tight medium close-up with soft background bokeh",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 4. Camera: 85mm Portrait Telephoto Lens, Tight medium close-up with soft background bokeh. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Kaelen. Action: KAELEN steps forward onto the snow-dusted platform, breath pluming in the icy mountain draft. In hand, the THE DRAGON-BONDING CREST OF THE SKIES begins to glow with warm celestial light..  Photorealistic, hyper-detailed, award-winning cinematography.",
+          "video_prompt": "[AI Video Motion 24fps] Camera: 85mm Portrait Telephoto Lens, Tight medium close-up with soft background bokeh. Staging: KAELEN steps forward onto the snow-dusted platform, breath pluming in the icy mountain draft. In hand, the THE DRAGON-BONDING CREST OF THE SKIES begins to glow with warm celestial light. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 5,
+      "heading": "EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 5",
+      "duration_seconds": 7.8,
+      "timecode": "00:17 - 00:24",
+      "camera_lens": "100mm Macro Close-Up Lens",
+      "camera_motion": "Extreme close-up on intense eye gaze and micro-expressions",
+      "characters_present": [
+        "Kaelen"
+      ],
+      "set_used": "The Dragon's Roost & Alpine Peak Aery",
+      "props_used": [
+        "The Dragon-Bonding Crest of the Skies"
+      ],
+      "spoken_dialogue": {
+        "speaker": "KAELEN",
+        "spokenLine": "I did not climb the Dragon's Maw to wage war, Zephyr. The darkness from the valleys has reached the high crags.",
+        "parenthetical": "(voice ringing steady against the howling wind)"
       },
-      "physical_action_and_staging": "Framed over char003's shoulder as char001 inspects Secondary Prop for critical details.",
-      "environment_and_atmosphere": {
-        "set_name": "The Imperial Atrium",
-        "location_type": "Interior (Patrician Villa)",
-        "description": "The lavish central hall of Senator Valerius's sprawling villa. Polished marble floors reflect the light, towering columns support a frescoed ceiling, and classical statues of Roman gods and emperors line the walls. Ornate mosaics depict mythical scenes. The space exudes power, wealth, and decadent excess.",
-        "lighting": "Rich, warm, indirect lighting from unseen oil lamps and strategically placed braziers, creating dramatic shadows and highlighting architectural details. A focused, soft spotlight on the central performance area."
+      "action_description": "KAELEN delivers line with deliberate dramatic inflection.",
+      "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 5. Camera: 100mm Macro Close-Up Lens, Extreme close-up on intense eye gaze and micro-expressions. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Kaelen. Action: KAELEN delivers line with deliberate dramatic inflection.. Dialogue delivery: \"I did not climb the Dragon's Maw to wage war, Zephyr. The darkness from the valleys has reached the high crags.\". Photorealistic, hyper-detailed, award-winning cinematography.",
+      "video_prompt": "[AI Video Motion 24fps] Camera: 100mm Macro Close-Up Lens, Extreme close-up on intense eye gaze and micro-expressions. Staging: KAELEN delivers line with deliberate dramatic inflection. Actor KAELEN speaks with natural lip-sync cadence: \"I did not climb the Dragon's Maw to wage war, Zephyr. The darkness from the valleys has reached the high crags.\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 7.8,
+          "timecode": "00:00 - 00:08",
+          "camera_instruction": "100mm Macro Close-Up Lens, Extreme close-up on intense eye gaze and micro-expressions",
+          "motion_vector": "Extreme close-up on intense eye gaze and micro-expressions",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 5. Camera: 100mm Macro Close-Up Lens, Extreme close-up on intense eye gaze and micro-expressions. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Kaelen. Action: KAELEN delivers line with deliberate dramatic inflection.. Dialogue delivery: \"I did not climb the Dragon's Maw to wage war, Zephyr. The darkness from the valleys has reached the high crags.\". Photorealistic, hyper-detailed, award-winning cinematography.",
+          "video_prompt": "[AI Video Motion 24fps] Camera: 100mm Macro Close-Up Lens, Extreme close-up on intense eye gaze and micro-expressions. Staging: KAELEN delivers line with deliberate dramatic inflection. Actor KAELEN speaks with natural lip-sync cadence: \"I did not climb the Dragon's Maw to wage war, Zephyr. The darkness from the valleys has reached the high crags.\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 6,
+      "heading": "EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 6",
+      "duration_seconds": 4,
+      "timecode": "00:24 - 00:28",
+      "camera_lens": "35mm Low-Angle Dutch Tilt",
+      "camera_motion": "Dynamic upward pan capturing tension and verticality",
+      "characters_present": [
+        "Zephyr"
+      ],
+      "set_used": "The Dragon's Roost & Alpine Peak Aery",
+      "props_used": [
+        "The Dragon-Bonding Crest of the Skies"
+      ],
+      "spoken_dialogue": null,
+      "action_description": "ZEPHYR lowers a colossal, horned crown. Piercing golden eyes lock onto the mortal, analyzing every heartbeat with ancient scrutiny.",
+      "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 6. Camera: 35mm Low-Angle Dutch Tilt, Dynamic upward pan capturing tension and verticality. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Zephyr. Action: ZEPHYR lowers a colossal, horned crown. Piercing golden eyes lock onto the mortal, analyzing every heartbeat with ancient scrutiny..  Photorealistic, hyper-detailed, award-winning cinematography.",
+      "video_prompt": "[AI Video Motion 24fps] Camera: 35mm Low-Angle Dutch Tilt, Dynamic upward pan capturing tension and verticality. Staging: ZEPHYR lowers a colossal, horned crown. Piercing golden eyes lock onto the mortal, analyzing every heartbeat with ancient scrutiny. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 4,
+          "timecode": "00:00 - 00:04",
+          "camera_instruction": "35mm Low-Angle Dutch Tilt, Dynamic upward pan capturing tension and verticality",
+          "motion_vector": "Dynamic upward pan capturing tension and verticality",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 6. Camera: 35mm Low-Angle Dutch Tilt, Dynamic upward pan capturing tension and verticality. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Zephyr. Action: ZEPHYR lowers a colossal, horned crown. Piercing golden eyes lock onto the mortal, analyzing every heartbeat with ancient scrutiny..  Photorealistic, hyper-detailed, award-winning cinematography.",
+          "video_prompt": "[AI Video Motion 24fps] Camera: 35mm Low-Angle Dutch Tilt, Dynamic upward pan capturing tension and verticality. Staging: ZEPHYR lowers a colossal, horned crown. Piercing golden eyes lock onto the mortal, analyzing every heartbeat with ancient scrutiny. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 7,
+      "heading": "EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 7",
+      "duration_seconds": 7.2,
+      "timecode": "00:28 - 00:36",
+      "camera_lens": "50mm Over-the-Shoulder",
+      "camera_motion": "Reverse OTS angle framing conversational tension",
+      "characters_present": [
+        "Zephyr"
+      ],
+      "set_used": "The Dragon's Roost & Alpine Peak Aery",
+      "props_used": [
+        "The Dragon-Bonding Crest of the Skies"
+      ],
+      "spoken_dialogue": {
+        "speaker": "ZEPHYR",
+        "spokenLine": "Many mortals have sought my flame to conquer kings. What makes you worthy of the skies?",
+        "parenthetical": "(resonant whisper echoing in the mind)"
       },
-      "motion_physics": {
-        "fps": 24,
-        "motion_blur": "natural cinematic motion blur",
-        "facial_gestures": "expressive natural character physics and realistic eye micro-movements",
-        "quality": "8k photorealistic video animation"
-      }
+      "action_description": "ZEPHYR delivers line with deliberate dramatic inflection.",
+      "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 7. Camera: 50mm Over-the-Shoulder, Reverse OTS angle framing conversational tension. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Zephyr. Action: ZEPHYR delivers line with deliberate dramatic inflection.. Dialogue delivery: \"Many mortals have sought my flame to conquer kings. What makes you worthy of the skies?\". Photorealistic, hyper-detailed, award-winning cinematography.",
+      "video_prompt": "[AI Video Motion 24fps] Camera: 50mm Over-the-Shoulder, Reverse OTS angle framing conversational tension. Staging: ZEPHYR delivers line with deliberate dramatic inflection. Actor ZEPHYR speaks with natural lip-sync cadence: \"Many mortals have sought my flame to conquer kings. What makes you worthy of the skies?\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 7.2,
+          "timecode": "00:00 - 00:07",
+          "camera_instruction": "50mm Over-the-Shoulder, Reverse OTS angle framing conversational tension",
+          "motion_vector": "Reverse OTS angle framing conversational tension",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 7. Camera: 50mm Over-the-Shoulder, Reverse OTS angle framing conversational tension. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Zephyr. Action: ZEPHYR delivers line with deliberate dramatic inflection.. Dialogue delivery: \"Many mortals have sought my flame to conquer kings. What makes you worthy of the skies?\". Photorealistic, hyper-detailed, award-winning cinematography.",
+          "video_prompt": "[AI Video Motion 24fps] Camera: 50mm Over-the-Shoulder, Reverse OTS angle framing conversational tension. Staging: ZEPHYR delivers line with deliberate dramatic inflection. Actor ZEPHYR speaks with natural lip-sync cadence: \"Many mortals have sought my flame to conquer kings. What makes you worthy of the skies?\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 8,
+      "heading": "EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 8",
+      "duration_seconds": 8,
+      "timecode": "00:36 - 00:44",
+      "camera_lens": "28mm Wide Action Angle",
+      "camera_motion": "Rapid whip-pan following kinetic character blocking",
+      "characters_present": [
+        "Kaelen"
+      ],
+      "set_used": "The Dragon's Roost & Alpine Peak Aery",
+      "props_used": [
+        "The Dragon-Bonding Crest of the Skies"
+      ],
+      "spoken_dialogue": {
+        "speaker": "KAELEN",
+        "spokenLine": "I seek neither crown nor conquered lands. I offer my oath to protect the realm together.",
+        "parenthetical": "(unclasping weapon and raising the THE DRAGON-BONDING CREST OF THE SKIES)"
+      },
+      "action_description": "KAELEN delivers line with deliberate dramatic inflection.",
+      "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 8. Camera: 28mm Wide Action Angle, Rapid whip-pan following kinetic character blocking. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Kaelen. Action: KAELEN delivers line with deliberate dramatic inflection.. Dialogue delivery: \"I seek neither crown nor conquered lands. I offer my oath to protect the realm together.\". Photorealistic, hyper-detailed, award-winning cinematography.",
+      "video_prompt": "[AI Video Motion 24fps] Camera: 28mm Wide Action Angle, Rapid whip-pan following kinetic character blocking. Staging: KAELEN delivers line with deliberate dramatic inflection. Actor KAELEN speaks with natural lip-sync cadence: \"I seek neither crown nor conquered lands. I offer my oath to protect the realm together.\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 8,
+          "timecode": "00:00 - 00:08",
+          "camera_instruction": "28mm Wide Action Angle, Rapid whip-pan following kinetic character blocking",
+          "motion_vector": "Rapid whip-pan following kinetic character blocking",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 8. Camera: 28mm Wide Action Angle, Rapid whip-pan following kinetic character blocking. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Kaelen. Action: KAELEN delivers line with deliberate dramatic inflection.. Dialogue delivery: \"I seek neither crown nor conquered lands. I offer my oath to protect the realm together.\". Photorealistic, hyper-detailed, award-winning cinematography.",
+          "video_prompt": "[AI Video Motion 24fps] Camera: 28mm Wide Action Angle, Rapid whip-pan following kinetic character blocking. Staging: KAELEN delivers line with deliberate dramatic inflection. Actor KAELEN speaks with natural lip-sync cadence: \"I seek neither crown nor conquered lands. I offer my oath to protect the realm together.\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 9,
+      "heading": "EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 9",
+      "duration_seconds": 4,
+      "timecode": "00:44 - 00:48",
+      "camera_lens": "85mm Shallow Depth Lens",
+      "camera_motion": "Slow push-in highlighting emotional revelation",
+      "characters_present": [
+        "Zephyr",
+        "Kaelen"
+      ],
+      "set_used": "The Dragon's Roost & Alpine Peak Aery",
+      "props_used": [
+        "The Dragon-Bonding Crest of the Skies"
+      ],
+      "spoken_dialogue": null,
+      "action_description": "KAELEN reaches out an unarmored hand. A sudden flash of brilliant sapphire light erupts as the THE DRAGON-BONDING CREST OF THE SKIES touches ZEPHYR's brow!",
+      "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 9. Camera: 85mm Shallow Depth Lens, Slow push-in highlighting emotional revelation. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Zephyr, Kaelen. Action: KAELEN reaches out an unarmored hand. A sudden flash of brilliant sapphire light erupts as the THE DRAGON-BONDING CREST OF THE SKIES touches ZEPHYR's brow!.  Photorealistic, hyper-detailed, award-winning cinematography.",
+      "video_prompt": "[AI Video Motion 24fps] Camera: 85mm Shallow Depth Lens, Slow push-in highlighting emotional revelation. Staging: KAELEN reaches out an unarmored hand. A sudden flash of brilliant sapphire light erupts as the THE DRAGON-BONDING CREST OF THE SKIES touches ZEPHYR's brow! Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 4,
+          "timecode": "00:00 - 00:04",
+          "camera_instruction": "85mm Shallow Depth Lens, Slow push-in highlighting emotional revelation",
+          "motion_vector": "Slow push-in highlighting emotional revelation",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 9. Camera: 85mm Shallow Depth Lens, Slow push-in highlighting emotional revelation. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Zephyr, Kaelen. Action: KAELEN reaches out an unarmored hand. A sudden flash of brilliant sapphire light erupts as the THE DRAGON-BONDING CREST OF THE SKIES touches ZEPHYR's brow!.  Photorealistic, hyper-detailed, award-winning cinematography.",
+          "video_prompt": "[AI Video Motion 24fps] Camera: 85mm Shallow Depth Lens, Slow push-in highlighting emotional revelation. Staging: KAELEN reaches out an unarmored hand. A sudden flash of brilliant sapphire light erupts as the THE DRAGON-BONDING CREST OF THE SKIES touches ZEPHYR's brow! Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 10,
+      "heading": "EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 10",
+      "duration_seconds": 4,
+      "timecode": "00:48 - 00:52",
+      "camera_lens": "50mm Two-Shot Master",
+      "camera_motion": "Lateral slider tracking movement across the space",
+      "characters_present": [
+        "Zephyr"
+      ],
+      "set_used": "The Dragon's Roost & Alpine Peak Aery",
+      "props_used": [
+        "The Dragon-Bonding Crest of the Skies"
+      ],
+      "spoken_dialogue": null,
+      "action_description": "ZEPHYR unleashes a magnificent, earth-shaking roar that echoes across the mountain range! The ancient bond is forged!",
+      "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 10. Camera: 50mm Two-Shot Master, Lateral slider tracking movement across the space. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Zephyr. Action: ZEPHYR unleashes a magnificent, earth-shaking roar that echoes across the mountain range! The ancient bond is forged!.  Photorealistic, hyper-detailed, award-winning cinematography.",
+      "video_prompt": "[AI Video Motion 24fps] Camera: 50mm Two-Shot Master, Lateral slider tracking movement across the space. Staging: ZEPHYR unleashes a magnificent, earth-shaking roar that echoes across the mountain range! The ancient bond is forged! Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 4,
+          "timecode": "00:00 - 00:04",
+          "camera_instruction": "50mm Two-Shot Master, Lateral slider tracking movement across the space",
+          "motion_vector": "Lateral slider tracking movement across the space",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 10. Camera: 50mm Two-Shot Master, Lateral slider tracking movement across the space. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Zephyr. Action: ZEPHYR unleashes a magnificent, earth-shaking roar that echoes across the mountain range! The ancient bond is forged!.  Photorealistic, hyper-detailed, award-winning cinematography.",
+          "video_prompt": "[AI Video Motion 24fps] Camera: 50mm Two-Shot Master, Lateral slider tracking movement across the space. Staging: ZEPHYR unleashes a magnificent, earth-shaking roar that echoes across the mountain range! The ancient bond is forged! Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 11,
+      "heading": "EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 11",
+      "duration_seconds": 4,
+      "timecode": "00:52 - 00:56",
+      "camera_lens": "100mm Telephoto Profile",
+      "camera_motion": "Tight profile framing, high-contrast rim lighting",
+      "characters_present": [
+        "Zephyr"
+      ],
+      "set_used": "The Dragon's Roost & Alpine Peak Aery",
+      "props_used": [
+        "The Dragon-Bonding Crest of the Skies"
+      ],
+      "spoken_dialogue": null,
+      "action_description": "Gale-force alpine winds whip across the stone precipice. Below, a sea of stormy crimson clouds stretches endlessly toward the horizon.",
+      "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 11. Camera: 100mm Telephoto Profile, Tight profile framing, high-contrast rim lighting. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Zephyr. Action: Gale-force alpine winds whip across the stone precipice. Below, a sea of stormy crimson clouds stretches endlessly toward the horizon..  Photorealistic, hyper-detailed, award-winning cinematography.",
+      "video_prompt": "[AI Video Motion 24fps] Camera: 100mm Telephoto Profile, Tight profile framing, high-contrast rim lighting. Staging: Gale-force alpine winds whip across the stone precipice. Below, a sea of stormy crimson clouds stretches endlessly toward the horizon. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 4,
+          "timecode": "00:00 - 00:04",
+          "camera_instruction": "100mm Telephoto Profile, Tight profile framing, high-contrast rim lighting",
+          "motion_vector": "Tight profile framing, high-contrast rim lighting",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 11. Camera: 100mm Telephoto Profile, Tight profile framing, high-contrast rim lighting. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Zephyr. Action: Gale-force alpine winds whip across the stone precipice. Below, a sea of stormy crimson clouds stretches endlessly toward the horizon..  Photorealistic, hyper-detailed, award-winning cinematography.",
+          "video_prompt": "[AI Video Motion 24fps] Camera: 100mm Telephoto Profile, Tight profile framing, high-contrast rim lighting. Staging: Gale-force alpine winds whip across the stone precipice. Below, a sea of stormy crimson clouds stretches endlessly toward the horizon. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 12,
+      "heading": "EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 12",
+      "duration_seconds": 4,
+      "timecode": "00:56 - 01:00",
+      "camera_lens": "24mm High-Angle Overhead",
+      "camera_motion": "God's eye perspective crane descending slowly",
+      "characters_present": [
+        "Zephyr"
+      ],
+      "set_used": "The Dragon's Roost & Alpine Peak Aery",
+      "props_used": [
+        "The Dragon-Bonding Crest of the Skies"
+      ],
+      "spoken_dialogue": null,
+      "action_description": "Zephyr the dragon finds a rider.",
+      "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 12. Camera: 24mm High-Angle Overhead, God's eye perspective crane descending slowly. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Zephyr. Action: Zephyr the dragon finds a rider..  Photorealistic, hyper-detailed, award-winning cinematography.",
+      "video_prompt": "[AI Video Motion 24fps] Camera: 24mm High-Angle Overhead, God's eye perspective crane descending slowly. Staging: Zephyr the dragon finds a rider. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 4,
+          "timecode": "00:00 - 00:04",
+          "camera_instruction": "24mm High-Angle Overhead, God's eye perspective crane descending slowly",
+          "motion_vector": "God's eye perspective crane descending slowly",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 12. Camera: 24mm High-Angle Overhead, God's eye perspective crane descending slowly. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Zephyr. Action: Zephyr the dragon finds a rider..  Photorealistic, hyper-detailed, award-winning cinematography.",
+          "video_prompt": "[AI Video Motion 24fps] Camera: 24mm High-Angle Overhead, God's eye perspective crane descending slowly. Staging: Zephyr the dragon finds a rider. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 13,
+      "heading": "EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 13",
+      "duration_seconds": 4,
+      "timecode": "01:00 - 01:04",
+      "camera_lens": "35mm Tracking Steadicam",
+      "camera_motion": "Circling 180-degree orbit shot building climax",
+      "characters_present": [
+        "Zephyr"
+      ],
+      "set_used": "The Dragon's Roost & Alpine Peak Aery",
+      "props_used": [
+        "The Dragon-Bonding Crest of the Skies"
+      ],
+      "spoken_dialogue": null,
+      "action_description": "ZEPHYR stands upon the edge of the jagged rock ledge. Colossal wings slowly unfurl against the howling tempest, scattering golden embers into the freezing air.",
+      "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 13. Camera: 35mm Tracking Steadicam, Circling 180-degree orbit shot building climax. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Zephyr. Action: ZEPHYR stands upon the edge of the jagged rock ledge. Colossal wings slowly unfurl against the howling tempest, scattering golden embers into the freezing air..  Photorealistic, hyper-detailed, award-winning cinematography.",
+      "video_prompt": "[AI Video Motion 24fps] Camera: 35mm Tracking Steadicam, Circling 180-degree orbit shot building climax. Staging: ZEPHYR stands upon the edge of the jagged rock ledge. Colossal wings slowly unfurl against the howling tempest, scattering golden embers into the freezing air. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 4,
+          "timecode": "00:00 - 00:04",
+          "camera_instruction": "35mm Tracking Steadicam, Circling 180-degree orbit shot building climax",
+          "motion_vector": "Circling 180-degree orbit shot building climax",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 13. Camera: 35mm Tracking Steadicam, Circling 180-degree orbit shot building climax. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Zephyr. Action: ZEPHYR stands upon the edge of the jagged rock ledge. Colossal wings slowly unfurl against the howling tempest, scattering golden embers into the freezing air..  Photorealistic, hyper-detailed, award-winning cinematography.",
+          "video_prompt": "[AI Video Motion 24fps] Camera: 35mm Tracking Steadicam, Circling 180-degree orbit shot building climax. Staging: ZEPHYR stands upon the edge of the jagged rock ledge. Colossal wings slowly unfurl against the howling tempest, scattering golden embers into the freezing air. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 14,
+      "heading": "EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 14",
+      "duration_seconds": 3.2,
+      "timecode": "01:04 - 01:07",
+      "camera_lens": "85mm Dramatic Close-Up",
+      "camera_motion": "Direct-to-camera punchy framing with shallow depth of field",
+      "characters_present": [
+        "Kaelen"
+      ],
+      "set_used": "The Dragon's Roost & Alpine Peak Aery",
+      "props_used": [
+        "The Dragon-Bonding Crest of the Skies"
+      ],
+      "spoken_dialogue": null,
+      "action_description": "KAELEN steps forward onto the snow-dusted platform, breath pluming in the icy mountain draft. In hand, the THE DRAGON-BONDING CREST OF THE SKIES begins to glow with warm celestial light.",
+      "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 14. Camera: 85mm Dramatic Close-Up, Direct-to-camera punchy framing with shallow depth of field. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Kaelen. Action: KAELEN steps forward onto the snow-dusted platform, breath pluming in the icy mountain draft. In hand, the THE DRAGON-BONDING CREST OF THE SKIES begins to glow with warm celestial light..  Photorealistic, hyper-detailed, award-winning cinematography.",
+      "video_prompt": "[AI Video Motion 24fps] Camera: 85mm Dramatic Close-Up, Direct-to-camera punchy framing with shallow depth of field. Staging: KAELEN steps forward onto the snow-dusted platform, breath pluming in the icy mountain draft. In hand, the THE DRAGON-BONDING CREST OF THE SKIES begins to glow with warm celestial light. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 3.2,
+          "timecode": "00:00 - 00:03",
+          "camera_instruction": "85mm Dramatic Close-Up, Direct-to-camera punchy framing with shallow depth of field",
+          "motion_vector": "Direct-to-camera punchy framing with shallow depth of field",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 14. Camera: 85mm Dramatic Close-Up, Direct-to-camera punchy framing with shallow depth of field. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Kaelen. Action: KAELEN steps forward onto the snow-dusted platform, breath pluming in the icy mountain draft. In hand, the THE DRAGON-BONDING CREST OF THE SKIES begins to glow with warm celestial light..  Photorealistic, hyper-detailed, award-winning cinematography.",
+          "video_prompt": "[AI Video Motion 24fps] Camera: 85mm Dramatic Close-Up, Direct-to-camera punchy framing with shallow depth of field. Staging: KAELEN steps forward onto the snow-dusted platform, breath pluming in the icy mountain draft. In hand, the THE DRAGON-BONDING CREST OF THE SKIES begins to glow with warm celestial light. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 15,
+      "heading": "EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 15",
+      "duration_seconds": 7.8,
+      "timecode": "01:07 - 01:15",
+      "camera_lens": "50mm Climactic Clash Angle",
+      "camera_motion": "Kinetic crash-zoom capturing the decisive beat",
+      "characters_present": [
+        "Kaelen"
+      ],
+      "set_used": "The Dragon's Roost & Alpine Peak Aery",
+      "props_used": [
+        "The Dragon-Bonding Crest of the Skies"
+      ],
+      "spoken_dialogue": {
+        "speaker": "KAELEN",
+        "spokenLine": "I did not climb the Dragon's Maw to wage war, Zephyr. The darkness from the valleys has reached the high crags.",
+        "parenthetical": "(voice ringing steady against the howling wind)"
+      },
+      "action_description": "KAELEN delivers line with deliberate dramatic inflection.",
+      "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 15. Camera: 50mm Climactic Clash Angle, Kinetic crash-zoom capturing the decisive beat. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Kaelen. Action: KAELEN delivers line with deliberate dramatic inflection.. Dialogue delivery: \"I did not climb the Dragon's Maw to wage war, Zephyr. The darkness from the valleys has reached the high crags.\". Photorealistic, hyper-detailed, award-winning cinematography.",
+      "video_prompt": "[AI Video Motion 24fps] Camera: 50mm Climactic Clash Angle, Kinetic crash-zoom capturing the decisive beat. Staging: KAELEN delivers line with deliberate dramatic inflection. Actor KAELEN speaks with natural lip-sync cadence: \"I did not climb the Dragon's Maw to wage war, Zephyr. The darkness from the valleys has reached the high crags.\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 7.8,
+          "timecode": "00:00 - 00:08",
+          "camera_instruction": "50mm Climactic Clash Angle, Kinetic crash-zoom capturing the decisive beat",
+          "motion_vector": "Kinetic crash-zoom capturing the decisive beat",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 15. Camera: 50mm Climactic Clash Angle, Kinetic crash-zoom capturing the decisive beat. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Kaelen. Action: KAELEN delivers line with deliberate dramatic inflection.. Dialogue delivery: \"I did not climb the Dragon's Maw to wage war, Zephyr. The darkness from the valleys has reached the high crags.\". Photorealistic, hyper-detailed, award-winning cinematography.",
+          "video_prompt": "[AI Video Motion 24fps] Camera: 50mm Climactic Clash Angle, Kinetic crash-zoom capturing the decisive beat. Staging: KAELEN delivers line with deliberate dramatic inflection. Actor KAELEN speaks with natural lip-sync cadence: \"I did not climb the Dragon's Maw to wage war, Zephyr. The darkness from the valleys has reached the high crags.\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 16,
+      "heading": "EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 16",
+      "duration_seconds": 4.5,
+      "timecode": "01:15 - 01:19",
+      "camera_lens": "24mm Anamorphic Wide Pullback",
+      "camera_motion": "Slow reverse crane pull-back resolving the scene",
+      "characters_present": [
+        "Zephyr"
+      ],
+      "set_used": "The Dragon's Roost & Alpine Peak Aery",
+      "props_used": [
+        "The Dragon-Bonding Crest of the Skies"
+      ],
+      "spoken_dialogue": null,
+      "action_description": "ZEPHYR lowers a colossal, horned crown. Piercing golden eyes lock onto the mortal, analyzing every heartbeat with ancient scrutiny.",
+      "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 16. Camera: 24mm Anamorphic Wide Pullback, Slow reverse crane pull-back resolving the scene. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Zephyr. Action: ZEPHYR lowers a colossal, horned crown. Piercing golden eyes lock onto the mortal, analyzing every heartbeat with ancient scrutiny..  Photorealistic, hyper-detailed, award-winning cinematography.",
+      "video_prompt": "[AI Video Motion 24fps] Camera: 24mm Anamorphic Wide Pullback, Slow reverse crane pull-back resolving the scene. Staging: ZEPHYR lowers a colossal, horned crown. Piercing golden eyes lock onto the mortal, analyzing every heartbeat with ancient scrutiny. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 4.5,
+          "timecode": "00:00 - 00:05",
+          "camera_instruction": "24mm Anamorphic Wide Pullback, Slow reverse crane pull-back resolving the scene",
+          "motion_vector": "Slow reverse crane pull-back resolving the scene",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "still_prompt": "Cinematic 8K film still frame, shot on 35mm anamorphic camera. EXT. THE DRAGON'S ROOST & ALPINE PEAK AERY - DUSK - SHOT 16. Camera: 24mm Anamorphic Wide Pullback, Slow reverse crane pull-back resolving the scene. Set: The Dragon's Roost & Alpine Peak Aery with high-craft atmospheric lighting and volumetric shadows. Characters: Zephyr. Action: ZEPHYR lowers a colossal, horned crown. Piercing golden eyes lock onto the mortal, analyzing every heartbeat with ancient scrutiny..  Photorealistic, hyper-detailed, award-winning cinematography.",
+          "video_prompt": "[AI Video Motion 24fps] Camera: 24mm Anamorphic Wide Pullback, Slow reverse crane pull-back resolving the scene. Staging: ZEPHYR lowers a colossal, horned crown. Piercing golden eyes lock onto the mortal, analyzing every heartbeat with ancient scrutiny. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
     }
-  }
-]
+  ]
+}
 module.exports = matrix;
