@@ -12,7 +12,7 @@ puppeteer.use(StealthPlugin());
         args: ["--no-sandbox", "--disable-setuid-sandbox"]
     });
 
-    const matrix = require('./matrix.js');
+    const matrix = require('./matrix.json');
     const page = await browser.newPage();
 
     await page.goto(
@@ -21,10 +21,8 @@ puppeteer.use(StealthPlugin());
     );
 
     // CLICK CHARACTER CARD
-    await page.waitForSelector('img[alt="Zephyr"]', { visible: true });
-    await page.click('img[alt="Zephyr"]');
-    await page.waitForSelector('img[alt="KAELEN THORNE"]', { visible: true });
-    await page.click('img[alt="KAELEN THORNE"]');
+    //await page.waitForSelector('img[alt="Tiberius the Legionaire"]', { visible: true });
+   // await page.click('img[alt="Tiberius the Legionaire"]');
 
     // Ensure download directory exists
     const downloadDir = path.join(__dirname, "inputimages");
@@ -48,7 +46,7 @@ puppeteer.use(StealthPlugin());
         console.log("[DATA] Saved:", filepath);
     }
 
-    console.log("Total prompts:", matrix.length);
+    console.log("Total prompts:", matrix.shots.length);
 
     // ---------------------------------------------------------
     // MAIN LOOP: Type prompts, wait, capture largest DATA image, clear
@@ -65,7 +63,8 @@ puppeteer.use(StealthPlugin());
         await page.keyboard.press('Backspace');
 
         // Type full prompt using setter trick
-        const text = `${JSON.stringify(matrix.shots[i].still_prompt)}`;
+        const text = `${JSON.stringify(matrix.shots[i].prompt)}`;
+        console.log(text);
 
         await page.evaluate((selector, value) => {
             const el = document.querySelector(selector);

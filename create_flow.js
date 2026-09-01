@@ -12,18 +12,18 @@ puppeteer.use(StealthPlugin());
         args: ["--no-sandbox", "--disable-setuid-sandbox"]
     });
 
-    const matrix = require('./matrix.js');
+    const matrix = require('./matrix.json');
     const page = await browser.newPage();
 
     await page.goto(
-        'https://labs.google/fx/tools/flow/project/f624b5a2-2819-4c64-a145-ecd04e9316e1',
+        'https://labs.google/fx/tools/flow/project/5f470746-ea52-4acf-9473-7648b025d4ce',
         { waitUntil: "networkidle2", timeout: 0 }
     );
 
     const downloadDir = path.join(__dirname, "inputimages");
     if (!fs.existsSync(downloadDir)) fs.mkdirSync(downloadDir);
 
-    console.log("Total prompts:", matrix.length);
+    console.log("Total prompts:", matrix.shots.length);
 
     // Chunked sendCharacter to avoid Flow reload
     async function safeSendCharacter(page, text) {
@@ -34,9 +34,9 @@ puppeteer.use(StealthPlugin());
         }
     }
 
-    for (let i = 0; i < matrix.length; i++) {
+    for (let i = 0; i < matrix.shots.length; i++) {
 
-        const promptText = JSON.stringify(matrix[i].still_frame_prompt);
+        const promptText = JSON.stringify(matrix.shots[i]);
 
         await page.waitForSelector('[data-slate-editor="true"]', { visible: true });
 
@@ -54,25 +54,56 @@ puppeteer.use(StealthPlugin());
 
         console.log("Typed prompt:", promptText);
 
-         await new Promise(r => setTimeout(r, 2000));
+        for (let repeat = 0; repeat < 1; repeat++) {
 
-// Click CREATE via mouse on the arrow_forward icon's button
-await page.evaluate(() => {
-    const el = [...document.querySelectorAll("button i.google-symbols")]
-        .find(e => e.textContent.trim() === "arrow_forward");
-    if (!el) return null;
-    const btn = el.closest("button");
-    const rect = btn.getBoundingClientRect();
-    return {
-        x: rect.left + rect.width / 2,
-        y: rect.top + rect.height / 2
-    };
-}).then(async coords => {
-    if (!coords) return;
-    await page.mouse.click(coords.x, coords.y);
-});
+        await page.evaluate(() => {
+            const el = [...document.querySelectorAll("button i.google-symbols")]
+                .find(e => e.textContent.trim() === "add_2");
+            if (!el) return null;
+            const btn = el.closest("button");
+            btn?.click();
+        });
 
-        await new Promise(r => setTimeout(r, 15000));
+        const coords = await page.evaluate(() => {
+            const buttons = [...document.querySelectorAll("button")];
+
+            const target = buttons.find(btn =>
+                btn.textContent.trim() === "Add to Prompt"
+            );
+
+            if (!target) return null;
+
+            const rect = target.getBoundingClientRect();
+            return {
+                x: rect.left + rect.width / 2,
+                y: rect.top + rect.height / 2
+            };
+        });
+
+        if (coords) {
+            await page.mouse.click(coords.x, coords.y);
+        }
+    }
+
+        await new Promise(r => setTimeout(r, 2000));
+
+        // Click CREATE via mouse on the arrow_forward icon's button
+        await page.evaluate(() => {
+            const el = [...document.querySelectorAll("button i.google-symbols")]
+                .find(e => e.textContent.trim() === "arrow_forward");
+            if (!el) return null;
+            const btn = el.closest("button");
+            const rect = btn.getBoundingClientRect();
+            return {
+                x: rect.left + rect.width / 2,
+                y: rect.top + rect.height / 2
+            };
+        }).then(async coords => {
+            if (!coords) return;
+            await page.mouse.click(coords.x, coords.y);
+        });
+
+        await new Promise(r => setTimeout(r, 5000));
 
     }
 

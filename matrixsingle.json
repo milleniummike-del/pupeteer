@@ -1,0 +1,13 @@
+{
+  "shots": [
+
+    {
+      "segment_number": 1,
+      "heading": "EXT. NEON CITY ROOFTOP - NIGHT - SEGMENT 1",
+      "camera_lens": "24mm Ultra-Wide Anamorphic Prime",
+      "action_description": "The pop star stands silhouetted against a glowing skyline, neon reflections shimmering across the rooftop tiles.",
+      "still_prompt": "8K neon rooftop still, 24mm ultra-wide anamorphic lens, static composition, glowing skyline, volumetric haze, Pop Star in chrome jacket holding LED Pulse Microphone.",
+      "video_prompt": "[AI Video Motion 24fps] Slow neon dolly-in, skyline pulsing with color."
+    }
+  ]
+}

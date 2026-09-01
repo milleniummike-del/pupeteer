@@ -18,7 +18,7 @@ async function downloadViaPuppeteer(page, url, filepath) {
         args: ["--no-sandbox", "--disable-setuid-sandbox"]
     });
 
-    const matrix = require('./matrix.js');
+    const matrix = require('./matrix.json');
     const page = await browser.newPage();
 
     await page.goto('https://www.gentube.app/genmovie', {
@@ -49,7 +49,8 @@ async function downloadViaPuppeteer(page, url, filepath) {
     for (let v = 0; v < files.length; v++) {
 
         const filePath = path.join(inputDir, files[v]);
-        const currentPrompt = `${JSON.stringify(matrix[v].visual_action) + JSON.stringify(matrix[v].dialogue)}`;
+        const currentPrompt = `${JSON.stringify(matrix.shots[v])}`;
+        console.log(currentPrompt);
 
         // ---------------------------------------------------------
         // WAIT FOR FILE INPUT
