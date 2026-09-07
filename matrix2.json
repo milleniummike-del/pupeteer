@@ -1,0 +1,382 @@
+{
+  "movie_title": "SPY THRILLER: THE DETECTIVE CHRONICLES",
+  "genre": "Spy Thriller",
+  "scene_number": 1,
+  "scene_title": "Scene 1: The Grand Spy Thriller Sanctum",
+  "total_shots": 10,
+  "generation_spec": {
+    "maximum_take_duration_seconds": 8,
+    "frame_rate": "24fps",
+    "target_engine": "Runway Gen-3 Alpha / Luma Dream Machine / Sora / Kling AI / Hailuo MiniMax",
+    "speech_rate_cadence": "2.6 words per second",
+    "still_frame_specification": "Dual Keyframe 8K Stills (In-Frame start t=0.0s & Out-Frame end t=End, zero action/dialogue)",
+    "still_prompts_description": "Provides in-frame and out-frame still descriptions to create a still at each end of the video motion"
+  },
+  "shots": [
+    {
+      "shot_number": 1,
+      "heading": "INT. THE GRAND SPY THRILLER SANCTUM - NIGHT - SHOT 1",
+      "duration_seconds": 4.5,
+      "timecode": "00:00 - 00:04",
+      "camera_lens": "Establishing Wide Shot (24mm Ultra-Wide Anamorphic Prime)",
+      "camera_motion": "The camera tracks smoothly alongside the subject and then zooms in to the face",
+      "characters_present": [
+        "Detective"
+      ],
+      "set_used": "The Grand Spy Thriller Sanctum",
+      "props_used": [
+        "The Master Spy Thriller Catalyst Relic"
+      ],
+      "spoken_dialogue": null,
+      "action_description": "A tense silence grips the chamber, broken only by the steady, measured breathing of two seasoned professionals who know too much.",
+      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Establishing Wide Shot (24mm Ultra-Wide Anamorphic Prime). Starting Position, Pose & Blocking: Detective (Signature Spy Thriller Field Attire, Sharp athletic frame, piercing observant eyes, sea) is positioned in the mid-left frame, moving forward toward the destination: initial position and pose caught as subject A tense silence grips the chamber, body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Spy Thriller Sanctum featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.5s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Tight Close-Up on Face (85mm Portrait Telephoto Prime). Updated Position, Pose & Settled Blocking: Detective (Signature Spy Thriller Field Attire, Sharp athletic frame, piercing observant eyes, sea) is occupies the center-right frame in tight focus, halted squarely at the destination point: updated position and pose following movement where subject broken only by the steady, measured breathing of two seasoned professionals who know too much., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Spy Thriller Sanctum with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Establishing Wide Shot) to Out-Frame Still (Tight Close-Up on Face). Camera Movement: The camera tracks smoothly alongside the subject and then zooms in to the face. Dynamic Action & Blocking: A tense silence grips the chamber, broken only by the steady, measured breathing of two seasoned professionals who know too much.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 4.5,
+          "timecode": "00:00 - 00:05",
+          "camera_instruction": "Establishing Wide Shot (24mm Ultra-Wide Anamorphic Prime), The camera tracks smoothly alongside the subject and then zooms in to the face",
+          "motion_vector": "The camera tracks smoothly alongside the subject and then zooms in to the face",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Establishing Wide Shot (24mm Ultra-Wide Anamorphic Prime). Starting Position, Pose & Blocking: Detective (Signature Spy Thriller Field Attire, Sharp athletic frame, piercing observant eyes, sea) is positioned in the mid-left frame, moving forward toward the destination: initial position and pose caught as subject A tense silence grips the chamber, body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Spy Thriller Sanctum featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.5s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Tight Close-Up on Face (85mm Portrait Telephoto Prime). Updated Position, Pose & Settled Blocking: Detective (Signature Spy Thriller Field Attire, Sharp athletic frame, piercing observant eyes, sea) is occupies the center-right frame in tight focus, halted squarely at the destination point: updated position and pose following movement where subject broken only by the steady, measured breathing of two seasoned professionals who know too much., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Spy Thriller Sanctum with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Establishing Wide Shot) to Out-Frame Still (Tight Close-Up on Face). Camera Movement: The camera tracks smoothly alongside the subject and then zooms in to the face. Dynamic Action & Blocking: A tense silence grips the chamber, broken only by the steady, measured breathing of two seasoned professionals who know too much.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 2,
+      "heading": "INT. THE GRAND SPY THRILLER SANCTUM - NIGHT - SHOT 2",
+      "duration_seconds": 4.5,
+      "timecode": "00:04 - 00:09",
+      "camera_lens": "Full-Body Tracking Master Shot (35mm Wide Cinematic Lens)",
+      "camera_motion": "Steadicam lateral tracking dolly keeping pace with the movement across the space",
+      "characters_present": [
+        "Detective"
+      ],
+      "set_used": "The Grand Spy Thriller Sanctum",
+      "props_used": [
+        "The Master Spy Thriller Catalyst Relic"
+      ],
+      "spoken_dialogue": null,
+      "action_description": "Detective Duck becomes James Bond 007 licensed to quack.",
+      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Full-Body Tracking Master Shot (35mm Wide Cinematic Lens). Starting Position, Pose & Blocking: Detective (Signature Spy Thriller Field Attire, Sharp athletic frame, piercing observant eyes, sea) is framed full-body from the flank, advancing with deliberate kinetic balance: initial position and pose caught as subject Detective Duck becomes James Bond 007 licensed to quack., body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Spy Thriller Sanctum featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.5s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Medium Profile Two-Shot (50mm Standard Prime Lens). Updated Position, Pose & Settled Blocking: Detective (Signature Spy Thriller Field Attire, Sharp athletic frame, piercing observant eyes, sea) is settled in profile medium perspective, body weight anchored at final destination: updated position and pose following movement where subject settled in aftermath posture following detective duck becomes james bond 007 licensed to quack., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Spy Thriller Sanctum with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Full-Body Tracking Master Shot) to Out-Frame Still (Medium Profile Two-Shot). Camera Movement: Steadicam lateral tracking dolly keeping pace with the movement across the space. Dynamic Action & Blocking: Detective Duck becomes James Bond 007 licensed to quack.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 4.5,
+          "timecode": "00:00 - 00:05",
+          "camera_instruction": "Full-Body Tracking Master Shot (35mm Wide Cinematic Lens), Steadicam lateral tracking dolly keeping pace with the movement across the space",
+          "motion_vector": "Steadicam lateral tracking dolly keeping pace with the movement across the space",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Full-Body Tracking Master Shot (35mm Wide Cinematic Lens). Starting Position, Pose & Blocking: Detective (Signature Spy Thriller Field Attire, Sharp athletic frame, piercing observant eyes, sea) is framed full-body from the flank, advancing with deliberate kinetic balance: initial position and pose caught as subject Detective Duck becomes James Bond 007 licensed to quack., body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Spy Thriller Sanctum featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.5s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Medium Profile Two-Shot (50mm Standard Prime Lens). Updated Position, Pose & Settled Blocking: Detective (Signature Spy Thriller Field Attire, Sharp athletic frame, piercing observant eyes, sea) is settled in profile medium perspective, body weight anchored at final destination: updated position and pose following movement where subject settled in aftermath posture following detective duck becomes james bond 007 licensed to quack., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Spy Thriller Sanctum with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Full-Body Tracking Master Shot) to Out-Frame Still (Medium Profile Two-Shot). Camera Movement: Steadicam lateral tracking dolly keeping pace with the movement across the space. Dynamic Action & Blocking: Detective Duck becomes James Bond 007 licensed to quack.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 3,
+      "heading": "INT. THE GRAND SPY THRILLER SANCTUM - NIGHT - SHOT 3",
+      "duration_seconds": 4,
+      "timecode": "00:09 - 00:13",
+      "camera_lens": "Low-Angle Ground Establishing Shot (35mm Low-Angle Dutch Tilt Lens)",
+      "camera_motion": "Camera cranes upward from ground level, tilting upward as the subject commands the space",
+      "characters_present": [
+        "Detective"
+      ],
+      "set_used": "The Grand Spy Thriller Sanctum",
+      "props_used": [
+        "The Master Spy Thriller Catalyst Relic"
+      ],
+      "spoken_dialogue": null,
+      "action_description": "DETECTIVE stands beside the central table, methodically cataloging the physical details of the THE MASTER SPY THRILLER CATALYST RELIC. Every gesture is precise, calculated to reveal nothing.",
+      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Low-Angle Ground Establishing Shot (35mm Low-Angle Dutch Tilt Lens). Starting Position, Pose & Blocking: Detective (Signature Spy Thriller Field Attire, Sharp athletic frame, piercing observant eyes, sea) is looming from low perspective at distance, poised before upward surge: initial position and pose caught as subject DETECTIVE stands beside the central table, methodically cataloging the physical details of the THE MASTER SPY THRILLER CATALYST RELIC, body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Spy Thriller Sanctum featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. Staged props in frame: The Master Spy Thriller Catalyst Relic (An exquisitely crafted artifact of gold filig). High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.0s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: High-Impact Low-Angle Medium Close-Up (50mm Low-Angle Hero Lens). Updated Position, Pose & Settled Blocking: Detective (Signature Spy Thriller Field Attire, Sharp athletic frame, piercing observant eyes, sea) is commanding the upper two-thirds of frame from upward angle, expression locked in resolve: updated position and pose following movement where subject Every gesture is precise, calculated to reveal nothing., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Spy Thriller Sanctum with matching volumetric lighting, environmental textures, and atmospheric continuity. Staged props in frame: The Master Spy Thriller Catalyst Relic (An exquisitely crafted artifact of gold filig). Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Low-Angle Ground Establishing Shot) to Out-Frame Still (High-Impact Low-Angle Medium Close-Up). Camera Movement: Camera cranes upward from ground level, tilting upward as the subject commands the space. Dynamic Action & Blocking: DETECTIVE stands beside the central table, methodically cataloging the physical details of the THE MASTER SPY THRILLER CATALYST RELIC. Every gesture is precise, calculated to reveal nothing.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 4,
+          "timecode": "00:00 - 00:04",
+          "camera_instruction": "Low-Angle Ground Establishing Shot (35mm Low-Angle Dutch Tilt Lens), Camera cranes upward from ground level, tilting upward as the subject commands the space",
+          "motion_vector": "Camera cranes upward from ground level, tilting upward as the subject commands the space",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Low-Angle Ground Establishing Shot (35mm Low-Angle Dutch Tilt Lens). Starting Position, Pose & Blocking: Detective (Signature Spy Thriller Field Attire, Sharp athletic frame, piercing observant eyes, sea) is looming from low perspective at distance, poised before upward surge: initial position and pose caught as subject DETECTIVE stands beside the central table, methodically cataloging the physical details of the THE MASTER SPY THRILLER CATALYST RELIC, body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Spy Thriller Sanctum featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. Staged props in frame: The Master Spy Thriller Catalyst Relic (An exquisitely crafted artifact of gold filig). High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.0s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: High-Impact Low-Angle Medium Close-Up (50mm Low-Angle Hero Lens). Updated Position, Pose & Settled Blocking: Detective (Signature Spy Thriller Field Attire, Sharp athletic frame, piercing observant eyes, sea) is commanding the upper two-thirds of frame from upward angle, expression locked in resolve: updated position and pose following movement where subject Every gesture is precise, calculated to reveal nothing., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Spy Thriller Sanctum with matching volumetric lighting, environmental textures, and atmospheric continuity. Staged props in frame: The Master Spy Thriller Catalyst Relic (An exquisitely crafted artifact of gold filig). Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Low-Angle Ground Establishing Shot) to Out-Frame Still (High-Impact Low-Angle Medium Close-Up). Camera Movement: Camera cranes upward from ground level, tilting upward as the subject commands the space. Dynamic Action & Blocking: DETECTIVE stands beside the central table, methodically cataloging the physical details of the THE MASTER SPY THRILLER CATALYST RELIC. Every gesture is precise, calculated to reveal nothing.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 4,
+      "heading": "INT. THE GRAND SPY THRILLER SANCTUM - NIGHT - SHOT 4",
+      "duration_seconds": 4,
+      "timecode": "00:13 - 00:17",
+      "camera_lens": "Eye-Level Medium Two-Shot (50mm Standard Prime Lens)",
+      "camera_motion": "Slow creeping push-in tightening the spatial distance between the subjects",
+      "characters_present": [
+        "Dakota Redfeather",
+        "Dakota Redfeather"
+      ],
+      "set_used": "The Grand Spy Thriller Sanctum",
+      "props_used": [
+        "The Sworn Champion’s Signature Implement"
+      ],
+      "spoken_dialogue": null,
+      "action_description": "DAKOTA REDFEATHER steps forward from the shadows near the threshold, placing the THE SWORN CHAMPION’S SIGNATURE IMPLEMENT flat against the polished surface.",
+      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Eye-Level Medium Two-Shot (50mm Standard Prime Lens). Starting Position, Pose & Blocking: Dakota Redfeather (Signature Spy Thriller Field Attire, Observant demeanor, tailored attire fitting the ge) is framed chest-level facing counterpart with spatial tension across the midpoint: initial position and pose caught as subject DAKOTA REDFEATHER steps forward from the shadows near the threshold, body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Spy Thriller Sanctum featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. Staged props in frame: The Sworn Champion’s Signature Implement (A finely engineered tool or weapon bearing an). High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.0s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Extreme Macro Close-Up on Eyeline (100mm Macro Telephoto Lens). Updated Position, Pose & Settled Blocking: Dakota Redfeather (Signature Spy Thriller Field Attire, Observant demeanor, tailored attire fitting the ge) is extreme close-up on dilated pupils, intense micro-expressions, and settled jaw tension: updated position and pose following movement where subject placing the THE SWORN CHAMPION’S SIGNATURE IMPLEMENT flat against the polished surface., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Spy Thriller Sanctum with matching volumetric lighting, environmental textures, and atmospheric continuity. Staged props in frame: The Sworn Champion’s Signature Implement (A finely engineered tool or weapon bearing an). Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Eye-Level Medium Two-Shot) to Out-Frame Still (Extreme Macro Close-Up on Eyeline). Camera Movement: Slow creeping push-in tightening the spatial distance between the subjects. Dynamic Action & Blocking: DAKOTA REDFEATHER steps forward from the shadows near the threshold, placing the THE SWORN CHAMPION’S SIGNATURE IMPLEMENT flat against the polished surface.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 4,
+          "timecode": "00:00 - 00:04",
+          "camera_instruction": "Eye-Level Medium Two-Shot (50mm Standard Prime Lens), Slow creeping push-in tightening the spatial distance between the subjects",
+          "motion_vector": "Slow creeping push-in tightening the spatial distance between the subjects",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Eye-Level Medium Two-Shot (50mm Standard Prime Lens). Starting Position, Pose & Blocking: Dakota Redfeather (Signature Spy Thriller Field Attire, Observant demeanor, tailored attire fitting the ge) is framed chest-level facing counterpart with spatial tension across the midpoint: initial position and pose caught as subject DAKOTA REDFEATHER steps forward from the shadows near the threshold, body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Spy Thriller Sanctum featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. Staged props in frame: The Sworn Champion’s Signature Implement (A finely engineered tool or weapon bearing an). High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.0s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Extreme Macro Close-Up on Eyeline (100mm Macro Telephoto Lens). Updated Position, Pose & Settled Blocking: Dakota Redfeather (Signature Spy Thriller Field Attire, Observant demeanor, tailored attire fitting the ge) is extreme close-up on dilated pupils, intense micro-expressions, and settled jaw tension: updated position and pose following movement where subject placing the THE SWORN CHAMPION’S SIGNATURE IMPLEMENT flat against the polished surface., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Spy Thriller Sanctum with matching volumetric lighting, environmental textures, and atmospheric continuity. Staged props in frame: The Sworn Champion’s Signature Implement (A finely engineered tool or weapon bearing an). Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Eye-Level Medium Two-Shot) to Out-Frame Still (Extreme Macro Close-Up on Eyeline). Camera Movement: Slow creeping push-in tightening the spatial distance between the subjects. Dynamic Action & Blocking: DAKOTA REDFEATHER steps forward from the shadows near the threshold, placing the THE SWORN CHAMPION’S SIGNATURE IMPLEMENT flat against the polished surface.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 5,
+      "heading": "INT. THE GRAND SPY THRILLER SANCTUM - NIGHT - SHOT 5",
+      "duration_seconds": 7.6,
+      "timecode": "00:17 - 00:24",
+      "camera_lens": "Overhead High-Angle Master (28mm Wide Architectural Lens)",
+      "camera_motion": "God's eye jib descending smoothly from high overhead down to eye-level intimacy",
+      "characters_present": [
+        "Detective"
+      ],
+      "set_used": "The Grand Spy Thriller Sanctum",
+      "props_used": [
+        "The Master Spy Thriller Catalyst Relic"
+      ],
+      "spoken_dialogue": {
+        "speaker": "DETECTIVE",
+        "spokenLine": "You were followed from the station. The surveillance teams didn't even bother to change cars.",
+        "parenthetical": "(without looking up, voice level and unhurried)"
+      },
+      "action_description": "DETECTIVE delivers line with deliberate dramatic inflection.",
+      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Overhead High-Angle Master (28mm Wide Architectural Lens). Starting Position, Pose & Blocking: Detective (Signature Spy Thriller Field Attire, Sharp athletic frame, piercing observant eyes, sea) is seen from steep downward bird's-eye angle navigating the architectural perimeter: initial position and pose caught as subject DETECTIVE delivers line with deliberate dramatic inflection., body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Spy Thriller Sanctum featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=7.6s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Eye-Level Medium Master Shot (40mm Prime Lens). Updated Position, Pose & Settled Blocking: Detective (Signature Spy Thriller Field Attire, Sharp athletic frame, piercing observant eyes, sea) is descended to intimate eye-level chest framing, shoulders squared to camera: updated position and pose following movement where subject settled in aftermath posture following detective delivers line with deliberate dramatic inflection., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Spy Thriller Sanctum with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Overhead High-Angle Master) to Out-Frame Still (Eye-Level Medium Master Shot). Camera Movement: God's eye jib descending smoothly from high overhead down to eye-level intimacy. Dynamic Action & Blocking: DETECTIVE delivers line with deliberate dramatic inflection.. Actor DETECTIVE delivers dialogue with natural 2.6 w/s cadence: \"You were followed from the station. The surveillance teams didn't even bother to change cars.\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 7.6,
+          "timecode": "00:00 - 00:08",
+          "camera_instruction": "Overhead High-Angle Master (28mm Wide Architectural Lens), God's eye jib descending smoothly from high overhead down to eye-level intimacy",
+          "motion_vector": "God's eye jib descending smoothly from high overhead down to eye-level intimacy",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Overhead High-Angle Master (28mm Wide Architectural Lens). Starting Position, Pose & Blocking: Detective (Signature Spy Thriller Field Attire, Sharp athletic frame, piercing observant eyes, sea) is seen from steep downward bird's-eye angle navigating the architectural perimeter: initial position and pose caught as subject DETECTIVE delivers line with deliberate dramatic inflection., body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Spy Thriller Sanctum featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=7.6s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Eye-Level Medium Master Shot (40mm Prime Lens). Updated Position, Pose & Settled Blocking: Detective (Signature Spy Thriller Field Attire, Sharp athletic frame, piercing observant eyes, sea) is descended to intimate eye-level chest framing, shoulders squared to camera: updated position and pose following movement where subject settled in aftermath posture following detective delivers line with deliberate dramatic inflection., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Spy Thriller Sanctum with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Overhead High-Angle Master) to Out-Frame Still (Eye-Level Medium Master Shot). Camera Movement: God's eye jib descending smoothly from high overhead down to eye-level intimacy. Dynamic Action & Blocking: DETECTIVE delivers line with deliberate dramatic inflection.. Actor DETECTIVE delivers dialogue with natural 2.6 w/s cadence: \"You were followed from the station. The surveillance teams didn't even bother to change cars.\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 6,
+      "heading": "INT. THE GRAND SPY THRILLER SANCTUM - NIGHT - SHOT 6",
+      "duration_seconds": 7.8,
+      "timecode": "00:24 - 00:32",
+      "camera_lens": "Reverse Over-the-Shoulder Master (50mm Prime Lens)",
+      "camera_motion": "Slow lateral slider track shifting perspective from listener to speaker",
+      "characters_present": [
+        "Dakota Redfeather",
+        "Dakota Redfeather"
+      ],
+      "set_used": "The Grand Spy Thriller Sanctum",
+      "props_used": [
+        "The Master Spy Thriller Catalyst Relic"
+      ],
+      "spoken_dialogue": {
+        "speaker": "DAKOTA REDFEATHER",
+        "spokenLine": "They didn't follow me to arrest me, DETECTIVE. They followed me to see if you would actually show up.",
+        "parenthetical": ""
+      },
+      "action_description": "DAKOTA REDFEATHER delivers line with deliberate dramatic inflection.",
+      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Reverse Over-the-Shoulder Master (50mm Prime Lens). Starting Position, Pose & Blocking: Dakota Redfeather (Signature Spy Thriller Field Attire, Observant demeanor, tailored attire fitting the ge) is framed over the shoulder of the foreground subject, observing from background plane: initial position and pose caught as subject DAKOTA REDFEATHER delivers line with deliberate dramatic inflection., body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Spy Thriller Sanctum featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=8.3s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Direct Intimate Close-Up on Reaction (85mm Portrait Telephoto Lens). Updated Position, Pose & Settled Blocking: Dakota Redfeather (Signature Spy Thriller Field Attire, Observant demeanor, tailored attire fitting the ge) is shifted into isolated single close-up, reaction registering across facial features: updated position and pose following movement where subject settled in aftermath posture following dakota redfeather delivers line with deliberate dramatic inflection., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Spy Thriller Sanctum with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Reverse Over-the-Shoulder Master) to Out-Frame Still (Direct Intimate Close-Up on Reaction). Camera Movement: Slow lateral slider track shifting perspective from listener to speaker. Dynamic Action & Blocking: DAKOTA REDFEATHER delivers line with deliberate dramatic inflection.. Actor DAKOTA REDFEATHER delivers dialogue with natural 2.6 w/s cadence: \"They didn't follow me to arrest me, DETECTIVE. They followed me to see if you would actually show up.\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 7.8,
+          "timecode": "00:00 - 00:08",
+          "camera_instruction": "Reverse Over-the-Shoulder Master (50mm Prime Lens), Slow lateral slider track shifting perspective from listener to speaker",
+          "motion_vector": "Slow lateral slider track shifting perspective from listener to speaker",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Reverse Over-the-Shoulder Master (50mm Prime Lens). Starting Position, Pose & Blocking: Dakota Redfeather (Signature Spy Thriller Field Attire, Observant demeanor, tailored attire fitting the ge) is framed over the shoulder of the foreground subject, observing from background plane: initial position and pose caught as subject DAKOTA REDFEATHER delivers line with deliberate dramatic inflection., body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Spy Thriller Sanctum featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=8.3s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Direct Intimate Close-Up on Reaction (85mm Portrait Telephoto Lens). Updated Position, Pose & Settled Blocking: Dakota Redfeather (Signature Spy Thriller Field Attire, Observant demeanor, tailored attire fitting the ge) is shifted into isolated single close-up, reaction registering across facial features: updated position and pose following movement where subject settled in aftermath posture following dakota redfeather delivers line with deliberate dramatic inflection., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Spy Thriller Sanctum with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Reverse Over-the-Shoulder Master) to Out-Frame Still (Direct Intimate Close-Up on Reaction). Camera Movement: Slow lateral slider track shifting perspective from listener to speaker. Dynamic Action & Blocking: DAKOTA REDFEATHER delivers line with deliberate dramatic inflection.. Actor DAKOTA REDFEATHER delivers dialogue with natural 2.6 w/s cadence: \"They didn't follow me to arrest me, DETECTIVE. They followed me to see if you would actually show up.\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 7,
+      "heading": "INT. THE GRAND SPY THRILLER SANCTUM - NIGHT - SHOT 7",
+      "duration_seconds": 3,
+      "timecode": "00:32 - 00:35",
+      "camera_lens": "Three-Quarter Angle Medium Action Stance (35mm Dynamic Action Lens)",
+      "camera_motion": "Circling 180-degree Steadicam orbit shot tracking the dramatic turn",
+      "characters_present": [
+        "Detective"
+      ],
+      "set_used": "The Grand Spy Thriller Sanctum",
+      "props_used": [
+        "The Master Spy Thriller Catalyst Relic"
+      ],
+      "spoken_dialogue": {
+        "speaker": "DETECTIVE",
+        "spokenLine": "And now that I'm here?",
+        "parenthetical": ""
+      },
+      "action_description": "DETECTIVE delivers line with deliberate dramatic inflection.",
+      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Three-Quarter Angle Medium Action Stance (35mm Dynamic Action Lens). Starting Position, Pose & Blocking: Detective (Signature Spy Thriller Field Attire, Sharp athletic frame, piercing observant eyes, sea) is angled three-quarters away in coiled ready stance before decisive turn: initial position and pose caught as subject DETECTIVE delivers line with deliberate dramatic inflection., body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Spy Thriller Sanctum featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=3.0s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Tight Reaction Profile Close-Up (75mm Anamorphic Prime). Updated Position, Pose & Settled Blocking: Detective (Signature Spy Thriller Field Attire, Sharp athletic frame, piercing observant eyes, sea) is revolved 180 degrees into direct profile, posture locked in dramatic aftermath: updated position and pose following movement where subject settled in aftermath posture following detective delivers line with deliberate dramatic inflection., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Spy Thriller Sanctum with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Three-Quarter Angle Medium Action Stance) to Out-Frame Still (Tight Reaction Profile Close-Up). Camera Movement: Circling 180-degree Steadicam orbit shot tracking the dramatic turn. Dynamic Action & Blocking: DETECTIVE delivers line with deliberate dramatic inflection.. Actor DETECTIVE delivers dialogue with natural 2.6 w/s cadence: \"And now that I'm here?\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 3,
+          "timecode": "00:00 - 00:03",
+          "camera_instruction": "Three-Quarter Angle Medium Action Stance (35mm Dynamic Action Lens), Circling 180-degree Steadicam orbit shot tracking the dramatic turn",
+          "motion_vector": "Circling 180-degree Steadicam orbit shot tracking the dramatic turn",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Three-Quarter Angle Medium Action Stance (35mm Dynamic Action Lens). Starting Position, Pose & Blocking: Detective (Signature Spy Thriller Field Attire, Sharp athletic frame, piercing observant eyes, sea) is angled three-quarters away in coiled ready stance before decisive turn: initial position and pose caught as subject DETECTIVE delivers line with deliberate dramatic inflection., body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Spy Thriller Sanctum featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=3.0s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Tight Reaction Profile Close-Up (75mm Anamorphic Prime). Updated Position, Pose & Settled Blocking: Detective (Signature Spy Thriller Field Attire, Sharp athletic frame, piercing observant eyes, sea) is revolved 180 degrees into direct profile, posture locked in dramatic aftermath: updated position and pose following movement where subject settled in aftermath posture following detective delivers line with deliberate dramatic inflection., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Spy Thriller Sanctum with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Three-Quarter Angle Medium Action Stance) to Out-Frame Still (Tight Reaction Profile Close-Up). Camera Movement: Circling 180-degree Steadicam orbit shot tracking the dramatic turn. Dynamic Action & Blocking: DETECTIVE delivers line with deliberate dramatic inflection.. Actor DETECTIVE delivers dialogue with natural 2.6 w/s cadence: \"And now that I'm here?\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 8,
+      "heading": "INT. THE GRAND SPY THRILLER SANCTUM - NIGHT - SHOT 8",
+      "duration_seconds": 7.5,
+      "timecode": "00:35 - 00:42",
+      "camera_lens": "Tight Medium Close-Up on Subject (50mm Prime Lens)",
+      "camera_motion": "Slow reverse crane pull-back expanding from the character to reveal the vast environment",
+      "characters_present": [
+        "Dakota Redfeather",
+        "Dakota Redfeather"
+      ],
+      "set_used": "The Grand Spy Thriller Sanctum",
+      "props_used": [
+        "The Master Spy Thriller Catalyst Relic"
+      ],
+      "spoken_dialogue": {
+        "speaker": "DAKOTA REDFEATHER",
+        "spokenLine": "Now we decide whether we publish the unredacted ledgers or let the entire department take the fall.",
+        "parenthetical": "(tapping the document)"
+      },
+      "action_description": "DAKOTA REDFEATHER delivers line with deliberate dramatic inflection.",
+      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Tight Medium Close-Up on Subject (50mm Prime Lens). Starting Position, Pose & Blocking: Dakota Redfeather (Signature Spy Thriller Field Attire, Observant demeanor, tailored attire fitting the ge) is framed tight on character's intense expression and centered breath: initial position and pose caught as subject DAKOTA REDFEATHER delivers line with deliberate dramatic inflection., body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Spy Thriller Sanctum featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=7.5s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Epic Wide Environmental Resolution (24mm Vast Anamorphic Wide Lens). Updated Position, Pose & Settled Blocking: Dakota Redfeather (Signature Spy Thriller Field Attire, Observant demeanor, tailored attire fitting the ge) is diminished in scale within the sprawling panoramic vista, solitary silhouette against horizon: updated position and pose following movement where subject settled in aftermath posture following dakota redfeather delivers line with deliberate dramatic inflection., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Spy Thriller Sanctum with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Tight Medium Close-Up on Subject) to Out-Frame Still (Epic Wide Environmental Resolution). Camera Movement: Slow reverse crane pull-back expanding from the character to reveal the vast environment. Dynamic Action & Blocking: DAKOTA REDFEATHER delivers line with deliberate dramatic inflection.. Actor DAKOTA REDFEATHER delivers dialogue with natural 2.6 w/s cadence: \"Now we decide whether we publish the unredacted ledgers or let the entire department take the fall.\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 7.5,
+          "timecode": "00:00 - 00:08",
+          "camera_instruction": "Tight Medium Close-Up on Subject (50mm Prime Lens), Slow reverse crane pull-back expanding from the character to reveal the vast environment",
+          "motion_vector": "Slow reverse crane pull-back expanding from the character to reveal the vast environment",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Tight Medium Close-Up on Subject (50mm Prime Lens). Starting Position, Pose & Blocking: Dakota Redfeather (Signature Spy Thriller Field Attire, Observant demeanor, tailored attire fitting the ge) is framed tight on character's intense expression and centered breath: initial position and pose caught as subject DAKOTA REDFEATHER delivers line with deliberate dramatic inflection., body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Spy Thriller Sanctum featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=7.5s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Epic Wide Environmental Resolution (24mm Vast Anamorphic Wide Lens). Updated Position, Pose & Settled Blocking: Dakota Redfeather (Signature Spy Thriller Field Attire, Observant demeanor, tailored attire fitting the ge) is diminished in scale within the sprawling panoramic vista, solitary silhouette against horizon: updated position and pose following movement where subject settled in aftermath posture following dakota redfeather delivers line with deliberate dramatic inflection., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Spy Thriller Sanctum with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Tight Medium Close-Up on Subject) to Out-Frame Still (Epic Wide Environmental Resolution). Camera Movement: Slow reverse crane pull-back expanding from the character to reveal the vast environment. Dynamic Action & Blocking: DAKOTA REDFEATHER delivers line with deliberate dramatic inflection.. Actor DAKOTA REDFEATHER delivers dialogue with natural 2.6 w/s cadence: \"Now we decide whether we publish the unredacted ledgers or let the entire department take the fall.\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 9,
+      "heading": "INT. THE GRAND SPY THRILLER SANCTUM - NIGHT - SHOT 9",
+      "duration_seconds": 4.5,
+      "timecode": "00:42 - 00:47",
+      "camera_lens": "Establishing Wide Shot (24mm Ultra-Wide Anamorphic Prime)",
+      "camera_motion": "The camera tracks smoothly alongside the subject and then zooms in to the face",
+      "characters_present": [
+        "Detective",
+        "Dakota Redfeather",
+        "Dakota Redfeather"
+      ],
+      "set_used": "The Grand Spy Thriller Sanctum",
+      "props_used": [
+        "The Master Spy Thriller Catalyst Relic"
+      ],
+      "spoken_dialogue": null,
+      "action_description": "DETECTIVE pauses, eyes meeting DAKOTA REDFEATHER's with unyielding resolve.",
+      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Establishing Wide Shot (24mm Ultra-Wide Anamorphic Prime). Starting Position, Pose & Blocking: Detective (Signature Spy Thriller Field Attire, Sharp athletic frame, piercing observant eyes, sea) is positioned in the mid-left frame, moving forward toward the destination: initial position and pose caught as subject DETECTIVE pauses, body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Spy Thriller Sanctum featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.5s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Tight Close-Up on Face (85mm Portrait Telephoto Prime). Updated Position, Pose & Settled Blocking: Detective (Signature Spy Thriller Field Attire, Sharp athletic frame, piercing observant eyes, sea) is occupies the center-right frame in tight focus, halted squarely at the destination point: updated position and pose following movement where subject eyes meeting DAKOTA REDFEATHER's with unyielding resolve., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Spy Thriller Sanctum with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Establishing Wide Shot) to Out-Frame Still (Tight Close-Up on Face). Camera Movement: The camera tracks smoothly alongside the subject and then zooms in to the face. Dynamic Action & Blocking: DETECTIVE pauses, eyes meeting DAKOTA REDFEATHER's with unyielding resolve.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 4.5,
+          "timecode": "00:00 - 00:05",
+          "camera_instruction": "Establishing Wide Shot (24mm Ultra-Wide Anamorphic Prime), The camera tracks smoothly alongside the subject and then zooms in to the face",
+          "motion_vector": "The camera tracks smoothly alongside the subject and then zooms in to the face",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Establishing Wide Shot (24mm Ultra-Wide Anamorphic Prime). Starting Position, Pose & Blocking: Detective (Signature Spy Thriller Field Attire, Sharp athletic frame, piercing observant eyes, sea) is positioned in the mid-left frame, moving forward toward the destination: initial position and pose caught as subject DETECTIVE pauses, body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Spy Thriller Sanctum featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.5s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Tight Close-Up on Face (85mm Portrait Telephoto Prime). Updated Position, Pose & Settled Blocking: Detective (Signature Spy Thriller Field Attire, Sharp athletic frame, piercing observant eyes, sea) is occupies the center-right frame in tight focus, halted squarely at the destination point: updated position and pose following movement where subject eyes meeting DAKOTA REDFEATHER's with unyielding resolve., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Spy Thriller Sanctum with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Establishing Wide Shot) to Out-Frame Still (Tight Close-Up on Face). Camera Movement: The camera tracks smoothly alongside the subject and then zooms in to the face. Dynamic Action & Blocking: DETECTIVE pauses, eyes meeting DAKOTA REDFEATHER's with unyielding resolve.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 10,
+      "heading": "INT. THE GRAND SPY THRILLER SANCTUM - NIGHT - SHOT 10",
+      "duration_seconds": 7.8,
+      "timecode": "00:47 - 00:55",
+      "camera_lens": "Full-Body Tracking Master Shot (35mm Wide Cinematic Lens)",
+      "camera_motion": "Steadicam lateral tracking dolly keeping pace with the movement across the space",
+      "characters_present": [
+        "Detective"
+      ],
+      "set_used": "The Grand Spy Thriller Sanctum",
+      "props_used": [
+        "The Master Spy Thriller Catalyst Relic"
+      ],
+      "spoken_dialogue": {
+        "speaker": "DETECTIVE",
+        "spokenLine": "We don't publish them. We send copies directly to the federal grand jury in Chicago before the dawn courier leaves.",
+        "parenthetical": ""
+      },
+      "action_description": "DETECTIVE delivers line with deliberate dramatic inflection.",
+      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Full-Body Tracking Master Shot (35mm Wide Cinematic Lens). Starting Position, Pose & Blocking: Detective (Signature Spy Thriller Field Attire, Sharp athletic frame, piercing observant eyes, sea) is framed full-body from the flank, advancing with deliberate kinetic balance: initial position and pose caught as subject DETECTIVE delivers line with deliberate dramatic inflection., body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Spy Thriller Sanctum featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=9.5s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Medium Profile Two-Shot (50mm Standard Prime Lens). Updated Position, Pose & Settled Blocking: Detective (Signature Spy Thriller Field Attire, Sharp athletic frame, piercing observant eyes, sea) is settled in profile medium perspective, body weight anchored at final destination: updated position and pose following movement where subject settled in aftermath posture following detective delivers line with deliberate dramatic inflection., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Spy Thriller Sanctum with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Full-Body Tracking Master Shot) to Out-Frame Still (Medium Profile Two-Shot). Camera Movement: Steadicam lateral tracking dolly keeping pace with the movement across the space. Dynamic Action & Blocking: DETECTIVE delivers line with deliberate dramatic inflection.. Actor DETECTIVE delivers dialogue with natural 2.6 w/s cadence: \"We don't publish them. We send copies directly to the federal grand jury in Chicago before the dawn courier leaves.\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 7.8,
+          "timecode": "00:00 - 00:08",
+          "camera_instruction": "Full-Body Tracking Master Shot (35mm Wide Cinematic Lens), Steadicam lateral tracking dolly keeping pace with the movement across the space",
+          "motion_vector": "Steadicam lateral tracking dolly keeping pace with the movement across the space",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Full-Body Tracking Master Shot (35mm Wide Cinematic Lens). Starting Position, Pose & Blocking: Detective (Signature Spy Thriller Field Attire, Sharp athletic frame, piercing observant eyes, sea) is framed full-body from the flank, advancing with deliberate kinetic balance: initial position and pose caught as subject DETECTIVE delivers line with deliberate dramatic inflection., body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Spy Thriller Sanctum featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=9.5s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Medium Profile Two-Shot (50mm Standard Prime Lens). Updated Position, Pose & Settled Blocking: Detective (Signature Spy Thriller Field Attire, Sharp athletic frame, piercing observant eyes, sea) is settled in profile medium perspective, body weight anchored at final destination: updated position and pose following movement where subject settled in aftermath posture following detective delivers line with deliberate dramatic inflection., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Spy Thriller Sanctum with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Full-Body Tracking Master Shot) to Out-Frame Still (Medium Profile Two-Shot). Camera Movement: Steadicam lateral tracking dolly keeping pace with the movement across the space. Dynamic Action & Blocking: DETECTIVE delivers line with deliberate dramatic inflection.. Actor DETECTIVE delivers dialogue with natural 2.6 w/s cadence: \"We don't publish them. We send copies directly to the federal grand jury in Chicago before the dawn courier leaves.\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    }
+  ]
+}

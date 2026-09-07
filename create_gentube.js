@@ -21,8 +21,8 @@ puppeteer.use(StealthPlugin());
     );
 
     // CLICK CHARACTER CARD
-    //await page.waitForSelector('img[alt="Tiberius the Legionaire"]', { visible: true });
-   // await page.click('img[alt="Tiberius the Legionaire"]');
+   // await page.waitForSelector('img[alt="Aarav Patel"]', { visible: true });
+   // await page.click('img[alt="Aarav Patel"]');
 
     // Ensure download directory exists
     const downloadDir = path.join(__dirname, "inputimages");
@@ -63,7 +63,8 @@ puppeteer.use(StealthPlugin());
         await page.keyboard.press('Backspace');
 
         // Type full prompt using setter trick
-        const text = `${JSON.stringify(matrix.shots[i].prompt)}`;
+        const text = `${JSON.stringify(matrix.shots[i].in_frame_still_prompt)}`;
+        const text2 = `${JSON.stringify(matrix.shots[i].out_frame_still_prompt)}`;
         console.log(text);
 
         await page.evaluate((selector, value) => {

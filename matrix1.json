@@ -1,0 +1,373 @@
+{
+  "movie_title": "CYBERPUNK: CHRONICLES",
+  "genre": "Cyberpunk",
+  "scene_number": 1,
+  "scene_title": "Scene 1: The Grand Cyberpunk Master Facility",
+  "total_shots": 10,
+  "generation_spec": {
+    "maximum_take_duration_seconds": 8,
+    "frame_rate": "24fps",
+    "target_engine": "Runway Gen-3 Alpha / Luma Dream Machine / Sora / Kling AI / Hailuo MiniMax",
+    "speech_rate_cadence": "2.6 words per second",
+    "still_frame_specification": "Dual Keyframe 8K Stills (In-Frame start t=0.0s & Out-Frame end t=End, zero action/dialogue)",
+    "still_prompts_description": "Provides in-frame and out-frame still descriptions to create a still at each end of the video motion"
+  },
+  "shots": [
+    {
+      "shot_number": 1,
+      "heading": "INT. THE GRAND CYBERPUNK MASTER FACILITY - NIGHT - SHOT 1",
+      "duration_seconds": 4.5,
+      "timecode": "00:00 - 00:04",
+      "camera_lens": "Establishing Wide Shot (24mm Ultra-Wide Anamorphic Prime)",
+      "camera_motion": "The camera tracks smoothly alongside the subject and then zooms in to the face",
+      "characters_present": [
+        "Aarav Patel"
+      ],
+      "set_used": "The Grand Cyberpunk Master Facility",
+      "props_used": [
+        "The Master Cyberpunk Key Artifact"
+      ],
+      "spoken_dialogue": null,
+      "action_description": "Atmospheric vapor drifts across the steel catwalks. The only illumination stems from the rhythmic glow of the MASTER CYBERPUNK KEY ARTIFACT.",
+      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Establishing Wide Shot (24mm Ultra-Wide Anamorphic Prime). Starting Position, Pose & Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is positioned in the mid-left frame, moving forward toward the destination: initial position and pose caught as subject Atmospheric vapor drifts across the steel catwalks, body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. Staged props in frame: The Master Cyberpunk Key Artifact (A masterfully crafted device of polished obsi). High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.5s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Tight Close-Up on Face (85mm Portrait Telephoto Prime). Updated Position, Pose & Settled Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is occupies the center-right frame in tight focus, halted squarely at the destination point: updated position and pose following movement where subject The only illumination stems from the rhythmic glow of the MASTER CYBERPUNK KEY ARTIFACT., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Staged props in frame: The Master Cyberpunk Key Artifact (A masterfully crafted device of polished obsi). Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Establishing Wide Shot) to Out-Frame Still (Tight Close-Up on Face). Camera Movement: The camera tracks smoothly alongside the subject and then zooms in to the face. Dynamic Action & Blocking: Atmospheric vapor drifts across the steel catwalks. The only illumination stems from the rhythmic glow of the MASTER CYBERPUNK KEY ARTIFACT.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 4.5,
+          "timecode": "00:00 - 00:05",
+          "camera_instruction": "Establishing Wide Shot (24mm Ultra-Wide Anamorphic Prime), The camera tracks smoothly alongside the subject and then zooms in to the face",
+          "motion_vector": "The camera tracks smoothly alongside the subject and then zooms in to the face",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Establishing Wide Shot (24mm Ultra-Wide Anamorphic Prime). Starting Position, Pose & Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is positioned in the mid-left frame, moving forward toward the destination: initial position and pose caught as subject Atmospheric vapor drifts across the steel catwalks, body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. Staged props in frame: The Master Cyberpunk Key Artifact (A masterfully crafted device of polished obsi). High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.5s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Tight Close-Up on Face (85mm Portrait Telephoto Prime). Updated Position, Pose & Settled Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is occupies the center-right frame in tight focus, halted squarely at the destination point: updated position and pose following movement where subject The only illumination stems from the rhythmic glow of the MASTER CYBERPUNK KEY ARTIFACT., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Staged props in frame: The Master Cyberpunk Key Artifact (A masterfully crafted device of polished obsi). Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Establishing Wide Shot) to Out-Frame Still (Tight Close-Up on Face). Camera Movement: The camera tracks smoothly alongside the subject and then zooms in to the face. Dynamic Action & Blocking: Atmospheric vapor drifts across the steel catwalks. The only illumination stems from the rhythmic glow of the MASTER CYBERPUNK KEY ARTIFACT.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 2,
+      "heading": "INT. THE GRAND CYBERPUNK MASTER FACILITY - NIGHT - SHOT 2",
+      "duration_seconds": 4.5,
+      "timecode": "00:04 - 00:09",
+      "camera_lens": "Full-Body Tracking Master Shot (35mm Wide Cinematic Lens)",
+      "camera_motion": "Steadicam lateral tracking dolly keeping pace with the movement across the space",
+      "characters_present": [
+        "Aarav Patel"
+      ],
+      "set_used": "The Grand Cyberpunk Master Facility",
+      "props_used": [
+        "The Master Cyberpunk Key Artifact"
+      ],
+      "spoken_dialogue": null,
+      "action_description": "AARAV PATEL drops silently into position, checking the perimeter with tactical precision.",
+      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Full-Body Tracking Master Shot (35mm Wide Cinematic Lens). Starting Position, Pose & Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is framed full-body from the flank, advancing with deliberate kinetic balance: initial position and pose caught as subject AARAV PATEL drops silently into position, body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.5s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Medium Profile Two-Shot (50mm Standard Prime Lens). Updated Position, Pose & Settled Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is settled in profile medium perspective, body weight anchored at final destination: updated position and pose following movement where subject checking the perimeter with tactical precision., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Full-Body Tracking Master Shot) to Out-Frame Still (Medium Profile Two-Shot). Camera Movement: Steadicam lateral tracking dolly keeping pace with the movement across the space. Dynamic Action & Blocking: AARAV PATEL drops silently into position, checking the perimeter with tactical precision.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 4.5,
+          "timecode": "00:00 - 00:05",
+          "camera_instruction": "Full-Body Tracking Master Shot (35mm Wide Cinematic Lens), Steadicam lateral tracking dolly keeping pace with the movement across the space",
+          "motion_vector": "Steadicam lateral tracking dolly keeping pace with the movement across the space",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Full-Body Tracking Master Shot (35mm Wide Cinematic Lens). Starting Position, Pose & Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is framed full-body from the flank, advancing with deliberate kinetic balance: initial position and pose caught as subject AARAV PATEL drops silently into position, body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.5s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Medium Profile Two-Shot (50mm Standard Prime Lens). Updated Position, Pose & Settled Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is settled in profile medium perspective, body weight anchored at final destination: updated position and pose following movement where subject checking the perimeter with tactical precision., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Full-Body Tracking Master Shot) to Out-Frame Still (Medium Profile Two-Shot). Camera Movement: Steadicam lateral tracking dolly keeping pace with the movement across the space. Dynamic Action & Blocking: AARAV PATEL drops silently into position, checking the perimeter with tactical precision.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 3,
+      "heading": "INT. THE GRAND CYBERPUNK MASTER FACILITY - NIGHT - SHOT 3",
+      "duration_seconds": 4,
+      "timecode": "00:09 - 00:13",
+      "camera_lens": "Low-Angle Ground Establishing Shot (35mm Low-Angle Dutch Tilt Lens)",
+      "camera_motion": "Camera cranes upward from ground level, tilting upward as the subject commands the space",
+      "characters_present": [
+        "Sofia Garcia-Vargas"
+      ],
+      "set_used": "The Grand Cyberpunk Master Facility",
+      "props_used": [
+        "Specialist Tactical Infiltration Unit"
+      ],
+      "spoken_dialogue": null,
+      "action_description": "SOFIA GARCIA-VARGAS steps forward, unholstering the SPECIALIST TACTICAL INFILTRATION UNIT and interfacing with the terminal.",
+      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Low-Angle Ground Establishing Shot (35mm Low-Angle Dutch Tilt Lens). Starting Position, Pose & Blocking: Sofia Garcia-Vargas (Tactical Technical Jumpsuit, Commanding posture, keen intellectual gaze, swift ) is looming from low perspective at distance, poised before upward surge: initial position and pose caught as subject SOFIA GARCIA-VARGAS steps forward, body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. Staged props in frame: Specialist Tactical Infiltration Unit (A rugged, militarized slate-grey diagnostic t). High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.0s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: High-Impact Low-Angle Medium Close-Up (50mm Low-Angle Hero Lens). Updated Position, Pose & Settled Blocking: Sofia Garcia-Vargas (Tactical Technical Jumpsuit, Commanding posture, keen intellectual gaze, swift ) is commanding the upper two-thirds of frame from upward angle, expression locked in resolve: updated position and pose following movement where subject unholstering the SPECIALIST TACTICAL INFILTRATION UNIT and interfacing with the terminal., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Staged props in frame: Specialist Tactical Infiltration Unit (A rugged, militarized slate-grey diagnostic t). Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Low-Angle Ground Establishing Shot) to Out-Frame Still (High-Impact Low-Angle Medium Close-Up). Camera Movement: Camera cranes upward from ground level, tilting upward as the subject commands the space. Dynamic Action & Blocking: SOFIA GARCIA-VARGAS steps forward, unholstering the SPECIALIST TACTICAL INFILTRATION UNIT and interfacing with the terminal.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 4,
+          "timecode": "00:00 - 00:04",
+          "camera_instruction": "Low-Angle Ground Establishing Shot (35mm Low-Angle Dutch Tilt Lens), Camera cranes upward from ground level, tilting upward as the subject commands the space",
+          "motion_vector": "Camera cranes upward from ground level, tilting upward as the subject commands the space",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Low-Angle Ground Establishing Shot (35mm Low-Angle Dutch Tilt Lens). Starting Position, Pose & Blocking: Sofia Garcia-Vargas (Tactical Technical Jumpsuit, Commanding posture, keen intellectual gaze, swift ) is looming from low perspective at distance, poised before upward surge: initial position and pose caught as subject SOFIA GARCIA-VARGAS steps forward, body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. Staged props in frame: Specialist Tactical Infiltration Unit (A rugged, militarized slate-grey diagnostic t). High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.0s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: High-Impact Low-Angle Medium Close-Up (50mm Low-Angle Hero Lens). Updated Position, Pose & Settled Blocking: Sofia Garcia-Vargas (Tactical Technical Jumpsuit, Commanding posture, keen intellectual gaze, swift ) is commanding the upper two-thirds of frame from upward angle, expression locked in resolve: updated position and pose following movement where subject unholstering the SPECIALIST TACTICAL INFILTRATION UNIT and interfacing with the terminal., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Staged props in frame: Specialist Tactical Infiltration Unit (A rugged, militarized slate-grey diagnostic t). Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Low-Angle Ground Establishing Shot) to Out-Frame Still (High-Impact Low-Angle Medium Close-Up). Camera Movement: Camera cranes upward from ground level, tilting upward as the subject commands the space. Dynamic Action & Blocking: SOFIA GARCIA-VARGAS steps forward, unholstering the SPECIALIST TACTICAL INFILTRATION UNIT and interfacing with the terminal.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 4,
+      "heading": "INT. THE GRAND CYBERPUNK MASTER FACILITY - NIGHT - SHOT 4",
+      "duration_seconds": 6,
+      "timecode": "00:13 - 00:19",
+      "camera_lens": "Eye-Level Medium Two-Shot (50mm Standard Prime Lens)",
+      "camera_motion": "Slow creeping push-in tightening the spatial distance between the subjects",
+      "characters_present": [
+        "Aarav Patel"
+      ],
+      "set_used": "The Grand Cyberpunk Master Facility",
+      "props_used": [
+        "The Master Cyberpunk Key Artifact"
+      ],
+      "spoken_dialogue": {
+        "speaker": "AARAV PATEL",
+        "spokenLine": "Security telemetry is blind for exactly one hundred seconds. Secure the artifact now.",
+        "parenthetical": "(whispering into comms)"
+      },
+      "action_description": "AARAV PATEL delivers line with deliberate dramatic inflection.",
+      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Eye-Level Medium Two-Shot (50mm Standard Prime Lens). Starting Position, Pose & Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is framed chest-level facing counterpart with spatial tension across the midpoint: initial position and pose caught as subject AARAV PATEL delivers line with deliberate dramatic inflection., body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=6.0s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Extreme Macro Close-Up on Eyeline (100mm Macro Telephoto Lens). Updated Position, Pose & Settled Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is extreme close-up on dilated pupils, intense micro-expressions, and settled jaw tension: updated position and pose following movement where subject settled in aftermath posture following aarav patel delivers line with deliberate dramatic inflection., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Eye-Level Medium Two-Shot) to Out-Frame Still (Extreme Macro Close-Up on Eyeline). Camera Movement: Slow creeping push-in tightening the spatial distance between the subjects. Dynamic Action & Blocking: AARAV PATEL delivers line with deliberate dramatic inflection.. Actor AARAV PATEL delivers dialogue with natural 2.6 w/s cadence: \"Security telemetry is blind for exactly one hundred seconds. Secure the artifact now.\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 6,
+          "timecode": "00:00 - 00:06",
+          "camera_instruction": "Eye-Level Medium Two-Shot (50mm Standard Prime Lens), Slow creeping push-in tightening the spatial distance between the subjects",
+          "motion_vector": "Slow creeping push-in tightening the spatial distance between the subjects",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Eye-Level Medium Two-Shot (50mm Standard Prime Lens). Starting Position, Pose & Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is framed chest-level facing counterpart with spatial tension across the midpoint: initial position and pose caught as subject AARAV PATEL delivers line with deliberate dramatic inflection., body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=6.0s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Extreme Macro Close-Up on Eyeline (100mm Macro Telephoto Lens). Updated Position, Pose & Settled Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is extreme close-up on dilated pupils, intense micro-expressions, and settled jaw tension: updated position and pose following movement where subject settled in aftermath posture following aarav patel delivers line with deliberate dramatic inflection., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Eye-Level Medium Two-Shot) to Out-Frame Still (Extreme Macro Close-Up on Eyeline). Camera Movement: Slow creeping push-in tightening the spatial distance between the subjects. Dynamic Action & Blocking: AARAV PATEL delivers line with deliberate dramatic inflection.. Actor AARAV PATEL delivers dialogue with natural 2.6 w/s cadence: \"Security telemetry is blind for exactly one hundred seconds. Secure the artifact now.\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 5,
+      "heading": "INT. THE GRAND CYBERPUNK MASTER FACILITY - NIGHT - SHOT 5",
+      "duration_seconds": 6,
+      "timecode": "00:19 - 00:25",
+      "camera_lens": "Overhead High-Angle Master (28mm Wide Architectural Lens)",
+      "camera_motion": "God's eye jib descending smoothly from high overhead down to eye-level intimacy",
+      "characters_present": [
+        "Sofia Garcia-Vargas"
+      ],
+      "set_used": "The Grand Cyberpunk Master Facility",
+      "props_used": [
+        "The Master Cyberpunk Key Artifact"
+      ],
+      "spoken_dialogue": {
+        "speaker": "SOFIA GARCIA-VARGAS",
+        "spokenLine": "Bypassing the master firewall... Two steps remaining. Watch the perimeter doors.",
+        "parenthetical": "(calibrating interface)"
+      },
+      "action_description": "SOFIA GARCIA-VARGAS delivers line with deliberate dramatic inflection.",
+      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Overhead High-Angle Master (28mm Wide Architectural Lens). Starting Position, Pose & Blocking: Sofia Garcia-Vargas (Tactical Technical Jumpsuit, Commanding posture, keen intellectual gaze, swift ) is seen from steep downward bird's-eye angle navigating the architectural perimeter: initial position and pose caught as subject SOFIA GARCIA-VARGAS delivers line with deliberate dramatic inflection., body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=6.0s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Eye-Level Medium Master Shot (40mm Prime Lens). Updated Position, Pose & Settled Blocking: Sofia Garcia-Vargas (Tactical Technical Jumpsuit, Commanding posture, keen intellectual gaze, swift ) is descended to intimate eye-level chest framing, shoulders squared to camera: updated position and pose following movement where subject settled in aftermath posture following sofia garcia-vargas delivers line with deliberate dramatic inflection., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Overhead High-Angle Master) to Out-Frame Still (Eye-Level Medium Master Shot). Camera Movement: God's eye jib descending smoothly from high overhead down to eye-level intimacy. Dynamic Action & Blocking: SOFIA GARCIA-VARGAS delivers line with deliberate dramatic inflection.. Actor SOFIA GARCIA-VARGAS delivers dialogue with natural 2.6 w/s cadence: \"Bypassing the master firewall... Two steps remaining. Watch the perimeter doors.\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 6,
+          "timecode": "00:00 - 00:06",
+          "camera_instruction": "Overhead High-Angle Master (28mm Wide Architectural Lens), God's eye jib descending smoothly from high overhead down to eye-level intimacy",
+          "motion_vector": "God's eye jib descending smoothly from high overhead down to eye-level intimacy",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Overhead High-Angle Master (28mm Wide Architectural Lens). Starting Position, Pose & Blocking: Sofia Garcia-Vargas (Tactical Technical Jumpsuit, Commanding posture, keen intellectual gaze, swift ) is seen from steep downward bird's-eye angle navigating the architectural perimeter: initial position and pose caught as subject SOFIA GARCIA-VARGAS delivers line with deliberate dramatic inflection., body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=6.0s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Eye-Level Medium Master Shot (40mm Prime Lens). Updated Position, Pose & Settled Blocking: Sofia Garcia-Vargas (Tactical Technical Jumpsuit, Commanding posture, keen intellectual gaze, swift ) is descended to intimate eye-level chest framing, shoulders squared to camera: updated position and pose following movement where subject settled in aftermath posture following sofia garcia-vargas delivers line with deliberate dramatic inflection., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Overhead High-Angle Master) to Out-Frame Still (Eye-Level Medium Master Shot). Camera Movement: God's eye jib descending smoothly from high overhead down to eye-level intimacy. Dynamic Action & Blocking: SOFIA GARCIA-VARGAS delivers line with deliberate dramatic inflection.. Actor SOFIA GARCIA-VARGAS delivers dialogue with natural 2.6 w/s cadence: \"Bypassing the master firewall... Two steps remaining. Watch the perimeter doors.\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 6,
+      "heading": "INT. THE GRAND CYBERPUNK MASTER FACILITY - NIGHT - SHOT 6",
+      "duration_seconds": 4,
+      "timecode": "00:25 - 00:29",
+      "camera_lens": "Reverse Over-the-Shoulder Master (50mm Prime Lens)",
+      "camera_motion": "Slow lateral slider track shifting perspective from listener to speaker",
+      "characters_present": [
+        "Aarav Patel"
+      ],
+      "set_used": "The Grand Cyberpunk Master Facility",
+      "props_used": [
+        "The Master Cyberpunk Key Artifact"
+      ],
+      "spoken_dialogue": null,
+      "action_description": "A security alarm hums to life in the distance, red strobe lighting flashing across the chamber.",
+      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Reverse Over-the-Shoulder Master (50mm Prime Lens). Starting Position, Pose & Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is framed over the shoulder of the foreground subject, observing from background plane: initial position and pose caught as subject A security alarm hums to life in the distance, body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.0s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Direct Intimate Close-Up on Reaction (85mm Portrait Telephoto Lens). Updated Position, Pose & Settled Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is shifted into isolated single close-up, reaction registering across facial features: updated position and pose following movement where subject red strobe lighting flashing across the chamber., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Reverse Over-the-Shoulder Master) to Out-Frame Still (Direct Intimate Close-Up on Reaction). Camera Movement: Slow lateral slider track shifting perspective from listener to speaker. Dynamic Action & Blocking: A security alarm hums to life in the distance, red strobe lighting flashing across the chamber.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 4,
+          "timecode": "00:00 - 00:04",
+          "camera_instruction": "Reverse Over-the-Shoulder Master (50mm Prime Lens), Slow lateral slider track shifting perspective from listener to speaker",
+          "motion_vector": "Slow lateral slider track shifting perspective from listener to speaker",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Reverse Over-the-Shoulder Master (50mm Prime Lens). Starting Position, Pose & Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is framed over the shoulder of the foreground subject, observing from background plane: initial position and pose caught as subject A security alarm hums to life in the distance, body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.0s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Direct Intimate Close-Up on Reaction (85mm Portrait Telephoto Lens). Updated Position, Pose & Settled Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is shifted into isolated single close-up, reaction registering across facial features: updated position and pose following movement where subject red strobe lighting flashing across the chamber., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Reverse Over-the-Shoulder Master) to Out-Frame Still (Direct Intimate Close-Up on Reaction). Camera Movement: Slow lateral slider track shifting perspective from listener to speaker. Dynamic Action & Blocking: A security alarm hums to life in the distance, red strobe lighting flashing across the chamber.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 7,
+      "heading": "INT. THE GRAND CYBERPUNK MASTER FACILITY - NIGHT - SHOT 7",
+      "duration_seconds": 3.7,
+      "timecode": "00:29 - 00:32",
+      "camera_lens": "Three-Quarter Angle Medium Action Stance (35mm Dynamic Action Lens)",
+      "camera_motion": "Circling 180-degree Steadicam orbit shot tracking the dramatic turn",
+      "characters_present": [
+        "Aarav Patel"
+      ],
+      "set_used": "The Grand Cyberpunk Master Facility",
+      "props_used": [
+        "The Master Cyberpunk Key Artifact"
+      ],
+      "spoken_dialogue": {
+        "speaker": "AARAV PATEL",
+        "spokenLine": "We're out of time. How much longer?",
+        "parenthetical": "(drawing the HEIRLOOM CUSTOM SIDEARM)"
+      },
+      "action_description": "AARAV PATEL delivers line with deliberate dramatic inflection.",
+      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Three-Quarter Angle Medium Action Stance (35mm Dynamic Action Lens). Starting Position, Pose & Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is angled three-quarters away in coiled ready stance before decisive turn: initial position and pose caught as subject AARAV PATEL delivers line with deliberate dramatic inflection., body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=3.7s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Tight Reaction Profile Close-Up (75mm Anamorphic Prime). Updated Position, Pose & Settled Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is revolved 180 degrees into direct profile, posture locked in dramatic aftermath: updated position and pose following movement where subject settled in aftermath posture following aarav patel delivers line with deliberate dramatic inflection., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Three-Quarter Angle Medium Action Stance) to Out-Frame Still (Tight Reaction Profile Close-Up). Camera Movement: Circling 180-degree Steadicam orbit shot tracking the dramatic turn. Dynamic Action & Blocking: AARAV PATEL delivers line with deliberate dramatic inflection.. Actor AARAV PATEL delivers dialogue with natural 2.6 w/s cadence: \"We're out of time. How much longer?\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 3.7,
+          "timecode": "00:00 - 00:04",
+          "camera_instruction": "Three-Quarter Angle Medium Action Stance (35mm Dynamic Action Lens), Circling 180-degree Steadicam orbit shot tracking the dramatic turn",
+          "motion_vector": "Circling 180-degree Steadicam orbit shot tracking the dramatic turn",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Three-Quarter Angle Medium Action Stance (35mm Dynamic Action Lens). Starting Position, Pose & Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is angled three-quarters away in coiled ready stance before decisive turn: initial position and pose caught as subject AARAV PATEL delivers line with deliberate dramatic inflection., body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=3.7s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Tight Reaction Profile Close-Up (75mm Anamorphic Prime). Updated Position, Pose & Settled Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is revolved 180 degrees into direct profile, posture locked in dramatic aftermath: updated position and pose following movement where subject settled in aftermath posture following aarav patel delivers line with deliberate dramatic inflection., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Three-Quarter Angle Medium Action Stance) to Out-Frame Still (Tight Reaction Profile Close-Up). Camera Movement: Circling 180-degree Steadicam orbit shot tracking the dramatic turn. Dynamic Action & Blocking: AARAV PATEL delivers line with deliberate dramatic inflection.. Actor AARAV PATEL delivers dialogue with natural 2.6 w/s cadence: \"We're out of time. How much longer?\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 8,
+      "heading": "INT. THE GRAND CYBERPUNK MASTER FACILITY - NIGHT - SHOT 8",
+      "duration_seconds": 4,
+      "timecode": "00:32 - 00:36",
+      "camera_lens": "Tight Medium Close-Up on Subject (50mm Prime Lens)",
+      "camera_motion": "Slow reverse crane pull-back expanding from the character to reveal the vast environment",
+      "characters_present": [
+        "Sofia Garcia-Vargas"
+      ],
+      "set_used": "The Grand Cyberpunk Master Facility",
+      "props_used": [
+        "The Master Cyberpunk Key Artifact"
+      ],
+      "spoken_dialogue": null,
+      "action_description": "SOFIA GARCIA-VARGAS (CONT'D)",
+      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Tight Medium Close-Up on Subject (50mm Prime Lens). Starting Position, Pose & Blocking: Sofia Garcia-Vargas (Tactical Technical Jumpsuit, Commanding posture, keen intellectual gaze, swift ) is framed tight on character's intense expression and centered breath: initial position and pose caught as subject SOFIA GARCIA-VARGAS (CONT'D), body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.0s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Epic Wide Environmental Resolution (24mm Vast Anamorphic Wide Lens). Updated Position, Pose & Settled Blocking: Sofia Garcia-Vargas (Tactical Technical Jumpsuit, Commanding posture, keen intellectual gaze, swift ) is diminished in scale within the sprawling panoramic vista, solitary silhouette against horizon: updated position and pose following movement where subject settled in aftermath posture following sofia garcia-vargas (cont'd), body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Tight Medium Close-Up on Subject) to Out-Frame Still (Epic Wide Environmental Resolution). Camera Movement: Slow reverse crane pull-back expanding from the character to reveal the vast environment. Dynamic Action & Blocking: SOFIA GARCIA-VARGAS (CONT'D). Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 4,
+          "timecode": "00:00 - 00:04",
+          "camera_instruction": "Tight Medium Close-Up on Subject (50mm Prime Lens), Slow reverse crane pull-back expanding from the character to reveal the vast environment",
+          "motion_vector": "Slow reverse crane pull-back expanding from the character to reveal the vast environment",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Tight Medium Close-Up on Subject (50mm Prime Lens). Starting Position, Pose & Blocking: Sofia Garcia-Vargas (Tactical Technical Jumpsuit, Commanding posture, keen intellectual gaze, swift ) is framed tight on character's intense expression and centered breath: initial position and pose caught as subject SOFIA GARCIA-VARGAS (CONT'D), body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.0s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Epic Wide Environmental Resolution (24mm Vast Anamorphic Wide Lens). Updated Position, Pose & Settled Blocking: Sofia Garcia-Vargas (Tactical Technical Jumpsuit, Commanding posture, keen intellectual gaze, swift ) is diminished in scale within the sprawling panoramic vista, solitary silhouette against horizon: updated position and pose following movement where subject settled in aftermath posture following sofia garcia-vargas (cont'd), body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Tight Medium Close-Up on Subject) to Out-Frame Still (Epic Wide Environmental Resolution). Camera Movement: Slow reverse crane pull-back expanding from the character to reveal the vast environment. Dynamic Action & Blocking: SOFIA GARCIA-VARGAS (CONT'D). Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 9,
+      "heading": "INT. THE GRAND CYBERPUNK MASTER FACILITY - NIGHT - SHOT 9",
+      "duration_seconds": 4.5,
+      "timecode": "00:36 - 00:41",
+      "camera_lens": "Establishing Wide Shot (24mm Ultra-Wide Anamorphic Prime)",
+      "camera_motion": "The camera tracks smoothly alongside the subject and then zooms in to the face",
+      "characters_present": [
+        "Kwame Mensah"
+      ],
+      "set_used": "The Grand Cyberpunk Master Facility",
+      "props_used": [
+        "The Master Cyberpunk Key Artifact"
+      ],
+      "spoken_dialogue": {
+        "speaker": "SPEAKER",
+        "spokenLine": "Three... two... one... System overridden! We're in!",
+        "parenthetical": ""
+      },
+      "action_description": "Actor delivers line with deliberate dramatic inflection.",
+      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Establishing Wide Shot (24mm Ultra-Wide Anamorphic Prime). Starting Position, Pose & Blocking: Kwame Mensah (Supreme Command Trenchcoat, Imposing presence, immaculate grooming, cold calcu) is positioned in the mid-left frame, moving forward toward the destination: initial position and pose caught as subject Actor delivers line with deliberate dramatic inflection., body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.5s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Tight Close-Up on Face (85mm Portrait Telephoto Prime). Updated Position, Pose & Settled Blocking: Kwame Mensah (Supreme Command Trenchcoat, Imposing presence, immaculate grooming, cold calcu) is occupies the center-right frame in tight focus, halted squarely at the destination point: updated position and pose following movement where subject settled in aftermath posture following actor delivers line with deliberate dramatic inflection., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Establishing Wide Shot) to Out-Frame Still (Tight Close-Up on Face). Camera Movement: The camera tracks smoothly alongside the subject and then zooms in to the face. Dynamic Action & Blocking: Actor delivers line with deliberate dramatic inflection.. Actor SPEAKER delivers dialogue with natural 2.6 w/s cadence: \"Three... two... one... System overridden! We're in!\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 4.5,
+          "timecode": "00:00 - 00:05",
+          "camera_instruction": "Establishing Wide Shot (24mm Ultra-Wide Anamorphic Prime), The camera tracks smoothly alongside the subject and then zooms in to the face",
+          "motion_vector": "The camera tracks smoothly alongside the subject and then zooms in to the face",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Establishing Wide Shot (24mm Ultra-Wide Anamorphic Prime). Starting Position, Pose & Blocking: Kwame Mensah (Supreme Command Trenchcoat, Imposing presence, immaculate grooming, cold calcu) is positioned in the mid-left frame, moving forward toward the destination: initial position and pose caught as subject Actor delivers line with deliberate dramatic inflection., body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.5s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Tight Close-Up on Face (85mm Portrait Telephoto Prime). Updated Position, Pose & Settled Blocking: Kwame Mensah (Supreme Command Trenchcoat, Imposing presence, immaculate grooming, cold calcu) is occupies the center-right frame in tight focus, halted squarely at the destination point: updated position and pose following movement where subject settled in aftermath posture following actor delivers line with deliberate dramatic inflection., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Establishing Wide Shot) to Out-Frame Still (Tight Close-Up on Face). Camera Movement: The camera tracks smoothly alongside the subject and then zooms in to the face. Dynamic Action & Blocking: Actor delivers line with deliberate dramatic inflection.. Actor SPEAKER delivers dialogue with natural 2.6 w/s cadence: \"Three... two... one... System overridden! We're in!\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    },
+    {
+      "shot_number": 10,
+      "heading": "INT. THE GRAND CYBERPUNK MASTER FACILITY - NIGHT - SHOT 10",
+      "duration_seconds": 4.5,
+      "timecode": "00:41 - 00:45",
+      "camera_lens": "Full-Body Tracking Master Shot (35mm Wide Cinematic Lens)",
+      "camera_motion": "Steadicam lateral tracking dolly keeping pace with the movement across the space",
+      "characters_present": [
+        "Leila Farhadi"
+      ],
+      "set_used": "The Grand Cyberpunk Master Facility",
+      "props_used": [
+        "The Master Cyberpunk Key Artifact"
+      ],
+      "spoken_dialogue": null,
+      "action_description": "The heavy containment seals hiss open with a deafening release of pressurized gas, revealing the artifact in all its glory.",
+      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Full-Body Tracking Master Shot (35mm Wide Cinematic Lens). Starting Position, Pose & Blocking: Leila Farhadi (Wanderer Travelling Cloak, Weathered veteran with grey-flecked hair, calm pos) is framed full-body from the flank, advancing with deliberate kinetic balance: initial position and pose caught as subject The heavy containment seals hiss open with a deafening release of pressurized gas, body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.5s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Medium Profile Two-Shot (50mm Standard Prime Lens). Updated Position, Pose & Settled Blocking: Leila Farhadi (Wanderer Travelling Cloak, Weathered veteran with grey-flecked hair, calm pos) is settled in profile medium perspective, body weight anchored at final destination: updated position and pose following movement where subject revealing the artifact in all its glory., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Full-Body Tracking Master Shot) to Out-Frame Still (Medium Profile Two-Shot). Camera Movement: Steadicam lateral tracking dolly keeping pace with the movement across the space. Dynamic Action & Blocking: The heavy containment seals hiss open with a deafening release of pressurized gas, revealing the artifact in all its glory.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 1,
+          "duration_seconds": 4.5,
+          "timecode": "00:00 - 00:05",
+          "camera_instruction": "Full-Body Tracking Master Shot (35mm Wide Cinematic Lens), Steadicam lateral tracking dolly keeping pace with the movement across the space",
+          "motion_vector": "Steadicam lateral tracking dolly keeping pace with the movement across the space",
+          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
+          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Full-Body Tracking Master Shot (35mm Wide Cinematic Lens). Starting Position, Pose & Blocking: Leila Farhadi (Wanderer Travelling Cloak, Weathered veteran with grey-flecked hair, calm pos) is framed full-body from the flank, advancing with deliberate kinetic balance: initial position and pose caught as subject The heavy containment seals hiss open with a deafening release of pressurized gas, body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
+          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.5s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Medium Profile Two-Shot (50mm Standard Prime Lens). Updated Position, Pose & Settled Blocking: Leila Farhadi (Wanderer Travelling Cloak, Weathered veteran with grey-flecked hair, calm pos) is settled in profile medium perspective, body weight anchored at final destination: updated position and pose following movement where subject revealing the artifact in all its glory., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
+          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Full-Body Tracking Master Shot) to Out-Frame Still (Medium Profile Two-Shot). Camera Movement: Steadicam lateral tracking dolly keeping pace with the movement across the space. Dynamic Action & Blocking: The heavy containment seals hiss open with a deafening release of pressurized gas, revealing the artifact in all its glory.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+        }
+      ]
+    }
+  ]
+}

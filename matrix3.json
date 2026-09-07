@@ -1,0 +1,304 @@
+{
+  "shots":[
+  {
+    "shot_number": 1,
+    "heading": "EXT. AETHER PEAKS – DAWN",
+    "duration_seconds": 12,
+    "timecode": "00:00:00:00",
+    "camera_lens": "35mm anamorphic",
+    "camera_motion": "Slow forward dolly",
+    "characters_present": ["Zephyr"],
+    "set_used": "Aether Peaks cliffside",
+    "props_used": ["Frost crystals", "Wind‑etched stone"],
+    "spoken_dialogue": null,
+    "action_description": "Zephyr stands at the cliff’s edge, wings folded, listening to a distant rumble rising from the valley.",
+    "in_frame_still_prompt": "Silver‑blue Zephyr on frost‑covered cliff at dawn, low angle, lavender sky, cinematic lighting.",
+    "out_frame_still_prompt": "Wide aerial of jagged cliffs above cloud sea, soft dawn light.",
+    "video_prompt": "Slow dolly toward Zephyr, subtle wind effects, atmospheric cloud drift.",
+    "takes": [
+      {
+        "take_number": 1,
+        "total_takes": 3,
+        "duration_seconds": 12,
+        "timecode": "00:00:00:00",
+        "camera_instruction": "Low angle dolly from 12 feet back, keep Zephyr centered.",
+        "motion_vector": "Forward 0.3 m/s",
+        "init_seed_guidance": "High detail on scales, crisp dawn lighting.",
+        "in_frame_still_prompt": "Low‑angle still of Zephyr, frost foreground, lavender sky.",
+        "out_frame_still_prompt": "Static wide shot of Aether Peaks with drifting clouds.",
+        "video_prompt": "Forward dolly into Zephyr, subtle wind motion."
+      }
+    ]
+  },
+  {
+    "shot_number": 2,
+    "heading": "EXT. AETHER PEAKS – CONTINUOUS",
+    "duration_seconds": 10,
+    "timecode": "00:00:12:00",
+    "camera_lens": "50mm",
+    "camera_motion": "Push‑in with slight tilt up",
+    "characters_present": ["Zephyr"],
+    "set_used": "Cliffside ledge",
+    "props_used": [],
+    "spoken_dialogue": "ZEPHYR (soft) Not again.",
+    "action_description": "Zephyr’s eyes narrow as the rumble intensifies. Wind coils around him, responding to his rising resolve.",
+    "in_frame_still_prompt": "Close‑up of Zephyr’s eyes glowing with storm‑light, wind curling around snout.",
+    "out_frame_still_prompt": "Distant valley with faint rising dust plume.",
+    "video_prompt": "Push‑in to Zephyr’s face as wind intensifies.",
+    "takes": [
+      {
+        "take_number": 1,
+        "total_takes": 2,
+        "duration_seconds": 10,
+        "timecode": "00:00:12:00",
+        "camera_instruction": "Push‑in from medium to tight close‑up.",
+        "motion_vector": "Forward 0.2 m/s",
+        "init_seed_guidance": "Emphasize eye glow and wind motion.",
+        "in_frame_still_prompt": "Tight close‑up of Zephyr’s glowing eyes.",
+        "out_frame_still_prompt": "Valley rumble in distance.",
+        "video_prompt": "Wind intensifies around Zephyr’s face."
+      }
+    ]
+  },
+  {
+    "shot_number": 3,
+    "heading": "EXT. AETHER PEAKS – CONTINUOUS",
+    "duration_seconds": 14,
+    "timecode": "00:00:22:00",
+    "camera_lens": "24mm",
+    "camera_motion": "Rapid crane drop then rise",
+    "characters_present": ["Zephyr"],
+    "set_used": "Cliff edge",
+    "props_used": [],
+    "spoken_dialogue": null,
+    "action_description": "Zephyr leaps off the cliff. Wings snap open with a thunderous crack as he dives toward the valley.",
+    "in_frame_still_prompt": "Zephyr launching off cliff, wings unfurled, dramatic dawn sky.",
+    "out_frame_still_prompt": "Cliff receding behind camera, clouds below.",
+    "video_prompt": "Crane drop following Zephyr’s leap, wings opening mid‑fall.",
+    "takes": [
+      {
+        "take_number": 1,
+        "total_takes": 4,
+        "duration_seconds": 14,
+        "timecode": "00:00:22:00",
+        "camera_instruction": "Follow Zephyr’s descent with crane drop, then rise as wings open.",
+        "motion_vector": "Vertical drop 1.2 m/s then rise 0.8 m/s",
+        "init_seed_guidance": "High dynamic motion, wing detail.",
+        "in_frame_still_prompt": "Zephyr mid‑leap, wings half‑open.",
+        "out_frame_still_prompt": "Cliff fading upward.",
+        "video_prompt": "Dynamic descent with wing expansion."
+      }
+    ]
+  },
+  {
+    "shot_number": 4,
+    "heading": "EXT. WINDHAVEN VALLEY – MORNING",
+    "duration_seconds": 11,
+    "timecode": "00:00:36:00",
+    "camera_lens": "35mm",
+    "camera_motion": "Lateral tracking",
+    "characters_present": ["Villagers"],
+    "set_used": "Windhaven village",
+    "props_used": ["Windmill", "Market stalls"],
+    "spoken_dialogue": "VILLAGER (shouting) The tower’s collapsing!",
+    "action_description": "A windmill tower cracks and begins to fall toward a group of children.",
+    "in_frame_still_prompt": "Windmill collapsing, villagers running, dust clouds rising.",
+    "out_frame_still_prompt": "Wide valley with distant mountains.",
+    "video_prompt": "Lateral tracking shot following falling windmill.",
+    "takes": [
+      {
+        "take_number": 1,
+        "total_takes": 3,
+        "duration_seconds": 11,
+        "timecode": "00:00:36:00",
+        "camera_instruction": "Track left as tower collapses.",
+        "motion_vector": "Left 0.5 m/s",
+        "init_seed_guidance": "High debris detail.",
+        "in_frame_still_prompt": "Windmill mid‑collapse.",
+        "out_frame_still_prompt": "Valley background.",
+        "video_prompt": "Tracking collapse with dust motion."
+      }
+    ]
+  },
+  {
+    "shot_number": 5,
+    "heading": "EXT. WINDHAVEN VALLEY – CONTINUOUS",
+    "duration_seconds": 13,
+    "timecode": "00:00:47:00",
+    "camera_lens": "50mm",
+    "camera_motion": "High‑speed aerial chase",
+    "characters_present": ["Zephyr"],
+    "set_used": "Village rooftops",
+    "props_used": [],
+    "spoken_dialogue": null,
+    "action_description": "Zephyr dives from the sky, spiraling into a glowing helix of wind as he races toward the falling tower.",
+    "in_frame_still_prompt": "Zephyr spiraling downward, wind vortex forming around him.",
+    "out_frame_still_prompt": "Village rooftops rushing past.",
+    "video_prompt": "High‑speed aerial dive with spiraling wind effects.",
+    "takes": [
+      {
+        "take_number": 1,
+        "total_takes": 2,
+        "duration_seconds": 13,
+        "timecode": "00:00:47:00",
+        "camera_instruction": "Follow Zephyr’s descent from above.",
+        "motion_vector": "Downward 1.5 m/s",
+        "init_seed_guidance": "Strong motion blur, wind helix clarity.",
+        "in_frame_still_prompt": "Zephyr mid‑spiral.",
+        "out_frame_still_prompt": "Village rooftops blurred.",
+        "video_prompt": "Fast descent with vortex motion."
+      }
+    ]
+  },
+  {
+    "shot_number": 6,
+    "heading": "EXT. WINDHAVEN SQUARE – CONTINUOUS",
+    "duration_seconds": 9,
+    "timecode": "00:01:00:00",
+    "camera_lens": "85mm",
+    "camera_motion": "Static telephoto",
+    "characters_present": ["Zephyr", "Children"],
+    "set_used": "Village square",
+    "props_used": ["Windmill debris"],
+    "spoken_dialogue": "CHILD (whispering) He saved us.",
+    "action_description": "Zephyr unleashes a burst of compressed wind, freezing the falling windmill mid‑air and lowering it gently.",
+    "in_frame_still_prompt": "Zephyr holding windmill suspended in cyclone, children watching.",
+    "out_frame_still_prompt": "Village square debris.",
+    "video_prompt": "Cyclone stabilization effect as tower lowers.",
+    "takes": [
+      {
+        "take_number": 1,
+        "total_takes": 3,
+        "duration_seconds": 9,
+        "timecode": "00:01:00:00",
+        "camera_instruction": "Hold static telephoto on Zephyr and suspended tower.",
+        "motion_vector": "None",
+        "init_seed_guidance": "High cyclone clarity.",
+        "in_frame_still_prompt": "Zephyr stabilizing tower.",
+        "out_frame_still_prompt": "Square debris.",
+        "video_prompt": "Cyclone holding tower steady."
+      }
+    ]
+  },
+  {
+    "shot_number": 7,
+    "heading": "EXT. VORTEX CORE – CONTINUOUS",
+    "duration_seconds": 12,
+    "timecode": "00:01:09:00",
+    "camera_lens": "28mm",
+    "camera_motion": "Whip‑pan reveal",
+    "characters_present": ["Zephyr", "Maelstrom"],
+    "set_used": "Storm vortex center",
+    "props_used": ["Lightning arcs"],
+    "spoken_dialogue": "MAELSTROM: You cannot stop the storm, Skyborn.",
+    "action_description": "The vortex pulses violently as Maelstrom emerges, wrapped in dark winds.",
+    "in_frame_still_prompt": "Storm mage emerging from vortex, lightning arcs, swirling winds.",
+    "out_frame_still_prompt": "Dark storm clouds.",
+    "video_prompt": "Whip‑pan into Maelstrom’s reveal with lightning bursts.",
+    "takes": [
+      {
+        "take_number": 1,
+        "total_takes": 2,
+        "duration_seconds": 12,
+        "timecode": "00:01:09:00",
+        "camera_instruction": "Whip‑pan from Zephyr to Maelstrom.",
+        "motion_vector": "Fast lateral pan",
+        "init_seed_guidance": "High storm detail.",
+        "in_frame_still_prompt": "Maelstrom emerging.",
+        "out_frame_still_prompt": "Storm vortex.",
+        "video_prompt": "Lightning‑charged reveal."
+      }
+    ]
+  },
+  {
+    "shot_number": 8,
+    "heading": "EXT. VORTEX CORE – CONTINUOUS",
+    "duration_seconds": 10,
+    "timecode": "00:01:21:00",
+    "camera_lens": "50mm",
+    "camera_motion": "Reverse OTS push‑in",
+    "characters_present": ["Zephyr", "Maelstrom"],
+    "set_used": "Storm vortex",
+    "props_used": [],
+    "spoken_dialogue": "ZEPHYR: I don’t stop storms. I guide them.",
+    "action_description": "Zephyr lowers his horned crown, eyes glowing as he prepares to counter Maelstrom’s magic.",
+    "in_frame_still_prompt": "Zephyr framed over Maelstrom’s shoulder, eyes glowing.",
+    "out_frame_still_prompt": "Storm vortex swirling.",
+    "video_prompt": "Push‑in on Zephyr delivering line.",
+    "takes": [
+      {
+        "take_number": 1,
+        "total_takes": 3,
+        "duration_seconds": 10,
+        "timecode": "00:01:21:00",
+        "camera_instruction": "Reverse OTS push‑in on Zephyr.",
+        "motion_vector": "Forward 0.2 m/s",
+        "init_seed_guidance": "Emphasize eye glow.",
+        "in_frame_still_prompt": "Zephyr delivering line.",
+        "out_frame_still_prompt": "Storm vortex.",
+        "video_prompt": "Push‑in with wind intensification."
+      }
+    ]
+  },
+  {
+    "shot_number": 9,
+    "heading": "EXT. VORTEX CORE – CONTINUOUS",
+    "duration_seconds": 15,
+    "timecode": "00:01:31:00",
+    "camera_lens": "24mm",
+    "camera_motion": "Orbiting crane",
+    "characters_present": ["Zephyr", "Maelstrom"],
+    "set_used": "Storm vortex center",
+    "props_used": ["Gale Stone"],
+    "spoken_dialogue": null,
+    "action_description": "Zephyr channels the Gale Stone, forming a glowing sphere of compressed wind. He launches it, shattering the vortex.",
+    "in_frame_still_prompt": "Zephyr unleashing wind sphere, vortex cracking apart.",
+    "out_frame_still_prompt": "Storm clouds breaking.",
+    "video_prompt": "Orbiting crane shot around Zephyr as vortex collapses.",
+    "takes": [
+      {
+        "take_number": 1,
+        "total_takes": 2,
+        "duration_seconds": 15,
+        "timecode": "00:01:31:00",
+        "camera_instruction": "Orbit around Zephyr as he fires wind sphere.",
+        "motion_vector": "Circular 0.4 m/s",
+        "init_seed_guidance": "High energy effects.",
+        "in_frame_still_prompt": "Wind sphere mid‑launch.",
+        "out_frame_still_prompt": "Cracking vortex.",
+        "video_prompt": "Orbit with vortex collapse."
+      }
+    ]
+  },
+  {
+    "shot_number": 10,
+    "heading": "EXT. WINDHAVEN VALLEY – AFTERMATH",
+    "duration_seconds": 10,
+    "timecode": "00:01:46:00",
+    "camera_lens": "85mm",
+    "camera_motion": "Slow push‑in",
+    "characters_present": ["Zephyr", "Villagers"],
+    "set_used": "Village square",
+    "props_used": ["Wooden wind emblem"],
+    "spoken_dialogue": "ZEPHYR: Just Zephyr. Protector of the winds.",
+    "action_description": "Villagers gather around Zephyr. A child hands him a carved wind emblem. Zephyr bows his head.",
+    "in_frame_still_prompt": "Zephyr surrounded by villagers, child offering emblem, warm morning light.",
+    "out_frame_still_prompt": "Village rooftops and clear sky.",
+    "video_prompt": "Slow push‑in as Zephyr accepts emblem.",
+    "takes": [
+      {
+        "take_number": 1,
+        "total_takes": 3,
+        "duration_seconds": 10,
+        "timecode": "00:01:46:00",
+        "camera_instruction": "Push‑in from medium to close‑up on Zephyr and child.",
+        "motion_vector": "Forward 0.15 m/s",
+        "init_seed_guidance": "Warm lighting, emotional clarity.",
+        "in_frame_still_prompt": "Zephyr accepting emblem.",
+        "out_frame_still_prompt": "Village rooftops.",
+        "video_prompt": "Gentle push‑in with warm light."
+      }
+    ]
+  }
+]
+}

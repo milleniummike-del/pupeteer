@@ -36,12 +36,11 @@ puppeteer.use(StealthPlugin());
 
     for (let i = 0; i < matrix.shots.length; i++) {
 
-        const promptText = JSON.stringify(matrix.shots[i]);
-
-        await page.waitForSelector('[data-slate-editor="true"]', { visible: true });
+        const promptText = JSON.stringify(matrix.shots[i].in_frame_still_prompt);
+        await page.waitForSelector('[class="prompt-input]', { visible: true });
 
         // Focus editor
-        await page.click('[data-slate-editor="true"]');
+        await page.click('[class="prompt-input]');
 
         // Clear existing text
         await page.keyboard.down('Control');
