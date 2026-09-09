@@ -6,41 +6,90 @@ const path = require('path');
 puppeteer.use(StealthPlugin());
 
 (async () => {
+
     const browser = await puppeteer.launch({
         userDataDir: "browser",
         headless: false,
         args: ["--no-sandbox", "--disable-setuid-sandbox"]
     });
 
-    const matrix = require('./matrix.json');
     const page = await browser.newPage();
+    const matrix = require('./matrix.json');
 
     await page.goto(
         'https://labs.google/fx/tools/flow/project/5f470746-ea52-4acf-9473-7648b025d4ce',
         { waitUntil: "networkidle2", timeout: 0 }
     );
 
-    const downloadDir = path.join(__dirname, "inputimages");
-    if (!fs.existsSync(downloadDir)) fs.mkdirSync(downloadDir);
-
     console.log("Total prompts:", matrix.shots.length);
 
-    // Chunked sendCharacter to avoid Flow reload
-    async function safeSendCharacter(page, text) {
-        const chunks = text.match(/.{1,80}/g); // 80 chars per event = safe
+    // -------------------------------------------------------
+    // SAFE CHUNKED TYPING FOR PROSEMIRROR
+    // -------------------------------------------------------
+    async function safeType(page, text) {
+        const chunks = text.match(/.{1,120}/g) || [text];
         for (const chunk of chunks) {
-            await page.keyboard.sendCharacter(chunk);
-            await new Promise(r => setTimeout(r, 20)); // tiny delay prevents redirect
+            await page.keyboard.type(chunk, { delay: 12 });
         }
     }
 
+    // -------------------------------------------------------
+    // WAIT FOR FLOW TO ENABLE GENERATION
+    // -------------------------------------------------------
+    async function waitForGenerateEnabled(page) {
+        await page.waitForFunction(() => {
+            const btn = document.querySelector('.generate-icon-button');
+            if (!btn) return false;
+
+            // Angular removes this class when ready
+            return !btn.classList.contains('mat-mdc-button-disabled');
+        }, { timeout: 0 });
+    }
+
+    // -------------------------------------------------------
+    // CLICK THE REAL BUTTON (NOT THE ICON)
+    // -------------------------------------------------------
+    async function clickGenerate(page) {
+        await page.evaluate(() => {
+            const btn = document.querySelector('.generate-icon-button');
+            if (!btn) return;
+
+            btn.dispatchEvent(new MouseEvent("click", {
+                bubbles: true,
+                cancelable: true,
+                composed: true
+            }));
+        });
+    }
+
+    // -------------------------------------------------------
+    // CLICK "Add to Prompt"
+    // -------------------------------------------------------
+    async function clickAddToPrompt(page) {
+        const coords = await page.evaluate(() => {
+            const btn = [...document.querySelectorAll("button")]
+                .find(b => b.innerText.trim().includes("Add to Prompt"));
+            if (!btn) return null;
+            const r = btn.getBoundingClientRect();
+            return { x: r.left + r.width / 2, y: r.top + r.height / 2 };
+        });
+        if (coords) await page.mouse.click(coords.x, coords.y);
+    }
+
+    // -------------------------------------------------------
+    // MAIN LOOP
+    // -------------------------------------------------------
     for (let i = 0; i < matrix.shots.length; i++) {
 
         const promptText = JSON.stringify(matrix.shots[i].in_frame_still_prompt);
-        await page.waitForSelector('[class="prompt-input]', { visible: true });
+        console.log(`\n--- Prompt ${i + 1}/${matrix.shots.length} ---`);
+
+        // Wait for editor
+        await page.waitForSelector('.ProseMirror', { visible: true });
 
         // Focus editor
-        await page.click('[class="prompt-input]');
+        await page.click('.ProseMirror');
+        await page.evaluate(() => document.querySelector('.ProseMirror')?.focus());
 
         // Clear existing text
         await page.keyboard.down('Control');
@@ -48,65 +97,23 @@ puppeteer.use(StealthPlugin());
         await page.keyboard.up('Control');
         await page.keyboard.press('Backspace');
 
-        // SAFE: chunked sendCharacter
-        await safeSendCharacter(page, promptText);
-
+        // Type safely
+        await safeType(page, promptText);
         console.log("Typed prompt:", promptText);
 
-        for (let repeat = 0; repeat < 1; repeat++) {
+        // Add to Prompt (if needed)
+        await clickAddToPrompt(page);
 
-        await page.evaluate(() => {
-            const el = [...document.querySelectorAll("button i.google-symbols")]
-                .find(e => e.textContent.trim() === "add_2");
-            if (!el) return null;
-            const btn = el.closest("button");
-            btn?.click();
-        });
+        // ⭐ WAIT FOR REAL ENABLE STATE
+        await waitForGenerateEnabled(page);
 
-        const coords = await page.evaluate(() => {
-            const buttons = [...document.querySelectorAll("button")];
+        // ⭐ CLICK REAL BUTTON
+        await clickGenerate(page);
+        console.log("Generate clicked!");
 
-            const target = buttons.find(btn =>
-                btn.textContent.trim() === "Add to Prompt"
-            );
-
-            if (!target) return null;
-
-            const rect = target.getBoundingClientRect();
-            return {
-                x: rect.left + rect.width / 2,
-                y: rect.top + rect.height / 2
-            };
-        });
-
-        if (coords) {
-            await page.mouse.click(coords.x, coords.y);
-        }
+        // ⭐ FIXED DELAY FOR YOUR PUPPETEER VERSION
+        await new Promise(r => setTimeout(r, 6000));
     }
 
-        await new Promise(r => setTimeout(r, 2000));
-
-        // Click CREATE via mouse on the arrow_forward icon's button
-        await page.evaluate(() => {
-            const el = [...document.querySelectorAll("button i.google-symbols")]
-                .find(e => e.textContent.trim() === "arrow_forward");
-            if (!el) return null;
-            const btn = el.closest("button");
-            const rect = btn.getBoundingClientRect();
-            return {
-                x: rect.left + rect.width / 2,
-                y: rect.top + rect.height / 2
-            };
-        }).then(async coords => {
-            if (!coords) return;
-            await page.mouse.click(coords.x, coords.y);
-        });
-
-        await new Promise(r => setTimeout(r, 5000));
-
-    }
-
-    const pages = await browser.pages();
-    for (const p of pages) await p.close();
     await browser.close();
 })();
