@@ -58,14 +58,63 @@ async function reactSafeType(el, text) {
 }
 
 // ======================================================
-// IMAGE UPLOAD (extension local file)
+// IMAGE DISCOVERY (non-numeric, wildcard scan)
 // ======================================================
-async function uploadImageFromExtension(index) {
+async function discoverImages() {
+  const exts = ["webp", "png", "jpg", "jpeg"];
+  const candidates = [];
+
+  // Try up to 200 possible filenames
+  // We cannot list directory contents, so we brute-force probe
+  for (let i = 0; i < 200; i++) {
+    for (const ext of exts) {
+      const url = chrome.runtime.getURL(`inputimages/${i}.${ext}`);
+      try {
+        const resp = await fetch(url);
+        if (resp.ok) {
+          candidates.push(url);
+        }
+      } catch (e) {}
+    }
+  }
+
+  // Also probe common non-numeric names
+  const commonNames = [
+    "frame", "image", "shot", "pic", "photo", "still", "input", "source"
+  ];
+
+  for (const name of commonNames) {
+    for (const ext of exts) {
+      const url = chrome.runtime.getURL(`inputimages/${name}.${ext}`);
+      try {
+        const resp = await fetch(url);
+        if (resp.ok) {
+          candidates.push(url);
+        }
+      } catch (e) {}
+    }
+  }
+
+  // Remove duplicates
+  const unique = [...new Set(candidates)];
+
+  panelLog(`Discovered ${unique.length} images in inputimages/`);
+  unique.forEach(u => panelLog(`Image: ${u}`));
+
+  return unique;
+}
+
+// ======================================================
+// IMAGE UPLOAD (cycles through discovered images)
+// ======================================================
+async function uploadImageFromList(imageList, index) {
   const fileInput = await waitForSelector('input[type="file"]');
 
-  const fileUrl = chrome.runtime.getURL(`inputimages/${index}.webp`);
-  const blob = await fetch(fileUrl).then(r => r.blob());
-  const file = new File([blob], `${index}.webp`, { type: blob.type });
+  // If index exceeds list, reuse last image
+  const useUrl = index < imageList.length ? imageList[index] : imageList[imageList.length - 1];
+
+  const blob = await fetch(useUrl).then(r => r.blob());
+  const file = new File([blob], useUrl.split("/").pop(), { type: blob.type });
 
   const dt = new DataTransfer();
   dt.items.add(file);
@@ -73,24 +122,44 @@ async function uploadImageFromExtension(index) {
 
   fileInput.dispatchEvent(new Event("change", { bubbles: true }));
 
-  panelLog(`Uploaded image: ${index}.png`);
+  panelLog(`Uploaded image: ${useUrl}`);
 }
 
 // ======================================================
 // CLICK CONFIGURE BUTTON
 // ======================================================
-async function clickConfigure() {
-  await waitForSelector("button");
+async function clickConfigure(frameIndex) {
+  const label = `Frame ${frameIndex} ·`;
 
-  const configureBtn = [...document.querySelectorAll("button")]
+  // Wait until the frame label exists
+  await waitForSelector("span");
+
+  const span = [...document.querySelectorAll("span")]
+    .find(el => el.textContent.trim().startsWith(label));
+
+  if (!span) {
+    throw new Error(`Could not find frame label: ${label}`);
+  }
+
+  // Flow’s frame card container
+  const card = span.closest(".relative.w-44");
+  if (!card) {
+    throw new Error(`Could not find card container for ${label}`);
+  }
+
+  // Find Configure inside this card only
+  const btn = [...card.querySelectorAll("button")]
     .find(b => b.textContent.trim() === "Configure");
 
-  if (!configureBtn) throw new Error("Configure button not found.");
+  if (!btn) {
+    throw new Error(`Configure button not found for ${label}`);
+  }
 
-  highlight(configureBtn);
-  configureBtn.click();
-  panelLog("Clicked Configure.");
+  highlight(btn);
+  btn.click();
+  panelLog(`Clicked Configure for ${label}`);
 }
+
 
 // ======================================================
 // TYPE PROMPT INTO CONFIGURE FIELD
@@ -100,7 +169,6 @@ async function injectPrompt(prompt) {
   highlight(cfgTextarea);
 
   await reactSafeType(cfgTextarea, prompt);
-
   panelLog("Injected prompt into configure field.");
 }
 
@@ -126,19 +194,38 @@ async function runQueue({ prompts }) {
   panelLog(`Content script: received queue (${prompts.length} prompts).`);
   panelLog("Queue payload:", { prompts });
 
+  // Discover all images in inputimages/
+  const imageList = await discoverImages();
+  if (imageList.length === 0) {
+    panelLog("ERROR: No images found in inputimages/");
+    return;
+  }
+
   for (let i = 0; i < prompts.length; i++) {
     const prompt = prompts[i];
-    const frameIndex = i + 1;
 
-    panelLog(`Prompt ${frameIndex}/${prompts.length}: "${prompt.slice(0, 80)}..."`);
+    panelLog(`Prompt ${i + 1}/${prompts.length}: "${prompt.slice(0, 80)}..."`);
 
     try {
-      // 1. Upload image
-      await uploadImageFromExtension(frameIndex);
+      // 1. Upload image (cycling)
+      await uploadImageFromList(imageList, i);
       await sleep(3000);
 
+    } catch (err) {
+      panelLog(`Error on prompt ${i + 1}: ${err.message}`);
+      debugLog("Error:", err);
+    }
+  }
+
+   for (let i = 0; i < prompts.length; i++) {
+    const prompt = prompts[i];
+
+    panelLog(`Prompt ${i + 1}/${prompts.length}: "${prompt.slice(0, 80)}..."`);
+
+    try {
+
       // 2. Click Configure
-      await clickConfigure();
+      await clickConfigure(i+1);
       await sleep(1000);
 
       // 3. Inject prompt
@@ -150,7 +237,7 @@ async function runQueue({ prompts }) {
       await sleep(1500);
 
     } catch (err) {
-      panelLog(`Error on prompt ${frameIndex}: ${err.message}`);
+      panelLog(`Error on prompt ${i + 1}: ${err.message}`);
       debugLog("Error:", err);
     }
   }
