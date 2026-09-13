@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Gentube Harness",
+  "version": "0.1.0",
+  "description": "Batch automation for Google Flow Veo: prompts, generation, and downloads.",
+  "permissions": [
+    "sidePanel",
+    "scripting",
+    "downloads",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://labs.google.com/*",
+    "https://labs.google/*",
+    "https://www.gentube.app/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Flow Veo Automation"
+  },
+  "side_panel": {
+    "default_path": "side_panel.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://labs.google.com/*",
+        "https://labs.google/*",
+        "https://flow.google.com/project/*",
+        "https://www.gentube.app/*"
+      ],
+      "js": ["content_script.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

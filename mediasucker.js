@@ -14,9 +14,9 @@ puppeteer.use(StealthPlugin());
 
     const page = await browser.newPage();
 
-    // Create output folder
-    const outDir = path.join("", "C:/\Users/\mike/\Downloads");
-    if (!fs.existsSync(outDir)) fs.mkdirSync(outDir);
+    // Ensure download directory exists
+        const downloadDir = path.join(__dirname, "inputimages");
+        if (!fs.existsSync(downloadDir)) fs.mkdirSync(downloadDir);
 
     const seen = new Set();
 
@@ -63,7 +63,7 @@ if (
         seen.add(url);
 
         const filename = url.split("/").pop();
-        const filepath = path.join(outDir, filename);
+        const filepath = path.join(downloadDir, filename);
 
         try {
             const bytes = await fetchImageInsidePage(url);

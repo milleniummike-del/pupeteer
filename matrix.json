@@ -1,32 +1,182 @@
 {
   "shots": [
     {
-      "shot_number": null,
-      "heading": "",
-      "duration_seconds": null,
-      "timecode": "",
-      "camera_lens": "",
-      "camera_motion": "",
-      "characters_present": [],
-      "set_used": "",
-      "props_used": [],
-      "spoken_dialogue": null,
-      "action_description": "",
-      "in_frame_still_prompt": "",
-      "out_frame_still_prompt": "",
-      "video_prompt": "",
+      "shot_number": 1,
+      "heading": "EXT. TROPICAL BEACH – SUNRISE",
+      "duration_seconds": 5,
+      "timecode": "00:00:00:00",
+      "camera_lens": "24mm wide",
+      "camera_motion": "Slow rising crane over shoreline",
+      "characters_present": ["Couple"],
+      "set_used": "Golden sand beach with turquoise water",
+      "props_used": ["Beach towels", "Sun hats"],
+      "spoken_dialogue": "NARRATOR: Your perfect escape begins with the sunrise.",
+      "action_description": "A couple walks along the glowing shoreline as gentle waves roll in, the sky painted in warm orange hues.",
+      "in_frame_still_prompt": "Cinematic sunrise over tropical beach, couple walking along shoreline, warm golden light, wide 24mm framing.",
+      "out_frame_still_prompt": "Aerial view of turquoise ocean meeting golden sand, soft morning mist.",
+      "video_prompt": "Crane rising over shoreline revealing couple walking through warm sunrise glow.",
       "takes": [
         {
-          "take_number": null,
-          "total_takes": null,
-          "duration_seconds": null,
-          "timecode": "",
-          "camera_instruction": "",
-          "motion_vector": "",
-          "init_seed_guidance": "",
-          "in_frame_still_prompt": "",
-          "out_frame_still_prompt": "",
-          "video_prompt": ""
+          "take_number": 1,
+          "total_takes": 3,
+          "duration_seconds": 5,
+          "timecode": "00:00:00:00",
+          "camera_instruction": "Begin low near waterline, rise smoothly to reveal couple.",
+          "motion_vector": "Vertical rise 0.4 m/s",
+          "init_seed_guidance": "Warm tones, soft reflections, gentle wave motion.",
+          "in_frame_still_prompt": "Couple walking on glowing beach at sunrise.",
+          "out_frame_still_prompt": "Wide aerial of beach and ocean.",
+          "video_prompt": "Smooth crane rise with soft wave movement."
+        }
+      ]
+    },
+    {
+      "shot_number": 2,
+      "heading": "EXT. MOUNTAIN LOOKOUT – MIDDAY",
+      "duration_seconds": 5,
+      "timecode": "00:00:05:00",
+      "camera_lens": "35mm",
+      "camera_motion": "Forward dolly toward cliff edge",
+      "characters_present": ["Solo Traveler"],
+      "set_used": "High-altitude viewpoint overlooking lush valley",
+      "props_used": ["Backpack", "Travel journal"],
+      "spoken_dialogue": "NARRATOR: Discover views that stay with you forever.",
+      "action_description": "A traveler stands at the cliff edge, taking in a sweeping valley filled with waterfalls and green ridges.",
+      "in_frame_still_prompt": "Traveler at mountain lookout, vast valley below, bright midday sky, cinematic composition.",
+      "out_frame_still_prompt": "Wide valley with waterfalls and rolling green hills.",
+      "video_prompt": "Forward dolly toward traveler as valley expands into frame.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 2,
+          "duration_seconds": 5,
+          "timecode": "00:00:05:00",
+          "camera_instruction": "Dolly forward from medium shot to wide scenic reveal.",
+          "motion_vector": "Forward 0.3 m/s",
+          "init_seed_guidance": "High landscape clarity, vibrant greens.",
+          "in_frame_still_prompt": "Traveler overlooking valley.",
+          "out_frame_still_prompt": "Mountain valley panorama.",
+          "video_prompt": "Dolly forward with expanding landscape."
+        }
+      ]
+    },
+    {
+      "shot_number": 3,
+      "heading": "EXT. CITY MARKET – AFTERNOON",
+      "duration_seconds": 5,
+      "timecode": "00:00:10:00",
+      "camera_lens": "50mm",
+      "camera_motion": "Handheld glide through market aisle",
+      "characters_present": ["Families", "Vendors"],
+      "set_used": "Colorful open-air market",
+      "props_used": ["Fruit baskets", "Handmade crafts"],
+      "spoken_dialogue": "NARRATOR: Taste the world, one moment at a time.",
+      "action_description": "Vibrant stalls filled with fresh fruit, spices, and handmade goods as families explore and vendors greet them.",
+      "in_frame_still_prompt": "Colorful market stalls, fruit baskets, smiling vendors, warm afternoon light.",
+      "out_frame_still_prompt": "Wide shot of bustling market street.",
+      "video_prompt": "Handheld glide through lively market with warm colors and motion.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 3,
+          "duration_seconds": 5,
+          "timecode": "00:00:10:00",
+          "camera_instruction": "Glide through center aisle, slight sway for natural handheld feel.",
+          "motion_vector": "Forward 0.2 m/s",
+          "init_seed_guidance": "Rich colors, lively crowd motion.",
+          "in_frame_still_prompt": "Close-up of fruit and crafts.",
+          "out_frame_still_prompt": "Wide market street.",
+          "video_prompt": "Handheld glide with natural crowd movement."
+        }
+      ]
+    },
+    {
+      "shot_number": 4,
+      "heading": "EXT. LUXURY RESORT POOL – SUNSET",
+      "duration_seconds": 5,
+      "timecode": "00:00:15:00",
+      "camera_lens": "85mm telephoto",
+      "camera_motion": "Slow push-in across shimmering pool",
+      "characters_present": ["Couple", "Friends"],
+      "set_used": "Infinity pool overlooking ocean",
+      "props_used": ["Cocktails", "Pool loungers"],
+      "spoken_dialogue": "NARRATOR: Relax in places designed for pure bliss.",
+      "action_description": "Guests laugh and lounge by the infinity pool as the sun sets behind the ocean horizon.",
+      "in_frame_still_prompt": "Luxury infinity pool at sunset, warm reflections, relaxed guests, telephoto depth.",
+      "out_frame_still_prompt": "Ocean horizon glowing with orange and pink hues.",
+      "video_prompt": "Slow push-in across shimmering pool surface toward sunset.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 2,
+          "duration_seconds": 5,
+          "timecode": "00:00:15:00",
+          "camera_instruction": "Push-in from pool edge toward sunset glow.",
+          "motion_vector": "Forward 0.15 m/s",
+          "init_seed_guidance": "Warm reflections, soft silhouettes.",
+          "in_frame_still_prompt": "Guests relaxing at sunset.",
+          "out_frame_still_prompt": "Ocean horizon.",
+          "video_prompt": "Push-in with shimmering water reflections."
+        }
+      ]
+    },
+    {
+      "shot_number": 5,
+      "heading": "EXT. BEACH BONFIRE – NIGHT",
+      "duration_seconds": 5,
+      "timecode": "00:00:20:00",
+      "camera_lens": "35mm",
+      "camera_motion": "Circular dolly around group",
+      "characters_present": ["Friends"],
+      "set_used": "Night beach with bonfire",
+      "props_used": ["Guitar", "Lanterns"],
+      "spoken_dialogue": "NARRATOR: And end every day with memories worth keeping.",
+      "action_description": "Friends sit around a glowing bonfire, laughing, playing guitar, and enjoying the warm night breeze.",
+      "in_frame_still_prompt": "Bonfire illuminating group of friends, warm firelight, night beach atmosphere.",
+      "out_frame_still_prompt": "Dark ocean waves under moonlight.",
+      "video_prompt": "Circular dolly around bonfire with warm flickering light.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 3,
+          "duration_seconds": 5,
+          "timecode": "00:00:20:00",
+          "camera_instruction": "Circle group at steady pace, keep fire centered.",
+          "motion_vector": "Circular 0.3 m/s",
+          "init_seed_guidance": "Warm firelight, soft shadows.",
+          "in_frame_still_prompt": "Friends around bonfire.",
+          "out_frame_still_prompt": "Moonlit ocean.",
+          "video_prompt": "Circular dolly with flickering firelight."
+        }
+      ]
+    },
+    {
+      "shot_number": 6,
+      "heading": "EXT. BEACH – SUNRISE TRANSITION TO LOGO",
+      "duration_seconds": 5,
+      "timecode": "00:00:25:00",
+      "camera_lens": "50mm",
+      "camera_motion": "Static centered frame with slow zoom",
+      "characters_present": [],
+      "set_used": "Beach horizon at dawn",
+      "props_used": ["Travel agency logo overlay"],
+      "spoken_dialogue": "NARRATOR: Book your escape today.",
+      "action_description": "The sun rises over the ocean horizon as the travel brand logo fades in softly.",
+      "in_frame_still_prompt": "Sun rising over calm ocean, warm glow, centered composition.",
+      "out_frame_still_prompt": "Soft gradient sky transitioning to brand color palette.",
+      "video_prompt": "Slow zoom into sunrise as logo fades in.",
+      "takes": [
+        {
+          "take_number": 1,
+          "total_takes": 2,
+          "duration_seconds": 5,
+          "timecode": "00:00:25:00",
+          "camera_instruction": "Hold centered frame, apply gentle zoom.",
+          "motion_vector": "Forward 0.1 m/s",
+          "init_seed_guidance": "Soft gradients, warm tones.",
+          "in_frame_still_prompt": "Sunrise with logo overlay.",
+          "out_frame_still_prompt": "Gradient sky.",
+          "video_prompt": "Slow zoom with logo fade-in."
         }
       ]
     }
