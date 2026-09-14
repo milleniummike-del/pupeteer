@@ -299,6 +299,41 @@ async function setAspect(aspect) {
   }
 }
 
+function extractTags(text) {
+  const characters = [];
+  const scenes = [];
+
+  let i = 0;
+  while (i < text.length) {
+    const start = text.indexOf("[", i);
+    if (start === -1) break;
+
+    const end = text.indexOf("]", start + 1);
+    if (end === -1) break;
+
+    const inside = text.slice(start + 1, end); // e.g. "Character: Fred"
+    const parts = inside.split(":");
+    if (parts.length >= 2) {
+      const key = parts[0].trim().toLowerCase();   // "character" or "scene"
+      const value = parts.slice(1).join(":").trim(); // rest after first colon
+
+      if (key === "character") {
+        characters.push(value);
+      } else if (key === "scene") {
+        scenes.push(value);
+      }
+    }
+
+    i = end + 1;
+  }
+
+  return { characters, scenes };
+}
+
+
+
+
+
 // ======================================================
 // CORE QUEUE RUNNER
 // ======================================================
@@ -326,12 +361,28 @@ async function runQueue({ prompts, mode, aspect, model, character, image }) {
         await addIngredient(GLOBAL_IMAGE, "All");
       }
 
-         await sleep(1000);
+      await sleep(1000);
 
       if (GLOBAL_CHARACTER) {
         await addIngredient(GLOBAL_CHARACTER, "Characters");
       }
       await sleep(500);
+
+      const result = extractTags(prompt);
+      console.log(result);
+
+for (let i = 0; i < result.characters.length; i++) {
+  const c = result.characters[i];
+  await addIngredient(c, "Characters");
+  await sleep(1000);
+}
+
+for (let i = 0; i < result.scenes.length; i++) {
+  const s = result.scenes[i];
+  await addIngredient(s, "All");
+  await sleep(1000);
+}
+
 
       const generateBtn = await waitForGenerateEnabled();
       generateBtn.click();
@@ -364,8 +415,8 @@ function runFlowSelectorTests() {
   results.forEach(r => {
     const color =
       r.count === 0 ? "color:#ef4444" :
-      r.count === 1 ? "color:#22c55e" :
-      "color:#eab308";
+        r.count === 1 ? "color:#22c55e" :
+          "color:#eab308";
 
     console.groupCollapsed(`%c${r.name} → ${r.selector}`, color);
     console.log("Matches:", r.count);
