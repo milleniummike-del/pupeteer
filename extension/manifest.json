@@ -28,7 +28,7 @@
       "matches": [
         "https://labs.google.com/*",
         "https://labs.google/*",
-        "https://flow.google.com/project/*",
+        "https://flow.google.com/*",
         "https://www.gentube.app/*"
       ],
       "js": ["content_script.js"],
