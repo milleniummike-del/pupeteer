@@ -22,9 +22,9 @@ function highlight(el) {
 }
 
 // ======================================================
-// GLOBAL CHARACTER INGREDIENT (Option A)
+// GLOBAL CHARACTER (set dynamically from side panel)
 // ======================================================
-const GLOBAL_CHARACTER = "Lara Smith";   // <— change this to your character name
+let GLOBAL_CHARACTER = null;
 
 // ======================================================
 // SELECTORS
@@ -109,8 +109,63 @@ async function waitForNewMedia(previousSet, timeout = 60000) {
   }
 }
 
+async function clickCharactersFilter() {
+  panelLog("Clicking Characters filter...");
+
+  // 1. Find Angular CDK overlay container
+  const overlay = document.querySelector(".cdk-overlay-container");
+  if (!overlay) {
+    panelLog("CDK overlay container not found.");
+    return false;
+  }
+
+  // 2. Find all overlay panes
+  const panes = [...overlay.querySelectorAll(".cdk-overlay-pane")];
+
+  // 3. Find the pane that contains the side nav list
+  const sideNavPane = panes.find(pane =>
+    pane.querySelector("mat-nav-list") ||
+    pane.querySelector(".side-nav-list")
+  );
+
+  if (!sideNavPane) {
+    panelLog("Side nav pane not found inside CDK overlays.");
+    return false;
+  }
+
+  // 4. Find all tabs inside the overlay pane
+  const tabs = [...sideNavPane.querySelectorAll('[role="tab"]')];
+
+  // 5. Find the Characters tab
+  const charactersTab = tabs.find(el => {
+    const title = el.querySelector(".side-nav-list-item-title");
+    const text = (title ? title.textContent : el.textContent) || "";
+    return text.trim().toLowerCase() === "characters";
+  });
+
+  if (!charactersTab) {
+    panelLog("Characters tab not found inside overlay pane.");
+    return false;
+  }
+
+  // 6. Click the actual clickable element
+  const clickable = charactersTab.querySelector(".mdc-list-item__content") || charactersTab;
+
+  clickable.scrollIntoView({ block: "center" });
+  highlight(clickable);
+
+  clickable.click();
+
+  await sleep(500);
+
+  panelLog("Characters filter clicked (CDK overlay).");
+  return true;
+}
+
+
+
 // ======================================================
-// EDITOR TYPING
+// EDITOR TYPING (stable across all prompts)
 // ======================================================
 async function safeTypeIntoEditor(editorEl, text) {
   debugLog("Typing into editor:", text);
@@ -134,12 +189,11 @@ async function safeTypeIntoEditor(editorEl, text) {
 }
 
 // ======================================================
-// INGREDIENT SEARCH + ADD (Flow add-menu-trigger / search-input / asset-item)
+// INGREDIENT SEARCH + ADD
 // ======================================================
 async function addCharacterIngredient(characterName) {
   panelLog(`Adding ingredient: ${characterName}`);
 
-  // 1. Click the "Add ingredients" icon button
   const addBtn = [...document.querySelectorAll("button")].find(b =>
     b.className.includes("add-menu-trigger") &&
     b.getAttribute("aria-label") === "Add ingredients to the prompt box"
@@ -155,17 +209,15 @@ async function addCharacterIngredient(characterName) {
   panelLog("Ingredient menu opened.");
 
   await sleep(300);
+  await clickCharactersFilter();
 
-  // 2. Wait for search input
   const searchInput = await waitForSelector('input.search-input[aria-label="Search assets"]');
   highlight(searchInput);
 
-  // Clear existing value
   searchInput.focus();
   searchInput.value = "";
   searchInput.dispatchEvent(new Event("input", { bubbles: true }));
 
-  // Type search text directly
   searchInput.value = characterName;
   searchInput.dispatchEvent(new Event("input", { bubbles: true }));
   searchInput.dispatchEvent(new KeyboardEvent("keyup", { key: "Enter", bubbles: true }));
@@ -174,7 +226,6 @@ async function addCharacterIngredient(characterName) {
 
   await sleep(800);
 
-  // 3. Wait for asset items
   const assetItems = [...document.querySelectorAll("button.asset-item")];
 
   if (assetItems.length === 0) {
@@ -185,7 +236,7 @@ async function addCharacterIngredient(characterName) {
   const firstItem = assetItems[0];
   highlight(firstItem);
   await sleep(800);
-  // 4. Click first result
+
   firstItem.click();
   panelLog(`Ingredient selected: ${characterName}`);
 
@@ -261,41 +312,42 @@ async function setAspect(aspect) {
 }
 
 // ======================================================
-// CORE QUEUE RUNNER (with ingredient support)
+// CORE QUEUE RUNNER (patched to accept character)
 // ======================================================
-async function runQueue({ prompts, mode, aspect, model }) {
+async function runQueue({ prompts, mode, aspect, model, character }) {
+  GLOBAL_CHARACTER = character;
+  panelLog(`Global ingredient set to: ${GLOBAL_CHARACTER}`);
+
   panelLog(`Content script: received queue (${prompts.length} prompts).`);
-  debugLog("Queue payload:", { prompts, mode, aspect, model });
+  debugLog("Queue payload:", { prompts, mode, aspect, model, character });
 
   await setMode(mode);
   await setModel(model);
   await setAspect(aspect);
 
-  const editor = await waitForSelector(SELECTORS.editor);
-  panelLog("Editor found.");
+  for (let i = 0; i < prompts.length; i++) {
+    const prompt = prompts[i];
+    panelLog(`Prompt ${i + 1}/${prompts.length}: "${prompt.slice(0, 80)}..."`);
 
-for (let i = 0; i < prompts.length; i++) {
-  const prompt = prompts[i];
-  panelLog(`Prompt ${i + 1}/${prompts.length}: "${prompt.slice(0, 80)}..."`);
+    try {
+      const editor = await waitForSelector(SELECTORS.editor);
+      panelLog("Editor found for this prompt.");
 
-  try {
-    const editor = await waitForSelector(SELECTORS.editor);  // ⭐ re-select every time
-    panelLog("Editor found for this prompt.");
+      await safeTypeIntoEditor(editor, prompt);
+      panelLog("Prompt typed into editor.");
 
-    await safeTypeIntoEditor(editor, prompt);
-    panelLog("Prompt typed into editor.");
+      if (GLOBAL_CHARACTER) {
+        await addCharacterIngredient(GLOBAL_CHARACTER);
+      }
 
-    await addCharacterIngredient(GLOBAL_CHARACTER);
+      const generateBtn = await waitForGenerateEnabled();
+      generateBtn.click();
 
-    const generateBtn = await waitForGenerateEnabled();
-    generateBtn.click();
-
-    await sleep(1500);
-  } catch (err) {
-    panelLog(`Error on prompt ${i + 1}: ${err.message}`);
+      await sleep(1500);
+    } catch (err) {
+      panelLog(`Error on prompt ${i + 1}: ${err.message}`);
+    }
   }
-}
-
 
   panelLog("Queue finished.");
 }

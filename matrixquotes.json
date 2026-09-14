@@ -1,0 +1,139 @@
+[
+  {
+    "id": "char_1789026082385_kyyzb8a",
+    "title": "MegaCorp Executive / C-Suite Fixer (Cyberpunk)",
+    "savedAt": "2026-09-10T07:41:23.097Z",
+    "style": "cinematic",
+    "genre": "cyberpunk",
+    "targetModel": "generic",
+    "aspectRatio": "3:4",
+    
+    "fullPrompt": "character says \"I bend the future to my will—markets, empires, destinies. Stand aside or be rewritten.\"",
+    "negativePrompt": "ugly, deformed, disfigured, poor anatomy, bad hands, extra fingers, missing fingers, fused fingers, distorted face, blurry, low resolution, amateur, watermark, signature, logo, text, cropped head, duplicated limbs, plastic skin, oversaturated",
+    "tags": ["cinematic","cyberpunk"]
+  },
+
+  {
+    "id": "char_1789026081482_2alaifw",
+    "title": "Paladin / Oath-Knight (High Fantasy)",
+    "savedAt": "2026-09-10T07:41:21.913Z",
+    "style": "cinematic",
+    "genre": "high_fantasy",
+    "targetModel": "generic",
+    "aspectRatio": "3:4",
+    
+    "fullPrompt": "character says \"By dawn’s sacred light, I swear to shield the innocent and strike down the darkness.\"",
+    "negativePrompt": "ugly, deformed, disfigured, poor anatomy, bad hands, extra fingers, missing fingers, fused fingers, distorted face, blurry, low resolution, amateur, watermark, signature, logo, text, cropped head, duplicated limbs, plastic skin, oversaturated",
+    "tags": ["cinematic","high_fantasy"]
+  },
+
+  {
+    "id": "char_1789026080573_z1uv8x4",
+    "title": "Ronin / Wandering Swordmaster (Feudal & Edo Fantasy)",
+    "savedAt": "2026-09-10T07:41:21.033Z",
+    "style": "cinematic",
+    "genre": "feudal_fantasy",
+    "targetModel": "generic",
+    "aspectRatio": "3:4",
+    
+    "fullPrompt": "character says \"My blade walks the path of honor—where injustice rises, I cut it from the world.\"",
+    "negativePrompt": "ugly, deformed, disfigured, poor anatomy, bad hands, extra fingers, missing fingers, fused fingers, distorted face, blurry, low resolution, amateur, watermark, signature, logo, text, cropped head, duplicated limbs, plastic skin, oversaturated",
+    "tags": ["cinematic","feudal_fantasy"]
+  },
+
+  {
+    "id": "char_1789026079681_bz8bnkq",
+    "title": "Frontier Marshal / Hex-Hunter (Weird West / Gothic Frontier)",
+    "savedAt": "2026-09-10T07:41:20.129Z",
+    "style": "cinematic",
+    "genre": "weird_west",
+    "targetModel": "generic",
+    "aspectRatio": "3:4",
+    
+    "fullPrompt": "character says \"I hunt the nightmares that stalk the frontier—no hex, no wraith, no devil escapes my badge.\"",
+    "negativePrompt": "ugly, deformed, disfigured, poor anatomy, bad hands, extra fingers, missing fingers, fused fingers, distorted face, blurry, low resolution, amateur, watermark, signature, logo, text, cropped head, duplicated limbs, plastic skin, oversaturated",
+    "tags": ["cinematic","weird_west"]
+  },
+
+  {
+    "id": "char_1789026078754_eabezsl",
+    "title": "Clockwork Artificer / Automaton Maker (Steampunk / Gaslight Victoriana)",
+    "savedAt": "2026-09-10T07:41:19.233Z",
+    "style": "cinematic",
+    "genre": "steampunk",
+    "targetModel": "generic",
+    "aspectRatio": "3:4",
+    
+    "fullPrompt": "character says \"With steam, spark, and unbreakable will, I forge wonders that defy the limits of mortal craft.\"",
+    "negativePrompt": "ugly, deformed, disfigured, poor anatomy, bad hands, extra fingers, missing fingers, fused fingers, distorted face, blurry, low resolution, amateur, watermark, signature, logo, text, cropped head, duplicated limbs, plastic skin, oversaturated",
+    "tags": ["cinematic","steampunk"]
+  },
+
+  {
+    "id": "char_1789026090001_stmplr",
+    "title": "Voidborn Star-Templar (Space Opera)",
+    "savedAt": "2026-09-10T07:41:30.000Z",
+    "style": "cinematic",
+    "genre": "space_opera",
+    "targetModel": "generic",
+    "aspectRatio": "3:4",
+    "traits": {
+      "species": "Celestial Hybrid",
+      "age": "Ageless",
+      "racialDescent": "Unknown / Extrastellar",
+      "height": "Tall & Lithe (6'2\" / 188 cm)",
+      "weightBuild": "Graceful, elongated frame with radiant musculature",
+      "hairColor": "Nebula violet with drifting cosmic motes",
+      "hairStyle": "Zero-gravity halo strands",
+      "eyeColor": "Supernova gold",
+      "eyeDetails": "Pulsing star-core irises",
+      "facialFeatures": "Smooth luminous skin with faint constellation markings",
+      "isNonHuman": true,
+      "nonHumanTraits": "microgravity aura field",
+      "role": "Star-Templar",
+      "outfit": "Aether-forged armor with comet-tail cape",
+      "props": "Solar glaive emitting plasma arcs; orbiting micro‑drones",
+      "environment": "Floating above a binary star horizon",
+      "lighting": "Radiant cosmic bloom",
+      "cameraShot": "Heroic upward angle",
+      "expression": "Calm, divine resolve"
+    },
+    "fullPrompt": "character says \"Across the endless void, I carry the flame of hope—no star too distant, no foe too vast.\"",
+    "negativePrompt": "ugly, deformed, disfigured...",
+    "tags": ["cinematic","space_opera"]
+  },
+
+  {
+    "id": "char_1789026090002_shdwrdn",
+    "title": "Shadow-Warden Assassin (Dark Fantasy)",
+    "savedAt": "2026-09-10T07:41:31.000Z",
+    "style": "cinematic",
+    "genre": "dark_fantasy",
+    "targetModel": "generic",
+    "aspectRatio": "3:4",
+    "traits": {
+      "species": "Human / Shade‑Touched",
+      "age": "Prime Adult",
+      "racialDescent": "Mixed",
+      "height": "5'10\" / 178 cm",
+      "weightBuild": "Lean, coiled strength",
+      "hairColor": "Ink black",
+      "hairStyle": "Loose shadow‑woven strands",
+      "eyeColor": "Void silver",
+      "eyeDetails": "Pupils dissolve into smoke",
+      "facialFeatures": "Sharp, angular",
+      "isNonHuman": true,
+      "nonHumanTraits": "shadow‑phase limbs",
+      "role": "Assassin",
+      "outfit": "Obsidian leather with rune‑etched bracers",
+      "props": "Twin crescent daggers forged from nightglass",
+      "environment": "Moonless alley of crumbling gothic ruins",
+      "lighting": "Faint lantern flicker",
+      "cameraShot": "Close-up silhouette",
+      "expression": "Cold, predatory focus"
+    },
+    "fullPrompt": "character says \"In silence I strike, in shadows I judge—my blade delivers the justice the world fears to face.\"",
+    "negativePrompt": "ugly, deformed, disfigured...",
+    "tags": ["cinematic","dark_fantasy"]
+  }
+]

@@ -106,9 +106,13 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const payload = {
-      prompts
-    };
+    const characterInputEl = document.getElementById("characterInput");
+
+const payload = {
+  prompts,
+  character: characterInputEl.value.trim() || null
+};
+
 
     runBtn.disabled = true;
     log(`Starting queue with ${prompts.length} prompts...`);

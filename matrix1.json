@@ -1,373 +1,632 @@
-{
-  "movie_title": "CYBERPUNK: CHRONICLES",
-  "genre": "Cyberpunk",
-  "scene_number": 1,
-  "scene_title": "Scene 1: The Grand Cyberpunk Master Facility",
-  "total_shots": 10,
-  "generation_spec": {
-    "maximum_take_duration_seconds": 8,
-    "frame_rate": "24fps",
-    "target_engine": "Runway Gen-3 Alpha / Luma Dream Machine / Sora / Kling AI / Hailuo MiniMax",
-    "speech_rate_cadence": "2.6 words per second",
-    "still_frame_specification": "Dual Keyframe 8K Stills (In-Frame start t=0.0s & Out-Frame end t=End, zero action/dialogue)",
-    "still_prompts_description": "Provides in-frame and out-frame still descriptions to create a still at each end of the video motion"
+[
+  {
+    "id": "char_1789025755539_i8z6wpl",
+    "title": "Wasteland Scavenger / Scrap Hunter (Post-Apocalyptic / Wasteland)",
+    "savedAt": "2026-09-10T07:35:56.194Z",
+    "style": "comic_book",
+    "genre": "post_apocalyptic",
+    "targetModel": "generic",
+    "aspectRatio": "3:4",
+    "traits": {
+      "name": "",
+      "species": "Human",
+      "age": "Ancient Immortal (appearing youthful 20s)",
+      "racialDescent": "Polynesian / Pacific Islander",
+      "height": "Athletic Average (5'8\" / 173 cm)",
+      "weightBuild": "Athletic and tone runner physique with broad shoulders",
+      "hairColor": "Distinguished salt-and-pepper charcoal",
+      "hairStyle": "Traditional topknot samurai bun tied with dark cord",
+      "eyeColor": "Mystic amethyst violet shimmering in low light",
+      "eyeDetails": "Faint golden constellation flecks orbiting the outer pupil",
+      "facialFeatures": "Subdermal cyber-socket plug on left temple with protective cap",
+      "isNonHuman": false,
+      "nonHumanTraits": "",
+      "role": "Wasteland Scavenger / Scrap Hunter",
+      "outfit": "Tattered dust cloak over faded canvas jacket, tire-tread kneepads, multi-pocket tactical harness, and heavily wrapped combat boots",
+      "props": "Weathered rifle built from salvaged stamped metal, wrapped with duct tape and electrical wire, fitted with a makeshift oil-filter silencer (slung across chest by frayed paracord sling), Heavy jagged cleaver forged from an industrial rusted circular saw blade with bicycle handlebar grip wrapped in leather strips (tucked into rope waistband or drawn in hand), Repurposed tin can instrument box with erratic ticking audio dial, crackling speaker, and glowing radium phosphor gauge needle (strapped to upper arm with tire rubber bands)",
+      "propItems": [
+        {
+          "id": "prop-1789025755539-1-bvx",
+          "name": "Scrap-Built Kalashnikov Hybrid Rifle",
+          "category": "Primary Weapon",
+          "detail": "Weathered rifle built from salvaged stamped metal, wrapped with duct tape and electrical wire, fitted with a makeshift oil-filter silencer",
+          "equippedState": "Slung across chest by frayed paracord sling",
+          "enabled": true
+        },
+        {
+          "id": "prop-1789025755539-2-ghq",
+          "name": "Circular-Saw Machete Blade",
+          "category": "Secondary Weapon / Sidearm",
+          "detail": "Heavy jagged cleaver forged from an industrial rusted circular saw blade with bicycle handlebar grip wrapped in leather strips",
+          "equippedState": "Tucked into rope waistband or drawn in hand",
+          "enabled": true
+        },
+        {
+          "id": "prop-1789025755539-3-ldc",
+          "name": "Makeshift Geiger Counter with Analog Needle",
+          "category": "Tool & Instrument",
+          "detail": "Repurposed tin can instrument box with erratic ticking audio dial, crackling speaker, and glowing radium phosphor gauge needle",
+          "equippedState": "Strapped to upper arm with tire rubber bands",
+          "enabled": true
+        }
+      ],
+      "environment": "Rusting ruins of a sunken highway interchange half-swallowed by sweeping desert sand dunes",
+      "lighting": "Ethereal glowing bioluminescence emanating softly from surroundings",
+      "cameraShot": "Cinematic wide-angle environmental portrait showcasing character immersed in their world",
+      "expression": "Wild, charismatic grin with reckless confidence"
+    },
+    "fullPrompt": "Graphic novel cover illustration, dynamic heavy black ink line art, cross-hatching shadows, modern comic book colorist palette, bold graphic silhouette, A striking Wasteland Scavenger / Scrap Hunter, of Polynesian / Pacific Islander, ancient immortal (appearing youthful 20s), Athletic Average (5'8\" / 173 cm), Athletic and tone runner physique with broad shoulders, Distinguished salt-and-pepper charcoal, styled in Traditional topknot samurai bun tied with dark cord, Mystic amethyst violet shimmering in low light, Faint golden constellation flecks orbiting the outer pupil, Subdermal cyber-socket plug on left temple with protective cap, expression is wild, charismatic grin with reckless confidence, Wearing Tattered dust cloak over faded canvas jacket, tire-tread kneepads, multi-pocket tactical harness, and heavily wrapped combat boots, Equipped with and holding Weathered rifle built from salvaged stamped metal, wrapped with duct tape and electrical wire, fitted with a makeshift oil-filter silencer (slung across chest by frayed paracord sling), Heavy jagged cleaver forged from an industrial rusted circular saw blade with bicycle handlebar grip wrapped in leather strips (tucked into rope waistband or drawn in hand), Repurposed tin can instrument box with erratic ticking audio dial, crackling speaker, and glowing radium phosphor gauge needle (strapped to upper arm with tire rubber bands), Setting is Rusting ruins of a sunken highway interchange half-swallowed by sweeping desert sand dunes, Post-Apocalyptic / Wasteland atmosphere, Cinematic wide-angle environmental portrait showcasing character immersed in their world, Ethereal glowing bioluminescence emanating softly from surroundings, 8k resolution, ultra-detailed, highly refined, volumetric god-rays, atmospheric light dispersion, particle haze, award-winning masterpiece, intricate craftsmanship, peak visual quality, cinematic shallow depth of field, creamy bokeh background blur, hyperdetailed symmetrical face, expressive lifelike eyes with specular reflections, subsurface scattering skin translucency, realistic skin luminosity",
+    "negativePrompt": "blurry, bad anatomy, deformed eyes, extra limbs, amputee, mutilated, bad hands, missing fingers, extra fingers, poorly drawn face, cloned face, gross proportions, malformed limbs, out of frame, signature, watermark, text, low quality, artifacting",
+    "tags": [
+      "comic_book",
+      "post_apocalyptic"
+    ]
   },
-  "shots": [
-    {
-      "shot_number": 1,
-      "heading": "INT. THE GRAND CYBERPUNK MASTER FACILITY - NIGHT - SHOT 1",
-      "duration_seconds": 4.5,
-      "timecode": "00:00 - 00:04",
-      "camera_lens": "Establishing Wide Shot (24mm Ultra-Wide Anamorphic Prime)",
-      "camera_motion": "The camera tracks smoothly alongside the subject and then zooms in to the face",
-      "characters_present": [
-        "Aarav Patel"
-      ],
-      "set_used": "The Grand Cyberpunk Master Facility",
-      "props_used": [
-        "The Master Cyberpunk Key Artifact"
-      ],
-      "spoken_dialogue": null,
-      "action_description": "Atmospheric vapor drifts across the steel catwalks. The only illumination stems from the rhythmic glow of the MASTER CYBERPUNK KEY ARTIFACT.",
-      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Establishing Wide Shot (24mm Ultra-Wide Anamorphic Prime). Starting Position, Pose & Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is positioned in the mid-left frame, moving forward toward the destination: initial position and pose caught as subject Atmospheric vapor drifts across the steel catwalks, body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. Staged props in frame: The Master Cyberpunk Key Artifact (A masterfully crafted device of polished obsi). High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
-      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.5s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Tight Close-Up on Face (85mm Portrait Telephoto Prime). Updated Position, Pose & Settled Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is occupies the center-right frame in tight focus, halted squarely at the destination point: updated position and pose following movement where subject The only illumination stems from the rhythmic glow of the MASTER CYBERPUNK KEY ARTIFACT., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Staged props in frame: The Master Cyberpunk Key Artifact (A masterfully crafted device of polished obsi). Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
-      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Establishing Wide Shot) to Out-Frame Still (Tight Close-Up on Face). Camera Movement: The camera tracks smoothly alongside the subject and then zooms in to the face. Dynamic Action & Blocking: Atmospheric vapor drifts across the steel catwalks. The only illumination stems from the rhythmic glow of the MASTER CYBERPUNK KEY ARTIFACT.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
-      "takes": [
+  {
+    "id": "char_1789025754297_jpzk9rs",
+    "title": "Shinobi / Kunoichi Shadow Agent (Feudal & Edo Fantasy)",
+    "savedAt": "2026-09-10T07:35:54.865Z",
+    "style": "comic_book",
+    "genre": "feudal_fantasy",
+    "targetModel": "generic",
+    "aspectRatio": "3:4",
+    "traits": {
+      "name": "",
+      "species": "Cyborg / Augmented Human",
+      "age": "Battle-hardened Veteran (50–58 years old)",
+      "racialDescent": "Afro-Caribbean (rich deep bronze tones)",
+      "height": "Athletic Average (5'8\" / 173 cm)",
+      "weightBuild": "Muscular and powerful heavy-weight fighter physique",
+      "hairColor": "Bioluminescent emerald green with subtle inner glow",
+      "hairStyle": "Shoulder-length shaggy wolf cut with textured curtain bangs",
+      "eyeColor": "Dual-tone heterochromia (left icy azure, right warm hazel)",
+      "eyeDetails": "Blind milky white right eye with faint magical scar",
+      "facialFeatures": "Subdermal cyber-socket plug on left temple with protective cap",
+      "isNonHuman": true,
+      "nonHumanTraits": "Subdermal glowing cybernetic circuitry pulsating teal beneath cheekbones",
+      "role": "Shinobi / Kunoichi Shadow Agent",
+      "outfit": "Dark indigo fitted ninja shozoku wraps, silent tabi boots, blackened forearm guards with hidden darts, and black face scarf",
+      "props": "Masterwork katana with distinct wavy hamon temper line, blackened iron tsuba depicting cherry blossoms in wind, and indigo silk cord tsuka-ito wrap (tucked cleanly through obi sash at left hip in black lacquer saya), Asymmetrical lacquered bamboo longbow with fine silk bowstring and mother-of-pearl grip plate (held gracefully in left hand with quiver of eagle-feather arrows on hip), Three-tiered gold lacquer inro box tied with crimson silk cords and weighted by a miniature jade carving of a coiled dragon (suspended from silk obi belt)",
+      "propItems": [
         {
-          "take_number": 1,
-          "total_takes": 1,
-          "duration_seconds": 4.5,
-          "timecode": "00:00 - 00:05",
-          "camera_instruction": "Establishing Wide Shot (24mm Ultra-Wide Anamorphic Prime), The camera tracks smoothly alongside the subject and then zooms in to the face",
-          "motion_vector": "The camera tracks smoothly alongside the subject and then zooms in to the face",
-          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
-          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Establishing Wide Shot (24mm Ultra-Wide Anamorphic Prime). Starting Position, Pose & Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is positioned in the mid-left frame, moving forward toward the destination: initial position and pose caught as subject Atmospheric vapor drifts across the steel catwalks, body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. Staged props in frame: The Master Cyberpunk Key Artifact (A masterfully crafted device of polished obsi). High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
-          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.5s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Tight Close-Up on Face (85mm Portrait Telephoto Prime). Updated Position, Pose & Settled Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is occupies the center-right frame in tight focus, halted squarely at the destination point: updated position and pose following movement where subject The only illumination stems from the rhythmic glow of the MASTER CYBERPUNK KEY ARTIFACT., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Staged props in frame: The Master Cyberpunk Key Artifact (A masterfully crafted device of polished obsi). Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
-          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Establishing Wide Shot) to Out-Frame Still (Tight Close-Up on Face). Camera Movement: The camera tracks smoothly alongside the subject and then zooms in to the face. Dynamic Action & Blocking: Atmospheric vapor drifts across the steel catwalks. The only illumination stems from the rhythmic glow of the MASTER CYBERPUNK KEY ARTIFACT.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+          "id": "prop-1789025754297-1-4ky",
+          "name": "Dragon-Folded Tamahagane Katana",
+          "category": "Primary Weapon",
+          "detail": "Masterwork katana with distinct wavy hamon temper line, blackened iron tsuba depicting cherry blossoms in wind, and indigo silk cord tsuka-ito wrap",
+          "equippedState": "Tucked cleanly through obi sash at left hip in black lacquer saya",
+          "enabled": true
+        },
+        {
+          "id": "prop-1789025754297-2-ni0",
+          "name": "Yumi Longbow of Cherry Wood",
+          "category": "Secondary Weapon / Sidearm",
+          "detail": "Asymmetrical lacquered bamboo longbow with fine silk bowstring and mother-of-pearl grip plate",
+          "equippedState": "Held gracefully in left hand with quiver of eagle-feather arrows on hip",
+          "enabled": true
+        },
+        {
+          "id": "prop-1789025754297-3-jda",
+          "name": "Carved Jade Netsuke & Inro Medicine Box",
+          "category": "Accessory & Ornament",
+          "detail": "Three-tiered gold lacquer inro box tied with crimson silk cords and weighted by a miniature jade carving of a coiled dragon",
+          "equippedState": "Suspended from silk obi belt",
+          "enabled": true
         }
-      ]
+      ],
+      "environment": "Moonlit castle tile roof with cherry blossoms blowing in the night wind",
+      "lighting": "Moody chiaroscuro with a single beam of light piercing deep gloom",
+      "cameraShot": "Medium three-quarter bust shot showing expressive pose, shoulder gear, and weapon grip",
+      "expression": "Stoic and impassive, unreadable veteran gaze"
     },
-    {
-      "shot_number": 2,
-      "heading": "INT. THE GRAND CYBERPUNK MASTER FACILITY - NIGHT - SHOT 2",
-      "duration_seconds": 4.5,
-      "timecode": "00:04 - 00:09",
-      "camera_lens": "Full-Body Tracking Master Shot (35mm Wide Cinematic Lens)",
-      "camera_motion": "Steadicam lateral tracking dolly keeping pace with the movement across the space",
-      "characters_present": [
-        "Aarav Patel"
-      ],
-      "set_used": "The Grand Cyberpunk Master Facility",
-      "props_used": [
-        "The Master Cyberpunk Key Artifact"
-      ],
-      "spoken_dialogue": null,
-      "action_description": "AARAV PATEL drops silently into position, checking the perimeter with tactical precision.",
-      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Full-Body Tracking Master Shot (35mm Wide Cinematic Lens). Starting Position, Pose & Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is framed full-body from the flank, advancing with deliberate kinetic balance: initial position and pose caught as subject AARAV PATEL drops silently into position, body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
-      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.5s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Medium Profile Two-Shot (50mm Standard Prime Lens). Updated Position, Pose & Settled Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is settled in profile medium perspective, body weight anchored at final destination: updated position and pose following movement where subject checking the perimeter with tactical precision., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
-      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Full-Body Tracking Master Shot) to Out-Frame Still (Medium Profile Two-Shot). Camera Movement: Steadicam lateral tracking dolly keeping pace with the movement across the space. Dynamic Action & Blocking: AARAV PATEL drops silently into position, checking the perimeter with tactical precision.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
-      "takes": [
+    "fullPrompt": "Graphic novel cover illustration, dynamic heavy black ink line art, cross-hatching shadows, modern comic book colorist palette, bold graphic silhouette, A striking Cyborg / Augmented Human Shinobi / Kunoichi Shadow Agent, of Afro-Caribbean (rich deep bronze tones), battle-hardened veteran (50–58 years old), Athletic Average (5'8\" / 173 cm), Muscular and powerful heavy-weight fighter physique, Bioluminescent emerald green with subtle inner glow, styled in Shoulder-length shaggy wolf cut with textured curtain bangs, Dual-tone heterochromia (left icy azure, right warm hazel), Blind milky white right eye with faint magical scar, Subdermal cyber-socket plug on left temple with protective cap, expression is stoic and impassive, unreadable veteran gaze, Distinctive traits: Subdermal glowing cybernetic circuitry pulsating teal beneath cheekbones, Wearing Dark indigo fitted ninja shozoku wraps, silent tabi boots, blackened forearm guards with hidden darts, and black face scarf, Equipped with and holding Masterwork katana with distinct wavy hamon temper line, blackened iron tsuba depicting cherry blossoms in wind, and indigo silk cord tsuka-ito wrap (tucked cleanly through obi sash at left hip in black lacquer saya), Asymmetrical lacquered bamboo longbow with fine silk bowstring and mother-of-pearl grip plate (held gracefully in left hand with quiver of eagle-feather arrows on hip), Three-tiered gold lacquer inro box tied with crimson silk cords and weighted by a miniature jade carving of a coiled dragon (suspended from silk obi belt), Setting is Moonlit castle tile roof with cherry blossoms blowing in the night wind, Feudal & Edo Fantasy atmosphere, Medium three-quarter bust shot showing expressive pose, shoulder gear, and weapon grip, Moody chiaroscuro with a single beam of light piercing deep gloom, 8k resolution, ultra-detailed, highly refined, volumetric god-rays, atmospheric light dispersion, particle haze, award-winning masterpiece, intricate craftsmanship, peak visual quality, cinematic shallow depth of field, creamy bokeh background blur, hyperdetailed symmetrical face, expressive lifelike eyes with specular reflections, subsurface scattering skin translucency, realistic skin luminosity",
+    "negativePrompt": "blurry, bad anatomy, deformed eyes, extra limbs, amputee, mutilated, bad hands, missing fingers, extra fingers, poorly drawn face, cloned face, gross proportions, malformed limbs, out of frame, signature, watermark, text, low quality, artifacting",
+    "tags": [
+      "comic_book",
+      "feudal_fantasy"
+    ]
+  },
+  {
+    "id": "char_1789025749866_vndic7e",
+    "title": "Occult Detective / Paranormal PI (Modern Urban Supernatural)",
+    "savedAt": "2026-09-10T07:35:50.345Z",
+    "style": "art_nouveau",
+    "genre": "urban_supernatural",
+    "targetModel": "generic",
+    "aspectRatio": "3:4",
+    "traits": {
+      "name": "",
+      "species": "Human",
+      "age": "Battle-hardened Veteran (50–58 years old)",
+      "racialDescent": "Polynesian / Pacific Islander",
+      "height": "Athletic Average (5'8\" / 173 cm)",
+      "weightBuild": "Muscular and powerful heavy-weight fighter physique",
+      "hairColor": "Pastel lavender lilac with soft gradients",
+      "hairStyle": "Sleek asymmetrical bob angled sharply along the jawline",
+      "eyeColor": "Piercing sapphire blue with luminous clarity",
+      "eyeDetails": "Feline vertical slit pupils that dilate with emotion",
+      "facialFeatures": "Subdermal cyber-socket plug on left temple with protective cap",
+      "isNonHuman": false,
+      "nonHumanTraits": "",
+      "role": "Occult Detective / Paranormal PI",
+      "outfit": "Wrinkled tan trench coat over unbuttoned dress shirt, loosened tie, dark dress trousers, and scuffed oxford shoes",
+      "props": "Sawed-off 12-gauge pump shotgun with cold-iron receiver engraved with Enochian binding glyphs that glow faint indigo when supernatural entities are near (held one-handed resting on forearm or slung in shoulder holster), Raw unpolished shard of jet-black tourmaline wrapped in heavy copper wire cage, suspended from a weathered bootlace cord (worn around neck resting against throat hollow), Engraved vintage brass lighter that sparks an eerie supernatural pale-blue flame revealing invisible spirit trails (held in hand with lid flipped open)",
+      "propItems": [
         {
-          "take_number": 1,
-          "total_takes": 1,
-          "duration_seconds": 4.5,
-          "timecode": "00:00 - 00:05",
-          "camera_instruction": "Full-Body Tracking Master Shot (35mm Wide Cinematic Lens), Steadicam lateral tracking dolly keeping pace with the movement across the space",
-          "motion_vector": "Steadicam lateral tracking dolly keeping pace with the movement across the space",
-          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
-          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Full-Body Tracking Master Shot (35mm Wide Cinematic Lens). Starting Position, Pose & Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is framed full-body from the flank, advancing with deliberate kinetic balance: initial position and pose caught as subject AARAV PATEL drops silently into position, body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
-          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.5s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Medium Profile Two-Shot (50mm Standard Prime Lens). Updated Position, Pose & Settled Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is settled in profile medium perspective, body weight anchored at final destination: updated position and pose following movement where subject checking the perimeter with tactical precision., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
-          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Full-Body Tracking Master Shot) to Out-Frame Still (Medium Profile Two-Shot). Camera Movement: Steadicam lateral tracking dolly keeping pace with the movement across the space. Dynamic Action & Blocking: AARAV PATEL drops silently into position, checking the perimeter with tactical precision.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+          "id": "prop-1789025749866-1-hfg",
+          "name": "Rune-Carved Trench Shotgun",
+          "category": "Primary Weapon",
+          "detail": "Sawed-off 12-gauge pump shotgun with cold-iron receiver engraved with Enochian binding glyphs that glow faint indigo when supernatural entities are near",
+          "equippedState": "Held one-handed resting on forearm or slung in shoulder holster",
+          "enabled": true
+        },
+        {
+          "id": "prop-1789025749866-2-t88",
+          "name": "Black Tourmaline Protection Talisman",
+          "category": "Arcane Relic & Focus",
+          "detail": "Raw unpolished shard of jet-black tourmaline wrapped in heavy copper wire cage, suspended from a weathered bootlace cord",
+          "equippedState": "Worn around neck resting against throat hollow",
+          "enabled": true
+        },
+        {
+          "id": "prop-1789025749866-3-brg",
+          "name": "Vintage Brass Zippo with Blue Spirit Flame",
+          "category": "Tool & Instrument",
+          "detail": "Engraved vintage brass lighter that sparks an eerie supernatural pale-blue flame revealing invisible spirit trails",
+          "equippedState": "Held in hand with lid flipped open",
+          "enabled": true
         }
-      ]
+      ],
+      "environment": "Dimly lit detective office with rain streaking down the venetian blinds and neon hotel sign glowing outside",
+      "lighting": "Subterranean torchlight casting dramatic upward shadows and smoke ripples",
+      "cameraShot": "Medium three-quarter bust shot showing expressive pose, shoulder gear, and weapon grip",
+      "expression": "Subtle enigmatic smirk hinting at dangerous secrets"
     },
-    {
-      "shot_number": 3,
-      "heading": "INT. THE GRAND CYBERPUNK MASTER FACILITY - NIGHT - SHOT 3",
-      "duration_seconds": 4,
-      "timecode": "00:09 - 00:13",
-      "camera_lens": "Low-Angle Ground Establishing Shot (35mm Low-Angle Dutch Tilt Lens)",
-      "camera_motion": "Camera cranes upward from ground level, tilting upward as the subject commands the space",
-      "characters_present": [
-        "Sofia Garcia-Vargas"
-      ],
-      "set_used": "The Grand Cyberpunk Master Facility",
-      "props_used": [
-        "Specialist Tactical Infiltration Unit"
-      ],
-      "spoken_dialogue": null,
-      "action_description": "SOFIA GARCIA-VARGAS steps forward, unholstering the SPECIALIST TACTICAL INFILTRATION UNIT and interfacing with the terminal.",
-      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Low-Angle Ground Establishing Shot (35mm Low-Angle Dutch Tilt Lens). Starting Position, Pose & Blocking: Sofia Garcia-Vargas (Tactical Technical Jumpsuit, Commanding posture, keen intellectual gaze, swift ) is looming from low perspective at distance, poised before upward surge: initial position and pose caught as subject SOFIA GARCIA-VARGAS steps forward, body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. Staged props in frame: Specialist Tactical Infiltration Unit (A rugged, militarized slate-grey diagnostic t). High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
-      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.0s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: High-Impact Low-Angle Medium Close-Up (50mm Low-Angle Hero Lens). Updated Position, Pose & Settled Blocking: Sofia Garcia-Vargas (Tactical Technical Jumpsuit, Commanding posture, keen intellectual gaze, swift ) is commanding the upper two-thirds of frame from upward angle, expression locked in resolve: updated position and pose following movement where subject unholstering the SPECIALIST TACTICAL INFILTRATION UNIT and interfacing with the terminal., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Staged props in frame: Specialist Tactical Infiltration Unit (A rugged, militarized slate-grey diagnostic t). Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
-      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Low-Angle Ground Establishing Shot) to Out-Frame Still (High-Impact Low-Angle Medium Close-Up). Camera Movement: Camera cranes upward from ground level, tilting upward as the subject commands the space. Dynamic Action & Blocking: SOFIA GARCIA-VARGAS steps forward, unholstering the SPECIALIST TACTICAL INFILTRATION UNIT and interfacing with the terminal.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
-      "takes": [
+    "fullPrompt": "Art Nouveau masterpiece portrait inspired by Alphonse Mucha and Gustav Klimt, intricate flowing botanical borders, ornate gold leaf filigree, elegant sinuous curves, A striking Occult Detective / Paranormal PI, of Polynesian / Pacific Islander, battle-hardened veteran (50–58 years old), Athletic Average (5'8\" / 173 cm), Muscular and powerful heavy-weight fighter physique, Pastel lavender lilac with soft gradients, styled in Sleek asymmetrical bob angled sharply along the jawline, Piercing sapphire blue with luminous clarity, Feline vertical slit pupils that dilate with emotion, Subdermal cyber-socket plug on left temple with protective cap, expression is subtle enigmatic smirk hinting at dangerous secrets, Wearing Wrinkled tan trench coat over unbuttoned dress shirt, loosened tie, dark dress trousers, and scuffed oxford shoes, Equipped with and holding Sawed-off 12-gauge pump shotgun with cold-iron receiver engraved with Enochian binding glyphs that glow faint indigo when supernatural entities are near (held one-handed resting on forearm or slung in shoulder holster), Raw unpolished shard of jet-black tourmaline wrapped in heavy copper wire cage, suspended from a weathered bootlace cord (worn around neck resting against throat hollow), Engraved vintage brass lighter that sparks an eerie supernatural pale-blue flame revealing invisible spirit trails (held in hand with lid flipped open), Setting is Dimly lit detective office with rain streaking down the venetian blinds and neon hotel sign glowing outside, Modern Urban Supernatural atmosphere, Medium three-quarter bust shot showing expressive pose, shoulder gear, and weapon grip, Subterranean torchlight casting dramatic upward shadows and smoke ripples, 8k resolution, ultra-detailed, highly refined, volumetric god-rays, atmospheric light dispersion, particle haze, award-winning masterpiece, intricate craftsmanship, peak visual quality, cinematic shallow depth of field, creamy bokeh background blur, hyperdetailed symmetrical face, expressive lifelike eyes with specular reflections, subsurface scattering skin translucency, realistic skin luminosity",
+    "negativePrompt": "blurry, bad anatomy, deformed eyes, extra limbs, amputee, mutilated, bad hands, missing fingers, extra fingers, poorly drawn face, cloned face, gross proportions, malformed limbs, out of frame, signature, watermark, text, low quality, artifacting",
+    "tags": [
+      "art_nouveau",
+      "urban_supernatural"
+    ]
+  },
+  {
+    "id": "char_1789025748875_27k3qtb",
+    "title": "Ghost-Town Gunslinger / Hex-Slinger (Weird West / Gothic Frontier)",
+    "savedAt": "2026-09-10T07:35:49.361Z",
+    "style": "digital_art",
+    "genre": "weird_west",
+    "targetModel": "generic",
+    "aspectRatio": "3:4",
+    "traits": {
+      "name": "",
+      "species": "Ethereal / Spirit Hybrid",
+      "age": "Prime Adult (24–28 years old)",
+      "racialDescent": "East Asian (Japanese / Korean heritage)",
+      "height": "Imposing & Towering (6'4\" / 193 cm)",
+      "weightBuild": "Voluptuous, hourglass and commanding presence",
+      "hairColor": "Platinum silver-white with pearl reflections",
+      "hairStyle": "Short buzzcut etched with geometric shaved cyber-lines",
+      "eyeColor": "Vibrant emerald green with jade flecks",
+      "eyeDetails": "Blind milky white right eye with faint magical scar",
+      "facialFeatures": "Subdermal cyber-socket plug on left temple with protective cap",
+      "isNonHuman": true,
+      "nonHumanTraits": "Pair of soft plush beastkin ears twitching atop head and sleek tail",
+      "role": "Ghost-Town Gunslinger / Hex-Slinger",
+      "outfit": "Embroidered black western frock coat, silk neckerchief, tailored vest with silver pocket watch, and black Stetson hat",
+      "props": "Heavy single-action revolver with engraved nickel plating, pearl grips, and a cylinder loaded with glowing green ghost-rock cartridges emitting sulfur smoke (drawn in right hand with faint wisp of supernatural green smoke curling from barrel), Massive heavy clip-point fighting knife with brass spine reinforcement, dark Damascus blade, and handle carved from black horned beast ridge (sheathed in tooled leather sheath on left thigh), Tarnished six-point silver star badge scratched with secret occult warding symbols against hexes and wraiths (pinned over heart on weathered leather duster vest)",
+      "propItems": [
         {
-          "take_number": 1,
-          "total_takes": 1,
-          "duration_seconds": 4,
-          "timecode": "00:00 - 00:04",
-          "camera_instruction": "Low-Angle Ground Establishing Shot (35mm Low-Angle Dutch Tilt Lens), Camera cranes upward from ground level, tilting upward as the subject commands the space",
-          "motion_vector": "Camera cranes upward from ground level, tilting upward as the subject commands the space",
-          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
-          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Low-Angle Ground Establishing Shot (35mm Low-Angle Dutch Tilt Lens). Starting Position, Pose & Blocking: Sofia Garcia-Vargas (Tactical Technical Jumpsuit, Commanding posture, keen intellectual gaze, swift ) is looming from low perspective at distance, poised before upward surge: initial position and pose caught as subject SOFIA GARCIA-VARGAS steps forward, body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. Staged props in frame: Specialist Tactical Infiltration Unit (A rugged, militarized slate-grey diagnostic t). High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
-          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.0s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: High-Impact Low-Angle Medium Close-Up (50mm Low-Angle Hero Lens). Updated Position, Pose & Settled Blocking: Sofia Garcia-Vargas (Tactical Technical Jumpsuit, Commanding posture, keen intellectual gaze, swift ) is commanding the upper two-thirds of frame from upward angle, expression locked in resolve: updated position and pose following movement where subject unholstering the SPECIALIST TACTICAL INFILTRATION UNIT and interfacing with the terminal., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Staged props in frame: Specialist Tactical Infiltration Unit (A rugged, militarized slate-grey diagnostic t). Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
-          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Low-Angle Ground Establishing Shot) to Out-Frame Still (High-Impact Low-Angle Medium Close-Up). Camera Movement: Camera cranes upward from ground level, tilting upward as the subject commands the space. Dynamic Action & Blocking: SOFIA GARCIA-VARGAS steps forward, unholstering the SPECIALIST TACTICAL INFILTRATION UNIT and interfacing with the terminal.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+          "id": "prop-1789025748875-1-x7m",
+          "name": "Ghost-Rock Infused Colt Peacemaker",
+          "category": "Primary Weapon",
+          "detail": "Heavy single-action revolver with engraved nickel plating, pearl grips, and a cylinder loaded with glowing green ghost-rock cartridges emitting sulfur smoke",
+          "equippedState": "Drawn in right hand with faint wisp of supernatural green smoke curling from barrel",
+          "enabled": true
+        },
+        {
+          "id": "prop-1789025748875-2-iqx",
+          "name": "Bowie Knife with Demon-Horn Hilt",
+          "category": "Secondary Weapon / Sidearm",
+          "detail": "Massive heavy clip-point fighting knife with brass spine reinforcement, dark Damascus blade, and handle carved from black horned beast ridge",
+          "equippedState": "Sheathed in tooled leather sheath on left thigh",
+          "enabled": true
+        },
+        {
+          "id": "prop-1789025748875-3-lng",
+          "name": "Silver-Plated Sheriff Star with Protective Runes",
+          "category": "Accessory & Ornament",
+          "detail": "Tarnished six-point silver star badge scratched with secret occult warding symbols against hexes and wraiths",
+          "equippedState": "Pinned over heart on weathered leather duster vest",
+          "enabled": true
         }
-      ]
+      ],
+      "environment": "Deserted frontier main street with tumbleweeds blowing past a wooden saloon under a blood-red sunset",
+      "lighting": "Golden hour sunlight casting long warm glows and lens flare particles",
+      "cameraShot": "Medium three-quarter bust shot showing expressive pose, shoulder gear, and weapon grip",
+      "expression": "Stoic and impassive, unreadable veteran gaze"
     },
-    {
-      "shot_number": 4,
-      "heading": "INT. THE GRAND CYBERPUNK MASTER FACILITY - NIGHT - SHOT 4",
-      "duration_seconds": 6,
-      "timecode": "00:13 - 00:19",
-      "camera_lens": "Eye-Level Medium Two-Shot (50mm Standard Prime Lens)",
-      "camera_motion": "Slow creeping push-in tightening the spatial distance between the subjects",
-      "characters_present": [
-        "Aarav Patel"
-      ],
-      "set_used": "The Grand Cyberpunk Master Facility",
-      "props_used": [
-        "The Master Cyberpunk Key Artifact"
-      ],
-      "spoken_dialogue": {
-        "speaker": "AARAV PATEL",
-        "spokenLine": "Security telemetry is blind for exactly one hundred seconds. Secure the artifact now.",
-        "parenthetical": "(whispering into comms)"
-      },
-      "action_description": "AARAV PATEL delivers line with deliberate dramatic inflection.",
-      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Eye-Level Medium Two-Shot (50mm Standard Prime Lens). Starting Position, Pose & Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is framed chest-level facing counterpart with spatial tension across the midpoint: initial position and pose caught as subject AARAV PATEL delivers line with deliberate dramatic inflection., body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
-      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=6.0s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Extreme Macro Close-Up on Eyeline (100mm Macro Telephoto Lens). Updated Position, Pose & Settled Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is extreme close-up on dilated pupils, intense micro-expressions, and settled jaw tension: updated position and pose following movement where subject settled in aftermath posture following aarav patel delivers line with deliberate dramatic inflection., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
-      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Eye-Level Medium Two-Shot) to Out-Frame Still (Extreme Macro Close-Up on Eyeline). Camera Movement: Slow creeping push-in tightening the spatial distance between the subjects. Dynamic Action & Blocking: AARAV PATEL delivers line with deliberate dramatic inflection.. Actor AARAV PATEL delivers dialogue with natural 2.6 w/s cadence: \"Security telemetry is blind for exactly one hundred seconds. Secure the artifact now.\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
-      "takes": [
+    "fullPrompt": "High-end concept art character splash illustration, trending on ArtStation, character design sheet quality, dynamic keyframe art, A striking Ethereal / Spirit Hybrid Ghost-Town Gunslinger / Hex-Slinger, of East Asian (Japanese / Korean heritage), prime adult (24–28 years old), Imposing & Towering (6'4\" / 193 cm), Voluptuous, hourglass and commanding presence, Platinum silver-white with pearl reflections, styled in Short buzzcut etched with geometric shaved cyber-lines, Vibrant emerald green with jade flecks, Blind milky white right eye with faint magical scar, Subdermal cyber-socket plug on left temple with protective cap, expression is stoic and impassive, unreadable veteran gaze, Distinctive traits: Pair of soft plush beastkin ears twitching atop head and sleek tail, Wearing Embroidered black western frock coat, silk neckerchief, tailored vest with silver pocket watch, and black Stetson hat, Equipped with and holding Heavy single-action revolver with engraved nickel plating, pearl grips, and a cylinder loaded with glowing green ghost-rock cartridges emitting sulfur smoke (drawn in right hand with faint wisp of supernatural green smoke curling from barrel), Massive heavy clip-point fighting knife with brass spine reinforcement, dark Damascus blade, and handle carved from black horned beast ridge (sheathed in tooled leather sheath on left thigh), Tarnished six-point silver star badge scratched with secret occult warding symbols against hexes and wraiths (pinned over heart on weathered leather duster vest), Setting is Deserted frontier main street with tumbleweeds blowing past a wooden saloon under a blood-red sunset, Weird West / Gothic Frontier atmosphere, Medium three-quarter bust shot showing expressive pose, shoulder gear, and weapon grip, Golden hour sunlight casting long warm glows and lens flare particles, 8k resolution, ultra-detailed, highly refined, volumetric god-rays, atmospheric light dispersion, particle haze, award-winning masterpiece, intricate craftsmanship, peak visual quality, cinematic shallow depth of field, creamy bokeh background blur, hyperdetailed symmetrical face, expressive lifelike eyes with specular reflections, subsurface scattering skin translucency, realistic skin luminosity",
+    "negativePrompt": "blurry, bad anatomy, deformed eyes, extra limbs, amputee, mutilated, bad hands, missing fingers, extra fingers, poorly drawn face, cloned face, gross proportions, malformed limbs, out of frame, signature, watermark, text, low quality, artifacting",
+    "tags": [
+      "digital_art",
+      "weird_west"
+    ]
+  },
+  {
+    "id": "char_1789025747842_90sdcyu",
+    "title": "Court Alchemist / Herbalist (High Fantasy)",
+    "savedAt": "2026-09-10T07:35:48.377Z",
+    "style": "cinematic",
+    "genre": "high_fantasy",
+    "targetModel": "generic",
+    "aspectRatio": "3:4",
+    "traits": {
+      "name": "",
+      "species": "Dwarf / Deep Folk",
+      "age": "Ancient Immortal (appearing youthful 20s)",
+      "racialDescent": "Celtic / Gaelic (pale with subtle freckles)",
+      "height": "Imposing & Towering (6'4\" / 193 cm)",
+      "weightBuild": "Skeletal and gaunt frame with prominent collarbones",
+      "hairColor": "Deep chocolate brown with caramel undertones",
+      "hairStyle": "High tactical ponytail with shaved side fades and loose tendrils",
+      "eyeColor": "Ruby crimson with subtle supernatural luminescence",
+      "eyeDetails": "Faint cybernetic aperture rings spinning softly in the iris",
+      "facialFeatures": "Subdermal cyber-socket plug on left temple with protective cap",
+      "isNonHuman": true,
+      "nonHumanTraits": "iridescent dragon scales shimmering along the jaw and throat",
+      "role": "Court Alchemist / Herbalist",
+      "outfit": "Earth-toned botanist robe adorned with dried herbs and flower charms, canvas forager pack, and soft leather sandals",
+      "props": "Two-handed cruciform greatsword engraved with ancient celestial hymns, radiating a warm golden dawn-light along its center fuller and sunburst crossguard (planted point-down into the ground before them in solemn vigil), Mirror-polished silver-plated kite shield emblazoned with an embossed gold lion rampant crest and flared sunbeams (strapped firmly to left forearm ready to parry), Perforated brass thurible suspended from three heavy braided chains, wafting aromatic cedar smoke and bright ember sparks (hooked to war-belt ring beside leather scabbard)",
+      "propItems": [
         {
-          "take_number": 1,
-          "total_takes": 1,
-          "duration_seconds": 6,
-          "timecode": "00:00 - 00:06",
-          "camera_instruction": "Eye-Level Medium Two-Shot (50mm Standard Prime Lens), Slow creeping push-in tightening the spatial distance between the subjects",
-          "motion_vector": "Slow creeping push-in tightening the spatial distance between the subjects",
-          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
-          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Eye-Level Medium Two-Shot (50mm Standard Prime Lens). Starting Position, Pose & Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is framed chest-level facing counterpart with spatial tension across the midpoint: initial position and pose caught as subject AARAV PATEL delivers line with deliberate dramatic inflection., body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
-          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=6.0s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Extreme Macro Close-Up on Eyeline (100mm Macro Telephoto Lens). Updated Position, Pose & Settled Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is extreme close-up on dilated pupils, intense micro-expressions, and settled jaw tension: updated position and pose following movement where subject settled in aftermath posture following aarav patel delivers line with deliberate dramatic inflection., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
-          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Eye-Level Medium Two-Shot) to Out-Frame Still (Extreme Macro Close-Up on Eyeline). Camera Movement: Slow creeping push-in tightening the spatial distance between the subjects. Dynamic Action & Blocking: AARAV PATEL delivers line with deliberate dramatic inflection.. Actor AARAV PATEL delivers dialogue with natural 2.6 w/s cadence: \"Security telemetry is blind for exactly one hundred seconds. Secure the artifact now.\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+          "id": "prop-1789025747842-1-7f7",
+          "name": "Sunforged Aurichalcum Greatsword",
+          "category": "Primary Weapon",
+          "detail": "Two-handed cruciform greatsword engraved with ancient celestial hymns, radiating a warm golden dawn-light along its center fuller and sunburst crossguard",
+          "equippedState": "Planted point-down into the ground before them in solemn vigil",
+          "enabled": true
+        },
+        {
+          "id": "prop-1789025747842-2-pkp",
+          "name": "Radiant Lion Kite Shield",
+          "category": "Shield & Armor Gear",
+          "detail": "Mirror-polished silver-plated kite shield emblazoned with an embossed gold lion rampant crest and flared sunbeams",
+          "equippedState": "Strapped firmly to left forearm ready to parry",
+          "enabled": true
+        },
+        {
+          "id": "prop-1789025747842-3-kwk",
+          "name": "Gilded Censer of Sol Invictus",
+          "category": "Arcane Relic & Focus",
+          "detail": "Perforated brass thurible suspended from three heavy braided chains, wafting aromatic cedar smoke and bright ember sparks",
+          "equippedState": "Hooked to war-belt ring beside leather scabbard",
+          "enabled": true
         }
-      ]
+      ],
+      "environment": "Apothecary workshop cluttered with drying herbs, glass flasks, and mortar-and-pestle stations",
+      "lighting": "Golden hour sunlight casting long warm glows and lens flare particles",
+      "cameraShot": "Dutch angle tilted frame conveying tension, danger, and rapid motion",
+      "expression": "Calm and calculating, intense piercing stare"
     },
-    {
-      "shot_number": 5,
-      "heading": "INT. THE GRAND CYBERPUNK MASTER FACILITY - NIGHT - SHOT 5",
-      "duration_seconds": 6,
-      "timecode": "00:19 - 00:25",
-      "camera_lens": "Overhead High-Angle Master (28mm Wide Architectural Lens)",
-      "camera_motion": "God's eye jib descending smoothly from high overhead down to eye-level intimacy",
-      "characters_present": [
-        "Sofia Garcia-Vargas"
-      ],
-      "set_used": "The Grand Cyberpunk Master Facility",
-      "props_used": [
-        "The Master Cyberpunk Key Artifact"
-      ],
-      "spoken_dialogue": {
-        "speaker": "SOFIA GARCIA-VARGAS",
-        "spokenLine": "Bypassing the master firewall... Two steps remaining. Watch the perimeter doors.",
-        "parenthetical": "(calibrating interface)"
-      },
-      "action_description": "SOFIA GARCIA-VARGAS delivers line with deliberate dramatic inflection.",
-      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Overhead High-Angle Master (28mm Wide Architectural Lens). Starting Position, Pose & Blocking: Sofia Garcia-Vargas (Tactical Technical Jumpsuit, Commanding posture, keen intellectual gaze, swift ) is seen from steep downward bird's-eye angle navigating the architectural perimeter: initial position and pose caught as subject SOFIA GARCIA-VARGAS delivers line with deliberate dramatic inflection., body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
-      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=6.0s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Eye-Level Medium Master Shot (40mm Prime Lens). Updated Position, Pose & Settled Blocking: Sofia Garcia-Vargas (Tactical Technical Jumpsuit, Commanding posture, keen intellectual gaze, swift ) is descended to intimate eye-level chest framing, shoulders squared to camera: updated position and pose following movement where subject settled in aftermath posture following sofia garcia-vargas delivers line with deliberate dramatic inflection., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
-      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Overhead High-Angle Master) to Out-Frame Still (Eye-Level Medium Master Shot). Camera Movement: God's eye jib descending smoothly from high overhead down to eye-level intimacy. Dynamic Action & Blocking: SOFIA GARCIA-VARGAS delivers line with deliberate dramatic inflection.. Actor SOFIA GARCIA-VARGAS delivers dialogue with natural 2.6 w/s cadence: \"Bypassing the master firewall... Two steps remaining. Watch the perimeter doors.\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
-      "takes": [
+    "fullPrompt": "Cinematic movie still, 35mm anamorphic photography, high-end motion picture production, shot on ARRI Alexa LF, Panavision lenses, A striking Dwarf / Deep Folk Court Alchemist / Herbalist, of Celtic / Gaelic (pale with subtle freckles), ancient immortal (appearing youthful 20s), Imposing & Towering (6'4\" / 193 cm), Skeletal and gaunt frame with prominent collarbones, Deep chocolate brown with caramel undertones, styled in High tactical ponytail with shaved side fades and loose tendrils, Ruby crimson with subtle supernatural luminescence, Faint cybernetic aperture rings spinning softly in the iris, Subdermal cyber-socket plug on left temple with protective cap, expression is calm and calculating, intense piercing stare, Distinctive traits: iridescent dragon scales shimmering along the jaw and throat, Wearing Earth-toned botanist robe adorned with dried herbs and flower charms, canvas forager pack, and soft leather sandals, Equipped with and holding Two-handed cruciform greatsword engraved with ancient celestial hymns, radiating a warm golden dawn-light along its center fuller and sunburst crossguard (planted point-down into the ground before them in solemn vigil), Mirror-polished silver-plated kite shield emblazoned with an embossed gold lion rampant crest and flared sunbeams (strapped firmly to left forearm ready to parry), Perforated brass thurible suspended from three heavy braided chains, wafting aromatic cedar smoke and bright ember sparks (hooked to war-belt ring beside leather scabbard), Setting is Apothecary workshop cluttered with drying herbs, glass flasks, and mortar-and-pestle stations, High Fantasy atmosphere, Dutch angle tilted frame conveying tension, danger, and rapid motion, Golden hour sunlight casting long warm glows and lens flare particles, 8k resolution, ultra-detailed, highly refined, volumetric god-rays, atmospheric light dispersion, particle haze, award-winning masterpiece, intricate craftsmanship, peak visual quality, cinematic shallow depth of field, creamy bokeh background blur, hyperdetailed symmetrical face, expressive lifelike eyes with specular reflections, subsurface scattering skin translucency, realistic skin luminosity",
+    "negativePrompt": "ugly, deformed, disfigured, poor anatomy, bad hands, extra fingers, missing fingers, fused fingers, distorted face, blurry, low resolution, amateur, watermark, signature, logo, text, cropped head, duplicated limbs, plastic skin, oversaturated",
+    "tags": [
+      "cinematic",
+      "high_fantasy"
+    ]
+  },
+  {
+    "id": "char_1789025744755_dvjj6wj",
+    "title": "Quantum Warp Engineer (Sci-Fi Space Opera)",
+    "savedAt": "2026-09-10T07:35:45.265Z",
+    "style": "comic_book",
+    "genre": "sci_fi",
+    "targetModel": "generic",
+    "aspectRatio": "3:4",
+    "traits": {
+      "name": "",
+      "species": "Ethereal / Spirit Hybrid",
+      "age": "Youthful (18–22 years old)",
+      "racialDescent": "Indigenous American / First Nations",
+      "height": "Slender Medium (5'5\" / 165 cm)",
+      "weightBuild": "Stocky, brawny and broad-chested with low center of gravity",
+      "hairColor": "Bioluminescent emerald green with subtle inner glow",
+      "hairStyle": "Long flowing silk waves cascading down past the shoulder blades",
+      "eyeColor": "Glowing synthetic neon cyan with digital HUD reticle",
+      "eyeDetails": "Subtle HUD data overlay faintly projected across the retina",
+      "facialFeatures": "Subdermal cyber-socket plug on left temple with protective cap",
+      "isNonHuman": true,
+      "nonHumanTraits": "Sharp retractable predatory vampire fangs resting behind lower lip",
+      "role": "Quantum Warp Engineer",
+      "outfit": "Grease-stained mechanical undersuit with cooling coils, diagnostic visor resting on forehead, and insulated magnetic boots",
+      "props": "Bullpup directed-energy rifle with matte ceramic heat-sink fins, illuminated blue ionization chamber, and holographic smart-scope (held in low-ready tactical stance with trigger finger along receiver), Armored forearm gauntlet with flip-up holographic spectral analyzer displaying atmospheric density, bio-signatures, and terrain maps (fitted over left forearm with active amber holographic interface), Cluster of three cylindrical magnetic grenades with pulsing red proximity arming lights and rubberized textured grips (magnetized to tactical chest webbing)",
+      "propItems": [
         {
-          "take_number": 1,
-          "total_takes": 1,
-          "duration_seconds": 6,
-          "timecode": "00:00 - 00:06",
-          "camera_instruction": "Overhead High-Angle Master (28mm Wide Architectural Lens), God's eye jib descending smoothly from high overhead down to eye-level intimacy",
-          "motion_vector": "God's eye jib descending smoothly from high overhead down to eye-level intimacy",
-          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
-          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Overhead High-Angle Master (28mm Wide Architectural Lens). Starting Position, Pose & Blocking: Sofia Garcia-Vargas (Tactical Technical Jumpsuit, Commanding posture, keen intellectual gaze, swift ) is seen from steep downward bird's-eye angle navigating the architectural perimeter: initial position and pose caught as subject SOFIA GARCIA-VARGAS delivers line with deliberate dramatic inflection., body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
-          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=6.0s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Eye-Level Medium Master Shot (40mm Prime Lens). Updated Position, Pose & Settled Blocking: Sofia Garcia-Vargas (Tactical Technical Jumpsuit, Commanding posture, keen intellectual gaze, swift ) is descended to intimate eye-level chest framing, shoulders squared to camera: updated position and pose following movement where subject settled in aftermath posture following sofia garcia-vargas delivers line with deliberate dramatic inflection., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
-          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Overhead High-Angle Master) to Out-Frame Still (Eye-Level Medium Master Shot). Camera Movement: God's eye jib descending smoothly from high overhead down to eye-level intimacy. Dynamic Action & Blocking: SOFIA GARCIA-VARGAS delivers line with deliberate dramatic inflection.. Actor SOFIA GARCIA-VARGAS delivers dialogue with natural 2.6 w/s cadence: \"Bypassing the master firewall... Two steps remaining. Watch the perimeter doors.\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+          "id": "prop-1789025744755-1-pcq",
+          "name": "Particle-Beam Assault Carbine",
+          "category": "Primary Weapon",
+          "detail": "Bullpup directed-energy rifle with matte ceramic heat-sink fins, illuminated blue ionization chamber, and holographic smart-scope",
+          "equippedState": "Held in low-ready tactical stance with trigger finger along receiver",
+          "enabled": true
+        },
+        {
+          "id": "prop-1789025744755-2-ezv",
+          "name": "Omni-Scanner Wrist Gauntlet",
+          "category": "Tech Device & Deck",
+          "detail": "Armored forearm gauntlet with flip-up holographic spectral analyzer displaying atmospheric density, bio-signatures, and terrain maps",
+          "equippedState": "Fitted over left forearm with active amber holographic interface",
+          "enabled": true
+        },
+        {
+          "id": "prop-1789025744755-3-tle",
+          "name": "Thermal Plasma Grenades",
+          "category": "Secondary Weapon / Sidearm",
+          "detail": "Cluster of three cylindrical magnetic grenades with pulsing red proximity arming lights and rubberized textured grips",
+          "equippedState": "Magnetized to tactical chest webbing",
+          "enabled": true
         }
-      ]
+      ],
+      "environment": "Catwalk encircling a pulsing blue toroidal warp core reactor humming with power",
+      "lighting": "Cyberpunk neon backlighting with dual cyan and magenta cross-illumination",
+      "cameraShot": "Intimate macro portrait highlighting intricate eyes, jewelry, and facial markings",
+      "expression": "Calm and calculating, intense piercing stare"
     },
-    {
-      "shot_number": 6,
-      "heading": "INT. THE GRAND CYBERPUNK MASTER FACILITY - NIGHT - SHOT 6",
-      "duration_seconds": 4,
-      "timecode": "00:25 - 00:29",
-      "camera_lens": "Reverse Over-the-Shoulder Master (50mm Prime Lens)",
-      "camera_motion": "Slow lateral slider track shifting perspective from listener to speaker",
-      "characters_present": [
-        "Aarav Patel"
-      ],
-      "set_used": "The Grand Cyberpunk Master Facility",
-      "props_used": [
-        "The Master Cyberpunk Key Artifact"
-      ],
-      "spoken_dialogue": null,
-      "action_description": "A security alarm hums to life in the distance, red strobe lighting flashing across the chamber.",
-      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Reverse Over-the-Shoulder Master (50mm Prime Lens). Starting Position, Pose & Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is framed over the shoulder of the foreground subject, observing from background plane: initial position and pose caught as subject A security alarm hums to life in the distance, body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
-      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.0s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Direct Intimate Close-Up on Reaction (85mm Portrait Telephoto Lens). Updated Position, Pose & Settled Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is shifted into isolated single close-up, reaction registering across facial features: updated position and pose following movement where subject red strobe lighting flashing across the chamber., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
-      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Reverse Over-the-Shoulder Master) to Out-Frame Still (Direct Intimate Close-Up on Reaction). Camera Movement: Slow lateral slider track shifting perspective from listener to speaker. Dynamic Action & Blocking: A security alarm hums to life in the distance, red strobe lighting flashing across the chamber.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
-      "takes": [
+    "fullPrompt": "Graphic novel cover illustration, dynamic heavy black ink line art, cross-hatching shadows, modern comic book colorist palette, bold graphic silhouette, A striking Ethereal / Spirit Hybrid Quantum Warp Engineer, of Indigenous American / First Nations, youthful (18–22 years old), Slender Medium (5'5\" / 165 cm), Stocky, brawny and broad-chested with low center of gravity, Bioluminescent emerald green with subtle inner glow, styled in Long flowing silk waves cascading down past the shoulder blades, Glowing synthetic neon cyan with digital HUD reticle, Subtle HUD data overlay faintly projected across the retina, Subdermal cyber-socket plug on left temple with protective cap, expression is calm and calculating, intense piercing stare, Distinctive traits: Sharp retractable predatory vampire fangs resting behind lower lip, Wearing Grease-stained mechanical undersuit with cooling coils, diagnostic visor resting on forehead, and insulated magnetic boots, Equipped with and holding Bullpup directed-energy rifle with matte ceramic heat-sink fins, illuminated blue ionization chamber, and holographic smart-scope (held in low-ready tactical stance with trigger finger along receiver), Armored forearm gauntlet with flip-up holographic spectral analyzer displaying atmospheric density, bio-signatures, and terrain maps (fitted over left forearm with active amber holographic interface), Cluster of three cylindrical magnetic grenades with pulsing red proximity arming lights and rubberized textured grips (magnetized to tactical chest webbing), Setting is Catwalk encircling a pulsing blue toroidal warp core reactor humming with power, Sci-Fi Space Opera atmosphere, Intimate macro portrait highlighting intricate eyes, jewelry, and facial markings, Cyberpunk neon backlighting with dual cyan and magenta cross-illumination, 8k resolution, ultra-detailed, highly refined, volumetric god-rays, atmospheric light dispersion, particle haze, award-winning masterpiece, intricate craftsmanship, peak visual quality, cinematic shallow depth of field, creamy bokeh background blur, hyperdetailed symmetrical face, expressive lifelike eyes with specular reflections, subsurface scattering skin translucency, realistic skin luminosity",
+    "negativePrompt": "blurry, bad anatomy, deformed eyes, extra limbs, amputee, mutilated, bad hands, missing fingers, extra fingers, poorly drawn face, cloned face, gross proportions, malformed limbs, out of frame, signature, watermark, text, low quality, artifacting",
+    "tags": [
+      "comic_book",
+      "sci_fi"
+    ]
+  },
+  {
+    "id": "char_1789025743561_3x3zuxg",
+    "title": "Temple Oracle / Starlight Seer (Mythological / Ancient Celestial)",
+    "savedAt": "2026-09-10T07:35:44.145Z",
+    "style": "comic_book",
+    "genre": "mythological",
+    "targetModel": "generic",
+    "aspectRatio": "3:4",
+    "traits": {
+      "name": "",
+      "species": "Human",
+      "age": "Distinguished Mature (42–48 years old)",
+      "racialDescent": "Afro-Caribbean (rich deep bronze tones)",
+      "height": "Athletic Average (5'8\" / 173 cm)",
+      "weightBuild": "Chiseled, dense physique with cybernetic reinforcing",
+      "hairColor": "Vibrant neon cyan with electric teal roots",
+      "hairStyle": "Shoulder-length shaggy wolf cut with textured curtain bangs",
+      "eyeColor": "Vibrant emerald green with jade flecks",
+      "eyeDetails": "Subtle HUD data overlay faintly projected across the retina",
+      "facialFeatures": "Subdermal cyber-socket plug on left temple with protective cap",
+      "isNonHuman": false,
+      "nonHumanTraits": "",
+      "role": "Temple Oracle / Starlight Seer",
+      "outfit": "Translucent tiered silk peplos gown shimmering with starlight threads, gold serpent armbands coiled around biceps, and bare feet",
+      "props": "Long golden spear forged in celestial fire with a leaf-shaped blade that crackles with arcs of miniature lightning and red silk tassel (held upright in hero pose with butt resting against stone), Heavy convex bronze hoplite shield embossed with the snarling visage of Medusa with writhing serpents and green verdigris patina (mounted on left arm with leather porpax arm-band), Delicate beaten-gold headpiece crafted into leaves of bay laurel, shimmering with divine favor and radiant dignity (crowning brow above temples)",
+      "propItems": [
         {
-          "take_number": 1,
-          "total_takes": 1,
-          "duration_seconds": 4,
-          "timecode": "00:00 - 00:04",
-          "camera_instruction": "Reverse Over-the-Shoulder Master (50mm Prime Lens), Slow lateral slider track shifting perspective from listener to speaker",
-          "motion_vector": "Slow lateral slider track shifting perspective from listener to speaker",
-          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
-          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Reverse Over-the-Shoulder Master (50mm Prime Lens). Starting Position, Pose & Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is framed over the shoulder of the foreground subject, observing from background plane: initial position and pose caught as subject A security alarm hums to life in the distance, body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
-          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.0s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Direct Intimate Close-Up on Reaction (85mm Portrait Telephoto Lens). Updated Position, Pose & Settled Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is shifted into isolated single close-up, reaction registering across facial features: updated position and pose following movement where subject red strobe lighting flashing across the chamber., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
-          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Reverse Over-the-Shoulder Master) to Out-Frame Still (Direct Intimate Close-Up on Reaction). Camera Movement: Slow lateral slider track shifting perspective from listener to speaker. Dynamic Action & Blocking: A security alarm hums to life in the distance, red strobe lighting flashing across the chamber.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+          "id": "prop-1789025743561-1-xae",
+          "name": "Aegis of the Storm-King Spear",
+          "category": "Primary Weapon",
+          "detail": "Long golden spear forged in celestial fire with a leaf-shaped blade that crackles with arcs of miniature lightning and red silk tassel",
+          "equippedState": "Held upright in hero pose with butt resting against stone",
+          "enabled": true
+        },
+        {
+          "id": "prop-1789025743561-2-v9z",
+          "name": "Gorgon-Embossed Bronze Round Shield",
+          "category": "Shield & Armor Gear",
+          "detail": "Heavy convex bronze hoplite shield embossed with the snarling visage of Medusa with writhing serpents and green verdigris patina",
+          "equippedState": "Mounted on left arm with leather porpax arm-band",
+          "enabled": true
+        },
+        {
+          "id": "prop-1789025743561-3-4fj",
+          "name": "Golden Laurel Wreath of Victory",
+          "category": "Accessory & Ornament",
+          "detail": "Delicate beaten-gold headpiece crafted into leaves of bay laurel, shimmering with divine favor and radiant dignity",
+          "equippedState": "Crowning brow above temples",
+          "enabled": true
         }
-      ]
+      ],
+      "environment": "Sacred underground temple grotto illuminated by glowing subterranean pools and drifting incense clouds",
+      "lighting": "Flickering warm candlelight and fireplace embers casting dancing orange shadows",
+      "cameraShot": "Over-the-shoulder dynamic camera angle looking toward the character as they turn",
+      "expression": "Melancholic and contemplative, gazing into the distance"
     },
-    {
-      "shot_number": 7,
-      "heading": "INT. THE GRAND CYBERPUNK MASTER FACILITY - NIGHT - SHOT 7",
-      "duration_seconds": 3.7,
-      "timecode": "00:29 - 00:32",
-      "camera_lens": "Three-Quarter Angle Medium Action Stance (35mm Dynamic Action Lens)",
-      "camera_motion": "Circling 180-degree Steadicam orbit shot tracking the dramatic turn",
-      "characters_present": [
-        "Aarav Patel"
-      ],
-      "set_used": "The Grand Cyberpunk Master Facility",
-      "props_used": [
-        "The Master Cyberpunk Key Artifact"
-      ],
-      "spoken_dialogue": {
-        "speaker": "AARAV PATEL",
-        "spokenLine": "We're out of time. How much longer?",
-        "parenthetical": "(drawing the HEIRLOOM CUSTOM SIDEARM)"
-      },
-      "action_description": "AARAV PATEL delivers line with deliberate dramatic inflection.",
-      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Three-Quarter Angle Medium Action Stance (35mm Dynamic Action Lens). Starting Position, Pose & Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is angled three-quarters away in coiled ready stance before decisive turn: initial position and pose caught as subject AARAV PATEL delivers line with deliberate dramatic inflection., body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
-      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=3.7s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Tight Reaction Profile Close-Up (75mm Anamorphic Prime). Updated Position, Pose & Settled Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is revolved 180 degrees into direct profile, posture locked in dramatic aftermath: updated position and pose following movement where subject settled in aftermath posture following aarav patel delivers line with deliberate dramatic inflection., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
-      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Three-Quarter Angle Medium Action Stance) to Out-Frame Still (Tight Reaction Profile Close-Up). Camera Movement: Circling 180-degree Steadicam orbit shot tracking the dramatic turn. Dynamic Action & Blocking: AARAV PATEL delivers line with deliberate dramatic inflection.. Actor AARAV PATEL delivers dialogue with natural 2.6 w/s cadence: \"We're out of time. How much longer?\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
-      "takes": [
+    "fullPrompt": "Graphic novel cover illustration, dynamic heavy black ink line art, cross-hatching shadows, modern comic book colorist palette, bold graphic silhouette, A striking Temple Oracle / Starlight Seer, of Afro-Caribbean (rich deep bronze tones), distinguished mature (42–48 years old), Athletic Average (5'8\" / 173 cm), Chiseled, dense physique with cybernetic reinforcing, Vibrant neon cyan with electric teal roots, styled in Shoulder-length shaggy wolf cut with textured curtain bangs, Vibrant emerald green with jade flecks, Subtle HUD data overlay faintly projected across the retina, Subdermal cyber-socket plug on left temple with protective cap, expression is melancholic and contemplative, gazing into the distance, Wearing Translucent tiered silk peplos gown shimmering with starlight threads, gold serpent armbands coiled around biceps, and bare feet, Equipped with and holding Long golden spear forged in celestial fire with a leaf-shaped blade that crackles with arcs of miniature lightning and red silk tassel (held upright in hero pose with butt resting against stone), Heavy convex bronze hoplite shield embossed with the snarling visage of Medusa with writhing serpents and green verdigris patina (mounted on left arm with leather porpax arm-band), Delicate beaten-gold headpiece crafted into leaves of bay laurel, shimmering with divine favor and radiant dignity (crowning brow above temples), Setting is Sacred underground temple grotto illuminated by glowing subterranean pools and drifting incense clouds, Mythological / Ancient Celestial atmosphere, Over-the-shoulder dynamic camera angle looking toward the character as they turn, Flickering warm candlelight and fireplace embers casting dancing orange shadows, 8k resolution, ultra-detailed, highly refined, volumetric god-rays, atmospheric light dispersion, particle haze, award-winning masterpiece, intricate craftsmanship, peak visual quality, cinematic shallow depth of field, creamy bokeh background blur, hyperdetailed symmetrical face, expressive lifelike eyes with specular reflections, subsurface scattering skin translucency, realistic skin luminosity",
+    "negativePrompt": "blurry, bad anatomy, deformed eyes, extra limbs, amputee, mutilated, bad hands, missing fingers, extra fingers, poorly drawn face, cloned face, gross proportions, malformed limbs, out of frame, signature, watermark, text, low quality, artifacting",
+    "tags": [
+      "comic_book",
+      "mythological"
+    ]
+  },
+  {
+    "id": "char_1789025742114_e8u565n",
+    "title": "Paladin / Oath-Knight (High Fantasy)",
+    "savedAt": "2026-09-10T07:35:42.833Z",
+    "style": "art_nouveau",
+    "genre": "high_fantasy",
+    "targetModel": "generic",
+    "aspectRatio": "3:4",
+    "traits": {
+      "name": "",
+      "species": "Human",
+      "age": "Youthful (18–22 years old)",
+      "racialDescent": "East Asian (Han Chinese heritage)",
+      "height": "Tall & Statuesque (6'0\" / 183 cm)",
+      "weightBuild": "Muscular and powerful heavy-weight fighter physique",
+      "hairColor": "Fiery copper auburn with golden highlights",
+      "hairStyle": "Long flowing silk waves cascading down past the shoulder blades",
+      "eyeColor": "Mystic amethyst violet shimmering in low light",
+      "eyeDetails": "Blind milky white right eye with faint magical scar",
+      "facialFeatures": "Subdermal cyber-socket plug on left temple with protective cap",
+      "isNonHuman": false,
+      "nonHumanTraits": "",
+      "role": "Paladin / Oath-Knight",
+      "outfit": "Full suit of mirror-polished plate armor inlaid with gold leaf filigree, pure white cape fastened with a lion brooch, and chainmail coif",
+      "props": "Two-handed cruciform greatsword engraved with ancient celestial hymns, radiating a warm golden dawn-light along its center fuller and sunburst crossguard (planted point-down into the ground before them in solemn vigil), Mirror-polished silver-plated kite shield emblazoned with an embossed gold lion rampant crest and flared sunbeams (strapped firmly to left forearm ready to parry), Perforated brass thurible suspended from three heavy braided chains, wafting aromatic cedar smoke and bright ember sparks (hooked to war-belt ring beside leather scabbard)",
+      "propItems": [
         {
-          "take_number": 1,
-          "total_takes": 1,
-          "duration_seconds": 3.7,
-          "timecode": "00:00 - 00:04",
-          "camera_instruction": "Three-Quarter Angle Medium Action Stance (35mm Dynamic Action Lens), Circling 180-degree Steadicam orbit shot tracking the dramatic turn",
-          "motion_vector": "Circling 180-degree Steadicam orbit shot tracking the dramatic turn",
-          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
-          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Three-Quarter Angle Medium Action Stance (35mm Dynamic Action Lens). Starting Position, Pose & Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is angled three-quarters away in coiled ready stance before decisive turn: initial position and pose caught as subject AARAV PATEL delivers line with deliberate dramatic inflection., body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
-          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=3.7s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Tight Reaction Profile Close-Up (75mm Anamorphic Prime). Updated Position, Pose & Settled Blocking: Aarav Patel (Signature Cyberpunk Field Gear, Sharp athletic frame, piercing observant eyes, sea) is revolved 180 degrees into direct profile, posture locked in dramatic aftermath: updated position and pose following movement where subject settled in aftermath posture following aarav patel delivers line with deliberate dramatic inflection., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
-          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Three-Quarter Angle Medium Action Stance) to Out-Frame Still (Tight Reaction Profile Close-Up). Camera Movement: Circling 180-degree Steadicam orbit shot tracking the dramatic turn. Dynamic Action & Blocking: AARAV PATEL delivers line with deliberate dramatic inflection.. Actor AARAV PATEL delivers dialogue with natural 2.6 w/s cadence: \"We're out of time. How much longer?\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+          "id": "prop-1789025742114-1-3jg",
+          "name": "Sunforged Aurichalcum Greatsword",
+          "category": "Primary Weapon",
+          "detail": "Two-handed cruciform greatsword engraved with ancient celestial hymns, radiating a warm golden dawn-light along its center fuller and sunburst crossguard",
+          "equippedState": "Planted point-down into the ground before them in solemn vigil",
+          "enabled": true
+        },
+        {
+          "id": "prop-1789025742114-2-e69",
+          "name": "Radiant Lion Kite Shield",
+          "category": "Shield & Armor Gear",
+          "detail": "Mirror-polished silver-plated kite shield emblazoned with an embossed gold lion rampant crest and flared sunbeams",
+          "equippedState": "Strapped firmly to left forearm ready to parry",
+          "enabled": true
+        },
+        {
+          "id": "prop-1789025742114-3-j5j",
+          "name": "Gilded Censer of Sol Invictus",
+          "category": "Arcane Relic & Focus",
+          "detail": "Perforated brass thurible suspended from three heavy braided chains, wafting aromatic cedar smoke and bright ember sparks",
+          "equippedState": "Hooked to war-belt ring beside leather scabbard",
+          "enabled": true
         }
-      ]
+      ],
+      "environment": "Ancient marble cathedral ruins where divine sunlight beams through cracked rose-windows",
+      "lighting": "Moody chiaroscuro with a single beam of light piercing deep gloom",
+      "cameraShot": "Over-the-shoulder dynamic camera angle looking toward the character as they turn",
+      "expression": "Serene and tranquil, eyes reflecting distant starlight"
     },
-    {
-      "shot_number": 8,
-      "heading": "INT. THE GRAND CYBERPUNK MASTER FACILITY - NIGHT - SHOT 8",
-      "duration_seconds": 4,
-      "timecode": "00:32 - 00:36",
-      "camera_lens": "Tight Medium Close-Up on Subject (50mm Prime Lens)",
-      "camera_motion": "Slow reverse crane pull-back expanding from the character to reveal the vast environment",
-      "characters_present": [
-        "Sofia Garcia-Vargas"
-      ],
-      "set_used": "The Grand Cyberpunk Master Facility",
-      "props_used": [
-        "The Master Cyberpunk Key Artifact"
-      ],
-      "spoken_dialogue": null,
-      "action_description": "SOFIA GARCIA-VARGAS (CONT'D)",
-      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Tight Medium Close-Up on Subject (50mm Prime Lens). Starting Position, Pose & Blocking: Sofia Garcia-Vargas (Tactical Technical Jumpsuit, Commanding posture, keen intellectual gaze, swift ) is framed tight on character's intense expression and centered breath: initial position and pose caught as subject SOFIA GARCIA-VARGAS (CONT'D), body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
-      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.0s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Epic Wide Environmental Resolution (24mm Vast Anamorphic Wide Lens). Updated Position, Pose & Settled Blocking: Sofia Garcia-Vargas (Tactical Technical Jumpsuit, Commanding posture, keen intellectual gaze, swift ) is diminished in scale within the sprawling panoramic vista, solitary silhouette against horizon: updated position and pose following movement where subject settled in aftermath posture following sofia garcia-vargas (cont'd), body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
-      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Tight Medium Close-Up on Subject) to Out-Frame Still (Epic Wide Environmental Resolution). Camera Movement: Slow reverse crane pull-back expanding from the character to reveal the vast environment. Dynamic Action & Blocking: SOFIA GARCIA-VARGAS (CONT'D). Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
-      "takes": [
+    "fullPrompt": "Art Nouveau masterpiece portrait inspired by Alphonse Mucha and Gustav Klimt, intricate flowing botanical borders, ornate gold leaf filigree, elegant sinuous curves, A striking Paladin / Oath-Knight, of East Asian (Han Chinese heritage), youthful (18–22 years old), Tall & Statuesque (6'0\" / 183 cm), Muscular and powerful heavy-weight fighter physique, Fiery copper auburn with golden highlights, styled in Long flowing silk waves cascading down past the shoulder blades, Mystic amethyst violet shimmering in low light, Blind milky white right eye with faint magical scar, Subdermal cyber-socket plug on left temple with protective cap, expression is serene and tranquil, eyes reflecting distant starlight, Wearing Full suit of mirror-polished plate armor inlaid with gold leaf filigree, pure white cape fastened with a lion brooch, and chainmail coif, Equipped with and holding Two-handed cruciform greatsword engraved with ancient celestial hymns, radiating a warm golden dawn-light along its center fuller and sunburst crossguard (planted point-down into the ground before them in solemn vigil), Mirror-polished silver-plated kite shield emblazoned with an embossed gold lion rampant crest and flared sunbeams (strapped firmly to left forearm ready to parry), Perforated brass thurible suspended from three heavy braided chains, wafting aromatic cedar smoke and bright ember sparks (hooked to war-belt ring beside leather scabbard), Setting is Ancient marble cathedral ruins where divine sunlight beams through cracked rose-windows, High Fantasy atmosphere, Over-the-shoulder dynamic camera angle looking toward the character as they turn, Moody chiaroscuro with a single beam of light piercing deep gloom, 8k resolution, ultra-detailed, highly refined, volumetric god-rays, atmospheric light dispersion, particle haze, award-winning masterpiece, intricate craftsmanship, peak visual quality, cinematic shallow depth of field, creamy bokeh background blur, hyperdetailed symmetrical face, expressive lifelike eyes with specular reflections, subsurface scattering skin translucency, realistic skin luminosity",
+    "negativePrompt": "blurry, bad anatomy, deformed eyes, extra limbs, amputee, mutilated, bad hands, missing fingers, extra fingers, poorly drawn face, cloned face, gross proportions, malformed limbs, out of frame, signature, watermark, text, low quality, artifacting",
+    "tags": [
+      "art_nouveau",
+      "high_fantasy"
+    ]
+  },
+  {
+    "id": "char_1789025629530",
+    "title": "Neon Glitch Netrunner",
+    "savedAt": "2026-09-10T07:35:40.946Z",
+    "style": "cinematic",
+    "genre": "cyberpunk",
+    "targetModel": "generic",
+    "aspectRatio": "3:4",
+    "traits": {
+      "name": "",
+      "species": "Demonkin / Tiefling",
+      "age": "Seasoned (32–38 years old)",
+      "racialDescent": "Latin American (Mestizo heritage)",
+      "height": "Petite & Compact (5'1\" / 155 cm)",
+      "weightBuild": "Slender, graceful and lithe dancer frame",
+      "hairColor": "Pastel lavender lilac with soft gradients",
+      "hairStyle": "Long flowing silk waves cascading down past the shoulder blades",
+      "eyeColor": "Liquid mercury silver with reflective sheen",
+      "eyeDetails": "Faint golden constellation flecks orbiting the outer pupil",
+      "facialFeatures": "Subdermal cyber-socket plug on left temple with protective cap",
+      "isNonHuman": true,
+      "nonHumanTraits": "chrome robotic prosthetic arm with exposed brass wiring",
+      "role": "Drone Pilot / Aerial Courier",
+      "outfit": "Aviation bomber jacket covered in flight patches and reflective stripes, pilot flight suit, and rugged magnetic climb boots",
+      "props": "Reinforced carbon-nanotube cyberdeck casing with illuminated cooling vents, glowing green terminal diagnostic LED matrix, and deployable holographic HUD keyboard projection (slung across shoulder with tactical padded strap), High-speed braided optical cables with gold-plated subdermal bio-jacks, pulsating with faint cyan data light transfers (tethered directly from temple cyber-socket to deck port), Matte-black polymer smart-pistol with integrated reflex laser sight, micro-suppressor, and digital ammunition counter readout on the slide (holstered in quick-draw magnetized hip holster)",
+      "propItems": [
         {
-          "take_number": 1,
-          "total_takes": 1,
-          "duration_seconds": 4,
-          "timecode": "00:00 - 00:04",
-          "camera_instruction": "Tight Medium Close-Up on Subject (50mm Prime Lens), Slow reverse crane pull-back expanding from the character to reveal the vast environment",
-          "motion_vector": "Slow reverse crane pull-back expanding from the character to reveal the vast environment",
-          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
-          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Tight Medium Close-Up on Subject (50mm Prime Lens). Starting Position, Pose & Blocking: Sofia Garcia-Vargas (Tactical Technical Jumpsuit, Commanding posture, keen intellectual gaze, swift ) is framed tight on character's intense expression and centered breath: initial position and pose caught as subject SOFIA GARCIA-VARGAS (CONT'D), body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
-          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.0s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Epic Wide Environmental Resolution (24mm Vast Anamorphic Wide Lens). Updated Position, Pose & Settled Blocking: Sofia Garcia-Vargas (Tactical Technical Jumpsuit, Commanding posture, keen intellectual gaze, swift ) is diminished in scale within the sprawling panoramic vista, solitary silhouette against horizon: updated position and pose following movement where subject settled in aftermath posture following sofia garcia-vargas (cont'd), body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
-          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Tight Medium Close-Up on Subject) to Out-Frame Still (Epic Wide Environmental Resolution). Camera Movement: Slow reverse crane pull-back expanding from the character to reveal the vast environment. Dynamic Action & Blocking: SOFIA GARCIA-VARGAS (CONT'D). Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+          "id": "prop-1789025629530-1-j2o",
+          "name": "Custom Mil-Spec Cyberdeck Terminal",
+          "category": "Tech Device & Deck",
+          "detail": "Reinforced carbon-nanotube cyberdeck casing with illuminated cooling vents, glowing green terminal diagnostic LED matrix, and deployable holographic HUD keyboard projection",
+          "equippedState": "Slung across shoulder with tactical padded strap",
+          "enabled": true
+        },
+        {
+          "id": "prop-1789025629530-2-1i6",
+          "name": "Braided Fiber-Optic Neural Cables",
+          "category": "Tech Device & Deck",
+          "detail": "High-speed braided optical cables with gold-plated subdermal bio-jacks, pulsating with faint cyan data light transfers",
+          "equippedState": "Tethered directly from temple cyber-socket to deck port",
+          "enabled": true
+        },
+        {
+          "id": "prop-1789025629530-3-f2w",
+          "name": "Suppressed Smart-Pistol Sidearm",
+          "category": "Secondary Weapon / Sidearm",
+          "detail": "Matte-black polymer smart-pistol with integrated reflex laser sight, micro-suppressor, and digital ammunition counter readout on the slide",
+          "equippedState": "Holstered in quick-draw magnetized hip holster",
+          "enabled": true
         }
-      ]
+      ],
+      "lighting": "Golden hour sunlight casting long warm glows and lens flare particles",
+      "cameraShot": "Low-angle dramatic perspective emphasizing power, height, and commanding presence",
+      "environment": "Windy rooftop landing pad with neon warning lights and city smog blowing past",
+      "expression": "Calm and calculating, intense piercing stare"
     },
-    {
-      "shot_number": 9,
-      "heading": "INT. THE GRAND CYBERPUNK MASTER FACILITY - NIGHT - SHOT 9",
-      "duration_seconds": 4.5,
-      "timecode": "00:36 - 00:41",
-      "camera_lens": "Establishing Wide Shot (24mm Ultra-Wide Anamorphic Prime)",
-      "camera_motion": "The camera tracks smoothly alongside the subject and then zooms in to the face",
-      "characters_present": [
-        "Kwame Mensah"
-      ],
-      "set_used": "The Grand Cyberpunk Master Facility",
-      "props_used": [
-        "The Master Cyberpunk Key Artifact"
-      ],
-      "spoken_dialogue": {
-        "speaker": "SPEAKER",
-        "spokenLine": "Three... two... one... System overridden! We're in!",
-        "parenthetical": ""
-      },
-      "action_description": "Actor delivers line with deliberate dramatic inflection.",
-      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Establishing Wide Shot (24mm Ultra-Wide Anamorphic Prime). Starting Position, Pose & Blocking: Kwame Mensah (Supreme Command Trenchcoat, Imposing presence, immaculate grooming, cold calcu) is positioned in the mid-left frame, moving forward toward the destination: initial position and pose caught as subject Actor delivers line with deliberate dramatic inflection., body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
-      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.5s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Tight Close-Up on Face (85mm Portrait Telephoto Prime). Updated Position, Pose & Settled Blocking: Kwame Mensah (Supreme Command Trenchcoat, Imposing presence, immaculate grooming, cold calcu) is occupies the center-right frame in tight focus, halted squarely at the destination point: updated position and pose following movement where subject settled in aftermath posture following actor delivers line with deliberate dramatic inflection., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
-      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Establishing Wide Shot) to Out-Frame Still (Tight Close-Up on Face). Camera Movement: The camera tracks smoothly alongside the subject and then zooms in to the face. Dynamic Action & Blocking: Actor delivers line with deliberate dramatic inflection.. Actor SPEAKER delivers dialogue with natural 2.6 w/s cadence: \"Three... two... one... System overridden! We're in!\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
-      "takes": [
+    "fullPrompt": "Cinematic movie still, 35mm anamorphic photography, high-end motion picture production, shot on ARRI Alexa LF, Panavision lenses, A striking Demonkin / Tiefling Drone Pilot / Aerial Courier, of Latin American (Mestizo heritage), seasoned (32–38 years old), Petite & Compact (5'1\" / 155 cm), Slender, graceful and lithe dancer frame, Pastel lavender lilac with soft gradients, styled in Long flowing silk waves cascading down past the shoulder blades, Liquid mercury silver with reflective sheen, Faint golden constellation flecks orbiting the outer pupil, Subdermal cyber-socket plug on left temple with protective cap, expression is calm and calculating, intense piercing stare, Distinctive traits: chrome robotic prosthetic arm with exposed brass wiring, Wearing Aviation bomber jacket covered in flight patches and reflective stripes, pilot flight suit, and rugged magnetic climb boots, Equipped with and holding Reinforced carbon-nanotube cyberdeck casing with illuminated cooling vents, glowing green terminal diagnostic LED matrix, and deployable holographic HUD keyboard projection (slung across shoulder with tactical padded strap), High-speed braided optical cables with gold-plated subdermal bio-jacks, pulsating with faint cyan data light transfers (tethered directly from temple cyber-socket to deck port), Matte-black polymer smart-pistol with integrated reflex laser sight, micro-suppressor, and digital ammunition counter readout on the slide (holstered in quick-draw magnetized hip holster), Setting is Windy rooftop landing pad with neon warning lights and city smog blowing past, Cyberpunk atmosphere, Low-angle dramatic perspective emphasizing power, height, and commanding presence, Golden hour sunlight casting long warm glows and lens flare particles, 8k resolution, ultra-detailed, highly refined, volumetric god-rays, atmospheric light dispersion, particle haze, award-winning masterpiece, intricate craftsmanship, peak visual quality, cinematic shallow depth of field, creamy bokeh background blur, hyperdetailed symmetrical face, expressive lifelike eyes with specular reflections, subsurface scattering skin translucency, realistic skin luminosity",
+    "negativePrompt": "ugly, deformed, disfigured, poor anatomy, bad hands, extra fingers, missing fingers, fused fingers, distorted face, blurry, low resolution, amateur, watermark, signature, logo, text, cropped head, duplicated limbs, plastic skin, oversaturated",
+    "tags": [
+      "cinematic",
+      "cyberpunk"
+    ]
+  },
+  {
+    "id": "char_1789024612199",
+    "title": "Neon Glitch Netrunner",
+    "savedAt": "2026-09-10T07:28:30.674Z",
+    "style": "cyber_noir",
+    "genre": "cyberpunk",
+    "targetModel": "generic",
+    "aspectRatio": "3:4",
+    "traits": {
+      "name": "",
+      "species": "Cyborg / Augmented Human",
+      "age": "Battle-hardened Veteran (50–58 years old)",
+      "racialDescent": "Slavic / Eastern European heritage",
+      "height": "Petite & Compact (5'1\" / 155 cm)",
+      "weightBuild": "Voluptuous, hourglass and commanding presence",
+      "hairColor": "Distinguished salt-and-pepper charcoal",
+      "hairStyle": "Tight intricate braided cornrows with metallic silver beads",
+      "eyeColor": "Vibrant emerald green with jade flecks",
+      "eyeDetails": "Sharp crows-feet wrinkles revealing a lifetime of battle or laughter",
+      "facialFeatures": "Subdermal cyber-socket plug on left temple with protective cap",
+      "isNonHuman": true,
+      "nonHumanTraits": "Cracked porcelain android skin with golden kintsugi repair seams",
+      "role": "Ripperdoc / Underground Cyber-Surgeon",
+      "outfit": "Sterile white insulated coat with rolled sleeves revealing tattooed forearms, tactical scrubs, and heavy-duty nitrile gloves",
+      "props": "Sleek ergonomic chrome scalpel with micro-aperture ruby emitter emitting a focused violet cauterizing beam and fine micrometer dial (held delicately between index and thumb ready for incisions), Heavy brushed aluminum briefcase with frosted glass tubes containing synthetic ocular implants, bionic nerve clusters, and glowing blue refrigerant vapor (resting on nearby workbench with locking latches unhinged), Industrial surgical saw with diamond-tipped micro-teeth, hydraulic pressure gauge, and rubberized ergonomic dampener grip (hooked onto heavy rubber apron utility loop)",
+      "propItems": [
         {
-          "take_number": 1,
-          "total_takes": 1,
-          "duration_seconds": 4.5,
-          "timecode": "00:00 - 00:05",
-          "camera_instruction": "Establishing Wide Shot (24mm Ultra-Wide Anamorphic Prime), The camera tracks smoothly alongside the subject and then zooms in to the face",
-          "motion_vector": "The camera tracks smoothly alongside the subject and then zooms in to the face",
-          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
-          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Establishing Wide Shot (24mm Ultra-Wide Anamorphic Prime). Starting Position, Pose & Blocking: Kwame Mensah (Supreme Command Trenchcoat, Imposing presence, immaculate grooming, cold calcu) is positioned in the mid-left frame, moving forward toward the destination: initial position and pose caught as subject Actor delivers line with deliberate dramatic inflection., body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
-          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.5s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Tight Close-Up on Face (85mm Portrait Telephoto Prime). Updated Position, Pose & Settled Blocking: Kwame Mensah (Supreme Command Trenchcoat, Imposing presence, immaculate grooming, cold calcu) is occupies the center-right frame in tight focus, halted squarely at the destination point: updated position and pose following movement where subject settled in aftermath posture following actor delivers line with deliberate dramatic inflection., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
-          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Establishing Wide Shot) to Out-Frame Still (Tight Close-Up on Face). Camera Movement: The camera tracks smoothly alongside the subject and then zooms in to the face. Dynamic Action & Blocking: Actor delivers line with deliberate dramatic inflection.. Actor SPEAKER delivers dialogue with natural 2.6 w/s cadence: \"Three... two... one... System overridden! We're in!\". Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
+          "id": "prop-1789025309618-1-pqo",
+          "name": "Precision Surgical Laser Scalpel",
+          "category": "Tool & Instrument",
+          "detail": "Sleek ergonomic chrome scalpel with micro-aperture ruby emitter emitting a focused violet cauterizing beam and fine micrometer dial",
+          "equippedState": "Held delicately between index and thumb ready for incisions",
+          "enabled": true
+        },
+        {
+          "id": "prop-1789025309618-2-s49",
+          "name": "Cryo-Preserved Cyber-Implant Case",
+          "category": "Tech Device & Deck",
+          "detail": "Heavy brushed aluminum briefcase with frosted glass tubes containing synthetic ocular implants, bionic nerve clusters, and glowing blue refrigerant vapor",
+          "equippedState": "Resting on nearby workbench with locking latches unhinged",
+          "enabled": true
+        },
+        {
+          "id": "prop-1789025309618-3-242",
+          "name": "Pneumatic Bone-Saw with Diamond Teeth",
+          "category": "Tool & Instrument",
+          "detail": "Industrial surgical saw with diamond-tipped micro-teeth, hydraulic pressure gauge, and rubberized ergonomic dampener grip",
+          "equippedState": "Hooked onto heavy rubber apron utility loop",
+          "enabled": true
         }
-      ]
+      ],
+      "environment": "Underground clinic lit by buzzing fluorescent tubes, surrounded by jars of cybernetic eyes and tool racks",
+      "lighting": "Flickering warm candlelight and fireplace embers casting dancing orange shadows",
+      "cameraShot": "Intimate macro portrait highlighting intricate eyes, jewelry, and facial markings",
+      "expression": "Stoic and impassive, unreadable veteran gaze"
     },
-    {
-      "shot_number": 10,
-      "heading": "INT. THE GRAND CYBERPUNK MASTER FACILITY - NIGHT - SHOT 10",
-      "duration_seconds": 4.5,
-      "timecode": "00:41 - 00:45",
-      "camera_lens": "Full-Body Tracking Master Shot (35mm Wide Cinematic Lens)",
-      "camera_motion": "Steadicam lateral tracking dolly keeping pace with the movement across the space",
-      "characters_present": [
-        "Leila Farhadi"
-      ],
-      "set_used": "The Grand Cyberpunk Master Facility",
-      "props_used": [
-        "The Master Cyberpunk Key Artifact"
-      ],
-      "spoken_dialogue": null,
-      "action_description": "The heavy containment seals hiss open with a deafening release of pressurized gas, revealing the artifact in all its glory.",
-      "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Full-Body Tracking Master Shot (35mm Wide Cinematic Lens). Starting Position, Pose & Blocking: Leila Farhadi (Wanderer Travelling Cloak, Weathered veteran with grey-flecked hair, calm pos) is framed full-body from the flank, advancing with deliberate kinetic balance: initial position and pose caught as subject The heavy containment seals hiss open with a deafening release of pressurized gas, body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
-      "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.5s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Medium Profile Two-Shot (50mm Standard Prime Lens). Updated Position, Pose & Settled Blocking: Leila Farhadi (Wanderer Travelling Cloak, Weathered veteran with grey-flecked hair, calm pos) is settled in profile medium perspective, body weight anchored at final destination: updated position and pose following movement where subject revealing the artifact in all its glory., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
-      "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Full-Body Tracking Master Shot) to Out-Frame Still (Medium Profile Two-Shot). Camera Movement: Steadicam lateral tracking dolly keeping pace with the movement across the space. Dynamic Action & Blocking: The heavy containment seals hiss open with a deafening release of pressurized gas, revealing the artifact in all its glory.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot.",
-      "takes": [
-        {
-          "take_number": 1,
-          "total_takes": 1,
-          "duration_seconds": 4.5,
-          "timecode": "00:00 - 00:05",
-          "camera_instruction": "Full-Body Tracking Master Shot (35mm Wide Cinematic Lens), Steadicam lateral tracking dolly keeping pace with the movement across the space",
-          "motion_vector": "Steadicam lateral tracking dolly keeping pace with the movement across the space",
-          "init_seed_guidance": "Primary master keyframe generation. High physical stability, 24fps motion cadence.",
-          "in_frame_still_prompt": "IN-FRAME STILL (START KEYFRAME • t=0.0s): [Description: Create the opening static still frame to anchor the start of the video motion before action begins.] Framing: Full-Body Tracking Master Shot (35mm Wide Cinematic Lens). Starting Position, Pose & Blocking: Leila Farhadi (Wanderer Travelling Cloak, Weathered veteran with grey-flecked hair, calm pos) is framed full-body from the flank, advancing with deliberate kinetic balance: initial position and pose caught as subject The heavy containment seals hiss open with a deafening release of pressurized gas, body posture balanced in pre-action readiness, focused eyeline oriented toward upcoming action. Setting: The Grand Cyberpunk Master Facility featuring atmospheric volumetric lighting, rich environmental textures, and realistic shadow depth. High-contrast rim lighting, zero motion blur, photorealistic award-winning cinematic photography, 8K resolution, master color grading.",
-          "out_frame_still_prompt": "OUT-FRAME STILL (END KEYFRAME • t=4.5s): [Description: Create the terminal static still frame to anchor the conclusion of the video motion after action resolves.] Framing: Medium Profile Two-Shot (50mm Standard Prime Lens). Updated Position, Pose & Settled Blocking: Leila Farhadi (Wanderer Travelling Cloak, Weathered veteran with grey-flecked hair, calm pos) is settled in profile medium perspective, body weight anchored at final destination: updated position and pose following movement where subject revealing the artifact in all its glory., body weight anchored at resolved terminal location, expression settled in post-action stillness. Setting: The Grand Cyberpunk Master Facility with matching volumetric lighting, environmental textures, and atmospheric continuity. Crisp edge definition, zero motion blur, photorealistic depth, master color grading, 8K resolution.",
-          "video_prompt": "[AI Video Motion 24fps • In-to-Out Bridge] Transition from In-Frame Still (Full-Body Tracking Master Shot) to Out-Frame Still (Medium Profile Two-Shot). Camera Movement: Steadicam lateral tracking dolly keeping pace with the movement across the space. Dynamic Action & Blocking: The heavy containment seals hiss open with a deafening release of pressurized gas, revealing the artifact in all its glory.. Lighting: Dramatic cinematic rim-lighting and ambient atmosphere. Hyper-realistic motion physics, temporal stability, 8-second cinematic shot."
-        }
-      ]
-    }
-  ]
-}
+    "fullPrompt": "Cyber-noir film still, Blade Runner aesthetic, moody rainy night, neon cyan and magenta rim light, heavy atmosphere, chromatic aberration, synthwave haze, A striking Cyborg / Augmented Human Ripperdoc / Underground Cyber-Surgeon, of Slavic / Eastern European heritage, battle-hardened veteran (50–58 years old), Petite & Compact (5'1\" / 155 cm), Voluptuous, hourglass and commanding presence, Distinguished salt-and-pepper charcoal, styled in Tight intricate braided cornrows with metallic silver beads, Vibrant emerald green with jade flecks, Sharp crows-feet wrinkles revealing a lifetime of battle or laughter, Subdermal cyber-socket plug on left temple with protective cap, expression is stoic and impassive, unreadable veteran gaze, Distinctive traits: Cracked porcelain android skin with golden kintsugi repair seams, Wearing Sterile white insulated coat with rolled sleeves revealing tattooed forearms, tactical scrubs, and heavy-duty nitrile gloves, Equipped with and holding Sleek ergonomic chrome scalpel with micro-aperture ruby emitter emitting a focused violet cauterizing beam and fine micrometer dial (held delicately between index and thumb ready for incisions), Heavy brushed aluminum briefcase with frosted glass tubes containing synthetic ocular implants, bionic nerve clusters, and glowing blue refrigerant vapor (resting on nearby workbench with locking latches unhinged), Industrial surgical saw with diamond-tipped micro-teeth, hydraulic pressure gauge, and rubberized ergonomic dampener grip (hooked onto heavy rubber apron utility loop), Setting is Underground clinic lit by buzzing fluorescent tubes, surrounded by jars of cybernetic eyes and tool racks, Cyberpunk atmosphere, Intimate macro portrait highlighting intricate eyes, jewelry, and facial markings, Flickering warm candlelight and fireplace embers casting dancing orange shadows, 8k resolution, ultra-detailed, highly refined, volumetric god-rays, atmospheric light dispersion, particle haze, award-winning masterpiece, intricate craftsmanship, peak visual quality, cinematic shallow depth of field, creamy bokeh background blur, hyperdetailed symmetrical face, expressive lifelike eyes with specular reflections, subsurface scattering skin translucency, realistic skin luminosity",
+    "negativePrompt": "blurry, bad anatomy, deformed eyes, extra limbs, amputee, mutilated, bad hands, missing fingers, extra fingers, poorly drawn face, cloned face, gross proportions, malformed limbs, out of frame, signature, watermark, text, low quality, artifacting",
+    "tags": [
+      "cyber_noir",
+      "cyberpunk"
+    ]
+  }
+]
