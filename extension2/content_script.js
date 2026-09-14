@@ -219,7 +219,7 @@ async function runQueue({ prompts, mode, aspect, model }) {
 await typeIntoFlowTextarea(prompt);
 panelLog("Prompt typed into textarea.");
 
-await sleep(6000);
+await sleep(12000);
 
 } 
  catch (err) {

@@ -22,12 +22,16 @@ function highlight(el) {
 }
 
 // ======================================================
-// SELECTORS (patched)
+// GLOBAL CHARACTER INGREDIENT (Option A)
+// ======================================================
+const GLOBAL_CHARACTER = "Lara Smith";   // <— change this to your character name
+
+// ======================================================
+// SELECTORS
 // ======================================================
 const SELECTORS = {
   editor: ".ProseMirror",
 
-  // Unified media selector (ALL render locations)
   media: `
     div[data-testid="gallery"] img,
     div[data-testid="gallery"] video,
@@ -39,19 +43,16 @@ const SELECTORS = {
 
   generateBtn: ".generate-icon-button",
 
-  // Mode selectors
   tabTextToVideo: 'button[data-testid="tab-text-to-video"]',
   tabTextToImage: 'button[data-testid="tab-text-to-image"]',
   tabImageToImage: 'button[data-testid="tab-image-to-image"]',
   tabFrameToVideo: 'button[data-testid="tab-frame-to-video"]',
   tabIngredientsToVideo: 'button[data-testid="tab-ingredients-to-video"]',
 
-  // Model selectors
   modelDropdown: '[data-testid="model-selector"]',
   modelVeo2: 'li[data-value="veo-2"]',
   modelVeo1: 'li[data-value="veo-1"]',
 
-  // Aspect ratio selectors
   aspectDropdown: '[data-testid="aspect-ratio-selector"]',
   aspect169: 'li[data-value="16:9"]',
   aspect916: 'li[data-value="9:16"]',
@@ -90,15 +91,13 @@ async function waitForGenerateEnabled(timeout = 30000) {
 }
 
 // ======================================================
-// NEW MEDIA DETECTOR (bulletproof)
+// MEDIA DETECTOR
 // ======================================================
 async function waitForNewMedia(previousSet, timeout = 60000) {
   const start = performance.now();
 
   while (true) {
     const current = Array.from(document.querySelectorAll(SELECTORS.media));
-
-    // Find element not in previous set
     const newItem = current.find(el => !previousSet.includes(el));
     if (newItem) return newItem;
 
@@ -113,42 +112,85 @@ async function waitForNewMedia(previousSet, timeout = 60000) {
 // ======================================================
 // EDITOR TYPING
 // ======================================================
-async function safeTypeIntoEditor(editorEl, text, chunkSize = 120, delay = 40) {
+async function safeTypeIntoEditor(editorEl, text) {
   debugLog("Typing into editor:", text);
   highlight(editorEl);
 
   editorEl.focus();
 
-  // Clear existing content
-  const range = document.createRange();
-  range.selectNodeContents(editorEl);
-  const sel = window.getSelection();
-  sel.removeAllRanges();
-  sel.addRange(range);
-  document.execCommand("delete");
+  // Clear existing content safely
+  document.execCommand("selectAll", false, null);
+  document.execCommand("delete", false, null);
 
-  // Chunked typing (Flow-safe)
+  await sleep(50);
+
+  // Type text in chunks
+  const chunkSize = 120;
   for (let i = 0; i < text.length; i += chunkSize) {
     const chunk = text.slice(i, i + chunkSize);
     document.execCommand("insertText", false, chunk);
-    await sleep(delay);
+    await sleep(40);
   }
 }
 
 // ======================================================
-// DOWNLOAD URL EXTRACTOR
+// INGREDIENT SEARCH + ADD (Flow add-menu-trigger / search-input / asset-item)
 // ======================================================
-function getDownloadUrlFromMedia(el) {
-  const link = el.querySelector("a[href]");
-  if (link) return link.href;
+async function addCharacterIngredient(characterName) {
+  panelLog(`Adding ingredient: ${characterName}`);
 
-  const video = el.querySelector("video[src]");
-  if (video) return video.src;
+  // 1. Click the "Add ingredients" icon button
+  const addBtn = [...document.querySelectorAll("button")].find(b =>
+    b.className.includes("add-menu-trigger") &&
+    b.getAttribute("aria-label") === "Add ingredients to the prompt box"
+  );
 
-  const img = el.querySelector("img[src]");
-  if (img) return img.src;
+  if (!addBtn) {
+    panelLog("Add-menu-trigger button not found.");
+    return false;
+  }
 
-  return null;
+  highlight(addBtn);
+  addBtn.click();
+  panelLog("Ingredient menu opened.");
+
+  await sleep(300);
+
+  // 2. Wait for search input
+  const searchInput = await waitForSelector('input.search-input[aria-label="Search assets"]');
+  highlight(searchInput);
+
+  // Clear existing value
+  searchInput.focus();
+  searchInput.value = "";
+  searchInput.dispatchEvent(new Event("input", { bubbles: true }));
+
+  // Type search text directly
+  searchInput.value = characterName;
+  searchInput.dispatchEvent(new Event("input", { bubbles: true }));
+  searchInput.dispatchEvent(new KeyboardEvent("keyup", { key: "Enter", bubbles: true }));
+
+  panelLog(`Searching for: ${characterName}`);
+
+  await sleep(800);
+
+  // 3. Wait for asset items
+  const assetItems = [...document.querySelectorAll("button.asset-item")];
+
+  if (assetItems.length === 0) {
+    panelLog(`No ingredient results found for: ${characterName}`);
+    return false;
+  }
+
+  const firstItem = assetItems[0];
+  highlight(firstItem);
+  await sleep(800);
+  // 4. Click first result
+  firstItem.click();
+  panelLog(`Ingredient selected: ${characterName}`);
+
+  await sleep(300);
+  return true;
 }
 
 // ======================================================
@@ -219,7 +261,7 @@ async function setAspect(aspect) {
 }
 
 // ======================================================
-// CORE QUEUE RUNNER (patched)
+// CORE QUEUE RUNNER (with ingredient support)
 // ======================================================
 async function runQueue({ prompts, mode, aspect, model }) {
   panelLog(`Content script: received queue (${prompts.length} prompts).`);
@@ -232,68 +274,28 @@ async function runQueue({ prompts, mode, aspect, model }) {
   const editor = await waitForSelector(SELECTORS.editor);
   panelLog("Editor found.");
 
-  for (let i = 0; i < prompts.length; i++) {
-    const prompt = prompts[i];
-    panelLog(`Prompt ${i + 1}/${prompts.length}: "${prompt.slice(0, 80)}..."`);
+for (let i = 0; i < prompts.length; i++) {
+  const prompt = prompts[i];
+  panelLog(`Prompt ${i + 1}/${prompts.length}: "${prompt.slice(0, 80)}..."`);
 
-    try {
-      // Capture existing media
-      const previousMedia = Array.from(document.querySelectorAll(SELECTORS.media));
+  try {
+    const editor = await waitForSelector(SELECTORS.editor);  // ⭐ re-select every time
+    panelLog("Editor found for this prompt.");
 
-      // Type prompt
-      await safeTypeIntoEditor(editor, prompt);
-      panelLog("Prompt typed into editor.");
+    await safeTypeIntoEditor(editor, prompt);
+    panelLog("Prompt typed into editor.");
 
-      // Wait for generate button
-      const generateBtn = await waitForGenerateEnabled();
-      highlight(generateBtn);
-      panelLog("Generate button enabled.");
+    await addCharacterIngredient(GLOBAL_CHARACTER);
 
-      // Click generate
-      generateBtn.click();
-      panelLog("Generate clicked, waiting for render...");
+    const generateBtn = await waitForGenerateEnabled();
+    generateBtn.click();
 
-      // Scroll to ensure Flow loads media
-      window.scrollTo(0, document.body.scrollHeight);
-      await sleep(300);
-
-      // Wait for new media
-      const mediaEl = await waitForNewMedia(previousMedia);
-      panelLog("New render detected.");
-      highlight(mediaEl);
-
-      // Extract download URL
-      const url = getDownloadUrlFromMedia(mediaEl);
-      if (!url) {
-        panelLog("No download URL found.");
-        continue;
-      }
-
-      const filenameSafe = prompt.replace(/[^\w\d\-]+/g, "_").slice(0, 40);
-      const ext = url.includes(".mp4") ? ".mp4" :
-                  url.includes(".webm") ? ".webm" : ".png";
-
-      const filename = `flow-veo/${i + 1}_${filenameSafe}${ext}`;
-      panelLog(`Downloading: ${filename}`);
-
-      chrome.runtime.sendMessage(
-        { type: "FLOW_DOWNLOAD", url, filename },
-        resp => {
-          if (resp && resp.ok) {
-            panelLog(`Download started (id: ${resp.downloadId}).`);
-          } else {
-            panelLog("Download failed.");
-          }
-        }
-      );
-
-      await sleep(1500);
-
-    } catch (err) {
-      panelLog(`Error on prompt ${i + 1}: ${err.message}`);
-      debugLog("Error:", err);
-    }
+    await sleep(1500);
+  } catch (err) {
+    panelLog(`Error on prompt ${i + 1}: ${err.message}`);
   }
+}
+
 
   panelLog("Queue finished.");
 }
