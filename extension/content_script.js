@@ -22,9 +22,10 @@ function highlight(el) {
 }
 
 // ======================================================
-// GLOBAL CHARACTER (set dynamically from side panel)
+// GLOBALS
 // ======================================================
 let GLOBAL_CHARACTER = null;
+let GLOBAL_IMAGE = null;
 
 // ======================================================
 // SELECTORS
@@ -91,81 +92,7 @@ async function waitForGenerateEnabled(timeout = 30000) {
 }
 
 // ======================================================
-// MEDIA DETECTOR
-// ======================================================
-async function waitForNewMedia(previousSet, timeout = 60000) {
-  const start = performance.now();
-
-  while (true) {
-    const current = Array.from(document.querySelectorAll(SELECTORS.media));
-    const newItem = current.find(el => !previousSet.includes(el));
-    if (newItem) return newItem;
-
-    if (performance.now() - start > timeout) {
-      throw new Error("Render did not finish in time.");
-    }
-
-    await sleep(500);
-  }
-}
-
-async function clickCharactersFilter() {
-  panelLog("Clicking Characters filter...");
-
-  // 1. Find Angular CDK overlay container
-  const overlay = document.querySelector(".cdk-overlay-container");
-  if (!overlay) {
-    panelLog("CDK overlay container not found.");
-    return false;
-  }
-
-  // 2. Find all overlay panes
-  const panes = [...overlay.querySelectorAll(".cdk-overlay-pane")];
-
-  // 3. Find the pane that contains the side nav list
-  const sideNavPane = panes.find(pane =>
-    pane.querySelector("mat-nav-list") ||
-    pane.querySelector(".side-nav-list")
-  );
-
-  if (!sideNavPane) {
-    panelLog("Side nav pane not found inside CDK overlays.");
-    return false;
-  }
-
-  // 4. Find all tabs inside the overlay pane
-  const tabs = [...sideNavPane.querySelectorAll('[role="tab"]')];
-
-  // 5. Find the Characters tab
-  const charactersTab = tabs.find(el => {
-    const title = el.querySelector(".side-nav-list-item-title");
-    const text = (title ? title.textContent : el.textContent) || "";
-    return text.trim().toLowerCase() === "characters";
-  });
-
-  if (!charactersTab) {
-    panelLog("Characters tab not found inside overlay pane.");
-    return false;
-  }
-
-  // 6. Click the actual clickable element
-  const clickable = charactersTab.querySelector(".mdc-list-item__content") || charactersTab;
-
-  clickable.scrollIntoView({ block: "center" });
-  highlight(clickable);
-
-  clickable.click();
-
-  await sleep(500);
-
-  panelLog("Characters filter clicked (CDK overlay).");
-  return true;
-}
-
-
-
-// ======================================================
-// EDITOR TYPING (stable across all prompts)
+// EDITOR TYPING
 // ======================================================
 async function safeTypeIntoEditor(editorEl, text) {
   debugLog("Typing into editor:", text);
@@ -173,13 +100,11 @@ async function safeTypeIntoEditor(editorEl, text) {
 
   editorEl.focus();
 
-  // Clear existing content safely
   document.execCommand("selectAll", false, null);
   document.execCommand("delete", false, null);
 
   await sleep(50);
 
-  // Type text in chunks
   const chunkSize = 120;
   for (let i = 0; i < text.length; i += chunkSize) {
     const chunk = text.slice(i, i + chunkSize);
@@ -189,11 +114,81 @@ async function safeTypeIntoEditor(editorEl, text) {
 }
 
 // ======================================================
-// INGREDIENT SEARCH + ADD
+// INGREDIENT HELPERS (NO OVERLAY)
 // ======================================================
-async function addCharacterIngredient(characterName) {
-  panelLog(`Adding ingredient: ${characterName}`);
+async function clickFilter(name) {
+  panelLog(`Clicking filter: ${name} ...`);
 
+  // Side nav list is directly in DOM (per your markup)
+  const navList = document.querySelector("mat-nav-list.side-nav-list");
+  if (!navList) {
+    panelLog("Side nav list not found.");
+    return false;
+  }
+
+  const tabs = [...navList.querySelectorAll('[role="tab"]')];
+
+  const targetTab = tabs.find(el => {
+    const title = el.querySelector(".side-nav-list-item-title");
+    const text = (title ? title.textContent : el.textContent) || "";
+    return text.trim().toLowerCase() === name.trim().toLowerCase();
+  });
+
+  if (!targetTab) {
+    panelLog(`Filter "${name}" not found in side nav list.`);
+    return false;
+  }
+
+  const clickable = targetTab.querySelector(".mdc-list-item__content") || targetTab;
+
+  clickable.scrollIntoView({ block: "center" });
+  highlight(clickable);
+  clickable.click();
+
+  await sleep(300);
+
+  panelLog(`Filter "${name}" clicked.`);
+  return true;
+}
+
+async function chooseIngredient(name) {
+  const searchInput = await waitForSelector('input.search-input[aria-label="Search assets"]');
+  highlight(searchInput);
+
+  searchInput.focus();
+  searchInput.value = "";
+  searchInput.dispatchEvent(new Event("input", { bubbles: true }));
+
+  searchInput.value = name;
+  searchInput.dispatchEvent(new Event("input", { bubbles: true }));
+  searchInput.dispatchEvent(new KeyboardEvent("keyup", { key: "Enter", bubbles: true }));
+
+  panelLog(`Searching for: ${name}`);
+
+  await sleep(800);
+
+  const assetItems = [...document.querySelectorAll("button.asset-item")];
+
+  if (assetItems.length === 0) {
+    panelLog(`No ingredient results found for: ${name}`);
+    return false;
+  }
+
+  const firstItem = assetItems[0];
+  highlight(firstItem);
+  await sleep(800);
+
+  firstItem.click();
+  panelLog(`Ingredient selected: ${name}`);
+
+  await sleep(500);
+  return true;
+}
+
+async function addIngredient(name, category) {
+  panelLog(`Adding ingredient: ${name}`);
+
+  // 1. Click Add Ingredients button
   const addBtn = [...document.querySelectorAll("button")].find(b =>
     b.className.includes("add-menu-trigger") &&
     b.getAttribute("aria-label") === "Add ingredients to the prompt box"
@@ -209,45 +204,28 @@ async function addCharacterIngredient(characterName) {
   panelLog("Ingredient menu opened.");
 
   await sleep(300);
-  await clickCharactersFilter();
 
-  const searchInput = await waitForSelector('input.search-input[aria-label="Search assets"]');
-  highlight(searchInput);
-
-  searchInput.focus();
-  searchInput.value = "";
-  searchInput.dispatchEvent(new Event("input", { bubbles: true }));
-
-  searchInput.value = characterName;
-  searchInput.dispatchEvent(new Event("input", { bubbles: true }));
-  searchInput.dispatchEvent(new KeyboardEvent("keyup", { key: "Enter", bubbles: true }));
-
-  panelLog(`Searching for: ${characterName}`);
-
-  await sleep(800);
-
-  const assetItems = [...document.querySelectorAll("button.asset-item")];
-
-  if (assetItems.length === 0) {
-    panelLog(`No ingredient results found for: ${characterName}`);
-    return false;
+  // 2. Click filter if needed
+  if (category) {
+    await clickFilter(category);
   }
 
-  const firstItem = assetItems[0];
-  highlight(firstItem);
-  await sleep(800);
+  // 3. Search + select ingredient
+  const ok = await chooseIngredient(name);
+  if (!ok) return false;
 
-  firstItem.click();
-  panelLog(`Ingredient selected: ${characterName}`);
-
-  await sleep(300);
   return true;
 }
 
 // ======================================================
-// MODE / MODEL / ASPECT SWITCHING
+// MODE / MODEL / ASPECT (safe, but optional)
 // ======================================================
 async function setMode(mode) {
+  if (!mode) {
+    panelLog("Mode not provided, skipping mode switch.");
+    return;
+  }
+
   const map = {
     "text-video": SELECTORS.tabTextToVideo,
     "text-image": SELECTORS.tabTextToImage,
@@ -257,7 +235,7 @@ async function setMode(mode) {
   };
 
   const selector = map[mode];
-  const btn = document.querySelector(selector);
+  const btn = selector && document.querySelector(selector);
 
   if (btn) {
     btn.click();
@@ -269,6 +247,11 @@ async function setMode(mode) {
 }
 
 async function setModel(model) {
+  if (!model) {
+    panelLog("Model not provided, skipping model switch.");
+    return;
+  }
+
   const dropdown = document.querySelector(SELECTORS.modelDropdown);
   if (!dropdown) return panelLog("Model dropdown not found.");
 
@@ -289,6 +272,11 @@ async function setModel(model) {
 }
 
 async function setAspect(aspect) {
+  if (!aspect) {
+    panelLog("Aspect not provided, skipping aspect switch.");
+    return;
+  }
+
   const dropdown = document.querySelector(SELECTORS.aspectDropdown);
   if (!dropdown) return panelLog("Aspect dropdown not found.");
 
@@ -312,18 +300,16 @@ async function setAspect(aspect) {
 }
 
 // ======================================================
-// CORE QUEUE RUNNER (patched to accept character)
+// CORE QUEUE RUNNER
 // ======================================================
-async function runQueue({ prompts, mode, aspect, model, character }) {
+async function runQueue({ prompts, mode, aspect, model, character, image }) {
   GLOBAL_CHARACTER = character;
   panelLog(`Global ingredient set to: ${GLOBAL_CHARACTER}`);
+  GLOBAL_IMAGE = image;
+  panelLog(`Global ingredient set to: ${GLOBAL_IMAGE}`);
 
   panelLog(`Content script: received queue (${prompts.length} prompts).`);
-  debugLog("Queue payload:", { prompts, mode, aspect, model, character });
-
-  await setMode(mode);
-  await setModel(model);
-  await setAspect(aspect);
+  debugLog("Queue payload:", { prompts, mode, aspect, model, character, image });
 
   for (let i = 0; i < prompts.length; i++) {
     const prompt = prompts[i];
@@ -336,9 +322,16 @@ async function runQueue({ prompts, mode, aspect, model, character }) {
       await safeTypeIntoEditor(editor, prompt);
       panelLog("Prompt typed into editor.");
 
-      if (GLOBAL_CHARACTER) {
-        await addCharacterIngredient(GLOBAL_CHARACTER);
+      if (GLOBAL_IMAGE) {
+        await addIngredient(GLOBAL_IMAGE, "All");
       }
+
+         await sleep(1000);
+
+      if (GLOBAL_CHARACTER) {
+        await addIngredient(GLOBAL_CHARACTER, "Characters");
+      }
+      await sleep(500);
 
       const generateBtn = await waitForGenerateEnabled();
       generateBtn.click();

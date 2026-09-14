@@ -107,10 +107,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const characterInputEl = document.getElementById("characterInput");
+    const imageInputEl = document.getElementById("imageInput");
 
 const payload = {
   prompts,
-  character: characterInputEl.value.trim() || null
+  character: characterInputEl.value.trim() || null,
+  image: imageInputEl.value.trim() || null
+
 };
 
 
