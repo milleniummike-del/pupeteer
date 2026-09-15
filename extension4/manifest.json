@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Gentube Harness - Video",
+  "name": "Gentube Harness - Image to Image",
   "version": "0.1.0",
   "description": "Batch automation for Gentube prompts, generation, and downloads.",
   "permissions": [

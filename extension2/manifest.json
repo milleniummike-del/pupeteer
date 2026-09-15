@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Gentube Harness",
+  "name": "Gentube Harness - Text to Image",
   "version": "0.1.0",
-  "description": "Batch automation for Google Flow Veo: prompts, generation, and downloads.",
+  "description": "Batch automation for Gentube prompts, generation, and downloads.",
   "permissions": [
     "sidePanel",
     "scripting",
