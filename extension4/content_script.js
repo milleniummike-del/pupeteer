@@ -60,7 +60,7 @@ async function reactSafeType(el, text) {
 async function uploadImageFromName(name) {
   panelLog(name);
   const fileInput = await waitForSelector('input[type="file"]');
-  const url = chrome.runtime.getURL(`inputimages/${name}`);
+  const url = chrome.runtime.getURL(`inputimages/${name}.jpeg`);
   try {
     const blob = await fetch(url).then(r => r.blob());
     const file = new File([blob], url.split("/").pop(), { type: blob.type });
@@ -217,6 +217,31 @@ function extractTags(text) {
   };
 }
 
+async function typeIntoFlowTextarea(text) {
+
+  const el = document.querySelector('textarea[placeholder="Describe the change"]');
+  if (!el) throw new Error("Flow textarea not found.");
+
+  el.focus();
+
+  // React-compatible value setter
+  const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
+    window.HTMLTextAreaElement.prototype,
+    "value"
+  ).set;
+  nativeInputValueSetter.call(el, text);
+
+  // Fire React synthetic events
+  el.dispatchEvent(new Event("input", { bubbles: true }));
+  el.dispatchEvent(new Event("change", { bubbles: true }));
+
+  // Extra events Flow listens for
+  el.dispatchEvent(new InputEvent("beforeinput", { bubbles: true, inputType: "insertText", data: text }));
+  el.dispatchEvent(new KeyboardEvent("keydown", { bubbles: true, key: "Enter" }));
+  el.dispatchEvent(new KeyboardEvent("keyup", { bubbles: true, key: "Enter" }));
+  el.dispatchEvent(new CompositionEvent("compositionstart", { bubbles: true }));
+  el.dispatchEvent(new CompositionEvent("compositionend", { bubbles: true }));
+}
 
 // ======================================================
 // CORE QUEUE RUNNER (FINAL VERSION)
@@ -226,15 +251,6 @@ async function runQueue({ prompts }) {
   panelLog(`Content script: received queue (${prompts.length} prompts).`);
   panelLog("Queue payload:", { prompts });
 
-  // Discover all images in inputimages/
-  /*
-  const imageList = await discoverImages();
-  if (imageList.length === 0) {
-    panelLog("ERROR: No images found in inputimages/");
-    return;
-  }
-  */
-
   for (let i = 0; i < prompts.length; i++) {
     const prompt = prompts[i];
 
@@ -242,25 +258,61 @@ async function runQueue({ prompts }) {
 
     const result = extractTags(prompt);
 
+    while (await clickImageDeleteIfExists()) {
+      await sleep(1500);
+    }
+
     for (let i = 0; i < result.images.length; i++) {
       const s = result.images[i];
       try {
+
+        await sleep(2000);
         await uploadImageFromName(s);
+        await sleep(1000);
         await clickEditImage();
         await sleep(1000);
+
 
       } catch (err) {
         panelLog(`Error on prompt ${i + 1}: ${err.message}`);
         debugLog("Error:", err);
       }
-
-      await sleep(1000);
     }
+
+    await typeIntoFlowTextarea(prompt);
+    panelLog("Prompt typed into textarea.");
+
+    await sleep(6000);
 
   }
 
   panelLog("Queue finished.");
 }
+async function clickImageDeleteIfExists() {
+  // Find all thumbnail containers
+  const thumbs = document.querySelectorAll(".relative.h-16.w-16, .relative.h-full.w-full");
+
+  if (!thumbs.length) {
+    panelLog("No thumbnails found.");
+    return false;
+  }
+
+  // Look for delete button inside each thumbnail
+  for (const thumb of thumbs) {
+    const deleteBtn = thumb.querySelector("button[class*='absolute'], svg[class*='absolute']");
+    if (deleteBtn) {
+      highlight(deleteBtn);
+      deleteBtn.click();
+      panelLog("Clicked delete button.");
+      await sleep(1500); // wait for Flow to remove the thumbnail
+      return true;
+    }
+  }
+
+  panelLog("No delete button found in thumbnails.");
+  return false;
+}
+
 
 // ======================================================
 // SELECTOR TEST HARNESS
@@ -304,6 +356,14 @@ function runFlowSelectorTests() {
 // ======================================================
 // MESSAGE HANDLERS
 // ======================================================
+
+chrome.runtime.onMessage.addListener((msg) => {
+  if (msg.type === "FLOW_RELOAD_PAGE") {
+    location.reload();
+  }
+});
+
+
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   if (msg.type === "FLOW_RUN_QUEUE") {
     runQueue(msg.payload);
