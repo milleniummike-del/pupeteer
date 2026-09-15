@@ -301,7 +301,7 @@ async function setAspect(aspect) {
 
 function extractTags(text) {
   const characters = [];
-  const scenes = [];
+  const images = [];
 
   let i = 0;
   while (i < text.length) {
@@ -319,19 +319,20 @@ function extractTags(text) {
 
       if (key === "character") {
         characters.push(value);
-      } else if (key === "scene") {
-        scenes.push(value);
+      } else if (key === "image") {
+        images.push(value);
       }
     }
 
     i = end + 1;
   }
 
-  return { characters, scenes };
+    // Deduplicate
+  return {
+    characters: [...new Set(characters)],
+    images: [...new Set(images)]
+  };
 }
-
-
-
 
 
 // ======================================================
@@ -377,8 +378,8 @@ for (let i = 0; i < result.characters.length; i++) {
   await sleep(1000);
 }
 
-for (let i = 0; i < result.scenes.length; i++) {
-  const s = result.scenes[i];
+for (let i = 0; i < result.images.length; i++) {
+  const s = result.images[i];
   await addIngredient(s, "All");
   await sleep(1000);
 }

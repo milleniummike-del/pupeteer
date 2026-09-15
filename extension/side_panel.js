@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const jsonPreviewEl = document.getElementById("jsonPreview");
 
   let parsedJsonItems = [];
+  let filteredJsonPreview = [];
 
   function log(msg) {
     const ts = new Date().toLocaleTimeString();
@@ -32,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ---------------------------
-     JSON PARSING
+     JSON PARSING (MULTI-FIELD)
   ---------------------------- */
   parseJsonBtn.addEventListener("click", () => {
     log("Parse JSON clicked.");
@@ -43,33 +44,94 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
+    let arr;
     try {
-      const arr = JSON.parse(raw);
+      arr = JSON.parse(raw);
       if (!Array.isArray(arr)) {
         log("JSON must be an array of objects.");
         return;
       }
-
-      parsedJsonItems = arr;
-      log(`Parsed ${arr.length} items from JSON.`);
-
-      const fields = new Set();
-      arr.forEach(item => {
-        if (typeof item === "object" && item !== null) {
-          Object.keys(item).forEach(k => fields.add(k));
-        }
-      });
-
-      jsonFieldSelector.innerHTML = `<option value="__whole">Use whole item</option>`;
-      fields.forEach(f => {
-        jsonFieldSelector.innerHTML += `<option value="${f}">${f}</option>`;
-      });
-
-      jsonPreviewEl.textContent = JSON.stringify(arr, null, 2);
-
     } catch (err) {
       log("JSON parse error: " + err.message);
+      return;
     }
+
+    parsedJsonItems = arr;
+    log(`Parsed ${arr.length} items from JSON.`);
+
+    /* -----------------------------------------
+       Extract ALL possible fields (nested too)
+    ------------------------------------------ */
+    function extractFields(obj, prefix = "") {
+      const fields = [];
+      for (const key in obj) {
+        const value = obj[key];
+        const fullKey = prefix ? `${prefix}.${key}` : key;
+
+        fields.push(fullKey);
+
+        if (typeof value === "object" && value !== null && !Array.isArray(value)) {
+          fields.push(...extractFields(value, fullKey));
+        }
+      }
+      return fields;
+    }
+
+    const allFields = new Set();
+    arr.forEach(item => {
+      if (typeof item === "object" && item !== null) {
+        extractFields(item).forEach(f => allFields.add(f));
+      }
+    });
+
+    /* -----------------------------------------
+       Build multi-select dropdown
+    ------------------------------------------ */
+    jsonFieldSelector.innerHTML = "";
+    [...allFields].forEach(f => {
+      jsonFieldSelector.innerHTML += `<option value="${f}">${f}</option>`;
+    });
+
+    // Auto-select all fields initially
+    [...jsonFieldSelector.options].forEach(opt => (opt.selected = true));
+
+    /* -----------------------------------------
+       Build preview JSON using selected fields
+    ------------------------------------------ */
+    function buildPreview() {
+      const selected = [...jsonFieldSelector.selectedOptions].map(o => o.value);
+
+      const effective = selected.length ? selected : [...allFields];
+
+      const preview = arr.map(item => {
+        const out = {};
+
+        effective.forEach(path => {
+          const parts = path.split(".");
+          let ref = item;
+
+          for (const p of parts) {
+            if (ref && typeof ref === "object" && p in ref) {
+              ref = ref[p];
+            } else {
+              ref = undefined;
+              break;
+            }
+          }
+
+          out[path] = ref;
+        });
+
+        return out;
+      });
+
+      filteredJsonPreview = preview;
+      jsonPreviewEl.textContent = JSON.stringify(preview, null, 2);
+    }
+
+    buildPreview();
+
+    jsonFieldSelector.addEventListener("change", buildPreview);
   });
 
   /* ---------------------------
@@ -79,18 +141,13 @@ document.addEventListener("DOMContentLoaded", () => {
     let prompts = [];
 
     if (parsedJsonItems.length > 0) {
-      const field = jsonFieldSelector.value;
-
-      if (field === "__whole") {
-        prompts = parsedJsonItems.map(item => JSON.stringify(item));
+      if (filteredJsonPreview.length > 0) {
+        prompts = filteredJsonPreview.map(item => JSON.stringify(item));
+        log(`Using ${prompts.length} filtered JSON prompts.`);
       } else {
-        prompts = parsedJsonItems.map(item => {
-          if (item[field] !== undefined) return String(item[field]);
-          return JSON.stringify(item);
-        });
+        log("JSON parsed but no filtered preview available.");
+        return;
       }
-
-      log(`Using ${prompts.length} prompts from JSON.`);
     } else {
       const raw = promptsEl.value.trim();
       if (!raw) {
@@ -109,13 +166,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const characterInputEl = document.getElementById("characterInput");
     const imageInputEl = document.getElementById("imageInput");
 
-const payload = {
-  prompts,
-  character: characterInputEl.value.trim() || null,
-  image: imageInputEl.value.trim() || null
-
-};
-
+    const payload = {
+      prompts,
+      character: null,
+      image: null
+    };
 
     runBtn.disabled = true;
     log(`Starting queue with ${prompts.length} prompts...`);
@@ -141,32 +196,6 @@ const payload = {
     }
   });
 
-  /* ---------------------------
-     DEBUG
-  ---------------------------- */
-  debugOnBtn.addEventListener("click", async () => {
-    const tab = await getActiveTab();
-    if (!tab || !tab.id) return;
-    chrome.tabs.sendMessage(tab.id, { type: "FLOW_DEBUG_ON" });
-    log("Debug mode enabled.");
-  });
-
-  debugOffBtn.addEventListener("click", async () => {
-    const tab = await getActiveTab();
-    if (!tab || !tab.id) return;
-    chrome.tabs.sendMessage(tab.id, { type: "FLOW_DEBUG_OFF" });
-    log("Debug mode disabled.");
-  });
-
-  /* ---------------------------
-     SELECTOR TEST
-  ---------------------------- */
-  testSelectorsBtn.addEventListener("click", async () => {
-    const tab = await getActiveTab();
-    if (!tab || !tab.id) return;
-    chrome.tabs.sendMessage(tab.id, { type: "FLOW_TEST_SELECTORS" });
-    log("Requested selector test run.");
-  });
 
   /* ---------------------------
      LOGGING FROM CONTENT SCRIPT
