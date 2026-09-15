@@ -71,10 +71,8 @@ async function uploadImageFromName(name) {
 
     fileInput.dispatchEvent(new Event("change", { bubbles: true }));
 
-    panelLog(`Uploaded image: ${useUrl}`);
+    panelLog(`Uploaded image: ${url}`);
   } catch (e) { }
-
-
 }
 
 // ======================================================
@@ -102,6 +100,9 @@ async function clickDone() {
   panelLog("Clicked Done.");
 }
 
+// ======================================================
+// CLICK EDIT IMAGE
+// ======================================================
 async function clickEditImage() {
   panelLog("Searching for Edit Image button...");
 
@@ -121,7 +122,6 @@ async function clickEditImage() {
     return null;
   }
 
-  // 1. Main document
   let btn = findInRoot(document);
   if (btn) {
     highlight(btn);
@@ -130,7 +130,6 @@ async function clickEditImage() {
     return;
   }
 
-  // 2. Shadow DOMs
   const allElements = [...document.querySelectorAll("*")];
   for (const el of allElements) {
     if (el.shadowRoot) {
@@ -144,7 +143,6 @@ async function clickEditImage() {
     }
   }
 
-  // 3. Same-origin iframes
   const iframes = [...document.querySelectorAll("iframe")];
   for (const frame of iframes) {
     try {
@@ -159,7 +157,6 @@ async function clickEditImage() {
         return;
       }
 
-      // Check shadow roots inside iframe
       const iframeEls = [...doc.querySelectorAll("*")];
       for (const el of iframeEls) {
         if (el.shadowRoot) {
@@ -172,16 +169,16 @@ async function clickEditImage() {
           }
         }
       }
-    } catch (e) {
-      // cross-origin iframe, ignore
-    }
+    } catch (e) {}
   }
 
-  // If we reach here, nothing was found
-  panelLog("Edit Image button not found in any reachable DOM.");
+  panelLog("Edit Image button not found.");
   throw new Error("Edit Image button not found.");
 }
 
+// ======================================================
+// TAG EXTRACTION
+// ======================================================
 function extractTags(text) {
   const characters = [];
   const images = [];
@@ -194,102 +191,48 @@ function extractTags(text) {
     const end = text.indexOf("]", start + 1);
     if (end === -1) break;
 
-    const inside = text.slice(start + 1, end); // e.g. "Character: Fred"
+    const inside = text.slice(start + 1, end);
     const parts = inside.split(":");
     if (parts.length >= 2) {
-      const key = parts[0].trim().toLowerCase();   // "character" or "scene"
-      const value = parts.slice(1).join(":").trim(); // rest after first colon
+      const key = parts[0].trim().toLowerCase();
+      const value = parts.slice(1).join(":").trim();
 
-      if (key === "character") {
-        characters.push(value);
-      } else if (key === "image") {
-        images.push(value);
-      }
+      if (key === "character") characters.push(value);
+      else if (key === "image") images.push(value);
     }
 
     i = end + 1;
   }
 
-  // Deduplicate
   return {
     characters: [...new Set(characters)],
     images: [...new Set(images)]
   };
 }
 
+// ======================================================
+// TYPE INTO FLOW TEXTAREA
+// ======================================================
 async function typeIntoFlowTextarea(text) {
-
   const el = document.querySelector('textarea[placeholder="Describe the change"]');
   if (!el) throw new Error("Flow textarea not found.");
 
   el.focus();
 
-  // React-compatible value setter
-  const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
+  const setter = Object.getOwnPropertyDescriptor(
     window.HTMLTextAreaElement.prototype,
     "value"
   ).set;
-  nativeInputValueSetter.call(el, text);
+  setter.call(el, text);
 
-  // Fire React synthetic events
   el.dispatchEvent(new Event("input", { bubbles: true }));
   el.dispatchEvent(new Event("change", { bubbles: true }));
-
-  // Extra events Flow listens for
-  el.dispatchEvent(new InputEvent("beforeinput", { bubbles: true, inputType: "insertText", data: text }));
-  el.dispatchEvent(new KeyboardEvent("keydown", { bubbles: true, key: "Enter" }));
-  el.dispatchEvent(new KeyboardEvent("keyup", { bubbles: true, key: "Enter" }));
-  el.dispatchEvent(new CompositionEvent("compositionstart", { bubbles: true }));
-  el.dispatchEvent(new CompositionEvent("compositionend", { bubbles: true }));
 }
 
 // ======================================================
-// CORE QUEUE RUNNER (FINAL VERSION)
+// DELETE IMAGE THUMBNAILS
 // ======================================================
-async function runQueue({ prompts }) {
-
-  panelLog(`Content script: received queue (${prompts.length} prompts).`);
-  panelLog("Queue payload:", { prompts });
-
-  for (let i = 0; i < prompts.length; i++) {
-    const prompt = prompts[i];
-
-    panelLog(`Prompt ${i + 1}/${prompts.length}: "${prompt.slice(0, 80)}..."`);
-
-    const result = extractTags(prompt);
-
-    while (await clickImageDeleteIfExists()) {
-      await sleep(1500);
-    }
-
-    for (let i = 0; i < result.images.length; i++) {
-      const s = result.images[i];
-      try {
-
-        await sleep(2000);
-        await uploadImageFromName(s);
-        await sleep(1000);
-        await clickEditImage();
-        await sleep(1000);
-
-
-      } catch (err) {
-        panelLog(`Error on prompt ${i + 1}: ${err.message}`);
-        debugLog("Error:", err);
-      }
-    }
-
-    await typeIntoFlowTextarea(prompt);
-    panelLog("Prompt typed into textarea.");
-
-    await sleep(6000);
-
-  }
-
-  panelLog("Queue finished.");
-}
 async function clickImageDeleteIfExists() {
-  // Find all thumbnail containers
   const thumbs = document.querySelectorAll(".relative.h-16.w-16, .relative.h-full.w-full");
 
   if (!thumbs.length) {
@@ -297,22 +240,92 @@ async function clickImageDeleteIfExists() {
     return false;
   }
 
-  // Look for delete button inside each thumbnail
   for (const thumb of thumbs) {
     const deleteBtn = thumb.querySelector("button[class*='absolute'], svg[class*='absolute']");
     if (deleteBtn) {
       highlight(deleteBtn);
       deleteBtn.click();
       panelLog("Clicked delete button.");
-      await sleep(1500); // wait for Flow to remove the thumbnail
+      await sleep(1500);
       return true;
     }
   }
 
-  panelLog("No delete button found in thumbnails.");
+  panelLog("No delete button found.");
   return false;
 }
 
+// ======================================================
+// FULL QUEUE RESUME SYSTEM
+// ======================================================
+async function runQueue({ prompts, startIndex = 0 }) {
+  panelLog(`Queue starting at index ${startIndex}/${prompts.length}`);
+
+  for (let i = startIndex; i < prompts.length; i++) {
+    const prompt = prompts[i];
+
+    // Save state before each prompt
+    localStorage.setItem("flow_queue_state", JSON.stringify({
+      prompts,
+      index: i
+    }));
+
+    // Reload command
+    if (prompt === "__RELOAD__") {
+      panelLog("Reloading page...");
+      location.reload();
+      return;
+    }
+
+    panelLog(`Prompt ${i + 1}/${prompts.length}: "${prompt.slice(0, 80)}..."`);
+
+    const result = extractTags(prompt);
+
+    for (let j = 0; j < result.images.length; j++) {
+      const s = result.images[j];
+      try {
+        await sleep(2000);
+        await uploadImageFromName(s);
+        await sleep(1000);
+        await clickEditImage();
+        await sleep(1000);
+      } catch (err) {
+        panelLog(`Error on prompt ${i + 1}: ${err.message}`);
+        debugLog("Error:", err);
+      }
+    }
+
+    await typeIntoFlowTextarea(prompt);
+    panelLog("Prompt typed.");
+
+    await sleep(6000);
+    panelLog("Reloading page after prompt...");
+localStorage.setItem("flow_queue_state", JSON.stringify({
+  prompts,
+  index: i + 1
+}));
+location.reload();
+return;
+
+  }
+
+  panelLog("Queue finished.");
+  localStorage.removeItem("flow_queue_state");
+}
+
+// ======================================================
+// AUTO-RESUME AFTER RELOAD
+// ======================================================
+window.addEventListener("load", () => {
+  const state = localStorage.getItem("flow_queue_state");
+  if (!state) return;
+
+  const { prompts, index } = JSON.parse(state);
+
+  panelLog(`Resuming queue after reload at index ${index}...`);
+
+  runQueue({ prompts, startIndex: index });
+});
 
 // ======================================================
 // SELECTOR TEST HARNESS
@@ -340,8 +353,8 @@ function runFlowSelectorTests() {
   results.forEach(r => {
     const color =
       r.count === 0 ? "color:#ef4444" :
-        r.count === 1 ? "color:#22c55e" :
-          "color:#eab308";
+      r.count === 1 ? "color:#22c55e" :
+      "color:#eab308";
 
     console.groupCollapsed(`%c${r.name} → ${r.selector}`, color);
     console.log("Matches:", r.count);
@@ -356,13 +369,11 @@ function runFlowSelectorTests() {
 // ======================================================
 // MESSAGE HANDLERS
 // ======================================================
-
 chrome.runtime.onMessage.addListener((msg) => {
   if (msg.type === "FLOW_RELOAD_PAGE") {
     location.reload();
   }
 });
-
 
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   if (msg.type === "FLOW_RUN_QUEUE") {

@@ -75,39 +75,6 @@ function waitForSelector(selector, timeout = 30000) {
   });
 }
 
-async function waitForGenerateEnabled(timeout = 30000) {
-  const start = performance.now();
-  while (true) {
-    const btn = document.querySelector(SELECTORS.generateBtn);
-    if (btn && !btn.classList.contains("mat-mdc-button-disabled")) {
-      return btn;
-    }
-    if (performance.now() - start > timeout) {
-      throw new Error("Generate button did not become enabled.");
-    }
-    await sleep(300);
-  }
-}
-
-// ======================================================
-// NEW MEDIA DETECTOR (bulletproof)
-// ======================================================
-async function waitForNewMedia(previousSet, timeout = 60000) {
-  const start = performance.now();
-
-  while (true) {
-    const current = Array.from(document.querySelectorAll('img.image[data-media-id]'));
-
-    const newItem = current.find(el => !previousSet.includes(el));
-    if (newItem) return newItem;
-
-    if (performance.now() - start > timeout) {
-      throw new Error("Render did not finish in time.");
-    }
-
-    await sleep(300);
-  }
-}
 
 // ======================================================
 // EDITOR TYPING
@@ -134,24 +101,9 @@ async function safeTypeIntoEditor(editorEl, text, chunkSize = 120, delay = 40) {
   }
 }
 
-// ======================================================
-// DOWNLOAD URL EXTRACTOR
-// ======================================================
-function getDownloadUrlFromMedia(el) {
-  const link = el.querySelector("a[href]");
-  if (link) return link.href;
-
-  const video = el.querySelector("video[src]");
-  if (video) return video.src;
-
-  const img = el.querySelector("img[src]");
-  if (img) return img.src;
-
-  return null;
-}
 
 async function typeIntoFlowTextarea(text) {
-  const el = document.querySelector('textarea[placeholder="Type to Create ✨"]');
+  const el = document.querySelector('textarea');
   if (!el) throw new Error("Flow textarea not found.");
 
   el.focus();
@@ -219,7 +171,35 @@ async function runQueue({ prompts, mode, aspect, model }) {
 await typeIntoFlowTextarea(prompt);
 panelLog("Prompt typed into textarea.");
 
+// Add selector
+SELECTORS.createBtn = 'button[aria-label="Create"]';
+
+// Safe click helper
+async function safeClickCreate() {
+  const btn = document.querySelector(SELECTORS.createBtn);
+  if (!btn) throw new Error("Create button not found.");
+
+  btn.focus();
+  btn.dispatchEvent(new MouseEvent("mousedown", { bubbles: true, cancelable: true }));
+  btn.dispatchEvent(new MouseEvent("mouseup", { bubbles: true, cancelable: true }));
+  btn.dispatchEvent(new MouseEvent("click", { bubbles: true, cancelable: true }));
+}
+
+// Patch inside runQueue
+await typeIntoFlowTextarea(prompt);
+panelLog("Prompt typed into textarea.");
+
+await sleep(500);
+
+try {
+  await safeClickCreate();
+  panelLog("Create button clicked.");
+} catch (err) {
+  panelLog("Create click failed: " + err.message);
+}
+
 await sleep(12000);
+
 
 } 
  catch (err) {
