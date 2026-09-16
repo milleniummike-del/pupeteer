@@ -1,13 +1,8 @@
-// Minimal background for downloads and media detection
+console.log("Background worker started");
 
-chrome.runtime.onInstalled.addListener(() => {
-  console.log("Updated!! Automation installed.");
-});
-
-// Helper: map Content-Type → file extension
+// Map Content-Type → extension
 function extFromContentType(ct) {
   if (!ct) return "bin";
-
   ct = ct.toLowerCase();
 
   if (ct.includes("image/png")) return "png";
@@ -23,7 +18,7 @@ function extFromContentType(ct) {
   return "bin";
 }
 
-// Media detection via response headers
+// Detect media via headers
 chrome.webRequest.onHeadersReceived.addListener(
   function (details) {
     const headers = details.responseHeaders || [];
@@ -40,11 +35,8 @@ chrome.webRequest.onHeadersReceived.addListener(
 
     const ext = extFromContentType(contentType);
 
-    // Only treat as media if extension looks like image/video
-    if (
-      ["png", "jpg", "jpeg", "webp", "gif", "mp4", "webm", "mov"].includes(ext)
-    ) {
-      console.log("Media detected:", details.url, "ct:", contentType, "ext:", ext);
+    if (["png","jpg","jpeg","webp","gif","mp4","webm","mov"].includes(ext)) {
+      console.log("Media detected:", details.url, "ext:", ext);
 
       chrome.tabs.sendMessage(details.tabId, {
         type: "FLOW_MEDIA_DETECTED",
@@ -57,28 +49,42 @@ chrome.webRequest.onHeadersReceived.addListener(
   ["responseHeaders", "extraHeaders"]
 );
 
-// Download handler: saves into Downloads/FlowCaptures/
+// Download handler with toggle + extension filter
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   if (msg.type === "FLOW_DOWNLOAD") {
     const { url, ext } = msg;
 
-    const safeExt = ext || "bin";
-    const filename = `FlowCaptures/${Date.now()}.${safeExt}`;
+    chrome.storage.local.get(["autoDownloadEnabled", "allowedExtensions"], data => {
+      const enabled = data.autoDownloadEnabled ?? true;
+      const allowed = data.allowedExtensions ?? ["png","jpg","webp","mp4","webm"];
 
-    console.log("Downloading:", url, "as", filename);
-
-    chrome.downloads.download(
-      {
-        url,
-        filename,
-        conflictAction: "uniquify",
-        saveAs: false
-      },
-      downloadId => {
-        sendResponse({ ok: true, downloadId });
+      if (!enabled) {
+        console.log("Auto-download disabled, skipping:", url);
+        sendResponse({ ok: false, skipped: true });
+        return;
       }
-    );
 
-    return true; // keep worker alive for async sendResponse
+      if (!allowed.includes(ext)) {
+        console.log("Extension filtered out:", ext, url);
+        sendResponse({ ok: false, filtered: true });
+        return;
+      }
+
+      const filename = `FlowCaptures/${Date.now()}.${ext}`;
+
+      chrome.downloads.download(
+        {
+          url,
+          filename,
+          conflictAction: "uniquify",
+          saveAs: false
+        },
+        downloadId => {
+          sendResponse({ ok: true, downloadId });
+        }
+      );
+    });
+
+    return true;
   }
 });

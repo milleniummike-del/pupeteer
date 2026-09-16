@@ -12,9 +12,7 @@ function highlight(el) {
   el.style.outlineOffset = "2px";
 }
 
-// ======================================================
-// WAIT HELPERS
-// ======================================================
+// Wait helper
 function waitForSelector(selector, timeout = 30000) {
   return new Promise((resolve, reject) => {
     const start = performance.now();
@@ -29,13 +27,9 @@ function waitForSelector(selector, timeout = 30000) {
   });
 }
 
-// ======================================================
-// EDITOR TYPING
-// ======================================================
+// Editor typing
 async function safeTypeIntoEditor(editorEl, text) {
-  debugLog("Typing into editor:", text);
   highlight(editorEl);
-
   editorEl.focus();
 
   document.execCommand("selectAll", false, null);
@@ -51,9 +45,7 @@ async function safeTypeIntoEditor(editorEl, text) {
   }
 }
 
-// ======================================================
-// CORE QUEUE RUNNER
-// ======================================================
+// Queue runner
 async function runQueue({ prompts }) {
   panelLog("Queue started");
 
@@ -64,9 +56,7 @@ async function runQueue({ prompts }) {
   panelLog("Queue finished.");
 }
 
-// ======================================================
-// MESSAGE HANDLERS
-// ======================================================
+// Message handlers
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   if (msg.type === "FLOW_RUN_QUEUE") {
     runQueue(msg.payload);
@@ -85,6 +75,5 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   }
 });
 
-// Initial log
 console.log("Content script loaded.");
 panelLog("Content script loaded.");
