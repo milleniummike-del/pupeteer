@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Simple Automation",
+  "version": "0.1.0",
+  "description": "Automation",
+"permissions": [
+  "sidePanel",
+  "scripting",
+  "downloads",
+  "storage",
+  "webRequest",
+  "webRequestBlocking",
+  "extraHeaders",
+  "<all_urls>"
+],
+"host_permissions": [
+  "<all_urls>"
+],
+
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Simple Automation"
+  },
+  "side_panel": {
+    "default_path": "side_panel.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://labs.google.com/*",
+        "https://labs.google/*",
+        "https://flow.google.com/*",
+        "https://www.gentube.app/*"
+      ],
+      "js": ["content_script.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
