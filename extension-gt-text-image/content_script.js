@@ -89,6 +89,7 @@ function extractBaseFilename(promptText, fallbackBaseFilename) {
 // NEXT IMAGE PROMISE
 // ======================================================
 let nextImageResolver = null;
+let currentPromptBaseFilename = null;
 
 function waitForNextImage() {
   return new Promise(resolve => {
@@ -110,11 +111,7 @@ async function runQueue({ prompts }) {
     const prompt = prompts[i];
 
     const baseFilename = extractBaseFilename(prompt, fallbackBaseFilename);
-
-    chrome.runtime.sendMessage({
-      type: "FLOW_SET_BASE_FILENAME",
-      baseFilename
-    });
+    currentPromptBaseFilename = baseFilename;
 
     panelLog(`Prompt ${i + 1}/${prompts.length}: baseFilename=${baseFilename}`);
 
@@ -201,7 +198,8 @@ function handleDataUrl(url) {
   chrome.runtime.sendMessage({
     type: "FLOW_DOWNLOAD_DATA_URL",
     url,
-    ext
+    ext,
+    baseFilename: currentPromptBaseFilename
   });
 }
 

@@ -60,7 +60,7 @@ async function reactSafeType(el, text) {
 async function uploadImageFromName(name) {
   panelLog(name);
   const fileInput = await waitForSelector('input[type="file"]');
-  const url = chrome.runtime.getURL(`inputimages/${name}.jpeg`);
+  const url = chrome.runtime.getURL(`inputimages/${name}.webp`);
   try {
     const blob = await fetch(url).then(r => r.blob());
     const file = new File([blob], url.split("/").pop(), { type: blob.type });

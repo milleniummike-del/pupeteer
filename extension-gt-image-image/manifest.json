@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Gentube Harness - Image to Image",
+  "name": "GT - Image to Image",
   "version": "0.1.0",
   "description": "Batch automation for Gentube prompts, generation, and downloads.",
   "permissions": [
@@ -27,7 +27,7 @@
     "type": "module"
   },
   "action": {
-    "default_title": "Flow Veo Automation"
+    "default_title": "GT - Image to Image"
   },
   "side_panel": {
     "default_path": "side_panel.html"

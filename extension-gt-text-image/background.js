@@ -68,13 +68,6 @@ function hashBase64(base64) {
 // PER-TAG LETTER COUNTERS
 // ======================================================
 const perTagCounters = new Map();
-let currentBaseFilename = "image";
-
-chrome.runtime.onMessage.addListener((msg) => {
-  if (msg.type === "FLOW_SET_BASE_FILENAME") {
-    currentBaseFilename = msg.baseFilename || ("Unknown-" + Date.now());
-  }
-});
 
 function nextLetterFor(baseFilename) {
   if (!perTagCounters.has(baseFilename)) {
@@ -110,8 +103,10 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
         const directory = data.downloadDirectory ?? "FlowCaptures";
 
         const fallbackBaseFilename = data.baseFilename ?? "";
+        const incomingBaseFilename = msg.baseFilename;
+
         const baseFilename =
-          currentBaseFilename ||
+          incomingBaseFilename ||
           fallbackBaseFilename ||
           ("Unknown-" + Date.now());
 
@@ -125,7 +120,6 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
           return;
         }
 
-        // If baseFilename already ends with -A, -B, -C... skip letter suffix
         const endsWithLetter = /^.+-[A-Z]$/.test(baseFilename);
 
         let finalFilename;
