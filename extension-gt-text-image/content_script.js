@@ -22,12 +22,11 @@ function highlight(el) {
 }
 
 // ======================================================
-// SELECTORS (patched)
+// SELECTORS
 // ======================================================
 const SELECTORS = {
   editor: ".ProseMirror",
 
-  // Unified media selector (ALL render locations)
   media: `
     div[data-testid="gallery"] img,
     div[data-testid="gallery"] video,
@@ -39,19 +38,16 @@ const SELECTORS = {
 
   generateBtn: ".generate-icon-button",
 
-  // Mode selectors
   tabTextToVideo: 'button[data-testid="tab-text-to-video"]',
   tabTextToImage: 'button[data-testid="tab-text-to-image"]',
   tabImageToImage: 'button[data-testid="tab-image-to-image"]',
   tabFrameToVideo: 'button[data-testid="tab-frame-to-video"]',
   tabIngredientsToVideo: 'button[data-testid="tab-ingredients-to-video"]',
 
-  // Model selectors
   modelDropdown: '[data-testid="model-selector"]',
   modelVeo2: 'li[data-value="veo-2"]',
   modelVeo1: 'li[data-value="veo-1"]',
 
-  // Aspect ratio selectors
   aspectDropdown: '[data-testid="aspect-ratio-selector"]',
   aspect169: 'li[data-value="16:9"]',
   aspect916: 'li[data-value="9:16"]',
@@ -75,7 +71,6 @@ function waitForSelector(selector, timeout = 30000) {
   });
 }
 
-
 // ======================================================
 // EDITOR TYPING
 // ======================================================
@@ -85,7 +80,6 @@ async function safeTypeIntoEditor(editorEl, text, chunkSize = 120, delay = 40) {
 
   editorEl.focus();
 
-  // Clear existing content
   const range = document.createRange();
   range.selectNodeContents(editorEl);
   const sel = window.getSelection();
@@ -93,7 +87,6 @@ async function safeTypeIntoEditor(editorEl, text, chunkSize = 120, delay = 40) {
   sel.addRange(range);
   document.execCommand("delete");
 
-  // Chunked typing (Flow-safe)
   for (let i = 0; i < text.length; i += chunkSize) {
     const chunk = text.slice(i, i + chunkSize);
     document.execCommand("insertText", false, chunk);
@@ -101,63 +94,26 @@ async function safeTypeIntoEditor(editorEl, text, chunkSize = 120, delay = 40) {
   }
 }
 
-
 async function typeIntoFlowTextarea(text) {
   const el = document.querySelector('textarea');
   if (!el) throw new Error("Flow textarea not found.");
 
   el.focus();
 
-  // React-compatible value setter
-  const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
+  const setter = Object.getOwnPropertyDescriptor(
     window.HTMLTextAreaElement.prototype,
     "value"
   ).set;
-  nativeInputValueSetter.call(el, text);
+  setter.call(el, text);
 
-  // Fire React synthetic events
   el.dispatchEvent(new Event("input", { bubbles: true }));
   el.dispatchEvent(new Event("change", { bubbles: true }));
-
-  // Extra events Flow listens for
-  el.dispatchEvent(new InputEvent("beforeinput", { bubbles: true, inputType: "insertText", data: text }));
-  el.dispatchEvent(new KeyboardEvent("keydown", { bubbles: true, key: "Enter" }));
-  el.dispatchEvent(new KeyboardEvent("keyup", { bubbles: true, key: "Enter" }));
-  el.dispatchEvent(new CompositionEvent("compositionstart", { bubbles: true }));
-  el.dispatchEvent(new CompositionEvent("compositionend", { bubbles: true }));
-}
-
-
-function deepScanForTextarea() {
-  const results = [];
-
-  function scan(node) {
-    if (!node) return;
-
-    // Check node itself
-    if (node.tagName === "TEXTAREA") {
-      results.push(node);
-    }
-
-    // Check shadow root
-    if (node.shadowRoot) {
-      scan(node.shadowRoot);
-    }
-
-    // Scan children
-    node.childNodes.forEach(child => scan(child));
-  }
-
-  scan(document);
-
-  return results;
 }
 
 // ======================================================
-// CORE QUEUE RUNNER (patched)
+// CORE QUEUE RUNNER
 // ======================================================
-async function runQueue({ prompts, mode, aspect, model }) {
-
+async function runQueue({ prompts }) {
 
   panelLog(`Content script: received queue (${prompts.length} prompts).`);
   panelLog("Queue payload:", { prompts });
@@ -166,81 +122,40 @@ async function runQueue({ prompts, mode, aspect, model }) {
     const prompt = prompts[i];
     panelLog(`Prompt ${i + 1}/${prompts.length}: "${prompt.slice(0, 80)}..."`);
 
-   try {
+    try {
+      await typeIntoFlowTextarea(prompt);
+      panelLog("Prompt typed into textarea.");
 
-await typeIntoFlowTextarea(prompt);
-panelLog("Prompt typed into textarea.");
+      SELECTORS.createBtn = 'button[aria-label="Create"]';
 
-// Add selector
-SELECTORS.createBtn = 'button[aria-label="Create"]';
+      async function safeClickCreate() {
+        const btn = document.querySelector(SELECTORS.createBtn);
+        if (!btn) throw new Error("Create button not found.");
 
-// Safe click helper
-async function safeClickCreate() {
-  const btn = document.querySelector(SELECTORS.createBtn);
-  if (!btn) throw new Error("Create button not found.");
+        btn.focus();
+        btn.dispatchEvent(new MouseEvent("mousedown", { bubbles: true }));
+        btn.dispatchEvent(new MouseEvent("mouseup", { bubbles: true }));
+        btn.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+      }
 
-  btn.focus();
-  btn.dispatchEvent(new MouseEvent("mousedown", { bubbles: true, cancelable: true }));
-  btn.dispatchEvent(new MouseEvent("mouseup", { bubbles: true, cancelable: true }));
-  btn.dispatchEvent(new MouseEvent("click", { bubbles: true, cancelable: true }));
-}
+      await sleep(500);
 
-// Patch inside runQueue
-await typeIntoFlowTextarea(prompt);
-panelLog("Prompt typed into textarea.");
+      try {
+        await safeClickCreate();
+        panelLog("Create button clicked.");
+      } catch (err) {
+        panelLog("Create click failed: " + err.message);
+      }
 
-await sleep(500);
+      await sleep(12000);
 
-try {
-  await safeClickCreate();
-  panelLog("Create button clicked.");
-} catch (err) {
-  panelLog("Create click failed: " + err.message);
-}
-
-await sleep(12000);
-
-
-} 
- catch (err) {
+    } catch (err) {
       panelLog(`Error on prompt ${i + 1}: ${err.message}`);
       debugLog("Error:", err);
     }
   }
 
   panelLog("Queue finished.");
-}
-
-// ======================================================
-// SELECTOR TEST HARNESS
-// ======================================================
-function runFlowSelectorTests() {
-  if (!DEBUG) {
-    panelLog("Enable debug mode to run selector tests.");
-    return;
-  }
-
-  const results = [];
-  for (const [name, selector] of Object.entries(SELECTORS)) {
-    const nodes = document.querySelectorAll(selector);
-    results.push({ name, selector, count: nodes.length, nodes });
-  }
-
-  console.group("%cSelector Test Harness", "color:#22c55e;font-size:16px;");
-  results.forEach(r => {
-    const color =
-      r.count === 0 ? "color:#ef4444" :
-      r.count === 1 ? "color:#22c55e" :
-      "color:#eab308";
-
-    console.groupCollapsed(`%c${r.name} → ${r.selector}`, color);
-    console.log("Matches:", r.count);
-    console.log("Nodes:", r.nodes);
-    console.groupEnd();
-  });
-  console.groupEnd();
-
-  panelLog("Selector test completed.");
 }
 
 // ======================================================
@@ -253,21 +168,126 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
     return true;
   }
 
-  if (msg.type === "FLOW_DEBUG_ON") {
-    DEBUG = true;
-    panelLog("Debug mode enabled.");
-  }
+  if (msg.type === "FLOW_MEDIA_DETECTED") {
+    panelLog(`Media detected: ${msg.url} (ext: ${msg.ext})`);
 
-  if (msg.type === "FLOW_DEBUG_OFF") {
-    DEBUG = false;
-    panelLog("Debug mode disabled.");
-  }
+    /*
+    chrome.runtime.sendMessage({
+      type: "FLOW_DOWNLOAD",
+      url: msg.url,
+      ext: msg.ext
+    });
 
-  if (msg.type === "FLOW_TEST_SELECTORS") {
-    runFlowSelectorTests();
+    */
   }
 });
 
-// Initial log
+// Cache of seen base64 hashes
+const seenBase64Hashes = new Set();
+
+// Fast hash function for base64 strings
+function hashBase64(base64) {
+  let hash = 0;
+  for (let i = 0; i < base64.length; i++) {
+    hash = (hash * 31 + base64.charCodeAt(i)) >>> 0;
+  }
+  return hash;
+}
+
+function handleDataUrl(url) {
+  if (!url.startsWith("data:image") && !url.startsWith("data:video")) return;
+
+  // Extract MIME → extension
+  const mime = url.slice(5, url.indexOf(";"));
+  const ext = mime.split("/")[1] || "bin";
+
+  // Extract base64 payload
+  const base64 = url.split(",")[1] || "";
+  const hash = hashBase64(base64);
+
+  // Duplicate check
+  if (seenBase64Hashes.has(hash)) {
+    debugLog("Duplicate data URL skipped (hash match)");
+    return; // ⭐ Skip sending to background
+  }
+
+  // Mark as seen
+  seenBase64Hashes.add(hash);
+
+  panelLog(`Data URL detected (${ext})`);
+
+  chrome.runtime.sendMessage({
+    type: "FLOW_DOWNLOAD_DATA_URL",
+    url,
+    ext
+  });
+}
+
+
+// ======================================================
+// UNIVERSAL MEDIA DETECTOR (FINAL WORKING VERSION)
+// ======================================================
+
+// Track last-seen src/poster values
+const seen = new WeakMap();
+
+function detect(el) {
+  if (!el) return;
+
+  // IMG
+  if (el.tagName === "IMG" && el.src) {
+    const last = seen.get(el);
+    if (el.src !== last) {
+      seen.set(el, el.src);
+      if (el.src.startsWith("data:")) handleDataUrl(el.src);
+    }
+  }
+
+  // VIDEO poster
+  if (el.tagName === "VIDEO" && el.poster) {
+    const last = seen.get(el);
+    if (el.poster !== last) {
+      seen.set(el, el.poster);
+      if (el.poster.startsWith("data:")) handleDataUrl(el.poster);
+    }
+  }
+
+  // background-image
+  const bg = el.style?.backgroundImage || "";
+  if (bg.includes("data:")) {
+    const match = bg.match(/url\("(data:[^"]+)/);
+    if (match) handleDataUrl(match[1]);
+  }
+}
+
+// Deep scan shadow DOM
+function scanDeep(root) {
+  if (!root) return;
+
+  const walker = document.createTreeWalker(
+    root,
+    NodeFilter.SHOW_ELEMENT,
+    null,
+    false
+  );
+
+  let node;
+  while ((node = walker.nextNode())) {
+    detect(node);
+
+    if (node.shadowRoot) {
+      scanDeep(node.shadowRoot);
+    }
+  }
+}
+
+// Poll every 300ms
+setInterval(() => {
+  scanDeep(document.documentElement);
+}, 300);
+
+// ======================================================
+// INITIAL LOG
+// ======================================================
 console.log("Content script loaded.");
 panelLog("Content script loaded.");

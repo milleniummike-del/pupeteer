@@ -1,25 +1,28 @@
 {
   "manifest_version": 3,
-  "name": "Gentube Harness - Text to Image",
+  "name": "GT text to image",
   "version": "0.1.0",
-  "description": "Batch automation for Gentube prompts, generation, and downloads.",
-  "permissions": [
-    "sidePanel",
-    "scripting",
-    "downloads",
-    "storage"
-  ],
-  "host_permissions": [
-    "https://labs.google.com/*",
-    "https://labs.google/*",
-    "https://www.gentube.app/*"
-  ],
+  "description": "Automation",
+"permissions": [
+  "sidePanel",
+  "scripting",
+  "downloads",
+  "storage",
+  "webRequest",
+  "webRequestBlocking",
+  "extraHeaders",
+  "<all_urls>"
+],
+"host_permissions": [
+  "<all_urls>"
+],
+
   "background": {
     "service_worker": "background.js",
     "type": "module"
   },
   "action": {
-    "default_title": "Flow Veo Automation"
+    "default_title": "GT text to image"
   },
   "side_panel": {
     "default_path": "side_panel.html"
@@ -29,7 +32,7 @@
       "matches": [
         "https://labs.google.com/*",
         "https://labs.google/*",
-        "https://flow.google.com/project/*",
+        "https://flow.google.com/*",
         "https://www.gentube.app/*"
       ],
       "js": ["content_script.js"],
