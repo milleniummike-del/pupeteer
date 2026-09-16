@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Simple Automation",
+  "name": "Downloader",
   "version": "0.1.0",
   "description": "Automation",
 "permissions": [
@@ -22,7 +22,7 @@
     "type": "module"
   },
   "action": {
-    "default_title": "Simple Automation"
+    "default_title": "Downloader"
   },
   "side_panel": {
     "default_path": "side_panel.html"
