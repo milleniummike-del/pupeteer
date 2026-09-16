@@ -86,13 +86,23 @@ function extractBaseFilename(promptText, fallbackBaseFilename) {
 }
 
 // ======================================================
+// NEXT IMAGE PROMISE
+// ======================================================
+let nextImageResolver = null;
+
+function waitForNextImage() {
+  return new Promise(resolve => {
+    nextImageResolver = resolve;
+  });
+}
+
+// ======================================================
 // QUEUE RUNNER
 // ======================================================
 async function runQueue({ prompts }) {
 
   panelLog(`Content script: received queue (${prompts.length} prompts).`);
 
-  // Load fallback base filename from storage
   const storage = await chrome.storage.local.get(["baseFilename"]);
   const fallbackBaseFilename = storage.baseFilename ?? "";
 
@@ -128,7 +138,9 @@ async function runQueue({ prompts }) {
       await safeClickCreate();
       panelLog("Create button clicked.");
 
-      await sleep(12000);
+      panelLog("Waiting for image generation...");
+      await waitForNextImage();
+      panelLog("Image detected.");
 
     } catch (err) {
       panelLog(`Error on prompt ${i + 1}: ${err.message}`);
@@ -180,6 +192,11 @@ function handleDataUrl(url) {
   }
 
   seenBase64Hashes.add(hash);
+
+  if (nextImageResolver) {
+    nextImageResolver();
+    nextImageResolver = null;
+  }
 
   chrome.runtime.sendMessage({
     type: "FLOW_DOWNLOAD_DATA_URL",

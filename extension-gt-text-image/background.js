@@ -125,7 +125,7 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
           return;
         }
 
-        // ⭐ NEW LOGIC: If baseFilename already ends with -A, -B, -C... skip letter suffix
+        // If baseFilename already ends with -A, -B, -C... skip letter suffix
         const endsWithLetter = /^.+-[A-Z]$/.test(baseFilename);
 
         let finalFilename;
