@@ -1,6 +1,8 @@
 console.log("Background worker started");
 
-// Map Content-Type → extension
+// ======================================================
+// EXTENSION MAPPING
+// ======================================================
 function extFromContentType(ct) {
   if (!ct) return "bin";
   ct = ct.toLowerCase();
@@ -18,7 +20,9 @@ function extFromContentType(ct) {
   return "bin";
 }
 
-// Detect media via headers
+// ======================================================
+// MEDIA DETECTION
+// ======================================================
 chrome.webRequest.onHeadersReceived.addListener(
   function (details) {
     const headers = details.responseHeaders || [];
@@ -36,8 +40,6 @@ chrome.webRequest.onHeadersReceived.addListener(
     const ext = extFromContentType(contentType);
 
     if (["png","jpg","jpeg","webp","gif","mp4","webm","mov"].includes(ext)) {
-      console.log("Media detected:", details.url, "ext:", ext);
-
       chrome.tabs.sendMessage(details.tabId, {
         type: "FLOW_MEDIA_DETECTED",
         url: details.url,
@@ -49,99 +51,84 @@ chrome.webRequest.onHeadersReceived.addListener(
   ["responseHeaders", "extraHeaders"]
 );
 
+// ======================================================
+// DEDUPE HASHING
+// ======================================================
+const seenHashes = new Set();
 
-// Keep a short-term cache of downloaded URLs
-const downloadedCache = new Set();
-
-// Optional: auto-clear cache every few minutes
-setInterval(() => downloadedCache.clear(), 5 * 60 * 1000); // 5 minutes
-
-// Download handler with toggle + extension filter
-chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
-  if (msg.type === "FLOW_DOWNLOAD") {
-    const { url, ext } = msg;
-
-    chrome.storage.local.get(["autoDownloadEnabled", "allowedExtensions"], data => {
-      const enabled = data.autoDownloadEnabled ?? true;
-      const allowed = data.allowedExtensions ?? ["png","jpg","webp","mp4","webm"];
-
-      if (!enabled) {
-        console.log("Auto-download disabled, skipping:", url);
-        sendResponse({ ok: false, skipped: true });
-        return;
-      }
-
-      if (!allowed.includes(ext)) {
-        console.log("Extension filtered out:", ext, url);
-        sendResponse({ ok: false, filtered: true });
-        return;
-      }
-
-      const filename = `FlowCaptures/${Date.now()}.${ext}`;
-
-      chrome.downloads.download(
-        {
-          url,
-          filename,
-          conflictAction: "uniquify",
-          saveAs: false
-        },
-        downloadId => {
-          sendResponse({ ok: true, downloadId });
-        }
-      );
-    });
-
-    return true;
+function hashBase64(base64) {
+  let hash = 0;
+  for (let i = 0; i < base64.length; i++) {
+    hash = (hash * 31 + base64.charCodeAt(i)) >>> 0;
   }
+  return hash;
+}
+
+// ======================================================
+// LETTER COUNTER
+// ======================================================
+let letterCounter = 0;
+function nextLetter() {
+  return String.fromCharCode(65 + (letterCounter++ % 26));
+}
+
+// ======================================================
+// DOWNLOAD HANDLER
+// ======================================================
+chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
 
   if (msg.type === "FLOW_DOWNLOAD_DATA_URL") {
     const { url, ext } = msg;
 
-    // Prevent duplicates
-    if (downloadedCache.has(url)) {
-      console.log("Skipping duplicate data URL:", url);
+    const base64 = url.split(",")[1] || "";
+    const hash = hashBase64(base64);
+
+    if (seenHashes.has(hash)) {
       sendResponse({ ok: false, duplicate: true });
       return true;
     }
 
-    chrome.storage.local.get(["autoDownloadEnabled", "allowedExtensions"], data => {
-      const enabled = data.autoDownloadEnabled ?? true;
-      const allowed = data.allowedExtensions ?? ["png","jpeg","mov","jpg","webp","mp4","webm"];
+    chrome.storage.local.get(
+      ["autoDownloadEnabled", "allowedExtensions", "downloadDirectory", "baseFilename"],
+      data => {
 
-      if (!enabled) {
-        console.log("Auto-download disabled (data URL), skipping");
-        sendResponse({ ok: false, skipped: true });
-        return;
-      }
+        const enabled = data.autoDownloadEnabled ?? true;
+        const allowed = data.allowedExtensions ?? ["png","jpg","jpeg","webp","mp4","webm"];
+        const directory = data.downloadDirectory ?? "FlowCaptures";
+        const baseFilename = data.baseFilename ?? "image";
 
-      if (!allowed.includes(ext)) {
-        console.log("Filtered data URL ext:", ext);
-        sendResponse({ ok: false, filtered: true });
-        return;
-      }
-
-      const filename = `FlowCaptures/${Date.now()}.${ext}`;
-
-      chrome.downloads.download(
-        {
-          url,
-          filename,
-          conflictAction: "uniquify",
-          saveAs: false
-        },
-        downloadId => {
-          if (downloadId) {
-            downloadedCache.add(url);   // ⭐ Mark as downloaded
-            sendResponse({ ok: true, downloadId });
-          } else {
-            sendResponse({ ok: false, error: true });
-          }
+        if (!enabled) {
+          sendResponse({ ok: false, skipped: true });
+          return;
         }
-      );
-    });
+
+        if (!allowed.includes(ext)) {
+          sendResponse({ ok: false, filtered: true });
+          return;
+        }
+
+        const letter = nextLetter();
+        const filename = `${directory}/${baseFilename}-${letter}.${ext}`;
+
+        chrome.downloads.download(
+          {
+            url,
+            filename,
+            conflictAction: "uniquify",
+            saveAs: false
+          },
+          downloadId => {
+            if (downloadId) {
+              seenHashes.add(hash);
+              sendResponse({ ok: true, downloadId });
+            } else {
+              sendResponse({ ok: false, error: true });
+            }
+          }
+        );
+      }
+    );
 
     return true;
-}
-
+  }
 });

@@ -1,9 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   const promptsEl = document.getElementById("prompts");
-  const modeEl = document.getElementById("mode");
-  const aspectEl = document.getElementById("aspect");
-  const modelEl = document.getElementById("model");
   const runBtn = document.getElementById("run");
   const debugOnBtn = document.getElementById("debugOn");
   const debugOffBtn = document.getElementById("debugOff");
@@ -14,6 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const parseJsonBtn = document.getElementById("parseJson");
   const jsonFieldSelector = document.getElementById("jsonFieldSelector");
   const jsonPreviewEl = document.getElementById("jsonPreview");
+
+  // ⭐ NEW: Directory + Filename inputs
+  const downloadDirectoryInput = document.getElementById("downloadDirectory");
+  const baseFilenameInput = document.getElementById("baseFilename");
 
   let parsedJsonItems = [];
 
@@ -30,6 +31,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     return tab;
   }
+
+  /* ---------------------------
+     LOAD SETTINGS
+  ---------------------------- */
+  chrome.storage.local.get(
+    ["downloadDirectory", "baseFilename"],
+    data => {
+      downloadDirectoryInput.value = data.downloadDirectory ?? "FlowCaptures";
+      baseFilenameInput.value = data.baseFilename ?? "image";
+    }
+  );
+
+  /* ---------------------------
+     SAVE SETTINGS
+  ---------------------------- */
+  downloadDirectoryInput.addEventListener("input", () => {
+    chrome.storage.local.set({ downloadDirectory: downloadDirectoryInput.value });
+    log(`Download directory set: ${downloadDirectoryInput.value}`);
+  });
+
+  baseFilenameInput.addEventListener("input", () => {
+    chrome.storage.local.set({ baseFilename: baseFilenameInput.value });
+    log(`Base filename set: ${baseFilenameInput.value}`);
+  });
 
   /* ---------------------------
      JSON PARSING
@@ -106,9 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const payload = {
-      prompts,
-    };
+    const payload = { prompts };
 
     runBtn.disabled = true;
     log(`Starting queue with ${prompts.length} prompts...`);
