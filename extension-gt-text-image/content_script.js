@@ -20,6 +20,7 @@ function sleep(ms) {
 // ======================================================
 const SELECTORS = {
   editor: ".ProseMirror",
+
   media: `
     div[data-testid="gallery"] img,
     div[data-testid="gallery"] video,
@@ -28,15 +29,19 @@ const SELECTORS = {
     div[data-testid="inline-result"] img,
     div[data-testid="inline-result"] video
   `,
+
   generateBtn: ".generate-icon-button",
+
   tabTextToVideo: 'button[data-testid="tab-text-to-video"]',
   tabTextToImage: 'button[data-testid="tab-text-to-image"]',
   tabImageToImage: 'button[data-testid="tab-image-to-image"]',
   tabFrameToVideo: 'button[data-testid="tab-frame-to-video"]',
   tabIngredientsToVideo: 'button[data-testid="tab-ingredients-to-video"]',
+
   modelDropdown: '[data-testid="model-selector"]',
   modelVeo2: 'li[data-value="veo-2"]',
   modelVeo1: 'li[data-value="veo-1"]',
+
   aspectDropdown: '[data-testid="aspect-ratio-selector"]',
   aspect169: 'li[data-value="16:9"]',
   aspect916: 'li[data-value="9:16"]',
@@ -63,15 +68,45 @@ async function typeIntoFlowTextarea(text) {
 }
 
 // ======================================================
+// BASE FILENAME EXTRACTION
+// ======================================================
+function extractBaseFilename(promptText, fallbackBaseFilename) {
+  try {
+    const obj = JSON.parse(promptText);
+    if (obj && typeof obj === "object" && obj.tag) {
+      return obj.tag;
+    }
+  } catch (e) {}
+
+  if (fallbackBaseFilename && fallbackBaseFilename.trim() !== "") {
+    return fallbackBaseFilename.trim();
+  }
+
+  return "Unknown-" + Date.now();
+}
+
+// ======================================================
 // QUEUE RUNNER
 // ======================================================
 async function runQueue({ prompts }) {
 
   panelLog(`Content script: received queue (${prompts.length} prompts).`);
 
+  // Load fallback base filename from storage
+  const storage = await chrome.storage.local.get(["baseFilename"]);
+  const fallbackBaseFilename = storage.baseFilename ?? "";
+
   for (let i = 0; i < prompts.length; i++) {
     const prompt = prompts[i];
-    panelLog(`Prompt ${i + 1}/${prompts.length}: "${prompt.slice(0, 80)}..."`);
+
+    const baseFilename = extractBaseFilename(prompt, fallbackBaseFilename);
+
+    chrome.runtime.sendMessage({
+      type: "FLOW_SET_BASE_FILENAME",
+      baseFilename
+    });
+
+    panelLog(`Prompt ${i + 1}/${prompts.length}: baseFilename=${baseFilename}`);
 
     try {
       await typeIntoFlowTextarea(prompt);
@@ -115,7 +150,7 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
 });
 
 // ======================================================
-// DEDUPE HASHING (⭐ REQUIRED)
+// DEDUPE HASHING
 // ======================================================
 const seenBase64Hashes = new Set();
 
@@ -128,7 +163,7 @@ function hashBase64(base64) {
 }
 
 // ======================================================
-// DATA URL HANDLING (⭐ FIXED)
+// DATA URL HANDLING
 // ======================================================
 function handleDataUrl(url) {
   if (!url.startsWith("data:image") && !url.startsWith("data:video")) return;
@@ -154,7 +189,7 @@ function handleDataUrl(url) {
 }
 
 // ======================================================
-// UNIVERSAL MEDIA DETECTOR (⭐ FIXED)
+// UNIVERSAL MEDIA DETECTOR
 // ======================================================
 const seenSrc = new WeakMap();
 

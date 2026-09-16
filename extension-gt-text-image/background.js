@@ -65,11 +65,24 @@ function hashBase64(base64) {
 }
 
 // ======================================================
-// LETTER COUNTER
+// PER-TAG LETTER COUNTERS
 // ======================================================
-let letterCounter = 0;
-function nextLetter() {
-  return String.fromCharCode(65 + (letterCounter++ % 26));
+const perTagCounters = new Map();
+let currentBaseFilename = "image";
+
+chrome.runtime.onMessage.addListener((msg) => {
+  if (msg.type === "FLOW_SET_BASE_FILENAME") {
+    currentBaseFilename = msg.baseFilename || ("Unknown-" + Date.now());
+  }
+});
+
+function nextLetterFor(baseFilename) {
+  if (!perTagCounters.has(baseFilename)) {
+    perTagCounters.set(baseFilename, 0);
+  }
+  const count = perTagCounters.get(baseFilename);
+  perTagCounters.set(baseFilename, count + 1);
+  return String.fromCharCode(65 + (count % 26)); // A-Z loop
 }
 
 // ======================================================
@@ -95,7 +108,12 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
         const enabled = data.autoDownloadEnabled ?? true;
         const allowed = data.allowedExtensions ?? ["png","jpg","jpeg","webp","mp4","webm"];
         const directory = data.downloadDirectory ?? "FlowCaptures";
-        const baseFilename = data.baseFilename ?? "image";
+
+        const fallbackBaseFilename = data.baseFilename ?? "";
+        const baseFilename =
+          currentBaseFilename ||
+          fallbackBaseFilename ||
+          ("Unknown-" + Date.now());
 
         if (!enabled) {
           sendResponse({ ok: false, skipped: true });
@@ -107,13 +125,21 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
           return;
         }
 
-        const letter = nextLetter();
-        const filename = `${directory}/${baseFilename}-${letter}.${ext}`;
+        // ⭐ NEW LOGIC: If baseFilename already ends with -A, -B, -C... skip letter suffix
+        const endsWithLetter = /^.+-[A-Z]$/.test(baseFilename);
+
+        let finalFilename;
+        if (endsWithLetter) {
+          finalFilename = `${directory}/${baseFilename}.${ext}`;
+        } else {
+          const letter = nextLetterFor(baseFilename);
+          finalFilename = `${directory}/${baseFilename}-${letter}.${ext}`;
+        }
 
         chrome.downloads.download(
           {
             url,
-            filename,
+            filename: finalFilename,
             conflictAction: "uniquify",
             saveAs: false
           },

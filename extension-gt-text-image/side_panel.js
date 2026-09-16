@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const jsonFieldSelector = document.getElementById("jsonFieldSelector");
   const jsonPreviewEl = document.getElementById("jsonPreview");
 
-  // ⭐ NEW: Directory + Filename inputs
   const downloadDirectoryInput = document.getElementById("downloadDirectory");
   const baseFilenameInput = document.getElementById("baseFilename");
 
@@ -32,9 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
     return tab;
   }
 
-  /* ---------------------------
-     LOAD SETTINGS
-  ---------------------------- */
   chrome.storage.local.get(
     ["downloadDirectory", "baseFilename"],
     data => {
@@ -43,9 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   );
 
-  /* ---------------------------
-     SAVE SETTINGS
-  ---------------------------- */
   downloadDirectoryInput.addEventListener("input", () => {
     chrome.storage.local.set({ downloadDirectory: downloadDirectoryInput.value });
     log(`Download directory set: ${downloadDirectoryInput.value}`);
@@ -56,9 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
     log(`Base filename set: ${baseFilenameInput.value}`);
   });
 
-  /* ---------------------------
-     JSON PARSING
-  ---------------------------- */
   parseJsonBtn.addEventListener("click", () => {
     log("Parse JSON clicked.");
 
@@ -97,9 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* ---------------------------
-     RUN QUEUE
-  ---------------------------- */
   runBtn.addEventListener("click", async () => {
     let prompts = [];
 
@@ -157,9 +144,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* ---------------------------
-     DEBUG
-  ---------------------------- */
   debugOnBtn.addEventListener("click", async () => {
     const tab = await getActiveTab();
     if (!tab || !tab.id) return;
@@ -174,9 +158,6 @@ document.addEventListener("DOMContentLoaded", () => {
     log("Debug mode disabled.");
   });
 
-  /* ---------------------------
-     SELECTOR TEST
-  ---------------------------- */
   testSelectorsBtn.addEventListener("click", async () => {
     const tab = await getActiveTab();
     if (!tab || !tab.id) return;
@@ -184,9 +165,6 @@ document.addEventListener("DOMContentLoaded", () => {
     log("Requested selector test run.");
   });
 
-  /* ---------------------------
-     LOGGING FROM CONTENT SCRIPT
-  ---------------------------- */
   chrome.runtime.onMessage.addListener((msg) => {
     if (msg.type === "FLOW_LOG") {
       log(msg.message);
