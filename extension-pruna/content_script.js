@@ -58,6 +58,7 @@ async function uploadImage(name) {
 async function runQueue({ prompts }) {
   panelLog("Queue started");
   await uploadImage("Actor-A");
+  await setPrunaPrompt("test");
   panelLog("Queue finished.");
 }
 
@@ -68,3 +69,25 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
     return true;
   }
 });
+
+
+async function setPrunaPrompt(promptText) {
+  panelLog("Setting Pruna prompt");
+
+  try {
+    const iframe = await waitForIframe();
+    panelLog("Iframe found");
+
+    iframe.contentWindow.postMessage(
+      {
+        type: "PRUNA_SET_PROMPT",
+        prompt: promptText
+      },
+      "https://playground.pruna.ai"
+    );
+
+    panelLog("Prompt message sent to iframe");
+  } catch (e) {
+    panelLog("Prompt error: " + e.message);
+  }
+}
