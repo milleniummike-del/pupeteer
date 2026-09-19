@@ -1,26 +1,17 @@
 {
   "manifest_version": 3,
-  "name": "Gentube Harness - Video",
+  "name": "Google Flow Veo Automation",
   "version": "0.1.0",
-  "description": "Batch automation for Gentube prompts, generation, and downloads.",
+  "description": "Batch automation for Google Flow Veo: prompts, generation, and downloads.",
   "permissions": [
     "sidePanel",
     "scripting",
     "downloads",
     "storage"
   ],
-  "web_accessible_resources": [
-  {
-    "resources": [
-      "inputimages/*"
-    ],
-    "matches": ["<all_urls>"]
-  }
-],
   "host_permissions": [
     "https://labs.google.com/*",
-    "https://labs.google/*",
-    "https://www.gentube.app/*"
+    "https://labs.google/*"
   ],
   "background": {
     "service_worker": "background.js",
@@ -37,8 +28,7 @@
       "matches": [
         "https://labs.google.com/*",
         "https://labs.google/*",
-        "https://flow.google.com/project/*",
-        "https://www.gentube.app/*"
+        "https://flow.google.com/*"
       ],
       "js": ["content_script.js"],
       "run_at": "document_idle"

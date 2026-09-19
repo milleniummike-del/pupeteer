@@ -297,7 +297,21 @@ async function runQueue({ prompts, startIndex = 0 }) {
 
     await typeIntoFlowTextarea(prompt);
     panelLog("Prompt typed.");
+    const createBtn = 'button[aria-label="Create"]';
 
+      async function safeClickCreate() {
+        const btn = document.querySelector(createBtn);
+        if (!btn) throw new Error("Create button not found.");
+
+        btn.focus();
+        btn.dispatchEvent(new MouseEvent("mousedown", { bubbles: true }));
+        btn.dispatchEvent(new MouseEvent("mouseup", { bubbles: true }));
+        btn.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+      }
+
+      await sleep(500);
+      await safeClickCreate();
+      panelLog("Create button clicked.");
     await sleep(6000);
     panelLog("Reloading page after prompt...");
 localStorage.setItem("flow_queue_state", JSON.stringify({

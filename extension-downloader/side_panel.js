@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const runBtn = document.getElementById("run");
+
   const logEl = document.getElementById("log");
   const toggleDownload = document.getElementById("toggleDownload");
   const extCheckboxes = document.querySelectorAll(".extFilter");
@@ -46,34 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     return tab;
   }
-
-  // Run queue
-  runBtn.addEventListener("click", async () => {
-    const payload = { prompts: [{ item: "1" }] };
-
-    runBtn.disabled = true;
-    log(`Starting queue`);
-
-    try {
-      const tab = await getActiveTab();
-      if (!tab || !tab.id) {
-        log("No active tab found.");
-        runBtn.disabled = false;
-        return;
-      }
-
-      await chrome.tabs.sendMessage(tab.id, {
-        type: "FLOW_RUN_QUEUE",
-        payload
-      });
-
-      log("Queue sent to content script.");
-    } catch (err) {
-      log(`Error sending queue: ${err.message}`);
-    } finally {
-      runBtn.disabled = false;
-    }
-  });
 
   // Logging from content script
   chrome.runtime.onMessage.addListener(msg => {

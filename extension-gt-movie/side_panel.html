@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Flow Veo Automation</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            margin: 0;
+            padding: 10px;
+            background: #0f172a;
+            color: #e5e7eb;
+        }
+
+        textarea {
+            width: 100%;
+            height: 160px;
+            resize: vertical;
+            background: #020617;
+            color: #e5e7eb;
+            border: 1px solid #1f2937;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        select,
+        input,
+        button {
+            margin-top: 6px;
+            width: 100%;
+            padding: 6px 8px;
+            border-radius: 4px;
+            border: 1px solid #1f2937;
+            background: #020617;
+            color: #e5e7eb;
+            font-size: 13px;
+        }
+
+        button {
+            cursor: pointer;
+            background: #22c55e;
+            border: none;
+            color: #022c22;
+            font-weight: 600;
+        }
+
+        button:disabled {
+            background: #4b5563;
+            cursor: not-allowed;
+            color: #9ca3af;
+        }
+
+        .row {
+            margin-top: 8px;
+        }
+
+        .log {
+            margin-top: 10px;
+            font-size: 11px;
+            max-height: 160px;
+            overflow-y: auto;
+            background: #020617;
+            border-radius: 4px;
+            padding: 6px;
+            border: 1px solid #1f2937;
+            white-space: pre-wrap;
+        }
+
+        .label {
+            font-size: 11px;
+            color: #9ca3af;
+            margin-top: 4px;
+        }
+
+        .buttons-row {
+            display: flex;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .buttons-row button {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Flow Veo Automation</h3>
+
+    <!-- JSON INPUT -->
+    <div class="row">
+        <div class="label">JSON Input (array of objects)</div>
+        <textarea id="jsonInput" placeholder='[{"prompt":"text"}, {"prompt":"text"}]'></textarea>
+    </div>
+
+    <div class="buttons-row">
+        <button id="parseJson">Parse JSON</button>
+    </div>
+
+    <div class="row">
+        <div class="label">Select field to use as prompt</div>
+        <select id="jsonFieldSelector">
+            <option value="__whole">Use whole item</option>
+        </select>
+    </div>
+
+    <div class="row">
+        <div class="label">Parsed Items Preview</div>
+        <div id="jsonPreview" class="log"></div>
+    </div>
+
+    <!-- NORMAL PROMPTS -->
+    <div class="row">
+        <div class="label">Prompts (one per line)</div>
+        <textarea id="prompts"></textarea>
+    </div>
+
+
+    <!-- BUTTONS -->
+    <div class="buttons-row">
+        <button id="run">Run Queue</button>
+        <button id="debugOn">Debug On</button>
+        <button id="debugOff">Debug Off</button>
+    </div>
+
+    <div class="row">
+        <button id="testSelectors">Test Selectors</button>
+    </div>
+
+    <!-- LOG -->
+    <div class="row">
+        <div class="label">Log</div>
+        <div id="log" class="log"></div>
+    </div>
+
+    <!-- ⭐ SCRIPT MUST BE HERE (BOTTOM OF BODY) ⭐ -->
+    <script src="side_panel.js"></script>
+</body>
+
+</html>

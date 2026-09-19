@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Google Flow Veo Automation",
+  "name": "Pruna AI Automation",
   "version": "0.1.0",
-  "description": "Batch automation for Google Flow Veo: prompts, generation, and downloads.",
+  "description": "Automation",
   "permissions": [
     "sidePanel",
     "scripting",
@@ -10,15 +10,14 @@
     "storage"
   ],
   "host_permissions": [
-    "https://labs.google.com/*",
-    "https://labs.google/*"
+    "https://www.pruna.ai/*"
   ],
   "background": {
     "service_worker": "background.js",
     "type": "module"
   },
   "action": {
-    "default_title": "Flow Veo Automation"
+    "default_title": "Pruna AI Automation"
   },
   "side_panel": {
     "default_path": "side_panel.html"
@@ -26,10 +25,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://labs.google.com/*",
-        "https://labs.google/*",
-        "https://flow.google.com/*",
-        "https://www.gentube.app/*"
+        "https://www.pruna.ai/*"
       ],
       "js": ["content_script.js"],
       "run_at": "document_idle"
