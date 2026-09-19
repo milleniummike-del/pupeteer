@@ -1,98 +1,66 @@
-
 function panelLog(message) {
-  chrome.runtime.sendMessage({ type: "FLOW_LOG", message });
+  try {
+    chrome.runtime.sendMessage({ type: "FLOW_LOG", message });
+  } catch {
+    console.log("[FLOW_LOG]", message);
+  }
 }
 
-function sleep(ms) {
-  return new Promise(res => setTimeout(res, ms));
-}
+panelLog("Content script loaded.");
 
-function highlight(el) {
-  if (!DEBUG || !el) return;
-  el.style.outline = "2px solid #22c55e";
-  el.style.outlineOffset = "2px";
-}
-
-// ======================================================
-// GLOBALS
-// ======================================================
-
-
-// ======================================================
-// WAIT HELPERS
-// ======================================================
-function waitForSelector(selector, timeout = 30000) {
+async function waitForIframe(timeout = 30000) {
+  const start = performance.now();
   return new Promise((resolve, reject) => {
-    const start = performance.now();
     function check() {
-      const el = document.querySelector(selector);
-      if (el) return resolve(el);
+      const iframe = document.querySelector('iframe[src*="p-video-2/iframe"]');
+      if (iframe) return resolve(iframe);
       if (performance.now() - start > timeout)
-        return reject(new Error(`Timeout waiting for ${selector}`));
+        return reject(new Error("Timeout waiting for Pruna iframe"));
       requestAnimationFrame(check);
     }
     check();
   });
 }
 
-// ======================================================
-// EDITOR TYPING
-// ======================================================
-async function safeTypeIntoEditor(editorEl, text) {
-  debugLog("Typing into editor:", text);
-  highlight(editorEl);
+async function uploadImage(name) {
+  panelLog("Uploading image: " + name);
 
-  editorEl.focus();
+  try {
+    const iframe = await waitForIframe();
+    panelLog("Iframe found");
 
-  document.execCommand("selectAll", false, null);
-  document.execCommand("delete", false, null);
+    const url = chrome.runtime.getURL(`inputimages/${name}.webp`);
+    panelLog("Fetching image from: " + url);
 
-  await sleep(50);
+    const res = await fetch(url);
+    if (!res.ok) {
+      panelLog("Fetch failed: " + res.status);
+      return;
+    }
 
-  const chunkSize = 120;
-  for (let i = 0; i < text.length; i += chunkSize) {
-    const chunk = text.slice(i, i + chunkSize);
-    document.execCommand("insertText", false, chunk);
-    await sleep(40);
+    const blob = await res.blob();
+
+    iframe.contentWindow.postMessage(
+      {
+        type: "PRUNA_UPLOAD_IMAGE",
+        name,
+        blob
+      },
+      "https://playground.pruna.ai"
+    );
+
+    panelLog("Upload message sent to iframe");
+  } catch (e) {
+    panelLog("Upload error: " + e.message);
   }
 }
 
-// ======================================================
-// CORE QUEUE RUNNER
-// ======================================================
 async function runQueue({ prompts }) {
   panelLog("Queue started");
-
-  for (let i = 0; i < 1; i++) {
-    panelLog(`Item ${i + 1}`);
-    uploadImageFromName("Actor-A");
-  }
-
+  await uploadImage("Actor-A");
   panelLog("Queue finished.");
 }
 
-async function uploadImageFromName(name) {
-  panelLog(name);
-  const fileInput = await waitForSelector('input[type="file"]');
-  const url = chrome.runtime.getURL(`inputimages/${name}.webp`);
-  try {
-    const blob = await fetch(url).then(r => r.blob());
-    const file = new File([blob], url.split("/").pop(), { type: blob.type });
-
-    const dt = new DataTransfer();
-    dt.items.add(file);
-    fileInput.files = dt.files;
-
-    fileInput.dispatchEvent(new Event("change", { bubbles: true }));
-
-    panelLog(`Uploaded image: ${url}`);
-  } catch (e) { }
-}
-
-
-// ======================================================
-// MESSAGE HANDLERS
-// ======================================================
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   if (msg.type === "FLOW_RUN_QUEUE") {
     runQueue(msg.payload);
@@ -100,7 +68,3 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
     return true;
   }
 });
-
-// Initial log
-console.log("Content script loaded.");
-panelLog("Content script loaded.");

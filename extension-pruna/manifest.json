@@ -3,25 +3,42 @@
   "name": "Pruna AI Automation",
   "version": "0.1.0",
   "description": "Automation",
+
   "permissions": [
     "sidePanel",
     "scripting",
     "downloads",
-    "storage"
+    "storage",
+    "webNavigation"
   ],
+
   "host_permissions": [
-    "https://www.pruna.ai/*"
+    "https://www.pruna.ai/*",
+    "https://playground.pruna.ai/*"
   ],
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "inputimages/*"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+
   "background": {
     "service_worker": "background.js",
     "type": "module"
   },
+
   "action": {
     "default_title": "Pruna AI Automation"
   },
+
   "side_panel": {
     "default_path": "side_panel.html"
   },
+
   "content_scripts": [
     {
       "matches": [
