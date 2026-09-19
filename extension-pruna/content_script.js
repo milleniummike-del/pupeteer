@@ -55,12 +55,67 @@ async function uploadImage(name) {
   }
 }
 
+async function uploadAudio(name) {
+  panelLog("Uploading audio: " + name);
+
+  try {
+    const iframe = await waitForIframe();
+    panelLog("Iframe found");
+
+    const url = chrome.runtime.getURL(`inputaudio/${name}.wav`);
+    panelLog("Fetching audio from: " + url);
+
+    const res = await fetch(url);
+    if (!res.ok) {
+      panelLog("Fetch failed: " + res.status);
+      return;
+    }
+
+    const blob = await res.blob();
+
+    iframe.contentWindow.postMessage(
+      {
+        type: "PRUNA_UPLOAD_AUDIO",
+        name,
+        blob
+      },
+      "https://playground.pruna.ai"
+    );
+
+    panelLog("Upload message sent to iframe");
+  } catch (e) {
+    panelLog("Upload error: " + e.message);
+  }
+}
+
 async function runQueue({ prompts }) {
   panelLog("Queue started");
-  await uploadImage("Actor-A");
-  await setPrunaPrompt("test");
+  for (let i = 1; i < 6; i++) {
+  await uploadImage(""+i);
+  await uploadAudio(""+i);
+  await setPrunaPrompt("prompt "+i);
+      // WAIT HERE until user clicks Continue in side panel
+  await waitForContinue();
+  }
   panelLog("Queue finished.");
 }
+
+function waitForContinue() {
+  panelLog("Waiting for continue…");
+
+  return new Promise((resolve) => {
+    const handler = (msg) => {
+      if (msg.type === "FLOW_CONTINUE") {
+        panelLog("Continue received");
+        chrome.runtime.onMessage.removeListener(handler);
+        resolve();
+      }
+    };
+
+    chrome.runtime.onMessage.addListener(handler);
+  });
+}
+
 
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   if (msg.type === "FLOW_RUN_QUEUE") {

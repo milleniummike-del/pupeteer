@@ -20,7 +20,8 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "inputimages/*"
+        "inputimages/*",
+        "inputaudio/*"
       ],
       "matches": ["<all_urls>"]
     }

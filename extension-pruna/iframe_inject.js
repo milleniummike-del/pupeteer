@@ -27,6 +27,26 @@ window.addEventListener("message", async (event) => {
     console.log("[IFRAME] Image uploaded successfully");
   }
 
+    if (data.type === "PRUNA_UPLOAD_AUDIO") {
+    const { name, blob } = data;
+
+    const fileInput = document.querySelector('#p-video-2-audio-file');
+    if (!fileInput) {
+      console.log("[IFRAME] File input not found");
+      return;
+    }
+
+    const file = new File([blob], name + ".wav", { type: blob.type });
+    const dt = new DataTransfer();
+    dt.items.add(file);
+
+    fileInput.files = dt.files;
+    fileInput.dispatchEvent(new Event("input", { bubbles: true }));
+    fileInput.dispatchEvent(new Event("change", { bubbles: true }));
+
+    console.log("[IFRAME] Image uploaded successfully");
+  }
+
   // ============================
   // PROMPT UPDATE
   // ============================

@@ -63,3 +63,8 @@ document.addEventListener("DOMContentLoaded", () => {;
 
   log("Side panel JS loaded.");
 });
+
+document.getElementById("continueBtn").addEventListener("click", () => {
+  chrome.runtime.sendMessage({ type: "FLOW_CONTINUE" });
+});
+

@@ -20,3 +20,14 @@ chrome.webNavigation.onCommitted.addListener((details) => {
     console.error("[BG] Injection failed:", err);
   });
 });
+
+
+chrome.runtime.onMessage.addListener((msg, sender) => {
+  if (msg.type === "FLOW_CONTINUE") {
+    chrome.tabs.query({}, (tabs) => {
+      for (const tab of tabs) {
+        chrome.tabs.sendMessage(tab.id, { type: "FLOW_CONTINUE" });
+      }
+    });
+  }
+});
