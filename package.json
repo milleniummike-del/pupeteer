@@ -13,6 +13,7 @@
     "@types/node": "^25.0.10"
   },
   "dependencies": {
+    "dotenv": "^18.0.1",
     "node-fetch": "^3.3.2",
     "puppeteer": "^25.2.1",
     "puppeteer-extra": "^3.3.6",

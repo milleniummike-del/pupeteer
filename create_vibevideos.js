@@ -1,105 +1,116 @@
-const puppeteer = require('puppeteer');
-const fs = require('fs');
-const path = require('path');
+const puppeteer = require('puppeteer-extra');
+const StealthPlugin = require('puppeteer-extra-plugin-stealth');
+const path = require("path");
 
-(async () => {
+puppeteer.use(StealthPlugin());
 
+const userDataDir = process.argv[2] || "browser";   // RESTORED
+
+async function main() {
     const browser = await puppeteer.launch({
         headless: false,
-        userDataDir: "browser",
-        args: ["--no-sandbox"]
+        executablePath: "C:/Program Files/Google/Chrome/Application/chrome.exe",
+        defaultViewport: null,
+        userDataDir,                                 // RESTORED
+        args: [
+            "--disable-blink-features=AutomationControlled",
+            "--no-sandbox",
+            "--disable-setuid-sandbox"
+        ]
     });
 
-    let pages = await browser.pages();
-    let page = pages[0];
+    const page = await browser.newPage();
+    await page.goto("https://www.pruna.ai/p-video-2", { waitUntil: "networkidle2" });
 
-    await page.goto(
-        'https://vibes.ai/projects/1995c029-9732-4090-8444-c85c17c7d3dc',
-        { waitUntil: 'networkidle2' }
-    );
+    console.log("Opened Pruna");
 
-    // ---------------------------------------------------------
-    // Load images
-    // ---------------------------------------------------------
-    const inputDir = path.join(__dirname, "inputimages");
-    const files = fs.readdirSync(inputDir)
-        .filter(f => /\.(png|jpg|jpeg|webp)$/i.test(f));
+    // Wait for iframe to appear
+    await page.waitForSelector("iframe", { timeout: 20000 });
 
-    console.log("Images:", files);
+    const iframeElement = await page.$("iframe");
+    const prunaFrame = await iframeElement.contentFrame();
 
-    // ---------------------------------------------------------
-    // Step 1: Click Start & End Frame
-    // ---------------------------------------------------------
-    await page.waitForSelector('button[title="Start & End Frame"]', { visible: true });
-    await page.click('button[title="Start & End Frame"]');
-
-    // ---------------------------------------------------------
-    // Step 2: Click Add start frame
-    // ---------------------------------------------------------
-    await page.waitForFunction(() => {
-        const btns = [...document.querySelectorAll('button.cursor_pointer')];
-        return btns.some(b => b.innerText.includes('Add start frame'));
-    });
-
-    await page.evaluate(() => {
-        const btns = [...document.querySelectorAll('button.cursor_pointer')];
-        const target = btns.find(b => b.innerText.includes('Add start frame'));
-        if (target) target.click();
-    });
-
-    // ---------------------------------------------------------
-    // Step 3: Click Upload (open dialog ONCE)
-    // ---------------------------------------------------------
-    await page.waitForFunction(() => {
-        const btns = [...document.querySelectorAll('button')];
-        return btns.some(b => b.innerText.includes('Upload'));
-    });
-
-    await page.evaluate(() => {
-        const btns = [...document.querySelectorAll('button')];
-        const target = btns.find(b => b.innerText.includes('Upload'));
-        if (target) target.click();
-    });
-
-    // ---------------------------------------------------------
-    // Step 4: LOOP — upload ALL images into SAME dialog
-    // ---------------------------------------------------------
-    for (const file of files) {
-
-        const filePath = path.join(inputDir, file);
-        console.log("Uploading:", file);
-
-        // Wait for hidden input (React re-renders it each upload)
-        await page.waitForFunction(() => {
-            return document.querySelector('input[type="file"]');
-        });
-
-        const fileInput = await page.$('input[type="file"]');
-        await fileInput.uploadFile(filePath);
-
-        console.log("✔ Uploaded:", file);
-
-        // React processing delay (safe for all Puppeteer versions)
-        await new Promise(r => setTimeout(r, 600));
+    if (!prunaFrame) {
+        console.log("Could not attach to Pruna iframe");
+        return;
     }
 
-    // ---------------------------------------------------------
-    // Step 5: Click Confirm AFTER all uploads
-    // ---------------------------------------------------------
-    await page.waitForFunction(() => {
-        const btns = [...document.querySelectorAll('button')];
-        return btns.some(b => !b.disabled && b.innerText.trim().length > 0);
+    console.log("Attached to Pruna iframe");
+
+    // -----------------------------
+    // 1. UPLOAD IMAGE
+    // -----------------------------
+    const fileInput = await prunaFrame.waitForSelector('input[type="file"]', { timeout: 20000 });
+
+    if (!fileInput) {
+        console.log("File input not found inside iframe");
+        return;
+    }
+
+    console.log("File input found");
+
+    const imagePath = "C:\\Users\\mike\\auto\\inputimages\\1.jpeg";
+    await fileInput.uploadFile(imagePath);
+
+    console.log("Image uploaded:", imagePath);
+
+    // -----------------------------
+    // 2. TYPE PROMPT
+    // -----------------------------
+    await prunaFrame.waitForSelector("textarea", { timeout: 20000 });
+    const textarea = await prunaFrame.$("textarea");
+
+    if (!textarea) {
+        console.log("Textarea not found inside iframe");
+        return;
+    }
+
+    console.log("Textarea found");
+
+    await textarea.click();
+
+    const client = await page.target().createCDPSession();
+
+    // CLEAR FIELD — Ctrl+A
+    await client.send("Input.dispatchKeyEvent", {
+        type: "keyDown",
+        key: "a",
+        windowsVirtualKeyCode: 0x41,
+        nativeVirtualKeyCode: 0x41,
+        modifiers: 2
+    });
+    await client.send("Input.dispatchKeyEvent", {
+        type: "keyUp",
+        key: "a",
+        windowsVirtualKeyCode: 0x41,
+        nativeVirtualKeyCode: 0x41,
+        modifiers: 2
     });
 
-    await page.evaluate(() => {
-        const btns = [...document.querySelectorAll('button')];
-        const enabled = btns.find(b => !b.disabled && b.innerText.trim().length > 0);
-        if (enabled) enabled.click();
+    // CLEAR FIELD — Backspace
+    await client.send("Input.dispatchKeyEvent", {
+        type: "keyDown",
+        key: "Backspace",
+        windowsVirtualKeyCode: 0x08,
+        nativeVirtualKeyCode: 0x08
+    });
+    await client.send("Input.dispatchKeyEvent", {
+        type: "keyUp",
+        key: "Backspace",
+        windowsVirtualKeyCode: 0x08,
+        nativeVirtualKeyCode: 0x08
     });
 
-    console.log("✅ All images uploaded and confirmed");
+    console.log("Textarea cleared");
 
-    // Keep browser open briefly
-    await new Promise(r => setTimeout(r, 5000));
+    // TYPE NEW PROMPT
+    await client.send("Input.insertText", {
+        text: "testing prompt"
+    });
 
-})();
+    console.log("Typed new prompt");
+
+    await new Promise(r => setTimeout(r, 60000));
+}
+
+main();
