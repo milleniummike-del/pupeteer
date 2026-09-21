@@ -38,42 +38,38 @@ async function main() {
     // 1. UPLOAD IMAGE (JPEG or WEBP)
     // -----------------------------------------------------
 
-    const imagePath = "C:\\Users\\mike\\auto\\inputimages\\1.webp"; // or .webp
-    const buffer = fs.readFileSync(imagePath);
-    const uint8 = Array.from(buffer);
+    const imagePath = "C:\\Users\\mike\\auto\\inputimages\\1.webp"; // or .jpeg / .jpg
+    const imageBuffer = fs.readFileSync(imagePath);
+    const imageBytes = Array.from(imageBuffer);
 
-    // Detect MIME type from extension
-    const ext = path.extname(imagePath).toLowerCase();
-    let mime = "image/jpeg";
-    if (ext === ".webp") mime = "image/webp";
-    if (ext === ".jpg") mime = "image/jpeg";
-    if (ext === ".jpeg") mime = "image/jpeg";
+    const imageExt = path.extname(imagePath).toLowerCase();
+    let imageMime = "image/jpeg";
+    if (imageExt === ".webp") imageMime = "image/webp";
+    if (imageExt === ".jpg") imageMime = "image/jpeg";
+    if (imageExt === ".jpeg") imageMime = "image/jpeg";
 
     await prunaFrame.waitForSelector('#p-video-2-image-file', { timeout: 20000 });
 
-    await prunaFrame.evaluate(async (uint8, mime) => {
-        console.log("[IFRAME] Starting upload…");
+    await prunaFrame.evaluate(async (bytes, mime) => {
+        console.log("[IFRAME] Uploading IMAGE…");
 
         const fileInput = document.querySelector('#p-video-2-image-file');
         if (!fileInput) {
-            console.log("[IFRAME] File input not found");
+            console.log("[IFRAME] Image input not found");
             return;
         }
 
-        // Convert Uint8Array → Blob (correct binary)
-        const blob = new Blob([new Uint8Array(uint8)], { type: mime });
+        const blob = new Blob([new Uint8Array(bytes)], { type: mime });
         const file = new File([blob], "upload" + (mime === "image/webp" ? ".webp" : ".jpeg"), { type: mime });
 
         const dt = new DataTransfer();
         dt.items.add(file);
 
-        // Assign real FileList
         Object.defineProperty(fileInput, "files", {
             value: dt.files,
             writable: false
         });
 
-        // Trigger React's internal onChange handler
         const reactKey = Object.keys(fileInput).find(k => k.startsWith("__reactProps"));
         if (reactKey && fileInput[reactKey].onChange) {
             fileInput[reactKey].onChange({
@@ -85,18 +81,74 @@ async function main() {
                 isTrusted: true,
                 type: "change"
             });
-            console.log("[IFRAME] React onChange fired");
+            console.log("[IFRAME] React IMAGE onChange fired");
         } else {
-            console.log("[IFRAME] React onChange not found");
+            console.log("[IFRAME] React IMAGE onChange not found");
         }
 
-        console.log("[IFRAME] Image uploaded successfully");
-    }, uint8, mime);
+        console.log("[IFRAME] IMAGE uploaded");
+    }, imageBytes, imageMime);
 
     console.log("Image upload completed");
 
     // -----------------------------------------------------
-    // 2. TYPE PROMPT (inside iframe)
+    // 2. UPLOAD AUDIO (WAV or MP3)
+    // -----------------------------------------------------
+
+    const audioPath = "C:\\Users\\mike\\auto\\inputaudio\\1.wav"; // or .mp3
+    const audioBuffer = fs.readFileSync(audioPath);
+    const audioBytes = Array.from(audioBuffer);
+
+    const audioExt = path.extname(audioPath).toLowerCase();
+    let audioMime = "audio/wav";
+    if (audioExt === ".mp3") audioMime = "audio/mpeg";
+    if (audioExt === ".wav") audioMime = "audio/wav";
+
+    await prunaFrame.waitForSelector('#p-video-2-audio-file', { timeout: 20000 });
+
+    await prunaFrame.evaluate(async (bytes, mime) => {
+        console.log("[IFRAME] Uploading AUDIO…");
+
+        const fileInput = document.querySelector('#p-video-2-audio-file');
+        if (!fileInput) {
+            console.log("[IFRAME] Audio input not found");
+            return;
+        }
+
+        const blob = new Blob([new Uint8Array(bytes)], { type: mime });
+        const file = new File([blob], "upload" + (mime === "audio/mpeg" ? ".mp3" : ".wav"), { type: mime });
+
+        const dt = new DataTransfer();
+        dt.items.add(file);
+
+        Object.defineProperty(fileInput, "files", {
+            value: dt.files,
+            writable: false
+        });
+
+        const reactKey = Object.keys(fileInput).find(k => k.startsWith("__reactProps"));
+        if (reactKey && fileInput[reactKey].onChange) {
+            fileInput[reactKey].onChange({
+                target: fileInput,
+                currentTarget: fileInput,
+                bubbles: true,
+                cancelable: true,
+                defaultPrevented: false,
+                isTrusted: true,
+                type: "change"
+            });
+            console.log("[IFRAME] React AUDIO onChange fired");
+        } else {
+            console.log("[IFRAME] React AUDIO onChange not found");
+        }
+
+        console.log("[IFRAME] AUDIO uploaded");
+    }, audioBytes, audioMime);
+
+    console.log("Audio upload completed");
+
+    // -----------------------------------------------------
+    // 3. TYPE PROMPT (inside iframe)
     // -----------------------------------------------------
 
     await prunaFrame.waitForSelector("textarea", { timeout: 20000 });
