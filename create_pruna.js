@@ -38,7 +38,7 @@ async function main() {
     // 1. UPLOAD IMAGE (JPEG or WEBP)
     // -----------------------------------------------------
 
-    const imagePath = "C:\\Users\\mike\\auto\\inputimages\\1.webp"; // or .jpeg / .jpg
+    const imagePath = "inputimages\\1.webp"; // or .jpeg / .jpg
     const imageBuffer = fs.readFileSync(imagePath);
     const imageBytes = Array.from(imageBuffer);
 
@@ -95,7 +95,7 @@ async function main() {
     // 2. UPLOAD AUDIO (WAV or MP3)
     // -----------------------------------------------------
 
-    const audioPath = "C:\\Users\\mike\\auto\\inputaudio\\1.wav"; // or .mp3
+    const audioPath = "inputaudio\\1.wav"; // or .mp3
     const audioBuffer = fs.readFileSync(audioPath);
     const audioBytes = Array.from(audioBuffer);
 
@@ -151,52 +151,52 @@ async function main() {
     // 3. TYPE PROMPT (inside iframe)
     // -----------------------------------------------------
 
-    await prunaFrame.waitForSelector("textarea", { timeout: 20000 });
-    const textarea = await prunaFrame.$("textarea");
+    // -----------------------------------------------------
+// 3. TYPE PROMPT (React-controlled textarea)
+// -----------------------------------------------------
 
-    console.log("Textarea found");
-    await textarea.click();
+await prunaFrame.waitForSelector("textarea", { timeout: 20000 });
 
-    const client = await page.target().createCDPSession();
+await prunaFrame.evaluate(() => {
+    const textarea = document.querySelector("textarea");
+    if (!textarea) {
+        console.log("[IFRAME] Textarea not found");
+        return;
+    }
 
-    // CLEAR FIELD — Ctrl+A
-    await client.send("Input.dispatchKeyEvent", {
-        type: "keyDown",
-        key: "a",
-        windowsVirtualKeyCode: 0x41,
-        nativeVirtualKeyCode: 0x41,
-        modifiers: 2
-    });
-    await client.send("Input.dispatchKeyEvent", {
-        type: "keyUp",
-        key: "a",
-        windowsVirtualKeyCode: 0x41,
-        nativeVirtualKeyCode: 0x41,
-        modifiers: 2
-    });
+    const newPrompt = "the character sings and matches the audio";
 
-    // CLEAR FIELD — Backspace
-    await client.send("Input.dispatchKeyEvent", {
-        type: "keyDown",
-        key: "Backspace",
-        windowsVirtualKeyCode: 0x08,
-        nativeVirtualKeyCode: 0x08
-    });
-    await client.send("Input.dispatchKeyEvent", {
-        type: "keyUp",
-        key: "Backspace",
-        windowsVirtualKeyCode: 0x08,
-        nativeVirtualKeyCode: 0x08
-    });
+    // Set DOM value
+    textarea.value = newPrompt;
 
-    console.log("Textarea cleared");
+    // Find React props key
+    const reactKey = Object.keys(textarea).find(k => k.startsWith("__reactProps"));
+    if (!reactKey) {
+        console.log("[IFRAME] React props not found");
+        return;
+    }
 
-    // TYPE NEW PROMPT
-    await client.send("Input.insertText", {
-        text: "testing prompt"
+    const props = textarea[reactKey];
+    if (!props.onChange) {
+        console.log("[IFRAME] React onChange not found");
+        return;
+    }
+
+    // Fire React onChange so React updates its internal state
+    props.onChange({
+        target: textarea,
+        currentTarget: textarea,
+        bubbles: true,
+        cancelable: true,
+        defaultPrevented: false,
+        isTrusted: true,
+        type: "change"
     });
 
-    console.log("Typed new prompt");
+    console.log("[IFRAME] Prompt updated via React");
+});
+
+console.log("Prompt update completed");
 
     await new Promise(r => setTimeout(r, 60000));
 }

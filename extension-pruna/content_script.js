@@ -93,8 +93,7 @@ async function runQueue({ prompts }) {
   for (let i = 1; i < 6; i++) {
   await uploadImage(""+i);
   await uploadAudio(""+i);
-  await setPrunaPrompt("prompt "+i);
-      // WAIT HERE until user clicks Continue in side panel
+  await setPrunaPrompt("The character in the reference image sings in sync with the audio");
   await waitForContinue();
   }
   panelLog("Queue finished.");
