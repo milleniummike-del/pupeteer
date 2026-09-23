@@ -25,7 +25,7 @@ async function main() {
     // Wait for iframe
     await page.waitForSelector("iframe", { timeout: 20000 });
     const iframeElement = await page.$("iframe");
-    const prunaFrame = await iframeElement.contentFrame();
+    let prunaFrame = await iframeElement.contentFrame();
 
     if (!prunaFrame) {
         console.log("Could not attach to Pruna iframe");
@@ -35,170 +35,147 @@ async function main() {
     console.log("Attached to Pruna iframe");
 
     // -----------------------------------------------------
-    // 1. UPLOAD IMAGE (JPEG or WEBP)
+    // 1. UPLOAD IMAGE
     // -----------------------------------------------------
 
-    const imagePath = "inputimages\\1.webp"; // or .jpeg / .jpg
+    const imagePath = "inputimages\\1.webp";
     const imageBuffer = fs.readFileSync(imagePath);
     const imageBytes = Array.from(imageBuffer);
 
     const imageExt = path.extname(imagePath).toLowerCase();
-    let imageMime = "image/jpeg";
-    if (imageExt === ".webp") imageMime = "image/webp";
-    if (imageExt === ".jpg") imageMime = "image/jpeg";
-    if (imageExt === ".jpeg") imageMime = "image/jpeg";
+    let imageMime = imageExt === ".webp" ? "image/webp" : "image/jpeg";
 
     await prunaFrame.waitForSelector('#p-video-2-image-file', { timeout: 20000 });
 
     await prunaFrame.evaluate(async (bytes, mime) => {
-        console.log("[IFRAME] Uploading IMAGE…");
-
         const fileInput = document.querySelector('#p-video-2-image-file');
-        if (!fileInput) {
-            console.log("[IFRAME] Image input not found");
-            return;
-        }
+        if (!fileInput) return;
 
         const blob = new Blob([new Uint8Array(bytes)], { type: mime });
-        const file = new File([blob], "upload" + (mime === "image/webp" ? ".webp" : ".jpeg"), { type: mime });
+        const file = new File([blob], "upload.webp", { type: mime });
 
         const dt = new DataTransfer();
         dt.items.add(file);
 
-        Object.defineProperty(fileInput, "files", {
-            value: dt.files,
-            writable: false
-        });
+        Object.defineProperty(fileInput, "files", { value: dt.files });
 
         const reactKey = Object.keys(fileInput).find(k => k.startsWith("__reactProps"));
         if (reactKey && fileInput[reactKey].onChange) {
-            fileInput[reactKey].onChange({
-                target: fileInput,
-                currentTarget: fileInput,
-                bubbles: true,
-                cancelable: true,
-                defaultPrevented: false,
-                isTrusted: true,
-                type: "change"
-            });
-            console.log("[IFRAME] React IMAGE onChange fired");
-        } else {
-            console.log("[IFRAME] React IMAGE onChange not found");
+            fileInput[reactKey].onChange({ target: fileInput, type: "change" });
         }
-
-        console.log("[IFRAME] IMAGE uploaded");
     }, imageBytes, imageMime);
 
     console.log("Image upload completed");
 
     // -----------------------------------------------------
-    // 2. UPLOAD AUDIO (WAV or MP3)
+    // 2. UPLOAD AUDIO
     // -----------------------------------------------------
 
-    const audioPath = "inputaudio\\1.wav"; // or .mp3
+    const audioPath = "inputaudio\\1.wav";
     const audioBuffer = fs.readFileSync(audioPath);
     const audioBytes = Array.from(audioBuffer);
 
     const audioExt = path.extname(audioPath).toLowerCase();
-    let audioMime = "audio/wav";
-    if (audioExt === ".mp3") audioMime = "audio/mpeg";
-    if (audioExt === ".wav") audioMime = "audio/wav";
+    let audioMime = audioExt === ".mp3" ? "audio/mpeg" : "audio/wav";
 
     await prunaFrame.waitForSelector('#p-video-2-audio-file', { timeout: 20000 });
 
     await prunaFrame.evaluate(async (bytes, mime) => {
-        console.log("[IFRAME] Uploading AUDIO…");
-
         const fileInput = document.querySelector('#p-video-2-audio-file');
-        if (!fileInput) {
-            console.log("[IFRAME] Audio input not found");
-            return;
-        }
+        if (!fileInput) return;
 
         const blob = new Blob([new Uint8Array(bytes)], { type: mime });
-        const file = new File([blob], "upload" + (mime === "audio/mpeg" ? ".mp3" : ".wav"), { type: mime });
+        const file = new File([blob], "upload.wav", { type: mime });
 
         const dt = new DataTransfer();
         dt.items.add(file);
 
-        Object.defineProperty(fileInput, "files", {
-            value: dt.files,
-            writable: false
-        });
+        Object.defineProperty(fileInput, "files", { value: dt.files });
 
         const reactKey = Object.keys(fileInput).find(k => k.startsWith("__reactProps"));
         if (reactKey && fileInput[reactKey].onChange) {
-            fileInput[reactKey].onChange({
-                target: fileInput,
-                currentTarget: fileInput,
-                bubbles: true,
-                cancelable: true,
-                defaultPrevented: false,
-                isTrusted: true,
-                type: "change"
-            });
-            console.log("[IFRAME] React AUDIO onChange fired");
-        } else {
-            console.log("[IFRAME] React AUDIO onChange not found");
+            fileInput[reactKey].onChange({ target: fileInput, type: "change" });
         }
-
-        console.log("[IFRAME] AUDIO uploaded");
     }, audioBytes, audioMime);
 
     console.log("Audio upload completed");
 
     // -----------------------------------------------------
-    // 3. TYPE PROMPT (inside iframe)
+    // 3. TYPE PROMPT
     // -----------------------------------------------------
 
-    // -----------------------------------------------------
-// 3. TYPE PROMPT (React-controlled textarea)
-// -----------------------------------------------------
+    await prunaFrame.waitForSelector("textarea", { timeout: 20000 });
 
-await prunaFrame.waitForSelector("textarea", { timeout: 20000 });
+    await prunaFrame.evaluate(() => {
+        const textarea = document.querySelector("textarea");
+        if (!textarea) return;
 
-await prunaFrame.evaluate(() => {
-    const textarea = document.querySelector("textarea");
-    if (!textarea) {
-        console.log("[IFRAME] Textarea not found");
-        return;
-    }
+        textarea.value = "the character sings and matches the audio";
 
-    const newPrompt = "the character sings and matches the audio";
-
-    // Set DOM value
-    textarea.value = newPrompt;
-
-    // Find React props key
-    const reactKey = Object.keys(textarea).find(k => k.startsWith("__reactProps"));
-    if (!reactKey) {
-        console.log("[IFRAME] React props not found");
-        return;
-    }
-
-    const props = textarea[reactKey];
-    if (!props.onChange) {
-        console.log("[IFRAME] React onChange not found");
-        return;
-    }
-
-    // Fire React onChange so React updates its internal state
-    props.onChange({
-        target: textarea,
-        currentTarget: textarea,
-        bubbles: true,
-        cancelable: true,
-        defaultPrevented: false,
-        isTrusted: true,
-        type: "change"
+        const reactKey = Object.keys(textarea).find(k => k.startsWith("__reactProps"));
+        if (reactKey && textarea[reactKey].onChange) {
+            textarea[reactKey].onChange({ target: textarea, type: "change" });
+        }
     });
 
-    console.log("[IFRAME] Prompt updated via React");
-});
+    console.log("Prompt updated");
 
-console.log("Prompt update completed");
 
-    await new Promise(r => setTimeout(r, 60000));
+    // -----------------------------------------------------
+    // 4. CLICK ADVANCED
+    // -----------------------------------------------------
+
+    await prunaFrame.waitForFunction(() => {
+        return [...document.querySelectorAll('button')]
+            .some(b => b.textContent.trim() === 'Advanced');
+    }, { timeout: 20000 });
+
+    console.log("Advanced button appeared");
+
+    await prunaFrame.evaluate(() => {
+        const btn = [...document.querySelectorAll('button')]
+            .find(b => b.textContent.trim() === 'Advanced');
+        btn?.click();
+    });
+
+    console.log("Advanced button clicked");
+    await prunaFrame.evaluate(() => {
+        const selects = document.querySelectorAll("select");
+        const resolutionSelect = selects[1];   // second <select> = Resolution
+
+        resolutionSelect.value = "1080p";
+        resolutionSelect.dispatchEvent(new Event("change", { bubbles: true }));
+    });
+
+    await prunaFrame.evaluate(() => {
+        const selects = document.querySelectorAll("select");
+        const resolutionSelect = selects[2];
+
+        resolutionSelect.value = "48";
+        resolutionSelect.dispatchEvent(new Event("change", { bubbles: true }));
+    });
+
+    // -----------------------------------------------------
+    // 8. WAIT FOR KEYPRESS
+    // -----------------------------------------------------
+
+    await new Promise(resolve => {
+        const onData = () => {
+            process.stdin.setRawMode(false);
+            process.stdin.pause();
+            process.stdin.removeListener('data', onData);
+            resolve();
+        };
+
+        process.stdin.setRawMode(true);
+        process.stdin.resume();
+        process.stdin.on('data', onData);
+
+        console.log("Press any key to continue...");
+    });
+
+
+    console.log("Got here!");
 }
 
 main();

@@ -314,7 +314,7 @@ function extractTags(text) {
     const inside = text.slice(start + 1, end); // e.g. "Character: Fred"
     const parts = inside.split(":");
     if (parts.length >= 2) {
-      const key = parts[0].trim().toLowerCase();   // "character" or "scene"
+      const key = parts[0].trim().toLowerCase();   // "character" or "image"
       const value = parts.slice(1).join(":").trim(); // rest after first colon
 
       if (key === "character") {

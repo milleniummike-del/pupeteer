@@ -238,16 +238,15 @@ const buildPrompt = () => {
 // MAIN GENERATOR
 // ---------------------------------------------------------
 const generateBatch = (count = 20) => {
-  const lines = [];
-  lines.push(`const videos = [];`);
-
+  let lines = "";
+  lines = lines + "[";
   for (let i = 0; i < count; i++) {
     const prompt = buildPrompt();
-    lines.push(`videos[${i}] = \`${prompt}\`;`);
+    lines = lines + '{"prompt":"' + prompt + '"},';
   }
 
-  lines.push(`module.exports = videos;`);
-  return lines.join('\n');
+  lines = lines + "]";
+  return lines;
 };
 
 // ---------------------------------------------------------
@@ -259,6 +258,7 @@ const count = parseInt(args[0]) || 20;
 const output = generateBatch(count);
 
 // Write file
-fs.writeFileSync('videos.js', output, { encoding: 'utf8' });
+fs.writeFileSync('videos.json', output, { encoding: 'utf8' });
 
 console.log('✔ videos.js generated successfully (Global Wildlife Edition)');
+console.log(JSON.stringify(output));
