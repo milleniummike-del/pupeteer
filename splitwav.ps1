@@ -29,7 +29,7 @@ if (-not (Test-Path $outDir)) {
 }
 
 # Output pattern
-$segmentPattern = Join-Path $outDir "${baseName}_%03d.wav"
+$segmentPattern = Join-Path $outDir "%01d.wav"
 
 # Run segmentation
 ffmpeg -i "$InputFile" -f segment -segment_time $SegmentLength -c copy "$segmentPattern"
