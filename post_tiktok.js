@@ -117,12 +117,10 @@ async function uploadToTikTok(videoPath, caption = "") {
     }, { timeout: 0 });
 
     console.log("Upload successful!");
-
-    await browser.close();
 }
 
 // Run it
 uploadToTikTok(
-    "C:\\Users\\mike\\auto\\inputimages\\selfie2.mp4",
+    "inputvideo\\1.mp4",
     "My automated upload"
 );
