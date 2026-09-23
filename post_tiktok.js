@@ -111,13 +111,31 @@ async function uploadToTikTok(jsonPromptPath, videoPath, caption = "") {
     // ---------------------------------------------------------
     // WRITE promptText INTO THE DRAFTJS CAPTION EDITOR
     // ---------------------------------------------------------
+
+    // 1. Wait for DraftJS editor
     await page.waitForSelector('.public-DraftEditor-content[contenteditable="true"]');
 
-    const editor = await page.$('.public-DraftEditor-content[contenteditable="true"]');
-    await editor.focus();
+    // 2. Click the INNER editable span (critical!)
+    await page.evaluate(() => {
+        const span = document.querySelector('.public-DraftEditor-content [data-text="true"]');
+        if (span) {
+            const range = document.createRange();
+            const sel = window.getSelection();
+            range.selectNodeContents(span);
+            range.collapse(false);
+            sel.removeAllRanges();
+            sel.addRange(range);
+        }
+    });
 
-    const client = await page.target().createCDPSession();
-    await client.send("Input.insertText", { text: "\n" + promptText });
+    // 3. Clear existing placeholder ("1")
+    await page.keyboard.down("Control");
+    await page.keyboard.press("A");
+    await page.keyboard.up("Control");
+    await page.keyboard.press("Backspace");
+
+    // 4. Type your promptText as real keystrokes
+    await page.keyboard.type(promptText, { delay: 10 });
 
     console.log("DraftJS caption updated with promptText");
 
@@ -135,9 +153,23 @@ async function uploadToTikTok(jsonPromptPath, videoPath, caption = "") {
     console.log("Upload successful!");
 }
 
+// ---------------------------------------------
+// FIND FIRST VIDEO FILE IN inputvideo FOLDER
+// ---------------------------------------------
+const videoDir = "X:\\inputvideo\\";
+const videoFiles = fs.readdirSync(videoDir)
+    .filter(f => /\.(mp4|mov|avi|mkv|webm)$/i.test(f))
+    .sort();
+
+if (videoFiles.length === 0) {
+    throw new Error("No video files found in inputvideo folder.");
+}
+
+const firstVideo = path.join(videoDir, videoFiles[0]);
+
 // Run it
 uploadToTikTok(
     "inputtext\\1.json",
-    "inputvideo\\1.mp4",
+    firstVideo,
     "My automated upload"
 );
