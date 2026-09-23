@@ -5,9 +5,21 @@ const fs = require('fs');
 
 puppeteer.use(StealthPlugin());
 
-async function uploadToTikTok(videoPath, caption = "") {
+async function uploadToTikTok(jsonPromptPath, videoPath, caption = "") {
 
-    // Ensure file exists
+    // ---------------------------------------------
+    // READ PROMPT FROM JSON FILE
+    // ---------------------------------------------
+    if (!fs.existsSync(jsonPromptPath)) {
+        throw new Error("JSON prompt file not found: " + jsonPromptPath);
+    }
+
+    const jsonData = JSON.parse(fs.readFileSync(jsonPromptPath, "utf8"));
+    const promptText = jsonData.prompt || "";
+
+    console.log("Loaded prompt:", promptText);
+
+    // Ensure video exists
     if (!fs.existsSync(videoPath)) {
         throw new Error("Video file not found: " + videoPath);
     }
@@ -22,7 +34,6 @@ async function uploadToTikTok(videoPath, caption = "") {
             "--no-sandbox",
             "--disable-setuid-sandbox"
         ],
-        // MUST use your real Chrome profile
         userDataDir: "browser"
     });
 
@@ -39,24 +50,20 @@ async function uploadToTikTok(videoPath, caption = "") {
     await page.waitForSelector('input[type="file"]', { visible: false });
     const fileInput = await page.$('input[type="file"]');
 
-    // Upload file (absolute path)
+    // Upload file
     await fileInput.uploadFile(path.resolve(videoPath));
 
     console.log("File injected… firing React events");
 
-    // ---------------------------------------------------------
-    // PATCH 1 — Fire React synthetic event
-    // ---------------------------------------------------------
+    // Fire React synthetic event
     await page.evaluate(() => {
         const input = document.querySelector('input[type="file"]');
         const evt = new Event('change', { bubbles: true });
-        evt.simulated = true; // TikTok checks this
+        evt.simulated = true;
         input.dispatchEvent(evt);
     });
 
-    // ---------------------------------------------------------
-    // PATCH 2 — Force React Fiber onChange
-    // ---------------------------------------------------------
+    // Force React Fiber onChange
     await page.evaluate(() => {
         const input = document.querySelector('input[type="file"]');
         const key = Object.keys(input).find(k => k.startsWith("__reactFiber"));
@@ -79,9 +86,7 @@ async function uploadToTikTok(videoPath, caption = "") {
 
     console.log("React Fiber upload handler invoked");
 
-    // ---------------------------------------------------------
-    // PATCH 3 — Wait for TikTok to begin processing
-    // ---------------------------------------------------------
+    // Wait for TikTok to begin processing
     await page.waitForFunction(() => {
         const el = document.querySelector('[data-e2e="upload-progress"]');
         return el && el.textContent.includes("%");
@@ -89,9 +94,7 @@ async function uploadToTikTok(videoPath, caption = "") {
 
     console.log("TikTok started processing…");
 
-    // ---------------------------------------------------------
-    // PATCH 4 — Wait for Post button to become enabled
-    // ---------------------------------------------------------
+    // Wait for Post button to become enabled
     await page.waitForFunction(() => {
         const btn = document.querySelector('[data-e2e="post-button"]');
         return btn && !btn.disabled;
@@ -99,11 +102,24 @@ async function uploadToTikTok(videoPath, caption = "") {
 
     console.log("TikTok finished processing");
 
-    // Add caption
+    // Add caption (simple field)
     if (caption) {
         await page.waitForSelector('[data-e2e="caption-input"]');
         await page.type('[data-e2e="caption-input"]', caption, { delay: 20 });
     }
+
+    // ---------------------------------------------------------
+    // WRITE promptText INTO THE DRAFTJS CAPTION EDITOR
+    // ---------------------------------------------------------
+    await page.waitForSelector('.public-DraftEditor-content[contenteditable="true"]');
+
+    const editor = await page.$('.public-DraftEditor-content[contenteditable="true"]');
+    await editor.focus();
+
+    const client = await page.target().createCDPSession();
+    await client.send("Input.insertText", { text: "\n" + promptText });
+
+    console.log("DraftJS caption updated with promptText");
 
     // Click Post
     await page.click('[data-e2e="post-button"]');
@@ -121,6 +137,7 @@ async function uploadToTikTok(videoPath, caption = "") {
 
 // Run it
 uploadToTikTok(
+    "inputtext\\1.json",
     "inputvideo\\1.mp4",
     "My automated upload"
 );
