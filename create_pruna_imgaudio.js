@@ -2,8 +2,8 @@ const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 const fs = require('fs');
 const path = require('path');
-const startfile = 5;
-const numfiles = 10;
+const startfile = 1
+const numfiles = 7;
 let firstime = true;
 
 puppeteer.use(StealthPlugin());
@@ -41,7 +41,7 @@ async function main() {
         // -----------------------------------------------------
         // 1. UPLOAD IMAGE
         // -----------------------------------------------------
-        const imagePath = "X:\\inputimages\\Song Inside My Head-segments\\" + number + ".jpeg";
+        const imagePath = "X:\\inputimages\\Watched Ibiza Burn - Afro Mix-segments\\" + number + ".jpg";
         const imageBuffer = fs.readFileSync(imagePath);
         const imageBytes = Array.from(imageBuffer);
 
@@ -73,7 +73,7 @@ async function main() {
         // 2. UPLOAD AUDIO
         // -----------------------------------------------------
 
-        const audioPath = "X:\\inputaudio\\Song Inside My Head-segments\\" + number + ".wav";
+        const audioPath = "X:\\inputaudio\\Watched Ibiza Burn - Afro Mix-segments\\" + number + ".wav";
         const audioBuffer = fs.readFileSync(audioPath);
         const audioBytes = Array.from(audioBuffer);
 
