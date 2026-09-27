@@ -2,9 +2,10 @@ const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 const fs = require('fs');
 const path = require('path');
-const startfile = 1
-const numfiles = 7;
+const startfile = 6;
+const endFile = 7;
 let firstime = true;
+const inputFolder = "Watched Ibiza Burn - Afro Mix-segments";
 
 puppeteer.use(StealthPlugin());
 
@@ -13,6 +14,7 @@ async function main() {
         headless: false,
         executablePath: "C:/Program Files/Google/Chrome/Application/chrome.exe",
         defaultViewport: null,
+        protocolTimeout: 300000,
         args: [
             "--disable-blink-features=AutomationControlled",
             "--no-sandbox",
@@ -37,11 +39,11 @@ async function main() {
 
     console.log("Attached to Pruna iframe");
 
-    for (let number = startfile; number < numfiles; number++) {
+    for (let number = startfile; number <= endFile; number++) {
         // -----------------------------------------------------
         // 1. UPLOAD IMAGE
         // -----------------------------------------------------
-        const imagePath = "X:\\inputimages\\Watched Ibiza Burn - Afro Mix-segments\\" + number + ".jpg";
+        const imagePath = "X:\\inputimages\\" + inputFolder + "\\" + number + ".jpg";
         const imageBuffer = fs.readFileSync(imagePath);
         const imageBytes = Array.from(imageBuffer);
 
@@ -73,7 +75,7 @@ async function main() {
         // 2. UPLOAD AUDIO
         // -----------------------------------------------------
 
-        const audioPath = "X:\\inputaudio\\Watched Ibiza Burn - Afro Mix-segments\\" + number + ".wav";
+        const audioPath = "X:\\inputaudio\\" + inputFolder + "\\" + number + ".wav";
         const audioBuffer = fs.readFileSync(audioPath);
         const audioBytes = Array.from(audioBuffer);
 
@@ -121,27 +123,27 @@ async function main() {
         console.log("Prompt updated");
 
         if (firstime) {
-        // -----------------------------------------------------
-        // 4. CLICK ADVANCED
-        // -----------------------------------------------------
+            // -----------------------------------------------------
+            // 4. CLICK ADVANCED
+            // -----------------------------------------------------
 
-        await prunaFrame.waitForFunction(() => {
-            return [...document.querySelectorAll('button')]
-                .some(b => b.textContent.trim() === 'Advanced');
-        }, { timeout: 20000 });
+            await prunaFrame.waitForFunction(() => {
+                return [...document.querySelectorAll('button')]
+                    .some(b => b.textContent.trim() === 'Advanced');
+            }, { timeout: 20000 });
 
-        console.log("Advanced button appeared");
+            console.log("Advanced button appeared");
 
-        await prunaFrame.evaluate(() => {
-            const btn = [...document.querySelectorAll('button')]
-                .find(b => b.textContent.trim() === 'Advanced');
-            btn?.click();
-        });
+            await prunaFrame.evaluate(() => {
+                const btn = [...document.querySelectorAll('button')]
+                    .find(b => b.textContent.trim() === 'Advanced');
+                btn?.click();
+            });
 
-        console.log("Advanced button clicked");
-        firstime = false;
+            console.log("Advanced button clicked");
+            firstime = false;
 
-    }
+        }
         await prunaFrame.evaluate(() => {
             const selects = document.querySelectorAll("select");
             const resolutionSelect = selects[1];   // second <select> = Resolution
@@ -157,6 +159,18 @@ async function main() {
             resolutionSelect.value = "48";
             resolutionSelect.dispatchEvent(new Event("change", { bubbles: true }));
         });
+
+        console.log("Click primary button");
+
+await prunaFrame.evaluate(() => {
+    document.querySelector('button.pruna-btn-primary')?.click();
+});
+
+        console.log("Waiting for primary button");
+        await prunaFrame.waitForFunction(() => {
+            const btn = document.querySelector('button.pruna-btn-primary');
+            return btn && !btn.disabled;
+        }, { timeout: 200000 });
 
         // -----------------------------------------------------
         // 8. WAIT FOR KEYPRESS
