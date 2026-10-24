@@ -5,7 +5,7 @@ const fs = require('fs');
 
 puppeteer.use(StealthPlugin());
 
-async function uploadToTikTok(videoPath, caption = "") {
+async function upload(videoPath, caption = "") {
 
     // Ensure file exists
     if (!fs.existsSync(videoPath)) {
@@ -29,7 +29,7 @@ async function uploadToTikTok(videoPath, caption = "") {
     const page = await browser.newPage();
 
     // Go to TikTok upload page
-    await page.goto("https://www.facebook.co", {
+    await page.goto("https://www.facebook.com/artificialfiretiger", {
         waitUntil: "networkidle2"
     });
 
@@ -40,7 +40,7 @@ async function uploadToTikTok(videoPath, caption = "") {
 }
 
 // Run it
-uploadToTikTok(
+upload(
     "inputvideo\\1.mp4",
     "My automated upload"
 );

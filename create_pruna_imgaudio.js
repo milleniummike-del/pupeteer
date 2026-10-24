@@ -2,195 +2,467 @@ const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 const fs = require('fs');
 const path = require('path');
-const startfile = 6;
-const endFile = 7;
+
 let firstime = true;
-const inputFolder = "Watched Ibiza Burn - Afro Mix-segments";
+
+const inputFolder = `X:\\inputmixed\\test1`;
 
 puppeteer.use(StealthPlugin());
 
+async function waitForKeypress() {
+    return new Promise(resolve => {
+
+        const onData = () => {
+            process.stdin.setRawMode(false);
+            process.stdin.pause();
+            process.stdin.removeListener('data', onData);
+            resolve();
+        };
+
+        process.stdin.setRawMode(true);
+        process.stdin.resume();
+        process.stdin.on('data', onData);
+
+        console.log('Press any key to continue...');
+    });
+}
+
+async function uploadFileToInput(frame, selector, filePath, mimeType) {
+
+    const buffer = fs.readFileSync(filePath);
+    const bytes = Array.from(buffer);
+
+    const fileName = path.basename(filePath);
+
+    await frame.waitForSelector(selector, {
+        timeout: 20000
+    });
+
+    await frame.evaluate(
+        (sel, bytes, mime, fileName) => {
+
+            const fileInput = document.querySelector(sel);
+
+            if (!fileInput) return false;
+
+            const blob = new Blob(
+                [new Uint8Array(bytes)],
+                { type: mime }
+            );
+
+            const file = new File(
+                [blob],
+                fileName,
+                { type: mime }
+            );
+
+            const dt = new DataTransfer();
+            dt.items.add(file);
+
+            if (fileInput._valueTracker) {
+                fileInput._valueTracker.setValue('');
+            }
+
+            fileInput.files = dt.files;
+
+            fileInput.dispatchEvent(
+                new Event('change', {
+                    bubbles: true
+                })
+            );
+
+            return true;
+        },
+        selector,
+        bytes,
+        mimeType,
+        fileName
+    );
+}
+
 async function main() {
+
+    // -----------------------------------------------------
+    // LOAD MANIFEST
+    // -----------------------------------------------------
+
+    const manifestFile = fs
+        .readdirSync(inputFolder)
+        .find(f => f.toLowerCase().endsWith('.json'));
+
+    if (!manifestFile) {
+        throw new Error(
+            `No manifest json found in ${inputFolder}`
+        );
+    }
+
+    const manifestPath = path.join(
+        inputFolder,
+        manifestFile
+    );
+
+    const manifest = JSON.parse(
+        fs.readFileSync(manifestPath, 'utf8')
+    );
+
+    console.log(
+        `Loaded manifest with ${manifest.totalPieces} piece(s)`
+    );
+
+    // -----------------------------------------------------
+    // BROWSER
+    // -----------------------------------------------------
+
     const browser = await puppeteer.launch({
         headless: false,
-        executablePath: "C:/Program Files/Google/Chrome/Application/chrome.exe",
+        executablePath:
+            'C:/Program Files/Google/Chrome/Application/chrome.exe',
         defaultViewport: null,
         protocolTimeout: 300000,
         args: [
-            "--disable-blink-features=AutomationControlled",
-            "--no-sandbox",
-            "--disable-setuid-sandbox"
+            '--disable-blink-features=AutomationControlled',
+            '--no-sandbox',
+            '--disable-setuid-sandbox'
         ]
     });
 
     const page = await browser.newPage();
-    await page.goto("https://www.pruna.ai/p-video-2", { waitUntil: "networkidle2" });
 
-    console.log("Opened Pruna");
+    await page.goto(
+        'https://www.pruna.ai/p-video-2',
+        {
+            waitUntil: 'networkidle2'
+        }
+    );
 
-    // Wait for iframe
-    await page.waitForSelector("iframe", { timeout: 20000 });
-    const iframeElement = await page.$("iframe");
-    let prunaFrame = await iframeElement.contentFrame();
+    console.log('Opened Pruna');
+
+    // -----------------------------------------------------
+    // IFRAME
+    // -----------------------------------------------------
+
+    await page.waitForSelector('iframe', {
+        timeout: 20000
+    });
+
+    const iframeElement = await page.$('iframe');
+
+    const prunaFrame =
+        await iframeElement.contentFrame();
 
     if (!prunaFrame) {
-        console.log("Could not attach to Pruna iframe");
-        return;
+        throw new Error(
+            'Could not attach to Pruna iframe'
+        );
     }
 
-    console.log("Attached to Pruna iframe");
+    console.log('Attached to Pruna iframe');
 
-    for (let number = startfile; number <= endFile; number++) {
-        // -----------------------------------------------------
-        // 1. UPLOAD IMAGE
-        // -----------------------------------------------------
-        const imagePath = "X:\\inputimages\\" + inputFolder + "\\" + number + ".jpg";
-        const imageBuffer = fs.readFileSync(imagePath);
-        const imageBytes = Array.from(imageBuffer);
+    // -----------------------------------------------------
+    // PROCESS EACH PIECE
+    // -----------------------------------------------------
 
-        const imageExt = path.extname(imagePath).toLowerCase();
-        let imageMime = imageExt === ".webp" ? "image/webp" : "image/jpeg";
+    for (const piece of manifest.pieces) {
 
-        await prunaFrame.waitForSelector('#p-video-2-image-file', { timeout: 20000 });
+        console.log('');
+        console.log(
+            `========== PIECE ${piece.index}/${manifest.totalPieces} ==========`
+        );
 
-        await prunaFrame.evaluate((bytes, mime) => {
-            const fileInput = document.querySelector('#p-video-2-image-file');
-            if (!fileInput) return;
-
-            const blob = new Blob([new Uint8Array(bytes)], { type: mime });
-            const file = new File([blob], "upload.webp", { type: mime });
-
-            const dt = new DataTransfer();
-            dt.items.add(file);
-
-            // React-safe way to update file input
-            fileInput._valueTracker && fileInput._valueTracker.setValue("");
-            fileInput.files = dt.files;
-            fileInput.dispatchEvent(new Event("change", { bubbles: true }));
-        }, imageBytes, imageMime);
-
-
-        console.log("Image upload completed");
+        
+            console.log(
+                `Piece: ${JSON.stringify(piece)}`
+            );
 
         // -----------------------------------------------------
-        // 2. UPLOAD AUDIO
+        // IMAGE
         // -----------------------------------------------------
 
-        const audioPath = "X:\\inputaudio\\" + inputFolder + "\\" + number + ".wav";
-        const audioBuffer = fs.readFileSync(audioPath);
-        const audioBytes = Array.from(audioBuffer);
+        if (
+            piece.hasAttachedImage &&
+            piece.imageFileName
+        ) {
 
-        const audioExt = path.extname(audioPath).toLowerCase();
-        let audioMime = audioExt === ".mp3" ? "audio/mpeg" : "audio/wav";
+            const imagePath = path.join(
+                inputFolder,
+                piece.imageFileName
+            );
 
-        await prunaFrame.waitForSelector('#p-video-2-audio-file', { timeout: 20000 });
+            if (!fs.existsSync(imagePath)) {
+                throw new Error(
+                    `Missing image file: ${imagePath}`
+                );
+            }
 
-        await prunaFrame.evaluate((bytes, mime) => {
-            const fileInput = document.querySelector('#p-video-2-audio-file');
-            if (!fileInput) return;
+            const imageExt = path
+                .extname(imagePath)
+                .toLowerCase();
 
-            const blob = new Blob([new Uint8Array(bytes)], { type: mime });
-            const file = new File([blob], "upload.wav", { type: mime });
+            let imageMime = 'image/jpeg';
 
-            const dt = new DataTransfer();
-            dt.items.add(file);
+            switch (imageExt) {
+                case '.png':
+                    imageMime = 'image/png';
+                    break;
 
-            fileInput._valueTracker && fileInput._valueTracker.setValue("");
-            fileInput.files = dt.files;
-            fileInput.dispatchEvent(new Event("change", { bubbles: true }));
-        }, audioBytes, audioMime);
+                case '.webp':
+                    imageMime = 'image/webp';
+                    break;
 
+                case '.jpg':
+                case '.jpeg':
+                    imageMime = 'image/jpeg';
+                    break;
+            }
 
-        console.log("Audio upload completed");
+            console.log(
+                `Uploading image: ${piece.imageFileName}`
+            );
+
+            await uploadFileToInput(
+                prunaFrame,
+                '#p-video-2-image-file',
+                imagePath,
+                imageMime
+            );
+
+            console.log('Image upload completed');
+        }
 
         // -----------------------------------------------------
-        // 3. TYPE PROMPT
+        // AUDIO
         // -----------------------------------------------------
 
-        await prunaFrame.waitForSelector("textarea", { timeout: 20000 });
+        const audioPath = path.join(
+            inputFolder,
+            piece.audioFileName
+        );
 
-        await prunaFrame.evaluate(() => {
-            const textarea = document.querySelector("textarea");
+        if (!fs.existsSync(audioPath)) {
+            throw new Error(
+                `Missing audio file: ${audioPath}`
+            );
+        }
+
+        const audioExt = path
+            .extname(audioPath)
+            .toLowerCase();
+
+        let audioMime = 'audio/wav';
+
+        switch (audioExt) {
+            case '.mp3':
+                audioMime = 'audio/mpeg';
+                break;
+
+            case '.wav':
+                audioMime = 'audio/wav';
+                break;
+
+            case '.ogg':
+                audioMime = 'audio/ogg';
+                break;
+        }
+
+        console.log(
+            `Uploading audio: ${piece.audioFileName}`
+        );
+
+        await uploadFileToInput(
+            prunaFrame,
+            '#p-video-2-audio-file',
+            audioPath,
+            audioMime
+        );
+
+        console.log('Audio upload completed');
+
+        // -----------------------------------------------------
+        // PROMPT
+        // -----------------------------------------------------
+
+        await prunaFrame.waitForSelector(
+            'textarea',
+            {
+                timeout: 20000
+            }
+        );
+
+        await prunaFrame.evaluate(prompt => {
+
+            const textarea =
+                document.querySelector('textarea');
+
             if (!textarea) return;
 
-            textarea.value = "the character sings and matches the audio";
+            textarea.focus();
 
-            const reactKey = Object.keys(textarea).find(k => k.startsWith("__reactProps"));
-            if (reactKey && textarea[reactKey].onChange) {
-                textarea[reactKey].onChange({ target: textarea, type: "change" });
+            textarea.value = prompt;
+
+            textarea.dispatchEvent(
+                new Event('input', {
+                    bubbles: true
+                })
+            );
+
+            textarea.dispatchEvent(
+                new Event('change', {
+                    bubbles: true
+                })
+            );
+
+            const reactKey = Object.keys(textarea)
+                .find(key =>
+                    key.startsWith('__reactProps')
+                );
+
+            if (
+                reactKey &&
+                textarea[reactKey]?.onChange
+            ) {
+                textarea[reactKey].onChange({
+                    target: textarea,
+                    type: 'change'
+                });
             }
-        });
 
-        console.log("Prompt updated");
+        }, piece.prompt);
+
+        console.log(
+            `Prompt applied: ${piece.prompt}`
+        );
+
+        // -----------------------------------------------------
+        // ADVANCED FIRST RUN
+        // -----------------------------------------------------
 
         if (firstime) {
-            // -----------------------------------------------------
-            // 4. CLICK ADVANCED
-            // -----------------------------------------------------
 
             await prunaFrame.waitForFunction(() => {
-                return [...document.querySelectorAll('button')]
-                    .some(b => b.textContent.trim() === 'Advanced');
-            }, { timeout: 20000 });
-
-            console.log("Advanced button appeared");
+                return [
+                    ...document.querySelectorAll('button')
+                ].some(
+                    b =>
+                        b.textContent.trim() ===
+                        'Advanced'
+                );
+            }, {
+                timeout: 20000
+            });
 
             await prunaFrame.evaluate(() => {
-                const btn = [...document.querySelectorAll('button')]
-                    .find(b => b.textContent.trim() === 'Advanced');
+
+                const btn =
+                    [...document.querySelectorAll('button')]
+                        .find(
+                            b =>
+                                b.textContent.trim() ===
+                                'Advanced'
+                        );
+
                 btn?.click();
             });
 
-            console.log("Advanced button clicked");
+            console.log(
+                'Advanced button clicked'
+            );
+
             firstime = false;
-
         }
-        await prunaFrame.evaluate(() => {
-            const selects = document.querySelectorAll("select");
-            const resolutionSelect = selects[1];   // second <select> = Resolution
 
-            resolutionSelect.value = "1080p";
-            resolutionSelect.dispatchEvent(new Event("change", { bubbles: true }));
+        // -----------------------------------------------------
+        // SETTINGS
+        // -----------------------------------------------------
+
+        await prunaFrame.evaluate(() => {
+
+            const selects =
+                document.querySelectorAll('select');
+
+            if (selects[1]) {
+
+                selects[1].value = '1080p';
+
+                selects[1].dispatchEvent(
+                    new Event('change', {
+                        bubbles: true
+                    })
+                );
+            }
         });
 
         await prunaFrame.evaluate(() => {
-            const selects = document.querySelectorAll("select");
-            const resolutionSelect = selects[2];
 
-            resolutionSelect.value = "48";
-            resolutionSelect.dispatchEvent(new Event("change", { bubbles: true }));
+            const selects =
+                document.querySelectorAll('select');
+
+            if (selects[2]) {
+
+                selects[2].value = '48';
+
+                selects[2].dispatchEvent(
+                    new Event('change', {
+                        bubbles: true
+                    })
+                );
+            }
         });
 
-        console.log("Click primary button");
+        console.log(
+            'Settings updated'
+        );
 
-await prunaFrame.evaluate(() => {
-    document.querySelector('button.pruna-btn-primary')?.click();
-});
+        // -----------------------------------------------------
+        // GENERATE
+        // -----------------------------------------------------
 
-        console.log("Waiting for primary button");
+        console.log(
+            'Clicking generate button'
+        );
+
+        await prunaFrame.evaluate(() => {
+
+            document
+                .querySelector(
+                    'button.pruna-btn-primary'
+                )
+                ?.click();
+        });
+
+        console.log(
+            'Waiting for generation to finish...'
+        );
+
         await prunaFrame.waitForFunction(() => {
-            const btn = document.querySelector('button.pruna-btn-primary');
+
+            const btn =
+                document.querySelector(
+                    'button.pruna-btn-primary'
+                );
+
             return btn && !btn.disabled;
-        }, { timeout: 200000 });
 
-        // -----------------------------------------------------
-        // 8. WAIT FOR KEYPRESS
-        // -----------------------------------------------------
-
-        await new Promise(resolve => {
-            const onData = () => {
-                process.stdin.setRawMode(false);
-                process.stdin.pause();
-                process.stdin.removeListener('data', onData);
-                resolve();
-            };
-
-            process.stdin.setRawMode(true);
-            process.stdin.resume();
-            process.stdin.on('data', onData);
-
-            console.log("Press any key to continue...");
+        }, {
+            timeout: 200000
         });
+
+        console.log(
+            `Piece ${piece.index} completed`
+        );
+
+        // -----------------------------------------------------
+        // MANUAL PAUSE
+        // -----------------------------------------------------
+
+        await waitForKeypress();
     }
+
+    console.log(
+        'All manifest pieces processed.'
+    );
 }
 
-main();
+main().catch(err => {
+    console.error(err);
+    process.exit(1);
+});
