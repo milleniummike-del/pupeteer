@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 const fs = require('fs');
 const path = require('path');
-
+const inputPath = "X:/inputmixed/The Share Price_split_pieces_25_parts/";
 puppeteer.use(StealthPlugin());
 
 async function downloadViaPuppeteer(page, url, filepath) {
@@ -13,12 +13,19 @@ async function downloadViaPuppeteer(page, url, filepath) {
 
 (async () => {
     const browser = await puppeteer.launch({
-        userDataDir: "browser",
         headless: false,
-        args: ["--no-sandbox", "--disable-setuid-sandbox"]
+        executablePath: "C:/Program Files/Google/Chrome/Application/chrome.exe",
+        defaultViewport: null,
+        protocolTimeout: 300000,
+        userDataDir: "browser",
+        args: [
+            "--disable-blink-features=AutomationControlled",
+            "--no-sandbox",
+            "--disable-setuid-sandbox"
+        ]
     });
 
-    const matrix = require('./matrix.json');
+    const matrix = require(inputPath+"manifest.json");
     const page = await browser.newPage();
 
     await page.goto('https://www.gentube.app/genmovie', {
@@ -26,30 +33,13 @@ async function downloadViaPuppeteer(page, url, filepath) {
         timeout: 0
     });
 
-    const inputDir = path.join(__dirname, "inputimages");
-    if (!fs.existsSync(inputDir)) fs.mkdirSync(inputDir);
+    const inputDir = path.join("",inputPath);
+    let length = matrix.pieces.length;
+    if (length>25) length=25;
+    for (let v = 0; v < length; v++) {
 
-    // ---------------------------------------------------------
-    // READ AND SORT FILES FROM inputimages DIRECTORY
-    // ---------------------------------------------------------
-    let files = fs.readdirSync(inputDir)
-        .filter(f => /\.(png|jpg|jpeg|webp)$/i.test(f));
-
-    files.sort((a, b) => {
-        const na = parseInt(a);
-        const nb = parseInt(b);
-        if (!isNaN(na) && !isNaN(nb)) return na - nb;
-        return a.localeCompare(b);
-    });
-
-    console.log("Files detected:", files);
-
-    await new Promise(r => setTimeout(r, 2000));
-
-    for (let v = 0; v < files.length; v++) {
-
-        const filePath = path.join(inputDir, files[v]);
-        const currentPrompt = `${JSON.stringify(matrix.shots[v])}`;
+        const filePath = path.join(inputDir, matrix.pieces[v].imageFileName);
+        const currentPrompt = `${JSON.stringify(matrix.pieces[v].prompt)}`;
         console.log(currentPrompt);
 
         // ---------------------------------------------------------
