@@ -18,15 +18,16 @@ if (-not (Test-Path $InputFolder)) {
 $listFile = Join-Path $InputFolder "concat.txt"
 $outputFile = Join-Path $InputFolder "final.mp4"
 
-Get-ChildItem $InputFolder -Filter "*.mp4" |
+Get-ChildItem $InputFolder -Filter "*.mp4" -File |
     Where-Object { $_.Name -ne "final.mp4" } |
-    Sort-Object { [int]$_.BaseName } |
+    Sort-Object LastWriteTime |
     ForEach-Object {
-        "file '$($_.FullName.Replace('\','/'))'"
+        $filePath = $_.FullName.Replace('\','/')
+        "file '$filePath'"
     } |
     Set-Content $listFile -Encoding ascii
 
-ffmpeg -f concat -safe 0 -i "$listFile" -c copy "$outputFile"
+ffmpeg -y -f concat -safe 0 -i "$listFile" -c copy "$outputFile"
 
 Remove-Item $listFile -Force
 

@@ -5,6 +5,28 @@ const path = require('path');
 
 puppeteer.use(StealthPlugin());
 
+// Wait for any key to be pressed in the terminal
+function waitForKeypress() {
+    return new Promise(resolve => {
+        console.log('\nWebsite loaded. Press any key to start...');
+
+        if (process.stdin.isTTY) {
+            process.stdin.setRawMode(true);
+        }
+
+        process.stdin.resume();
+
+        process.stdin.once('data', () => {
+            if (process.stdin.isTTY) {
+                process.stdin.setRawMode(false);
+            }
+
+            process.stdin.pause();
+            resolve();
+        });
+    });
+}
+
 (async () => {
     const browser = await puppeteer.launch({
         userDataDir: "browser",
@@ -20,17 +42,18 @@ puppeteer.use(StealthPlugin());
         { waitUntil: "networkidle2", timeout: 0 }
     );
 
+    // WAIT FOR KEY BEFORE STARTING
+    await waitForKeypress();
+
     // CLICK CHARACTER CARD
-   // await page.waitForSelector('img[alt="Aarav Patel"]', { visible: true });
-   // await page.click('img[alt="Aarav Patel"]');
+    // await page.waitForSelector('img[alt="Aarav Patel"]', { visible: true });
+    // await page.click('img[alt="Aarav Patel"]');
 
     // Ensure download directory exists
     const downloadDir = path.join(__dirname, "inputimages");
     if (!fs.existsSync(downloadDir)) fs.mkdirSync(downloadDir);
 
-    // ---------------------------------------------------------
     // Save DATA URI image ONLY
-    // ---------------------------------------------------------
     async function saveDataImage(src) {
         const match = src.match(/^data:(image\/\w+);base64,(.*)$/);
         if (!match) return;
@@ -48,9 +71,7 @@ puppeteer.use(StealthPlugin());
 
     console.log("Total prompts:", matrix.shots.length);
 
-    // ---------------------------------------------------------
-    // MAIN LOOP: Type prompts, wait, capture largest DATA image, clear
-    // ---------------------------------------------------------
+    // MAIN LOOP
     for (let i = 0; i < matrix.shots.length; i++) {
 
         const textareaSelector = 'textarea';
@@ -62,14 +83,19 @@ puppeteer.use(StealthPlugin());
         await contentTextarea.click({ clickCount: 3 });
         await page.keyboard.press('Backspace');
 
-        // Type full prompt using setter trick
+        // Prepare prompt
         const text = `${JSON.stringify(matrix.shots[i].in_frame_still_prompt)}`;
         const text2 = `${JSON.stringify(matrix.shots[i].out_frame_still_prompt)}`;
+
+        console.log(`Processing prompt ${i + 1}/${matrix.shots.length}`);
         console.log(text);
 
         await page.evaluate((selector, value) => {
             const el = document.querySelector(selector);
-            const setter = Object.getOwnPropertyDescriptor(el.__proto__, 'value').set;
+            const setter = Object.getOwnPropertyDescriptor(
+                Object.getPrototypeOf(el), 'value'
+            ).set;
+
             setter.call(el, value);
             el.dispatchEvent(new Event('input', { bubbles: true }));
         }, textareaSelector, text);
@@ -77,9 +103,7 @@ puppeteer.use(StealthPlugin());
         // Wait for images to generate
         await new Promise(r => setTimeout(r, 10000));
 
-        // ---------------------------------------------------------
-        // Capture ONLY the largest data:image/... image
-        // ---------------------------------------------------------
+        // Capture largest data:image
         const dataImages = await page.evaluate(() => {
             return Array.from(document.querySelectorAll("img"))
                 .map(img => ({
@@ -94,16 +118,23 @@ puppeteer.use(StealthPlugin());
         if (dataImages.length === 0) {
             console.log("[DATA] No data images found for prompt", i + 1);
         } else {
-            const largest = dataImages.reduce((a, b) => (b.size > a.size ? b : a));
+            const largest = dataImages.reduce(
+                (a, b) => b.size > a.size ? b : a
+            );
+
             await saveDataImage(largest.src);
         }
 
         // Clear button
-        const clearButton = await page.waitForSelector('button[aria-label="Clear"]');
+        const clearButton = await page.waitForSelector(
+            'button[aria-label="Clear"]'
+        );
+
         await clearButton.click();
     }
 
     const pages = await browser.pages();
     for (const p of pages) await p.close();
+
     await browser.close();
 })();

@@ -130,7 +130,7 @@ const LIGHTING = [
   'humid golden light filtering through leaves',
   'misty jungle morning with soft light',
   'dark moody forest with minimal light',
-  'rainy वातावरण with diffused lighting',
+  'rainy with diffused lighting',
   'glowing sunset through thick foliage',
   'wet reflective surfaces after rainfall'
 ];
@@ -139,7 +139,7 @@ const LIGHTING = [
 // MODIFIERS
 // ---------------------------------------------------------
 const MODIFIERS = [
-  'National Geographic wildlife cinematography',
+  'wildlife cinematography',
   'macro detail on textures and skin',
   'slow motion capture',
   'handheld documentary style',
@@ -171,26 +171,27 @@ const pickN = (arr, n) => [...arr].sort(() => 0.5 - Math.random()).slice(0, n);
 // ---------------------------------------------------------
 // GENERATOR
 // ---------------------------------------------------------
-const generateJungleBatch = (count = 20) => {
-  const lines = [];
-  lines.push(`const videos = [];`);
+const generateJungleBatch = (count = 25) => {
+const lines = [];
+lines.push(`{"shots": [`);
 
-  for (let i = 0; i < count; i++) {
-    const group = getRandom(ECOLOGICAL_GROUPS);
-    const spec = getRandom(group.species);
-    const bhv = getRandom(group.behaviors);
-    const hab = getRandom(group.habitats);
-    const light = getRandom(LIGHTING);
-    const mods = pickN(MODIFIERS, 3).join(', ');
-    const enh = pickN(ENHANCERS, 3).join(', ');
+for (let i = 0; i < count; i++) {
+  const group = getRandom(ECOLOGICAL_GROUPS);
+  const spec = getRandom(group.species);
+  const bhv = getRandom(group.behaviors);
+  const hab = getRandom(group.habitats);
+  const light = getRandom(LIGHTING);
+  const mods = pickN(MODIFIERS, 3).join(', ');
+  const enh = pickN(ENHANCERS, 3).join(', ');
 
-    lines.push(
-      `videos[${i}] = \`JUNGLE CINEMATIC VIDEO - SPECIES: ${spec} - BEHAVIOR: ${bhv} - HABITAT: ${hab} - LIGHTING: ${light} - MODIFIERS: ${mods} - ENHANCERS: ${enh}\`;`
-    );
-  }
+  lines.push(
+    `{
+      "in_frame_still_prompt": "JUNGLE CINEMATIC VIDEO - SPECIES: ${spec} - BEHAVIOR: ${bhv} - HABITAT: ${hab} - LIGHTING: ${light} - MODIFIERS: ${mods} - ENHANCERS: ${enh}"}${i < count - 1 ? ',' : ''}`
+  );
+}
 
-  lines.push(`module.exports = videos;`);
-  return lines.join('\n');
+lines.push(`]}`);
+return lines.join('\n');
 };
 
 // ---------------------------------------------------------
@@ -202,6 +203,6 @@ const count = parseInt(args[0]) || 20;
 const output = generateJungleBatch(count);
 
 // Write file
-fs.writeFileSync('videos.js', output, { encoding: 'utf8' });
+fs.writeFileSync('matrix.json', output, { encoding: 'utf8' });
 
-console.log('🌿 videos.js generated successfully');
+console.log('🌿 generated successfully');

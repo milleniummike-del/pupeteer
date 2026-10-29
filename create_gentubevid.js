@@ -2,9 +2,29 @@ const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 const fs = require('fs');
 const path = require('path');
-const inputPath = "X:/inputmixed/The Share Price_split_pieces_25_parts/";
+
 puppeteer.use(StealthPlugin());
 
+function waitForKeypress() {
+    return new Promise(resolve => {
+        console.log('\nWebsite loaded. Press any key to start...');
+
+        if (process.stdin.isTTY) {
+            process.stdin.setRawMode(true);
+        }
+
+        process.stdin.resume();
+
+        process.stdin.once('data', () => {
+            if (process.stdin.isTTY) {
+                process.stdin.setRawMode(false);
+            }
+
+            process.stdin.pause();
+            resolve();
+        });
+    });
+}
 async function downloadViaPuppeteer(page, url, filepath) {
     const response = await page.goto(url, { timeout: 0 });
     const buffer = await response.buffer();
@@ -13,19 +33,12 @@ async function downloadViaPuppeteer(page, url, filepath) {
 
 (async () => {
     const browser = await puppeteer.launch({
-        headless: false,
-        executablePath: "C:/Program Files/Google/Chrome/Application/chrome.exe",
-        defaultViewport: null,
-        protocolTimeout: 300000,
         userDataDir: "browser",
-        args: [
-            "--disable-blink-features=AutomationControlled",
-            "--no-sandbox",
-            "--disable-setuid-sandbox"
-        ]
+        headless: false,
+        args: ["--no-sandbox", "--disable-setuid-sandbox"]
     });
 
-    const matrix = require(inputPath+"manifest.json");
+    const matrix = require('./matrix.json');
     const page = await browser.newPage();
 
     await page.goto('https://www.gentube.app/genmovie', {
@@ -33,13 +46,33 @@ async function downloadViaPuppeteer(page, url, filepath) {
         timeout: 0
     });
 
-    const inputDir = path.join("",inputPath);
-    let length = matrix.pieces.length;
-    if (length>25) length=25;
-    for (let v = 0; v < length; v++) {
+    // WAIT FOR KEY BEFORE STARTING
+    await waitForKeypress();
 
-        const filePath = path.join(inputDir, matrix.pieces[v].imageFileName);
-        const currentPrompt = `${JSON.stringify(matrix.pieces[v].prompt)}`;
+    const inputDir = path.join(__dirname, "inputimages");
+    if (!fs.existsSync(inputDir)) fs.mkdirSync(inputDir);
+
+    // ---------------------------------------------------------
+    // READ AND SORT FILES FROM inputimages DIRECTORY
+    // ---------------------------------------------------------
+    let files = fs.readdirSync(inputDir)
+        .filter(f => /\.(png|jpg|jpeg|webp)$/i.test(f));
+
+    files.sort((a, b) => {
+        const na = parseInt(a);
+        const nb = parseInt(b);
+        if (!isNaN(na) && !isNaN(nb)) return na - nb;
+        return a.localeCompare(b);
+    });
+
+    console.log("Files detected:", files);
+
+    await new Promise(r => setTimeout(r, 2000));
+
+    for (let v = 0; v < files.length; v++) {
+
+        const filePath = path.join(inputDir, files[v]);
+        const currentPrompt = `${JSON.stringify(matrix.shots[v])} - sound: no music just natural background jungle noises`;
         console.log(currentPrompt);
 
         // ---------------------------------------------------------

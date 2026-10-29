@@ -1,184 +1,27 @@
-{
-  "shots": [
-    {
-      "shot_number": 1,
-      "heading": "EXT. TROPICAL BEACH – SUNRISE",
-      "duration_seconds": 5,
-      "timecode": "00:00:00:00",
-      "camera_lens": "24mm wide",
-      "camera_motion": "Slow rising crane over shoreline",
-      "characters_present": ["Couple"],
-      "set_used": "Golden sand beach with turquoise water",
-      "props_used": ["Beach towels", "Sun hats"],
-      "spoken_dialogue": "NARRATOR: Your perfect escape begins with the sunrise.",
-      "action_description": "A couple walks along the glowing shoreline as gentle waves roll in, the sky painted in warm orange hues.",
-      "in_frame_still_prompt": "Cinematic sunrise over tropical beach, couple walking along shoreline, warm golden light, wide 24mm framing.",
-      "out_frame_still_prompt": "Aerial view of turquoise ocean meeting golden sand, soft morning mist.",
-      "video_prompt": "Crane rising over shoreline revealing couple walking through warm sunrise glow.",
-      "takes": [
-        {
-          "take_number": 1,
-          "total_takes": 3,
-          "duration_seconds": 5,
-          "timecode": "00:00:00:00",
-          "camera_instruction": "Begin low near waterline, rise smoothly to reveal couple.",
-          "motion_vector": "Vertical rise 0.4 m/s",
-          "init_seed_guidance": "Warm tones, soft reflections, gentle wave motion.",
-          "in_frame_still_prompt": "Couple walking on glowing beach at sunrise.",
-          "out_frame_still_prompt": "Wide aerial of beach and ocean.",
-          "video_prompt": "Smooth crane rise with soft wave movement."
-        }
-      ]
-    },
-    {
-      "shot_number": 2,
-      "heading": "EXT. MOUNTAIN LOOKOUT – MIDDAY",
-      "duration_seconds": 5,
-      "timecode": "00:00:05:00",
-      "camera_lens": "35mm",
-      "camera_motion": "Forward dolly toward cliff edge",
-      "characters_present": ["Solo Traveler"],
-      "set_used": "High-altitude viewpoint overlooking lush valley",
-      "props_used": ["Backpack", "Travel journal"],
-      "spoken_dialogue": "NARRATOR: Discover views that stay with you forever.",
-      "action_description": "A traveler stands at the cliff edge, taking in a sweeping valley filled with waterfalls and green ridges.",
-      "in_frame_still_prompt": "Traveler at mountain lookout, vast valley below, bright midday sky, cinematic composition.",
-      "out_frame_still_prompt": "Wide valley with waterfalls and rolling green hills.",
-      "video_prompt": "Forward dolly toward traveler as valley expands into frame.",
-      "takes": [
-        {
-          "take_number": 1,
-          "total_takes": 2,
-          "duration_seconds": 5,
-          "timecode": "00:00:05:00",
-          "camera_instruction": "Dolly forward from medium shot to wide scenic reveal.",
-          "motion_vector": "Forward 0.3 m/s",
-          "init_seed_guidance": "High landscape clarity, vibrant greens.",
-          "in_frame_still_prompt": "Traveler overlooking valley.",
-          "out_frame_still_prompt": "Mountain valley panorama.",
-          "video_prompt": "Dolly forward with expanding landscape."
-        }
-      ]
-    },
-    {
-      "shot_number": 3,
-      "heading": "EXT. CITY MARKET – AFTERNOON",
-      "duration_seconds": 5,
-      "timecode": "00:00:10:00",
-      "camera_lens": "50mm",
-      "camera_motion": "Handheld glide through market aisle",
-      "characters_present": ["Families", "Vendors"],
-      "set_used": "Colorful open-air market",
-      "props_used": ["Fruit baskets", "Handmade crafts"],
-      "spoken_dialogue": "NARRATOR: Taste the world, one moment at a time.",
-      "action_description": "Vibrant stalls filled with fresh fruit, spices, and handmade goods as families explore and vendors greet them.",
-      "in_frame_still_prompt": "Colorful market stalls, fruit baskets, smiling vendors, warm afternoon light.",
-      "out_frame_still_prompt": "Wide shot of bustling market street.",
-      "video_prompt": "Handheld glide through lively market with warm colors and motion.",
-      "takes": [
-        {
-          "take_number": 1,
-          "total_takes": 3,
-          "duration_seconds": 5,
-          "timecode": "00:00:10:00",
-          "camera_instruction": "Glide through center aisle, slight sway for natural handheld feel.",
-          "motion_vector": "Forward 0.2 m/s",
-          "init_seed_guidance": "Rich colors, lively crowd motion.",
-          "in_frame_still_prompt": "Close-up of fruit and crafts.",
-          "out_frame_still_prompt": "Wide market street.",
-          "video_prompt": "Handheld glide with natural crowd movement."
-        }
-      ]
-    },
-    {
-      "shot_number": 4,
-      "heading": "EXT. LUXURY RESORT POOL – SUNSET",
-      "duration_seconds": 5,
-      "timecode": "00:00:15:00",
-      "camera_lens": "85mm telephoto",
-      "camera_motion": "Slow push-in across shimmering pool",
-      "characters_present": ["Couple", "Friends"],
-      "set_used": "Infinity pool overlooking ocean",
-      "props_used": ["Cocktails", "Pool loungers"],
-      "spoken_dialogue": "NARRATOR: Relax in places designed for pure bliss.",
-      "action_description": "Guests laugh and lounge by the infinity pool as the sun sets behind the ocean horizon.",
-      "in_frame_still_prompt": "Luxury infinity pool at sunset, warm reflections, relaxed guests, telephoto depth.",
-      "out_frame_still_prompt": "Ocean horizon glowing with orange and pink hues.",
-      "video_prompt": "Slow push-in across shimmering pool surface toward sunset.",
-      "takes": [
-        {
-          "take_number": 1,
-          "total_takes": 2,
-          "duration_seconds": 5,
-          "timecode": "00:00:15:00",
-          "camera_instruction": "Push-in from pool edge toward sunset glow.",
-          "motion_vector": "Forward 0.15 m/s",
-          "init_seed_guidance": "Warm reflections, soft silhouettes.",
-          "in_frame_still_prompt": "Guests relaxing at sunset.",
-          "out_frame_still_prompt": "Ocean horizon.",
-          "video_prompt": "Push-in with shimmering water reflections."
-        }
-      ]
-    },
-    {
-      "shot_number": 5,
-      "heading": "EXT. BEACH BONFIRE – NIGHT",
-      "duration_seconds": 5,
-      "timecode": "00:00:20:00",
-      "camera_lens": "35mm",
-      "camera_motion": "Circular dolly around group",
-      "characters_present": ["Friends"],
-      "set_used": "Night beach with bonfire",
-      "props_used": ["Guitar", "Lanterns"],
-      "spoken_dialogue": "NARRATOR: And end every day with memories worth keeping.",
-      "action_description": "Friends sit around a glowing bonfire, laughing, playing guitar, and enjoying the warm night breeze.",
-      "in_frame_still_prompt": "Bonfire illuminating group of friends, warm firelight, night beach atmosphere.",
-      "out_frame_still_prompt": "Dark ocean waves under moonlight.",
-      "video_prompt": "Circular dolly around bonfire with warm flickering light.",
-      "takes": [
-        {
-          "take_number": 1,
-          "total_takes": 3,
-          "duration_seconds": 5,
-          "timecode": "00:00:20:00",
-          "camera_instruction": "Circle group at steady pace, keep fire centered.",
-          "motion_vector": "Circular 0.3 m/s",
-          "init_seed_guidance": "Warm firelight, soft shadows.",
-          "in_frame_still_prompt": "Friends around bonfire.",
-          "out_frame_still_prompt": "Moonlit ocean.",
-          "video_prompt": "Circular dolly with flickering firelight."
-        }
-      ]
-    },
-    {
-      "shot_number": 6,
-      "heading": "EXT. BEACH – SUNRISE TRANSITION TO LOGO",
-      "duration_seconds": 5,
-      "timecode": "00:00:25:00",
-      "camera_lens": "50mm",
-      "camera_motion": "Static centered frame with slow zoom",
-      "characters_present": [],
-      "set_used": "Beach horizon at dawn",
-      "props_used": ["Travel agency logo overlay"],
-      "spoken_dialogue": "NARRATOR: Book your escape today.",
-      "action_description": "The sun rises over the ocean horizon as the travel brand logo fades in softly.",
-      "in_frame_still_prompt": "Sun rising over calm ocean, warm glow, centered composition.",
-      "out_frame_still_prompt": "Soft gradient sky transitioning to brand color palette.",
-      "video_prompt": "Slow zoom into sunrise as logo fades in.",
-      "takes": [
-        {
-          "take_number": 1,
-          "total_takes": 2,
-          "duration_seconds": 5,
-          "timecode": "00:00:25:00",
-          "camera_instruction": "Hold centered frame, apply gentle zoom.",
-          "motion_vector": "Forward 0.1 m/s",
-          "init_seed_guidance": "Soft gradients, warm tones.",
-          "in_frame_still_prompt": "Sunrise with logo overlay.",
-          "out_frame_still_prompt": "Gradient sky.",
-          "video_prompt": "Slow zoom with logo fade-in."
-        }
-      ]
-    }
-  ]
-}
+{"shots": [
+{"in_frame_still_prompt":"CINEMATIC AERIAL DRONE VIDEO | SUBJECT: Gothic cathedral rising above a historic European town | ENVIRONMENT: rolling green hills and patchwork countryside | SCENE ACTION: rising from the forest canopy to reveal the entire complex | DRONE SHOT: Distant telephoto-style aerial: compress layers of mountains and the landmark into a dramatic composition | LIGHTING AND WEATHER: overcast cinematic light with soft shadows and muted contrast | CAMERA CHARACTERISTICS: natural motion blur consistent with camera movement, slow cinematic camera movement, wide-angle aerial composition | VISUAL STYLE: photorealistic landscape textures, natural highlight roll-off, consistent perspective and architectural proportions | QUALITY REQUIREMENTS: no artificial terrain deformation, no excessive sharpening or oversaturated colors | DURATION: 5 seconds | CONTINUITY: one coherent shot, consistent geography, realistic movement and stable subject identity | AUDIO: natural environmental ambience appropriate to the location, with no narration or music"},
+{"in_frame_still_prompt":"CINEMATIC AERIAL DRONE VIDEO | SUBJECT: a broad river delta spreading into the ocean | ENVIRONMENT: natural water reflections and realistic flowing water | SCENE ACTION: flying forward over the water toward distant mountains | DRONE SHOT: S-curve flight: follow a gentle S-shaped path through open terrain toward the main subject | LIGHTING AND WEATHER: soft morning mist drifting through valleys | CAMERA CHARACTERISTICS: layered atmospheric perspective, slow cinematic camera movement, wide-angle aerial composition | VISUAL STYLE: natural atmospheric perspective, photorealistic landscape textures, balanced cinematic contrast | QUALITY REQUIREMENTS: no warped buildings or distorted landmarks, no unwanted foreground objects obscuring the subject | DURATION: 5 seconds | CONTINUITY: one coherent shot, consistent geography, realistic movement and stable subject identity | AUDIO: natural environmental ambience appropriate to the location, with no narration or music"},
+{"in_frame_still_prompt":"CINEMATIC AERIAL DRONE VIDEO | SUBJECT: remote desert plateau with towering rock formations | ENVIRONMENT: remote desert wilderness with immense open horizons | SCENE ACTION: flying low over dune ridges before ascending to a wide panorama | DRONE SHOT: Crane-down movement: descend smoothly while tilting up to emphasize the scale of a landmark | LIGHTING AND WEATHER: dramatic storm clouds with shafts of sunlight illuminating the terrain | CAMERA CHARACTERISTICS: realistic aerial perspective and natural parallax, slow cinematic camera movement, smooth horizon reveal | VISUAL STYLE: realistic ocean waves and coastline detail, realistic water reflections, consistent perspective and architectural proportions | QUALITY REQUIREMENTS: no duplicated architectural structures, no cartoon styling or artificial CGI appearance | DURATION: 5 seconds | CONTINUITY: one coherent shot, consistent geography, realistic movement and stable subject identity | AUDIO: natural environmental ambience appropriate to the location, with no narration or music"},
+{"in_frame_still_prompt":"CINEMATIC AERIAL DRONE VIDEO | SUBJECT: Tokyo skyline with dense urban districts | ENVIRONMENT: dense historic districts beside modern architecture | SCENE ACTION: ascending above the rooftops to expose the complete cityscape | DRONE SHOT: Top-down overhead: maintain a vertical bird’s-eye view while drifting smoothly over the landscape | LIGHTING AND WEATHER: dramatic sunset light illuminating the landscape in amber tones | CAMERA CHARACTERISTICS: wide-angle aerial composition, wide establishing shot with a deep horizon, layered atmospheric perspective | VISUAL STYLE: physically plausible sunlight and shadows, documentary-quality aerial cinematography, realistic water reflections | QUALITY REQUIREMENTS: no unwanted foreground objects obscuring the subject, no excessive sharpening or oversaturated colors | DURATION: 5 seconds | CONTINUITY: one coherent shot, consistent geography, realistic movement and stable subject identity | AUDIO: natural environmental ambience appropriate to the location, with no narration or music"},
+{"in_frame_still_prompt":"CINEMATIC AERIAL DRONE VIDEO | SUBJECT: dense tropical rainforest surrounding a winding river | ENVIRONMENT: dense layers of vegetation and realistic canopy textures | SCENE ACTION: following a river as it winds through dense vegetation | DRONE SHOT: Cinematic push-in: fly smoothly forward toward the main subject with controlled acceleration | LIGHTING AND WEATHER: overcast cinematic light with soft shadows and muted contrast | CAMERA CHARACTERISTICS: wide-angle aerial composition, natural depth of field appropriate for aerial footage, precise gimbal stabilization and controlled turns | VISUAL STYLE: crisp architectural details, rich but natural landscape colors, balanced cinematic contrast | QUALITY REQUIREMENTS: no impossible camera teleportation, no cartoon styling or artificial CGI appearance | DURATION: 5 seconds | CONTINUITY: one coherent shot, consistent geography, realistic movement and stable subject identity | AUDIO: natural environmental ambience appropriate to the location, with no narration or music"},
+{"in_frame_still_prompt":"CINEMATIC AERIAL DRONE VIDEO | SUBJECT: Grand Canyon carved into layered red rock | ENVIRONMENT: glacial lakes, rocky slopes and snow-covered summits | SCENE ACTION: pulling back from a foreground peak to reveal immense scale | DRONE SHOT: Low-to-high transition: begin above open ground or water and rise into a broad panoramic view | LIGHTING AND WEATHER: bright natural daylight with accurate colors and clear visibility | CAMERA CHARACTERISTICS: layered atmospheric perspective, continuous single-take aerial cinematography, clear landmark silhouette against the background | VISUAL STYLE: rich but natural landscape colors, natural cloud formations, documentary-quality aerial cinematography | QUALITY REQUIREMENTS: no warped buildings or distorted landmarks, keep the main landmark visually consistent throughout the shot | DURATION: 5 seconds | CONTINUITY: one coherent shot, consistent geography, realistic movement and stable subject identity | AUDIO: natural environmental ambience appropriate to the location, with no narration or music"},
+{"in_frame_still_prompt":"CINEMATIC AERIAL DRONE VIDEO | SUBJECT: Caribbean harbor filled with colorful coastal architecture | ENVIRONMENT: lush coastal vegetation and steep green hills | SCENE ACTION: following the curve of a beach in a smooth sweeping movement | DRONE SHOT: FPV-style valley flight: follow a wide open valley with fluid forward motion and realistic turns | LIGHTING AND WEATHER: overcast cinematic light with soft shadows and muted contrast | CAMERA CHARACTERISTICS: precise gimbal stabilization and controlled turns, wide establishing shot with a deep horizon, smooth stabilized drone footage | VISUAL STYLE: balanced cinematic contrast, photorealistic landscape textures, subtle atmospheric haze | QUALITY REQUIREMENTS: preserve realistic geographical scale and proportions, no text, subtitles, logos or watermarks | DURATION: 5 seconds | CONTINUITY: one coherent shot, consistent geography, realistic movement and stable subject identity | AUDIO: natural environmental ambience appropriate to the location, with no narration or music"},
+{"in_frame_still_prompt":"CINEMATIC AERIAL DRONE VIDEO | SUBJECT: ancient desert oasis surrounded by barren mountains | ENVIRONMENT: layered sandstone formations and deep natural shadows | SCENE ACTION: flying low over dune ridges before ascending to a wide panorama | DRONE SHOT: Coastal tracking: follow the coastline parallel to the shore with the ocean filling the background | LIGHTING AND WEATHER: warm golden-hour sunlight with long natural shadows | CAMERA CHARACTERISTICS: smooth stabilized drone footage, slow cinematic camera movement, realistic aerial perspective and natural parallax | VISUAL STYLE: realistic vegetation and geological formations, lifelike cloud and mist movement, highly detailed terrain and architecture | QUALITY REQUIREMENTS: no sudden camera jumps or erratic movement, no duplicated architectural structures | DURATION: 5 seconds | CONTINUITY: one coherent shot, consistent geography, realistic movement and stable subject identity | AUDIO: natural environmental ambience appropriate to the location, with no narration or music"},
+{"in_frame_still_prompt":"CINEMATIC AERIAL DRONE VIDEO | SUBJECT: vast green forest canopy broken by a winding river | ENVIRONMENT: remote wilderness with no visible modern infrastructure | SCENE ACTION: flying above the canopy in a slow forward tracking shot | DRONE SHOT: Crane-up movement: rise vertically while gently tilting down to reveal the environment | LIGHTING AND WEATHER: moonlit landscape with realistic low-light exposure | CAMERA CHARACTERISTICS: wide sweeping cinematic composition, wide-angle aerial composition, natural depth of field appropriate for aerial footage | VISUAL STYLE: consistent perspective and architectural proportions, balanced cinematic contrast, immersive sense of scale | QUALITY REQUIREMENTS: no flickering, morphing or inconsistent geometry, no artificial terrain deformation | DURATION: 5 seconds | CONTINUITY: one coherent shot, consistent geography, realistic movement and stable subject identity | AUDIO: natural environmental ambience appropriate to the location, with no narration or music"},
+{"in_frame_still_prompt":"CINEMATIC AERIAL DRONE VIDEO | SUBJECT: a turquoise glacial river flowing through rocky terrain | ENVIRONMENT: remote lakes and expansive natural wilderness | SCENE ACTION: tracking along the river bends from a high oblique angle | DRONE SHOT: Lateral tracking shot: glide sideways to reveal depth, foreground details and distant scenery | LIGHTING AND WEATHER: overcast cinematic light with soft shadows and muted contrast | CAMERA CHARACTERISTICS: high oblique drone perspective, precise gimbal stabilization and controlled turns, wide-angle aerial composition | VISUAL STYLE: natural highlight roll-off, physically plausible sunlight and shadows, realistic environmental detail | QUALITY REQUIREMENTS: no warped buildings or distorted landmarks, no sudden camera jumps or erratic movement | DURATION: 5 seconds | CONTINUITY: one coherent shot, consistent geography, realistic movement and stable subject identity | AUDIO: natural environmental ambience appropriate to the location, with no narration or music"},
+{"in_frame_still_prompt":"CINEMATIC AERIAL DRONE VIDEO | SUBJECT: Lisbon rooftops cascading toward the Tagus River | ENVIRONMENT: expansive skylines with atmospheric depth | SCENE ACTION: pulling backward to reveal the skyline against surrounding mountains | DRONE SHOT: Slow panoramic sweep: rotate smoothly across the horizon to reveal the complete landscape | LIGHTING AND WEATHER: dramatic storm clouds with shafts of sunlight illuminating the terrain | CAMERA CHARACTERISTICS: high oblique drone perspective, realistic altitude and believable flight paths, strong foreground-to-background depth | VISUAL STYLE: balanced cinematic contrast, highly detailed terrain and architecture, cohesive cinematic composition | QUALITY REQUIREMENTS: no excessive sharpening or oversaturated colors, no text, subtitles, logos or watermarks | DURATION: 5 seconds | CONTINUITY: one coherent shot, consistent geography, realistic movement and stable subject identity | AUDIO: natural environmental ambience appropriate to the location, with no narration or music"},
+{"in_frame_still_prompt":"CINEMATIC AERIAL DRONE VIDEO | SUBJECT: remote Pacific island with lush mountains and hidden coves | ENVIRONMENT: remote islands surrounded by open ocean | SCENE ACTION: tracking parallel to the coastline above the water | DRONE SHOT: FPV-style cinematic dive: perform a controlled descent toward an open natural valley, avoiding obstacles | LIGHTING AND WEATHER: hazy tropical sunlight above a lush green landscape | CAMERA CHARACTERISTICS: wide establishing shot with a deep horizon, precise gimbal stabilization and controlled turns, clear landmark silhouette against the background | VISUAL STYLE: photorealistic landscape textures, physically plausible sunlight and shadows, cinematic color grading | QUALITY REQUIREMENTS: no impossible camera teleportation, no text, subtitles, logos or watermarks | DURATION: 5 seconds | CONTINUITY: one coherent shot, consistent geography, realistic movement and stable subject identity | AUDIO: natural environmental ambience appropriate to the location, with no narration or music"},
+{"in_frame_still_prompt":"CINEMATIC AERIAL DRONE VIDEO | SUBJECT: Istanbul skyline with historic domes and the Bosphorus | ENVIRONMENT: expansive skylines with atmospheric depth | SCENE ACTION: pulling backward to reveal the skyline against surrounding mountains | DRONE SHOT: River-following shot: track the natural curves of a river from above | LIGHTING AND WEATHER: hazy tropical sunlight above a lush green landscape | CAMERA CHARACTERISTICS: realistic geographical scale and terrain detail, high oblique drone perspective, continuous single-take aerial cinematography | VISUAL STYLE: crisp architectural details, lifelike cloud and mist movement, balanced cinematic contrast | QUALITY REQUIREMENTS: no cartoon styling or artificial CGI appearance, no warped buildings or distorted landmarks | DURATION: 5 seconds | CONTINUITY: one coherent shot, consistent geography, realistic movement and stable subject identity | AUDIO: natural environmental ambience appropriate to the location, with no narration or music"},
+{"in_frame_still_prompt":"CINEMATIC AERIAL DRONE VIDEO | SUBJECT: Swiss mountain villages surrounded by steep alpine slopes | ENVIRONMENT: vast wilderness with realistic geological formations | SCENE ACTION: ascending above a ridge to reveal successive mountain ranges | DRONE SHOT: Wide sweeping arc: travel in a broad curved path around the subject with a steady horizon | LIGHTING AND WEATHER: subtle post-rain atmosphere with reflective surfaces | CAMERA CHARACTERISTICS: continuous single-take aerial cinematography, strong foreground-to-background depth, smooth horizon reveal | VISUAL STYLE: subtle atmospheric haze, accurate natural colors without excessive saturation, photorealistic landscape textures | QUALITY REQUIREMENTS: no cartoon styling or artificial CGI appearance, keep the main landmark visually consistent throughout the shot | DURATION: 5 seconds | CONTINUITY: one coherent shot, consistent geography, realistic movement and stable subject identity | AUDIO: natural environmental ambience appropriate to the location, with no narration or music"},
+{"in_frame_still_prompt":"CINEMATIC AERIAL DRONE VIDEO | SUBJECT: isolated wilderness valley filled with morning fog | ENVIRONMENT: towering trees and lush undisturbed terrain | SCENE ACTION: flying above the canopy in a slow forward tracking shot | DRONE SHOT: Orbit and rise: circle the subject while gradually increasing altitude for a dramatic reveal | LIGHTING AND WEATHER: subtle post-rain atmosphere with reflective surfaces | CAMERA CHARACTERISTICS: smooth stabilized drone footage, smooth horizon reveal, vertical overhead composition | VISUAL STYLE: realistic vegetation and geological formations, cinematic color grading, cohesive cinematic composition | QUALITY REQUIREMENTS: no cartoon styling or artificial CGI appearance, no artificial terrain deformation | DURATION: 5 seconds | CONTINUITY: one coherent shot, consistent geography, realistic movement and stable subject identity | AUDIO: natural environmental ambience appropriate to the location, with no narration or music"},
+{"in_frame_still_prompt":"CINEMATIC AERIAL DRONE VIDEO | SUBJECT: Swiss mountain villages surrounded by steep alpine slopes | ENVIRONMENT: dense evergreen forests below towering peaks | SCENE ACTION: tracking above a winding river between mountain slopes | DRONE SHOT: Descending coastal approach: gradually lower toward an open shoreline while keeping the horizon stable | LIGHTING AND WEATHER: soft winter sunlight illuminating snow-covered terrain | CAMERA CHARACTERISTICS: vertical overhead composition, high oblique drone perspective, realistic geographical scale and terrain detail | VISUAL STYLE: cinematic color grading, photorealistic landscape textures, subtle atmospheric haze | QUALITY REQUIREMENTS: preserve realistic geographical scale and proportions, no impossible camera teleportation | DURATION: 5 seconds | CONTINUITY: one coherent shot, consistent geography, realistic movement and stable subject identity | AUDIO: natural environmental ambience appropriate to the location, with no narration or music"},
+{"in_frame_still_prompt":"CINEMATIC AERIAL DRONE VIDEO | SUBJECT: dramatic mountaintop monastery surrounded by clouds | ENVIRONMENT: winding rivers and historic agricultural landscapes | SCENE ACTION: approaching through a broad valley toward the main entrance | DRONE SHOT: Ascending reveal: rise steadily from a lower altitude to unveil the full panorama | LIGHTING AND WEATHER: blue-hour twilight with realistic city and architectural lights | CAMERA CHARACTERISTICS: slow cinematic camera movement, smooth stabilized drone footage, strong foreground-to-background depth | VISUAL STYLE: realistic vegetation and geological formations, photorealistic landscape textures, immersive sense of scale | QUALITY REQUIREMENTS: no unwanted foreground objects obscuring the subject, no flickering, morphing or inconsistent geometry | DURATION: 5 seconds | CONTINUITY: one coherent shot, consistent geography, realistic movement and stable subject identity | AUDIO: natural environmental ambience appropriate to the location, with no narration or music"},
+{"in_frame_still_prompt":"CINEMATIC AERIAL DRONE VIDEO | SUBJECT: Istanbul skyline with historic domes and the Bosphorus | ENVIRONMENT: dense historic districts beside modern architecture | SCENE ACTION: performing a broad cinematic orbit around a distinctive skyline | DRONE SHOT: Top-down overhead: maintain a vertical bird’s-eye view while drifting smoothly over the landscape | LIGHTING AND WEATHER: bright natural daylight with accurate colors and clear visibility | CAMERA CHARACTERISTICS: vertical overhead composition, precise gimbal stabilization and controlled turns, clear landmark silhouette against the background | VISUAL STYLE: cinematic color grading, realistic environmental detail, lifelike cloud and mist movement | QUALITY REQUIREMENTS: no sudden camera jumps or erratic movement, no artificial terrain deformation | DURATION: 5 seconds | CONTINUITY: one coherent shot, consistent geography, realistic movement and stable subject identity | AUDIO: natural environmental ambience appropriate to the location, with no narration or music"},
+{"in_frame_still_prompt":"CINEMATIC AERIAL DRONE VIDEO | SUBJECT: Himalayan peaks rising above immense cloud formations | ENVIRONMENT: layered mountain ranges fading into atmospheric haze | SCENE ACTION: flying forward through a broad mountain valley | DRONE SHOT: Crane-up movement: rise vertically while gently tilting down to reveal the environment | LIGHTING AND WEATHER: dramatic sunset light illuminating the landscape in amber tones | CAMERA CHARACTERISTICS: continuous single-take aerial cinematography, natural depth of field appropriate for aerial footage, strong foreground-to-background depth | VISUAL STYLE: immersive sense of scale, natural atmospheric perspective, subtle atmospheric haze | QUALITY REQUIREMENTS: keep the main landmark visually consistent throughout the shot, no unwanted foreground objects obscuring the subject | DURATION: 5 seconds | CONTINUITY: one coherent shot, consistent geography, realistic movement and stable subject identity | AUDIO: natural environmental ambience appropriate to the location, with no narration or music"},
+{"in_frame_still_prompt":"CINEMATIC AERIAL DRONE VIDEO | SUBJECT: tropical island surrounded by vivid turquoise lagoons | ENVIRONMENT: lush coastal vegetation and steep green hills | SCENE ACTION: gliding forward above waves toward a distant island | DRONE SHOT: Orbit and rise: circle the subject while gradually increasing altitude for a dramatic reveal | LIGHTING AND WEATHER: blue-hour twilight with realistic city and architectural lights | CAMERA CHARACTERISTICS: slow cinematic camera movement, continuous single-take aerial cinematography, realistic geographical scale and terrain detail | VISUAL STYLE: natural atmospheric perspective, highly detailed terrain and architecture, realistic environmental detail | QUALITY REQUIREMENTS: no duplicated architectural structures, no sudden camera jumps or erratic movement | DURATION: 5 seconds | CONTINUITY: one coherent shot, consistent geography, realistic movement and stable subject identity | AUDIO: natural environmental ambience appropriate to the location, with no narration or music"},
+{"in_frame_still_prompt":"CINEMATIC AERIAL DRONE VIDEO | SUBJECT: New York City skyline surrounding Manhattan | ENVIRONMENT: cities integrated with surrounding hills, rivers or coastlines | SCENE ACTION: performing a smooth lateral reveal across the city | DRONE SHOT: Diagonal approach: advance diagonally toward the subject while maintaining a cinematic composition | LIGHTING AND WEATHER: moonlit landscape with realistic low-light exposure | CAMERA CHARACTERISTICS: precise gimbal stabilization and controlled turns, wide establishing shot with a deep horizon, clear landmark silhouette against the background | VISUAL STYLE: physically plausible sunlight and shadows, accurate natural colors without excessive saturation, believable geographical features | QUALITY REQUIREMENTS: no warped buildings or distorted landmarks, no unwanted foreground objects obscuring the subject | DURATION: 5 seconds | CONTINUITY: one coherent shot, consistent geography, realistic movement and stable subject identity | AUDIO: natural environmental ambience appropriate to the location, with no narration or music"},
+{"in_frame_still_prompt":"CINEMATIC AERIAL DRONE VIDEO | SUBJECT: dramatic Algarve sea cliffs above turquoise Atlantic water | ENVIRONMENT: dramatic headlands with sea mist and breaking surf | SCENE ACTION: gliding forward above waves toward a distant island | DRONE SHOT: Crane-up movement: rise vertically while gently tilting down to reveal the environment | LIGHTING AND WEATHER: soft morning mist drifting through valleys | CAMERA CHARACTERISTICS: natural depth of field appropriate for aerial footage, gradual acceleration and deceleration, precise gimbal stabilization and controlled turns | VISUAL STYLE: physically plausible sunlight and shadows, natural atmospheric perspective, believable geographical features | QUALITY REQUIREMENTS: no unwanted foreground objects obscuring the subject, keep the main landmark visually consistent throughout the shot | DURATION: 5 seconds | CONTINUITY: one coherent shot, consistent geography, realistic movement and stable subject identity | AUDIO: natural environmental ambience appropriate to the location, with no narration or music"},
+{"in_frame_still_prompt":"CINEMATIC AERIAL DRONE VIDEO | SUBJECT: remote temperate rainforest beneath low clouds | ENVIRONMENT: misty valleys with natural rivers and clearings | SCENE ACTION: flying above the canopy in a slow forward tracking shot | DRONE SHOT: Reveal from behind a ridge: move forward and upward until the entire landscape emerges | LIGHTING AND WEATHER: thin clouds casting natural moving shadows across the landscape | CAMERA CHARACTERISTICS: steady horizon with fluid camera transitions, gradual acceleration and deceleration, realistic geographical scale and terrain detail | VISUAL STYLE: lifelike cloud and mist movement, physically plausible sunlight and shadows, realistic vegetation and geological formations | QUALITY REQUIREMENTS: no artificial terrain deformation, no excessive sharpening or oversaturated colors | DURATION: 5 seconds | CONTINUITY: one coherent shot, consistent geography, realistic movement and stable subject identity | AUDIO: natural environmental ambience appropriate to the location, with no narration or music"},
+{"in_frame_still_prompt":"CINEMATIC AERIAL DRONE VIDEO | SUBJECT: ancient redwood forest with towering trees | ENVIRONMENT: dense layers of vegetation and realistic canopy textures | SCENE ACTION: flying above the canopy in a slow forward tracking shot | DRONE SHOT: Wide sweeping arc: travel in a broad curved path around the subject with a steady horizon | LIGHTING AND WEATHER: clear midday light revealing detailed terrain and architecture | CAMERA CHARACTERISTICS: continuous single-take aerial cinematography, slow cinematic camera movement, smooth stabilized drone footage | VISUAL STYLE: realistic water reflections, balanced cinematic contrast, natural highlight roll-off | QUALITY REQUIREMENTS: no cartoon styling or artificial CGI appearance, no excessive sharpening or oversaturated colors | DURATION: 5 seconds | CONTINUITY: one coherent shot, consistent geography, realistic movement and stable subject identity | AUDIO: natural environmental ambience appropriate to the location, with no narration or music"},
+{"in_frame_still_prompt":"CINEMATIC AERIAL DRONE VIDEO | SUBJECT: fairytale stone castle overlooking a forested valley | ENVIRONMENT: rugged coastal cliffs and open sea | SCENE ACTION: performing a slow ascending reveal above the castle walls | DRONE SHOT: Mountain ridge run: glide parallel to a ridge with the valley and peaks visible beyond | LIGHTING AND WEATHER: dramatic storm clouds with shafts of sunlight illuminating the terrain | CAMERA CHARACTERISTICS: smooth stabilized drone footage, subtle parallax between foreground and distant scenery, controlled camera banking during wide turns | VISUAL STYLE: immersive sense of scale, balanced cinematic contrast, consistent perspective and architectural proportions | QUALITY REQUIREMENTS: no warped buildings or distorted landmarks, keep the main landmark visually consistent throughout the shot | DURATION: 5 seconds | CONTINUITY: one coherent shot, consistent geography, realistic movement and stable subject identity | AUDIO: natural environmental ambience appropriate to the location, with no narration or music"}
+]}

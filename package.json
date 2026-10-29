@@ -9,6 +9,7 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "@gradio/client": "^2.7.1",
     "@playwright/test": "^1.58.0",
     "@types/node": "^25.0.10"
   },
